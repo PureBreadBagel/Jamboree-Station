@@ -11,6 +11,7 @@ using Content.Shared.CCVar;
 using Robust.Server;
 using Robust.Server.Player;
 using Robust.Server.ServerStatus;
+using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
 using Robust.Shared.Player;
@@ -102,6 +103,7 @@ public sealed class ServerUpdateManager : IPostInjectInit
                 ServerEmptyUpdateRestartCheck("last player disconnect");
                 break;
         }
+        _cfg.SetCVar("nf14.respawn.time", GetNewRespawnTime(_playerManager.PlayerCount));
     }
 
     private void WatchdogOnUpdateReceived()
@@ -150,6 +152,16 @@ public sealed class ServerUpdateManager : IPostInjectInit
     {
         return _uptimeRestart != TimeSpan.Zero && _gameTiming.RealTime > _uptimeRestart;
     }
+
+    float GetNewRespawnTime(int playerCount) =>
+        playerCount switch
+        {
+            > 50 => 1200.0f,
+            > 30 => 900.0f,
+            > 20 => 600.0f,
+            <= 20 => 300.0f,
+        };
+}
 
     void IPostInjectInit.PostInject()
     {

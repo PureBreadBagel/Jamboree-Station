@@ -20,20 +20,29 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Client._NF.Respawn;
+using Content.Client.Gameplay;
 using Content.Client.Ghost;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Client.UserInterface.Systems.Ghost.Widgets;
 using Content.Shared.Ghost;
+using Content.Shared._NF.CCVar;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
+using Robust.Shared.Configuration;
+using Robust.Shared.Console;
 
 namespace Content.Client.UserInterface.Systems.Ghost;
 
 // TODO hud refactor BEFORE MERGE fix ghost gui being too far up
-public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSystem>
+public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSystem>, IOnSystemChanged<RespawnSystem>
 {
     [Dependency] private readonly IEntityNetworkManager _net = default!;
+    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private readonly IConsoleHost _consoleHost = default!;
+
     [UISystemDependency] private readonly GhostSystem? _system = default;
+    [UISystemDependency] private readonly RespawnSystem? _respawn = default;
 
     private GhostGui? Gui => UIManager.GetActiveUIWidgetOrNull<GhostGui>();
 
@@ -77,6 +86,11 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         system.GhostRoleCountUpdated -= OnRoleCountUpdated;
     }
 
+    private void UpdateRespawn(TimeSpan? timeOfDeath)
+    {
+        Gui?.UpdateRespawn(timeOfDeath);
+    }
+
     public void UpdateGui()
     {
         if (Gui == null)
@@ -85,7 +99,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         }
 
         Gui.Visible = _system?.IsGhost ?? false;
-        Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody, _system?.Player?.CanEnterGhostBar, _system?.Player?.CanTakeGhostRoles); // Goob edit
+        Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody, _system?.Player?.CanEnterGhostBar, _system?.Player?.CanTakeGhostRoles, _respawn?.RespawnResetTime, _cfg.GetCVar(NF14CVars.RespawnTime)); // Goob edit
     }
 
     private void OnPlayerRemoved(GhostComponent component)
@@ -150,8 +164,14 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         Gui.GhostBarWindow.SpawnButtonPressed += GhostBarSpawnPressed; // Goobstation - Ghost Bar
         Gui.TargetWindow.WarpClicked += OnWarpClicked;
         Gui.TargetWindow.OnGhostnadoClicked += OnGhostnadoClicked;
+        Gui.GhostRespawnPressed += GuiOnGhostRespawnPressed;
 
         UpdateGui();
+    }
+
+    private void GuiOnGhostRespawnPressed()
+    {
+        _consoleHost.ExecuteCommand("ghostrespawn");
     }
 
     public void UnloadGui()
@@ -191,8 +211,23 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         Gui?.GhostBarWindow.OpenCentered();
     }
 
+    public void OnSystemLoaded(RespawnSystem system)
+    {
+        system.RespawnReseted += OnRespawnReseted;
+    }
+
     private void GhostBarSpawnPressed() // Goobstation - Ghost Bar
     {
         _system?.GhostBarSpawn();
+    }
+}
+    public void OnSystemUnloaded(RespawnSystem system)
+    {
+        system.RespawnReseted -= OnRespawnReseted;
+    }
+
+    private void OnRespawnReseted()
+    {
+        UpdateGui();
     }
 }

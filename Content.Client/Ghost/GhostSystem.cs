@@ -38,13 +38,18 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Client._Shitcode.Wizard.Systems;
+using Content.Client._NF.Respawn;
 using Content.Client.Movement.Systems;
+using Content.Client.UserInterface.Systems.Ghost.Widgets;
 using Content.Shared.Actions;
 using Content.Shared.Ghost;
+using Content.Shared.Mind;
 using Robust.Client.Console;
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
+using Robust.Client.UserInterface;
 using Robust.Shared.Player;
+using Robust.Shared.Timing;
 
 namespace Content.Client.Ghost
 {
@@ -57,6 +62,19 @@ namespace Content.Client.Ghost
         [Dependency] private readonly ContentEyeSystem _contentEye = default!;
         [Dependency] private readonly SpriteSystem _sprite = default!;
         [Dependency] private readonly GhostVisibilitySystem _ghostVisSystem = default!; // Goobstation
+        [Dependency] private readonly IUserInterfaceManager _uiManager = default!;
+        [Dependency] private readonly IGameTiming _gameTiming = default!;
+        [Dependency] private readonly RespawnSystem _respawn = default!;
+
+        public override void Update(float frameTime)
+        {
+            foreach (var ghost in EntityManager.EntityQuery<GhostComponent, MindComponent>(true))
+            {
+                var ui = _uiManager.GetActiveUIWidgetOrNull<GhostGui>();
+                if (ui != null && Player != null)
+                    ui.UpdateRespawn(_respawn.RespawnResetTime);
+            }
+        }
 
         public int AvailableGhostRoleCount { get; private set; }
 
