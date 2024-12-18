@@ -1,15 +1,11 @@
-# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/18/2026 18:11:45
-  entityCount: 7050
+  time: 06/18/2026 19:04:40
+  entityCount: 7059
 maps: []
 grids:
 - 1668
@@ -19641,6 +19637,14 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+- proto: ClothingHeadHatPwig
+  entities:
+  - uid: 7055
+    components:
+    - type: Transform
+      parent: 7051
+    - type: Physics
+      canCollide: False
 - proto: ClothingHeadHatSyndie
   entities:
   - uid: 6929
@@ -19775,6 +19779,14 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+- proto: ClothingOuterRobesJudge
+  entities:
+  - uid: 7054
+    components:
+    - type: Transform
+      parent: 7051
+    - type: Physics
+      canCollide: False
 - proto: ClothingOuterWizard
   entities:
   - uid: 6925
@@ -23064,6 +23076,14 @@ entities:
     - type: Transform
       pos: -4.527169,1.7698727
       parent: 1668
+- proto: DrinkVacuumFlask
+  entities:
+  - uid: 7057
+    components:
+    - type: Transform
+      parent: 7051
+    - type: Physics
+      canCollide: False
 - proto: DrinkWaterBottleFull
   entities:
   - uid: 342
@@ -23086,6 +23106,14 @@ entities:
     - type: Transform
       pos: -20.182804,-9.296771
       parent: 1668
+- proto: DrinkWhiskeyBottleFull
+  entities:
+  - uid: 7056
+    components:
+    - type: Transform
+      parent: 7051
+    - type: Physics
+      canCollide: False
 - proto: DVSmartFridgeMedical
   entities:
   - uid: 1290
@@ -24029,6 +24057,14 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+- proto: FoodSnackPopcorn
+  entities:
+  - uid: 7059
+    components:
+    - type: Transform
+      parent: 7051
+    - type: Physics
+      canCollide: False
 - proto: GambamovCircuitBoard
   entities:
   - uid: 6819
@@ -27446,6 +27482,14 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -17.5,-32.5
+      parent: 1668
+- proto: GavelHammer
+  entities:
+  - uid: 7052
+    components:
+    - type: Transform
+      rot: -3.141592653589793 rad
+      pos: 29.2165,20.438475
       parent: 1668
 - proto: GeneratorBasic15kW
   entities:
@@ -34003,6 +34047,51 @@ entities:
     - type: Transform
       pos: -12.486593,4.549161
       parent: 1668
+- proto: ShelfGlass
+  entities:
+  - uid: 7051
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 24.5,20.5
+      parent: 1668
+    - type: UserInterface
+      actors:
+        enum.StorageUiKey.Key:
+        - invalid
+    - type: Storage
+      storedItems:
+        7054:
+          position: 1,3
+          _rotation: South
+        7055:
+          position: 3,3
+          _rotation: South
+        7056:
+          position: 0,0
+          _rotation: South
+        7057:
+          position: 0,3
+          _rotation: South
+        7058:
+          position: 2,0
+          _rotation: South
+        7059:
+          position: 3,1
+          _rotation: South
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 7054
+          - 7055
+          - 7056
+          - 7057
+          - 7058
+          - 7059
+    - type: ActiveUserInterface
 - proto: ShowcaseRobotAntique
   entities:
   - uid: 6931
@@ -34706,6 +34795,13 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -19.868233,10.573585
+      parent: 1668
+- proto: SpawnGavelBlock
+  entities:
+  - uid: 7053
+    components:
+    - type: Transform
+      pos: 27.5,20.5
       parent: 1668
 - proto: SpawnMechRipley2
   entities:
@@ -43972,6 +44068,16 @@ entities:
     - type: DeviceList
       devices:
       - 6760
+- proto: WeaponPulsePistol
+  entities:
+  - uid: 7058
+    components:
+    - type: Transform
+      parent: 7051
+    - type: Gun
+      burstCooldownModified: 0.25
+    - type: Physics
+      canCollide: False
 - proto: WeaponRevolverPirateEmpty
   entities:
   - uid: 6029
