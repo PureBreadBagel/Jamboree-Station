@@ -1,15 +1,11 @@
-# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Map
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/31/2026 03:09:12
-  entityCount: 15194
+  time: 05/01/2026 00:34:23
+  entityCount: 15193
 maps:
 - 1
 grids:
@@ -11355,14 +11351,6 @@ entities:
     - type: Transform
       pos: 76.5,-6.5
       parent: 2
-- proto: BedsheetHOP
-  entities:
-  - uid: 656
-    components:
-    - type: Transform
-      parent: 655
-    - type: Physics
-      canCollide: False
 - proto: BedsheetHOS
   entities:
   - uid: 658
@@ -11709,11 +11697,6 @@ entities:
     - type: Transform
       pos: 12.5,7.5
       parent: 2
-  - uid: 712
-    components:
-    - type: Transform
-      pos: 8.5,7.5
-      parent: 2
   - uid: 713
     components:
     - type: Transform
@@ -11723,11 +11706,6 @@ entities:
     components:
     - type: Transform
       pos: 12.5,6.5
-      parent: 2
-  - uid: 715
-    components:
-    - type: Transform
-      pos: 10.5,7.5
       parent: 2
   - uid: 716
     components:
@@ -11748,6 +11726,13 @@ entities:
     components:
     - type: Transform
       pos: 62.5,-9.5
+      parent: 2
+- proto: BookshelfGuidebooksFilled
+  entities:
+  - uid: 656
+    components:
+    - type: Transform
+      pos: 10.5,7.5
       parent: 2
 - proto: BoozeDispenser
   entities:
@@ -12061,7 +12046,7 @@ entities:
   - uid: 762
     components:
     - type: Transform
-      pos: 18.478674,-5.0938945
+      pos: 18.484592,-5.2117677
       parent: 2
   - uid: 763
     components:
@@ -38379,12 +38364,6 @@ entities:
     - type: Transform
       pos: 15.5,44.5
       parent: 2
-  - uid: 5889
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 12.5,4.5
-      parent: 2
   - uid: 5890
     components:
     - type: Transform
@@ -38769,14 +38748,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 61.5,8.5
       parent: 2
-- proto: ComputerSalvageExpedition
-  entities:
-  - uid: 11534
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 5.5,32.5
-      parent: 2
 - proto: ComputerSalvageJobBoard
   entities:
   - uid: 10231
@@ -38819,6 +38790,12 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 9.5,31.5
+      parent: 2
+  - uid: 11534
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 5.5,32.5
       parent: 2
 - proto: ComputerSolarControl
   entities:
@@ -43153,25 +43130,6 @@ entities:
           occludes: True
           ents:
           - 650
-- proto: DresserHeadOfPersonnelFilled
-  entities:
-  - uid: 655
-    components:
-    - type: Transform
-      pos: 18.5,-5.5
-      parent: 2
-    - type: Storage
-      storedItems:
-        656:
-          position: 0,0
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 656
 - proto: DresserHeadOfSecurityFilled
   entities:
   - uid: 6659
@@ -69909,6 +69867,14 @@ entities:
     - type: Transform
       pos: -3.4634295,-18.46823
       parent: 2
+- proto: PollBooth
+  entities:
+  - uid: 712
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 8.5,7.5
+      parent: 2
 - proto: PortableFlasher
   entities:
   - uid: 10363
@@ -73042,6 +73008,30 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 65.5,19.5
       parent: 2
+- proto: PrinterDoc
+  entities:
+  - uid: 655
+    components:
+    - type: Transform
+      pos: 18.5,-5.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
+  - uid: 715
+    components:
+    - type: Transform
+      pos: 12.5,4.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: Protolathe
   entities:
   - uid: 10825
@@ -80338,6 +80328,11 @@ entities:
       parent: 2
 - proto: StationRadioReceiver
   entities:
+  - uid: 5889
+    components:
+    - type: Transform
+      pos: 13.5,4.5
+      parent: 2
   - uid: 15170
     components:
     - type: Transform
@@ -80357,11 +80352,6 @@ entities:
     components:
     - type: Transform
       pos: 5.5,40.5
-      parent: 2
-  - uid: 15174
-    components:
-    - type: Transform
-      pos: 13.5,4.5
       parent: 2
   - uid: 15175
     components:
