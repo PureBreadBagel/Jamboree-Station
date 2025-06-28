@@ -83,6 +83,15 @@
         # WD EDIT START
         - FaceHuggerToys
         # WD EDIT END
+        # DEN begin
+        - PlushieTeddyBear
+        - PlushieTeddyBearRecolorableRandom
+        - SqueakySmileyGuy
+        - SqueakySmileyGuyRandom
+        - SqueakySmileyBall
+        - PlushieAlienGerm
+        - PlushieAlienGermMini
+        # DEN end
       chance: 0.5
       offset: 0.2
 

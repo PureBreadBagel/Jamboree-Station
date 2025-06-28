@@ -176,6 +176,25 @@
     - id: PlushieGriffy #imp
     - id: PlushieThaven #imp
     - id: PlushieGoblin #imp
+    # DEN begin
+    - !type:GroupSelector
+      children:
+      - id: PlushieTeddyBear
+      - id: PlushieTeddyBearRecolorableRandom
+    - !type:GroupSelector
+      children:
+      - id: SqueakySmileyGuy
+      - id: SqueakySmileyGuyRandom
+    - !type:GroupSelector
+      children:
+      - id: SqueakySmileyBall
+      - id: SqueakySmileyBallRandom
+        weight: 0.3 # rare color variant...
+    - !type:GroupSelector
+      children:
+      - id: PlushieAlienGerm
+      - id: PlushieAlienGermMini
+    # DEN end
 
 - type: entityTable
   id: AllPottedPlantsTable
