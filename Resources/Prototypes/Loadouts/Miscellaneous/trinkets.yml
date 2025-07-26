@@ -537,6 +537,19 @@
     - CardBoxNanotrasen
   groupBy: "cardbox" #jamboree
 
+- type: loadout
+  id: CardBoxTarot
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobChaplain
+      time: 36000 # 10hr
+  storage:
+    back:
+    - CardBoxTarot
+  groupBy: "cardbox" #jamboree
+
 # Candy!
 
 - type: loadout
