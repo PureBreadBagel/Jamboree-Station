@@ -88,7 +88,7 @@
   - type: TargetObjective
     title: objective-condition-wizard-preserve-person-title
   - type: PickRandomPerson
-    onlyChoosableJobs: true
+
 
 - type: entity
   parent: [BaseWizardObjective, BaseKillObjective]
@@ -102,7 +102,6 @@
   - type: TargetObjective
     title: objective-condition-wizard-kill-person-title
   - type: PickRandomPerson
-    onlyChoosableJobs: true
   - type: KillPersonCondition
     requireDead: true
 
