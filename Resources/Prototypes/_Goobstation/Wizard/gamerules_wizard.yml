@@ -30,7 +30,7 @@
     - groups: WizardObjectiveGroupPrimaryDelta
       maxPicks: 1
     - groups: WizardObjectiveGroupSecondaryDelta
-      maxpicks: 2
+      maxPicks: 2
     maxDifficulty: 5 # Jamboree - end
   - type: AntagSelection
     useCharacterNames: true
