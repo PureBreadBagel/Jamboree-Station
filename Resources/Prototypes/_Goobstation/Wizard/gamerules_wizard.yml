@@ -22,9 +22,16 @@
   - type: GameRule
     minPlayers: 30
     chaosScore: 900
-  - type: AntagObjectives
-    objectives:
-    - WizardSurviveObjective
+  # - type: AntagObjectives Jaboree - Start
+  #   objectives:
+  #   - WizardSurviveObjective
+  - type: AntagRandomObjectives
+    sets:
+    - groups: WizardObjectiveGroupPrimaryDelta
+      maxPicks: 1
+    - groups: WizardObjectiveGroupSecondaryDelta
+      maxpicks: 2
+    maxDifficulty: 5 # Jamboree - end
   - type: AntagSelection
     useCharacterNames: true
     selectionTime: PrePlayerSpawn
