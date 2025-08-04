@@ -27,6 +27,7 @@
 # SPDX-FileCopyrightText: 2025 Ilya246 <57039557+Ilya246@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Ilya246 <ilyukarno@gmail.com>
 # SPDX-FileCopyrightText: 2025 IrisTheAmped <iristheamped@gmail.com>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 Lincoln McQueen <lincoln.mcqueen@gmail.com>
 # SPDX-FileCopyrightText: 2025 LuciferEOS <stepanteliatnik2022@gmail.com>
 # SPDX-FileCopyrightText: 2025 LuciferMkshelter <154002422+LuciferEOS@users.noreply.github.com>
@@ -52,6 +53,8 @@
 # SPDX-FileCopyrightText: 2025 fishbait <gnesse@gmail.com>
 # SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
+# SPDX-FileCopyrightText: 2025 loltart <159829224+loltart@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 loltart <lo1tartyt@gmail.com>
 # SPDX-FileCopyrightText: 2025 pheenty <fedorlukin2006@gmail.com>
 # SPDX-FileCopyrightText: 2025 terminatorbo <kovalevb059@gmail.com>
 #
@@ -433,6 +436,11 @@
     Telecrystal: 38 # This + esword = 75 TC
   categories:
   - UplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
 
 - type: listing
   id: UplinkBulkMosin
@@ -777,22 +785,22 @@
   categories:
   - UplinkChemicals
 
-- type: listing
-  id: UplinkMedicalBeamGunSyndicate
-  name: uplink-medical-beam-gun-name
-  description: uplink-medical-beam-gun-desc
-  productEntity: MedicalBeamGunSyndicateBattery
-  cost:
-    Telecrystal: 100
-  categories:
-  - UplinkChemicals
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsMedicUplink
-  - !type:ListingLimitedStockCondition
-    stock: 1
+#- type: listing Removed pending rework™
+#  id: UplinkMedicalBeamGunSyndicate
+#  name: uplink-medical-beam-gun-name
+#  description: uplink-medical-beam-gun-desc
+#  productEntity: MedicalBeamGunSyndicateBattery
+#  cost:
+#    Telecrystal: 100
+#  categories:
+#  - UplinkChemicals
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - NukeOpsMedicUplink
+#  - !type:ListingLimitedStockCondition
+#    stock: 1
 
 - type: listing
   id: UplinkCombatMedkitPills
