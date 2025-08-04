@@ -590,6 +590,11 @@ public enum LogType
     ShuttleImpact = 102,
 
     /// <summary>
+    /// Psionics
+    /// </summary>
+    Psionics = 103, // Jamboree
+
+    /// <summary>
     /// SecretPlus related game interactions.
     /// </summary>
     SecretPlus = 10001, // Goobstation
