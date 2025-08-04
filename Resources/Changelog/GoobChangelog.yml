@@ -4072,7 +4072,7 @@ Entries:
         Ashen passage now deals heat damage to the user on activation. Ashen
         path heretics receive less damage from this, the higher their path stage
         is, the lower the damage will be. Flesh stalkers and raw prophets will
-        not take damage when jaunting 
+        not take damage when jaunting
   id: 455
   time: '2025-01-11T14:09:57.0000000+00:00'
 - author: Piras314
@@ -4098,7 +4098,7 @@ Entries:
     - type: Tweak
       message: >-
         Lethargic sting doesn't inject mute toxin but slowly drains victim's
-        stamina. 
+        stamina.
     - type: Tweak
       message: Toggling of ling equipment doesn't cost any chemicals anymore.
   id: 457
@@ -6859,7 +6859,7 @@ Entries:
     - type: Tweak
       message: >-
         Alert icons for separate (OG) layout now start from the top right of
-        your screen instead of the middle right, just like in MRP. 
+        your screen instead of the middle right, just like in MRP.
     - type: Tweak
       message: >-
         Ore redemption/processing machines now display if you will obtain points
@@ -7234,7 +7234,7 @@ Entries:
     - type: Add
       message: >-
         The firefighter backpack and attached nozzle can now be found in atmos
-        lockers or ordered through cargo. 
+        lockers or ordered through cargo.
     - type: Tweak
       message: 'RPD crates can now be ordered through cargo. '
   id: 841
@@ -7582,7 +7582,7 @@ Entries:
     - type: Add
       message: >-
         Added the Holo-Cigar, a new syndicate uplink item, that turns you into
-        Big Boss. It allows you to dual wield any firearms effectively 
+        Big Boss. It allows you to dual wield any firearms effectively
   id: 881
   time: '2025-04-16T08:44:31.0000000+00:00'
 - author: Aviu
@@ -7968,7 +7968,7 @@ Entries:
       message: >-
         Radiation now uses 2D propagation system, standing on top of or holding
         radiation sources in your hand is extremely ill advised. doubly more so
-        than before. 
+        than before.
     - type: Tweak
       message: >-
         Radiation propagation now takes into account distance traveled through
@@ -8184,7 +8184,7 @@ Entries:
     - type: Add
       message: >-
         Moths move slightly slower but can dash with their wings with 65%
-        chance. 
+        chance.
     - type: Tweak
       message: Voxes now do not rot, but you can't clone them.
     - type: Tweak
@@ -9317,7 +9317,7 @@ Entries:
         Changed the colors of the body doll! Now the main color when your part
         is about to get lopped off is pure red. It will be gray when you have no
         parts, and will have the old crit/disabled reddish color when its
-        bleeding. 
+        bleeding.
     - type: Tweak
       message: >-
         The health analyzer now displays what parts are bleeding, and shows it
@@ -9708,7 +9708,7 @@ Entries:
       message: >-
         Added experimental law boards. When inserted in ai upload console, gives
         ionstormed laws to the station AI, and after 2 minutes turns laws back
-        to normal giving research points to RnD. 
+        to normal giving research points to RnD.
   id: 1084
   time: '2025-05-19T07:58:24.0000000+00:00'
 - author: Armok
@@ -10634,7 +10634,7 @@ Entries:
     - type: Fix
       message: >-
         Regular security winter boots no longer have jackboots bonuses, it also
-        was an oversight. 
+        was an oversight.
     - type: Fix
       message: >-
         CMO webbing comes with a bone manipulator instead of bone gel, it was
@@ -11022,7 +11022,7 @@ Entries:
     - type: Tweak
       message: >-
         Reflective vest can no longer be abused to completely circumvent AI
-        turrets. 
+        turrets.
   id: 1213
   time: '2025-06-15T05:40:36.0000000+00:00'
 - author: OnsenCapy
@@ -11262,7 +11262,7 @@ Entries:
     - type: Add
       message: >-
         Chitinous armour plays an animation and unique sound when being
-        equipped. 
+        equipped.
     - type: Tweak
       message: >-
         Chitinous armour has had its physical protection reduced (65% -> 45%)
@@ -11653,7 +11653,7 @@ Entries:
         Fixed a bunch of bugs with wound logic, including but not limited to
         traumas adding wounds with damage that would be unhealable, wounds going
         over the cap and resulting in permanent pain as you would be unable to
-        reset it, 
+        reset it,
     - type: Fix
       message: >-
         Bone break alerts should go away now when removing the parts (you'll
@@ -11814,7 +11814,7 @@ Entries:
     - type: Add
       message: >-
         2 new signallers: voice signaller and proximity signaller that do
-        exactly what its name implies. 
+        exactly what its name implies.
   id: 1293
   time: '2025-07-01T19:04:38.0000000+00:00'
 - author: wachte1
