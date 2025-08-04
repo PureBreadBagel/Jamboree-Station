@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared._EinsteinEngines.Actions.Events;
 using Content.Shared.Abilities.Psionics;
 using Robust.Shared.Map.Components;
