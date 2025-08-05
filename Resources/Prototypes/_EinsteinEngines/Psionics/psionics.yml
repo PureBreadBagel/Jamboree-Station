@@ -480,39 +480,39 @@
     - !type:RemovePsionicStatSources
   powerSlotCost: 0
 
-- type: psionicPower
-  id: ShadeskipPower
-  name: Shadeskip
-  powerCategories:
-    - Anomalist
-    - Shadow
-  initializeFunctions:
-    - !type:AddPsionicActions
-      actions:
-        - ActionShadeskip
-    - !type:PsionicFeedbackPopup
-    - !type:PsionicFeedbackSelfChat
-      feedbackMessage: shadeskip-power-initialization-feedback
-    - !type:PsionicModifyGlimmer
-      glimmerModifier: 4
-    - !type:AddPsionicAssayFeedback
-      assayFeedback: shadeskip-power-metapsionic-feedback
-    - !type:AddPsionicStatSources
-      amplificationModifier: 1
-    - !type:AddPsionicPsychognomicDescriptors
-      psychognomicDescriptor: tenebrous
-    - !type:PsionicAddAvailablePowers
-      powerPrototype: DarkSwapPower
-      weight: 1
-  removalFunctions:
-    - !type:RemovePsionicActions
-    - !type:RemovePsionicStatSources
-    - !type:RemoveAssayFeedback
-      assayFeedback: shadeskip-power-metapsionic-feedback
-    - !type:RemovePsionicPsychognomicDescriptors
-      psychognomicDescriptor: tenebrous
-    - !type:PsionicRemoveAvailablePowers
-      powerPrototype: DarkSwapPower
+#- type: psionicPower # Jamboree - Dont have these
+#  id: ShadeskipPower
+#  name: Shadeskip
+#  powerCategories:
+#    - Anomalist
+#    - Shadow
+#  initializeFunctions:
+#    - !type:AddPsionicActions
+#      actions:
+#        - ActionShadeskip
+#    - !type:PsionicFeedbackPopup
+#    - !type:PsionicFeedbackSelfChat
+#      feedbackMessage: shadeskip-power-initialization-feedback
+#    - !type:PsionicModifyGlimmer
+#      glimmerModifier: 4
+#    - !type:AddPsionicAssayFeedback
+#      assayFeedback: shadeskip-power-metapsionic-feedback
+#    - !type:AddPsionicStatSources
+#      amplificationModifier: 1
+#    - !type:AddPsionicPsychognomicDescriptors
+#      psychognomicDescriptor: tenebrous
+#    - !type:PsionicAddAvailablePowers
+#      powerPrototype: DarkSwapPower
+#      weight: 1
+#  removalFunctions:
+#    - !type:RemovePsionicActions
+#    - !type:RemovePsionicStatSources
+#    - !type:RemoveAssayFeedback
+#      assayFeedback: shadeskip-power-metapsionic-feedback
+#    - !type:RemovePsionicPsychognomicDescriptors
+#      psychognomicDescriptor: tenebrous
+#    - !type:PsionicRemoveAvailablePowers
+#      powerPrototype: DarkSwapPower
 
 - type: psionicPower
   id: TelekineticPulsePower
@@ -616,38 +616,38 @@
       psychognomicDescriptor: pyre
   powerSlotCost: 1
 
-- type: psionicPower
-  id: SummonImpPower
-  name: Summon Imp
-  powerCategories:
-    - Anomalist
-    - Pyrokinetic
-    - Dangerous
-    - Summoning
-  initializeFunctions:
-    - !type:AddPsionicActions
-      actions:
-        - ActionSummonImp
-    - !type:PsionicFeedbackPopup
-    - !type:PsionicFeedbackSelfChat
-      feedbackMessage: summon-imp-power-initialization-feedback
-    - !type:PsionicModifyGlimmer
-      glimmerModifier: 10
-    - !type:AddPsionicStatSources
-      amplificationModifier: 0.5
-      dampeningModifier: 0.5
-    - !type:AddPsionicPsychognomicDescriptors
-      psychognomicDescriptor: pyre
-    - !type:AddPsionicPsychognomicDescriptors
-      psychognomicDescriptor: calling
-  removalFunctions:
-    - !type:RemovePsionicActions
-    - !type:RemovePsionicStatSources
-    - !type:RemovePsionicPsychognomicDescriptors
-      psychognomicDescriptor: pyre
-    - !type:RemovePsionicPsychognomicDescriptors
-      psychognomicDescriptor: calling
-  powerSlotCost: 1
+#- type: psionicPower # Jamboree - dont have these
+#  id: SummonImpPower
+#  name: Summon Imp
+#  powerCategories:
+#    - Anomalist
+#    - Pyrokinetic
+#    - Dangerous
+#    - Summoning
+#  initializeFunctions:
+#    - !type:AddPsionicActions
+#      actions:
+#        - ActionSummonImp
+#    - !type:PsionicFeedbackPopup
+#    - !type:PsionicFeedbackSelfChat
+#      feedbackMessage: summon-imp-power-initialization-feedback
+#    - !type:PsionicModifyGlimmer
+#      glimmerModifier: 10
+#    - !type:AddPsionicStatSources
+#      amplificationModifier: 0.5
+#      dampeningModifier: 0.5
+#    - !type:AddPsionicPsychognomicDescriptors
+#      psychognomicDescriptor: pyre
+#    - !type:AddPsionicPsychognomicDescriptors
+#      psychognomicDescriptor: calling
+#  removalFunctions:
+#    - !type:RemovePsionicActions
+#    - !type:RemovePsionicStatSources
+#    - !type:RemovePsionicPsychognomicDescriptors
+#      psychognomicDescriptor: pyre
+#    - !type:RemovePsionicPsychognomicDescriptors
+#      psychognomicDescriptor: calling
+#  powerSlotCost: 1
 
 - type: psionicPower
   id: SummonRemiliaPower
