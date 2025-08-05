@@ -8,6 +8,7 @@ using Content.Shared.Actions;
 using Content.Shared._EinsteinEngines.Actions.Events;
 using Content.Shared.Doors.Components;
 using Content.Shared.Doors.Systems;
+using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 
@@ -57,7 +58,7 @@ public sealed class AnoigoPowerSystem : EntitySystem
 
         if (TryComp<DoorComponent>(target, out var doorCompOpen) && doorCompOpen.State is not DoorState.Open)
             _door.StartOpening(target);
-        _audio.PlayEntity("_EinsteinEngines/Audio/Psionics/wavy.ogg", Filter.Pvs(target), target, true);
+        _audio.PlayEntity(new SoundPathSpecifier("/Audio/_EinsteinEngines/Psionics/wavy.ogg"), Filter.Pvs(target), target, true);
         args.Handled = true;
     }
     public sealed class AnoigoEvent : HandledEntityEventArgs {}
