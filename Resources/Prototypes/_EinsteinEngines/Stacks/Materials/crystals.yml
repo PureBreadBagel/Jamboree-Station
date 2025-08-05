@@ -1,12 +1,12 @@
 - type: stack
   id: Bluespace
-  name: bluespace
+  name: stack-bluespace
   icon: { sprite: _EinsteinEngines/Objects/Materials/materials.rsi, state: bluespace }
   spawn: MaterialBluespace1
   maxCount: 5
 
 - type: stack
   id: Normality
-  name: normality
+  name: stack-normality
   icon: { sprite: _EinsteinEngines/Objects/Materials/materials.rsi, state: normality }
   spawn: MaterialNormality1
