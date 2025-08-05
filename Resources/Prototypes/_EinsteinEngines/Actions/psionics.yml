@@ -222,41 +222,41 @@
         glimmerPopupThreshold: 100
         glimmerDoAfterVisibilityThreshold: 35
 
-- type: entity
-  id: ActionShadeskip
-  name: action-name-shadeskip
-  description: action-description-shadeskip
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: InstantAction
-    icon: { sprite : _EinsteinEngines/Interface/Actions/psionics.rsi, state: shadeskip }
-    useDelay: 45
-    checkCanInteract: false
-    event: !type:AnomalyPowerActionEvent
-            settings:
-              checkInsulation: true
-              powerName: "Shadeskip"
-              minGlimmer: 6
-              maxGlimmer: 8
-              glimmerSoundThreshold: 50
-              doSupercritical: false
-            entitySpawnEntries:
-              - settings:
-                  spawnOnPulse: true
-                  spawnOnSuperCritical: true
-                  minAmount: 20
-                  maxAmount: 25
-                  maxRange: 2.25
-                spawns:
-                - ShadowKudzuTemp
-              - settings:
-                  spawnOnPulse: true
-                  spawnOnSuperCritical: true
-                  minAmount: 1
-                  maxAmount: 1
-                  maxRange: 2
-                spawns:
-                - EffectFlashShadeskip
+#- type: entity # Jamboree - Dont have these
+#  id: ActionShadeskip
+#  name: action-name-shadeskip
+#  description: action-description-shadeskip
+#  categories: [ HideSpawnMenu ]
+#  components:
+#  - type: InstantAction
+#    icon: { sprite : _EinsteinEngines/Interface/Actions/psionics.rsi, state: shadeskip }
+#    useDelay: 45
+#    checkCanInteract: false
+#    event: !type:AnomalyPowerActionEvent
+#            settings:
+#              checkInsulation: true
+#              powerName: "Shadeskip"
+#              minGlimmer: 6
+#              maxGlimmer: 8
+#              glimmerSoundThreshold: 50
+#              doSupercritical: false
+#            entitySpawnEntries:
+#              - settings:
+#                  spawnOnPulse: true
+#                  spawnOnSuperCritical: true
+#                  minAmount: 20
+#                  maxAmount: 25
+#                  maxRange: 2.25
+#                spawns:
+#                - ShadowKudzuTemp
+#              - settings:
+#                  spawnOnPulse: true
+#                  spawnOnSuperCritical: true
+#                  minAmount: 1
+#                  maxAmount: 1
+#                  maxRange: 2
+#                spawns:
+#                - EffectFlashShadeskip
 
 - type: entity
   id: ActionTelekineticPulse
@@ -332,24 +332,24 @@
             spawns:
               - EffectPyrokineticFlare
 
-- type: entity
-  id: ActionSummonImp
-  name: action-name-summon-imp
-  description: action-description-summon-imp
-  categories: [ HideSpawnMenu ]
-  components:
-    - type: InstantAction
-      icon: { sprite: _EinsteinEngines/Interface/Actions/psionics.rsi, state: summon_imp }
-      useDelay: 120
-      checkCanInteract: false
-      event: !type:SummonPsionicFamiliarActionEvent
-        familiarProto: MobPsionicFamiliarImp
-        powerName: "Summon Imp"
-        checkInsulation: true
-        doGlimmerEffects: true
-        followMaster: true
-        minGlimmer: 10
-        maxGlimmer: 20
+#- type: entity Jamboree - Dont have these
+#  id: ActionSummonImp
+#  name: action-name-summon-imp
+#  description: action-description-summon-imp
+#  categories: [ HideSpawnMenu ]
+#  components:
+#    - type: InstantAction
+#      icon: { sprite: _EinsteinEngines/Interface/Actions/psionics.rsi, state: summon_imp }
+#      useDelay: 120
+#      checkCanInteract: false
+#      event: !type:SummonPsionicFamiliarActionEvent
+#        familiarProto: MobPsionicFamiliarImp
+#        powerName: "Summon Imp"
+#        checkInsulation: true
+#        doGlimmerEffects: true
+#        followMaster: true
+#        minGlimmer: 10
+#        maxGlimmer: 20
 
 - type: entity
   id: ActionSummonRemilia
