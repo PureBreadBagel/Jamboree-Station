@@ -32,8 +32,6 @@
   - type: AccessReader
     access:
     - [ Chapel ]
-    - [ Library ]
-    - [ Mantis ]
     - [ ResearchDirector ]
     # - type: GuideHelp
     # guides: # TODO: Add a guide for Psionics Registry

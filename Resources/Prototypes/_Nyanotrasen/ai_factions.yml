@@ -1,0 +1,9 @@
+- type: npcFaction
+  id: PsionicInterloper # Crew aligned psionic
+  hostile:
+  - GlimmerMonster
+
+- type: npcFaction
+  id: GlimmerMonster # Crew hostile psionic
+  hostile:
+  - PsionicInterloper
