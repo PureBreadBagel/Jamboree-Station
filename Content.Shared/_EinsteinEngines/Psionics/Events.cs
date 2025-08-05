@@ -1,7 +1,7 @@
 using Robust.Shared.Serialization;
 using Content.Shared.Damage;
 using Content.Shared.DoAfter;
-using Content.Shared.Abilities.Psionics;
+using Content.Shared._EinsteinEngines.Abilities.Psionics;
 
 namespace Content.Shared._EinsteinEngines.Psionics.Events;
 
@@ -54,12 +54,12 @@ public sealed partial class PsionicHealOtherDoAfterEvent : DoAfterEvent
     /// <summary>
     ///     Caster's Amplification that has been modified by the results of a MoodContest.
     /// </summary>
-    public float ModifiedAmplification = default!;
+    // public float ModifiedAmplification = default!; # Jamboree - No mood system
 
     /// <summary>
     ///     Caster's Dampening that has been modified by the results of a MoodContest.
     /// </summary>
-    public float ModifiedDampening = default!;
+    // public float ModifiedDampening = default!; # Jamboree - No mood system
 
     public PsionicHealOtherDoAfterEvent(TimeSpan startedAt)
     {

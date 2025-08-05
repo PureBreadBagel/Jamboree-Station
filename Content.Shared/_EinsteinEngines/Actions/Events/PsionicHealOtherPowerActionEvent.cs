@@ -10,12 +10,12 @@ public sealed partial class PsionicHealOtherPowerActionEvent : EntityTargetActio
     /// <summary>
     ///     Caster's Amplification that has been modified by the results of a MoodContest.
     /// </summary>
-    public float ModifiedAmplification = default!;
+    // public float ModifiedAmplification = default!; #Jamboree - no mood system
 
     /// <summary>
     ///     Caster's Dampening that has been modified by the results of a MoodContest.
     /// </summary>
-    public float ModifiedDampening = default!;
+    // public float ModifiedDampening = default!; #Jamboree - no mood system
 
     [DataField]
     public DamageSpecifier? HealingAmount = default!;

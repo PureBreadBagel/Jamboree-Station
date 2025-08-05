@@ -61,21 +61,21 @@ public sealed class RevivifyPowerSystem : EntitySystem
         else ActivatePower(uid, component, args);
 
         if (args.PopupText is not null
-            && _glimmer.GlimmerOutput > args.GlimmerPopupThreshold * args.ModifiedDampening)
+            && _glimmer.GlimmerOutput > args.GlimmerPopupThreshold /* * args.ModifiedDampening */) // Jamboree - No mood system
             _popupSystem.PopupEntity(Loc.GetString(args.PopupText, ("entity", uid)), uid,
                 Filter.Pvs(uid).RemoveWhereAttachedEntity(entity => !_examine.InRangeUnOccluded(uid, entity, ExamineRange, null)),
                 true,
                 args.PopupType);
 
         if (args.PlaySound
-            && _glimmer.GlimmerOutput > args.GlimmerSoundThreshold * args.ModifiedDampening)
+            && _glimmer.GlimmerOutput > args.GlimmerSoundThreshold /* * args.ModifiedDampening */) // Jamboree - No mood system
             _audioSystem.PlayPvs(args.SoundUse, uid, args.AudioParams);
 
         // Sanitize the Glimmer inputs because otherwise the game will crash if someone makes MaxGlimmer lower than MinGlimmer.
-        var minGlimmer = MathF.MinMagnitude(args.MinGlimmer, args.MaxGlimmer)
-            * args.ModifiedAmplification - args.ModifiedDampening;
-        var maxGlimmer = MathF.MaxMagnitude(args.MinGlimmer, args.MaxGlimmer)
-            * args.ModifiedAmplification - args.ModifiedDampening;
+        var minGlimmer = MathF.MinMagnitude(args.MinGlimmer, args.MaxGlimmer);
+            // * args.ModifiedAmplification - args.ModifiedDampening; # Jamboree - No mood system
+            var maxGlimmer = MathF.MaxMagnitude(args.MinGlimmer, args.MaxGlimmer);
+            // * args.ModifiedAmplification - args.ModifiedDampening; # Jamboree - No mood system
 
         _psionics.LogPowerUsed(uid, args.PowerName, minGlimmer, maxGlimmer);
         args.Handled = true;
@@ -89,13 +89,13 @@ public sealed class RevivifyPowerSystem : EntitySystem
         if (args.RotReduction is not null)
             ev.RotReduction = args.RotReduction.Value;
 
-        ev.ModifiedAmplification = args.ModifiedAmplification;
-        ev.ModifiedDampening = args.ModifiedDampening;
+        // ev.ModifiedAmplification = args.ModifiedAmplification; # Jamboree - No mood system
+        // ev.ModifiedDampening = args.ModifiedDampening; # Jamboree - No mood system
         ev.DoRevive = args.DoRevive;
         var doAfterArgs = new DoAfterArgs(EntityManager, uid, args.UseDelay, ev, uid, target: args.Target)
         {
             BreakOnMove = args.BreakOnMove,
-            Hidden = _glimmer.GlimmerOutput > args.GlimmerDoAfterVisibilityThreshold * args.ModifiedDampening,
+            Hidden = _glimmer.GlimmerOutput > args.GlimmerDoAfterVisibilityThreshold, // * args.ModifiedDampening # Jamboree - No mood system
         };
 
         if (!_doAfterSystem.TryStartDoAfter(doAfterArgs, out var doAfterId))
@@ -128,13 +128,13 @@ public sealed class RevivifyPowerSystem : EntitySystem
             return;
 
         if (args.RotReduction is not null)
-            _rotting.ReduceAccumulator(args.Target.Value, TimeSpan.FromSeconds(args.RotReduction.Value * args.ModifiedAmplification));
+            _rotting.ReduceAccumulator(args.Target.Value, TimeSpan.FromSeconds(args.RotReduction.Value /* * args.ModifiedAmplification */)); // Jamboree - No mood system
 
         if (!TryComp<DamageableComponent>(args.Target.Value, out var damageableComponent))
             return;
 
         if (args.HealingAmount is not null)
-            _damageable.TryChangeDamage(args.Target.Value, args.HealingAmount * args.ModifiedAmplification, true, false, damageableComponent, uid);
+            _damageable.TryChangeDamage(args.Target.Value, args.HealingAmount /* * args.ModifiedAmplification */, true, false, damageableComponent, uid); // Jamboree - No mood system
 
         if (!args.DoRevive
             || _rotting.IsRotten(args.Target.Value)
@@ -154,13 +154,13 @@ public sealed class RevivifyPowerSystem : EntitySystem
             return;
 
         if (args.RotReduction is not null)
-            _rotting.ReduceAccumulator(args.Target, TimeSpan.FromSeconds(args.RotReduction.Value * args.ModifiedAmplification));
+            _rotting.ReduceAccumulator(args.Target, TimeSpan.FromSeconds(args.RotReduction.Value /* * args.ModifiedAmplification */)); // Jamboree - No mood system
 
         if (!TryComp<DamageableComponent>(args.Target, out var damageableComponent))
             return;
 
         if (args.HealingAmount is not null)
-            _damageable.TryChangeDamage(args.Target, args.HealingAmount * args.ModifiedAmplification, true, false, damageableComponent, uid);
+            _damageable.TryChangeDamage(args.Target, args.HealingAmount /* * args.ModifiedAmplification */, true, false, damageableComponent, uid); // Jamboree - No mood system
 
         if (!args.DoRevive
             || _rotting.IsRotten(args.Target)

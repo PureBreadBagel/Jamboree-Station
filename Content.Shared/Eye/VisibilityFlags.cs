@@ -27,5 +27,6 @@ namespace Content.Shared.Eye
         EldritchInfluence = 1 << 5, // Goobstation
         EldritchInfluenceSpent = 1 << 6, // Goobstation
         PsionicInvisibility = 1 << 7, // Jamboree
+        TelegnosticProjection = 8,
     }
 }
