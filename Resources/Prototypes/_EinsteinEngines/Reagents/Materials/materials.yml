@@ -1,0 +1,17 @@
+- type: material
+  id: Bluespace
+  stackEntity: MaterialBluespace1
+  name: materials-bluespace
+  unit: materials-unit-piece
+  icon: { sprite: _EinsteinEngines/Objects/Materials/materials.rsi, state: bluespace }
+  color: "#53a9ff"
+  price: 7.5
+
+- type: material
+  id: Normality
+  stackEntity: MaterialNormality1
+  name: materials-normality
+  unit: materials-unit-piece
+  icon: { sprite: _EinsteinEngines/Objects/Materials/materials.rsi, state: normality }
+  color: "#53a9ff"
+  price: 7.5

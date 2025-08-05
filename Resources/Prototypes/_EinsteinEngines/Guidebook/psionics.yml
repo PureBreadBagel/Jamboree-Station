@@ -1,4 +1,9 @@
 - type: guideEntry
   id: Psionics
   name: guide-entry-psionics
-  text: "/_EinsteinEngines/ServerInfo/Guidebook/Psionics/Psionics.xml"
+  text: "/ServerInfo/_EinsteinEngines/Guidebook/Psionics/Psionics.xml"
+
+- type: guideEntry
+  id: Glimmer
+  name: guide-entry-glimmer
+  text: "/ServerInfo/_EinsteinEngines/Guidebook/Psionics/Glimmer.xml"
