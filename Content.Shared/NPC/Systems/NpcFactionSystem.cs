@@ -394,7 +394,7 @@ public sealed partial class NpcFactionSystem : EntitySystem
     {
         _factions = _proto.EnumeratePrototypes<NpcFactionPrototype>().ToFrozenDictionary(
             faction => faction.ID,
-            faction =>  new FactionData
+            faction => new FactionData
             {
                 Friendly = faction.Friendly.ToHashSet(),
                 Hostile = faction.Hostile.ToHashSet()

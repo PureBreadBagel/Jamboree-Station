@@ -180,7 +180,7 @@ public abstract class SharedAnomalySystem : EntitySystem
             Audio.PlayPvs(component.PulseSound, uid);
 
         var pulse = EnsureComp<AnomalyPulsingComponent>(uid);
-        pulse.EndTime  = Timing.CurTime + pulse.PulseDuration;
+        pulse.EndTime = Timing.CurTime + pulse.PulseDuration;
         Appearance.SetData(uid, AnomalyVisuals.IsPulsing, true);
 
         var powerMod = 1f;
@@ -212,7 +212,7 @@ public abstract class SharedAnomalySystem : EntitySystem
         if (HasComp<AnomalySupercriticalComponent>(ent))
             return;
 
-        if(!Resolve(ent, ref ent.Comp))
+        if (!Resolve(ent, ref ent.Comp))
             return;
 
         AdminLog.Add(LogType.Anomaly, LogImpact.High, $"Anomaly {ToPrettyString(ent.Owner)} began to go supercritical.");
@@ -525,7 +525,72 @@ public abstract class SharedAnomalySystem : EntitySystem
         }
         return resultList;
     }
+
+    /// <summary>
+    /// Gets random points around the anomaly based on the given parameters.
+    /// </summary>
+    public List<TileRef>? GetSpawningPoints(EntityUid uid, float stability, float severity, AnomalySpawnSettings settings, float powerModifier = 1f, float minAmountOffset = 0, float maxAmountOffset = 0)
+    {
+        var xform = Transform(uid);
+
+        if (!TryComp<MapGridComponent>(xform.GridUid, out var grid))
+            return null;
+
+        var amount = (int) MathF.Round(MathHelper.Lerp(settings.MinAmount + minAmountOffset, settings.MaxAmount + maxAmountOffset, severity * stability * powerModifier) + 0.5f);
+
+        var localpos = xform.Coordinates.Position;
+        var tilerefs = grid.GetLocalTilesIntersecting(
+            new Box2(localpos + new Vector2(-settings.MaxRange, -settings.MaxRange), localpos + new Vector2(settings.MaxRange, settings.MaxRange))).ToList();
+
+        if (tilerefs.Count == 0)
+            return null;
+
+        var physQuery = GetEntityQuery<PhysicsComponent>();
+        var resultList = new List<TileRef>();
+        while (resultList.Count < amount)
+        {
+            if (tilerefs.Count == 0)
+                break;
+
+            var tileref = Random.Pick(tilerefs);
+            var distance = MathF.Sqrt(MathF.Pow(tileref.X - xform.LocalPosition.X, 2) + MathF.Pow(tileref.Y - xform.LocalPosition.Y, 2));
+
+            //cut outer & inner circle
+            if (distance > settings.MaxRange || distance < settings.MinRange)
+            {
+                tilerefs.Remove(tileref);
+                continue;
+            }
+
+            if (!settings.CanSpawnOnEntities)
+            {
+                var valid = true;
+                foreach (var ent in grid.GetAnchoredEntities(tileref.GridIndices))
+                {
+                    if (!physQuery.TryGetComponent(ent, out var body))
+                        continue;
+
+                    if (body.BodyType != BodyType.Static ||
+                        !body.Hard ||
+                        (body.CollisionLayer & (int) CollisionGroup.Impassable) == 0)
+                        continue;
+
+                    valid = false;
+                    break;
+                }
+                if (!valid)
+                {
+                    tilerefs.Remove(tileref);
+                    continue;
+                }
+            }
+
+            resultList.Add(tileref);
+        }
+        return resultList;
+    }
 }
+
 
 [DataRecord]
 public partial record struct AnomalySpawnSettings()

@@ -85,6 +85,10 @@
     - type: Condemned
       soulOwnedNotDevil: true # This just means they won't suffer the effects of being condemned, while still not being able to sell their soul. - Goobstation
     - type: CanEnchant #GoobStation
+    - type: InnatePsionicPowers
+      powersToAdd:
+      - HealingWordPower
+      - SummonRemiliaPower
 
 - type: startingGear
   id: ChaplainGear
