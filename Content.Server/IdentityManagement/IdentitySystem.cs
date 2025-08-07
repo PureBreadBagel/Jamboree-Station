@@ -1,6 +1,5 @@
 // SPDX-FileCopyrightText: 2022 Flipp Syder <76629141+vulppine@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2022 Moony <moonheart08@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2022 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2023 Morb <14136326+Morb0@users.noreply.github.com>
@@ -14,11 +13,16 @@
 // SPDX-FileCopyrightText: 2025 12rabbits <53499656+12rabbits@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
+// SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aviu00 <aviu00@protonmail.com>
+// SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
 // SPDX-FileCopyrightText: 2025 BombasterDS <115770678+BombasterDS@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 BombasterDS <deniskaporoshok@gmail.com>
 // SPDX-FileCopyrightText: 2025 BombasterDS2 <shvalovdenis.workmail@gmail.com>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 J <billsmith116@gmail.com>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+// SPDX-FileCopyrightText: 2025 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 vanx <61917534+Vaaankas@users.noreply.github.com>
@@ -26,6 +30,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Common.Identity;
+using Content.Server._EinsteinEngines.PsionicsRecords.Systems;
 using Content.Server.Access.Systems;
 using Content.Server.Administration.Logs;
 using Content.Server.CriminalRecords.Systems;
@@ -56,6 +61,7 @@ public sealed class IdentitySystem : SharedIdentitySystem
     [Dependency] private readonly HumanoidAppearanceSystem _humanoid = default!;
     [Dependency] private readonly CriminalRecordsConsoleSystem _criminalRecordsConsole = default!;
     [Dependency] private readonly GrammarSystem _grammarSystem = default!;
+    [Dependency] private readonly PsionicsRecordsConsoleSystem _psionicsRecordsConsole = default!;
     [Dependency] private readonly InventorySystem _inventorySystem = default!; // Goobstation - Update component state on component toggle
 
     private HashSet<EntityUid> _queuedIdentityUpdates = new();
@@ -159,6 +165,7 @@ public sealed class IdentitySystem : SharedIdentitySystem
         var identityChangedEvent = new IdentityChangedEvent(uid, ident);
         RaiseLocalEvent(uid, ref identityChangedEvent);
         SetIdentityCriminalIcon(uid);
+        SetIdentityPsionicsIcon(uid); // Einstein Engines
     }
 
     private string GetIdentityName(EntityUid target, IdentityRepresentation representation)
@@ -177,6 +184,16 @@ public sealed class IdentitySystem : SharedIdentitySystem
     private void SetIdentityCriminalIcon(EntityUid uid)
     {
         _criminalRecordsConsole.CheckNewIdentity(uid);
+    }
+
+    /// <summary>
+    ///     When the identity of a person is changed, searches the psionics records to see if the name of the new identity
+    ///     has a record. If the new name has a psionics status attached to it, the person will get the psionics status
+    ///     until they change identity again.
+    /// </summary>
+    private void SetIdentityPsionicsIcon(EntityUid uid) // Einstein Engines
+    {
+        _psionicsRecordsConsole.CheckNewIdentity(uid);
     }
 
     /// <summary>

@@ -6,7 +6,7 @@ using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._EinsteinEngines.StatusIcon;
+namespace Content.Shared.StatusIcon;
 
 /// <summary>
 /// StatusIcons for showing the psionics status on the epi HUD
