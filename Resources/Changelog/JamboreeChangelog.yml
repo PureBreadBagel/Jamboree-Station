@@ -1,4 +1,4 @@
-Name: Gooblog
+Name: Jamboreelog
 Order: -1
 Entries:
 - author: YeenJunk
@@ -14,3 +14,9 @@ Entries:
       message: Changelog is present now
   id: 1
   time: '2025-08-07T05:36:09.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Fix
+      message: Changelog Script
+  id: 2
+  time: '2025-08-07T05:47:43.0000000+00:00'
