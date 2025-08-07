@@ -161,6 +161,7 @@ public sealed class IdentitySystem : SharedIdentitySystem
         var identityChangedEvent = new IdentityChangedEvent(uid, ident);
         RaiseLocalEvent(uid, ref identityChangedEvent);
         SetIdentityCriminalIcon(uid);
+        SetIdentityPsionicsIcon(uid); // Einstein Engines
     }
 
     private string GetIdentityName(EntityUid target, IdentityRepresentation representation)
