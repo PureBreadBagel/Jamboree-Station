@@ -4,7 +4,7 @@ using Content.Shared._EinsteinEngines.PsionicsRecords.Systems;
 /// EVERYTHING HERE IS A MODIFIED VERSION OF CRIMINAL RECORDS
 /// </summary>
 
-namespace Content.Client._EinsteinEngines.PsionicsRecords.Systems;
+namespace Content.Client._EinsteinEngines.PsionicsRecords.Components;
 
 public sealed class PsionicsRecordsConsoleSystem : SharedPsionicsRecordsConsoleSystem
 {

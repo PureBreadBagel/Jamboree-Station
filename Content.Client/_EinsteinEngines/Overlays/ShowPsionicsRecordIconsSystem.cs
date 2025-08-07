@@ -3,9 +3,10 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Shared.Overlays;
+using Content.Shared._EinsteinEngines.Overlays;
+using Content.Client.Overlays;
 using Content.Shared._EinsteinEngines.Psionics.Components;
-using Content.Shared._EinsteinEngines.StatusIcon;
+using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
 using Robust.Shared.Prototypes;
 
@@ -13,7 +14,7 @@ using Robust.Shared.Prototypes;
 /// EVERYTHING HERE IS A MODIFIED VERSION OF CRIMINAL RECORDS
 /// </summary>
 
-namespace Content.Client.Overlays;
+namespace Content.Client._EinsteinEngines.Overlays;
 
 public sealed class ShowPsionicsRecordIconsSystem : EquipmentHudSystem<ShowPsionicsRecordIconsComponent>
 {

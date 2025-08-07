@@ -4,7 +4,7 @@ using Robust.Shared.GameStates;
 /// EVERYTHING HERE IS A MODIFIED VERSION OF CRIMINAL RECORDS
 /// </summary>
 
-namespace Content.Shared.Overlays;
+namespace Content.Shared._EinsteinEngines.Overlays;
 
 /// <summary>
 ///     This component allows you to see Psionics record status of mobs.

@@ -26,6 +26,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Common.Identity;
+using Content.Server._EinsteinEngines.PsionicsRecords.Systems;
 using Content.Server.Access.Systems;
 using Content.Server.Administration.Logs;
 using Content.Server.CriminalRecords.Systems;
@@ -56,6 +57,7 @@ public sealed class IdentitySystem : SharedIdentitySystem
     [Dependency] private readonly HumanoidAppearanceSystem _humanoid = default!;
     [Dependency] private readonly CriminalRecordsConsoleSystem _criminalRecordsConsole = default!;
     [Dependency] private readonly GrammarSystem _grammarSystem = default!;
+    [Dependency] private readonly PsionicsRecordsConsoleSystem _psionicsRecordsConsole = default!;
     [Dependency] private readonly InventorySystem _inventorySystem = default!; // Goobstation - Update component state on component toggle
 
     private HashSet<EntityUid> _queuedIdentityUpdates = new();
@@ -177,6 +179,16 @@ public sealed class IdentitySystem : SharedIdentitySystem
     private void SetIdentityCriminalIcon(EntityUid uid)
     {
         _criminalRecordsConsole.CheckNewIdentity(uid);
+    }
+
+    /// <summary>
+    ///     When the identity of a person is changed, searches the psionics records to see if the name of the new identity
+    ///     has a record. If the new name has a psionics status attached to it, the person will get the psionics status
+    ///     until they change identity again.
+    /// </summary>
+    private void SetIdentityPsionicsIcon(EntityUid uid) // Einstein Engines
+    {
+        _psionicsRecordsConsole.CheckNewIdentity(uid);
     }
 
     /// <summary>

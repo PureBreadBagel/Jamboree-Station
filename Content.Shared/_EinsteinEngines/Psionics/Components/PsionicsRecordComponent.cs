@@ -1,4 +1,4 @@
-using Content.Shared._EinsteinEngines.StatusIcon;
+using Content.Shared.StatusIcon;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
