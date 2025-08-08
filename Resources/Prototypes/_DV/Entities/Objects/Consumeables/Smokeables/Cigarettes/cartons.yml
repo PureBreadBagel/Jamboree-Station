@@ -11,7 +11,7 @@
   - type: StorageFill
     contents:
     - id: CigPackPurple
-      amount: 6
+      amount: 5
 
 - type: entity
   id: CigCartonCandy
@@ -26,7 +26,7 @@
   - type: StorageFill
     contents:
     - id: CigPackCandy
-      amount: 6
+      amount: 5
 
 - type: entity
   id: CigCartonSyndicate

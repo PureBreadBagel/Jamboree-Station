@@ -64,6 +64,8 @@
   id: ListeningPost
   parent: BaseGameRule
   components:
+  - type: GameRule
+    chaosScore: 250
   - type: StationEvent
     earliestStart: 15
     weight: 5
