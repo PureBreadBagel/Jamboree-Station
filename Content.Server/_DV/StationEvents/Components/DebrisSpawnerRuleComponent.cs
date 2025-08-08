@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 /*
  * Delta-V - This file is licensed under AGPLv3
  * Copyright (c) 2024 Delta-V Contributors
