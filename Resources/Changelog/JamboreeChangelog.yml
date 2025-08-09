@@ -26,3 +26,9 @@ Entries:
       message: Attempted change for psionics registry
   id: 3
   time: '2025-08-07T05:49:56.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Add
+      message: Listening Post Operatives
+  id: 4
+  time: '2025-08-09T03:11:35.0000000+00:00'
