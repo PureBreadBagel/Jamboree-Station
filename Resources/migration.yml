@@ -146,6 +146,9 @@
 # WallSolid: Window
 # Table: null
 
+# Jamboree - Listening Post from DeltaV
+BarSignWhiskeyEcho: BarSignWhiskeyEchoes
+
 # Goobstation - Submarine from DeltaV
 AirlockBoxerGlassLocked: AirlockServiceGlassLocked
 AirlockClownGlassLocked: AirlockServiceGlassLocked
@@ -167,7 +170,7 @@ AirlockReporterGlassLocked: AirlockServiceGlassLocked
 AirlockZookeeperGlassLocked: AirlockServiceGlassLocked
 AirlockZookeeperLocked: AirlockServiceLocked
 AlwaysPoweredLightPostSmallRed: null
-AsteroidAltRock: AsteroidRock
+#AsteroidAltRock: AsteroidRock
 BenchParkBambooMiddle: null
 BenchParkLeft: null
 BenchParkMiddle: null
