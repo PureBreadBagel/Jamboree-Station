@@ -2,8 +2,9 @@ title: "[Idea Proposal] "
 labels: ["IDEA"]
 body:
 - type: markdown
-  value: |
-    This form is for proposing ideas for the game!
+  attributes:
+    value: |
+      This form is for proposing ideas for the game!
 - type: textarea
   id: description
   attributes:
