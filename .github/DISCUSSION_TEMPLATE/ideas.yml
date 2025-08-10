@@ -6,11 +6,13 @@ body:
     This form is for proposing ideas for the game!
 - type: textarea
   id: description
-  label: "Proposal Description"
-  placeholder: "Describe your proposal in detail."
+  attributes:
+    label: "Proposal Description"
+    placeholder: "Describe your proposal in detail."
   validations:
     required: true
 - type: textarea
   id: considerations
-  label: "Considerations"
-  placeholder: "Provide any considerations that affect the wider gameplay loop that you either have a good answer for or would like wider community input on."
+  attributes:
+    label: "Considerations"
+    placeholder: "Provide any considerations that affect the wider gameplay loop that you either have a good answer for or would like wider community input on."
