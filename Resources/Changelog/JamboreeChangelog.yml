@@ -32,3 +32,11 @@ Entries:
       message: Listening Post Operatives
   id: 4
   time: '2025-08-09T03:11:35.0000000+00:00'
+- author: Coolgamer06
+  changes:
+    - type: Tweak
+      message: >-
+        Changed the QM's bedsheet's description to match the rest of the head's
+        bedsheet's description style.
+  id: 5
+  time: '2025-08-10T01:00:47.0000000+00:00'
