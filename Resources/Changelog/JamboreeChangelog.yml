@@ -40,3 +40,9 @@ Entries:
         bedsheet's description style.
   id: 5
   time: '2025-08-10T01:00:47.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Add
+      message: Felinids enabled
+  id: 6
+  time: '2025-08-12T05:51:46.0000000+00:00'
