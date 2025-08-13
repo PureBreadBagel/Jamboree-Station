@@ -46,3 +46,9 @@ Entries:
       message: Felinids enabled
   id: 6
   time: '2025-08-12T05:51:46.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Fix
+      message: Added missing tables in LPO map
+  id: 7
+  time: '2025-08-13T09:02:45.0000000+00:00'
