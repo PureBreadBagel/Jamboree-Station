@@ -17,7 +17,6 @@
   parent: MobHonkmotherBase
   id: MobHonkmotherSpawn
   suffix: Spawn
-  categories: [ HideSpawnMenu ] #Delta-V - Prevents in-game staff from accidentally spawning in a God and scaring the shit out of the crew.
   components:
   - type: Sprite
     layers:
@@ -31,7 +30,7 @@
 - type: entity
   parent: [MobHonkmotherBase, BaseMob]
   id: MobHonkmother
-  categories: [ HideSpawnMenu ] #Delta-V - Prevents in-game staff from accidentally spawning in a God and scaring the shit out of the crew.
+  categories:
   components:
   - type: AnnounceOnSpawn
     message: honkmother-has-risen #Delta-V - Honki must announce their presence to the entire goddamn server.
