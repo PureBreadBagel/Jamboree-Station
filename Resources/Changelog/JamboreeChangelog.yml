@@ -52,3 +52,13 @@ Entries:
       message: Added missing tables in LPO map
   id: 7
   time: '2025-08-13T09:02:45.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Add
+      message: Loading Banner
+    - type: Add
+      message: Window Icons
+    - type: Tweak
+      message: Server Rules
+  id: 8
+  time: '2025-08-15T06:49:33.0000000+00:00'
