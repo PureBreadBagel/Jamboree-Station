@@ -5,8 +5,8 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-- type: guideEntry
-  id: NRPRuleset
-  name: guide-entry-rules-nrp
-  priority: 60
-  text: "/ServerInfo/Guidebook/ServerRules/NRPRules.xml"
+#- type: guideEntry # Jamboree Disable for now TODO: Figure out Admeme days and rules
+#  id: NRPRuleset
+#  name: guide-entry-rules-nrp
+#  priority: 60
+#  text: "/ServerInfo/Guidebook/ServerRules/NRPRules.xml"

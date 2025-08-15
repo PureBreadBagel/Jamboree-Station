@@ -399,3 +399,219 @@
   ruleEntry: true
   priority: 100
   text: "/ServerInfo/Guidebook/ServerRules/BanDurations.xml"
+
+#Jamboree Core Rules
+- type: guideEntry
+  id: CORE01
+  name: guide-entry-rules-core01
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/ServerRules/CoreRules/CORE01.xml"
+
+- type: guideEntry
+  id: CORE02
+  name: guide-entry-rules-core02
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Guidebook/ServerRules/CoreRules/CORE02.xml"
+
+- type: guideEntry
+  id: CORE03
+  name: guide-entry-rules-core03
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Guidebook/ServerRules/CoreRules/CORE03.xml"
+
+- type: guideEntry
+  id: CORE04
+  name: guide-entry-rules-core04
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Guidebook/ServerRules/CoreRules/CORE04.xml"
+
+- type: guideEntry
+  id: CORE05
+  name: guide-entry-rules-core05
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Guidebook/ServerRules/CoreRules/CORE05.xml"
+
+- type: guideEntry
+  id: CORE06
+  name: guide-entry-rules-core06
+  ruleEntry: true
+  priority: 6
+  text: "/ServerInfo/Guidebook/ServerRules/CoreRules/CORE06.xml"
+
+
+# Jamboree Roleplay Rules
+- type: guideEntry
+  id: RP01
+  name: guide-entry-rules-rp01
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/ServerRules/RoleplayRules/RP01.xml"
+
+- type: guideEntry
+  id: RP02
+  name: guide-entry-rules-rp02
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Guidebook/ServerRules/RoleplayRules/RP02.xml"
+
+- type: guideEntry
+  id: RP03
+  name: guide-entry-rules-rp03
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Guidebook/ServerRules/RoleplayRules/RP03.xml"
+
+- type: guideEntry
+  id: RP04
+  name: guide-entry-rules-rp04
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Guidebook/ServerRules/RoleplayRules/RP03.xml"
+
+- type: guideEntry
+  id: RP05
+  name: guide-entry-rules-rp05
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Guidebook/ServerRules/RoleplayRules/RP05.xml"
+
+- type: guideEntry
+  id: RP06
+  name: guide-entry-rules-rp06
+  ruleEntry: true
+  priority: 6
+  text: "/ServerInfo/Guidebook/ServerRules/RoleplayRules/RP06.xml"
+
+- type: guideEntry
+  id: RP07
+  name: guide-entry-rules-rp07
+  ruleEntry: true
+  priority: 7
+  text: "/ServerInfo/Guidebook/ServerRules/RoleplayRules/RP07.xml"
+
+# Jamboree Command Rules
+- type: guideEntry
+  id: CO01
+  name: guide-entry-rules-co01
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/ServerRules/CommandRules/CO01.xml"
+
+- type: guideEntry
+  id: CO02
+  name: guide-entry-rules-co02
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Guidebook/ServerRules/CommandRules/CO02.xml"
+
+- type: guideEntry
+  id: CO03
+  name: guide-entry-rules-co03
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Guidebook/ServerRules/CommandRules/CO03.xml"
+
+# Jamboree Antag Rules
+- type: guideEntry
+  id: AN01
+  name: guide-entry-rules-an01
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/ServerRules/AntagRules/AN01.xml"
+
+- type: guideEntry
+  id: AN02
+  name: guide-entry-rules-an02
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Guidebook/ServerRules/AntagRules/AN02.xml"
+
+- type: guideEntry
+  id: AN03
+  name: guide-entry-rules-an03
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Guidebook/ServerRules/AntagRules/AN03.xml"
+
+- type: guideEntry
+  id: AN04
+  name: guide-entry-rules-an04
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Guidebook/ServerRules/AntagRules/AN04.xml"
+
+# Jamboree Silicon Rules
+- type: guideEntry
+  id: S01
+  name: guide-entry-rules-s01
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/ServerRules/SiliconRules/S01.xml"
+
+- type: guideEntry
+  id: S02
+  name: guide-entry-rules-s02
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Guidebook/ServerRules/SiliconRules/S02.xml"
+
+- type: guideEntry
+  id: S03
+  name: guide-entry-rules-s03
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Guidebook/ServerRules/SiliconRules/S03.xml"
+
+- type: guideEntry
+  id: S04
+  name: guide-entry-rules-s04
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Guidebook/ServerRules/SiliconRules/S04.xml"
+
+- type: guideEntry
+  id: S05
+  name: guide-entry-rules-s05
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Guidebook/ServerRules/SiliconRules/S05.xml"
+
+- type: guideEntry
+  id: S06
+  name: guide-entry-rules-s06
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/ServerRules/SiliconRules/S06.xml"
+
+- type: guideEntry
+  id: S07
+  name: guide-entry-rules-s07
+  ruleEntry: true
+  priority: 7
+  text: "/ServerInfo/Guidebook/ServerRules/SiliconRules/S07.xml"
+
+- type: guideEntry
+  id: S08
+  name: guide-entry-rules-s08
+  ruleEntry: true
+  priority: 8
+  text: "/ServerInfo/Guidebook/ServerRules/SiliconRules/S08.xml"
+
+- type: guideEntry
+  id: S09
+  name: guide-entry-rules-s09
+  ruleEntry: true
+  priority: 9
+  text: "/ServerInfo/Guidebook/ServerRules/SiliconRules/S09.xml"
+
+- type: guideEntry
+  id: S10
+  name: guide-entry-rules-s10
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Guidebook/ServerRules/SiliconRules/S10.xml"
