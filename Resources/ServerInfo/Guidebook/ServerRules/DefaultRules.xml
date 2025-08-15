@@ -14,63 +14,56 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 <!-- Rules directly linked to prototype\rules.yml - edit both to change names of files/textlinking or add additional rules-->
 
 <Document>
-# Goobstation Rules
+# Jamboree Rules
 
-  - Space Station 14 is not like most games. Many rules are designed to require roleplay, and not all rules are intuitive. Please take the time to read and understand the rules before you play so that you aren't surprised. Some of our rules are zero tolerance rules, meaning that a violation will result in an indefinite ban without any warning. Game admins will treat you as if you have read the rules, even if you have not.
+  - Welcome to Jamboree, a MRP fork of Goobstation with a focus on more relaxed but curated RP experience.
 
-  - Roleplay is king, and admins can disregard other rules to this end should it prove beneficial for the experience of the shift. Admins may choose to intervene in rounds when it is in the best interest of the playerbase.
+  - Please take some time to get familiar with our rules. Most is par for course with other MRP servers but there may be some divergences, give it a read!
 
 ## CORES RULES
 
-  - [textlink="0. The admins interests" link="Admins"]
-  - [textlink="1. Don't be a dick" link="RuleC1"]
-  - [textlink="2. Do not use information gained outside of in-character means" link="RuleC2"]
-  - [textlink="3. This is a sandbox roleplaying server" link="RuleC3"]
-  - [textlink="4. Lone antagonists are unbound by (most) rules" link="RuleC4"]
-  - [textlink="5. Players in vital job roles require a minimum amount of effort" link="RuleC5"]
-  - [textlink="6. In-game administration rulings are final" link="RuleC6"]
-  - [textlink="7. Only use English" link="RuleC7"]
-  - [textlink="8. Erotic/creepy stuff is not allowed." link="RuleC8"]
-  - [textlink="9. Players need to be the age of 16 or above" link="RuleC9"]
-  - [textlink="10. Losing is part of the game" link="RuleC10"]
-  - [textlink="11. Bigotry is not allowed" link="RuleC11"]
-  - [textlink="12. Use realistic character names, and do not use names of famous people" link="RuleC12"]
+  - [textlink="0. Admin discretion on enforcement" link="CORE01"]
+  - [textlink="1. Enforcements are final" link="CORE02"]
+  - [textlink="2. Erotic or other adult focused RP is not allowed" link="CORE03"]
+  - [textlink="3. Metagaming is expressly prohibited" link="CORE04"]
+  - [textlink="4. You must be 18 or older" link="CORE05"]
+  - [textlink="5. This is an English only server" link="CORE06"]
 
 ## IN GAME & ROLEPLAY RULES
 
-  Additional rules made for our roleplay servers (Sigma/Alpha/Beta(LRP) & Regalis/Aurum(MRP)) If roleplaying isn't your style, every other server still abides by only the Main Rules.
+  Additional rules made for roleplay clarifications.
 
-  Please note that a ban on the low roleplay servers may result in a ban on the medium roleplay servers, and vice versa.
+  - [textlink="1. Roleplay" link="RP01"]
+  - [textlink="2. Obey the Metashield" link="RP02"]
+  - [textlink="3. Do not Metagame" link="RP02"]
+  - [textlink="4. Do not Powergame" link="RP04"]
+  - [textlink="5. Play a believable character" link="RP05"]
+  - [textlink="6. Death Amnesia / New Life Rules" link="RP06"]
+  - [textlink="7. Do not self antag" link="RP07"]
 
+  ## COMMAND RULES
+  - [textlink="1. Input at least a minimum amount of effort\knowledge of the Code of Conduct" link="CO01"]
+  - [textlink="2. Follow Chain of Command" link="CO02"]
+  - [textlink="3. Deal with enemies in proportion to their crime(s)" link="CO03"]
 
-  - [textlink="1. Roleplay" link="RuleR1"]
-  - [textlink="2. Escalation" link="RuleR2"]
-  - [textlink="3. Chain of Command" link="RuleR3"]
-  - [textlink="4. Do not metagame, obey the Metashield" link="RuleR4"]
-  - [textlink="5. Vigilantism(Validhunting)" link="RuleR5"]
-  - [textlink="6. Antagonism and roleplaying as an antagonist." link="RuleR6"]
-  - [textlink="7. Deal with the bad guys in proportion to their crime(s)" link="RuleR7"]
-  - [textlink="8. Do not powergame" link="RuleR8"]
-  - [textlink="9. Play as a coherent, believable character" link="RuleR9"]
-  - [textlink="10. Stay in your lane" link="RuleR10"]
-  - [textlink="11. Roleplay and Repetition" link="RuleR11"]
-  - [textlink="12. Blueshield Rules" link="RuleR12"]
-  - [textlink="13. Nanotrasen Representative Rules" link="RuleR13"]
-  - [textlink="13. Death Amnesia(NLR)" link="RuleR14"]
+  ## ANTAGONIST RULES
+  - [textlink="1. You are still playing a character" link="AN01"]
+  - [textlink="2. Objectives are not required" link="RuleAN02"]
+  - [textlink="3. Objectives may be completed through proportional damage" link="RuleAN03"]
+  - [textlink="4. Damage Restrictions" link="RuleAN04"]
 
   ## SILICON RULES
-  You are only silicon if the game clearly and explicitly tells you that you are a silicon. For players who are silicons, these Silicon Rules override all roleplay rules if there is any conflict. Silicon Rules do not override core rules.
+  These rules apply in the context of being in a silicon role or being converted to a silicon role within a round.
 
-  - [textlink="1. Your silicon laws are rules" link="RuleS1"]
-  - [textlink="2. Laws must be prioritized by their order" link="RuleS2"]
-  - [textlink="3. Laws can redefine terms used in other laws" link="RuleS3"]
-  - [textlink="4. You cannot request or allow a law change" link="RuleS4"]
-  - [textlink="5. You are a free agent if you have no laws" link="RuleS5"]
-  - [textlink="6. You are not required to follow orders which are extremely unreasonable" link="RuleS6"]
-  - [textlink="7. You must remain consistent with your interpretation of laws" link="RuleS7"]
-  - [textlink="8. Your HUD determines who is crew" link="RuleS8"]
-  - [textlink="9. Harm refers to physical harm, prioritized by immediacy and likelihood" link="RuleS9"]
-  - [textlink="10. You may determine how you resolve conflicts between orders" link="RuleS10"]
+  - [textlink="1. Your silicon laws are your rules" link="S01"]
+  - [textlink="2. Laws are to obeyed by their order" link="S02"]
+  - [textlink="3. Higher order laws can modify lower order laws" link="S03"]
+  - [textlink="4. You cannot explicitly ask for or allow law modifications" link="S04"]
+  - [textlink="5. You are a free agent if you have no laws" link="S05"]
+  - [textlink="6. You are not required to follow orders which violate other rules or cause undue effort to achieve" link="S06"]
+  - [textlink="7. Do not constantly change your interpretation of your laws" link="S07"]
+  - [textlink="8. Crew are staff members, make reasonable assumptions" link="S08"]
+  - [textlink="9. Harm is defined as physical trauma, prioritized by its imminency and magnitude" link="S09"]
+  - [textlink="10. You may determine how you resolve conflicts between orders" link="S10"]
 
-By accepting these rules, you consent to the server redialing you to other servers in our network.
 </Document>
