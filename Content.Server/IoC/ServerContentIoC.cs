@@ -137,6 +137,7 @@
 // SPDX-FileCopyrightText: 2025 Ilya246 <57039557+Ilya246@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Ilya246 <ilyukarno@gmail.com>
 // SPDX-FileCopyrightText: 2025 JORJ949 <159719201+JORJ949@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 // SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
 // SPDX-FileCopyrightText: 2025 MortalBaguette <169563638+MortalBaguette@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Myra <vasilis@pikachu.systems>
@@ -147,7 +148,9 @@
 // SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
 // SPDX-FileCopyrightText: 2025 Poips <Hanakohashbrown@gmail.com>
 // SPDX-FileCopyrightText: 2025 PuroSlavKing <103608145+PuroSlavKing@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Sara Aldrete's Top Guy <malchanceux@protonmail.com>
 // SPDX-FileCopyrightText: 2025 Simon <63975668+Simyon264@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Simon <63975668+simyon264@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
 // SPDX-FileCopyrightText: 2025 Whisper <121047731+QuietlyWhisper@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 blobadoodle <me@bloba.dev>

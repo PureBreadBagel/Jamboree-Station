@@ -1,4 +1,9 @@
-﻿using System.Linq;
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+// SPDX-FileCopyrightText: 2025 Simon <63975668+simyon264@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Linq;
 using System.Threading.Tasks;
 using Content.Shared.CCVar;
 using Discord;
