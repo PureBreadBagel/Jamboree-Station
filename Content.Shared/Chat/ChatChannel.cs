@@ -15,8 +15,11 @@
 // SPDX-FileCopyrightText: 2024 Julian Giebel <juliangiebel@live.de>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Ilya246 <57039557+Ilya246@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 // SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
 // SPDX-FileCopyrightText: 2025 Rinary <72972221+Rinary1@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
+// SPDX-FileCopyrightText: 2025 Simon <63975668+simyon264@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -125,5 +128,25 @@ namespace Content.Shared.Chat
         IC = Local | Whisper | Radio | Dead | Emotes | Damage | Visual | Telepathic | CollectiveMind | Notifications, // Goobstation - Starlight collective mind port
 
         AdminRelated = Admin | AdminAlert | AdminChat,
+    }
+
+    /// <summary>
+    /// Contains extension methods for <see cref="ChatChannel"/>
+    /// </summary>
+    public static class ChatChannelExt
+    {
+        /// <summary>
+        /// Gets a string representation of a chat channel.
+        /// </summary>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown when this channel does not have a string representation set.</exception>
+        public static string GetString(this ChatChannel channel)
+        {
+            return channel switch
+            {
+                ChatChannel.OOC => Loc.GetString("chat-channel-humanized-ooc"),
+                ChatChannel.Admin => Loc.GetString("chat-channel-humanized-admin"),
+                _ => throw new ArgumentOutOfRangeException(nameof(channel), channel, null)
+            };
+        }
     }
 }
