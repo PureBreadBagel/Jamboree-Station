@@ -72,7 +72,9 @@
 // SPDX-FileCopyrightText: 2024 voidnull000 <18663194+voidnull000@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 // SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
+// SPDX-FileCopyrightText: 2025 Simon <63975668+simyon264@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -128,7 +130,7 @@ public static class ServerPackaging
         // Python script had Npgsql. though we want Npgsql.dll as well soooo
         "Npgsql",
         "Microsoft",
-        "Concentus",
+        "NetCord",
     };
 
     private static readonly List<string> ServerNotExtraAssemblies = new()
