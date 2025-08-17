@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: jukebox
+  id: theholybibble
+  name: foxwithguns - The Holy Bibble
+  path:
+    path: /Audio/_Jamboree/Jukebox/theholybibble.ogg
+
+- type: jukebox
+  id: whimsicalwoods
+  name: foxwithguns - Whimsical Woods
+  path:
+    path: /Audio/_Jamboree/Jukebox/whimsicalwoods.ogg
