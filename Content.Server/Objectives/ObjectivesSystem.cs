@@ -18,12 +18,15 @@
 // SPDX-FileCopyrightText: 2024 username <113782077+whateverusername0@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 whateverusername0 <whateveremail>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
 // SPDX-FileCopyrightText: 2025 Conchelle <mary@thughunt.ing>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 // SPDX-FileCopyrightText: 2025 Killerqu00 <47712032+Killerqu00@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
 // SPDX-FileCopyrightText: 2025 SX-7 <92227810+SX-7@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
+// SPDX-FileCopyrightText: 2025 Sara Aldrete's Top Guy <malchanceux@protonmail.com>
 // SPDX-FileCopyrightText: 2025 ScarKy0 <106310278+ScarKy0@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
@@ -32,6 +35,8 @@
 
 using Content.Server.GameTicking;
 using Content.Server.Shuttles.Systems;
+using Content.Shared._DV.CCVars;
+using Content.Shared._DV.CustomObjectiveSummary;
 using Content.Shared.Cuffs.Components;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Mind;
@@ -74,6 +79,8 @@ public sealed class ObjectivesSystem : SharedObjectivesSystem
 
     private bool _showGreentext;
 
+    private int _maxLengthSummaryLength; // DeltaV
+
     private int _goobcoinsPerGreentext = 5;
     private int _goobcoinsServerMultiplier = 1;
     public override void Initialize()
@@ -83,6 +90,7 @@ public sealed class ObjectivesSystem : SharedObjectivesSystem
         SubscribeLocalEvent<RoundEndTextAppendEvent>(OnRoundEndText);
 
         Subs.CVar(_cfg, CCVars.GameShowGreentext, value => _showGreentext = value, true);
+        Subs.CVar(_cfg, DCCVars.MaxObjectiveSummaryLength, len => _maxLengthSummaryLength = len, true); // DeltaV
 
         _prototypeManager.PrototypesReloaded += CreateCompletions;
         Subs.CVar(_cfg, GoobCVars.GoobcoinsPerGreentext, value => _goobcoinsPerGreentext = value, true);
@@ -273,10 +281,41 @@ public sealed class ObjectivesSystem : SharedObjectivesSystem
                             ("progress", progress)
                         ));
                     }
+
+                    // Begin DeltaV Additions - Generic objective
+                    agentSummary.AppendLine(Loc.GetString(
+                        "objectives-objective",
+                        ("objective", objectiveTitle)
+                    ));
+                    // End DeltaV Additions
+
                 }
             }
 
             var successRate = totalObjectives > 0 ? (float)completedObjectives / totalObjectives : 0f;
+            // Begin DeltaV Additions - custom objective response.
+            if (TryComp<CustomObjectiveSummaryComponent>(mindId, out var customComp) &&
+                customComp.ObjectiveSummary.Length <= _maxLengthSummaryLength)
+            {
+                // We have to spit it like this to make it readable. Yeah, it sucks but for some reason the entire thing
+                // is just one long string...
+                var words = customComp.ObjectiveSummary.Split(" ");
+                var currentLine = "";
+                foreach (var word in words)
+                {
+                    currentLine += word + " ";
+
+                    // magic number
+                    if (currentLine.Length <= 50)
+                        continue;
+
+                    agentSummary.AppendLine(Loc.GetString("custom-objective-format", ("line", currentLine)));
+                    currentLine = "";
+                }
+
+                agentSummary.AppendLine(Loc.GetString("custom-objective-format", ("line", currentLine)));
+            }
+            // End DeltaV Additions
             agentSummaries.Add((agentSummary.ToString(), successRate, completedObjectives));
         }
 
