@@ -1,0 +1,11 @@
+- type: jukebox
+  id: theholybibble
+  name: foxwithguns - The Holy Bibble
+  path:
+    path: /Audio/_Jamboree/Jukebox/theholybibble.ogg
+
+- type: jukebox
+  id: whimsicalwoods
+  name: foxwithguns - Whimsical Woods
+  path:
+    path: /Audio/_Jamboree/Jukebox/whimsicalwoods.ogg
