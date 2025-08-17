@@ -594,6 +594,11 @@ public enum LogType
     /// </summary>
     Psionics = 103, // Jamboree
 
+    // <summary>
+    // Custom Objective Summary
+    // </summary>
+    ObjectiveSummary = 104, // Jamboree / DeltaV
+
     /// <summary>
     /// SecretPlus related game interactions.
     /// </summary>
