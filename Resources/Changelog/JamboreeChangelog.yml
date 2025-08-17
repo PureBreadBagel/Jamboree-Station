@@ -80,3 +80,9 @@ Entries:
       message: 'You can now write custom objective summaries at EOR. '
   id: 11
   time: '2025-08-17T04:39:24.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Add
+      message: Added "The Holy Bibble" and "Whimsical Woods" to the jukebox
+  id: 12
+  time: '2025-08-17T04:42:00.0000000+00:00'
