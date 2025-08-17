@@ -48,9 +48,9 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 
   ## ANTAGONIST RULES
   - [textlink="1. You are still playing a character" link="AN01"]
-  - [textlink="2. Objectives are not required" link="RuleAN02"]
-  - [textlink="3. Objectives may be completed through proportional damage" link="RuleAN03"]
-  - [textlink="4. Damage Restrictions" link="RuleAN04"]
+  - [textlink="2. Objectives are not required" link="AN02"]
+  - [textlink="3. Objectives may be completed through proportional damage" link="AN03"]
+  - [textlink="4. Damage Restrictions" link="AN04"]
 
   ## SILICON RULES
   These rules apply in the context of being in a silicon role or being converted to a silicon role within a round.
