@@ -72,8 +72,12 @@
 # SPDX-FileCopyrightText: 2024 whateverusername0 <whateveremail>
 # SPDX-FileCopyrightText: 2024 yglop <95057024+yglop@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 JoeHammad1844 <130668733+JoeHammad1844@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 JoeHammad1844 <finiansalas2@gmail.com>
+# SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
+# SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -97,8 +101,8 @@
           availableJobs:
             #command
             Captain: [ 1, 1 ]
-            NanotrasenRepresentative: [ 1, 1 ]
-            BlueshieldOfficer: [ 1, 1 ]
+#            NanotrasenRepresentative: [ 1, 1 ] Jamboree - Dont want these enabled for now
+#            BlueshieldOfficer: [ 1, 1 ]
             #service
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 2, 2 ]

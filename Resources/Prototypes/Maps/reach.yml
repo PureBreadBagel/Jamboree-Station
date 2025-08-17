@@ -19,6 +19,10 @@
 # SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 themias <89101928+themias@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+# SPDX-FileCopyrightText: 2025 Damn Feds <20566341+K-Dynamic@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+# SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
 # SPDX-FileCopyrightText: 2025 Ted Lukin <66275205+pheenty@users.noreply.github.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -42,8 +46,8 @@
           emergencyShuttlePath: /Maps/Shuttles/emergency_cluster.yml
         - type: StationJobs
           availableJobs:
-            NanotrasenRepresentative: [ 1, 1 ] # Goobstation
-            BlueshieldOfficer: [ 1, 1 ] # Goobstation
+#            NanotrasenRepresentative: [ 1, 1 ] # Goobstation Jamboree - Dont want these enabled for now
+#            BlueshieldOfficer: [ 1, 1 ] # Goobstation
             Captain: [ 1, 1 ]
             HeadOfSecurity: [ 1, 1 ]
             SecurityOfficer: [ 1, 2 ]
