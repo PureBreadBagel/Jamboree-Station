@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - files: ["theholybibble.ogg", "whimsicalwoods.ogg"]
-  license: "unknown"
+  license: "CC-BY-SA-3.0"
   copyright: "foxwithguns"
   source: "https://youtube.com/@foxwithguns"
