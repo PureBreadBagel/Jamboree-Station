@@ -261,3 +261,9 @@
   background: /Textures/LobbyScreens/enlist.webp
   name: Nanotrasen wants YOU.
   artist: thebiggestbruh
+
+- type: lobbyBackground
+  id: perfect-trap
+  background: /Textures/LobbyScreens/clowntown.webp
+  name: Perfect Trap
+  artist: Bibble
