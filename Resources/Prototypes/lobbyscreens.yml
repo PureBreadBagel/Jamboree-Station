@@ -182,17 +182,17 @@
   name: Goob
   artist: Diebeck
 
-- type: lobbyBackground
-  id: GoobNukie
-  background: /Textures/LobbyScreens/GoobNukie.webp
-  name: Goob Nukie
-  artist: Cheeki
+#- type: lobbyBackground
+#  id: GoobNukie
+#  background: /Textures/LobbyScreens/GoobNukie.webp
+#  name: Goob Nukie
+#  artist: Cheeki
 
-- type: lobbyBackground
-  id: grandtheftgoob
-  background: /Textures/LobbyScreens/grandtheftgoob.webp
-  name: Grand Theft Goob
-  artist: Piras314
+#- type: lobbyBackground
+#  id: grandtheftgoob
+#  background: /Textures/LobbyScreens/grandtheftgoob.webp
+#  name: Grand Theft Goob
+#  artist: Piras314
 
 - type: lobbyBackground
   id: greytideworldwide
@@ -242,17 +242,17 @@
   name: Lost pAI
   artist: Cattom
 
-- type: lobbyBackground
-  id: moneyspread-bingle
-  background: /Textures/LobbyScreens/binglemoneyspread.webp
-  name: Bingle Flex
-  artist: LFMoth
+#- type: lobbyBackground
+#  id: moneyspread-bingle
+#  background: /Textures/LobbyScreens/binglemoneyspread.webp
+#  name: Bingle Flex
+#  artist: LFMoth
 
-- type: lobbyBackground
-  id: stargoob
-  background: /Textures/LobbyScreens/StarGoob.webp
-  name: GoobWars
-  artist: Jvne
+#- type: lobbyBackground
+#  id: stargoob
+#  background: /Textures/LobbyScreens/StarGoob.webp
+#  name: GoobWars
+#  artist: Jvne
 
 - type: lobbyBackground
   id: enlist-lavaland
