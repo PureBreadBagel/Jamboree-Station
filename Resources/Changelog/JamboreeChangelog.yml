@@ -62,3 +62,9 @@ Entries:
       message: Server Rules
   id: 8
   time: '2025-08-15T06:49:33.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Fix
+      message: Antag Rules, they now link to the correct pages
+  id: 9
+  time: '2025-08-17T00:27:53.0000000+00:00'
