@@ -68,3 +68,9 @@ Entries:
       message: Antag Rules, they now link to the correct pages
   id: 9
   time: '2025-08-17T00:27:53.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Remove
+      message: Removed BSO and NTR roundstart jobs from all maps
+  id: 10
+  time: '2025-08-17T01:12:23.0000000+00:00'
