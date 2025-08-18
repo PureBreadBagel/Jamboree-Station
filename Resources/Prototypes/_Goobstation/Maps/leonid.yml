@@ -41,7 +41,7 @@
 - type: gameMap
   id: Leonid
   mapName: 'Leonid Station'
-  mapPath: /Maps/_Goobstation/leonid.yml
+  mapPath: /Maps/_Jamboree/leonid.yml # Jamboree
   minPlayers: 35
   stations:
     Leonid:

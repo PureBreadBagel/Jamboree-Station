@@ -35,7 +35,7 @@
 - type: gameMap
   id: Saltern
   mapName: 'Saltern'
-  mapPath: /Maps/_Goobstation/saltern.yml # Goobstation - use custom saltern
+  mapPath: /Maps/_Jamboree/saltern.yml # Jamboree
   minPlayers: 0
   maxPlayers: 35
   fallback: true

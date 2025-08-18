@@ -9,7 +9,7 @@
 - type: gameMap
   id: Chloris
   mapName: 'Chloris'
-  mapPath: /Maps/_Goobstation/chloris.yml
+  mapPath: /Maps/_Jamboree/chloris.yml # Jamboree
   minPlayers: 80
   stations:
     Chloris:

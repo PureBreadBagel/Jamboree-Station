@@ -85,7 +85,7 @@
 - type: gameMap
   id: Bagel
   mapName: 'Bagel Station'
-  mapPath: /Maps/_Goobstation/bagel.yml # Goobstation - custom bagel
+  mapPath: /Maps/_Jamboree/bagel.yml # Goobstation - custom bagel # Jamboree
   minPlayers: 35
   maxPlayers: 80
   stations:

@@ -39,7 +39,7 @@
 - type: gameMap
   id: Marathon
   mapName: 'Marathon Station'
-  mapPath: /Maps/_Goobstation/marathon.yml # Goobstation
+  mapPath: /Maps/_Jamboree/marathon.yml # Jamboree
   minPlayers: 35
   maxPlayers: 70
   stations:
