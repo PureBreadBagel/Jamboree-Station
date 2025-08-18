@@ -33,7 +33,7 @@
 - type: gameMap
   id: Amber
   mapName: 'Amber'
-  mapPath: /Maps/_Goobstation/amber.yml
+  mapPath: /Maps/_Jamboree/amber.yml # Jamboree
   minPlayers: 7
   maxPlayers: 50
   stations:

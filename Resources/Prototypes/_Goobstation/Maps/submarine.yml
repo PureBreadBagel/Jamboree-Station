@@ -10,7 +10,7 @@
 - type: gameMap
   id: Submarine
   mapName: 'Submarine'
-  mapPath: /Maps/_Goobstation/submarine.yml
+  mapPath: /Maps/_Jamboree/submarine.yml # Jamboree
   minPlayers: 60
   stations:
     Submarine:

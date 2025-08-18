@@ -34,7 +34,7 @@
 - type: gameMap
   id: Cluster
   mapName: 'Cluster'
-  mapPath: /Maps/_Goobstation/cluster.yml
+  mapPath: /Maps/_Jamboree/cluster.yml # Jamboree
   minPlayers: 10
   maxPlayers: 35
   stations:

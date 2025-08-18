@@ -30,7 +30,7 @@
 - type: gameMap
   id: Reach
   mapName: 'Reach'
-  mapPath: /Maps/_Goobstation/reach.yml
+  mapPath: /Maps/_Jamboree/reach.yml # Jamboree
   minPlayers: 0
   maxPlayers: 10
   stations:

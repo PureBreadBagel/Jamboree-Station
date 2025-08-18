@@ -36,7 +36,7 @@
 - type: gameMap
   id: Kettle
   mapName: 'Kettle'
-  mapPath: /Maps/_Goobstation/kettle.yml
+  mapPath: /Maps/_Jamboree/kettle.yml # Jamboree
   minPlayers: 35
   stations:
     Kettle:

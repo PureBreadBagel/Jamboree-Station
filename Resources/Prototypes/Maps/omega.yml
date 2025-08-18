@@ -35,7 +35,7 @@
 - type: gameMap
   id: Omega
   mapName: 'Omega'
-  mapPath: /Maps/_Goobstation/omega.yml # Goobstation
+  mapPath: /Maps/_Jamboree/omega.yml # Jamboree
   minPlayers: 7
   maxPlayers: 35
   stations:
