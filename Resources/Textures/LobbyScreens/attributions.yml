@@ -20,13 +20,16 @@
 # SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
 # SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
 # SPDX-FileCopyrightText: 2025 Aineias1 <dmitri.s.kiselev@gmail.com>
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
 # SPDX-FileCopyrightText: 2025 FaDeOkno <143940725+FaDeOkno@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 Jvne <39907509+H2Owe@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 McBosserson <148172569+McBosserson@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Milon <plmilonpl@gmail.com>
 # SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
 # SPDX-FileCopyrightText: 2025 Rouden <149893554+Roudenn@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 # SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
 # SPDX-FileCopyrightText: 2025 SolsticeOfTheWinter <solsticeofthewinter@gmail.com>
 # SPDX-FileCopyrightText: 2025 TheBorzoiMustConsume <197824988+TheBorzoiMustConsume@users.noreply.github.com>
@@ -145,12 +148,12 @@
   license: "CC-BY-SA-3.0"
   copyright: Cattom
   source: "https://discord.gg/goobstation"
-  
+
 - files: ["CAPTAINTHERE'SNUKIES.webp"]
   license: "CC-BY-SA-3.0"
   copyright: Zethine
   source: "https://discord.gg/goobstation"
-  
+
 - files: ["StarGoob.webp"]
   license: "CC-BY-NC-SA-3.0"
   copyright: "H2Owe"
@@ -160,3 +163,8 @@
   license: "CC-BY-SA-3.0"
   copyright: "thebiggestbruh on Discord"
   source: "https://forums.goobstation.com"
+
+- files: [ "clowntown.webp" ]
+  license: "CC-BY-SA-4.0"
+  copyright: "Bibble"
+  source: "https://discord.gg/wwQBZkhKpe"

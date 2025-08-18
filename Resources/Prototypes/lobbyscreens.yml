@@ -85,10 +85,12 @@
 # SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
 # SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
 # SPDX-FileCopyrightText: 2025 Aineias1 <dmitri.s.kiselev@gmail.com>
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
 # SPDX-FileCopyrightText: 2025 Bandit <queenjess521@gmail.com>
 # SPDX-FileCopyrightText: 2025 CBozo <165491409+CBozo@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 FaDeOkno <143940725+FaDeOkno@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 Jvne <39907509+H2Owe@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 McBosserson <148172569+McBosserson@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Milon <plmilonpl@gmail.com>
@@ -182,17 +184,17 @@
   name: Goob
   artist: Diebeck
 
-- type: lobbyBackground
-  id: GoobNukie
-  background: /Textures/LobbyScreens/GoobNukie.webp
-  name: Goob Nukie
-  artist: Cheeki
+#- type: lobbyBackground
+#  id: GoobNukie
+#  background: /Textures/LobbyScreens/GoobNukie.webp
+#  name: Goob Nukie
+#  artist: Cheeki
 
-- type: lobbyBackground
-  id: grandtheftgoob
-  background: /Textures/LobbyScreens/grandtheftgoob.webp
-  name: Grand Theft Goob
-  artist: Piras314
+#- type: lobbyBackground
+#  id: grandtheftgoob
+#  background: /Textures/LobbyScreens/grandtheftgoob.webp
+#  name: Grand Theft Goob
+#  artist: Piras314
 
 - type: lobbyBackground
   id: greytideworldwide
@@ -242,20 +244,26 @@
   name: Lost pAI
   artist: Cattom
 
-- type: lobbyBackground
-  id: moneyspread-bingle
-  background: /Textures/LobbyScreens/binglemoneyspread.webp
-  name: Bingle Flex
-  artist: LFMoth
+#- type: lobbyBackground
+#  id: moneyspread-bingle
+#  background: /Textures/LobbyScreens/binglemoneyspread.webp
+#  name: Bingle Flex
+#  artist: LFMoth
 
-- type: lobbyBackground
-  id: stargoob
-  background: /Textures/LobbyScreens/StarGoob.webp
-  name: GoobWars
-  artist: Jvne
+#- type: lobbyBackground
+#  id: stargoob
+#  background: /Textures/LobbyScreens/StarGoob.webp
+#  name: GoobWars
+#  artist: Jvne
 
 - type: lobbyBackground
   id: enlist-lavaland
   background: /Textures/LobbyScreens/enlist.webp
   name: Nanotrasen wants YOU.
   artist: thebiggestbruh
+
+- type: lobbyBackground
+  id: perfect-trap
+  background: /Textures/LobbyScreens/clowntown.webp
+  name: Perfect Trap
+  artist: Bibble
