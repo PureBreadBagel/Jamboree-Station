@@ -86,3 +86,11 @@ Entries:
       message: Added "The Holy Bibble" and "Whimsical Woods" to the jukebox
   id: 12
   time: '2025-08-17T04:42:00.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Tweak
+      message: >-
+        Changed maps to include psionics items (Oracle, Sophia, Registry
+        Computer)
+  id: 13
+  time: '2025-08-18T03:03:54.0000000+00:00'
