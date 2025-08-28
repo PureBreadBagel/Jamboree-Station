@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 262.0.0
+  engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/15/2025 05:28:20
-  entityCount: 15519
+  time: 08/18/2025 11:10:26
+  entityCount: 15508
 maps:
 - 1
 grids:
@@ -8877,7 +8877,7 @@ entities:
       pos: 28.5,-21.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -26020.594
+      secondsUntilStateChange: -26030.06
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -70343,6 +70343,14 @@ entities:
     - type: Transform
       pos: 44.5341,28.548758
       parent: 2
+    - type: GasTank
+      toggleActionEntity: 7
+    - type: ActionsContainer
+    - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents:
+          - 7
   - uid: 6129
     components:
     - type: Transform
