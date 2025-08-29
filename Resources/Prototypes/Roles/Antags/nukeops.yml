@@ -85,7 +85,9 @@
 # SPDX-FileCopyrightText: 2024 vorkathbruh <152932728+vorkathbruh@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 whateverusername0 <whateveremail>
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 PunishedJoe <PunishedJoeseph@proton.me>
 # SPDX-FileCopyrightText: 2025 Ted Lukin <66275205+pheenty@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 pheenty <fedorlukin2006@gmail.com>
@@ -99,12 +101,12 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-nuclear-operative-objective
-  requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 36000 # 10 hours - Goobstation
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 36000 # 10h Goobstation
+#  requirements:
+#  - !type:OverallPlaytimeRequirement
+#    time: 36000 # 10 hours - Goobstation
+#  - !type:DepartmentTimeRequirement
+#    department: Security
+#    time: 36000 # 10h Goobstation
   guides: [ NuclearOperatives ]
 
 - type: antag
@@ -113,15 +115,15 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-nuclear-operative-agent-objective
-  requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 90000 # 25 hours - Goobstation
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 36000 # 10h Goobstation
-  - !type:RoleTimeRequirement
-    role: JobChemist
-    time: 18000 # 5h Goobstation
+#  requirements:
+#  - !type:OverallPlaytimeRequirement
+#    time: 90000 # 25 hours - Goobstation
+#  - !type:DepartmentTimeRequirement
+#    department: Security
+#    time: 36000 # 10h Goobstation
+#  - !type:RoleTimeRequirement
+#    role: JobChemist
+#    time: 18000 # 5h Goobstation
   guides: [ NuclearOperatives ]
 
 - type: antag
@@ -131,14 +133,14 @@
   setPreference: true
   objective: roles-antag-nuclear-operative-commander-objective
   requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 90000 # 25 hours - Goobstation
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 36000 # 10h Goobstation
-  - !type:DepartmentTimeRequirement
-    department: Command
-    time: 18000 # 5h Goobstation
+#  - !type:OverallPlaytimeRequirement
+#    time: 90000 # 25 hours - Goobstation
+#  - !type:DepartmentTimeRequirement
+#    department: Security
+#    time: 36000 # 10h Goobstation
+#  - !type:DepartmentTimeRequirement
+#    department: Command
+#    time: 18000 # 5h Goobstation
   # should be changed to nukie playtime when thats tracked (wyci)
   guides: [ NuclearOperatives ]
 
