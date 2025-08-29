@@ -28,8 +28,7 @@
     - Moth
     - Reptilian
     - SlimePerson
-    # Goobstation
-    # - Felinid
+    - Felinid
     - Gingerbread
     - Harpy
     - Vox
@@ -77,10 +76,10 @@
   text: "/ServerInfo/Guidebook/Mobs/SlimePerson.xml"
 
 # Goobstation
-#- type: guideEntry
-#  id: Felinid
-#  name: species-name-felinid
-#  text: "/ServerInfo/Guidebook/Mobs/Felinid.xml"
+- type: guideEntry
+  id: Felinid
+  name: species-name-felinid
+  text: "/ServerInfo/Guidebook/Mobs/Felinid.xml"
 
 - type: guideEntry
   id: Gingerbread

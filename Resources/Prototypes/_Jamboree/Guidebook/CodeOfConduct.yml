@@ -1,0 +1,76 @@
+- type: guideEntry
+  id: CodeOfConduct
+  name: guide-entry-coc
+  text: "/ServerInfo/_Jamboree/Guidebook/CodeOfConduct.xml"
+  children:
+  - LegalMandate
+  - CrewGuidelines
+
+#Section
+- type: guideEntry
+  id: CrewGuidelines
+  name: guide-entry-crew-guidelines
+  text: "/ServerInfo/_Jamboree/Guidebook/CrewGuidelines.xml"
+  priority: 1
+  children:
+  - PersonnelMovement
+  - ChainOfCommand
+  - CompanyValues
+  - Designation
+
+- type: guideEntry
+  id: LegalMandate
+  name: guide-entry-legal-mandate
+  text: "/ServerInfo/_Jamboree/Guidebook/LegalMandate.xml"
+  priority: 2
+  children:
+  - ViolationsPunishments
+  - PrisonerTreatmentSearchWarrant
+  - AlertLevelArresting
+
+
+#Subsections
+- type: guideEntry
+  id: Designation
+  name: guide-entry-designation
+  text: "/ServerInfo/_Jamboree/Guidebook/Designation.xml"
+  priority: 1
+
+- type: guideEntry
+  id: CompanyValues
+  name: guide-entry-company-values
+  text: "/ServerInfo/_Jamboree/Guidebook/CompanyValues.xml"
+  priority: 2
+
+- type: guideEntry
+  id: ChainOfCommand
+  name: guide-entry-chain-of-command
+  text: "/ServerInfo/_Jamboree/Guidebook/ChainOfCommand.xml"
+  priority: 3
+
+- type: guideEntry
+  id: PersonnelMovement
+  name: guide-entry-personnel-movement
+  text: "/ServerInfo/_Jamboree/Guidebook/PersonnelMovement.xml"
+  priority: 4
+
+#Subsections 2
+- type: guideEntry
+  id: AlertLevelArresting
+  name: guide-entry-alert-level-arresting
+  text: "/ServerInfo/_Jamboree/Guidebook/AlertLevelArresting.xml"
+  priority: 1
+
+- type: guideEntry
+  id: PrisonerTreatmentSearchWarrant
+  name: guide-entry-prisoner-treatment
+  text: "/ServerInfo/_Jamboree/Guidebook/PrisonerTreatment.xml"
+  priority: 2
+
+- type: guideEntry
+  id: ViolationsPunishments
+  name: guide-entry-violations-punishments
+  text: "/ServerInfo/_Jamboree/Guidebook/ViolationsPunishments.xml"
+  priority: 3
+
+
