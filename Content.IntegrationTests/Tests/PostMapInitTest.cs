@@ -75,6 +75,7 @@
 // SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
 // SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
 // SPDX-FileCopyrightText: 2025 Aineias1 <dmitri.s.kiselev@gmail.com>
+// SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
 // SPDX-FileCopyrightText: 2025 Deerstop <edainturner@gmail.com>
 // SPDX-FileCopyrightText: 2025 ElectroJr <leonsfriedrich@gmail.com>
 // SPDX-FileCopyrightText: 2025 Emisse <99158783+Emisse@users.noreply.github.com>
@@ -82,6 +83,7 @@
 // SPDX-FileCopyrightText: 2025 Gallagin <64706450+Gallagin@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 // SPDX-FileCopyrightText: 2025 Ichaie <167008606+Ichaie@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 // SPDX-FileCopyrightText: 2025 JoeHammad1844 <130668733+JoeHammad1844@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 JoeHammad1844 <finiansalas2@gmail.com>
 // SPDX-FileCopyrightText: 2025 Killerqu00 <killerqueen1777@gmail.com>
@@ -153,7 +155,8 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] NoSpawnMaps =
         {
             "CentComm",
-            "Dart"
+            "Dart",
+            "CentCommOnboarding"
         };
 
         private static readonly string[] Grids =
@@ -192,6 +195,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_Goobstation/Shuttles/retort_engineering.yml",
             "/Maps/_Goobstation/Shuttles/retort_janitorial.yml",
             "/Maps/_Goobstation/Shuttles/retort_cburn.yml",
+            "/Maps/_Jamboree/centcommOnboarding.yml",
         };
 
         private static readonly string[] GameMaps =
@@ -225,13 +229,14 @@ namespace Content.IntegrationTests.Tests
             "Submarine", // Goobstation - add Submarine
             "Lambda", // Goobstation - add Lambda
             "Leonid", // Goobstation - add Leonid
-            "Amber", 
+            "Amber",
             "Gate", // Goobstation - goob changes
             "Lavatest", // Lavaland Change
             "Loop",
             "Delta", // Goobstation - add Delta
             "dm01-entryway",
             "Chloris", // Goobstation
+            "CentCommOnboarding", // Jamboree
         };
 
         /// <summary>
