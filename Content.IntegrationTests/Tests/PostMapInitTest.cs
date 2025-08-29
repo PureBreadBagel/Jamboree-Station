@@ -83,6 +83,7 @@
 // SPDX-FileCopyrightText: 2025 Gallagin <64706450+Gallagin@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 // SPDX-FileCopyrightText: 2025 Ichaie <167008606+Ichaie@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 // SPDX-FileCopyrightText: 2025 JoeHammad1844 <130668733+JoeHammad1844@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 JoeHammad1844 <finiansalas2@gmail.com>
 // SPDX-FileCopyrightText: 2025 Killerqu00 <killerqueen1777@gmail.com>
