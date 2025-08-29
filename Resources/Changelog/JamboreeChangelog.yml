@@ -106,3 +106,9 @@ Entries:
       message: Code of Conduct to Guidebook
   id: 15
   time: '2025-08-29T05:16:07.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Add
+      message: CC wants to make sure you feel welcome!
+  id: 16
+  time: '2025-08-29T16:17:25.0000000+00:00'
