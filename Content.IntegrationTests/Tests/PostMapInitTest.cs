@@ -192,6 +192,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_Goobstation/Shuttles/retort_engineering.yml",
             "/Maps/_Goobstation/Shuttles/retort_janitorial.yml",
             "/Maps/_Goobstation/Shuttles/retort_cburn.yml",
+            "/Maps/_Jamboree/centcommOnboarding.yml",
         };
 
         private static readonly string[] GameMaps =
@@ -225,13 +226,14 @@ namespace Content.IntegrationTests.Tests
             "Submarine", // Goobstation - add Submarine
             "Lambda", // Goobstation - add Lambda
             "Leonid", // Goobstation - add Leonid
-            "Amber", 
+            "Amber",
             "Gate", // Goobstation - goob changes
             "Lavatest", // Lavaland Change
             "Loop",
             "Delta", // Goobstation - add Delta
             "dm01-entryway",
             "Chloris", // Goobstation
+            "CentCommOnboarding", // Jamboree
         };
 
         /// <summary>
