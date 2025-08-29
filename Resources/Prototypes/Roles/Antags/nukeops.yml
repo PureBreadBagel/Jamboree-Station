@@ -99,12 +99,12 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-nuclear-operative-objective
-  requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 36000 # 10 hours - Goobstation
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 36000 # 10h Goobstation
+#  requirements:
+#  - !type:OverallPlaytimeRequirement
+#    time: 36000 # 10 hours - Goobstation
+#  - !type:DepartmentTimeRequirement
+#    department: Security
+#    time: 36000 # 10h Goobstation
   guides: [ NuclearOperatives ]
 
 - type: antag
@@ -113,15 +113,15 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-nuclear-operative-agent-objective
-  requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 90000 # 25 hours - Goobstation
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 36000 # 10h Goobstation
-  - !type:RoleTimeRequirement
-    role: JobChemist
-    time: 18000 # 5h Goobstation
+#  requirements:
+#  - !type:OverallPlaytimeRequirement
+#    time: 90000 # 25 hours - Goobstation
+#  - !type:DepartmentTimeRequirement
+#    department: Security
+#    time: 36000 # 10h Goobstation
+#  - !type:RoleTimeRequirement
+#    role: JobChemist
+#    time: 18000 # 5h Goobstation
   guides: [ NuclearOperatives ]
 
 - type: antag
@@ -131,14 +131,14 @@
   setPreference: true
   objective: roles-antag-nuclear-operative-commander-objective
   requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 90000 # 25 hours - Goobstation
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 36000 # 10h Goobstation
-  - !type:DepartmentTimeRequirement
-    department: Command
-    time: 18000 # 5h Goobstation
+#  - !type:OverallPlaytimeRequirement
+#    time: 90000 # 25 hours - Goobstation
+#  - !type:DepartmentTimeRequirement
+#    department: Security
+#    time: 36000 # 10h Goobstation
+#  - !type:DepartmentTimeRequirement
+#    department: Command
+#    time: 18000 # 5h Goobstation
   # should be changed to nukie playtime when thats tracked (wyci)
   guides: [ NuclearOperatives ]
 

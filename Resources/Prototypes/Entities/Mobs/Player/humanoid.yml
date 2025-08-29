@@ -198,13 +198,13 @@
       rules: ghost-role-information-Death-Squad-rules
       raffle:
         settings: short
-      requirements:
-      - !type:DepartmentTimeRequirement
-        department: Security
-        time: 48000 # Goobstation
-      - !type:DepartmentTimeRequirement
-        department: Command
-        time: 18000 # Goobstation
+#      requirements:
+#      - !type:DepartmentTimeRequirement
+#        department: Security
+#        time: 48000 # Goobstation
+#      - !type:DepartmentTimeRequirement
+#        department: Command
+#        time: 18000 # Goobstation
     - type: Loadout
       prototypes: [ DeathSquadGear ]
       roleLoadout: [ RoleSurvivalEVA ]
