@@ -36,8 +36,8 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 08/29/2025 06:16:08
-  entityCount: 7013
+  time: 08/29/2025 15:40:50
+  entityCount: 7017
 maps:
 - 3876
 grids:
@@ -33379,6 +33379,18 @@ entities:
     - type: Transform
       pos: 32.5,0.5
       parent: 1668
+- proto: SpawnPointResearchAssistant
+  entities:
+  - uid: 7016
+    components:
+    - type: Transform
+      pos: 30.5,0.5
+      parent: 1668
+  - uid: 7017
+    components:
+    - type: Transform
+      pos: 30.5,-0.5
+      parent: 1668
 - proto: SpawnPointResearchDirector
   entities:
   - uid: 6992
@@ -33392,6 +33404,18 @@ entities:
     components:
     - type: Transform
       pos: 25.5,-5.5
+      parent: 1668
+- proto: SpawnPointScientist
+  entities:
+  - uid: 7014
+    components:
+    - type: Transform
+      pos: 30.5,-2.5
+      parent: 1668
+  - uid: 7015
+    components:
+    - type: Transform
+      pos: 30.5,-1.5
       parent: 1668
 - proto: SpawnPointSecurityCadet
   entities:
