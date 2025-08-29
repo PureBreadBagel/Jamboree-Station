@@ -1,43 +1,11 @@
-# SPDX-FileCopyrightText: 2022 0x6273 <0x40@keemail.me>
-# SPDX-FileCopyrightText: 2022 20kdc <asdd2808@gmail.com>
-# SPDX-FileCopyrightText: 2022 Francesco <frafonia@gmail.com>
-# SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
-# SPDX-FileCopyrightText: 2022 LittleBuilderJane <63973502+LittleBuilderJane@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2022 Nairod <110078045+Nairodian@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2022 metalgearsloth <comedian_vs_clown@hotmail.com>
-# SPDX-FileCopyrightText: 2022 metalgearsloth <metalgearsloth@gmail.com>
-# SPDX-FileCopyrightText: 2023 Debug <49997488+DebugOk@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2023 TsjipTsjip <19798667+TsjipTsjip@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2023 avery <51971268+graevy@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2023 lzk <124214523+lzk228@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2024 Aiden <aiden@djkraz.com>
-# SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
-# SPDX-FileCopyrightText: 2024 Piras314 <92357316+Piras314@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2024 Piras314 <p1r4s@proton.me>
-# SPDX-FileCopyrightText: 2024 Saphire Lattice <lattice@saphi.re>
-# SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
-# SPDX-FileCopyrightText: 2025 Emisse <99158783+Emisse@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
-# SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
-# SPDX-FileCopyrightText: 2025 SX_7 <sn1.test.preria.2002@gmail.com>
-# SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
-# SPDX-FileCopyrightText: 2025 War Pigeon <54217755+minus1over12@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 keronshb <54602815+keronshb@users.noreply.github.com>
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Map
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 08/29/2025 01:37:48
-  entityCount: 6978
+  time: 08/29/2025 06:16:08
+  entityCount: 7013
 maps:
 - 3876
 grids:
@@ -27835,6 +27803,13 @@ entities:
     - type: Transform
       pos: -4.5,15.5
       parent: 1668
+- proto: PlayerStationAi
+  entities:
+  - uid: 7010
+    components:
+    - type: Transform
+      pos: 26.5,-3.5
+      parent: 1668
 - proto: PlushieAtmosian
   entities:
   - uid: 6890
@@ -33124,6 +33099,133 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 21.5,1.5
       parent: 1668
+- proto: SpawnPointAtmos
+  entities:
+  - uid: 6978
+    components:
+    - type: Transform
+      pos: 32.5,1.5
+      parent: 1668
+- proto: SpawnPointBartender
+  entities:
+  - uid: 3881
+    components:
+    - type: Transform
+      pos: 22.5,1.5
+      parent: 1668
+- proto: SpawnPointBorg
+  entities:
+  - uid: 7011
+    components:
+    - type: Transform
+      pos: 25.5,-3.5
+      parent: 1668
+  - uid: 7012
+    components:
+    - type: Transform
+      pos: 27.5,-3.5
+      parent: 1668
+  - uid: 7013
+    components:
+    - type: Transform
+      pos: 26.5,-4.5
+      parent: 1668
+- proto: SpawnPointBotanist
+  entities:
+  - uid: 3883
+    components:
+    - type: Transform
+      pos: 32.5,-3.5
+      parent: 1668
+- proto: SpawnPointCaptain
+  entities:
+  - uid: 3879
+    components:
+    - type: Transform
+      pos: 26.5,2.5
+      parent: 1668
+- proto: SpawnPointCargoTechnician
+  entities:
+  - uid: 7001
+    components:
+    - type: Transform
+      pos: 27.5,-5.5
+      parent: 1668
+- proto: SpawnPointChaplain
+  entities:
+  - uid: 3882
+    components:
+    - type: Transform
+      pos: 32.5,-2.5
+      parent: 1668
+- proto: SpawnPointChef
+  entities:
+  - uid: 3884
+    components:
+    - type: Transform
+      pos: 22.5,-1.5
+      parent: 1668
+- proto: SpawnPointChemist
+  entities:
+  - uid: 6982
+    components:
+    - type: Transform
+      pos: 31.5,1.5
+      parent: 1668
+- proto: SpawnPointChiefEngineer
+  entities:
+  - uid: 6977
+    components:
+    - type: Transform
+      pos: 27.5,2.5
+      parent: 1668
+- proto: SpawnPointChiefMedicalOfficer
+  entities:
+  - uid: 6981
+    components:
+    - type: Transform
+      pos: 24.5,2.5
+      parent: 1668
+- proto: SpawnPointClown
+  entities:
+  - uid: 7005
+    components:
+    - type: Transform
+      pos: 28.5,-5.5
+      parent: 1668
+  - uid: 7006
+    components:
+    - type: Transform
+      pos: 29.5,-5.5
+      parent: 1668
+- proto: SpawnPointDetective
+  entities:
+  - uid: 6996
+    components:
+    - type: Transform
+      pos: 30.5,2.5
+      parent: 1668
+- proto: SpawnPointHeadOfPersonnel
+  entities:
+  - uid: 3880
+    components:
+    - type: Transform
+      pos: 25.5,2.5
+      parent: 1668
+- proto: SpawnPointHeadOfSecurity
+  entities:
+  - uid: 6993
+    components:
+    - type: Transform
+      pos: 23.5,2.5
+      parent: 1668
+- proto: SpawnPointJanitor
+  entities:
+  - uid: 3885
+    components:
+    - type: Transform
+      pos: 31.5,-5.5
+      parent: 1668
 - proto: SpawnPointLatejoin
   entities:
   - uid: 3877
@@ -33136,41 +33238,6 @@ entities:
     - type: Transform
       pos: 32.5,3.5
       parent: 1668
-  - uid: 3879
-    components:
-    - type: Transform
-      pos: 32.5,2.5
-      parent: 1668
-  - uid: 3880
-    components:
-    - type: Transform
-      pos: 32.5,1.5
-      parent: 1668
-  - uid: 3881
-    components:
-    - type: Transform
-      pos: 32.5,0.5
-      parent: 1668
-  - uid: 3882
-    components:
-    - type: Transform
-      pos: 32.5,-0.5
-      parent: 1668
-  - uid: 3883
-    components:
-    - type: Transform
-      pos: 32.5,-1.5
-      parent: 1668
-  - uid: 3884
-    components:
-    - type: Transform
-      pos: 32.5,-2.5
-      parent: 1668
-  - uid: 3885
-    components:
-    - type: Transform
-      pos: 32.5,-3.5
-      parent: 1668
   - uid: 3886
     components:
     - type: Transform
@@ -33181,12 +33248,160 @@ entities:
     - type: Transform
       pos: 32.5,-5.5
       parent: 1668
+- proto: SpawnPointLawyer
+  entities:
+  - uid: 6998
+    components:
+    - type: Transform
+      pos: 30.5,1.5
+      parent: 1668
+- proto: SpawnPointLibrarian
+  entities:
+  - uid: 6954
+    components:
+    - type: Transform
+      pos: 32.5,-1.5
+      parent: 1668
+- proto: SpawnPointMedicalDoctor
+  entities:
+  - uid: 6983
+    components:
+    - type: Transform
+      pos: 31.5,0.5
+      parent: 1668
+- proto: SpawnPointMedicalIntern
+  entities:
+  - uid: 6985
+    components:
+    - type: Transform
+      pos: 31.5,-2.5
+      parent: 1668
+- proto: SpawnPointMime
+  entities:
+  - uid: 7007
+    components:
+    - type: Transform
+      pos: 22.5,-4.5
+      parent: 1668
+  - uid: 7008
+    components:
+    - type: Transform
+      pos: 23.5,-4.5
+      parent: 1668
+- proto: SpawnPointMusician
+  entities:
+  - uid: 7009
+    components:
+    - type: Transform
+      pos: 24.5,-4.5
+      parent: 1668
 - proto: SpawnPointObserver
   entities:
   - uid: 3888
     components:
     - type: Transform
       pos: 31.5,-0.5
+      parent: 1668
+- proto: SpawnPointParamedic
+  entities:
+  - uid: 6984
+    components:
+    - type: Transform
+      pos: 31.5,-1.5
+      parent: 1668
+- proto: SpawnPointPassenger
+  entities:
+  - uid: 7002
+    components:
+    - type: Transform
+      pos: 22.5,-5.5
+      parent: 1668
+  - uid: 7003
+    components:
+    - type: Transform
+      pos: 23.5,-5.5
+      parent: 1668
+  - uid: 7004
+    components:
+    - type: Transform
+      pos: 24.5,-5.5
+      parent: 1668
+- proto: SpawnPointPsychologist
+  entities:
+  - uid: 6986
+    components:
+    - type: Transform
+      pos: 31.5,-3.5
+      parent: 1668
+- proto: SpawnPointQuartermaster
+  entities:
+  - uid: 6999
+    components:
+    - type: Transform
+      pos: 26.5,-5.5
+      parent: 1668
+- proto: SpawnPointReporter
+  entities:
+  - uid: 6962
+    components:
+    - type: Transform
+      pos: 32.5,0.5
+      parent: 1668
+- proto: SpawnPointResearchDirector
+  entities:
+  - uid: 6992
+    components:
+    - type: Transform
+      pos: 28.5,2.5
+      parent: 1668
+- proto: SpawnPointSalvageSpecialist
+  entities:
+  - uid: 7000
+    components:
+    - type: Transform
+      pos: 25.5,-5.5
+      parent: 1668
+- proto: SpawnPointSecurityCadet
+  entities:
+  - uid: 6997
+    components:
+    - type: Transform
+      pos: 30.5,-3.5
+      parent: 1668
+- proto: SpawnPointSecurityOfficer
+  entities:
+  - uid: 6995
+    components:
+    - type: Transform
+      pos: 30.5,-4.5
+      parent: 1668
+- proto: SpawnPointServiceWorker
+  entities:
+  - uid: 6955
+    components:
+    - type: Transform
+      pos: 32.5,-0.5
+      parent: 1668
+- proto: SpawnPointStationEngineer
+  entities:
+  - uid: 6979
+    components:
+    - type: Transform
+      pos: 32.5,2.5
+      parent: 1668
+- proto: SpawnPointTechnicalAssistant
+  entities:
+  - uid: 6980
+    components:
+    - type: Transform
+      pos: 31.5,2.5
+      parent: 1668
+- proto: SpawnPointWarden
+  entities:
+  - uid: 6994
+    components:
+    - type: Transform
+      pos: 31.5,-4.5
       parent: 1668
 - proto: SpawnVehicleSecway
   entities:
