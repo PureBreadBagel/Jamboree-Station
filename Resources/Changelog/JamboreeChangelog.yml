@@ -112,3 +112,11 @@ Entries:
       message: CC wants to make sure you feel welcome!
   id: 16
   time: '2025-08-29T16:17:25.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Tweak
+      message: >-
+        All jobs, and MOST ghost roles have been un-gated. This will be reverted
+        soonish
+  id: 17
+  time: '2025-08-29T16:42:06.0000000+00:00'
