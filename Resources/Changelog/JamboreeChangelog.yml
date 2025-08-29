@@ -120,3 +120,9 @@ Entries:
         soonish
   id: 17
   time: '2025-08-29T16:42:06.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Remove
+      message: Yowie and Resomi not avail as species pick
+  id: 18
+  time: '2025-08-29T19:06:59.0000000+00:00'
