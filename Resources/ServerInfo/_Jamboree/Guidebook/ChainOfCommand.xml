@@ -1,0 +1,43 @@
+<Document>
+  # SUBSECTION 3: Chain Of Command
+
+  While working aboard this facility, you will be organized into different departments, each led by
+  different roles. If you are working under one of these leading roles, you are required to follow
+  orders which do not cause any violations. Insubordination is not tolerated and will be treated
+  with appropriate measure.
+
+  [bolditalic]Note: The placement of listing does not indicate the hierarchy of power, and rather lists those in
+  said departments/their said departments[/bolditalic]
+
+ [color=green][bold]Central Command[/bold][/color]
+  - [bold]Cental Command Official[/bold]: Heads over both Central Command and over all other departments.
+
+  [color=DeepSkyBlue][bold]Command[/bold][/color]
+  - [bold]Captain[/bold]: Heads over both Command and all other departments besides Central Command
+  - [bold]Head Of Security (HoS)[/bold]: Leads Security
+  - [bold]Head Of Personnel (HoP)[/bold]: Leads Service
+  - [bold]Quartermaster (QM)[/bold]: Leads Logistics
+  - [bold]Research Director (RD)[/bold]: Leads Science
+  - [bold]Chief Engineer (CE)[/bold]: Leads Engineering
+  - [bold]Chief Medial Officer (CMO)[/bold]: Leads Medical
+
+___________________________________________________________________________
+
+  In the event that a captain does not appear during the shift or a captain becomes unrecoverable
+  during a shift, a new captain must be selected. This follows a fairly simple step-by-step guide.
+
+  - Step 1: Is there a captain who is alive and present? If so, proceed to step 6. If not,
+  proceed to the next step.
+  - Step 2: Is there an HOS who is alive and present? If so, proceed to step 6. If not,
+  proceed to the next step.
+  - Step 3: Is there an HOP who is alive and present? If so, proceed to step 6. If not,
+  proceed to the next step.
+  - Step 4: All heads may vote on a head to elect as captain, then should proceed to step 6.
+  If all heads are not alive and present, proceed to the next step. If all heads are dead or
+  unavailable, proceed to the next step.
+  - Step 5: If no heads have yet to arrive up until 15 minutes into the shift, crew are
+  permitted to take the actions necessary to keep operations on the station stable. If heads
+  have arrived during the course of the shift but are now all deceased or incapable of their
+  duties, call the emergency shuttle and set the alert level to code red.
+  - Step 6: That person is now the Captain
+</Document>

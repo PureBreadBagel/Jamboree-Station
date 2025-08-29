@@ -1,0 +1,192 @@
+<Document>
+  #SUBSECTION 2: Alert Levels and Arresting/Sentencing Procedure
+
+  The following are the different existing alert levels that can occur during a shift as determined by
+  the Station AI, Command Department, or other entities alongside the meanings and procedures
+  of said alert levels
+
+  [bolditalic]Note: If a threat has been handled or subsided, an alert level should be lowered from what it is
+  to Green, with the exception of alert level Red. If on alert level Red, lower to Blue if the threat
+  has not been definitively handled. Alert lowering should occur within 15 minutes of a threat
+  subsiding or being handled.[/bolditalic]
+
+  [bold][color=green]Green[/color][/bold]
+  - All is well.
+  - Continue operations as normal!
+
+  Security Operations:
+  - All weapons are to be holstered or kept in pockets/suit
+  storage unless absolutely required.
+  - Long arms must remain inside the brig, exceptions made
+  for the HoS and the Warden.
+  - Random searches are not permitted without express
+  permission by either the HoS or Captain. Searches are still
+  permitted if there is reasonable suspicion of a crime.
+  - Secure Areas: EVA Storage, Tech Storage, Gravity Generator,
+  Engineering Secure Storage, Vault, Armory, Command Zones,
+  Security Zones
+  - Secure areas are to be left unbolted and ready to use for
+  their intended purpose.
+
+  [bold][color=blue]Blue[/color][/bold]
+  - There is a known or suspected moderate threat on-board or near the station.
+  - Personnel should abide by the following:
+
+  Security Operations:
+  - Weapons do not need to be holstered.
+  - Long arms are permitted outside of the brig.
+  - Random searches are fully permitted. Security personnel
+  may detain any personnel refusing a random search.
+  - Secure Areas: EVA Storage, Tech Storage, Gravity Generator,
+  Engineering Secure Storage, Vault, Armory, Command Zones,
+  Security Zones
+  - It is recommended all secure areas be bolted unless their
+  use is necessary.
+
+  General Crew:
+  - Personnel are to report any suspicious activity to their
+  nearest Security member or via common radio.
+  - Personnel are highly encouraged to exercise caution, even
+  if the threat is only suspected.
+  - Follow simple safety procedures.
+
+  [bold][color=red]Red[/color][/bold]
+  - There are a singular or multiple major threats on-board or near the station.
+  - Personnel should abide by the following:
+
+  Security Operations:
+  - Random searches are fully permitted and recommended.
+  Security personnel may detain any personnel refusing a
+  random search in order to conduct said search.
+  - Security personnel are expected to fully cooperate with any
+  Central Command Staff (ERT, CBURN, Blueshield
+  Officers) in order to eliminate the threat to the station
+  - In the event of invaders attempting to activate the
+  nuclear device on the station, the following are also
+  in place.
+  - All weapons and chemical restrictions are
+  lifted.
+  - Dispersal of weapons and armor to all crew
+  and building of fortifications is encouraged.
+  - Secure Areas: EVA Storage, Tech Storage, Gravity Generator,
+  Engineering Secure Storage, Vault, Armory, Command Zones,
+  Security Zones
+  - Secure Areas may be left bolted or unbolted at the
+  discretion of the Command Department
+
+  General Crew:
+  - Personnel are to follow the instructions of Security staff, as
+  long as they are within the bounds of the Legal Mandate
+  and are not acting against the general well-being of the
+  station.
+
+  [bold][color=violet]Violet[/color][/bold]
+  - There is a confirmed viral outbreak on board the station.
+  - Personnel should abide by the following:
+
+  Security Operations:
+  - Long arms are permitted outside of the brig.
+  - Security personnel should work to contain the threat and
+  protect the crew.
+
+  Medical Operations:
+  - Medical personnel should begin work on a cure and/or
+  vaccine for the infections.
+  - Attempts to treat infected patients exhibiting symptoms is
+  discouraged.
+
+  General Crew:
+  - Personnel are expected to seek safe areas and to acquire
+  apparel to resist the infection.
+  - Personnel exhibiting symptoms are to be reported to either
+  the nearest Security member or over common radio.
+
+  [bold][color=yellow]Yellow[/color][/bold]
+  - The station has suffered major atmospheric issues or significant structural
+  damage.
+  - Personnel should abide by the following:
+
+  Engineering Operations:
+  - Engineers are to begin restitution of the issues present to
+  the station.
+  - Dispersal of emergency internals and, if needed, EVA
+  equipment to the crew is recommended.
+  - If damage is irreparable or extremely hazardous, it is expected to
+  call for the evacuation of the station.
+
+  [bold][color=teal]Gamma[/color][/bold]
+  - The station is on its last legs, with almost everyone being dead. Martial Law is in
+  effect.
+  - Personnel should abide by the following:
+
+  Security Operations:
+  - Long arms are permitted and encouraged outside of the
+  brig.
+  - Arrests, searches, and departmental raids may be
+  performed at the discretion of security personnel and do
+  not require a warrant.
+  - Security is authorized to do whatever actions are deemed
+  necessary to neutralise or repel the threat.
+  - Security is not bound by Arresting Procedure.
+  - Security is not bound by Treatment of Prisoners.
+
+  General Crew:
+  - Personnel are to seek any evacuation means possible.
+
+  [bold][color=IndianRed]Delta[/color][/bold]
+  - The nuclear destruction mechanism is engaged and the station’s destruction is
+  imminent.
+  - Personnel should abide by the following:
+
+  Security Operations:
+  - Long arms are permitted and encouraged outside of the
+  brig.
+  - Body armor and helmets are mandatory for Security
+  personnel.
+  - All weapon and chemical restrictions are lifted.
+  - Dispersal of weapons and armor to all crew and building of
+  fortifications is encouraged.
+  - All crew are encouraged to seek evacuation or assist in
+  elimination of the threat.
+
+  [bold][color=lightblue]Octarine[/color][/bold]
+  - A cataclysmic noospheric event threatens to envelop realspace.
+  - Personnel should abide by the following:
+
+  Security Operations:
+  - Long arms are permitted and encouraged outside of the
+  brig.
+  - Body armor and helmets are mandatory for Security
+  personnel.
+  - All weapon and chemical restrictions are lifted.
+  - Dispersal of weapons and armor to all crew and building of
+  fortifications is encouraged.
+  - All crew are encouraged to seek evacuation or assist in
+  elimination of the threat.
+
+  _________________________________________________
+
+  ## Arresting Procedure
+
+  Arresting procedure is the ideal way to carry out an arrest. Not all can or will be performed this
+  way, but they should generally follow this procedure.
+
+  1. Inform the criminal that they are wanted, and why they are wanted. This is void if they
+  are visibly armed or in the process of committing a crime.
+
+  2. If compliant, cuff and transport the prisoner to the brig immediately without harming them
+  and allow the warden, HoS, or Captain to complete the sentencing. If there is no warden,
+  HoS, or Captain, the arresting officer may complete sentencing. If compliant, you do not
+  need to stun the criminal/suspect before applying cuffs. If the violation is minor then the
+  suspect may be allowed to walk freely to security while accompanied by a security
+  member until that liberty is abused.
+
+  3. If resistant, use your nonlethal weaponry until a situation prompts the use of lethal force.
+  If successful, transport the prisoner to the brig and allow the warden, HoS, or Captain to
+  complete sentencing. If there is no warden, HoS, or Captain, the arresting officer may
+  complete sentencing.
+
+  4. If lethal force is used, the suspect must be provided medical aid until they are in a stable
+  enough condition to serve their sentence. If lethal force was used in the prevention of a
+  capital offense, revival is no longer required.
+</Document>
