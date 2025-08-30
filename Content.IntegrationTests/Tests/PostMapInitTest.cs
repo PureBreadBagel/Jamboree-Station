@@ -156,8 +156,7 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] NoSpawnMaps =
         {
             "CentComm",
-            "Dart",
-            "CentCommOnboarding"
+            "Dart"
         };
 
         private static readonly string[] Grids =
@@ -196,7 +195,6 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_Goobstation/Shuttles/retort_engineering.yml",
             "/Maps/_Goobstation/Shuttles/retort_janitorial.yml",
             "/Maps/_Goobstation/Shuttles/retort_cburn.yml",
-            "/Maps/_Jamboree/centcommOnboarding.yml",
         };
 
         private static readonly string[] GameMaps =
@@ -237,7 +235,6 @@ namespace Content.IntegrationTests.Tests
             "Delta", // Goobstation - add Delta
             "dm01-entryway",
             "Chloris", // Goobstation
-            "CentCommOnboarding", // Jamboree
         };
 
         /// <summary>
