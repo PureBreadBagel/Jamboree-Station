@@ -126,3 +126,9 @@ Entries:
       message: Yowie and Resomi not avail as species pick
   id: 18
   time: '2025-08-29T19:06:59.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Add
+      message: Lots, Check Goob Log!
+  id: 19
+  time: '2025-08-30T19:41:41.0000000+00:00'
