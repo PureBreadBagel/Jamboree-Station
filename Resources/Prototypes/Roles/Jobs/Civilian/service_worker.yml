@@ -69,6 +69,10 @@
 # SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 Minemoder5000 <minemoder50000@gmail.com>
 # SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
+# SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+# SPDX-FileCopyrightText: 2025 ImWeax <59857479+ImWeax@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Minemoder5000 <minemoder50000@gmail.com>
+# SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 # SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -93,6 +97,9 @@
   - Kitchen
   extendedAccess:
   - Hydroponics
+  special: # goob
+  - !type:AddImplantSpecial # Service workers can understand a chef's communications.
+    implants: [ BasicSpaceItalianTranslatorImplant ]
 
 - type: startingGear
   id: ServiceWorkerGear
@@ -103,3 +110,14 @@
   #storage:
     #back:
     #- Stuff
+
+- type: chameleonOutfit
+  id: ServiceWorkerChameleonOutfit
+  job: ServiceWorker
+  equipment:
+    head: ClothingHeadHatBowlerHat
+    eyes: ClothingEyesGlassesSunglasses
+    mask: ClothingMaskGas
+    neck: ClothingNeckScarfStripedBrown
+    outerClothing: ClothingOuterVest
+    gloves: ClothingHandsGlovesColorBlack
