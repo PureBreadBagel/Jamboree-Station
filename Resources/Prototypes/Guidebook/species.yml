@@ -9,8 +9,8 @@
 # SPDX-FileCopyrightText: 2025 Ark <189933909+ark1368@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 AstroDogeDX <48888500+AstroDogeDX@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
-# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
 # SPDX-FileCopyrightText: 2025 SX-7 <92227810+SX-7@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
@@ -39,9 +39,9 @@
     - Vox
     - Vulpkanin
     - Rodentia
-    - Yowie
+#    - Yowie  Jamboree
     - IPC
-    - Resomi
+#    - Resomi  Jamboree
     - Oni
     - Tajaran
     - Chitinid
@@ -108,20 +108,20 @@
   name: species-name-vulpkanin
   text: "/ServerInfo/Guidebook/Mobs/Vulpkanin.xml"
 
-- type: guideEntry
-  id: Yowie
-  name: species-name-yowie
-  text: "/ServerInfo/Guidebook/Mobs/Yowie.xml"
+#- type: guideEntry   Jamboree
+#  id: Yowie
+#  name: species-name-yowie
+#  text: "/ServerInfo/Guidebook/Mobs/Yowie.xml"
 
 - type: guideEntry
   id: IPC
   name: species-name-ipc
   text: "/ServerInfo/Guidebook/Mobs/IPCs.xml"
 
-- type: guideEntry
-  id: Resomi
-  name: species-name-resomi
-  text: "/ServerInfo/Guidebook/Mobs/Resomi.xml"
+#- type: guideEntry   Jamboree
+#  id: Resomi
+#  name: species-name-resomi
+#  text: "/ServerInfo/Guidebook/Mobs/Resomi.xml"
 
 - type: guideEntry
   id: Tajaran
