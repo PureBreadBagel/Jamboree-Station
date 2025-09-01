@@ -167,7 +167,7 @@
       head: ClothingHeadHatHoodChaplainHood
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: ClothingNeckBase
   id: ClothingOuterPonchoClassic
   name: classic poncho
   description: A warm and comfy classic poncho.
@@ -208,7 +208,7 @@
     - jumpsuit
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: ClothingNeckBase
   id: ClothingOuterPoncho
   name: poncho
   description: A warm and comfy poncho.
