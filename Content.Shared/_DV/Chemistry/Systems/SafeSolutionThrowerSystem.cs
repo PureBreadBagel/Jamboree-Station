@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 0vrseer <218305265+0vrseer@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Inventory;
 using Content.Shared._DV.Chemistry.Components;
 
