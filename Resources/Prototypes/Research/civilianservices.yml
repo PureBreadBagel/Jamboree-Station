@@ -23,9 +23,12 @@
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
 # SPDX-FileCopyrightText: 2025 ArtisticRoomba <145879011+ArtisticRoomba@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Coolgamer06 <179552548+Coolgamer06@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 FaDeOkno <143940725+FaDeOkno@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 FaDeOkno <logkedr18@gmail.com>
+# SPDX-FileCopyrightText: 2025 GNUtopia <93669372+GNUtopia@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 Nox <nebulousnox38@gmail.com>
 # SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 # SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
@@ -312,23 +315,23 @@
 
 # Tier 3
 
-#- type: technology
-#  id: QuantumFiberWeaving - Goobstation - Nuked due to sprinting.
-#  name: research-technology-quantum-fiber-weaving
-#  icon:
-#    sprite: Clothing/Shoes/Boots/speedboots.rsi
-#    state: icon
-#  discipline: CivilianServices
-#  tier: 3
-#  cost: 15000 # Goobstation 10000 -> 15000
-#  recipeUnlocks:
-#  - ClothingShoesBootsSpeed
-#  # Goobstation R&D Console rework start
-#  position: 1,9
-#  technologyPrerequisites:
-#  - BluespaceCargoTransport
-#  - HighEndSurgery
-#  # Goobstation R&D Console rework end
+- type: technology
+  id: QuantumFiberWeaving
+  name: research-technology-quantum-fiber-weaving
+  icon:
+    sprite: Clothing/Shoes/Boots/speedboots.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 3
+  cost: 15000 # Goobstation 10000 -> 15000
+  recipeUnlocks:
+  - ClothingShoesBootsSpeed
+  # Goobstation R&D Console rework start
+  position: 1,9
+  technologyPrerequisites:
+  - BluespaceCargoTransport
+  - HighEndSurgery
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: BluespaceChemistry
