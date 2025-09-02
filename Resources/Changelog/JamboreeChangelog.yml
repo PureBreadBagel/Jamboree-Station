@@ -154,3 +154,11 @@ Entries:
         without the risk of spilling!
   id: 22
   time: '2025-09-01T06:35:47.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Tweak
+      message: >-
+        Lots of changes and additions. Notably, Slaughter demon as new antag.
+        Check Goob Log for specifics
+  id: 23
+  time: '2025-09-02T02:36:27.0000000+00:00'
