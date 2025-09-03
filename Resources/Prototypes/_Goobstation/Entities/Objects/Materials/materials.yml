@@ -58,6 +58,22 @@
   - type: Stack
     count: 1
 
+- type: entity # Jamboree
+  parent: MaterialBSCrystal
+  id: MaterialBSCrystal3
+  suffix: Plural
+  components:
+  - type: Stack
+    count: 3
+
+- type: entity # Jamboree
+  parent: MaterialBSCrystal
+  id: MaterialBSCrystal5
+  suffix: Plural
+  components:
+  - type: Stack
+    count: 5
+
 - type: entity
   parent: MaterialBSCrystal
   id: MaterialBSCrystalUnprocessed
