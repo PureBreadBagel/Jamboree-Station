@@ -168,3 +168,9 @@ Entries:
       message: Re-Added speed boots!
   id: 24
   time: '2025-09-02T04:59:43.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Fix
+      message: Oracle now give the correct type of bluespace crystals
+  id: 25
+  time: '2025-09-03T06:10:19.0000000+00:00'
