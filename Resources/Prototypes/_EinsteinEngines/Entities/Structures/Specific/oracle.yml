@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: BaseStructure
   id: Oracle
@@ -83,9 +88,9 @@
 - type: weightedRandomEntity
   id: OracleRewardCrystals
   weights:
-    MaterialBluespace1: 3
-    MaterialBluespace3: 10
-    MaterialBluespace5: 2
+    MaterialBSCrystal1: 3 # Jamboree
+    MaterialBSCrystal3: 10 # Jamboree
+    MaterialBSCrystal5: 2 # Jamboree
 
 - type: weightedRandom
   id: OracleRewardReagents
