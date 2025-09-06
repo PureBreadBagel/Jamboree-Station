@@ -12,6 +12,7 @@
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 # SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
+# SPDX-FileCopyrightText: 2025 PuroSlavKing <103608145+PuroSlavKing@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 deltanedas <39013340+deltanedas@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
 #
@@ -14277,3 +14278,89 @@ Entries:
       message: You can wear Botany Berets again
   id: 1585
   time: '2025-09-01T19:52:13.0000000+00:00'
+- author: Krispy-Lime, x5tink
+  changes:
+    - type: Add
+      message: Added mangos
+  id: 1586
+  time: '2025-09-02T01:57:33.0000000+00:00'
+- author: Luminal
+  changes:
+    - type: Fix
+      message: Slaughter demons don't drip blood forever now
+    - type: Tweak
+      message: Slaughter demon guidebook has been updated with important info.
+    - type: Tweak
+      message: More blood types have been supported for slaughter demon
+  id: 1587
+  time: '2025-09-02T09:36:13.0000000+00:00'
+- author: DeusMaldPr
+  changes:
+    - type: Add
+      message: >-
+        You can now buy a whole lot of more stuff from salvage vend, including
+        WAY more lategame gear, like a clarke. :) 
+    - type: Add
+      message: 'Made Combat gloves renewable. '
+  id: 1588
+  time: '2025-09-03T13:40:58.0000000+00:00'
+- author: TurboTrackerss14
+  changes:
+    - type: Tweak
+      message: >-
+        Stunbaton wideswing damage buffed to not be entirely useless,
+        spriteclicking is still superior. 
+    - type: Tweak
+      message: 'GreatShield Mace given minor staminadamage buff. '
+  id: 1589
+  time: '2025-09-03T23:38:04.0000000+00:00'
+- author: TurboTrackerss14
+  changes:
+    - type: Tweak
+      message: Xenomorph maids are no longer walking ban bait. Still kinda cute though.
+  id: 1590
+  time: '2025-09-03T23:38:49.0000000+00:00'
+- author: Richard Blonski
+  changes:
+    - type: Add
+      message: Xenomorphs can now stun their prey.
+    - type: Fix
+      message: Xenomoprh eggs & facehuggers properly function now.
+  id: 1591
+  time: '2025-09-04T13:06:04.0000000+00:00'
+- author: Hell Department
+  changes:
+    - type: Tweak
+      message: Slaughter demons will no longer generate maldium
+    - type: Tweak
+      message: Slaughter Demon has a doafter when devouring
+  id: 1592
+  time: '2025-09-04T15:55:13.0000000+00:00'
+- author: BombasterDS2
+  changes:
+    - type: Fix
+      message: Wizard spells that were targeting mobs work once again.
+  id: 1593
+  time: '2025-09-04T20:06:52.0000000+00:00'
+- author: Thesia000
+  changes:
+    - type: Fix
+      message: Fixed missing bedsheets and parts on Cog.
+    - type: Fix
+      message: Fixed piping color schemes on Barratry.
+  id: 1594
+  time: '2025-09-04T22:41:36.0000000+00:00'
+- author: OnsenCapy
+  changes:
+    - type: Remove
+      message: >-
+        Removed all instances of Xenonids, the ugly Xeno creatures that Wizden
+        still uses.
+    - type: Fix
+      message: Hopefully fixed the spawn rates of Ancient Xenos in vent critter events.
+    - type: Tweak
+      message: >-
+        Ancient Xenos now use the SimpleHostile faction, meaning that they will
+        now fight back against other mobs, like Trevor or Renault.
+  id: 1595
+  time: '2025-09-05T22:54:31.0000000+00:00'

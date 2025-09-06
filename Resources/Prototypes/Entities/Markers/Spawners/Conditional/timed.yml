@@ -8,6 +8,9 @@
 # SPDX-FileCopyrightText: 2023 lzk <124214523+lzk228@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2023 potato1234_x <79580518+potato1234x@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+# SPDX-FileCopyrightText: 2025 OnsenCapy <101037138+OnsenCapy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 #
 # SPDX-License-Identifier: MIT
 
@@ -31,26 +34,6 @@
       intervalSeconds: 60
       minimumEntitiesSpawned: 1
       maximumEntitiesSpawned: 5
-
-- type: entity
-  name: Xeno AI Timed Spawner
-  id: XenoAITimedSpawner
-  parent: MarkerBase
-  components:
-    - type: Sprite
-      layers:
-      - state: blue
-      - sprite: Mobs/Aliens/Xenos/burrower.rsi
-        state: crit
-      - state: ai
-    - type: Timer
-    - type: TimedSpawner
-      prototypes:
-      - MobXeno
-      chance: 0.85
-      intervalSeconds: 30
-      minimumEntitiesSpawned: 2
-      maximumEntitiesSpawned: 4
 
 - type: entity
   name: Mouse Timed Spawner

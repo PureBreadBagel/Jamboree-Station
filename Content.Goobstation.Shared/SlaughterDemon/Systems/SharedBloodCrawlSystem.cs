@@ -1,8 +1,14 @@
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+// SPDX-FileCopyrightText: 2025 Lumminal <81829924+Lumminal@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Actions;
 using Content.Shared.Actions.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Fluids.Components;
 using Content.Shared.Polymorph;
+using Content.Shared.Popups;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
 
@@ -20,6 +26,7 @@ public abstract class SharedBloodCrawlSystem : EntitySystem
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
 
     private EntityQuery<ActionsComponent> _actionQuery;
     private EntityQuery<PuddleComponent> _puddleQuery;
@@ -48,6 +55,7 @@ public abstract class SharedBloodCrawlSystem : EntitySystem
     {
         if (!IsStandingOnBlood(uid))
         {
+            _popup.PopupEntity(Loc.GetString("slaughter-blood-jaunt-fail"), uid);
             _actions.SetCooldown(args.Action.Owner, component.ActionCooldown);
             return;
         }
@@ -59,6 +67,9 @@ public abstract class SharedBloodCrawlSystem : EntitySystem
 
         var evAttempt = new BloodCrawlAttemptEvent();
         RaiseLocalEvent(uid, ref evAttempt);
+
+        if (evAttempt.Cancelled)
+            return;
 
         _audio.PlayPvs(component.EnterJauntSound, Transform(uid).Coordinates);
 
@@ -88,7 +99,8 @@ public abstract class SharedBloodCrawlSystem : EntitySystem
 
             foreach (var reagent in solution.Contents)
             {
-                if (reagent.Reagent.Prototype == ent.Comp.Blood)
+                if (ent.Comp.Blood.Contains(reagent.Reagent.Prototype)
+                    && reagent.Quantity >= ent.Comp.RequiredReagentAmount)
                     return true;
             }
         }

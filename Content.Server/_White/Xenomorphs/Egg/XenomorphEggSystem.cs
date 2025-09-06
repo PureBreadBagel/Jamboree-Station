@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+// SPDX-FileCopyrightText: 2025 Richard Blonski <48651647+RichardBlonski@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Spatison <137375981+Spatison@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server._White.Xenomorphs.FaceHugger;
 using Content.Server.Popups;
 using Content.Shared._White.Xenomorphs.Egg;
@@ -5,6 +11,7 @@ using Content.Shared._White.Xenomorphs.Xenomorph;
 using Content.Shared.Ghost;
 using Content.Shared.Interaction;
 using Content.Shared.Inventory;
+using Content.Shared.StepTrigger.Systems;
 using Content.Shared.Weapons.Melee.Events;
 using Robust.Server.Audio;
 using Robust.Server.GameObjects;
@@ -32,6 +39,7 @@ public sealed class XenomorphEggSystem : EntitySystem
         SubscribeLocalEvent<XenomorphEggComponent, ComponentInit>(OnInit);
         SubscribeLocalEvent<XenomorphEggComponent, ActivateInWorldEvent>(OnActivateInWorld);
         SubscribeLocalEvent<XenomorphEggComponent, AttackedEvent>(OnAttacked);
+        SubscribeLocalEvent<XenomorphEggComponent, StepTriggeredOffEvent>(OnStepTriggered);
     }
 
     private void OnInit(EntityUid uid, XenomorphEggComponent component, ComponentInit args)
@@ -117,10 +125,26 @@ public sealed class XenomorphEggSystem : EntitySystem
         if (!TryComp<FaceHuggerComponent>(spawned, out var equipOn))
             return;
 
+
+
         foreach (var entity in _entityLookup.GetEntitiesInRange<InventoryComponent>(coordinates, component.BurstRange))
         {
             if (_faceHugger.TryEquipFaceHugger(spawned, entity, equipOn))
                 return;
+        }
+    }
+
+    private void OnStepTriggered(EntityUid uid, XenomorphEggComponent component, ref StepTriggeredOffEvent args)
+    {
+        if (component.Status == XenomorphEggStatus.Grown)
+        {
+            SetBursting(uid, component);
+        }
+        else if (component.Status == XenomorphEggStatus.Growning)
+        {
+            component.Status = XenomorphEggStatus.Grown;
+            _appearance.SetData(uid, XenomorphEggKey.Key, XenomorphEggVisualsStatus.Grown);
+            SetBursting(uid, component);
         }
     }
 

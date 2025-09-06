@@ -1,6 +1,12 @@
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+// SPDX-FileCopyrightText: 2025 Lumminal <81829924+Lumminal@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Goobstation.Shared.SlaughterDemon.Objectives;
 using Content.Shared._EinsteinEngines.Silicon.Components;
 using Content.Shared.Damage;
+using Content.Shared.DoAfter;
 using Content.Shared.Humanoid;
 using Content.Shared.Mind;
 using Content.Shared.Mobs.Systems;
@@ -22,6 +28,7 @@ public sealed class SlaughterDevourSystem : EntitySystem
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
 
     private EntityQuery<PullerComponent> _pullerQuery;
     private EntityQuery<HumanoidAppearanceComponent> _humanoid;
@@ -37,19 +44,30 @@ public sealed class SlaughterDevourSystem : EntitySystem
 
         SubscribeLocalEvent<SlaughterDevourComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<SlaughterDevourComponent, BloodCrawlAttemptEvent>(OnBloodCrawlAttempt);
+
+        SubscribeLocalEvent<SlaughterDevourComponent, SlaughterDevourDoAfter>(OnDoAfter);
     }
 
     private void OnMapInit(Entity<SlaughterDevourComponent> ent, ref MapInitEvent args) =>
         ent.Comp.Container = _container.EnsureContainer<Container>(ent.Owner, "stomach");
 
     private void OnBloodCrawlAttempt(Entity<SlaughterDevourComponent> ent, ref BloodCrawlAttemptEvent args) =>
-        TryDevour(ent.Owner);
+        TryDevour(ent.Owner, ent.Comp, ref args);
+
+    private void OnDoAfter(Entity<SlaughterDevourComponent> ent, ref SlaughterDevourDoAfter args)
+    {
+        if (args.Target == null
+            || args.Cancelled)
+            return;
+
+        var ev = new SlaughterDevourEvent(args.Target.Value, Transform(ent.Owner).Coordinates);
+        RaiseLocalEvent(ent.Owner, ref ev);
+    }
 
     /// <summary>
     /// Exclusive to slaughter demons. They devour targets once they enter blood crawl jaunt form.
-    /// Laughter demons do not directly devour them, however.
     /// </summary>
-    private void TryDevour(EntityUid uid)
+    private void TryDevour(EntityUid uid, SlaughterDevourComponent comp, ref BloodCrawlAttemptEvent args)
     {
         if (!_pullerQuery.TryComp(uid, out var puller)
             || puller.Pulling == null)
@@ -60,8 +78,21 @@ public sealed class SlaughterDevourSystem : EntitySystem
         if (_mobState.IsAlive(pullingEnt))
             return;
 
-        var ev = new SlaughterDevourEvent(pullingEnt, Transform(uid).Coordinates);
-        RaiseLocalEvent(uid, ref ev);
+        var doAfterArgs = new DoAfterArgs(
+            EntityManager,
+            uid,
+            comp.DoAfterDelay,
+            new SlaughterDevourDoAfter(),
+            uid,
+            pullingEnt)
+        {
+            BreakOnMove = true,
+            ColorOverride = Color.Red
+        };
+
+        args.Cancelled = true; // cancel the jaunt and devour instead
+
+        _doAfter.TryStartDoAfter(doAfterArgs);
     }
 
     public void HealAfterDevouring(EntityUid target, EntityUid devourer, SlaughterDevourComponent component)

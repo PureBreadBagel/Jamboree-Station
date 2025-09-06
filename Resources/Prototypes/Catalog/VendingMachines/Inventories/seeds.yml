@@ -27,7 +27,12 @@
 # SPDX-FileCopyrightText: 2024 jellygato <aly.jellygato@gmail.com>
 # SPDX-FileCopyrightText: 2024 potato1234_x <79580518+potato1234x@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+# SPDX-FileCopyrightText: 2025 K-Dynamic <20566341+K-Dynamic@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Krispy-Lime <151007654+Krispy-Lime@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 # SPDX-FileCopyrightText: 2025 SX_7 <sn1.test.preria.2002@gmail.com>
+# SPDX-FileCopyrightText: 2025 Smith <182301147+AgentSmithRadio@users.noreply.github.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -56,6 +61,7 @@
     LimeSeeds: 5
     PineappleSeeds: 5
     LingzhiSeeds: 3
+    MangoSeeds: 5 # Goob-Station change by Krispy-Lime 8/26/25 (porting RMC-14 PR #7226)
     OatSeeds: 5
     OnionSeeds: 5
     OnionRedSeeds: 5
