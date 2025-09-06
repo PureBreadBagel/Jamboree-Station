@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Richard Blonski <48651647+RichardBlonski@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Robust.Shared.GameStates;
 
 namespace Content.Shared._White.Xenomorphs.XenomorphShoveTracker;

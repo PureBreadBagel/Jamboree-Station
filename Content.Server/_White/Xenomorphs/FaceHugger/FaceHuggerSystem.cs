@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Richard Blonski <48651647+RichardBlonski@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Spatison <137375981+Spatison@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Body.Systems;
 using Content.Server.Popups;
 using Content.Server.Stunnable;
