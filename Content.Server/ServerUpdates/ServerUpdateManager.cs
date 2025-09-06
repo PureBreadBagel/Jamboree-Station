@@ -1,7 +1,11 @@
 // SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Kill_Me_I_Noobs <118206719+vonsant@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+// SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -11,6 +15,7 @@ using Content.Shared.CCVar;
 using Robust.Server;
 using Robust.Server.Player;
 using Robust.Server.ServerStatus;
+using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
 using Robust.Shared.Player;
@@ -102,6 +107,7 @@ public sealed class ServerUpdateManager : IPostInjectInit
                 ServerEmptyUpdateRestartCheck("last player disconnect");
                 break;
         }
+        _cfg.SetCVar("nf14.respawn.time", GetNewRespawnTime(_playerManager.PlayerCount));
     }
 
     private void WatchdogOnUpdateReceived()
@@ -150,6 +156,15 @@ public sealed class ServerUpdateManager : IPostInjectInit
     {
         return _uptimeRestart != TimeSpan.Zero && _gameTiming.RealTime > _uptimeRestart;
     }
+
+    float GetNewRespawnTime(int playerCount) =>
+        playerCount switch
+        {
+            > 50 => 1200.0f,
+            > 30 => 900.0f,
+            > 20 => 600.0f,
+            <= 20 => 300.0f,
+        };
 
     void IPostInjectInit.PostInject()
     {

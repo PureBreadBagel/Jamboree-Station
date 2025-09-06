@@ -22,6 +22,7 @@
 // SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 0x6273 <0x40@keemail.me>
 // SPDX-FileCopyrightText: 2024 Aiden <aiden@djkraz.com>
+// SPDX-FileCopyrightText: 2024 Kill_Me_I_Noobs <118206719+vonsant@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
 // SPDX-FileCopyrightText: 2024 Rank #1 Jonestown partygoer <mary@thughunt.ing>
 // SPDX-FileCopyrightText: 2024 ShadowCommander <shadowjjt@gmail.com>
@@ -29,8 +30,11 @@
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
 // SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 // SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
+// SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 // SPDX-FileCopyrightText: 2025 SX_7 <sn1.test.preria.2002@gmail.com>
+// SPDX-FileCopyrightText: 2025 Tayrtahn <tayrtahn@gmail.com>
 // SPDX-FileCopyrightText: 2025 Winkarst <74284083+Winkarst-cpu@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
 // SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
@@ -38,13 +42,18 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Client._Shitcode.Wizard.Systems;
+using Content.Client._NF.Respawn;
 using Content.Client.Movement.Systems;
+using Content.Client.UserInterface.Systems.Ghost.Widgets;
 using Content.Shared.Actions;
 using Content.Shared.Ghost;
+using Content.Shared.Mind;
 using Robust.Client.Console;
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
+using Robust.Client.UserInterface;
 using Robust.Shared.Player;
+using Robust.Shared.Timing;
 
 namespace Content.Client.Ghost
 {
@@ -57,6 +66,19 @@ namespace Content.Client.Ghost
         [Dependency] private readonly ContentEyeSystem _contentEye = default!;
         [Dependency] private readonly SpriteSystem _sprite = default!;
         [Dependency] private readonly GhostVisibilitySystem _ghostVisSystem = default!; // Goobstation
+        [Dependency] private readonly IUserInterfaceManager _uiManager = default!;
+        [Dependency] private readonly IGameTiming _gameTiming = default!;
+        [Dependency] private readonly RespawnSystem _respawn = default!;
+
+        public override void Update(float frameTime)
+        {
+            foreach (var ghost in EntityManager.EntityQuery<GhostComponent, MindComponent>(true))
+            {
+                var ui = _uiManager.GetActiveUIWidgetOrNull<GhostGui>();
+                if (ui != null && Player != null)
+                    ui.UpdateRespawn(_respawn.RespawnResetTime);
+            }
+        }
 
         public int AvailableGhostRoleCount { get; private set; }
 
