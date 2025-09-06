@@ -99,7 +99,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         }
 
         Gui.Visible = _system?.IsGhost ?? false;
-        Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody, _system?.Player?.CanEnterGhostBar, _system?.Player?.CanTakeGhostRoles, _respawn?.RespawnResetTime, _cfg.GetCVar(NF14CVars.RespawnTime)); // Goob edit
+        Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody, _respawn?.RespawnResetTime, _cfg.GetCVar(NF14CVars.RespawnTime), _system?.Player?.CanEnterGhostBar, _system?.Player?.CanTakeGhostRoles); // Goob edit
     }
 
     private void OnPlayerRemoved(GhostComponent component)
@@ -220,7 +220,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
     {
         _system?.GhostBarSpawn();
     }
-}
+
     public void OnSystemUnloaded(RespawnSystem system)
     {
         system.RespawnReseted -= OnRespawnReseted;

@@ -42,7 +42,6 @@ public sealed partial class GhostGui : UIWidget
     public GhostRespawnRulesWindow RulesWindow { get; }
 
     public event Action? GhostRespawnPressed;
-
     public event Action? RequestWarpsPressed;
     public event Action? ReturnToBodyPressed;
     public event Action? GhostRolesPressed;
@@ -84,7 +83,7 @@ public sealed partial class GhostGui : UIWidget
     }
 
     // Ghoob edit
-    public void Update(int? roles, bool? canReturnToBody, bool? canEnterGhostBar = true, bool? canTakeGhostRoles = true, , TimeSpan? timeOfDeath, float minTimeToRespawn)
+    public void Update(int? roles, bool? canReturnToBody, TimeSpan? timeOfDeath, float minTimeToRespawn, bool? canEnterGhostBar = true, bool? canTakeGhostRoles = true)
     {
         ReturnToBodyButton.Disabled = !canReturnToBody ?? true;
         // Goobstation start

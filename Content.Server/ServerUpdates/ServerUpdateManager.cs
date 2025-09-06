@@ -161,7 +161,6 @@ public sealed class ServerUpdateManager : IPostInjectInit
             > 20 => 600.0f,
             <= 20 => 300.0f,
         };
-}
 
     void IPostInjectInit.PostInject()
     {
