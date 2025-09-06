@@ -174,3 +174,11 @@ Entries:
       message: Oracle now give the correct type of bluespace crystals
   id: 25
   time: '2025-09-03T06:10:19.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Add
+      message: Mangoes!
+    - type: Tweak
+      message: Lots check Goob log
+  id: 26
+  time: '2025-09-06T04:14:20.0000000+00:00'
