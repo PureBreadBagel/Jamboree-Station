@@ -1,3 +1,4 @@
+// SPDX-FileCopyrightText: 2024 Kill_Me_I_Noobs <118206719+Vonsant@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Kill_Me_I_Noobs <118206719+vonsant@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 //
