@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+# SPDX-FileCopyrightText: 2025 Bibble-B-Boop <mysticball8@gmail.com>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: accent
+  id: pleebnar
+  fullReplacements:
+  - accent-words-pleebnar-1
+  - accent-words-pleebnar-2
+  - accent-words-pleebnar-3
+  - accent-words-pleebnar-4
+  - accent-words-pleebnar-5
+  - accent-words-pleebnar-6
+  - accent-words-pleebnar-7
+  - accent-words-pleebnar-8
+  - accent-words-pleebnar-9
+  - accent-words-pleebnar-10
