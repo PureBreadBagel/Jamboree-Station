@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+# SPDX-FileCopyrightText: 2025 Bibble-B-Boop <mysticball8@gmail.com>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- files: ["pleebnar_weird.ogg"]
+  license: "Custom"
+  copyright: "gotten off youtube from A & A studios offering it with no copyright"
+  source: "https://www.youtube.com/watch?v=j8LfA9Bykq8"
