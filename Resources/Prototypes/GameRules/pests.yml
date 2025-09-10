@@ -1,9 +1,11 @@
 # SPDX-FileCopyrightText: 2024 IProduceWidgets <107586145+IProduceWidgets@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 yglop <95057024+yglop@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Bibble-B-Boop <mysticball8@gmail.com>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 # SPDX-FileCopyrightText: 2025 Ilya246 <57039557+Ilya246@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Ilya246 <ilyukarno@gmail.com>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
 # SPDX-FileCopyrightText: 2025 Tim <timfalken@hotmail.com>
 # SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
@@ -19,6 +21,7 @@
     - id: SnailMigrationLowPop
     - id: CockroachMigration
     - id: MouseMigration
+    - id: PleebnarMigration #imp
 
 - type: entityTable
   id: SpicyPestEventsTable
@@ -173,3 +176,26 @@
       # Goobstation
       - id: MobSnailInstantDeath
         weight: 0.0004
+
+- type: entity
+  id: PleebnarMigration
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 6
+    duration: 30 # DeltaV: was 50, used as a delay now
+    chaos: # Goobstation
+      Mess: 15
+      Hostile: 4
+    eventType: Neutral # Goobstation
+  # Goobstation
+  - type: GameRule
+    chaosScore: 20
+  - type: VentCrittersRule
+    table: !type:GroupSelector # DeltaV: EntityTable instead of spawn entries
+      children:
+      - id: MobPleebnar
+        weight: 0.5
