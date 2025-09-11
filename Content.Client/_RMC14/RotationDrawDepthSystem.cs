@@ -1,4 +1,8 @@
-﻿using Robust.Client.GameObjects;
+// SPDX-FileCopyrightText: 2025 deltanedas <39013340+deltanedas@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Robust.Client.GameObjects;
 
 namespace Content.Client._RMC14;
 
