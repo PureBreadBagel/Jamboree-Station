@@ -54,8 +54,13 @@
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aviu00 <aviu00@protonmail.com>
+// SPDX-FileCopyrightText: 2025 BarryNorfolk <barrynorfolkman@protonmail.com>
+// SPDX-FileCopyrightText: 2025 BombasterDS <deniskaporoshok@gmail.com>
 // SPDX-FileCopyrightText: 2025 Eris <eris@erisws.com>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+// SPDX-FileCopyrightText: 2025 John Willis <143434770+CerberusWolfie@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 deltanedas <39013340+deltanedas@users.noreply.github.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -82,6 +87,7 @@ namespace Content.Server.Entry
             "HolidayRsiSwap",
             "OptionsVisualizer",
             "MultipartMachineGhost",
+            "RotationDrawDepth", // RMC14
             "ToggleableLightWieldable", // Goobstation
             "HideClothingLayerClothing", // Goobstation
             "ItemSlotRenderer", // WWDP EDIT

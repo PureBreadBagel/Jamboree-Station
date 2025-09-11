@@ -1,4 +1,6 @@
+// SPDX-FileCopyrightText: 2025 BombasterDS <deniskaporoshok@gmail.com>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 // SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
 // SPDX-FileCopyrightText: 2025 SolsticeOfTheWinter <solsticeofthewinter@gmail.com>
 //
@@ -71,7 +73,7 @@ public sealed partial class CheatDeathSystem : EntitySystem
     private void OnDelayedDeath(Entity<CheatDeathComponent> ent, ref DelayedDeathEvent args)
     {
         if (args.PreventRevive)
-            RemComp(ent.Owner, ent.Comp);
+            RemCompDeferred(ent.Owner, ent.Comp);
     }
 
 

@@ -1,10 +1,15 @@
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Fishbait <Fishbait@git.ml>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 // SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
+// SPDX-FileCopyrightText: 2025 ReiderJack <42844726+ReiderJack@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Rouden <149893554+Roudenn@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Tim <timfalken@hotmail.com>
+// SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
 // SPDX-FileCopyrightText: 2025 fishbait <gnesse@gmail.com>
 // SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
+// SPDX-FileCopyrightText: 2025 loltart <159829224+loltart@users.noreply.github.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -18,6 +23,7 @@ using Content.Shared.Chat;
 using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.Verbs;
+using Content.Shared.Audio.Jukebox;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
@@ -32,6 +38,7 @@ public sealed class ClowncarSystem : SharedClowncarSystem
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedBuckleSystem _buckle = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
+    [Dependency] private readonly SharedUserInterfaceSystem _uiSystem = default!;
 
     /// <inheritdoc/>
 
@@ -44,7 +51,7 @@ public sealed class ClowncarSystem : SharedClowncarSystem
         SubscribeLocalEvent<ClowncarComponent, ClownCarOpenTrunkDoAfterEvent>(OnOpenTrunk);
         SubscribeLocalEvent<ClowncarComponent, ExaminedEvent>(OnExamined);
         SubscribeLocalEvent<ClowncarComponent, QuietBackThereActionEvent>(OnQuietInTheBack);
-        SubscribeLocalEvent<ClowncarComponent, DrivingWithStyleActionEvent>(OnDrunkDriving);
+        SubscribeLocalEvent<JukeboxComponent, DrivingWithStyleActionEvent>(OnDrivingWithStyle);
     }
 
     private void OnThankRider(EntityUid uid, ClowncarComponent component, ThankRiderActionEvent args)
@@ -176,10 +183,9 @@ public sealed class ClowncarSystem : SharedClowncarSystem
         args.Handled = true;
     }
 
-    private void OnDrunkDriving(Entity<ClowncarComponent> clownCar, ref DrivingWithStyleActionEvent args)
+    private void OnDrivingWithStyle(Entity<JukeboxComponent> clownCar, ref DrivingWithStyleActionEvent args)
     {
-        _audioSystem.PlayPvs(clownCar.Comp.ClownMusic, clownCar);
+        _uiSystem.TryOpenUi(clownCar.Owner, JukeboxUiKey.Key, args.Performer);
         args.Handled = true;
-
     }
 }
