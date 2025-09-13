@@ -1,0 +1,8 @@
+- type: trait
+  id: RussianAccentTrait
+  name: trait-russian-accent-name
+  description: trait-russian-accent-desc
+  category: SpeechTraits
+  cost: 2
+  components:
+  - type: RussianAccent
