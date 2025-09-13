@@ -34,14 +34,14 @@
   - type: AntagObjectives
     objectives:
     - EscapeThiefShuttleObjective
-  - type: AntagRandomObjectives
-    sets:
-    - groups: ThiefBigObjectiveGroups
-      prob: 0.7
-      maxPicks: 1
-    - groups: ThiefObjectiveGroups
-      maxPicks: 10
-    maxDifficulty: 2.5
+  #- type: AntagRandomObjectives
+  #  sets:
+  #  - groups: ThiefBigObjectiveGroups
+   #   prob: 0.7
+   #   maxPicks: 1
+   # - groups: ThiefObjectiveGroups
+   #   maxPicks: 10
+   # maxDifficulty: 2.5
   - type: AntagSelection
     selectionTime: IntraPlayerSpawn # Goobstation
     agentName: thief-round-end-agent-name
@@ -59,7 +59,7 @@
         components:
         - CommandStaff
       components:
-      - type: Pacified
+   #   - type: Pacified
       - type: Thieving
         stripTimeReduction: 2
         stealthy: true
