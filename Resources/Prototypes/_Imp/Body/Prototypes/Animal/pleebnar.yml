@@ -4,25 +4,32 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: body
-  id: pleebnar
-  name: "Pleebnar"
+  id: Pleebnar
+  name: "pleebnar"
   root: chest
   slots:
+    head:
+      part: HeadAnimal
+      connections:
+      - chest
+      organs:
+        eyes: OrganPleebnarEyes
     chest:
       part: ChestAnimal
       connections:
       - groin
+      - head
       organs:
-        stomach: OrganPleebnarStomach
         lungs: OrganPleebnarLungs
-        liver: OrganPleebnarLiver
         heart: OrganPleebnarHeart
-        kidneys: OrganPleebnarKidneys
-        eyes: OrganPleebnarEyes
     groin:
       part: GroinAnimal
       connections:
       - legs
+      organs:
+        stomach: OrganPleebnarStomach
+        liver: OrganPleebnarLiver
+        kidneys: OrganPleebnarKidneys
     legs:
       part: LegsAnimal
       connections:
