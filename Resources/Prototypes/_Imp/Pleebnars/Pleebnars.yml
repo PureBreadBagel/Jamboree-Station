@@ -12,7 +12,7 @@
   - type: VentCrawler
     enterDelay: 1
   - type: Body
-    prototype: pleebnar
+    prototype: Pleebnar
   - type: GhostRole
     makeSentient: true
     allowSpeech: true
@@ -29,7 +29,7 @@
     allowedEmotes: ['Squeak','Scream',]
   - type: Sprite
     drawdepth: SmallMobs
-    sprite: _Impstation/Mobs/Aliens/pleebnar.rsi
+    sprite: _Imp/Mobs/Aliens/pleebnar.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base", "movement"]
       state: pleebnar
@@ -39,7 +39,7 @@
   - type: CanEscapeInventory
   - type: Clothing
     quickEquip: false
-    sprite: _Impstation/Mobs/Aliens/pleebnar.rsi
+    sprite: _Im/Mobs/Aliens/pleebnar.rsi
     clothingVisuals:
        head:
         - map: ["enum.DamageStateVisualLayers.Base"]

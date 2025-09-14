@@ -12,7 +12,7 @@
   - type: Organ
   - type: Food
   - type: Sprite
-    sprite: _Impstation/Mobs/Species/Gray/organs.rsi
+    sprite: _Imp/Mobs/Species/Gray/organs.rsi
   - type: StaticPrice
     price: 50
   - type: SolutionContainerManager

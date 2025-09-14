@@ -8,7 +8,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._Impstation.Pleebnar.Components;
+namespace Content.Shared._Imp.Pleebnar.Components;
 /// <summary>
 /// component for the pleebnar telepathy action component
 /// </summary>

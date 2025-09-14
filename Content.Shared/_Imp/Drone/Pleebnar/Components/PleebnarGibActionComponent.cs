@@ -5,7 +5,7 @@
 
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._Impstation.Pleebnar.Components;
+namespace Content.Shared._Imp.Pleebnar.Components;
 /// <summary>
 /// gibbing action component, denotes that an entity has access to the pleebnar gibbing action,
 /// </summary>

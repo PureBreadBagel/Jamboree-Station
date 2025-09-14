@@ -7,7 +7,7 @@ using System.Collections;
 using System.Linq;
 using Content.Client._EstacaoPirata.Cards.Hand.UI;
 using Content.Client.UserInterface.Controls;
-using Content.Shared._Impstation.Pleebnar;
+using Content.Shared._Imp.Pleebnar;
 using Content.Shared.Speech;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
@@ -21,7 +21,7 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
 using TerraFX.Interop.Xlib;
 
-namespace Content.Client._Impstation.Pleebnar;
+namespace Content.Client._Imp.Pleebnar;
 
 [GenerateTypedNameReferences]
 public sealed partial class PleebnarTelepathyWindow : FancyWindow

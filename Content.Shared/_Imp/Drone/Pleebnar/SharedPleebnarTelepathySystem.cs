@@ -3,12 +3,12 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Shared._Impstation.Pleebnar.Components;
+using Content.Shared._Imp.Pleebnar.Components;
 using Content.Shared.Actions;
 using Content.Shared.DoAfter;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._Impstation.Pleebnar;
+namespace Content.Shared._Imp.Pleebnar;
 
 [Serializable, NetSerializable]
 public enum PleebnarTelepathyUIKey : byte

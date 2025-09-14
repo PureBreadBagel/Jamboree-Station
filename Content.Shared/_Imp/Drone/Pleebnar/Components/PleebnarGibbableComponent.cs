@@ -3,7 +3,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-namespace Content.Shared._Impstation.Pleebnar.Components;
+namespace Content.Shared._Imp.Pleebnar.Components;
 /// <summary>
 /// exists only to mark an entity as gibbable by pleebnars
 /// </summary>

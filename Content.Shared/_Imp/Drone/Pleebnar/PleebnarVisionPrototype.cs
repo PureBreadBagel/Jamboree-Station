@@ -5,7 +5,7 @@
 
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._Impstation.Pleebnar;
+namespace Content.Shared._Imp.Pleebnar;
 
 /// <summary>
 ///     prototype that hold vision data

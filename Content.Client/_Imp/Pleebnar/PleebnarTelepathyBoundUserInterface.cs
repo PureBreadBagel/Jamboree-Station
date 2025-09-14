@@ -3,10 +3,10 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Shared._Impstation.Pleebnar;
+using Content.Shared._Imp.Pleebnar;
 using Robust.Client.UserInterface;
 
-namespace Content.Client._Impstation.Pleebnar;
+namespace Content.Client._Imp.Pleebnar;
 
 public sealed class PleebnarTelepathyBoundUserInterface : BoundUserInterface
 {

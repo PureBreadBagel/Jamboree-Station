@@ -5,15 +5,15 @@
 
 using Content.Server.Body.Systems;
 using Content.Server.DoAfter;
-using Content.Shared._Impstation.Pleebnar;
-using Content.Shared._Impstation.Pleebnar.Components;
+using Content.Shared._Imp.Pleebnar;
+using Content.Shared._Imp.Pleebnar.Components;
 using Content.Shared.Body.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Gibbing.Systems;
 using Content.Shared.Popups;
 using Robust.Shared.Physics.Components;
 
-namespace Content.Server._Impstation.Pleebnar;
+namespace Content.Server._Imp.Pleebnar;
 /// <summary>
 /// handles the behaviour of pleebnar gibbing action
 /// </summary>
@@ -33,7 +33,7 @@ public sealed class PleebnarGibSystem : SharedPleebnarGibSystem
     //function called when an entity is targeted by the action
     public void PleebnarGib(Entity<PleebnarGibActionComponent> ent, ref PleebnarGibEvent args)
     {
-        if ((!HasComp<PleebnarGibbableComponent>(args.Target))&&(!HasComp<BodyComponent>(args.Target)))//check if it has a body and is gibbable by pleebnars, else return
+        if ((!HasComp<PleebnarGibbableComponent>(args.Target)) || (!HasComp<BodyComponent>(args.Target)))//check if it has a body and is gibbable by pleebnars, else return
         {
             return;
         }

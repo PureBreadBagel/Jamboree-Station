@@ -5,8 +5,8 @@
 
 using Content.Server.Chat.Managers;
 using Content.Server.DoAfter;
-using Content.Shared._Impstation.Pleebnar;
-using Content.Shared._Impstation.Pleebnar.Components;
+using Content.Shared._Imp.Pleebnar;
+using Content.Shared._Imp.Pleebnar.Components;
 using Content.Shared.Chat;
 using Content.Shared.DoAfter;
 using Content.Shared.Mind.Components;
@@ -14,7 +14,7 @@ using Content.Shared.Popups;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._Impstation.Pleebnar;
+namespace Content.Server._Imp.Pleebnar;
 /// <summary>
 /// handles the behaviour of the telepathy
 /// </summary>
