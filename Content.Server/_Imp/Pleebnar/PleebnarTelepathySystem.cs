@@ -1,3 +1,4 @@
+// SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
 // SPDX-FileCopyrightText: 2025 Bibble-B-Boop <mysticball8@gmail.com>
 // SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 //
