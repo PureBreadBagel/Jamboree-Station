@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+// SPDX-FileCopyrightText: 2025 Bibble-B-Boop <mysticball8@gmail.com>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Body.Systems;
 using Content.Server.DoAfter;
 using Content.Shared._Imp.Pleebnar;
