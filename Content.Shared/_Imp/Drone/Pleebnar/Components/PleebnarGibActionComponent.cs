@@ -1,9 +1,3 @@
-// SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
-// SPDX-FileCopyrightText: 2025 Bibble-B-Boop <mysticball8@gmail.com>
-// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Robust.Shared.GameStates;
 
 namespace Content.Shared._Imp.Pleebnar.Components;
@@ -18,4 +12,7 @@ public sealed partial class PleebnarGibActionComponent : Component
 
     [DataField]
     public string? gibActionId = "ActionPleebnarGib";
+
+    [DataField]//admin setable bool that makes a pleebnar able to gib anything with a body
+    public bool superPleebnar=false;
 }

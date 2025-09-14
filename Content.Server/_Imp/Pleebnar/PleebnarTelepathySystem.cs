@@ -1,9 +1,3 @@
-// SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
-// SPDX-FileCopyrightText: 2025 Bibble-B-Boop <mysticball8@gmail.com>
-// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Server.Chat.Managers;
 using Content.Server.DoAfter;
 using Content.Shared._Imp.Pleebnar;
@@ -118,7 +112,7 @@ public sealed class PleebnarTelepathySystem : SharedPleebnarTelepathySystem
         entity.Comp.PleebnarVison = visProto.VisionString;
         entity.Comp.PleebnarVisonName = visProto.Name;
         entity.Comp.PleebnarVisonID = visProto.ID;
-        _popupSystem.PopupEntity(Loc.GetString("pleebnar-telepathy-select")+" "+Loc.GetString(entity.Comp.PleebnarVisonName),entity.Owner,PopupType.Small);
+        _popupSystem.PopupEntity(Loc.GetString("pleebnar-telepathy-select",("vision", Loc.GetString(entity.Comp.PleebnarVisonName))),entity.Owner,entity.Owner,PopupType.Small);
         UpdateUI(entity);
     }
 
