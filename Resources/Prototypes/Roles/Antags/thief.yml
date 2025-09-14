@@ -97,7 +97,7 @@
   id: ThiefGear
   storage:
     back:
-  #  - ThiefBeacon # No need if no objectives
+  #  - ThiefBeacon # No need if no objectives - Jamboree
     - SatchelThief
     - ClothingHandsChameleonThief
     - PinpointerThief # Goob edit
