@@ -1,0 +1,39 @@
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+# SPDX-FileCopyrightText: 2025 Bibble-B-Boop <mysticball8@gmail.com>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: body
+  id: pleebnar
+  name: "pleebnar"
+  root: chest
+  slots:
+    head:
+      part: HeadAnimal
+      connections:
+      - chest
+      organs:
+        eyes: OrganPleebnarEyes
+    chest:
+      part: ChestAnimal
+      connections:
+      - groin
+      - head
+      organs:
+        lungs: OrganPleebnarLungs
+        heart: OrganPleebnarHeart
+    groin:
+      part: GroinAnimal
+      connections:
+      - legs
+      organs:
+        stomach: OrganPleebnarStomach
+        liver: OrganPleebnarLiver
+        kidneys: OrganPleebnarKidneys
+    legs:
+      part: LegsAnimal
+      connections:
+      - feet
+    feet:
+      part: FeetAnimal
