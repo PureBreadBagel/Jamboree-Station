@@ -15,6 +15,7 @@
 // SPDX-FileCopyrightText: 2024 terezi <147006836+terezi-station@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
+// SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
 // SPDX-FileCopyrightText: 2025 Gallagin <64706450+Gallagin@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 // SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
@@ -25,6 +26,7 @@
 // SPDX-FileCopyrightText: 2025 Sera <karaadastra@gmail.com>
 // SPDX-FileCopyrightText: 2025 Spessmann <156740760+Spessmann@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Ted Lukin <66275205+pheenty@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 TytosB <54259736+TytosB@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 floatingfeeling <karaadastra@gmail.com>
 // SPDX-FileCopyrightText: 2025 pheenty <fedorlukin2006@gmail.com>
 //
