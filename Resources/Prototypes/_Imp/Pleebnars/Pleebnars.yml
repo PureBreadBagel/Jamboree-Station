@@ -27,7 +27,7 @@
   - type: Speech
     speechSounds: PleebnarPVC
     speechVerb: SmallMob
-    allowedEmotes: ['Squeak','Scream','Blink']
+    allowedEmotes: ['Squeak','Scream']
   - type: Sprite
     drawdepth: SmallMobs
     sprite: _Imp/Mobs/Aliens/pleebnar.rsi
@@ -136,9 +136,9 @@
         Blunt: 0.1
   - type: Vocal
     sounds:
-      Male: Pleebnar
-      Female: Pleebnar
-      Unsexed: Pleebnar
+      Male: AnimalSlime
+      Female: AnimalSlime
+      Unsexed: AnimalSlime
     wilhelmProbability: 0.001
   # TODO: Remove CombatMode when Prototype Composition is added
   - type: CombatMode

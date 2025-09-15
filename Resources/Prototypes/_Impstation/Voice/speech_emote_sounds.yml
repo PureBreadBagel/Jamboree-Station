@@ -26,3 +26,14 @@
       collection: Weh
   params:
     variation: 0.125
+
+
+- type: emoteSounds
+  id: Pleebnar
+  params:
+    variation: 0.05
+  sounds:
+    Scream:
+      path: /Audio/_Impstation/Animals/pleebnar_scream.ogg
+    Squeak:
+      path: /Audio/_Impstation/Animals/pleebnar_squeak.ogg
