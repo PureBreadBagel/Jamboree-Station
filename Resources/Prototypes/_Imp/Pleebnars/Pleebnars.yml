@@ -89,7 +89,6 @@
     baseSprintSpeed : 5
   - type: Food
   - type: Absorbable
-    biomassRestored: 0.1
   - type: FlavorProfile
     flavors:
     - meaty
