@@ -194,3 +194,15 @@ Entries:
       message: Russian Accent Trait
   id: 28
   time: '2025-09-13T05:09:46.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Add
+      message: 'Notable additions: Turkles, Wound Pain Decay'
+    - type: Remove
+      message: Check Goob Log
+    - type: Tweak
+      message: Check Goob Log, CC Changes
+    - type: Fix
+      message: Check Goob Log
+  id: 29
+  time: '2025-09-15T03:25:22.0000000+00:00'
