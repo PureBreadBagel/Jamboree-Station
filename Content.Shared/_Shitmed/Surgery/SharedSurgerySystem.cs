@@ -78,8 +78,6 @@ public abstract partial class SharedSurgerySystem : EntitySystem
 
     private EntityQuery<StackComponent> _stackQuery;
 
-    private EntityQuery<StackComponent> _stackQuery;
-
     /// <summary>
     /// Cache of all surgery prototypes' singleton entities.
     /// Cleared after a prototype reload.
