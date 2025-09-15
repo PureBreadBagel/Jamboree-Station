@@ -15,11 +15,15 @@
 # SPDX-FileCopyrightText: 2024 username <113782077+whateverusername0@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 whateverusername0 <whateveremail>
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 ArtisticRoomba <145879011+ArtisticRoomba@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Bibble-B-Boop <mysticball8@gmail.com>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
 # SPDX-FileCopyrightText: 2025 Ilya246 <57039557+Ilya246@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Ilya246 <ilyukarno@gmail.com>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 SX_7 <sn1.test.preria.2002@gmail.com>
 # SPDX-FileCopyrightText: 2025 TheBorzoiMustConsume <197824988+TheBorzoiMustConsume@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 YeenJunk <wym0n@proton.me>
 # SPDX-FileCopyrightText: 2025 keronshb <54602815+keronshb@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 loltart <159829224+loltart@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 loltart <lo1tartyt@gmail.com>
@@ -34,14 +38,14 @@
   - type: AntagObjectives
     objectives:
     - EscapeThiefShuttleObjective
-  - type: AntagRandomObjectives
-    sets:
-    - groups: ThiefBigObjectiveGroups
-      prob: 0.7
-      maxPicks: 1
-    - groups: ThiefObjectiveGroups
-      maxPicks: 10
-    maxDifficulty: 2.5
+  #- type: AntagRandomObjectives - Begin Jamboree
+  #  sets:
+  #  - groups: ThiefBigObjectiveGroups
+   #   prob: 0.7
+   #   maxPicks: 1
+   # - groups: ThiefObjectiveGroups
+   #   maxPicks: 10
+   # maxDifficulty: 2.5 - End Jamboree
   - type: AntagSelection
     selectionTime: IntraPlayerSpawn # Goobstation
     agentName: thief-round-end-agent-name
@@ -59,7 +63,7 @@
         components:
         - CommandStaff
       components:
-      - type: Pacified
+   #   - type: Pacified
       - type: Thieving
         stripTimeReduction: 2
         stealthy: true

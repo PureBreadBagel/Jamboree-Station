@@ -15,6 +15,9 @@
 // SPDX-FileCopyrightText: 2024 username <113782077+whateverusername0@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 whateverusername0 <whateveremail>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Bibble-B-Boop <mysticball8@gmail.com>
+// SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+// SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -59,7 +62,7 @@ public sealed class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
     {
         var isHuman = HasComp<HumanoidAppearanceComponent>(ent);
         var briefing = isHuman
-            ? Loc.GetString("thief-role-greeting-human")
+            ? Loc.GetString("thief-role-greeting-human-deltav") // DeltaV - no pacifism
             : Loc.GetString("thief-role-greeting-animal");
 
         if (isHuman)
