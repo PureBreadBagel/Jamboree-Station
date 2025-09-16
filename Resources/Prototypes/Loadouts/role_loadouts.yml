@@ -102,12 +102,16 @@
 # SPDX-FileCopyrightText: 2024 Арт <123451459+JustArt1m@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 Phooooooooooooooooooooooooooooooosphate <184853112+Phooooooooooooooooooooooooooooooosphate@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
 # SPDX-FileCopyrightText: 2025 SX_7 <sn1.test.preria.2002@gmail.com>
 # SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
 # SPDX-FileCopyrightText: 2025 Ted Lukin <66275205+pheenty@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 grub <unalterableness@gmail.com>
 # SPDX-FileCopyrightText: 2025 lzk <124214523+lzk228@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 pheenty <fedorlukin2006@gmail.com>
@@ -128,6 +132,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - CaptainEnvirohelm
@@ -148,6 +153,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - HoPEnvirohelm
@@ -181,6 +187,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - AssistantEnvirohelm
@@ -199,6 +206,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - BartenderEnvirohelm
@@ -215,6 +223,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - ServiceWorkerEnvirohelm
@@ -234,6 +243,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - ChefEnvirohelm
@@ -250,6 +260,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - LibrarianEnvirohelm
@@ -267,6 +278,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - LawyerEnvirohelm
@@ -287,6 +299,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - ChaplainEnvirohelm
@@ -307,6 +320,7 @@
   - Trinkets
   - JanitorPlunger
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - JanitorEnvirohelm
@@ -325,6 +339,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - BotanistEnvirohelm
@@ -344,6 +359,7 @@
   - Glasses
   - SurvivalClown
   - Trinkets
+  - Drip # Jamboree
   - Animals
   # Goobstation - EE Plasmeme Change.
   - ClownEnvirohelm
@@ -365,6 +381,7 @@
   - SurvivalMime
   - Trinkets
   - Animals
+  - Drip # Jamboree
   # Goobstation - EE Plasmeme Change.
   - MimeEnvirohelm
   - MimeEnvirosuit
@@ -383,6 +400,7 @@
   - Trinkets
   - Instruments
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - MusicianEnvirohelm
@@ -404,6 +422,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - QuartermasterEnvirohelm
@@ -423,6 +442,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - CargoTechnicianEnvirohelm
@@ -441,6 +461,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - SalvageEnvirohelm
@@ -461,6 +482,7 @@
   - SurvivalExtended
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - ChiefEngineerEnvirohelm
@@ -476,6 +498,7 @@
   - SurvivalExtended
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - TechnicalAssistantEnvirohelm
@@ -495,6 +518,7 @@
   - SurvivalExtended
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - StationEngineerEnvirohelm
@@ -513,6 +537,7 @@
   - SurvivalExtended
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - AtmosEnvirohelm
@@ -535,6 +560,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - ResearchDirectorEnvirosuit
@@ -557,6 +583,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - ScientistEnvirohelm
@@ -573,6 +600,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - ResearchAssistantEnvirohelm
@@ -595,6 +623,7 @@
   - Trinkets
   - SecurityStar
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathToolSecurity
   # Goobstation - EE Plasmeme Change.
   - HeadofSecurityEnvirohelm
@@ -617,6 +646,7 @@
   - Trinkets
   - SecurityStar
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathToolSecurity
   # Goobstation - EE Plasmeme Change.
   - WardenEnvirohelm
@@ -639,6 +669,7 @@
   - Trinkets
   - SecurityStar
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathToolSecurity
   # Goobstation - EE Plasmeme Change.
   - SecurityOfficerEnvirohelm
@@ -658,6 +689,7 @@
   - Trinkets
   - SecurityStar
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathToolSecurity
   # Goobstation - EE Plasmeme Change.
   - DetectiveEnvirohelm
@@ -676,6 +708,7 @@
   - SecurityOuterClothing # Goobstation - Why not.
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathToolSecurity
   # Goobstation - EE Plasmeme Change.
   - SecurityCadetEnvirohelm
@@ -699,6 +732,7 @@
   - SurvivalMedical
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathToolMedical
   # Goobstation - EE Plasmeme Change.
   - ChiefMedicalOfficerEnvirohelm
@@ -721,6 +755,7 @@
   - SurvivalMedical
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathToolMedical
   # Goobstation - EE Plasmeme Change.
   - MedicalDoctorEnvirohelm
@@ -737,6 +772,7 @@
   - SurvivalMedical
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathToolMedical
   # Goobstation - EE Plasmeme Change.
   - MedicalInternEnvirohelm
@@ -757,6 +793,7 @@
   - SurvivalMedical
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathToolMedical
   # Goobstation - EE Plasmeme Change.
   - ChemistEnvirohelm
@@ -778,6 +815,7 @@
   - SurvivalMedical
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathToolMedical
   # Goobstation - EE Plasmeme Change.
   - ParamedicEnvirohelm
@@ -796,6 +834,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - ZookeeperEnvirohelm
@@ -813,6 +852,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - ReporterEnvirohelm
@@ -829,6 +869,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - PsychologistEnvirohelm
@@ -846,6 +887,7 @@
   - Survival
   - Trinkets
   - Animals
+  - Drip # Jamboree
   - GroupSpeciesBreathTool
   # Goobstation - EE Plasmeme Change.
   - BoxerEnvirohelm

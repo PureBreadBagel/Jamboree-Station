@@ -76,12 +76,15 @@
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
 # SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
 # SPDX-FileCopyrightText: 2025 BombasterDS <deniskaporoshok@gmail.com>
 # SPDX-FileCopyrightText: 2025 BombasterDS2 <shvalovdenis.workmail@gmail.com>
 # SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 # SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
 # SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
 # SPDX-FileCopyrightText: 2025 Ted Lukin <66275205+pheenty@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 grub <unalterableness@gmail.com>
 # SPDX-FileCopyrightText: 2025 pheenty <fedorlukin2006@gmail.com>
 # SPDX-FileCopyrightText: 2025 shityaml <unalterableness@gmail.com>
@@ -123,6 +126,7 @@
   - Animals
   - GroupSpeciesBreathTool
   - SurvivalSecurity
+  - Drip # Jamboree
   # Goobstation - EE Plasmeme Change.
   - BlueshieldOfficerEnvirohelm
   - BlueshieldOfficerEnvirosuit
@@ -144,6 +148,7 @@
   - Animals
   - GroupSpeciesBreathTool
   - Survival
+  - Drip # Jamboree
   # Goobstation - EE Plasmeme Change.
   - CentComOfficerEnvirohelm
   - CentComOfficerEnvirosuit
@@ -172,6 +177,7 @@
   - Trinkets
   - Animals
   - SecurityStar
+  - Drip # Jamboree
   - GroupSpeciesBreathToolSecurity
   # Goobstation - EE Plasmeme Change.
   - BrigmedicEnvirohelm
