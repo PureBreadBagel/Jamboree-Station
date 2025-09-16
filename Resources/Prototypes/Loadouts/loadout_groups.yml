@@ -1688,3 +1688,12 @@
   hidden: true
   loadouts:
   - LoadoutSpeciesBreathToolSecurity
+
+- type: loadoutGroup # Jamboree
+  id: Drip
+  name: loadout-group-drip
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - DripHighHeels
+  - DripGigaGar

@@ -1,0 +1,9 @@
+- type: loadout
+  id: DripHighHeels
+  equipment:
+    shoes: ClothingShoesHighheelBoots
+
+- type: loadout
+  id: DripGigaGar
+  equipment:
+    eyes: ClothingEyesGlassesGarGiga
