@@ -17,52 +17,52 @@
 - type: loadout
   id: DripGar
   equipment:
-    shoes: ClothingEyesGlassesGar
+    eyes: ClothingEyesGlassesGar
 
 - type: loadout
   id: DripGarOrange
   equipment:
-    shoes: ClothingEyesGlassesGarOrange
+    eyes: ClothingEyesGlassesGarOrange
 
 - type: loadout
   id: DripBling
   equipment:
-    shoes: ClothingNeckBling
+    neck: ClothingNeckBling
 
 - type: loadout
   id: DripSolidHeadband
   equipment:
-    shoes: ClothingHeadHatSolidHeadband
+    head: ClothingHeadHatSolidHeadband
 
 - type: loadout
   id: DripSombrero
   equipment:
-    shoes: ClothingHeadHatSombrero
+    head: ClothingHeadHatSombrero
 
 - type: loadout
   id: DripPoncho
   equipment:
-    shoes: ClothingOuterPoncho
+    neck: ClothingOuterPoncho
 
 - type: loadout
   id: DripUshanka
   equipment:
-    shoes: ClothingHeadHatUshanka
+    head: ClothingHeadHatUshanka
 
 - type: loadout
   id: DripWehcellentCap
   equipment:
-    shoes: ClothingHeadWehcellentCap
+    head: ClothingHeadWehcellentCap
 
 - type: loadout
   id: DripYakuzaCoat
   equipment:
-    shoes: ClothingOuterDameDane
+    outer: ClothingOuterDameDane
 
 - type: loadout
   id: DripYakuzaOutfit
   equipment:
-    shoes: ClothingUniformJumpsuitDameDane
+    uniform: ClothingUniformJumpsuitDameDane
 
 - type: loadout
   id: DripYakuzaShoes
