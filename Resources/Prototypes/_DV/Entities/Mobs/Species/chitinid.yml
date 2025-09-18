@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   save: false
   name: Urist McAnt
@@ -135,6 +141,10 @@
     understands:
     - TauCetiBasic
     - Moffic
+  - type: ItemCougher
+    item: Chitzite
+    action: ActionChitzite
+    coughPopup: chitzite-cough
 
 - type: entity
   parent: BaseSpeciesDummy
