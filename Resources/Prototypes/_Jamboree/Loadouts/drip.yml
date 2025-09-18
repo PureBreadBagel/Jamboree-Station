@@ -1,14 +1,83 @@
 # SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+# SPDX-FileCopyrightText: 2025 Bibble-B-Boop <mysticball8@gmail.com>
 # SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: loadout
   id: DripHighHeels
-  equipment:
-    shoes: ClothingShoesHighheelBoots
+  storage:
+    back: 
+    - ClothingShoesHighheelBoots
 
 - type: loadout
   id: DripGigaGar
-  equipment:
-    eyes: ClothingEyesGlassesGarGiga
+  storage:
+    back: 
+    - ClothingEyesGlassesGarGiga
+
+- type: loadout
+  id: DripGar
+  storage:
+   back: 
+    - ClothingEyesGlassesGar
+
+- type: loadout
+  id: DripGarOrange
+  storage:
+    back: 
+    - ClothingEyesGlassesGarOrange
+
+- type: loadout
+  id: DripBling
+  storage:
+    back: 
+    - ClothingNeckBling
+
+- type: loadout
+  id: DripSolidHeadband
+  storage:
+    back: 
+    - ClothingHeadHatSolidHeadband
+
+- type: loadout
+  id: DripSombrero
+  storage:
+    back: 
+    - ClothingHeadHatSombrero
+
+- type: loadout
+  id: DripPoncho
+  storage:
+    back: 
+    - ClothingOuterPoncho
+
+- type: loadout
+  id: DripUshanka
+  storage:
+    back: 
+    - ClothingHeadHatUshanka
+  
+- type: loadout
+  id: DripWehcellentCap
+  storage:
+    back: 
+    - ClothingHeadWehcellentCap
+
+- type: loadout
+  id: DripYakuzaCoat
+  storage:
+    back: 
+    - ClothingOuterDameDane
+
+- type: loadout
+  id: DripYakuzaOutfit
+  storage:
+    back: 
+    - ClothingUniformJumpsuitDameDane
+
+- type: loadout
+  id: DripYakuzaShoes
+  storage:
+    back: 
+    - ClothingShoesDameDane
