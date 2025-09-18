@@ -63,6 +63,8 @@
 # SPDX-FileCopyrightText: 2024 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 Арт <123451459+JustArt1m@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -71,8 +73,8 @@ name: "Labels: Untriaged"
 on:
   issues:
     types: [opened]
-  pull_request_target:
-    types: [opened]
+#  pull_request_target: Dont really need this on PRs
+#    types: [opened]
 
 jobs:
   add_label:

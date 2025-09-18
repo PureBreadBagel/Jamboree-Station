@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+# SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
+# SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 name: Mark and Close Stale Pull Requests
 
 on:
@@ -41,7 +47,7 @@ jobs:
             any activity for 14 days. It will be closed in another 14 days if no further activity occurs.
             Thank you for your contributions.
 
-            You can always ask for help on our development [discord](https://discord.gg/RYNBE6fUW2/).
+            You can always ask for help on our development [discord](https://discord.gg/wwQBZkhKpe/).
 
             If you'd like to keep this open, just leave any comment, and the stale label will be removed.
           # Comment to post when closing a stale PR
@@ -51,15 +57,15 @@ jobs:
 
             Please feel free to reopen or open a new pull request if you'd still like this to be addressed.
 
-            Again, you can always ask for help on our development [discord](https://discord.gg/RYNBE6fUW2).
+            Again, you can always ask for help on our development [discord](https://discord.gg/wwQBZkhKpe).
 
             Thanks again for your contribution!
           # Pull Requests with these labels will never be considered stale
 
           # Set to true to ignore PRs in a milestone (defaults to false)
           exempt-all-pr-milestones: true
-          
+
           # Remove stale label from PRs on update (default is true)
           remove-pr-stale-when-updated: true
-          
+
           ascending: true
