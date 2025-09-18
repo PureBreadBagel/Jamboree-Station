@@ -5,66 +5,79 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: loadout
+  id: DripHighHeels
   storage:
-  shoes: ClothingShoesHighheelBoots
-    id: DripHighHeels
+    back: 
+    - ClothingShoesHighheelBoots
 
 - type: loadout
+  id: DripGigaGar
   storage:
-  eyes: ClothingEyesGlassesGarGiga
-    id: DripGigaGar
+    back: 
+    - ClothingEyesGlassesGarGiga
 
 - type: loadout
+  id: DripGar
   storage:
-  eyes: ClothingEyesGlassesGar
-    id: DripGar
+  eyes: 
+    - ClothingEyesGlassesGar
 
 - type: loadout
+  id: DripGarOrange
   storage:
-  eyes: ClothingEyesGlassesGarOrange
-    id: DripGarOrange
+    back: 
+    - ClothingEyesGlassesGarOrange
 
 - type: loadout
+  id: DripBling
   storage:
-  neck: ClothingNeckBling
-    id: DripBling
+    back: 
+    - ClothingNeckBling
 
 - type: loadout
+  id: DripSolidHeadband
   storage:
-  head: ClothingHeadHatSolidHeadband
-    id: DripSolidHeadband
+    back: 
+    - ClothingHeadHatSolidHeadband
 
 - type: loadout
+  id: DripSombrero
   storage:
-  head: ClothingHeadHatSombrero
-    id: DripSombrero
+    back: 
+    - ClothingHeadHatSombrero
 
 - type: loadout
+  id: DripPoncho
   storage:
-  neck: ClothingOuterPoncho
-    id: DripPoncho
+    back: 
+    - ClothingOuterPoncho
 
 - type: loadout
+  id: DripUshanka
   storage:
-  head: ClothingHeadHatUshanka
-    id: DripUshanka
+    back: 
+    - ClothingHeadHatUshanka
   
 - type: loadout
+  id: DripWehcellentCap
   storage:
-  head: ClothingHeadWehcellentCap
-    id: DripWehcellentCap
+    back: 
+    - ClothingHeadWehcellentCap
 
 - type: loadout
+  id: DripYakuzaCoat
   storage:
-  outer: ClothingOuterDameDane
-    id: DripYakuzaCoat
+    back: 
+    - ClothingOuterDameDane
 
 - type: loadout
+  id: DripYakuzaShoes
   storage:
-  uniform: ClothingUniformJumpsuitDameDane
-    id: DripYakuzaShoes
+    back: 
+    - ClothingUniformJumpsuitDameDane
 
 - type: loadout
+  id: DripYakuzaShoes
   storage:
-  shoes: ClothingShoesDameDane
-    id: DripYakuzaShoes
+    back: 
+    - ClothingShoesDameDane
