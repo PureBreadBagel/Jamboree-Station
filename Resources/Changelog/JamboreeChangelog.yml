@@ -218,3 +218,9 @@ Entries:
       message: Chitinids can properly cough up chitzite again.
   id: 31
   time: '2025-09-18T01:19:56.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: Added more drip to the drip loadout in the character creator
+  id: 32
+  time: '2025-09-18T01:36:14.0000000+00:00'
