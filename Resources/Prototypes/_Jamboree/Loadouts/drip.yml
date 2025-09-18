@@ -19,7 +19,7 @@
 - type: loadout
   id: DripGar
   storage:
-  eyes: 
+   back: 
     - ClothingEyesGlassesGar
 
 - type: loadout
@@ -71,7 +71,7 @@
     - ClothingOuterDameDane
 
 - type: loadout
-  id: DripYakuzaShoes
+  id: DripYakuzaOutfit
   storage:
     back: 
     - ClothingUniformJumpsuitDameDane
