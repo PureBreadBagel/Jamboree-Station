@@ -5,66 +5,66 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: loadout
-  id: DripHighHeels
-  equipment:
-    shoes: ClothingShoesHighheelBoots
+  storage:
+  shoes: ClothingShoesHighheelBoots
+    id: DripHighHeels
 
 - type: loadout
-  id: DripGigaGar
-  equipment:
-    eyes: ClothingEyesGlassesGarGiga
+  storage:
+  eyes: ClothingEyesGlassesGarGiga
+    id: DripGigaGar
 
 - type: loadout
-  id: DripGar
-  equipment:
-    eyes: ClothingEyesGlassesGar
+  storage:
+  eyes: ClothingEyesGlassesGar
+    id: DripGar
 
 - type: loadout
-  id: DripGarOrange
-  equipment:
-    eyes: ClothingEyesGlassesGarOrange
+  storage:
+  eyes: ClothingEyesGlassesGarOrange
+    id: DripGarOrange
 
 - type: loadout
-  id: DripBling
-  equipment:
-    neck: ClothingNeckBling
+  storage:
+  neck: ClothingNeckBling
+    id: DripBling
 
 - type: loadout
-  id: DripSolidHeadband
-  equipment:
-    head: ClothingHeadHatSolidHeadband
+  storage:
+  head: ClothingHeadHatSolidHeadband
+    id: DripSolidHeadband
 
 - type: loadout
-  id: DripSombrero
-  equipment:
-    head: ClothingHeadHatSombrero
+  storage:
+  head: ClothingHeadHatSombrero
+    id: DripSombrero
 
 - type: loadout
-  id: DripPoncho
-  equipment:
-    neck: ClothingOuterPoncho
+  storage:
+  neck: ClothingOuterPoncho
+    id: DripPoncho
 
 - type: loadout
-  id: DripUshanka
-  equipment:
-    head: ClothingHeadHatUshanka
+  storage:
+  head: ClothingHeadHatUshanka
+    id: DripUshanka
+  
+- type: loadout
+  storage:
+  head: ClothingHeadWehcellentCap
+    id: DripWehcellentCap
 
 - type: loadout
-  id: DripWehcellentCap
-  equipment:
-    head: ClothingHeadWehcellentCap
+  storage:
+  outer: ClothingOuterDameDane
+    id: DripYakuzaCoat
 
 - type: loadout
-  id: DripYakuzaCoat
-  equipment:
-    outer: ClothingOuterDameDane
+  storage:
+  uniform: ClothingUniformJumpsuitDameDane
+    id: DripYakuzaShoes
 
 - type: loadout
-  id: DripYakuzaOutfit
-  equipment:
-    uniform: ClothingUniformJumpsuitDameDane
-
-- type: loadout
-  id: DripYakuzaShoes
-  equipment:
-    shoes: ClothingShoesDameDane
+  storage:
+  shoes: ClothingShoesDameDane
+    id: DripYakuzaShoes
