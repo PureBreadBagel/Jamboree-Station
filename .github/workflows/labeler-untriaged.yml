@@ -71,8 +71,8 @@ name: "Labels: Untriaged"
 on:
   issues:
     types: [opened]
-  pull_request_target:
-    types: [opened]
+#  pull_request_target: Dont really need this on PRs
+#    types: [opened]
 
 jobs:
   add_label:
