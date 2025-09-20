@@ -1699,12 +1699,12 @@
   id: Drip
   name: loadout-group-drip
   minLimit: 0
-  maxLimit: 2
+  maxLimit: 3
   loadouts:
   - DripHighHeels
   - DripGigaGar
-  - DripGar
   - DripGarOrange
+  - DripWehcellentCap
   - DripBling
   - DripSolidHeadband
   - DripSombrero
