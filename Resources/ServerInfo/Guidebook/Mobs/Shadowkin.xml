@@ -1,0 +1,52 @@
+<!--
+SPDX-FileCopyrightText: 2024 Errant <35878406+Errant-4@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<Document>
+  # Shadowkin
+
+  <Box>
+    <GuideEntityEmbed Entity="MobShadowkin" Caption=""/>
+  </Box>
+
+  They do not breathe, and thus do not require air.
+  They have innate, toggleable night vision.
+  They take 85% less cellular damage.
+
+
+  Their unarmed claw attacks deal Slash damage instead of Blunt.
+
+  Stun times from flashes are doubled.
+  They take 20% more heat damage.
+  They take 25% more shock and bloodloss damage.
+  They take 30% more radiation damage
+
+  ## Light Exposure
+
+  Depending on the light level they are exposed to, Shadowkin gain the following effects:
+
+  Light Exposure: Dark
+  - Passive Regeneration is buffed.
+
+  Light Exposure: Low
+  - No Buffs or Nerfs.
+
+  Light Exposure: Annoying
+  - Passive Regeneration is disabled.
+
+  Light Exposure: High
+  - You gain a heavy slowdown.
+
+  Light Exposure: EXTREME
+  - You begin to take 1 heat damage per second exposed.
+
+  ## Lore
+
+  Once hidden away in the darkest crevices of their origin world, Mars, the Shadowkin are a very reserved species.
+  As such, much of their culture is not known by the majority of the galaxy. What is knonw is that many take on names after an object, role, or sound sequence that is significant to them.
+
+</Document>
