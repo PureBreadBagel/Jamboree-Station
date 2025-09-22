@@ -69,6 +69,8 @@
     cost: 650
   - id: ClothingMaskWeldingGas
     cost: 750
+  - id: WeaponGrapplingGun
+    cost: 750
   - id: LavalandJaunter
     cost: 750
   - id: WeaponCrusher
