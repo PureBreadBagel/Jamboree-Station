@@ -43,6 +43,7 @@
     - IPC
 #    - Resomi  Jamboree
     - Oni
+    - Shadowkin
     - Tajaran
     - Chitinid
     - Plasmaman
@@ -127,6 +128,11 @@
   id: Tajaran
   name: species-name-tajaran
   text: "/ServerInfo/Guidebook/Mobs/Tajaran.xml"
+
+- type: guideEntry
+  id: Shadowkin
+  name: species-name-shadowkin
+  text: "/ServerInfo/Guidebook/Mobs/Shadowkin.xml"
 
 - type: guideEntry
   id: Plasmaman
