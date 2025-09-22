@@ -15,7 +15,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     <GuideEntityEmbed Entity="MobRodentiaDummy" Caption=""/>
   </Box>
 
-  Rodentia are a race of humanoid beings resembling rodents. Resourceful, evasive, sneaky, but fragile.
+  Rodentia are a species of bipedal beings resembling rodents. Resourceful, evasive, sneaky, but fragile.
 
   ## Diet
 
@@ -39,5 +39,11 @@ SPDX-License-Identifier: AGPL-3.0-or-later
   - Takes 15% more Blunt, Slash, and Piercing damage.
   - Always triggers mousetraps, regardless of whether or not they are wearing shoes.
   - Gets hungry 33% faster.
+
+  ## Lore
+
+  Rodentia, rather than simply being a singular species, is the general term for a multitude of rodent resembling species throughout the galaxy. Interestingly, most of the Rodentia collective originated from the same world
+  bringing into question whether or not Rodentia are an example of natural evolution or genetic creation. Rodentia culture is highly diverse, but many have the common through line of not caring whether their origins are
+  evolution or being made and instead focus on the importance of being here.
 
 </Document>

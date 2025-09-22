@@ -28,9 +28,9 @@ ___________________________________________________________________________
 
   - Step 1: Is there a captain who is alive and present? If so, proceed to step 6. If not,
   proceed to the next step.
-  - Step 2: Is there an HOS who is alive and present? If so, proceed to step 6. If not,
+  - Step 2: Is there an HOP who is alive and present? If so, proceed to step 6. If not,
   proceed to the next step.
-  - Step 3: Is there an HOP who is alive and present? If so, proceed to step 6. If not,
+  - Step 3: Is there an HOS who is alive and present? If so, proceed to step 6. If not,
   proceed to the next step.
   - Step 4: All heads may vote on a head to elect as captain, then should proceed to step 6.
   If all heads are not alive and present, proceed to the next step. If all heads are dead or
