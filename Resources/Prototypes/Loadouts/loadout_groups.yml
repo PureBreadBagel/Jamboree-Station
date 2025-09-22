@@ -128,6 +128,7 @@
 # SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aviu00 <aviu00@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Baine Junk <wym0n@proton.me>
+# SPDX-FileCopyrightText: 2025 Bibble-B-Boop <mysticball8@gmail.com>
 # SPDX-FileCopyrightText: 2025 BloodfiendishOperator <141253729+Diggy0@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 BombasterDS <deniskaporoshok@gmail.com>
 # SPDX-FileCopyrightText: 2025 BombasterDS2 <shvalovdenis.workmail@gmail.com>
@@ -1699,12 +1700,12 @@
   id: Drip
   name: loadout-group-drip
   minLimit: 0
-  maxLimit: 2
+  maxLimit: 3
   loadouts:
   - DripHighHeels
   - DripGigaGar
-  - DripGar
   - DripGarOrange
+  - DripWehcellentCap
   - DripBling
   - DripSolidHeadband
   - DripSombrero
