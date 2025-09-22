@@ -19,11 +19,12 @@
 - type: vendingMachineInventory
   id: NanoMedInventory
   startingInventory:
-    Brutepack: 3
-    Ointment: 3
-    Bloodpack: 3
-    ChemistryBottleEpinephrine: 3
-    Syringe: 3
+    Brutepack: 4
+    Ointment: 4
+    Gauze: 4
+    Bloodpack: 4
+    ChemistryBottleEpinephrine: 4
+    Syringe: 8
     Tourniquet: 3 #Goobstation - ParamedHypo
   contrabandInventory:
     PowerCellSmall: 2
