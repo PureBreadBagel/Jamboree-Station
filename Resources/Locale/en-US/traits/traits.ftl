@@ -104,3 +104,21 @@ trait-newyork-desc = You speak with a thick New York accent. I'm fuckin' walkin'
 
 trait-british-name = British accent
 trait-british-desc = You speak proper, unlike those bloody yanks.
+
+trait-milbrat-name = Military Jargon
+trait-milbrat-desc = You make subtle references to a past stint in the military by using strange terminology and acronyms.
+
+trait-sharpinflection-name = Sharp inflection
+trait-sharpinflection-desc = You mumble... When you aren't shouting!!
+
+trait-monotonous-name = Monotonous
+trait-monotonous-desc = You speak in a way that others see as total disinterest. Always.
+
+trait-scrambled-name = Scrambled speech
+trait-scrambled-desc = There was an accident with a tesla engine, now others have trouble understanding you.
+
+trait-stiltedspeech-name = Stilted speech
+trait-stiltedspeech-desc = You Speak Very Properly At All Times.
+
+trait-transatlantic-name = Transatlantic Accent
+trait-transatlantic-desc = You sound like a hardboiled detective, or a peppy newshawk.

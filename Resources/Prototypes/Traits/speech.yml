@@ -101,6 +101,33 @@
   - type: ReplacementAccent
     accent: liar
 
+- type: trait
+  id: SharpInflection
+  name: trait-sharpinflection-name
+  description: trait-sharpinflection-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: SharpInflection
+
+- type: trait
+  id: Monotonous
+  name: trait-monotonous-name
+  description: trait-monotonous-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: Monotonous
+
+- type: trait
+  id: Scrambled
+  name: trait-scrambled-name
+  description: trait-scrambled-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: ScrambledAccent
+
 # 2 Cost
 
 - type: trait

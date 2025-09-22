@@ -70,3 +70,40 @@
   components:
   - type: ReplacementAccent
     accent: british
+
+- type: trait
+  id: MilbratAccent
+  name: trait-milbrat-name
+  description: trait-milbrat-desc
+  category: SpeechTraits
+  cost: 2
+  components:
+  - type: MilbratAccent
+
+- type: trait
+  id: PGAccent
+  name: trait-pg-name
+  description: trait-pg-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: PGAccent
+
+- type: trait
+  id: StiltedSpeech
+  name: trait-stiltedspeech-name
+  description: trait-stiltedspeech-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: StiltedSpeech
+
+- type: trait
+  id: TransatlanticAccent
+  name: trait-transatlantic-name
+  description: trait-transatlantic-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: TransatlanticAccent
+

@@ -18,6 +18,9 @@ trait-wheelchair-bound-desc = You cannot move without your wheelchair. Wheelchai
 trait-bogan-name = Bogan accent
 trait-bogan-desc = You learned this from a mythical creature.
 
+trait-pg-name = PG vocabulary
+trait-pg-desc = You've sworn off swearing.
+
 poor-vision-trait-examined = [color=lightblue]{CAPITALIZE(POSS-ADJ($target))} eyes are unfocused. It doesn't seem like {SUBJECT($target)} can see you very well without glasses..[/color]
 
 trait-medieval-accent-name = Medieval accent
