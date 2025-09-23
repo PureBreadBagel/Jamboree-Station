@@ -230,3 +230,13 @@ Entries:
       message: Pleebnars look a little different.
   id: 33
   time: '2025-09-22T16:53:20.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: Added the Grappling Gun to Salvage Vendor. TWHIP!!!
+    - type: Add
+      message: Added gauze to the Nanomed vending machines.
+    - type: Tweak
+      message: Increased the amount of some items in the Nanomed vending machines.
+  id: 34
+  time: '2025-09-23T06:16:15.0000000+00:00'
