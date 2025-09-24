@@ -258,3 +258,17 @@ Entries:
       message: 'Added new trait: Transatlantic accent'
   id: 35
   time: '2025-09-24T02:23:59.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Add
+      message: >-
+        Notable: Shadowlings, Mono/NF Clothing, More factorio, More hairs, Check
+        Goob Log for more
+    - type: Remove
+      message: Check Goob Log
+    - type: Tweak
+      message: Check Goob Log
+    - type: Fix
+      message: 'Notable: RPD Cross anchor fix, Check Goob Log for more'
+  id: 36
+  time: '2025-09-24T04:03:52.0000000+00:00'
