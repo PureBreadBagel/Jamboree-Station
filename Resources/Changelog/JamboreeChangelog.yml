@@ -240,3 +240,21 @@ Entries:
       message: Increased the amount of some items in the Nanomed vending machines.
   id: 34
   time: '2025-09-23T06:16:15.0000000+00:00'
+- author: wendyribstonpippin, mqole, Pinkbat5, crekulon, britno
+  changes:
+    - type: Add
+      message: 'Added new trait: Military jargon'
+    - type: Add
+      message: 'Added new trait: Monotonous'
+    - type: Add
+      message: 'Added new trait: PG vocabulary'
+    - type: Add
+      message: 'Added new trait: Scrambled speech'
+    - type: Add
+      message: 'Added new trait: Sharp inflection'
+    - type: Add
+      message: 'Added new trait: Stilted speech'
+    - type: Add
+      message: 'Added new trait: Transatlantic accent'
+  id: 35
+  time: '2025-09-24T02:23:59.0000000+00:00'
