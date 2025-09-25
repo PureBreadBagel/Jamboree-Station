@@ -313,7 +313,7 @@
         map: [base]
     - type: Kudzu
       growthTickChance: 0.2
-      spreadChance: 0.99
+      spreadChance: 0.20
     - type: RandomSpawner
       deleteSpawnerAfterSpawn: false
       rareChance: 0.05
