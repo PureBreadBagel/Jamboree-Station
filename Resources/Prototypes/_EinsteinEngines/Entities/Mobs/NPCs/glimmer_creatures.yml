@@ -15,7 +15,7 @@
         Base: mite
       Dead:
         Base: mite_dead
-    baseDecayRate: 0.25
+#    baseDecayRate: 0.25  -- Jamboree
   - type: SolutionContainerManager
     solutions:
       food:

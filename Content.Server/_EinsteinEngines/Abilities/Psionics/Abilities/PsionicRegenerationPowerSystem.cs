@@ -5,6 +5,7 @@ using Content.Server.DoAfter;
 using Content.Shared._EinsteinEngines.Actions.Events;
 using Content.Shared._EinsteinEngines.Psionics.Events;
 using Content.Shared.Abilities.Psionics;
+using Content.Shared.Body.Components;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Examine;
@@ -88,7 +89,8 @@ namespace Content.Server._EinsteinEngines.Abilities.Psionics
 
             var solution = new Solution();
             solution.AddReagent("PsionicRegenerationEssence", FixedPoint2.New(component.EssenceAmount * percentageComplete));
-            _bloodstreamSystem.TryAddToChemicals(uid, solution, stream);
+            _bloodstreamSystem.TryAddToChemicals((uid, stream), solution);
+            // _bloodstreamSystem.TryAddToChemicals(uid, solution, stream); # - Jamboree
         }
     }
 }
