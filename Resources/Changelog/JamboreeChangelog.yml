@@ -272,3 +272,9 @@ Entries:
       message: 'Notable: RPD Cross anchor fix, Check Goob Log for more'
   id: 36
   time: '2025-09-24T04:03:52.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Tweak
+      message: Shadow anomaly haze should spread slower now.
+  id: 37
+  time: '2025-09-27T00:48:29.0000000+00:00'
