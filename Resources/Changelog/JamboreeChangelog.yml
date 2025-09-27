@@ -278,3 +278,15 @@ Entries:
       message: Shadow anomaly haze should spread slower now.
   id: 37
   time: '2025-09-27T00:48:29.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Add
+      message: Check Goob Log
+    - type: Remove
+      message: Check Goob Log
+    - type: Tweak
+      message: 'Notable: NTR Rework, Salvs can be antags again!'
+    - type: Fix
+      message: Check Goob Log
+  id: 38
+  time: '2025-09-27T01:47:34.0000000+00:00'
