@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 AndresE55 <80334192+leander-0@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: CrayonRainbow
   id: CrayonMagic
