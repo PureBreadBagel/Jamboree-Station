@@ -18,6 +18,8 @@ construction-graph-tag-purple-crayon = purple crayon
 construction-graph-tag-red-crayon = red crayon
 construction-graph-tag-yellow-crayon = yellow crayon
 construction-graph-tag-black-crayon = black crayon
+construction-graph-tag-green-crayon = green crayon
+construction-graph-tag-blue-crayon = blue crayon
 
 # eva
 construction-graph-tag-eva-suit = an EVA suit
