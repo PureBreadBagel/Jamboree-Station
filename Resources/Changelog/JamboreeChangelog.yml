@@ -290,3 +290,33 @@ Entries:
       message: Check Goob Log
   id: 38
   time: '2025-09-27T01:47:34.0000000+00:00'
+- author: JohnOakman
+  changes:
+    - type: Add
+      message: Topicals now automatically heal limbs one after the other.
+    - type: Fix
+      message: no more double sound when you heal someone
+  id: 39
+  time: '2025-09-27T19:22:18.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Add
+      message: Add Serpentcrest from Goob
+    - type: Tweak
+      message: Saltern small changes to wiring
+  id: 40
+  time: '2025-09-27T20:09:43.0000000+00:00'
+- author: Leander, Avalon-Proto
+  changes:
+    - type: Add
+      message: Added magic crayon.
+  id: 41
+  time: '2025-09-27T21:40:49.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Tweak
+      message: >-
+        Tajaran genetic mutations have occurred, you may see some brightly
+        colored Tajaran around.
+  id: 42
+  time: '2025-09-27T22:36:42.0000000+00:00'
