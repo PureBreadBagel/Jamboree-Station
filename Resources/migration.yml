@@ -146,6 +146,32 @@
 # WallSolid: Window
 # Table: null
 
+# Jamboree - Chibi rom DeltaV
+SpawnMobSecLaikaOrShiva: null
+SpawnPointCargoAssistant: null
+SpawnPointSurgeon: null
+SuitStorageSecDeltaV: null
+SuperweaponSafeSpawner: null
+WarpPointBridge: null
+WarpPointEngineering: null
+WarpPointLogistics: null
+WarpPointSecurity: null
+AirlockFreezerServiceLocked: null
+AntiPsychicKnife: null
+Autoclave: null
+BookIanDossier: null
+ComputerShuttleMining: ComputerShuttleMiningLavaland
+EpistemicsTechFab: ScienceTechFab
+LauncherSyringe: null
+LockerSurgeonFilled: null
+LogisticsTechFab: CargoTechFab
+MiniSyringe: null
+RubberStampNotary: null
+SentientSmileCore: null
+ShotgunSafeSpawner: null
+ClothingNeckCloakMystagogue: null
+ClothingOuterHardsuitMystagogue: null
+
 # Jamboree - Listening Post from DeltaV
 BarSignWhiskeyEcho: BarSignWhiskeyEchoes
 
