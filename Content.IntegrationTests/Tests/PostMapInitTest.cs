@@ -55,7 +55,6 @@
 // SPDX-FileCopyrightText: 2024 Southbridge <7013162+southbridge-fur@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Spanky <scott@wearejacob.com>
 // SPDX-FileCopyrightText: 2024 Thomas <87614336+Aeshus@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 TytosB <54259736+TytosB@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Winkarst <74284083+Winkarst-cpu@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 beck-thompson <107373427+beck-thompson@users.noreply.github.com>
@@ -97,11 +96,13 @@
 // SPDX-FileCopyrightText: 2025 SX-7 <92227810+SX-7@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
 // SPDX-FileCopyrightText: 2025 SX_7 <sn1.test.preria.2002@gmail.com>
+// SPDX-FileCopyrightText: 2025 Sera <karaadastra@gmail.com>
 // SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
 // SPDX-FileCopyrightText: 2025 Spessmann <156740760+Spessmann@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Tayrtahn <tayrtahn@gmail.com>
 // SPDX-FileCopyrightText: 2025 Ted Lukin <66275205+pheenty@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 TheBorzoiMustConsume <197824988+TheBorzoiMustConsume@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 TytosB <54259736+TytosB@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 TytosB <dunlaintytos@yahoo.com>
 // SPDX-FileCopyrightText: 2025 Unisol <1929445+Unisol@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Unlumination <144041835+Unlumy@users.noreply.github.com>
@@ -237,6 +238,7 @@ namespace Content.IntegrationTests.Tests
             "dm01-entryway",
             "Chloris", // Goobstation
             "Serpentcrest", // Goobstation
+            "Chibi",
         };
 
         private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";
