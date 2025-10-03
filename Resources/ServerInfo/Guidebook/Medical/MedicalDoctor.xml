@@ -38,9 +38,9 @@ When you scan a patient, a menu will pop up in the middle of your screen. This m
 
 The scanner also has three menus that you can click on to change the type of information you see.
 
-The first one is all about Conditions. On the right side of the scanner GUI, it will show you the patients’ [color=yellow] current conditions [/color]. Including broken bones and where they are bleeding.
+The first one is all about Conditions. On the right side of the scanner GUI, it will show you the patients’[color=yellow] current conditions[/color]. Including broken bones and where they are bleeding.
 
-The second is all about their [color=red]Organs[/color]. This shows you if their organs [color=yellow] have failed or not, and shows a % of their working capacity.[/color]
+The second is all about their [color=red]Organs[/color]. This shows you if their organs[color=yellow] have failed or not, and shows a % of their working capacity.[/color]
 
 The third shows you [color=orange]information about a patient’s bloodstream[/color]. This shows you how much blood a patient has, what's currently in their stomach and what medicines are being metabolised.
 
@@ -57,9 +57,9 @@ It is never too late to stock up on these if you can.
 </Box>
 
 <Box>
-<GuideEntityEmbed Entity="Gauze" Caption="Gauze (for bleeds)"/>
-<GuideEntityEmbed Entity="RegenerativeMesh" Caption="Regenerative Mesh (burns, more effective for Caustic)"/>
-<GuideEntityEmbed Entity="MedicatedSuture" Caption="Medicated Suture (for brutes and bleeds)"/>
+<GuideEntityEmbed Entity="Gauze" Caption="Gauze"/>
+<GuideEntityEmbed Entity="RegenerativeMesh" Caption="Regenerative Mesh"/>
+<GuideEntityEmbed Entity="MedicatedSuture" Caption="Medicated Suture"/>
 </Box>
 
 ## How do I apply Topicals?
@@ -124,7 +124,7 @@ The emergency medipen contains Epinephrine, which heals Asphyxiation, brute dama
 To stop a patient from being in critical condition, get them under 100 damage! Whether that be by medicine or topicals.
 
 If the patient reaches 200+ damage (or by their own will)... [color=red]They will die.[/color]
-In this scenario. They will no longer take Asphyxiation damage, and start their countdown to [color=yellow] Rotting away. [/color]
+In this scenario. They will no longer take Asphyxiation damage, and start their countdown to[color=yellow] Rotting away.[/color]
 Patients who have just died will audibly stop breathing, and become limp and lifeless. If you use [keybind="ExamineEntity"] on a dead patient, you can see their [color=yellow] freshness and if their soul is in their body. [/color]
 
 The first thing to check for is if the patients soul is still in their body, if you see text along the lines of [color=#8736c1] their soul being departed [/color] then that patient is truly gone. There is nothing you can do to give them their life back.
