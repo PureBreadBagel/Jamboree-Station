@@ -1,29 +1,29 @@
 <!--
 SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 SPDX-FileCopyrightText: 2025 ArtisticRoomba <145879011+ArtisticRoomba@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 PureBreadBagel
 
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
 <Document>
   # Gas Mining and Storage
-  Gasses are often permanently used. Whether they are lost to [textlink="space" link="Spacing"] or used in a burn chamber, the station needs to be able to produce more gas to replace what is lost.
-  It also needs to store this gas in a safe and efficient manner.
+When it comes to gasses, everyone on the station at least consumes some of it to a degree. Whether there has been an explosion accident in the bar and have been [textlink="lost to space," link="Spacing"] used in a burn chamber, or used for science experiments, the space station needs to be able to produce gas that has been consumed.
 
   ## Gas Miners
-  Gas miners are used to replenish the station's gas supply. They are found in the gas storage tanks in Atmospherics.
+ Gas miners are the solution to this problem.
 
   <Box>
     <GuideEntityEmbed Entity="GasMinerOxygenStation"/>
     <GuideEntityEmbed Entity="GasMinerNitrogenStation"/>
   </Box>
 
-  Gas miners constantly produce room temperature gas and push it into the exposed atmosphere. They require no power to function, and never stop working unless they have reached the defined [bold]cutoff pressure[/bold].
+  Gas miners generate [color=#11dcf7] technically unlimited, room temperature gas[/color] and push it out into the area around it. They do not need any type of power, and constantly produce gas untill they reach their [bold]cutoff pressure[/bold].
 
-  You can see more information about the gas miners by inspecting them using [color=yellow][bold][keybind="ExamineEntity"][/bold][/color].
-  Try inspecting the gas miners presented above.
+  You can tell what type of gas a gas miner creates, its cutoff pressure and if they are currently creating gas by using [color=yellow][bold][keybind="ExamineEntity"][/bold][/color].
+  Try inspecting them! You wont be able to tell what gas they make without inspecting them!
 
-  Gas miners come in tiers, with the larger versions having a higher pressure cutoff than the smaller versions.
+  Gas miners can be different for each type of station depending on its size, meaning its gas output increases on the size of the station.
 
   <Box>
     <GuideEntityEmbed Entity="GasMinerNitrogen" Caption="300 kPa"/>
@@ -31,7 +31,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     <GuideEntityEmbed Entity="GasMinerNitrogenStationLarge" Caption="4500 kPa"/>
   </Box>
 
-  If gas miners are ever unanchored from the station, they can be reanchored using a regular wrench.
+  Gas miners can be easily sabotaged by getting unanchored by a wrench and tossed into space. Meaning [color=yellow]its important you keep an eye on them.[/color] As gas miners are [color=red] in limited quantity. [/color] They can not be replaced if lost.
 
   ## Gas Storage
   Gas storage tanks are used to store gas produced by the gas miners, and to make it available to other processes. They are found in Atmospherics.
