@@ -1,43 +1,99 @@
 <!--
-SPDX-FileCopyrightText: 2023 Sir Winters <7543955+Owai-Seek@users.noreply.github.com>
-SPDX-FileCopyrightText: 2023 end <72604018+laok233@users.noreply.github.com>
-SPDX-FileCopyrightText: 2024 UBlueberry <161545003+UBlueberry@users.noreply.github.com>
-SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 PureBreadBagel
 
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
 <Document>
 # Medical Doctor
-It's time to heal. Or at least, try to heal, anyway. Medical Doctors are the primary caretakers of every boo boo and ouchie crewmembers get on the station, be it a small scratch, or boiled skin.
+So, you've just started your new job as a doctor. A doctor's job is to treat all of the crew's injuries, whether that be because of a failed science experiment, a fatal shootout, or a severe case of poisoning.
 
-This guide will give you a basic outline of the treatment options you have available, triage, and other avenues of care.
+This entry in the guidebook will provide you with essential information on how to navigate your day as a doctor.
 
-## The Basics
-There are two ways to tell what's ailing someone: Taking a scan (with a health analyzer or a medical PDA), or examining them, with a shift-click, and clicking the heart symbol.
+## Scan them first, treatment later.
+When a patient comes in, you will need to scan their body. Luckily for all doctors, they have a [color=#2596be]MedTek cartridge[/color] automatically installed within their PDA. [color=yellow]This scanner has an unlimited battery.[/color]
 
-Using a health analyzer is often more powerful than examination, as some things (such as poison, or radiation) don't show up on examination. However, using an analyzer has its drawbacks, as it makes noise and uses up a battery.
 <Box>
-<GuideEntityEmbed Entity="SignExamroom" Caption="examine patient"/>
 <GuideEntityEmbed Entity="MedicalPDA"/>
 <GuideEntityEmbed Entity="MedicalInternPDA" Caption="intern PDA"/>
 <GuideEntityEmbed Entity="HandheldHealthAnalyzer"/>
 </Box>
 
-## Medication and Treatment Options
-Before we go any further, it's probably a good idea to go over damage types, and what will heal them. The wiki has more extensive info available, but these are commonly used.
+But if you have lost your PDA or just so happen to be a bystander with someone blatantly dying before your eyes, then you will have to use the Handheld Health Analyser, which has a limited battery.
 
-An important note: Most medication has an overdose level, which will cause harm to your patient. Chemicals also take time to metabolise in pill form, if you want things to act quickly, use a syringe.
+If you have neither of these, the best you have is using [keybind="ExamineEntity"] to examine the person and clicking the Heart icon. Keep in mind this WILL NOT tell you all the damage the patient has received. Just a general gist.
 
-- Brute Damage: Bicaridine or Bruise Packs
-- Burn Damage: Dermaline or Ointment
-- Toxin (Poison): Dylovene
-- Toxin (Radiation) Hyronalin or Arithrazine
-- Airloss: Dexaline or Inaprovaline
-- Bloodloss: Dexaline (Examine the patient, if pale, they still need blood or iron.)
-- Bleeding: Tranexamic acid and Gauze (Bleeding can also be cauterized with burn damage.)
+<Box>
+<GuideEntityEmbed Entity="MedicalBed"/>
+</Box>
 
-Many stations are stocked with kits in storage, and all medics have some equipment in their starting belt.
+As a general rule of thumb, place patients onto the medical beds always during treatment.
+
+
+## Scanning Guide
+
+When you scan a patient, a menu will pop up in the middle of your screen. This menu will show you your patients' damage types in numbers and categories, along with a coloured figure. The figures' colour changes depending on how damaged the patient's body is.
+
+[color=orange]Scanning will show all accumulated damage in the body.[/color] In order to see the damage for a particular body part of the patient, left-click one of the coloured figures’ body parts. 
+
+The scanner also has three menus that you can click on to change the type of information you see.
+
+The first one is all about Conditions. On the right side of the scanner GUI, it will show you the patients’ [color=yellow] current conditions [/color]. Including broken bones and where they are bleeding.
+
+The second is all about their [color=red] Organs [/color]. This shows you if their organs [color=yellow] have failed or not, and shows a % of their working capacity.[/color]
+
+The third shows you [color=orange] information about a patient’s bloodstream [/color]. This shows you how much blood a patient has, what's currently in their stomach and what medicines are being metabolised.
+
+
+## What is a Topical?
+
+Topicals are items that can [color=yellow] work on the dead[/color] to heal damage, including those alive. 
+It is never too late to stock up on these if you can.
+
+<Box>
+<GuideEntityEmbed Entity="Brutepack" Caption="Brutepack (for brutes)"/>
+<GuideEntityEmbed Entity="Ointment" Caption="Ointment (for burns)"/>
+<GuideEntityEmbed Entity="Bloodpack" Caption="Bloodpack (for bloodloss)"/>
+<GuideEntityEmbed Entity="Gauze" Caption="Gauze (for bleeds)"/>
+<GuideEntityEmbed Entity="RegenerativeMesh" Caption="Regenerative Mesh (burns, more effective for Caustic)"/>
+<GuideEntityEmbed Entity="MedicatedSuture" Caption="Medicated Suture (for brutes and bleeds)"/>
+</Box>
+
+## How do I apply Topicals?
+
+To use a topical, you must apply it to all affected areas of the patient's limbs. This is done automatically when you left-click the patient with the topical. However, if you want to apply it to a specific body part first, click on a limb on the human figure at the bottom right of your screen.
+
+Normally, when you treat a patient, they have a high chance of[color=red] bleeding all over [/color] when they come in! Before applying anything else, it is advisable to use Gauze (or medicated sutures if available) first and foremost.
+You will know that you have stopped the bleeding of a body part when a message appears after applying.
+
+Topicals are Time-Consuming, though...So use medicine when you can!
+
+
+## How do I use medicine??
+
+Chemists are your go-to people to beg for all types of medicine. [color=yellow]Medicine will heal all body parts at once.[/color] However, remember that [color=orange]most types of medicine do not work on the dead! [/color]
+
+To start with, get yourself a syringe. They can be found in/or fabricated at the medical department. Pills can also be dispensed by a chemist if you want to control dosage.
+
+
+<Box>
+<GuideEntityEmbed Entity="Syringe" Caption="Syringe"/>
+<GuideEntityEmbed Entity="SyringeBluespace" Caption="Bluespace Syringe"
+<GuideEntityEmbed Entity="Jug" Caption="Jug (med container)"
+</Box>
+
+The syringe has 2 modes. One to draw and one to inject.
+In draw mode, left click on a medicine container to get the medicine in the syringe (Or on a patient if you want to draw blood).
+
+In inject mode, left click a patient (or yourself) to inject the medicine into the bloodstream! [textlink="Or just use Patches." link="Medicalpatches"]
+
+All types of damage are treated with different medications; sometimes, your chemist will label which one they treat.
+
+## Medkits
+I hear you asking "but what if theres no chemists and I dont know how to make medicine?? WHAT DO I DO!?"
+Fear not!
+
+If you do not have any type of meds and lack of a chemist, then the medical department comes with Medkits that treat almost every type of damage!
 
 <Box>
 <GuideEntityEmbed Entity="MedkitFilled"/>
@@ -47,40 +103,52 @@ Many stations are stocked with kits in storage, and all medics have some equipme
 <GuideEntityEmbed Entity="MedkitToxinFilled" Caption="toxin kit"/>
 </Box>
 
+Be sure to ask Cargo if you are running low! They can save your life and other lives too
+
+
+## The Dead and the Critical
+
+If you hear a patient constantly gasping, be sure to check on them. If your scanner tells you that their damage is over 100...[color=yellow] The patient is in critical condition. [/color]
+
+They will constantly take Asphyxiation damage in this state! Meaning they only have around a minute or 2 to live!
+In this scenario, if you feel that the patient may not live longer due to their injuries, give them an Emergency Medipen!
+
 <Box>
-<GuideEntityEmbed Entity="Brutepack"/>
-<GuideEntityEmbed Entity="Ointment"/>
-<GuideEntityEmbed Entity="EmergencyMedipen"/>
-<GuideEntityEmbed Entity="Bloodpack"/>
-<GuideEntityEmbed Entity="Gauze"/>
+<GuideEntityEmbed Entity="EmergencyMedipen" Caption="Emergency Medipen"/>
 </Box>
 
-## Basic Treatment and Triage
-Examine your patient, and note down the important details: Are they alive? Bleeding? What type of damage?
+The emergency medipen contains Epinephrine, which heals Asphyxiation, brute damage, burn damage and poison damage!
+To stop a patient from being in critical condition, get them under 100 damage! Whether that be by medicine or topicals.
 
-If alive, treat them as best as you can. Patients are in critical condition at 100 damage, and dead at 200. Keep this in mind when choosing how to treat them. Emergency Pens and Epinephrine are often used to keep patients stable.
+If the patient reaches 200+ damage (or by their own will)... [color=red] They will die. [/color]
+In this scenario. They will no longer take Asphyxiation damage, and start their countdown to [color=yellow] Rotting away. [/color]
+Patients who have just died will audibly stop breathing, and become limp and lifeless. If you use [keybind="ExamineEntity"] on a dead patient, you can see their [color=yellow] freshness and if their soul is in their body. [/color]
 
-If possible, buckle them to a medical bed, if you need time to treat them, strap them to a stasis bed instead. Just keep in mind that metabolism (and by extension, healing chemicals) are slowed to a crawl when on stasis, they'll need to be taken off of it for the medicine to be effective. (But Blood Packs, Ointment, and Brute packs all work as normal.)
+The first thing to check for is if the patients soul is still in their body, if you see text along the lines of [color=#8736c1] their soul being departed [/color] then that patient is truly gone. There is nothing you can do to give them their life back.
+Even if the patient is revived, they will stand completley still and lose all signs of a conscious being, and in that case should [color=#44c136] get to cryosleep. [/color]
+
+If their [color=yellow] soul lies dormant [/color]. It means that their soul havent left their body, and can be revived, although their soul is in an absentminded state!
+
+If you dont see either of these and only just [color=red] the person being dead [/color] then that means their soul is still very much active within their body and can be revived!
+
+Next, you need to check [color=yellow] if they have rotted. [/color]
+If a patient rots away, they will slowly take Cellular damage, unable to be revived by defibrillators and will have a horrible smell.
+If they are [color=#f79b11] Extremely bloated [/color] their limbs will slowly start to come off their body one by one and will have the same effects as being rotted.
+
+In this case you have 2 options. 
+
+Dump them into cryogenics with Opporozidone to reverse the effects of rot, [textlink="or clone them." link="Cloning"]
+
+If the body is[color=green]Fresh[/color],[color=yellow]somewhat fresh [/color] or [color=red]barely fresh[/color], then get them to a stasis bed!
+
 <Box>
-<GuideEntityEmbed Entity="MedicalBed"/>
 <GuideEntityEmbed Entity="StasisBed"/>
+<GuideEntityEmbed Entity="Defibrillator" Caption="Defibrillator"/>
 </Box>
-## Assessing Corpses
-You can't save them all, sometimes, death happens. Depending on the [color=#a4885c]status[/color] of the body, there are a few things that can be done.
 
-1. Do they have a soul attached? You can tell if, when examining, the following phrase is displayed: "Their soul has departed." If this isn't displayed, there is still a player who can be revived.
+Stasis beds stop the countdown to rotting and gives you alot of time to apply topicals to get their damage under 200!
+Once you do, give them a good shock with the defiblirator to jumpstart their heart back into action!
 
-2. Is the body rotting? If it is, sadly, they'll have to be cloned. A rotting body can't be brought back with a defibrillator. (See Cloning)
-
-3. If they have a soul, and aren't rotten, it's possible to revive them. Consider storing the body in a morgue tray if you don't have enough time to revive someone, as the body will rot if you wait too long.
-
-## Revival
-Not counting airloss, Defibrillator's can be used to revive patients under 200 total damage. Chemicals don't metabolise in the dead, but brute packs and ointment can still patch them up. Use them to bring their numbers down enough for revival.
-
-<Box>
-<GuideEntityEmbed Entity="Brutepack"/>
-<GuideEntityEmbed Entity="Defibrillator"/>
-<GuideEntityEmbed Entity="Ointment"/>
-</Box>
+Keep in mind that medicines metabolise very slowly on the Stasis Bed. Therefore it is reccomended to get the patient to a regular bed once revived.
 
 </Document>
