@@ -78,8 +78,8 @@ To start with, get yourself a syringe. They can be found in/or fabricated at the
 
 <Box>
 <GuideEntityEmbed Entity="Syringe" Caption="Syringe"/>
-<GuideEntityEmbed Entity="SyringeBluespace" Caption="Bluespace Syringe"
-<GuideEntityEmbed Entity="Jug" Caption="Jug (med container)"
+<GuideEntityEmbed Entity="SyringeBluespace" Caption="Bluespace Syringe"/>
+<GuideEntityEmbed Entity="Jug" Caption="Jug (med container)"/>
 </Box>
 
 The syringe has 2 modes. One to draw and one to inject.
