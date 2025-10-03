@@ -40,9 +40,9 @@ The scanner also has three menus that you can click on to change the type of inf
 
 The first one is all about Conditions. On the right side of the scanner GUI, it will show you the patients’ [color=yellow] current conditions [/color]. Including broken bones and where they are bleeding.
 
-The second is all about their [color=red] Organs [/color]. This shows you if their organs [color=yellow] have failed or not, and shows a % of their working capacity.[/color]
+The second is all about their [color=red]Organs[/color]. This shows you if their organs [color=yellow] have failed or not, and shows a % of their working capacity.[/color]
 
-The third shows you [color=orange] information about a patient’s bloodstream [/color]. This shows you how much blood a patient has, what's currently in their stomach and what medicines are being metabolised.
+The third shows you [color=orange]information about a patient’s bloodstream[/color]. This shows you how much blood a patient has, what's currently in their stomach and what medicines are being metabolised.
 
 
 ## What is a Topical?
@@ -54,6 +54,9 @@ It is never too late to stock up on these if you can.
 <GuideEntityEmbed Entity="Brutepack" Caption="Brutepack (for brutes)"/>
 <GuideEntityEmbed Entity="Ointment" Caption="Ointment (for burns)"/>
 <GuideEntityEmbed Entity="Bloodpack" Caption="Bloodpack (for bloodloss)"/>
+</Box>
+
+<Box>
 <GuideEntityEmbed Entity="Gauze" Caption="Gauze (for bleeds)"/>
 <GuideEntityEmbed Entity="RegenerativeMesh" Caption="Regenerative Mesh (burns, more effective for Caustic)"/>
 <GuideEntityEmbed Entity="MedicatedSuture" Caption="Medicated Suture (for brutes and bleeds)"/>
@@ -63,7 +66,7 @@ It is never too late to stock up on these if you can.
 
 To use a topical, you must apply it to all affected areas of the patient's limbs. This is done automatically when you left-click the patient with the topical. However, if you want to apply it to a specific body part first, click on a limb on the human figure at the bottom right of your screen.
 
-Normally, when you treat a patient, they have a high chance of[color=red] bleeding all over [/color] when they come in! Before applying anything else, it is advisable to use Gauze (or medicated sutures if available) first and foremost.
+Normally, when you treat a patient, they have a high chance of [color=red]bleeding all over[/color] when they come in! Before applying anything else, it is advisable to use Gauze (or medicated sutures if available) first and foremost.
 You will know that you have stopped the bleeding of a body part when a message appears after applying.
 
 Topicals are Time-Consuming, though...So use medicine when you can!
@@ -71,7 +74,7 @@ Topicals are Time-Consuming, though...So use medicine when you can!
 
 ## How do I use medicine??
 
-Chemists are your go-to people to beg for all types of medicine. [color=yellow]Medicine will heal all body parts at once.[/color] However, remember that [color=orange]most types of medicine do not work on the dead! [/color]
+Chemists are your go-to people to beg for all types of medicine. [color=yellow]Medicine will heal all body parts at once.[/color] However, remember that [color=orange]most types of medicine do not work on the dead![/color]
 
 To start with, get yourself a syringe. They can be found in/or fabricated at the medical department. Pills can also be dispensed by a chemist if you want to control dosage.
 
@@ -85,7 +88,7 @@ To start with, get yourself a syringe. They can be found in/or fabricated at the
 The syringe has 2 modes. One to draw and one to inject.
 In draw mode, left click on a medicine container to get the medicine in the syringe (Or on a patient if you want to draw blood).
 
-In inject mode, left click a patient (or yourself) to inject the medicine into the bloodstream! [textlink="Or just use Patches." link="Medicalpatches"]
+In inject mode, left click a patient (or yourself) to inject the medicine into the bloodstream!
 
 All types of damage are treated with different medications; sometimes, your chemist will label which one they treat.
 
@@ -108,7 +111,7 @@ Be sure to ask Cargo if you are running low! They can save your life and other l
 
 ## The Dead and the Critical
 
-If you hear a patient constantly gasping, be sure to check on them. If your scanner tells you that their damage is over 100...[color=yellow] The patient is in critical condition. [/color]
+If you hear a patient constantly gasping, be sure to check on them. If your scanner tells you that their damage is over 100...[color=yellow] The patient is in critical condition.[/color]
 
 They will constantly take Asphyxiation damage in this state! Meaning they only have around a minute or 2 to live!
 In this scenario, if you feel that the patient may not live longer due to their injuries, give them an Emergency Medipen!
@@ -120,26 +123,26 @@ In this scenario, if you feel that the patient may not live longer due to their 
 The emergency medipen contains Epinephrine, which heals Asphyxiation, brute damage, burn damage and poison damage!
 To stop a patient from being in critical condition, get them under 100 damage! Whether that be by medicine or topicals.
 
-If the patient reaches 200+ damage (or by their own will)... [color=red] They will die. [/color]
+If the patient reaches 200+ damage (or by their own will)... [color=red]They will die.[/color]
 In this scenario. They will no longer take Asphyxiation damage, and start their countdown to [color=yellow] Rotting away. [/color]
 Patients who have just died will audibly stop breathing, and become limp and lifeless. If you use [keybind="ExamineEntity"] on a dead patient, you can see their [color=yellow] freshness and if their soul is in their body. [/color]
 
 The first thing to check for is if the patients soul is still in their body, if you see text along the lines of [color=#8736c1] their soul being departed [/color] then that patient is truly gone. There is nothing you can do to give them their life back.
 Even if the patient is revived, they will stand completley still and lose all signs of a conscious being, and in that case should [color=#44c136] get to cryosleep. [/color]
 
-If their [color=yellow] soul lies dormant [/color]. It means that their soul havent left their body, and can be revived, although their soul is in an absentminded state!
+If their [color=yellow]soul lies dormant[/color]. It means that their soul havent left their body, and can be revived, although their soul is in an absentminded state!
 
 If you dont see either of these and only just [color=red] the person being dead [/color] then that means their soul is still very much active within their body and can be revived!
 
-Next, you need to check [color=yellow] if they have rotted. [/color]
+Next, you need to check [color=yellow] if they have rotted.[/color]
 If a patient rots away, they will slowly take Cellular damage, unable to be revived by defibrillators and will have a horrible smell.
-If they are [color=#f79b11] Extremely bloated [/color] their limbs will slowly start to come off their body one by one and will have the same effects as being rotted.
+If they are [color=#f79b11]Extremely bloated[/color] their limbs will slowly start to come off their body one by one and will have the same effects as being rotted.
 
 In this case you have 2 options. 
 
 Dump them into cryogenics with Opporozidone to reverse the effects of rot, [textlink="or clone them." link="Cloning"]
 
-If the body is[color=green]Fresh[/color],[color=yellow]somewhat fresh [/color] or [color=red]barely fresh[/color], then get them to a stasis bed!
+If the body is [color=green]Fresh[/color], [color=yellow]somewhat fresh[/color] or [color=red]barely fresh[/color], then get them to a stasis bed!
 
 <Box>
 <GuideEntityEmbed Entity="StasisBed"/>
