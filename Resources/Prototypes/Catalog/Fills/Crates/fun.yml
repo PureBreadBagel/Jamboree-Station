@@ -176,6 +176,8 @@
     - id: PlushieGriffy #imp
     - id: PlushieThaven #imp
     - id: PlushieGoblin #imp
+    - id: PlushieAnomalocarid #rarer because it's big and weird
+      weight: 0.3
     # DEN begin
     - !type:GroupSelector
       children:
