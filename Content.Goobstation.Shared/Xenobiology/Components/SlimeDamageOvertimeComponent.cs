@@ -7,6 +7,7 @@
 using Content.Goobstation.Maths.FixedPoint;
 using Content.Shared.Damage;
 using Robust.Shared.GameStates;
+using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
 namespace Content.Goobstation.Shared.Xenobiology.Components;
 
@@ -30,7 +31,7 @@ public sealed partial class SlimeDamageOvertimeComponent : Component
     {
         DamageDict = new Dictionary<string, FixedPoint2>
         {
-            { "Caustic", 2.5 },
+            { "Blunt", 2.5},
         },
     };
 }

@@ -9,7 +9,6 @@
       state: core
       color: "#828282"
   - type: Reactive
-    oneUnitReaction: true
     reactions:
     - reagents: [ Water ]
       methods: [ Touch, Injection ]
@@ -38,7 +37,7 @@
       - !type:CreateEntityReactionEffect
         delay: 3
         entity: MobSlimeXenobioBabyGrey
-        number: 3
+        number: 1
     - reagents: [ Blood ]
       methods: [ Touch, Injection ]
       effects:
