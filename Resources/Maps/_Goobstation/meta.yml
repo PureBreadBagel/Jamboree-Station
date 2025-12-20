@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/30/2025 16:35:29
-  entityCount: 27740
+  time: 11/23/2025 10:23:37
+  entityCount: 27677
 maps:
 - 1
 grids:
@@ -8748,8 +8748,7 @@ entities:
     - type: SpreaderGrid
     - type: GridPathfinding
     - type: ImplicitRoof
-    - type: FTLDrive
-  - uid: 27737
+  - uid: 26983
     components:
     - type: MetaData
       name: grid
@@ -11365,7 +11364,7 @@ entities:
       pos: -42.5,29.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -20795.123
+      secondsUntilStateChange: -19186.674
       state: Opening
     - type: DeviceLinkSink
       invokeCounter: 2
@@ -62251,7 +62250,7 @@ entities:
     - type: Transform
       pos: 37.3808,-31.499249
       parent: 2
-- proto: ClothingMultipleHeadphones
+- proto: ClothingNeckBling
   entities:
   - uid: 9832
     components:
@@ -62263,19 +62262,17 @@ entities:
     - type: Transform
       pos: -42.440857,-53.459534
       parent: 2
-- proto: ClothingNeckBling
+- proto: ClothingNeckHeadphones
   entities:
-  - uid: 9834
+  - uid: 9731
     components:
     - type: Transform
-      pos: 6.498452,-14.246428
+      pos: 18.567097,41.697247
       parent: 2
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 9835
+  - uid: 9732
     components:
     - type: Transform
-      pos: -12.481159,-67.51491
+      pos: -42.440857,-53.459534
       parent: 2
 - proto: ClothingNeckScarfStripedBlue
   entities:
@@ -63685,14 +63682,6 @@ entities:
     components:
     - type: Transform
       pos: -9.5,17.5
-      parent: 2
-- proto: ComputerScienceXenobiologyBounty
-  entities:
-  - uid: 10067
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,-51.5
       parent: 2
 - proto: ComputerShuttleCargo
   entities:
@@ -122935,7 +122924,12 @@ entities:
       parent: 2
 - proto: LockerScienceFilled
   entities:
-  - uid: 18818
+  - uid: 4123
+    components:
+    - type: Transform
+      pos: 4.5,-59.5
+      parent: 2
+  - uid: 18076
     components:
     - type: Transform
       pos: 27.5,-54.5
@@ -123043,18 +123037,6 @@ entities:
         - 0
         - 0
         - 0
-- proto: LockerScienceFilledXenobiology
-  entities:
-  - uid: 18822
-    components:
-    - type: Transform
-      pos: 4.5,-58.5
-      parent: 2
-  - uid: 18823
-    components:
-    - type: Transform
-      pos: 4.5,-59.5
-      parent: 2
 - proto: LockerSecurityFilled
   entities:
   - uid: 18824
@@ -123944,22 +123926,7 @@ entities:
       parent: 2
 - proto: MicroManipulatorStockPart
   entities:
-  - uid: 18936
-    components:
-    - type: Transform
-      pos: 12.327702,-31.798004
-      parent: 2
-  - uid: 18937
-    components:
-    - type: Transform
-      pos: 12.374577,-30.31363
-      parent: 2
-  - uid: 18938
-    components:
-    - type: Transform
-      pos: 12.655827,-30.204254
-      parent: 2
-  - uid: 18939
+  - uid: 18187
     components:
     - type: Transform
       pos: 12.593327,-30.87613
@@ -141214,25 +141181,6 @@ entities:
     components:
     - type: Transform
       pos: -64.500496,-45.428608
-      parent: 2
-- proto: SlimeGrinder
-  entities:
-  - uid: 21716
-    components:
-    - type: Transform
-      pos: 4.5,-55.5
-      parent: 2
-- proto: SlimeScannerXenobio
-  entities:
-  - uid: 21717
-    components:
-    - type: Transform
-      pos: 4.611903,-52.34513
-      parent: 2
-  - uid: 21718
-    components:
-    - type: Transform
-      pos: 4.565028,-52.40763
       parent: 2
 - proto: SMESAdvanced
   entities:
@@ -174417,37 +174365,5 @@ entities:
     components:
     - type: Transform
       pos: 59.615005,1.5566483
-      parent: 2
-- proto: XenobioSlimeBabySpawner
-  entities:
-  - uid: 27722
-    components:
-    - type: Transform
-      pos: 0.5,-52.5
-      parent: 2
-  - uid: 27723
-    components:
-    - type: Transform
-      pos: 1.5,-52.5
-      parent: 2
-  - uid: 27724
-    components:
-    - type: Transform
-      pos: 1.5,-53.5
-      parent: 2
-  - uid: 27725
-    components:
-    - type: Transform
-      pos: 0.5,-53.5
-      parent: 2
-  - uid: 27726
-    components:
-    - type: Transform
-      pos: 1.5,-48.5
-      parent: 2
-  - uid: 27727
-    components:
-    - type: Transform
-      pos: 1.5,-49.5
       parent: 2
 ...

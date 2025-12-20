@@ -1,15 +1,11 @@
-# SPDX-FileCopyrightText: 2026 Goob Station Contributors
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Map
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/23/2025 18:37:09
-  entityCount: 2511
+  time: 11/23/2025 10:31:02
+  entityCount: 2508
 maps:
 - 1
 grids:
@@ -959,7 +955,7 @@ entities:
       pos: 35.5,-15.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -1681.0348
+      secondsUntilStateChange: -1281.3785
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1095,7 +1091,7 @@ entities:
       pos: 32.5,4.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -4183.3833
+      secondsUntilStateChange: -3783.727
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9726,13 +9722,6 @@ entities:
     components:
     - type: Transform
       pos: 10.5,-0.5
-      parent: 2
-- proto: SyndicateSpongeBox
-  entities:
-  - uid: 841
-    components:
-    - type: Transform
-      pos: -6.3461995,-11.326597
       parent: 2
 - proto: SynthesizerInstrument
   entities:

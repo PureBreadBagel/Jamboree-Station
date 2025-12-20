@@ -16,7 +16,6 @@
 
 using System.Linq;
 using Content.Goobstation.Shared.Teleportation.Systems;
-using Content.Server.Body.Components;
 using Content.Shared.Destructible.Thresholds;
 using Content.Shared.EntityEffects;
 using Content.Shared.Examine;
@@ -65,9 +64,6 @@ public sealed partial class RandomTeleportNearby : EntityEffect
 
         if (entities.Count == 0)
             return;
-
-        //Prevent Positronic Brain to get teleported too
-        entities.RemoveWhere(ent => entityManager.HasComponent<BrainComponent>(ent.Owner));
 
         var canTarget = entities
             .Where(entity => entity != null && occlusionSys.InRangeUnOccluded(uid, entity, Range))

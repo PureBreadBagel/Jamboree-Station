@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/28/2025 07:32:14
-  entityCount: 12866
+  time: 11/23/2025 09:40:08
+  entityCount: 12868
 maps:
 - 1
 grids:
@@ -28770,11 +28770,11 @@ entities:
       parent: 2
 - proto: ComputerScienceXenobiologyBounty
   entities:
-  - uid: 5213
+  - uid: 5630
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -11.5,-19.5
+      pos: -14.5,-9.5
       parent: 2
 - proto: ComputerShuttleCargo
   entities:
@@ -57495,15 +57495,10 @@ entities:
       parent: 2
 - proto: LockerScienceFilledXenobiology
   entities:
-  - uid: 4701
+  - uid: 10783
     components:
     - type: Transform
-      pos: -20.5,-16.5
-      parent: 2
-  - uid: 4702
-    components:
-    - type: Transform
-      pos: -19.5,-16.5
+      pos: -17.5,-10.5
       parent: 2
 - proto: LockerSecurityFilled
   entities:
@@ -62293,73 +62288,11 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 9.5,-8.5
       parent: 2
-  - uid: 9463
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -16.5,-19.5
-      parent: 2
-  - uid: 9477
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -13.5,-19.5
-      parent: 2
-  - uid: 10514
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -20.5,-18.5
-      parent: 2
-  - uid: 10772
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -19.5,-18.5
-      parent: 2
-  - uid: 10783
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -15.5,-18.5
-      parent: 2
-  - uid: 10784
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -18.5,-18.5
-      parent: 2
-  - uid: 10939
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -17.5,-19.5
-      parent: 2
   - uid: 12868
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -18.5,-9.5
-      parent: 2
-- proto: RailingCorner
-  entities:
-  - uid: 8874
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -13.5,-18.5
-      parent: 2
-  - uid: 9476
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -16.5,-18.5
-      parent: 2
-  - uid: 10906
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -17.5,-18.5
       parent: 2
 - proto: RailingCornerSmall
   entities:
@@ -67733,10 +67666,17 @@ entities:
       parent: 2
 - proto: SlimeGrinder
   entities:
-  - uid: 2532
+  - uid: 10784
     components:
     - type: Transform
-      pos: -12.5,-19.5
+      pos: -14.5,-10.5
+      parent: 2
+- proto: SlimeScannerXenobio
+  entities:
+  - uid: 12867
+    components:
+    - type: Transform
+      pos: -14.69944,-10.627599
       parent: 2
 - proto: SMESBasic
   entities:
@@ -82967,19 +82907,24 @@ entities:
       parent: 2
 - proto: XenobioSlimeBabySpawner
   entities:
-  - uid: 4541
+  - uid: 4412
     components:
     - type: Transform
-      pos: -20.5,-19.5
+      pos: -20.5,-8.5
       parent: 2
-  - uid: 9475
+  - uid: 12864
     components:
     - type: Transform
-      pos: -18.5,-19.5
+      pos: -20.5,-9.5
       parent: 2
-  - uid: 12158
+  - uid: 12865
     components:
     - type: Transform
-      pos: -19.5,-19.5
+      pos: -20.5,-10.5
+      parent: 2
+  - uid: 12866
+    components:
+    - type: Transform
+      pos: -19.5,-8.5
       parent: 2
 ...

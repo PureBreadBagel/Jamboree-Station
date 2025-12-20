@@ -8,8 +8,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/29/2025 14:34:00
-  entityCount: 23647
+  time: 11/23/2025 08:37:28
+  entityCount: 23528
 maps:
 - 1
 grids:
@@ -66268,7 +66268,7 @@ entities:
       parent: 2
 - proto: ComputerScienceXenobiologyBounty
   entities:
-  - uid: 9472
+  - uid: 21796
     components:
     - type: Transform
       pos: 41.5,-31.5
@@ -111878,12 +111878,12 @@ entities:
       parent: 2
 - proto: LockerScienceFilledXenobiology
   entities:
-  - uid: 16058
+  - uid: 5139
     components:
     - type: Transform
       pos: 38.5,-31.5
       parent: 2
-  - uid: 16059
+  - uid: 6803
     components:
     - type: Transform
       pos: 37.5,-31.5
@@ -128505,7 +128505,7 @@ entities:
       parent: 2
 - proto: SlimeGrinder
   entities:
-  - uid: 18949
+  - uid: 3255
     components:
     - type: Transform
       pos: 44.5,-34.5
@@ -154053,27 +154053,27 @@ entities:
       parent: 2
 - proto: XenobioSlimeBabySpawner
   entities:
-  - uid: 23618
+  - uid: 7440
     components:
     - type: Transform
       pos: 46.5,-32.5
       parent: 2
-  - uid: 23619
+  - uid: 21735
     components:
     - type: Transform
       pos: 45.5,-33.5
       parent: 2
-  - uid: 23620
+  - uid: 21736
     components:
     - type: Transform
       pos: 46.5,-35.5
       parent: 2
-  - uid: 23621
+  - uid: 21761
     components:
     - type: Transform
       pos: 45.5,-36.5
       parent: 2
-  - uid: 23622
+  - uid: 21786
     components:
     - type: Transform
       pos: 45.5,-35.5

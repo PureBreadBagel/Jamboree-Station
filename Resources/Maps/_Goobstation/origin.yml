@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/20/2025 13:35:14
-  entityCount: 32501
+  time: 11/23/2025 10:28:01
+  entityCount: 32478
 maps:
 - 1
 grids:
@@ -83544,7 +83544,7 @@ entities:
       pos: -36.5,-19.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -7931.5693
+      secondsUntilStateChange: -7111.7764
       state: Closing
 - proto: d10Dice
   entities:
