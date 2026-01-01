@@ -8,8 +8,8 @@
       connections:
       - chest
       organs:
-        brain: OrganHumanBrain
-        eyes: OrganHumanEyes
+        brain: OrganAnomalocaridBrain
+        eyes: OrganAnomalocaridEyes
     chest:
       part: ChestAnomalocarid
       connections:
@@ -18,17 +18,17 @@
       - left arm
       - head
       organs:
-        heart: OrganHumanHeart
-        lungs: OrganHumanLungs
+        heart: OrganAnomalocaridHeart
+        lungs: OrganAnomalocaridLungs
     groin:
       part: GroinAnomalocarid
       connections:
       - right leg
       - left leg
       organs:
-        stomach: OrganHumanStomach
-        liver: OrganHumanLiver
-        kidneys: OrganHumanKidneys
+        stomach: OrganAnomalocaridStomach
+        liver: OrganAnomalocaridLiver
+        kidneys: OrganAnomalocaridKidneys
     right arm:
       part: RightArmAnomalocarid
       connections:
