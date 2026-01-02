@@ -29,7 +29,8 @@
     - type: CheeseAccent # goob edit
     - type: BoganAccent # goob edit
     - type: GoblinAccent # Frontier
-
+    - type: ReplacementAccent
+      accent: anomalocarid
 # 1 Cost
 
 - type: trait
