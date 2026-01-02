@@ -22,3 +22,8 @@
   id: feverdream
   flavorType: Complex
   description: flavor-complex-feverdream
+
+- type: flavor
+  id: ants
+  flavorType: Base
+  description: flavor-base-ants

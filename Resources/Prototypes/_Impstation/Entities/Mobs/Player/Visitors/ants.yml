@@ -1,0 +1,5 @@
+- type: entity
+  save: false
+  name: Urist McTeeny
+  parent: BaseMobAnt
+  id: MobAnt

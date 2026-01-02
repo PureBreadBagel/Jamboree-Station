@@ -18,6 +18,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
   There are some species which, for one reason or another, are not typically hired by NanoTrasen.
 
   <Box>
+    <GuideEntityEmbed Entity="MobAnt" Caption="Ant"/>
     <GuideEntityEmbed Entity="MobBananaMen" Caption="Bananamen"/>
     <GuideEntityEmbed Entity="MobResomi" Caption="Resomi"/>
     <GuideEntityEmbed Entity="MobSkeletonPerson" Caption="Skeleton"/>
