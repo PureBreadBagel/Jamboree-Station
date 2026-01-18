@@ -188,9 +188,15 @@
   - GoldenPersonalAI # Goobstation
   - CrewCassette # Goobstation
   - HandLabeler #jambo
+  - Magic9Ball #jambo
   - RubberDuck #jambo
   - DiceBag #jambo
   - MagicCrayon #NF, jambo
+  - AirHorn #ADT
+  - Basketball #jambo
+  - Football #jambo
+  - Tennisball #jambo
+  - Beachball #jambo
   - ThreeCandles
   - Lighter
   - CigPackGreen
@@ -257,7 +263,6 @@
   - TapeRecorder
   - DrinkOniGourd
   # End DeltaV Additions
-  - AirHorn #ADT
 
 - type: loadoutGroup
   id: Glasses
@@ -481,7 +486,7 @@
   minLimit: 0
   loadouts:
   - GreyHat # Jamboree
-  - GreyBucket #TP
+
   - BlackHat # Jamboree
   - RedHat # Jamboree
   - BlueHat # Jamboree
@@ -494,6 +499,7 @@
   - GreenBand #jambo
   - CorpoHat #jambo
   - FishHat #jambo
+  - GreyBucket #TP
   - RastaHat #jambo
   - PropellerHat #jambo
   - BartenderHead # Jamboree
@@ -511,8 +517,8 @@
   - GreyTurtleneck #DV
   - GreyTurtleneckSkirt #DV
  # Jamboree changes start
-  - WhiteJumpsuit
-  - WhiteJumpskirt
+  - WhiteJumpsuit2
+  - WhiteJumpskirt2
   - WhiteTurtleneck #DV
   - WhiteTurtleneckSkirt #DV
   - WhiteShirt #ADT
@@ -521,8 +527,8 @@
   - BlackTurtleneck #DV
   - BlackTurtleneckSkirt #DV
   - BlackShirt #ADT
-  - RedJumpsuit
-  - RedJumpskirt
+  - RedJumpsuit2
+  - RedJumpskirt2
   - RedTurtleneck #DV
   - RedTurtleneckSkirt #DV
   - RedShirt #ADT
@@ -531,12 +537,12 @@
   - BlueTurtleneck #DV
   - BlueTurtleneckSkirt
   - BlueShirt #ADT
-  - YellowJumpsuit
-  - YellowJumpskirt
+  - YellowJumpsuit2
+  - YellowJumpskirt2
   - YellowTurtleneck #DV
   - YellowTurtleneckSkirt #DV
-  - GreenJumpsuit
-  - GreenJumpskirt
+  - GreenJumpsuit2
+  - GreenJumpskirt2
   - GreenTurtleneck #DV
   - GreenTurtleneckSkirt #DV
   - OrangeJumpsuit
@@ -567,12 +573,6 @@
   - PinkStripedDress
   - OrangeStripedDress
 # Jamboree Jumpsuit changes stop prt1
-  - AncientJumpsuit
-  # jamboree change
-  - FlannelJumpsuit
-  # jamboree end
-  - RainbowJumpsuit
-  - RainbowJumpskirt
   # jamboree change
   - CossackSuit
   - Loungewear
@@ -619,8 +619,13 @@
   - LightBrownMJ
   - BrownMJ
   - MaroonMJ
-  - QuarterzipJumpsuit
  # goob changes end
+ # reward items available, moved to bottom of list
+  - AncientJumpsuit
+  - FlannelJumpsuit
+  - RainbowJumpsuit
+  - RainbowJumpskirt
+  - QuarterzipJumpsuit
 
 - type: loadoutGroup
   id: PassengerFace
@@ -638,14 +643,14 @@
   - PassengerGloves
   # jamboree gloves add
   - GreyGloves
-  - WhiteGloves
+  - WhiteGloves2
   - BlackGloves
-  - BrownGloves
+  - BrownGloves2
   - RedGloves
   - BlueGloves
   - GreenGloves
-  - OrangeGloves
-  - PurpleGloves
+  - OrangeGloves2
+  - PurpleGloves2
   - TealGloves
 
 - type: loadoutGroup

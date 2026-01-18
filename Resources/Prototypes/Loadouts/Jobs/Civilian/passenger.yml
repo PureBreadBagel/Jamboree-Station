@@ -107,58 +107,68 @@
   id: GreyHat
   equipment:
     head: ClothingHeadHatGreysoft
+  groupBy: "ballcaps"
 
 - type: loadout
   id: BlackHat
   equipment:
     head: ClothingHeadHatBlacksoft
+  groupBy: "ballcaps"
 
 - type: loadout
   id: RedHat
   equipment:
     head: ClothingHeadHatRedsoft
+  groupBy: "ballcaps"
 
 - type: loadout
   id: BlueHat
   equipment:
     head: ClothingHeadHatBluesoft
+  groupBy: "ballcaps"
 
 - type: loadout
   id: YellowHat
   equipment:
     head: ClothingHeadHatYellowsoft
+  groupBy: "ballcaps"
 
 - type: loadout
   id: GreenHat
   equipment:
     head: ClothingHeadHatGreensoft
+  groupBy: "ballcaps"
 
 - type: loadout
   id: OrangeHat
   equipment:
     head: ClothingHeadHatOrangesoft
-
+  groupBy: "ballcaps"
 # use janitor head here
 
 - type: loadout
   id: BlackBand
   equipment:
     head: ClothingHeadBandBlack
+  groupBy: "bandanas"
 
 - type: loadout
   id: RedBand
   equipment:
     head: ClothingHeadBandRed
+  groupBy: "bandanas"
 
 - type: loadout
   id: BlueBand
   equipment:
     head: ClothingHeadBandBlue
+  groupBy: "bandanas"
 
 - type: loadout
   id: GreenBand
   equipment:
     head: ClothingHeadBandGreen
+  groupBy: "bandanas"
 
 # use skull bandana here
 
@@ -202,32 +212,38 @@
   id: GreyJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorGrey
+  groupBy: "jumpsuits"
 
 - type: loadout
   id: GreyJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorGrey
+  groupBy: "jumpskirts"
 
 #Jamboree
 - type: loadout
   id: BlackJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBlack
+  groupBy: "jumpsuits"
 
 - type: loadout
   id: BlackJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorBlack
+  groupBy: "jumpskirts"
 
 - type: loadout
   id: BlueJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBlue
+  groupBy: "jumpsuits"
 
 - type: loadout
   id: BlueJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorBlue
+  groupBy: "jumpskirts"
 
 - type: loadout
   id: GreenJumpsuit
@@ -243,41 +259,49 @@
   id: OrangeJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorOrange
+  groupBy: "jumpsuits"
 
 - type: loadout
   id: OrangeJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorOrange
+  groupBy: "jumpskirts"
 
 - type: loadout
   id: PurpleJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorPurple
+  groupBy: "jumpsuits"
 
 - type: loadout
   id: PurpleJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorPurple
+  groupBy: "jumpskirts"
 
 - type: loadout
   id: PinkJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorPink
+  groupBy: "jumpsuits"
 
 - type: loadout
   id: PinkJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorPink
+  groupBy: "jumpskirts"
 
 - type: loadout
   id: TealJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorTeal
+  groupBy: "jumpsuits"
 
 - type: loadout
   id: TealJumpskirt
   equipment:
-    jumpsuit: ClothingUniformJumpsuitColorTeal
+    jumpsuit: ClothingUniformJumpskirtColorTeal
+  groupBy: "jumpskirts"
 
 - type: loadout
   id: PirateSlops
@@ -293,6 +317,55 @@
   id: Loungewear
   equipment:
     jumpsuit: ClothingUniformJumpsuitLoungewear
+
+# Jamboree, adding redos to jumpsuits so that we have some dupes
+- type: loadout
+  id: WhiteJumpsuit2
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorWhite
+  groupBy: "jumpsuits"
+
+- type: loadout
+  id: WhiteJumpskirt2
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorWhite
+  groupBy: "jumpskirts"
+
+- type: loadout
+  id: RedJumpsuit2
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorRed
+  groupBy: "jumpsuits"
+
+- type: loadout
+  id: RedJumpskirt2
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorRed
+  groupBy: "jumpskirts"
+
+- type: loadout
+  id: YellowJumpsuit2
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorYellow
+  groupBy: "jumpsuits"
+
+- type: loadout
+  id: YellowJumpskirt2
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorYellow
+  groupBy: "jumpskirts"
+
+- type: loadout
+  id: GreenJumpsuit2
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGreen
+  groupBy: "jumpsuits"
+
+- type: loadout
+  id: GreenJumpskirt2
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorGreen
+  groupBy: "jumpskirts"
 
 # Rainbow
 - type: loadout
@@ -349,36 +422,43 @@
   id: BrownScarf
   equipment:
     neck: ClothingNeckScarfStripedBrown
+  groupBy: "scarf"
 
 - type: loadout
   id: BlackScarf
   equipment:
     neck: ClothingNeckScarfStripedBlack
+  groupBy: "scarf"
 
 - type: loadout
   id: RedScarf
   equipment:
     neck: ClothingNeckScarfStripedRed
+  groupBy: "scarf"
 
 - type: loadout
   id: BlueScarf
   equipment:
     neck: ClothingNeckScarfStripedBlue
+  groupBy: "scarf"
 
 - type: loadout
   id: GreenScarf
   equipment:
     neck: ClothingNeckScarfStripedGreen
+  groupBy: "scarf"
 
 - type: loadout
   id: OrangeScarf
   equipment:
     neck: ClothingNeckScarfStripedOrange
+  groupBy: "scarf"
 
 - type: loadout
   id: PurpleScarf
   equipment:
     neck: ClothingNeckScarfStripedPurple
+  groupBy: "scarf"
 
 # Back
 - type: loadout
@@ -401,11 +481,13 @@
   id: GreyGloves
   equipment:
     gloves: ClothingHandsGlovesColorGray
+  groupBy: "gloves"
 
 - type: loadout
   id: BlackGloves
   equipment:
     gloves: ClothingHandsGlovesColorBlack
+  groupBy: "gloves"
 
 - type: loadout
   id: BrownGloves
@@ -416,21 +498,49 @@
   id: RedGloves
   equipment:
     gloves: ClothingHandsGlovesColorRed
+  groupBy: "gloves"
 
 - type: loadout
   id: BlueGloves
   equipment:
     gloves: ClothingHandsGlovesColorBlue
+  groupBy: "gloves"
 
 - type: loadout
   id: GreenGloves
   equipment:
     gloves: ClothingHandsGlovesColorGreen
+  groupBy: "gloves"
 
 - type: loadout
   id: TealGloves
   equipment:
     gloves: ClothingHandsGlovesColorTeal
+  groupBy: "gloves"
+
+- type: loadout
+  id: WhiteGloves2
+  equipment:
+    gloves: ClothingHandsGlovesColorWhite
+  groupBy: "gloves"
+
+- type: loadout
+  id: BrownGloves2
+  equipment:
+    gloves: ClothingHandsGlovesColorBrown
+  groupBy: "gloves"
+
+- type: loadout
+  id: OrangeGloves2
+  equipment:
+    gloves: ClothingHandsGlovesColorOrange
+  groupBy: "gloves"
+
+- type: loadout
+  id: PurpleGloves2
+  equipment:
+    gloves: ClothingHandsGlovesColorPurple
+  groupBy: "gloves"
 
 - type: loadout
   id: PassengerGloves
@@ -498,91 +608,91 @@
   id: GreyMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorGrey
-
+  groupBy: "military"
 
 - type: loadout
   id: BlackMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorBlack
-
+  groupBy: "military"
 
 - type: loadout
   id: BlueMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorBlue
-
+  groupBy: "military"
 
 - type: loadout
   id: DarkBlueMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorDarkBlue
-
+  groupBy: "military"
 
 - type: loadout
   id: TealMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorTeal
-
+  groupBy: "military"
 
 - type: loadout
   id: GreenMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorGreen
-
+  groupBy: "military"
 
 - type: loadout
   id: DarkGreenMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorDarkGreen
-
+  groupBy: "military"
 
 - type: loadout
   id: OrangeMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorOrange
-
+  groupBy: "military"
 
 - type: loadout
   id: PinkMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorPink
-
+  groupBy: "military"
 
 - type: loadout
   id: RedMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorRed
-
+  groupBy: "military"
 
 - type: loadout
   id: YellowMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorYellow
-
+  groupBy: "military"
 
 - type: loadout
   id: PurpleMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorPurple
-
+  groupBy: "military"
 
 - type: loadout
   id: LightBrownMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorLightBrown
-
+  groupBy: "military"
 
 - type: loadout
   id: BrownMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorBrown
-
+  groupBy: "military"
 
 - type: loadout
   id: MaroonMJ
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorMaroon
-
+  groupBy: "military"
 
 # service jumpsuit - putting it here because frontier's only service jumpsuits are hydroponics and general lmao # goob change btw
 
@@ -597,48 +707,58 @@
   id: BlackElegantDress
   equipment:
     jumpsuit: ClothingUniformJumpskirtBlackElegantDress
+  groupBy: "dress"
 
 - type: loadout
   id: RedElegantDress
   equipment:
     jumpsuit: ClothingUniformJumpskirtRedElegantDress
+  groupBy: "dress"
 
 - type: loadout
   id: GreenElegantDress
   equipment:
     jumpsuit: ClothingUniformJumpskirtGreenElegantDress
+  groupBy: "dress"
 
 - type: loadout
   id: BlueElegantDress
   equipment:
     jumpsuit: ClothingUniformJumpskirtBlueElegantDress
+  groupBy: "dress"
 
 - type: loadout
   id: PurpleElegantDress
   equipment:
     jumpsuit: ClothingUniformJumpskirtPurpleElegantDress
+  groupBy: "dress"
 
 - type: loadout
   id: RedStripedDress
   equipment:
     jumpsuit: ClothingUniformJumpskirtRedStripedDress
+  groupBy: "dress"
 
 - type: loadout
   id: GreenStripedDress
   equipment:
     jumpsuit: ClothingUniformJumpskirtGreenStripedDress
+  groupBy: "dress"
 
 - type: loadout
   id: CyanStripedDress
   equipment:
     jumpsuit: ClothingUniformJumpskirtCyanStripedDress
+  groupBy: "dress"
 
 - type: loadout
   id: PinkStripedDress
   equipment:
     jumpsuit: ClothingUniformJumpskirtPinkStripedDress
+  groupBy: "dress"
 
 - type: loadout
   id: OrangeStripedDress
   equipment:
     jumpsuit: ClothingUniformJumpskirtOrangeStripedDress
+  groupBy: "dress"

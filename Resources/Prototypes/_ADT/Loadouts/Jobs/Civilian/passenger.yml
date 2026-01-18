@@ -107,26 +107,31 @@
   id: BlackShirt
   equipment:
     jumpsuit: ADTClothingUniformJumpsuitBlackShirt
+  groupBy: "shirts"
 
 - type: loadout
   id: BlueShirt
   equipment:
     jumpsuit: ADTClothingUniformJumpsuitBlueShirt
+  groupBy: "shirts"
 
 - type: loadout
   id: PurpleShirt
   equipment:
     jumpsuit: ADTClothingUniformJumpsuitPurpleShirt
+  groupBy: "shirts"
 
 - type: loadout
   id: RedShirt
   equipment:
     jumpsuit: ADTClothingUniformJumpsuitRedShirt
+  groupBy: "shirts"
 
 - type: loadout
   id: WhiteShirt
   equipment:
     jumpsuit: ADTClothingUniformJumpsuitWhiteShirt
+  groupBy: "shirts"
 
 - type: loadout
   id: HawaiiShirt
@@ -152,26 +157,31 @@
   id: Tuxedo
   equipment:
     jumpsuit: ADTClothingUniformJumpsuitTuxedo
+  groupBy: "suits"
 
 - type: loadout
   id: WhiteTuxedo
   equipment:
     jumpsuit: ADTClothingUniformJumpsuitTuxedoWhite
+  groupBy: "suits"
 
 - type: loadout
   id: RedTuxedo
   equipment:
     jumpsuit: ADTClothingUniformJumpsuitTuxedoRed
+  groupBy: "suits"
 
 - type: loadout
   id: CocktailDress
   equipment:
     jumpsuit: ADTClothingUniformRedCocktailDress
+  groupBy: "partydresses"
 
 - type: loadout
   id: BlackCocktailDress
   equipment:
     jumpsuit: ADTClothingUniformBlackElegantDress
+  groupBy: "partydresses"
 
 # Eyes
 
