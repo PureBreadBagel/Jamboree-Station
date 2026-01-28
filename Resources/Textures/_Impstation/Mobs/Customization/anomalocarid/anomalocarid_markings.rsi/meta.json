@@ -275,12 +275,336 @@
             "name": "wings3_glass4",
             "directions": 4
         },
-
-
-
         {
             "name": "tail1",
             "directions": 4
+        },
+        {
+            "name": "angryeyebrows",
+            "directions": 4
+        },
+        {
+            "name": "spikedcollars_primary",
+            "directions": 4
+        },
+        {
+            "name": "spikedcollars_secondary",
+            "directions": 4
+        },
+        {
+            "name": "roboeye_l_primary",
+            "directions": 4,
+            "delays": [
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ]
+        ]
+        },
+        {
+            "name": "roboeye_l_secondary",
+            "directions": 4,
+            "delays": [
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ]
+        ]
+        },
+        {
+            "name": "roboeye_l_unshaded",
+            "directions": 4,
+            "delays": [
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ]
+        ]
+        },
+        {
+            "name": "roboeye_r_primary",
+            "directions": 4,
+            "delays": [
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ]
+        ]
+        },
+        {
+            "name": "roboeye_r_secondary",
+            "directions": 4,
+            "delays": [
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ]
+        ]
+        },
+        {
+            "name": "roboeye_r_unshaded",
+            "directions": 4,
+            "delays": [
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ],
+            [
+            3.3,
+            0.1,
+            5.6,
+            0.1
+            ]
+        ]
+        },
+        {
+            "name": "grabbers7",
+            "directions": 4
+        },
+        {
+            "name": "wings1_primary_behind",
+            "directions": 4
+        },
+        {
+            "name": "wings1_secondary_front",
+            "directions": 4
+        },
+        {
+            "name": "wings1_secondary_behind",
+            "directions": 4
+        },
+        {
+            "name": "wings2_primary_front",
+            "directions": 4
+        },
+        {
+            "name": "wings2_primary_behind",
+            "directions": 4
+        },
+        {
+            "name": "wings2_secondary_front",
+            "directions": 4
+        },
+        {
+            "name": "wings2_secondary_behind",
+            "directions": 4
+        },
+        {
+            "name": "wings4_primary_front",
+            "directions": 4
+        },
+        {
+            "name": "wings4_primary_behind",
+            "directions": 4
+        },
+        {
+            "name": "wings4_secondary_front",
+            "directions": 4
+        },
+        {
+            "name": "wings4_secondary_behind",
+            "directions": 4
+        },
+        {
+            "name": "tentacles_primary_front",
+            "directions": 4
+        },
+        {
+            "name": "tentacles_primary_behind",
+            "directions": 4
+        },
+        {
+            "name": "tentacles_secondary_front",
+            "directions": 4
+        },
+        {
+            "name": "tentacles_secondary_behind",
+            "directions": 4
+        },
+        {
+            "name": "tentacles_tertiary_front",
+            "directions": 4
+        },
+        {
+            "name": "tentacles_tertiary_behind",
+            "directions": 4
+        },
+        {
+            "name": "antennae12",
+            "directions": 4
+        },
+        {
+            "name": "antennae13",
+            "directions": 4
+        },
+        {
+            "name": "antennae14",
+            "directions": 4
+        },
+        {
+            "name": "antennae15_primary",
+            "directions": 4
+        },
+        {
+            "name": "antennae15_secondary",
+            "directions": 4
+        },
+        {
+            "name": "antennae16",
+            "directions": 4
+        },
+        {
+            "name": "antennae16_arc",
+            "directions": 4,
+            "delays": [
+            [
+            0.1,
+            0.1,
+            0.1,
+            0.1
+            ],
+            [
+            0.1,
+            0.1,
+            0.1,
+            0.1
+            ],
+            [
+            0.1,
+            0.1,
+            0.1,
+            0.1
+            ],
+            [
+            0.1,
+            0.1,
+            0.1,
+            0.1
+            ]
+        ]
+        },
+        {
+            "name": "antennae17_primary",
+            "directions": 4
+        },
+        {
+            "name": "antennae17_secondary",
+            "directions": 4
         }
+
     ]
 }
