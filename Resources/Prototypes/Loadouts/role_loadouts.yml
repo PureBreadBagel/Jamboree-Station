@@ -296,6 +296,7 @@
 
 - type: roleLoadout
   id: JobChaplain
+  canCustomizeName: true #wizden
   groups:
   - GroupTankHarness
   - ChaplainHead
