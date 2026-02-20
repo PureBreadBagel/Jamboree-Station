@@ -48,5 +48,6 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 <!--    Frontier specific species -->
     <GuideEntityEmbed Entity="MobGoblin" Caption="Goblin"/>
 
+    <GuideEntityEmbed Entity="MobAvali" Caption="Avali"/> <!-- Starlight -->
   </Box>
 </Document>

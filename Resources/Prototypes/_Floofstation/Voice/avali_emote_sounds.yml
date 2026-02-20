@@ -14,24 +14,29 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: soundCollection
-  id: AvaliScreams
+  id: ResomiScreams # Omu, rename to Resomi
   files:
     - /Audio/_Floofstation/Voice/Avali/avali_scream.ogg
 
 - type: soundCollection
-  id: AvaliLaugh
+  id: ResomiLaugh # Omu, rename to Resomi
   files:
     - /Audio/_Floofstation/Voice/Avali/avali_laugh.ogg
 
+- type: soundCollection # Omu start
+  id: ResomiCry
+  files:
+    - /Audio/_Floofstation/Voice/Avali/avali_cry.ogg # Omu end
+
 - type: emoteSounds
-  id: MaleAvaliEmote
+  id: MaleResomiEmote # Omu, rename to Resomi
   params:
     variation: 0.125
   sounds:
     Scream:
-      collection: AvaliScreams
+      collection: ResomiScreams  # Omu, rename to Resomi
     Laugh:
-      collection: AvaliLaugh
+      collection: ResomiLaugh # Omu, rename to Resomi
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -53,9 +58,9 @@
     Sigh:
       collection: MaleSigh
     Crying:
-      collection: MaleCry
+      collection: ResomiCry # Omu
     Whistle:
-      collection: Whistles
+      path: /Audio/_Starlight/Voice/Resomi/resomi_whistle.ogg # Omu, collection: Whistles
     Weh:
       collection: Weh
     Trill:
@@ -74,16 +79,22 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Mars: # jamboree - juice that makes you mar
       path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
+    Scree:
+      collection: ResomiScrees
+    Call:
+      collection: ResomiCalls
+    Squawk:
+      collection: ResomiSquawk
 
 - type: emoteSounds
-  id: FemaleAvaliEmote
+  id: FemaleResomiEmote  # Omu, rename to Resomi
   params:
     variation: 0.125
   sounds:
     Scream:
-      collection: AvaliScreams
+      collection: ResomiScreams  # Omu, rename to Resomi
     Laugh:
-      collection: AvaliLaugh
+      collection: ResomiLaugh  # Omu, rename to Resomi
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -105,9 +116,9 @@
     Sigh:
       collection: FemaleSigh
     Crying:
-      collection: FemaleCry
+      collection: ResomiCry # Omu
     Whistle:
-      collection: Whistles
+      path: /Audio/_Starlight/Voice/Resomi/resomi_whistle.ogg # Omu, collection: Whistles
     Weh:
       collection: Weh
     Trill:
@@ -126,3 +137,9 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Mars: # jamboree - juice that makes you mar
       path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
+    Scree:
+      collection: ResomiScrees
+    Call:
+      collection: ResomiCalls
+    Squawk:
+      collection: ResomiSquawk
