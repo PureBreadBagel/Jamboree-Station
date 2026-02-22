@@ -869,6 +869,7 @@
   id: JobReporter
   groups:
   - GroupTankHarness
+  - ReporterHead
   - ReporterJumpsuit
   - ReporterOuterClothing # Goobstation - Bodycams
   - CommonBackpack

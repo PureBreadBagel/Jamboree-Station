@@ -1148,6 +1148,7 @@
   name: loadout-group-reporter-outerclothing
   loadouts:
   - NoPro
+  - ReporterPressVest #wizden
 
 - type: loadoutGroup
   id: ReporterEnvirohelm
