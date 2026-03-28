@@ -2,6 +2,7 @@
   parent: [ BaseItem ]
   id: WeaponPistolGunGun
   name: gun
+  suffix: Debug
   description: I wonder if it shoots things.
   components:
   - type: Item
@@ -32,10 +33,10 @@
       path: /Audio/Weapons/Guns/Gunshots/hpistol.ogg
   - type: BasicEntityAmmoProvider
     proto: BulletCaselessRifle
-    capacity: 7
-    count: 7
+    capacity: 20
+    count: 20
   - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 4
+    rechargeCooldown: 1
     rechargeSound:
       path: /Audio/Weapons/Guns/Cock/shotgun_close.ogg
   - type: AmmoCounter

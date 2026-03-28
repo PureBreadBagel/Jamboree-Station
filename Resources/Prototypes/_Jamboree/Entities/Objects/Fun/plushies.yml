@@ -49,3 +49,13 @@
   - type: Sprite
     sprite: _Jamboree/Objects/Fun/gungle-ungus-bingle.rsi
     state: icon
+
+- type: entity
+  parent: BaseBinglePlushie
+  id: PlushieBingleBibbleSpingle
+  name: bibble spingle plushie
+  description: You can't be serious.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Objects/Fun/bibble-spingle.rsi
+    state: icon
