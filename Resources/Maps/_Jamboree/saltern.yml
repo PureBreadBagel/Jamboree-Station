@@ -1,15 +1,11 @@
-# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Map
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/27/2026 02:08:08
-  entityCount: 12110
+  time: 03/31/2026 03:57:09
+  entityCount: 12101
 maps:
 - 1
 grids:
@@ -4305,11 +4301,6 @@ entities:
       parent: 2
 - proto: AirlockCommandLocked
   entities:
-  - uid: 68
-    components:
-    - type: Transform
-      pos: 27.5,2.5
-      parent: 2
   - uid: 69
     components:
     - type: Transform
@@ -4342,7 +4333,7 @@ entities:
       pos: 30.5,3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -6178.52
+      secondsUntilStateChange: -6698.7896
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -5371,6 +5362,13 @@ entities:
     components:
     - type: Transform
       pos: -2.5,-22.5
+      parent: 2
+- proto: AirlockSalvageGlassLocked
+  entities:
+  - uid: 68
+    components:
+    - type: Transform
+      pos: 27.5,2.5
       parent: 2
 - proto: AirlockScienceGlassLocked
   entities:
@@ -15954,11 +15952,6 @@ entities:
     - type: Transform
       pos: 48.373375,5.713002
       parent: 2
-  - uid: 2273
-    components:
-    - type: Transform
-      pos: 29.54536,1.2261796
-      parent: 2
   - uid: 2274
     components:
     - type: Transform
@@ -19859,11 +19852,6 @@ entities:
       parent: 2
 - proto: CableHVStack
   entities:
-  - uid: 3052
-    components:
-    - type: Transform
-      pos: 29.54536,1.7105546
-      parent: 2
   - uid: 3053
     components:
     - type: Transform
@@ -22867,11 +22855,6 @@ entities:
     components:
     - type: Transform
       pos: 48.35775,5.619252
-      parent: 2
-  - uid: 3653
-    components:
-    - type: Transform
-      pos: 29.54536,1.4761796
       parent: 2
   - uid: 3654
     components:
@@ -26851,6 +26834,36 @@ entities:
     - type: Transform
       pos: -41.5,-9.5
       parent: 2
+  - uid: 9228
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -22.5,16.5
+      parent: 2
+  - uid: 9229
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -23.5,16.5
+      parent: 2
+  - uid: 9230
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -24.5,16.5
+      parent: 2
+  - uid: 9237
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -25.5,16.5
+      parent: 2
+  - uid: 9239
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -23.648657,15.542967
+      parent: 2
 - proto: ChairPilotSeat
   entities:
   - uid: 4392
@@ -28764,6 +28777,22 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -12.5,38.5
       parent: 2
+- proto: ComputerSalvageExpedition
+  entities:
+  - uid: 2273
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 29.5,1.5
+      parent: 2
+- proto: ComputerSalvageJobBoard
+  entities:
+  - uid: 3052
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 29.5,0.5
+      parent: 2
 - proto: ComputerScienceXenobiologyBounty
   entities:
   - uid: 336
@@ -29799,6 +29828,13 @@ entities:
     - type: Transform
       pos: -1.5,-27.5
       parent: 2
+- proto: DefaultStationBeaconSalvage
+  entities:
+  - uid: 8731
+    components:
+    - type: Transform
+      pos: 27.5,1.5
+      parent: 2
 - proto: DefaultStationBeaconScience
   entities:
   - uid: 4822
@@ -29850,13 +29886,6 @@ entities:
     components:
     - type: Transform
       pos: -22.5,24.5
-      parent: 2
-- proto: DefaultStationBeaconTechVault
-  entities:
-  - uid: 4830
-    components:
-    - type: Transform
-      pos: 27.5,1.5
       parent: 2
 - proto: DefaultStationBeaconTEG
   entities:
@@ -51187,6 +51216,23 @@ entities:
     - type: Transform
       pos: -5.5,-23.5
       parent: 2
+- proto: LockerSalvageSpecialistFilledHardsuit
+  entities:
+  - uid: 4830
+    components:
+    - type: Transform
+      pos: 26.5,0.5
+      parent: 2
+  - uid: 8185
+    components:
+    - type: Transform
+      pos: 27.5,0.5
+      parent: 2
+  - uid: 8729
+    components:
+    - type: Transform
+      pos: 28.5,0.5
+      parent: 2
 - proto: LockerScienceFilled
   entities:
   - uid: 8059
@@ -51693,9 +51739,6 @@ entities:
       parent: 2
     - type: DeviceLinkSource
       linkedPorts:
-        8185:
-        - - MaterialSilo
-          - MaterialSiloUtilizer
         3670:
         - - MaterialSilo
           - MaterialSiloUtilizer
@@ -52110,15 +52153,6 @@ entities:
     - type: Transform
       pos: -37.5,10.5
       parent: 2
-- proto: OreProcessor
-  entities:
-  - uid: 8185
-    components:
-    - type: Transform
-      pos: 18.5,13.5
-      parent: 2
-    - type: SiloUtilizer
-      silo: 8125
 - proto: OxygenCanister
   entities:
   - uid: 8186
@@ -52317,6 +52351,35 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 11.392193,-41.961483
       parent: 2
+  - uid: 8730
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 29.5,1.5
+      parent: 2
+    - type: Paper
+      stampState: paper_stamp-centcom
+      stampedBy:
+      - hasIcon: True
+        stampFont: null
+        stampLargeIcon: large_stamp-centcom
+        stampedColor: '#006600FF'
+        stampedName: stamp-component-stamped-name-centcom
+      content: >-
+        [color=#1b67a5]█▄ █ ▀█▀    [head=3]Central Command Memo[/head]
+
+        █ ▀█     █        Salvage Magnet[/color]
+
+        ──────────────────────────────────────────
+
+        Attention,
+
+
+        A salvage magnet has been installed at the cargo shuttle dock. Please exercise caution when doing salvage operations aboard this station, as to avoid spacial merging of wrecks and the cargo shuttle together.
+
+
+
+        Regards,
 - proto: PaperBin10
   entities:
   - uid: 8221
@@ -55768,23 +55831,6 @@ entities:
     - type: Transform
       pos: -14.5,-30.5
       parent: 2
-- proto: RandomBoard
-  entities:
-  - uid: 8729
-    components:
-    - type: Transform
-      pos: 27.5,0.5
-      parent: 2
-  - uid: 8730
-    components:
-    - type: Transform
-      pos: 25.5,0.5
-      parent: 2
-  - uid: 8731
-    components:
-    - type: Transform
-      pos: 26.5,0.5
-      parent: 2
 - proto: RandomDrinkBottle
   entities:
   - uid: 8732
@@ -58260,6 +58306,14 @@ entities:
     - type: Transform
       pos: -11.5,-28.5
       parent: 2
+- proto: SalvageMagnet
+  entities:
+  - uid: 3653
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 21.5,27.5
+      parent: 2
 - proto: ScalpelLaser
   entities:
   - uid: 9207
@@ -58353,21 +58407,6 @@ entities:
     - type: Transform
       pos: -11.562502,-21.488012
       parent: 2
-  - uid: 9218
-    components:
-    - type: Transform
-      pos: 29.605116,0.5307963
-      parent: 2
-  - uid: 9219
-    components:
-    - type: Transform
-      pos: 29.605116,0.5307963
-      parent: 2
-  - uid: 9220
-    components:
-    - type: Transform
-      pos: 29.605116,0.5307963
-      parent: 2
   - uid: 9221
     components:
     - type: Transform
@@ -58416,21 +58455,6 @@ entities:
       parent: 2
 - proto: SheetPlasteel
   entities:
-  - uid: 9228
-    components:
-    - type: Transform
-      pos: 28.417616,0.5307963
-      parent: 2
-  - uid: 9229
-    components:
-    - type: Transform
-      pos: 28.417616,0.5307963
-      parent: 2
-  - uid: 9230
-    components:
-    - type: Transform
-      pos: 28.400833,0.5378499
-      parent: 2
   - uid: 9231
     components:
     - type: Transform
@@ -58472,25 +58496,10 @@ entities:
       parent: 2
 - proto: SheetSteel
   entities:
-  - uid: 9237
-    components:
-    - type: Transform
-      pos: 29.05824,0.4995463
-      parent: 2
   - uid: 9238
     components:
     - type: Transform
       pos: 18.507324,7.4999294
-      parent: 2
-  - uid: 9239
-    components:
-    - type: Transform
-      pos: 29.05824,0.4995463
-      parent: 2
-  - uid: 9240
-    components:
-    - type: Transform
-      pos: 29.05824,0.4995463
       parent: 2
   - uid: 9241
     components:
@@ -59494,13 +59503,6 @@ entities:
     - type: Transform
       pos: 17.5,7.5
       parent: 2
-- proto: SignMaterials
-  entities:
-  - uid: 9348
-    components:
-    - type: Transform
-      pos: 26.5,2.5
-      parent: 2
 - proto: SignMedical
   entities:
   - uid: 9349
@@ -59589,6 +59591,14 @@ entities:
     components:
     - type: Transform
       pos: -3.5,-28.5
+      parent: 2
+- proto: SignSalvage
+  entities:
+  - uid: 9218
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 26.5,2.5
       parent: 2
 - proto: SignScience
   entities:
@@ -62849,11 +62859,6 @@ entities:
     - type: Transform
       pos: -4.5,-32.5
       parent: 2
-  - uid: 9789
-    components:
-    - type: Transform
-      pos: 25.5,0.5
-      parent: 2
   - uid: 9790
     components:
     - type: Transform
@@ -62920,16 +62925,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -16.5,-25.5
-      parent: 2
-  - uid: 9804
-    components:
-    - type: Transform
-      pos: 29.5,0.5
-      parent: 2
-  - uid: 9805
-    components:
-    - type: Transform
-      pos: 29.5,1.5
       parent: 2
   - uid: 9806
     components:
@@ -63033,11 +63028,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -6.5,-14.5
       parent: 2
-  - uid: 9826
-    components:
-    - type: Transform
-      pos: 26.5,0.5
-      parent: 2
   - uid: 9827
     components:
     - type: Transform
@@ -63099,16 +63089,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -16.5,11.5
-      parent: 2
-  - uid: 9839
-    components:
-    - type: Transform
-      pos: 27.5,0.5
-      parent: 2
-  - uid: 9840
-    components:
-    - type: Transform
-      pos: 28.5,0.5
       parent: 2
   - uid: 9841
     components:
@@ -64961,10 +64941,10 @@ entities:
       parent: 2
 - proto: VendingMachineSalvage
   entities:
-  - uid: 10121
+  - uid: 9219
     components:
     - type: Transform
-      pos: 19.5,13.5
+      pos: 25.5,1.5
       parent: 2
 - proto: VendingMachineSciDrobe
   entities:
@@ -65036,6 +65016,11 @@ entities:
       parent: 2
 - proto: VendingMachineTankDispenserEVA
   entities:
+  - uid: 9220
+    components:
+    - type: Transform
+      pos: 25.5,0.5
+      parent: 2
   - uid: 10132
     components:
     - type: Transform

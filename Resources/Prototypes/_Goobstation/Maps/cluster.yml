@@ -64,6 +64,9 @@
             Librarian: [ 1, 1 ]
             Lawyer: [ 1, 1 ]
             ServiceWorker: [ 1, 1 ]
+            Reporter: [ 1, 1 ] #jamboree
+            RadioHost: [ 1, 1 ] #jamboree
+            Boxer: [ 2, 2 ] #jamboree
             #engineering
             ChiefEngineer: [ 1, 1 ]
             AtmosphericTechnician: [ 2, 2 ]
@@ -74,11 +77,12 @@
             Chemist: [ 1, 1 ]
             MedicalDoctor: [ 2, 2 ]
             MedicalIntern: [ 2, 2 ]
-#            Virologist: [ 1, 1 ]  Jamboree TODO: Add spwan
+            Virologist: [ 1, 1 ]
             #science
             ResearchDirector: [ 1, 1 ]
             Scientist: [ 3, 3 ]
             ResearchAssistant: [ 2, 2 ]
+            Roboticist: [ 1, 1 ] #jamboree
             Borg: [ 1, 1 ]
             #security
             HeadOfSecurity: [ 1, 1 ]
