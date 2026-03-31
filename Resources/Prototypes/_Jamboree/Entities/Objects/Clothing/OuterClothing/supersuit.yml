@@ -8,9 +8,9 @@
   description: Guard it all!
   components:
   - type: Sprite
-    sprite: _Jamboree/Clothing//SuperSuit/OuterClothing/owl_wings.rsi
+    sprite: _Jamboree/Clothing/SuperSuit/OuterClothing/owl_wings.rsi
   - type: Clothing
-    sprite: _Jamboree/Clothing//SuperSuit/OuterClothing/owl_wings.rsi
+    sprite: _Jamboree/Clothing/SuperSuit/OuterClothing/owl_wings.rsi
   - type: Armor
     coverage:
     - Chest
@@ -56,9 +56,9 @@
   description: Griff it all!
   components:
   - type: Sprite
-    sprite: _Jamboree/Clothing//SuperSuit/OuterClothing/griffin_wings.rsi
+    sprite: _Jamboree/Clothing/SuperSuit/OuterClothing/griffin_wings.rsi
   - type: Clothing
-    sprite: _Jamboree/Clothing//SuperSuit/OuterClothing/griffin_wings.rsi
+    sprite: _Jamboree/Clothing/SuperSuit/OuterClothing/griffin_wings.rsi
   - type: Armor
     coverage:
     - Chest
@@ -103,9 +103,9 @@
   description: I wonder if I jumped off a roof if I could glide with these?
   components:
   - type: Sprite
-    sprite: _Jamboree/Clothing//SuperSuit/OuterClothing/owl_wings.rsi
+    sprite: _Jamboree/Clothing/SuperSuit/OuterClothing/owl_wings.rsi
   - type: Clothing
-    sprite: _Jamboree/Clothing//SuperSuit/OuterClothing/owl_wings.rsi
+    sprite: _Jamboree/Clothing/SuperSuit/OuterClothing/owl_wings.rsi
 
 - type: entity
   parent: ClothingOuterBase
@@ -115,6 +115,6 @@
   description: I wonder if I jumped off a roof if I could glide with these?
   components:
   - type: Sprite
-    sprite: _Jamboree/Clothing//SuperSuit/OuterClothing/griffin_wings.rsi
+    sprite: _Jamboree/Clothing/SuperSuit/OuterClothing/griffin_wings.rsi
   - type: Clothing
-    sprite: _Jamboree/Clothing//SuperSuit/OuterClothing/griffin_wings.rsi
+    sprite: _Jamboree/Clothing/SuperSuit/OuterClothing/griffin_wings.rsi
