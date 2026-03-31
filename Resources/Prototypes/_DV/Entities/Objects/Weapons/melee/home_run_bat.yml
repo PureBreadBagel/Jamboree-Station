@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: BaseBallBat
+  id: BaseBallBatHomeRun
+  name: home run bat
+  description: Heavy metal bat with an extra kick.
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/melee/home_run_bat.rsi #changed since it was wrong
+    state: icon
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 15
+    soundHit:
+      collection: ExplosionSmall
+  - type: MeleeRequiresWield # You can't hit a home run with one hand, jimbo.
+  - type: MeleeThrowOnHit
+    speed: 30
+    #lifetime: 5 #dont even know what this is+causes errors jamboree change
+  - type: Item
+    size: Large
+  - type: Tool
+    speedModifier: 0.5 # it's very heavy, it rolls slower than a wooden bat
+  - type: UseDelay
+    delay: 2
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 350 # it's not made of wood

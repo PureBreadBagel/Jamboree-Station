@@ -938,3 +938,61 @@ Entries:
         galore!
   id: 96
   time: '2026-03-27T14:07:43.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Tweak
+      message: HoP's military jumpsuit has been color corrected!
+  id: 97
+  time: '2026-03-28T00:53:54.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Add
+      message: >-
+        NanoTrasen patented some nice designs for the kitchen! Advanced
+        Microwaves can now be researched! It bakes items faster than a normal
+        microwave! Along with being able to store more items inside of it. 
+    - type: Tweak
+      message: >-
+        Donk. Co had researched into more efficent micro-'waves'. The Donk. Co
+        microwave has been buffed to cook items a bit more quickly than the
+        Advanced Microwave, but with lesser storage space.
+    - type: Tweak
+      message: >-
+        Librarians have went through more training! They can now understand the
+        languages of Carps and Goblins, along with Pigs, Kangaroos, Deers and
+        Ducks!
+    - type: Tweak
+      message: Nerfed tendons growth by alot.
+  id: 98
+  time: '2026-03-28T00:56:04.0000000+00:00'
+- author: rapter256
+  changes:
+    - type: Add
+      message: ported the home run bat from delta-v. BATTER UP
+  id: 99
+  time: '2026-03-28T05:20:16.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the Boxer, Radio Host, Virologist, Roboticist, and Reporter roles
+        to Amber, Atlas, Bagel, Cluster, Omega, and Packed! Added Psychologist
+        to Packed too!
+    - type: Add
+      message: 'Xenobiology is now on Amber, Bagel, Omega, and Packed! '
+    - type: Tweak
+      message: >-
+        Amber, Atlas, Bagel, Cluster, Omega, Packed, and Saltern have all
+        received small tweaks map-wise. Check all around the station to collect
+        them all!
+    - type: Tweak
+      message: >-
+        The Instigator (The Syndicate Scout Ship) now has engineering bags and
+        boards for lathes on board! Now you can truly build an outpost!
+    - type: Fix
+      message: >-
+        The Cluster Evac Shuttle (used by other stations also) has finally had
+        its issue of no power in medical fixed! If there is any issues in this,
+        please alert @Bibble in the discord!
+  id: 100
+  time: '2026-03-31T07:51:51.0000000+00:00'

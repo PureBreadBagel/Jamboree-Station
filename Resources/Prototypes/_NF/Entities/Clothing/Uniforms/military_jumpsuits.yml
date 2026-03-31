@@ -809,7 +809,7 @@
     - state: icon-base-top-jumpsuit
       color: "#3e3e48"
     - state: icon-decor-department
-      color: "#09300b"
+      color: "#374f7e" # color changed cause hey, this don't match the department, Jamboree
     - state: icon-decor-department-head
       color: "#fbe6b8"
     - state: icon-decor-epaulets
@@ -826,7 +826,7 @@
       - state: inhand-left-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-left-decor-department
-        color: "#09300b"
+        color: "#374f7e" # color changed cause hey, this don't match the department, Jamboree
       - state: inhand-left-decor-department-head
         color: "#fbe6b8"
       - state: inhand-left-decor-epaulets
@@ -841,7 +841,7 @@
       - state: inhand-right-base-top-jumpsuit
         color: "#3e3e48"
       - state: inhand-right-decor-department
-        color: "#09300b"
+        color: "#374f7e" # color changed cause hey, this don't match the department, Jamboree
       - state: inhand-right-decor-department-head
         color: "#fbe6b8"
       - state: inhand-right-decor-epaulets
@@ -859,7 +859,7 @@
       - state: equipped-base-top-jumpsuit
         color: "#3e3e48"
       - state: equipped-decor-department
-        color: "#2c6a30"
+        color: "#374f7e" # color changed cause hey, this don't match the department, Jamboree
       - state: equipped-decor-department-head
         color: "#fbe6b8"
       - state: equipped-decor-epaulets
