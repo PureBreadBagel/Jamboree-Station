@@ -783,11 +783,11 @@
     damage:
       types:
         Blunt: 0.3
-#    soundHit:
-#      path: /Audio/Items/Toys/card_tube_bonk.ogg
-#  - type: Construction
-#    graph: CardSword
-#    node: cardSword
+    soundHit:
+      path: /Audio/Items/Toys/card_tube_bonk.ogg
+  - type: Construction
+    graph: CardSword
+    node: cardSword
   - type: Item
     size: Normal
     storedSprite:
