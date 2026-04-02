@@ -996,3 +996,36 @@ Entries:
         please alert @Bibble in the discord!
   id: 100
   time: '2026-03-31T07:51:51.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added several new textures that the AI Core can select from Goobstation!
+        Your character concepts can now flow!
+    - type: Add
+      message: >-
+        Added a verb to disconnect and open your job slot as an AI. Right click
+        on your core and look at AI shutdown. Do keep in mind this action will
+        ghost you and not allow you to return to your body. But hey, YOU DON'T
+        HAVE TO CALL FOR AN ADMIN WHEN LEAVING AS AI!!!!
+    - type: Add
+      message: >-
+        Added a whole suite of cardboard buildings and items! All of them are
+        craftable in the building menu. Knights of the Cardboard Keep, assemble!
+    - type: Add
+      message: >-
+        You now can lock your action bar in the options part of your settings!
+        They will be locked until opening the action menu. This option is on
+        from default!
+    - type: Add
+      message: >-
+        There are now icons for Sleeping Carp users that other Sleeping Carp
+        users, space dragons, and carp can see. Now you know wish fish to fish a
+        fight for!
+    - type: Tweak
+      message: >-
+        The Abductor Ships now have a biofabricator for making humanoid/animal
+        cubes and limbs. Might wanna let them abduct you if you don't have many
+        limbs!
+  id: 101
+  time: '2026-04-02T10:06:53.0000000+00:00'
