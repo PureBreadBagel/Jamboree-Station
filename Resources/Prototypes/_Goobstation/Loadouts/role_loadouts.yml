@@ -168,14 +168,14 @@
   id: JobRoboticist
   groups:
   - GroupTankHarness
-  - ScientistHead
+  - RoboticistHead
   - ScientistNeck
-  - ScientistJumpsuit
-  - ScientistBackpack
-  - ScientistOuterClothing
-  - ScientistGloves
-  - ScientistShoes
-  - ScientistPDA
+  - RoboticistJumpsuit
+  - RoboticistBackpack
+  - RoboticistOuterClothing
+  - RoboticistGloves
+  - RoboticistShoes
+  - RoboticistPDA
   - Glasses
   - Animals # Jamboree, parity with other roles
   - Survival
@@ -261,8 +261,8 @@
   id: JobVirologist
   groups:
    - GroupTankHarness
-   - MedicalDoctorHead
-   - MedicalMask
+   - VirologistHead #jamboree
+   - VirologistMask #jamboree
    - VirologistJumpsuit
    - MedicalGloves
    - VirologistBackpack

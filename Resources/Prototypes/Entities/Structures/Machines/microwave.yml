@@ -238,11 +238,12 @@
   description: So advanced, it can cook donk-pockets in a mere 2.5 seconds!
   components:
   - type: Microwave
-    cookTimeMultiplier: 0.5
-    baseHeatMultiplier: 200
-    capacity: 10
+    cookTimeMultiplier: 0.4 # Jamboree
+    baseHeatMultiplier: 260 # Jamboree
+    capacity: 8 # Jamboree
     canMicrowaveIdsSafely: false
     explosionChance: 0.10 # Goobstation
+    temperatureUpperThreshold: 430.32 # Goobstation
   - type: Sprite
     sprite: Structures/Machines/microwave_syndie.rsi
     drawdepth: SmallObjects

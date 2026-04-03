@@ -1,0 +1,67 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# fake
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesGriffinFake
+  suffix: MAP THIS
+  name: griffin costume boots
+  description: When people hear you coming, they'll be sure to run and hide!
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Boots/bird_boots.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Boots/bird_boots.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesOwlFake
+  suffix: MAP THIS
+  name: owl costume boots
+  description: These things REALLY make you want to hit a superhero landing!
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Boots/bird_boots.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Boots/bird_boots.rsi
+
+# Real
+- type: entity
+  parent: [ClothingShoesBase, BaseSyndicateContraband]
+  id: ClothingShoesGriffinReal
+  suffix: Real
+  name: griffin's boots
+  description: These boots are perfectly designed for kicking do-gooders in the jaw. Or disobeying henchmen.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Boots/bird_boots.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Boots/bird_boots.rsi
+  - type: NoSlip
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Shock: 0.75
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesOwlReal
+  suffix: Real
+  name: owl's boots
+  description: Each step you take sends a shiver down a criminal's spine.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Boots/bird_boots.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Boots/bird_boots.rsi
+  - type: NoSlip
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Shock: 0.75

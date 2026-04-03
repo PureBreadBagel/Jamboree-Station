@@ -65,6 +65,9 @@
             Chaplain: [ 1, 1 ]
             Librarian: [ 1, 1 ]
             ServiceWorker: [ 2, 2 ]
+            RadioHost: [ 1, 1 ] #jamboree
+            Reporter: [ 1, 1 ] #jamboree
+            Boxer: [ 2, 2 ] #jamboree
             #engineering
             ChiefEngineer: [ 1, 1 ]
             AtmosphericTechnician: [ 2, 2 ]
@@ -76,10 +79,13 @@
             MedicalDoctor: [ 3, 3 ]
             MedicalIntern: [ 2, 2 ]
             Paramedic: [ 1, 1 ]
+            Psychologist: [ 1, 1 ] #jamboree
+            Virologist: [ 1, 1 ] #jamboree
             #science
             ResearchDirector: [ 1, 1 ]
             Scientist: [ 4, 4 ]
             ResearchAssistant: [ 2, 2 ]
+            Roboticist: [ 1, 1 ] #jamboree
             #security
             HeadOfSecurity: [ 1, 1 ]
             Warden: [ 1, 1 ]

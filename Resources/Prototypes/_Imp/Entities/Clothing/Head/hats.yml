@@ -220,3 +220,35 @@
     tags:
     - WhitelistChameleon
     - ClothMade
+
+# adding the hospitality director fit now, jamboree
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretHD
+  name: nanotrasen representative's host beret #jamboree, changed name from: hospitality director's beret
+  description: A beret with a fancy insignia on it. For the host inclined to style. #changed description
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Head/Hats/beret_hd.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Head/Hats/beret_hd.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBellhopHD
+  name: nanotrasen representative's bellhop hat
+  description: A hat styled after a hotel bellhop. Can I take your coat sir?
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Head/Hats/bellhop_hd.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Head/Hats/bellhop_hd.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon

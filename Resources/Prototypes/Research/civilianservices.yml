@@ -146,6 +146,7 @@
   - FatExtractorMachineCircuitboard
   - BiofabricatorMachineCircuitboard
   - BiomassReclaimerMachineCircuitboard
+  - AdvancedMicrowaveMachineCircuitBoard # DeltaV
   # Goobstation R&D Console rework start
   position: -3,5
   technologyPrerequisites:

@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: KitchenMicrowave
+  id: AdvancedMicrowave
+  name: Advanced Microwave
+  description: Don't stand too close to this thing, definitely dont put anything metal in.
+  components:
+  - type: Microwave
+    cookTimeMultiplier: 0.45 # Jamboree
+    baseHeatMultiplier: 250 # Jamboree
+    capacity: 30
+    canMicrowaveIdsSafely: false # No AA farm
+    temperatureUpperThreshold: 410.32
+  - type: Sprite
+    sprite: _DV/Structures/Machines/advanced_microwave.rsi
+  - type: Machine
+    board: AdvancedMicrowaveMachineCircuitBoard
+  - type: Explosive
+    explosionType: Radioactive
+    maxIntensity: 60
+    totalIntensity: 50
+    intensitySlope: 10
+    canCreateVacuum: false
+    deleteAfterExplosion: false

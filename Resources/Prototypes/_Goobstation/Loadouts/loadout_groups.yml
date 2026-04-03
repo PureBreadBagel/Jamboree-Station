@@ -903,6 +903,8 @@
   - NanotrasenRepresentativeMAA
   - SRCap #frontier
   - SRBeret #frontier
+  - HostBellhop #imp
+  - HostBeret #imp
   - ConsultantCap #ADT
 
 - type: loadoutGroup
@@ -913,6 +915,8 @@
   - ClothingNeckScarfStripedCentcom
   - SRCloak #Frontier
   - SRMantle #Frontier
+  - HostCloak #imp
+  - HostMantle #imp
 
 - type: loadoutGroup
   id: NanotrasenRepresentativeBackpack
@@ -928,7 +932,9 @@
   name: loadout-group-ntr-outer #jamboree
   minLimit: 0
   loadouts:
+  - NTRWinterCoat #jamboree
   - SRCoat #frontier
+  - HostVest #imp
   - ConsultantJacket #ADT
 
 - type: loadoutGroup
@@ -940,6 +946,9 @@
   - NanotrasenRepresentativeFancyJumpsuit
   - SRJumpsuit #frontier
   - SRJumpskirt #frontier
+  - HostJumpsuit #imp
+  - HostJumpskirt #imp
+  - HostProperty #imp
   - ConsultantSuit #ADT
   - ConsultantSkirt #ADT
 
@@ -1227,6 +1236,7 @@
   loadouts:
   - RoboticistCap
   - SkullBandana
+  - CardborgHead #jamboree
 
 - type: loadoutGroup
   id: RoboticistJumpsuit
@@ -1234,6 +1244,8 @@
   loadouts:
   - RoboticistJumpsuit
   - RoboticistJumpskirt
+  - InterRoboticistJumpsuit #funky
+  - InterRoboticistJumpskirt #funky
   - ResearchMJ # goob
 
 - type: loadoutGroup
@@ -1243,6 +1255,7 @@
   - ScientistBackpack
   - ScientistSatchel
   - ScientistDuffel
+  - ScientistMessenger # Frontier
 
 - type: loadoutGroup
   id: RoboticistOuterClothing
@@ -1252,6 +1265,7 @@
   - RegularLabCoat
   - RoboticistLabCoat
   - RoboticistWintercoat
+  - CardborgSuit #jamboree
 
 - type: loadoutGroup
   id: RoboticistShoes
@@ -1269,6 +1283,7 @@
   - LatexGloves
   - PurpleGloves
   - RobohandsGloves
+  - InterRobohandsGloves #funky
 
 - type: loadoutGroup
   id: RoboticistPDA
@@ -1537,6 +1552,29 @@
 # Virologist
 
 - type: loadoutGroup
+  id: VirologistHead
+  name: loadout-group-virologist-head
+  minLimit: 0
+  loadouts:
+  - MedicalBeret
+  - SeniorPhysicianBeret
+  - MedicalHeadMirror
+  - BlueSurgeryCap
+  - GreenSurgeryCap
+  - PurpleSurgeryCap
+  - NurseHat
+  - FaceShield #funky
+  - PlagueDocHatViro #jamboree
+
+- type: loadoutGroup
+  id: VirologistMask
+  name: loadout-group-virologist-mask
+  minLimit: 0
+  loadouts:
+  - SterileMask
+  - PlagueDocMaskViro #jamboree
+
+- type: loadoutGroup
   id: VirologistJumpsuit
   name: loadout-group-virologist-jumpsuit
   loadouts:
@@ -1559,6 +1597,7 @@
   loadouts:
    - VirologistLabCoat
    - VirologistWintercoat
+   - PlagueDocCoatViro #jamboree
 
 - type: loadoutGroup
   id: VirologistPDA

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Goob Station Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Jumpsuit
 - type: loadout
   id: VirologistJumpsuit
@@ -66,3 +70,37 @@
   - !type:SpeciesLoadoutEffect
     species:
     - Plasmaman
+
+# jamboree additions
+- type: loadoutEffectGroup
+  id: PlagueViro
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobChaplain
+      time: 72000 #20 hrs
+
+- type: loadout
+  id: PlagueDocHatViro
+  equipment:
+    head: ClothingHeadHatPlaguedoctor
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PlagueViro
+
+- type: loadout
+  id: PlagueDocMaskViro
+  equipment:
+    mask: ClothingMaskPlague
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PlagueViro
+
+- type: loadout
+  id: PlagueDocCoatViro
+  equipment:
+    outerClothing: ClothingOuterPlagueSuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PlagueViro

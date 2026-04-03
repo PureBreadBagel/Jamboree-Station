@@ -27,6 +27,11 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 
 They have no special abilities, but are identical in appearance, DNA, fingerprints, clothing, equipment and IDs, making it hard to figure out who is the original and who is the clone... unless you know your fellow crewmembers well!
 
+   ## Lore
+
+  The existence of the paradox clones is one that actually has been proven to have a longstanding lineage in history with many leaders of independant factions having been found
+  to be paradox clones. The paradox which actually causes the existence of these clones, however, has yet to have its source found.
+
   # Revenant
 
   <Box>
@@ -39,6 +44,11 @@ They have no special abilities, but are identical in appearance, DNA, fingerprin
   - To gain essence you first [bold]inspect[/bold] various souls for their worth. More worthy souls grant more essence. Then you must [bold]siphon[/bold] it either when the victim is crit, dead or asleep. All of this is done with [color=yellow][bold][keybind="Use"][/bold][/color].
   - [bold]Stolen essence[/bold] is used to purchase new abilities to incapacitate the crew easier.
   - You are [bold]vulnerable[/bold] to attacks when you siphon a soul or use an ability. You can tell when you are vulnerable when you have a [color=#8f63e6][italic]Corporeal[/italic][/color] status effect.
+
+   ## Lore
+
+  Revenants, despite their resemblance to Wraiths, are ghosts which defied the secret treaties made by Wraiths and Nanotrasen on the grounds that they are technically distinct from
+  wraiths. This has led to them, while being a less powerful nuisance, to be one that appears slightly more often on stations compared to the Wraith.
 
   # Rat King
 
@@ -57,6 +67,12 @@ They have no special abilities, but are identical in appearance, DNA, fingerprin
   - [color=#9daa98][italic]Rummage[/italic][/color] through a disposal unit by using the context menu. Use this to find [bold]scraps of food[/bold] to grow your army.
   - Besides your abilities, [bold]you are stronger than most other animals.[/bold] You and your servants are capable of speech and you're both small enough to fit under airlocks and tables.
   - [bold]Your underlings are still very fragile![/bold] Beware of spacings, explosions and the business end of a melee weapon.
+
+   ## Lore
+
+  Rat Kings, despite being seen as disgusting creatures by many individuals, are considered to be the newest known species to enter a stage of creating civilization.
+  While the interference of their presence being primarily in the sewers of urban worlds and on space stations is believed to have a high impact on their independant survivability
+  there are already many individuals vying for the selection of a "Rat planet."
 
   # Space Dragon
 
@@ -77,6 +93,12 @@ They have no special abilities, but are identical in appearance, DNA, fingerprin
   - If a period of five minutes passes since your spawn or since the last time a rift was charging, [bold]you'll disappear.[/bold]
   - Dragons who have the maximum of 3 fully charged rifts will [bold]never disappear[/bold], but they are still mortal.
 
+   ## Lore
+
+  As lords of carp and the ancient enemy of most species in the galaxy, Space Dragons are found to be the source of inspiration for many of the mythological dragons that have
+  appeared in the history of civilizations. This correlation has also led to the theory that historical figures that were believed to be fictional due to the slaying of
+  a dragon, such as King Slays-The-Dragon IV of Moghes, to actually be real.
+
   # Slimes and Spiders
 
   <Box>
@@ -87,4 +109,11 @@ They have no special abilities, but are identical in appearance, DNA, fingerprin
   Slimes and spiders have no remarkable features, but will [color=cyan]infest the station[/color] from time to time regardless. Both will give chase and attack anything they see.
   - Slimes may [bold]deal extra cellular or poison damage[/bold], based upon their color. Water hurts them just as it would hurt a slime person.
   - Spiders have a venomous bite and can [bold]create webs[/bold] that are hard to move through, but are easily destroyed with a blade. They can also pry open doors, windoors, and airlocks.
+
+   ## Lore
+
+  Though many pests such as these are commonly seen on many worlds, it is believed that there is an increased number of these creatures in total throughout the sector as compared
+  to projections from half a century ago. While there is little evidence to point as to why there are many people who claim that the Neo-Atavists have begun their experimentation to
+  cause the end of the future.
+
 </Document>

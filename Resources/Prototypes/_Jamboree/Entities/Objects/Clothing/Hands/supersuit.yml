@@ -1,0 +1,81 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Costume Gloves
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesGriffinFake
+  suffix: MAP THIS
+  name: griffin costume gloves
+  description: If you're gonna get in the role of villainy, you have to prepare to get your hands dirty!
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/janitor.rsi
+  - type: Clothing
+    sprite: Clothing/Hands/Gloves/janitor.rsi
+  - type: Fiber
+    fiberMaterial: fibers-rubber
+    fiberColor: fibers-yellow
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesOwlFake
+  suffix: MAP THIS
+  name: owl costume gloves
+  description: KAPOW!!!
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/janitor.rsi
+  - type: Clothing
+    sprite: Clothing/Hands/Gloves/janitor.rsi
+  - type: Fiber
+    fiberMaterial: fibers-rubber
+    fiberColor: fibers-yellow
+
+# Real
+- type: entity
+  parent: [ClothingHandsBase, BaseSyndicateContraband]
+  id: ClothingHandsGlovesGriffinReal
+  suffix: Real
+  name: griffin's gloves
+  description: No upstanding supervillain would leave their fingerprints at a crime scene!
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/janitor.rsi
+  - type: Clothing
+    sprite: Clothing/Hands/Gloves/janitor.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-rubber
+    fiberColor: fibers-yellow
+  - type: FingerprintMask
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Shock: 0.75
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesOwlReal
+  suffix: Real
+  name: owl's gloves
+  description: Evil doers beware!
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/janitor.rsi
+  - type: Clothing
+    sprite: Clothing/Hands/Gloves/janitor.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-rubber
+    fiberColor: fibers-yellow
+  - type: FingerprintMask
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Shock: 0.75

@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Pet Rock
+- type: entity
+  name: pet rock
+  description: Your new and only best friend!
+  parent: BaseItem #changed cause no have BasePetRock
+  id: PetRock
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Fun/petrock.rsi
+    layers:
+    - state: rock

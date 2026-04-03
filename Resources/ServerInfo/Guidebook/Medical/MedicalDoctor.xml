@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2025 PureBreadBagel
+SPDX-FileCopyrightText: 2025/2026 PureBreadBagel
 
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
@@ -34,7 +34,7 @@ As a general rule of thumb, place patients onto the medical beds always during t
 
 When you scan a patient, a menu will pop up in the middle of your screen. This menu will show you your patients' damage types in numbers and categories, along with a coloured figure. The figures' colour changes depending on how damaged the patient's body is.
 
-[color=orange]Scanning will show all accumulated damage in the body.[/color] In order to see the damage for a particular body part of the patient, left-click one of the coloured figures’ body parts. 
+[color=orange]Scanning will show all accumulated damage in the body.[/color] In order to see the damage for a particular body part of the patient, left-click one of the coloured figures’ body parts.
 
 The scanner also has three menus that you can click on to change the type of information you see.
 
@@ -44,10 +44,14 @@ The second is all about their [color=red]Organs[/color]. This shows you if their
 
 The third shows you [color=orange]information about a patient’s bloodstream[/color]. This shows you how much blood a patient has, what's currently in their stomach and what medicines are being metabolised.
 
+# Difference between vital damage and overall damage
+
+When you scan a patient, you will see that they have 2 types of damage. Vital damage and normal damage. Vital damage is classified by any damage to the [color=yellow]head, torso and groin.[/color] Normal damage is classified by any damage to [bold]all limbs.[/bold]
+
 
 ## What is a Topical?
 
-Topicals are items that can [color=yellow] work on the dead[/color] to heal damage, including those alive. 
+Topicals are items that can [color=yellow] work on the dead[/color] to heal damage, including those alive.
 It is never too late to stock up on these if you can.
 
 <Box>
@@ -123,7 +127,7 @@ In this scenario, if you feel that the patient may not live longer due to their 
 The emergency medipen contains Epinephrine, which heals Asphyxiation, brute damage, burn damage and poison damage!
 To stop a patient from being in critical condition, get them under 100 damage! Whether that be by medicine or topicals.
 
-If the patient reaches 200+ damage (or by their own will)... [color=red]They will die.[/color]
+If the patient reaches 200+ vital damage (or by their own will)... [color=red]They will die.[/color]
 In this scenario. They will no longer take Asphyxiation damage, and start their countdown to[color=yellow] Rotting away.[/color]
 Patients who have just died will audibly stop breathing, and become limp and lifeless. If you use [keybind="ExamineEntity"] on a dead patient, you can see their [color=yellow] freshness and if their soul is in their body. [/color]
 
@@ -138,7 +142,7 @@ Next, you need to check [color=yellow] if they have rotted.[/color]
 If a patient rots away, they will slowly take Cellular damage, unable to be revived by defibrillators and will have a horrible smell.
 If they are [color=#f79b11]Extremely bloated[/color] their limbs will slowly start to come off their body one by one and will have the same effects as being rotted.
 
-In this case you have 2 options. 
+In this case you have 2 options.
 
 Dump them into cryogenics with Opporozidone to reverse the effects of rot, [textlink="or clone them." link="Cloning"]
 
@@ -149,9 +153,11 @@ If the body is [color=green]Fresh[/color], [color=yellow]somewhat fresh[/color] 
 <GuideEntityEmbed Entity="Defibrillator" Caption="Defibrillator"/>
 </Box>
 
-Stasis beds stop the countdown to rotting and gives you alot of time to apply topicals to get their damage under 200!
+Stasis beds stop the countdown to rotting and gives you alot of time to apply topicals to get their vital damage under 200!
 Once you do, give them a good shock with the defiblirator to jumpstart their heart back into action!
 
 Keep in mind that medicines metabolise very slowly on the Stasis Bed. Therefore it is reccomended to get the patient to a regular bed once revived.
+
+Some patients may be too unique to be revived by a defibrillator, those with a [color=yellow][bold]unique body structure[/bold][/color] are unable to be revived by defibrillators. In this case, brain surgery might be recommended.
 
 </Document>

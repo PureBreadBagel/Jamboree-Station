@@ -94,6 +94,9 @@
   extendedAccess:
   - Kitchen
   - Hydroponics
+  special:
+    - !type:AddImplantSpecial
+      implants: [ BasicSpaceItalianTranslatorImplant ] # Jamboree - Bartenders should be able to understand space italian, as most of the time bartenders are closeby to chefs all the time; picking the language up.
 
 - type: startingGear
   id: BartenderGear

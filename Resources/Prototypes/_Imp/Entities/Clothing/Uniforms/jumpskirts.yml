@@ -1,4 +1,8 @@
-﻿- type: entity
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
   parent: [ClothingUniformSkirtBase, BaseCommandContraband]
   id: ClothingUniformJumpskirtHopPowerSuit
   name: head of personnel's power suit
@@ -44,3 +48,14 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtHD
+  name: nanotrasen representative's host jumpskirt #changed name, jamboree
+  description: A classy skirt for classy gatherings. #changed description
+  components:
+    - type: Sprite
+      sprite: _Impstation/Clothing/Uniforms/Jumpskirt/hd_uniform.rsi
+    - type: Clothing
+      sprite: _Impstation/Clothing/Uniforms/Jumpskirt/hd_uniform.rsi

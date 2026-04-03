@@ -1,0 +1,82 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# real
+- type: entity
+  parent: [ ClothingHeadHelmetArmoredBase, BaseSyndicateContraband]
+  id: ClothingHeadCowlGriffinReal
+  name: griffin's cowl
+  suffix: Real
+  description: All it takes is one bad day to reduce the sanest crewmember to tomfoolery.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Head/griffin_h.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Head/griffin_h.rsi
+  - type: FaceHuggerBlocker
+  - type: IdentityBlocker
+  - type: BreathMask
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: ShowJobIcons # Goob
+  - type: ShowMindShieldIcons # Goob
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Tag
+    tags:
+    - HelmetEVA
+
+- type: entity
+  parent: ClothingHeadHelmetArmoredBase
+  id: ClothingHeadCowlOwlReal
+  name: owl's cowl
+  suffix: Real
+  description: I am justice. I am the light. I. AM. THE OWL!!!
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Head/owl_h.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Head/owl_h.rsi
+  - type: FaceHuggerBlocker
+  - type: IdentityBlocker
+  - type: BreathMask
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: ThermalVision
+    flashDurationMultiplier: 2
+    pulseTime: 2
+    isEquipment: true
+    toggleAction: PulseThermalVision
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: ShowJobIcons # Goob
+  - type: ShowMindShieldIcons # Goob
+  - type: Tag
+    tags:
+    - HelmetEVA
+
+# fake
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCowlOwlFake
+  name: owl costume cowl
+  suffix: MAP THIS
+  description: My only weakness... if my enemy has the same name as my mom...
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Head/owl_h.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Head/owl_h.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCowlGriffinFake
+  name: griffin costume cowl
+  suffix: MAP THIS
+  description: I'm the Griffin, baby!
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Head/griffin_h.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Head/griffin_h.rsi

@@ -8,13 +8,13 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/18/2026 01:14:29
-  entityCount: 6973
-maps: []
+  time: 03/27/2026 00:34:16
+  entityCount: 6977
+maps:
+- 70
 grids:
 - 1668
-orphans:
-- 1668
+orphans: []
 nullspace: []
 tilemap:
   0: Space
@@ -52,12 +52,22 @@ tilemap:
 entities:
 - proto: ""
   entities:
+  - uid: 70
+    components:
+    - type: MetaData
+      name: Map Entity
+    - type: Transform
+    - type: Map
+      mapPaused: True
+    - type: GridTree
+    - type: Broadphase
+    - type: OccluderTree
   - uid: 1668
     components:
     - type: MetaData
       name: Central Command
     - type: Transform
-      parent: invalid
+      parent: 70
     - type: MapGrid
       chunks:
         -1,-1:
@@ -3158,13 +3168,6 @@ entities:
     - type: Transform
       pos: 7.5,19.5
       parent: 1668
-- proto: AirlockAssemblyCentralCommand
-  entities:
-  - uid: 1587
-    components:
-    - type: Transform
-      pos: 9.5,-23.5
-      parent: 1668
 - proto: AirlockAtmosphericsLocked
   entities:
   - uid: 4746
@@ -3396,11 +3399,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -6.5,-30.5
       parent: 1668
-  - uid: 70
-    components:
-    - type: Transform
-      pos: 11.5,-25.5
-      parent: 1668
   - uid: 614
     components:
     - type: Transform
@@ -3456,11 +3454,6 @@ entities:
     components:
     - type: Transform
       pos: -19.5,7.5
-      parent: 1668
-  - uid: 6684
-    components:
-    - type: Transform
-      pos: 9.5,-23.5
       parent: 1668
 - proto: AirlockChemistryLocked
   entities:
@@ -3838,6 +3831,20 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 14.5,28.5
+      parent: 1668
+- proto: AirlockServiceTheatreGlassLocked
+  entities:
+  - uid: 3756
+    components:
+    - type: Transform
+      pos: 11.5,-25.5
+      parent: 1668
+- proto: AirlockServiceTheatreLocked
+  entities:
+  - uid: 252
+    components:
+    - type: Transform
+      pos: 9.5,-23.5
       parent: 1668
 - proto: AllTraitorCodesPaper
   entities:
@@ -4589,22 +4596,6 @@ entities:
     components:
     - type: Transform
       pos: 16.5,21.5
-      parent: 1668
-- proto: BenchSofaCorpLeft
-  entities:
-  - uid: 3123
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -9.5,-28.5
-      parent: 1668
-- proto: BenchSofaCorpRight
-  entities:
-  - uid: 252
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -9.5,-27.5
       parent: 1668
 - proto: BiomassReclaimer
   entities:
@@ -23461,6 +23452,13 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+- proto: FoodFrozenSnowconeClown
+  entities:
+  - uid: 2776
+    components:
+    - type: Transform
+      pos: 1.5759072,-3.7846346
+      parent: 1668
 - proto: FoodMealHappyHonkBigBite
   entities:
   - uid: 771
@@ -27111,13 +27109,10 @@ entities:
   - uid: 3755
     components:
     - type: Transform
-      pos: -18.558027,8.843213
+      pos: -15.624561,12.8787155
       parent: 1668
-  - uid: 3756
-    components:
-    - type: Transform
-      pos: -18.370527,8.827588
-      parent: 1668
+    - type: Stack
+      count: 2
 - proto: GuidebookCodexUmbra
   entities:
   - uid: 1447
@@ -27256,17 +27251,17 @@ entities:
     - type: Transform
       pos: 7.5,25.5
       parent: 1668
+  - uid: 3123
+    components:
+    - type: Transform
+      pos: 4.5,31.5
+      parent: 1668
 - proto: HighSecCentralCommandLocked
   entities:
   - uid: 1278
     components:
     - type: Transform
       pos: 7.5,-1.5
-      parent: 1668
-  - uid: 2776
-    components:
-    - type: Transform
-      pos: 4.5,31.5
       parent: 1668
   - uid: 3791
     components:
@@ -27513,7 +27508,7 @@ entities:
   - uid: 3754
     components:
     - type: Transform
-      pos: -18.379215,8.381029
+      pos: -14.983936,12.5818405
       parent: 1668
 - proto: LiveLetLiveCircuitBoard
   entities:
@@ -28438,7 +28433,7 @@ entities:
         stampedColor: '#006600FF'
         stampedName: stamp-component-stamped-name-centcom
       content: >-
-        ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀ 
+        ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀
 
         ║░██░░░░██░║
 
@@ -28448,7 +28443,7 @@ entities:
 
         ║░██░░░███░║─ Central Field Command
 
-        ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀ 
+        ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀
 
         ────────────────────⋆⋅☆⋅⋆──────────────────
 
@@ -29478,6 +29473,13 @@ entities:
     components:
     - type: Transform
       pos: 26.5,7.5
+      parent: 1668
+- proto: PlushieRainbowCarp
+  entities:
+  - uid: 6954
+    components:
+    - type: Transform
+      pos: 14.541379,6.418272
       parent: 1668
 - proto: PlushieVox
   entities:
@@ -33959,7 +33961,7 @@ entities:
   - uid: 3753
     components:
     - type: Transform
-      pos: -18.510391,8.646521
+      pos: -15.327686,12.5662155
       parent: 1668
 - proto: SoapGold
   entities:
@@ -34039,6 +34041,13 @@ entities:
     components:
     - type: Transform
       pos: -24.5,12.5
+      parent: 1668
+- proto: SpawnMobPenguin
+  entities:
+  - uid: 6953
+    components:
+    - type: Transform
+      pos: -6.5,3.5
       parent: 1668
 - proto: SpawnVehicleChairOfficeDark
   entities:
@@ -34191,6 +34200,11 @@ entities:
     - type: Transform
       pos: -11.5,-27.5
       parent: 1668
+  - uid: 1587
+    components:
+    - type: Transform
+      pos: -5.5,-5.5
+      parent: 1668
   - uid: 1624
     components:
     - type: Transform
@@ -34275,6 +34289,21 @@ entities:
     components:
     - type: Transform
       pos: -19.5,-9.5
+      parent: 1668
+  - uid: 6684
+    components:
+    - type: Transform
+      pos: 16.5,-2.5
+      parent: 1668
+  - uid: 6955
+    components:
+    - type: Transform
+      pos: -13.5,-8.5
+      parent: 1668
+  - uid: 6961
+    components:
+    - type: Transform
+      pos: -18.5,8.5
       parent: 1668
 - proto: StationRadioRig
   entities:
@@ -36824,9 +36853,10 @@ entities:
       parent: 1668
 - proto: TurnstileGenpopEnter
   entities:
-  - uid: 5670
+  - uid: 6614
     components:
     - type: Transform
+      rot: 1.5707963267948966 rad
       pos: 15.5,13.5
       parent: 1668
   - uid: 6729
@@ -36837,9 +36867,10 @@ entities:
       parent: 1668
 - proto: TurnstileGenpopLeave
   entities:
-  - uid: 6614
+  - uid: 5670
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: 15.5,11.5
       parent: 1668
 - proto: TwoWayLever

@@ -1196,9 +1196,9 @@
     - type: MachineBoard
       prototype: SyndicateMicrowave
       stackRequirements:
-        Manipulator: 1
-        Glass: 2
-        Cable: 2
+        Manipulator: 3
+        Glass: 4
+        Cable: 6
 
 - type: entity
   id: FatExtractorMachineCircuitboard

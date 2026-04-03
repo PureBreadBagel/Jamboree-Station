@@ -1,0 +1,70 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+# Real
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformSuitOwlReal
+  name: owl's super suit
+  suffix: Real
+  description: All it takes is one person to do some good in the world!
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Uniform/owl_suit.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Uniform/owl_suit.rsi
+  - type: IgniteFromGasImmunity # EE Plasmeme Change
+    parts:
+    - Chest
+    - Groin
+    - LeftArm
+    - RightArm
+    - LeftLeg
+    - RightLeg
+    - LeftFoot
+    - RightFoot
+
+- type: entity
+  parent: [ClothingUniformBase, BaseSyndicateContraband]
+  id: ClothingUniformSuitGriffinReal
+  name: griffin's super suit
+  suffix: Real
+  description: All it takes is one person to do some EVIL in the world!
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Uniform/griffin_suit.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Uniform/griffin_suit.rsi
+  - type: IgniteFromGasImmunity # EE Plasmeme Change
+    parts:
+    - Chest
+    - Groin
+    - LeftArm
+    - RightArm
+    - LeftLeg
+    - RightLeg
+    - LeftFoot
+    - RightFoot
+
+#fake
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformSuitOwlFake
+  name: owl costume
+  suffix: MAP THIS
+  description: Let's hope you were cast perfectly!
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Uniform/owl_suit.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Uniform/owl_suit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformSuitGriffinFake
+  name: griffin costume
+  suffix: MAP THIS
+  description: Let's hope you were cast perfectly!
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Uniform/griffin_suit.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Uniform/griffin_suit.rsi

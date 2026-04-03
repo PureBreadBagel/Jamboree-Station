@@ -233,7 +233,7 @@
       thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 40
+          damage: 35
         behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
@@ -247,7 +247,7 @@
         - Flesh
     - type: Kudzu
       growthTickChance: 0.1
-      spreadChance: 0.2
+      spreadChance: 0.05
       # Heals each time it manages to do a growth tick:
       damageRecovery:
         types:

@@ -26,6 +26,7 @@
       - Calcic
       - Canilunzt
       - Chittin
+      - FloorGoblin
       - Gruntish
       - NewKinPidgin # = Ka'rakk
       - Marish
@@ -46,9 +47,15 @@
       - SiikTajr
       - YaSsa
       - Cheval # Animal Languages -
+      - Carptongue
+      - Deer
+      - Duck
+      - Kangaroo
+      - Pig
       - Mouse
       - Monkey
       - Kobold
+
 
     understood:
       - TauCetiBasic # Common Languages -
@@ -63,6 +70,7 @@
       - Calcic
       - Canilunzt
       - Chittin
+      - FloorGoblin
       - Gruntish
       - NewKinPidgin # = Ka'rakk
       - Marish
@@ -83,10 +91,14 @@
       - SiikTajr
       - YaSsa
       - Cheval # Animal Languages -
+      - Carptongue
+      - Deer
+      - Duck
+      - Kangaroo
+      - Pig
       - Mouse
       - Monkey
       - Kobold
-
 
 
 

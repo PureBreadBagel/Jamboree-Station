@@ -187,6 +187,10 @@
   - PersonalAI # Goobstation
   - GoldenPersonalAI # Goobstation
   - CrewCassette # Goobstation
+  - HandLabeler #jambo
+  - RubberDuck #jambo
+  - DiceBag #jambo
+  - MagicCrayon #NF, jambo
   - ThreeCandles
   - Lighter
   - CigPackGreen
@@ -270,10 +274,17 @@
   minLimit: 0
   maxLimit: 1
   loadouts:
-  - Squackroach
+  - Hamster #jamboree
   - Mouse
   - Mothroach
+  - Squackroach
+  - Snoth #jamboree
   - Goldfish
+  - Pleebnar #jamboree, imp origin
+  - Homunculus #jamboree, goob origin
+  - Cockroach #jamboree
+  - Bee #jamboree
+  - Rock #jamboree, NF origin
 
 - type: loadoutGroup
   id: GroupTankHarness
@@ -1649,8 +1660,6 @@
   name: loadout-group-scientist-head
   minLimit: 0
   loadouts:
-  - RoboticistCap #reenabled, jamboree
-  - SkullBandana # reenabled, jamboree
   - ScientificBeret
   - ScienceBucket #TP
 
@@ -1669,8 +1678,6 @@
   - ScientistJumpskirt
   - RoboticistJumpsuit #jamboree, reenabled because for SOME FUCKING REASON goob has roboticists using the scientist loadouts event though they FUCKING MADE LOADOUT GROUPS FOR THEM!!!!
   - RoboticistJumpskirt #jamboree, reenabled
-  - InterRoboticistJumpsuit #funky
-  - InterRoboticistJumpskirt #funky
   - SeniorResearcherJumpsuit
   - SeniorResearcherJumpskirt
   - ResearchMJ # goob
@@ -1692,8 +1699,6 @@
   - RegularLabCoat
   - ScienceLabCoat
   - ScienceWintercoat
-  - RoboticistLabCoat
-  - RoboticistWintercoat
   - SeniorResearcherLabCoat
 
 - type: loadoutGroup
@@ -1712,7 +1717,6 @@
   - LatexGloves
   - PurpleGloves
   - RobohandsGloves
-  - InterRobohandsGloves
 
 - type: loadoutGroup
   id: ScientistPDA

@@ -1,4 +1,8 @@
-﻿- type: entity
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
   parent: [ClothingUniformBase, BaseCommandContraband]
   id: ClothingUniformJumpsuitCEForeman
   name: foreman's jumpsuit
@@ -135,3 +139,25 @@
     tags:
     - WhitelistChameleon
     - ClothMade
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitHD
+  name: nanotrasen representative's host jumpsuit #jamboree, changed name
+  description: A classy suit for classy gatherings. #changed description
+  components:
+    - type: Sprite
+      sprite: _Impstation/Clothing/Uniforms/Jumpsuit/hd_uniform.rsi
+    - type: Clothing
+      sprite: _Impstation/Clothing/Uniforms/Jumpsuit/hd_uniform.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformSpaceJumpsuitHospitalityDirectorProprietor
+  name: nanotrasen representative's proprietor jumpsuit #jamboree, changed name
+  description: You think the captain is the star of the station? Hun, I am the supernova. #changed description to be sassy as hell
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Uniforms/Jumpsuit/spacehd.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Uniforms/Jumpsuit/spacehd.rsi

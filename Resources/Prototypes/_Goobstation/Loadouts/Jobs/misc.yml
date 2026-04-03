@@ -98,3 +98,47 @@
   storage:
     back:
     - MobCarpGoldfish
+
+#Jamboree, Animals Part 2
+
+- type: loadout
+  id: Homunculus
+  storage:
+    back:
+    - MobHomunculus
+
+- type: loadout
+  id: Pleebnar
+  storage:
+    back:
+    - MobPleebnar
+
+- type: loadout
+  id: Hamster
+  storage:
+    back:
+    - MobHamster
+
+- type: loadout
+  id: Rock
+  storage:
+    back:
+    - PetRock
+
+- type: loadout
+  id: Cockroach
+  storage:
+    back:
+    - MobCockroach
+
+- type: loadout
+  id: Bee
+  storage:
+    back:
+    - MobBee
+
+- type: loadout
+  id: Snoth
+  storage:
+    back:
+    - MobSnailMoth

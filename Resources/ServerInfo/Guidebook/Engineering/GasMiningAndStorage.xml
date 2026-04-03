@@ -31,7 +31,7 @@ When it comes to gasses, everyone on the station at least consumes some of it to
     <GuideEntityEmbed Entity="GasMinerNitrogenStationLarge" Caption="4500 kPa"/>
   </Box>
 
-  Gas miners can be easily sabotaged by getting unanchored by a wrench and tossed into space. Meaning [color=yellow]its important you keep an eye on them.[/color] As gas miners are [color=red] in limited quantity. [/color] They can not be replaced if lost.
+
 
   ## Gas Storage
   Gas storage tanks are used to store gas produced by the gas miners, and to make it available to other processes. They are found in Atmospherics.

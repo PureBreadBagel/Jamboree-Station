@@ -1,0 +1,53 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltOwl
+  name: owl's belt
+  suffix: DO NOT MAP THIS
+  description: A belt for every gadget you might need in your heroic crusade. Also has instructions on Judo in a small pocket near the back.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Belt/bird_belt.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Belt/bird_belt.rsi
+  - type: GrantCorporateJudo
+  - type: GuideHelp
+    guides:
+    - CorporateJudo
+  - type: StorageFill
+    contents:
+      - id: WeaponGrapplingGun
+        amount: 1
+      - id: SmokeGrenade
+        amount: 2
+      - id: OwlThrowingStar
+        amount: 2
+      - id: Zipties
+        amount: 4
+
+- type: entity
+  parent: [ ClothingBeltStorageBase, BaseSyndicateContraband]
+  id: ClothingBeltGriffin
+  name: griffin's belt
+  suffix: DO NOT MAP THIS
+  description: A belt for every gadget you might need in your villainous crusade. Also has instructions on Judo in a small pocket near the back.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/Belt/bird_belt.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/Belt/bird_belt.rsi
+  - type: GrantCorporateJudo
+  - type: GuideHelp
+    guides:
+    - CorporateJudo
+  - type: StorageFill
+    contents:
+      - id: WeaponGrapplingGun
+        amount: 1
+      - id: SmokeGrenade
+        amount: 2
+      - id: GriffinThrowingKnife
+        amount: 2
+      - id: Zipties
+        amount: 4

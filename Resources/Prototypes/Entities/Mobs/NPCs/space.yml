@@ -731,7 +731,7 @@
 - type: entity
   parent: MobSnail
   id: MobSnailMoth
-  name: Snoth
+  name: snoth #jamboree, decapitalized for synchronicity with other animals
   components:
   - type: Body
     prototype: Mothroach

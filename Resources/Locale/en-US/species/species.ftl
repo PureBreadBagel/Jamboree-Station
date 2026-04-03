@@ -22,7 +22,8 @@ species-name-arachnid = Arachnid
 species-name-moth = Moth Person
 species-name-skeleton = Skeleton
 species-name-vox = Vox
-# species-name-gingerbread = delicious baked good goobstation - no
+# species-name-human = Gingerbread
+# in the future, make Gingerbread specific names, Jamboree
 
 ## Misc species things
 

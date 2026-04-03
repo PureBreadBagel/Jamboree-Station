@@ -971,8 +971,8 @@
 - type: entity
   parent: ClothingMaskClownBase
   id: ClothingMaskSexyClown
-  name: sexy clown mask
-  description: Some naughty clowns think this is what the Honkmother looks like.
+  name: blushing clown mask #changed name (mainly to further reinforce "hey no ERP" but also so we can change the descriptions) Jamboree
+  description: "What if... we pied the Captain while holding hands?" # same as above, Jamboree
   components:
   - type: Sprite
     sprite: Clothing/Mask/sexyclown.rsi
@@ -982,8 +982,8 @@
 - type: entity
   parent: ClothingMaskMime
   id: ClothingMaskSexyMime
-  name: sexy mime mask
-  description: Those ruddy cheeks just want to be rubbed.
+  name: blushing mime mask #changed name (mainly to reinforce "no ERP" but also for parity wtih changed description)
+  description: "You have such a way with words..." #same as above, Jamboree
   components:
   - type: Sprite
     sprite: Clothing/Mask/sexymime.rsi

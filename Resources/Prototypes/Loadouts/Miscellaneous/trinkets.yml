@@ -335,73 +335,104 @@
   storage:
     back:
     - ClothingNeckCloakAce
+  groupBy: "pride cloak"
 
 - type: loadout
   id: ClothingNeckCloakAro
   storage:
     back:
     - ClothingNeckCloakAro
+  groupBy: "pride cloak"
 
 - type: loadout
   id: ClothingNeckCloakAroace
   storage:
     back:
     - ClothingNeckCloakAroace
+  groupBy: "pride cloak"
 
 - type: loadout
   id: ClothingNeckCloakBi
   storage:
     back:
     - ClothingNeckCloakBi
+  groupBy: "pride cloak"
 
 - type: loadout
   id: ClothingNeckCloakGay
   storage:
     back:
     - ClothingNeckCloakGay
+  groupBy: "pride cloak"
 
 - type: loadout
   id: ClothingNeckCloakIntersex
   storage:
     back:
     - ClothingNeckCloakIntersex
+  groupBy: "pride cloak"
 
 - type: loadout
   id: ClothingNeckCloakLesbian
   storage:
     back:
     - ClothingNeckCloakLesbian
+  groupBy: "pride cloak"
 
 - type: loadout
   id: ClothingNeckCloakPan
   storage:
     back:
     - ClothingNeckCloakPan
+  groupBy: "pride cloak"
 
 - type: loadout
   id: ClothingNeckCloakEnby
   storage:
     back:
     - ClothingNeckCloakEnby
+  groupBy: "pride cloak"
 
 - type: loadout
   id: ClothingNeckCloakTrans
   storage:
     back:
     - ClothingNeckCloakTrans
-#ADT
+  groupBy: "pride cloak"
+
+# Jamboree, random adds
+
 - type: loadout
-  id: CardBoxBlack
+  id: HandLabeler
+  storage:
+    back:
+    - HandLabeler
+
+- type: loadout
+  id: RubberDuck
+  storage:
+    back:
+    - ToyRubberDuck
+
+- type: loadout
+  id: DiceBag
+  storage:
+    back:
+    - DiceBag
+
+- type: loadout
+  id: MagicCrayon #NF
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:
-      !type:OverallPlaytimeRequirement
+      !type:RoleTimeRequirement
+      role: JobClown
       time: 36000 # 10hr
   storage:
     back:
-    - CardBoxBlack
+    - CrayonMagic
 
-# Playing Cards (GoobStation)
+#ADT
 - type: loadout
   id: AirHorn
   effects:
@@ -413,6 +444,19 @@
   storage:
     back:
     - LethalCompanyAirHorn
+
+# Playing Cards (GoobStation)
+- type: loadout
+  id: CardBoxBlack
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 36000 # 10hr
+  storage:
+    back:
+    - CardBoxBlack
+  groupBy: "cardbox" #jamboree
 
 # Nanotrasen Variant
 - type: loadout
@@ -426,6 +470,7 @@
   storage:
     back:
     - CardBoxNanotrasen
+  groupBy: "cardbox" #jamboree
 
 # Candy!
 
@@ -439,6 +484,7 @@
   storage:
     back:
     - FoodSnackLollypopWrapped
+  groupBy: "candy" #jamboree
 
 - type: loadout
   id: FoodSnackLollypopWrappedRainbow
@@ -450,6 +496,7 @@
   storage:
     back:
     - FoodSnackLollypopWrappedRainbow
+  groupBy: "candy" #jamboree
 
 - type: loadout
   id: FoodSnackLollypopWrappedCarp
@@ -462,6 +509,7 @@
   storage:
     back:
     - FoodSnackLollypopWrappedCarp
+  groupBy: "candy" #jamboree
 
 # End GoobStation
 

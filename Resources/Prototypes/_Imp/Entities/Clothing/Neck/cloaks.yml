@@ -22,3 +22,11 @@
   - type: Sprite
     sprite: _Impstation/Clothing/Neck/Cloaks/cmogreatcloak.rsi
 
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakHd
+  name: nanotrasen representative's host cloak #changed name, jamboree
+  description: A lime-green cloak, showing you know how to bring life to the party.  #changed description
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Neck/Cloaks/hd.rsi

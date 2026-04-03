@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: AdvancedMicrowaveMachineCircuitBoard
+  result: AdvancedMicrowaveMachineCircuitBoard
+  icon:
+    sprite: _DV/Structures/Machines/advanced_microwave.rsi
+    state: mw

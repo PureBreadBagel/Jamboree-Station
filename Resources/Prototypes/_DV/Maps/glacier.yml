@@ -1,0 +1,76 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: gameMap
+  id: Glacier
+  mapName: Glacier
+  mapPath: /Maps/_DV/glacier.yml #jamboree
+  maxRandomOffset: 0
+  randomRotation: false
+  minPlayers: 10 #changed to be smaller so players can get to play it quicker, jamboree
+  maxPlayers: 60
+  stations:
+    Glacier:
+      stationProto: StandardNanotrasenStation
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: '{0} Glacier Station {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: 'NY'
+      - type: StationEmergencyShuttle
+        emergencyShuttlePath: /Maps/Shuttles/emergency_cluster.yml #jamboree, port their original evac shuttles when possible
+      - type: StationJobs
+        availableJobs:
+          Captain: [ 1, 1 ]
+          NanotrasenRepresentative: [ 1, 1 ] # added by jamboree
+          StationAi: [ 1, 1 ]
+        #service
+          HeadOfPersonnel: [ 1, 1 ]
+          Bartender: [ 2, 2 ]
+          Botanist: [ 2, 3 ]
+          Boxer: [ 1, 2 ]
+          Chaplain: [ 1, 1 ]
+          Chef: [ 2, 3 ]
+          Clown: [ 1, 2 ]
+          Lawyer: [ 2, 2 ]
+          Librarian: [ 1, 1 ]
+          Reporter: [ 2, 2 ]
+          Musician: [ 1, 2 ]
+          ServiceWorker: [ 2, 3 ]
+          Janitor: [ 2, 2 ]
+          Mime: [ 1, 2 ]
+          RadioHost: [ 1, 1 ] #jamboree
+        #engineering
+          ChiefEngineer: [ 1, 1 ]
+          AtmosphericTechnician: [ 1, 2 ]
+          StationEngineer: [ 2, 3 ]
+          TechnicalAssistant: [ 2, 2 ]
+        #medical
+          ChiefMedicalOfficer: [ 1, 1 ]
+          Chemist: [ 1, 2 ]
+          Paramedic: [ 1, 2 ]
+          Psychologist: [ 1, 1 ]
+          Virologist: [ 1, 1 ] #jamboree
+          MedicalDoctor: [ 2, 3 ]
+          MedicalIntern: [ 2, 2 ]
+        #science
+          ResearchDirector: [ 1, 1 ]
+          Roboticist: [ 1, 2 ]
+          Scientist: [ 2, 3 ]
+          ResearchAssistant: [ 2, 2 ]
+          Borg: [ 2, 3 ]
+        #security
+          HeadOfSecurity: [ 1, 1 ]
+          Warden: [ 1, 1 ]
+          Detective: [ 1, 1 ]
+          SecurityOfficer: [ 3, 4 ]
+          SecurityCadet: [ 1, 2 ]
+          Brigmedic: [ 1, 1 ]
+        #logistics
+          Quartermaster: [ 1, 1 ]
+          SalvageSpecialist: [ 2, 3 ]
+          CargoTechnician: [ 2, 3 ]
+        #civilian
+          Passenger: [ -1, -1 ]

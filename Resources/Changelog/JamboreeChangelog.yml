@@ -814,3 +814,253 @@ Entries:
         that haven't earned the capital punishment!
   id: 88
   time: '2026-03-18T22:23:28.0000000+00:00'
+- author: Gorse1, xsainteer
+  changes:
+    - type: Add
+      message: There are various new tools for admins to torment you with. Beware.
+  id: 89
+  time: '2026-03-20T04:31:18.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added lore entries to most antagonist guidebook entries! (No heretic
+        entry yet as that will be done once time is available to remove all
+        mentions of Mansus 😨)
+    - type: Add
+      message: >-
+        Ported some of the Hospitality director's clothing from Impstation to
+        the Nanotrasen Representative!
+  id: 90
+  time: '2026-03-20T08:53:26.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Tweak
+      message: >-
+        Glacier Station has gotten some edits, as according to the feedback of
+        you the players! We hope it is more fun to run around on now!
+    - type: Tweak
+      message: >-
+        Saltern and Atlas have now been updated! They both include a Radio Host
+        and Reporter sections now! Atlas does have a small Xenobiology area as
+        well (It is VERY SMALL so keep that in mind when setting up)!
+    - type: Tweak
+      message: >-
+        Gingerbread people have been enabled as a playable species! Feedback on
+        how they feel to customize is appreciated as a planned retune of them
+        into more generally cookie-centric folk is planned!
+    - type: Fix
+      message: >-
+        Fixed some small mapping issues with Central Command. Now anyone with
+        Armory access can access the contraband room and the CC Brig properly
+        works!
+  id: 91
+  time: '2026-03-21T09:18:58.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Fix
+      message: Saltern is now properly working!
+    - type: Add
+      message: >-
+        Added the Zookeeper, Radio Host, and Reporter roles to Saltern! Also new
+        little fun things around the map!
+    - type: Tweak
+      message: Glacier has had a small fix to add a reagent grinder to it!
+  id: 92
+  time: '2026-03-22T01:10:41.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Discount Dan's now offers a delicious sequel to the space dog: Space Dog
+        2.
+  id: 93
+  time: '2026-03-22T07:37:05.0000000+00:00'
+- author: Amos-Ann-works
+  changes:
+    - type: Tweak
+      message: >-
+        Retextured Some of the Experiment Hardsuits textures to fit more with
+        its main texture.
+  id: 94
+  time: '2026-03-25T05:27:34.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Ported Byoin: A low-pop map from Delta V! It has been refurbished with
+        the Jamboree necessities! Check out the brand new entertainment station
+        which replaces the courtroom from the original map!
+    - type: Add
+      message: >-
+        Reach returns! It is now refurbished to allow for the Radio Host role,
+        has things to deal with pesky viruses, has different command kits
+        present in their respective departments, a slight expanding of salvage's
+        space, and more! Take a cruise today!
+    - type: Tweak
+      message: >-
+        Tweaked Saltern, Glacier, and Central Command as to remove some small
+        issues! Saltern has proper station radios now, Glacier has a crate with
+        a Lavaland gate flatpack in it, and Central Command's radio station now
+        is accessible by service!
+    - type: Add
+      message: >-
+        The Owl has come to save the station from it's woes! Added the super
+        suit of the Owl, alongside a more boring normal costume, and some
+        gadgets for him to use in his crusade to save the sector. While
+        currently just an admeme, expect updates in the future...
+    - type: Add
+      message: >-
+        The Griffin has come to terrorize the station! Added the super suit of
+        the Griffin, alongside a more boring normal costume, and some gadgets
+        for him to use in his villainous escapades to "griff" the sector! While
+        currently just an admeme, expect updates in the future...
+    - type: Add
+      message: >-
+        Added the textures of the AAC tablets to the game! While not fully
+        implemented, this is to help give someone a head start ;)
+  id: 95
+  time: '2026-03-27T06:25:53.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the pleebnar, hamster, homunculus, pet rock, bee, cockroach, and
+        snoth to the animals loadout menu! Guess the pet store finally
+        restocked...
+    - type: Add
+      message: >-
+        Added the hand labeler to the trinket loadout menu! Now you can name
+        your pets. Or your survival box. Or your hat. Or your jumpsu-
+    - type: Add
+      message: >-
+        Added rubber duck, and the magic crayon to the loadout menu. Nick-knacks
+        galore!
+  id: 96
+  time: '2026-03-27T14:07:43.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Tweak
+      message: HoP's military jumpsuit has been color corrected!
+  id: 97
+  time: '2026-03-28T00:53:54.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Add
+      message: >-
+        NanoTrasen patented some nice designs for the kitchen! Advanced
+        Microwaves can now be researched! It bakes items faster than a normal
+        microwave! Along with being able to store more items inside of it. 
+    - type: Tweak
+      message: >-
+        Donk. Co had researched into more efficent micro-'waves'. The Donk. Co
+        microwave has been buffed to cook items a bit more quickly than the
+        Advanced Microwave, but with lesser storage space.
+    - type: Tweak
+      message: >-
+        Librarians have went through more training! They can now understand the
+        languages of Carps and Goblins, along with Pigs, Kangaroos, Deers and
+        Ducks!
+    - type: Tweak
+      message: Nerfed tendons growth by alot.
+  id: 98
+  time: '2026-03-28T00:56:04.0000000+00:00'
+- author: rapter256
+  changes:
+    - type: Add
+      message: ported the home run bat from delta-v. BATTER UP
+  id: 99
+  time: '2026-03-28T05:20:16.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the Boxer, Radio Host, Virologist, Roboticist, and Reporter roles
+        to Amber, Atlas, Bagel, Cluster, Omega, and Packed! Added Psychologist
+        to Packed too!
+    - type: Add
+      message: 'Xenobiology is now on Amber, Bagel, Omega, and Packed! '
+    - type: Tweak
+      message: >-
+        Amber, Atlas, Bagel, Cluster, Omega, Packed, and Saltern have all
+        received small tweaks map-wise. Check all around the station to collect
+        them all!
+    - type: Tweak
+      message: >-
+        The Instigator (The Syndicate Scout Ship) now has engineering bags and
+        boards for lathes on board! Now you can truly build an outpost!
+    - type: Fix
+      message: >-
+        The Cluster Evac Shuttle (used by other stations also) has finally had
+        its issue of no power in medical fixed! If there is any issues in this,
+        please alert @Bibble in the discord!
+  id: 100
+  time: '2026-03-31T07:51:51.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added several new textures that the AI Core can select from Goobstation!
+        Your character concepts can now flow!
+    - type: Add
+      message: >-
+        Added a verb to disconnect and open your job slot as an AI. Right click
+        on your core and look at AI shutdown. Do keep in mind this action will
+        ghost you and not allow you to return to your body. But hey, YOU DON'T
+        HAVE TO CALL FOR AN ADMIN WHEN LEAVING AS AI!!!!
+    - type: Add
+      message: >-
+        Added a whole suite of cardboard buildings and items! All of them are
+        craftable in the building menu. Knights of the Cardboard Keep, assemble!
+    - type: Add
+      message: >-
+        You now can lock your action bar in the options part of your settings!
+        They will be locked until opening the action menu. This option is on
+        from default!
+    - type: Add
+      message: >-
+        There are now icons for Sleeping Carp users that other Sleeping Carp
+        users, space dragons, and carp can see. Now you know wish fish to fish a
+        fight for!
+    - type: Tweak
+      message: >-
+        The Abductor Ships now have a biofabricator for making humanoid/animal
+        cubes and limbs. Might wanna let them abduct you if you don't have many
+        limbs!
+  id: 101
+  time: '2026-04-02T10:06:53.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Add
+      message: >-
+        The Bartender after serving many drinks and listening to chefs can now
+        understand Space Italian, but not speak it.
+    - type: Add
+      message: The HOP can now understand and speak Space Italian!
+    - type: Tweak
+      message: >-
+        CQC got nerfed...CQCs neck snap NO LONGER instantly kills the target. It
+        now only heavily damages them while accounting for armor resistences!
+        Now you can survive what was deemed impossible...
+    - type: Tweak
+      message: >-
+        The guidebook for CQC was changed to represent the nerf of CQC. Nobody
+        likes an outdated guidebook!
+    - type: Tweak
+      message: >-
+        Removed outdated information from gas miners. They can not be
+        unanchored.
+    - type: Tweak
+      message: >-
+        The medical doctor entry got updated to include the difference between
+        Vital Damage and Overall Damage. Along with the unrevivable trait.
+  id: 102
+  time: '2026-04-03T19:35:02.0000000+00:00'
+- author: YeenJunk
+  changes:
+    - type: Add
+      message: >-
+        Ghost Respawning has returned with a longer cooldown! It is now 20
+        minutes to respawn!
+  id: 103
+  time: '2026-04-03T20:51:09.0000000+00:00'

@@ -122,6 +122,7 @@
   - type: Tag
     tags:
     - Trash
+    - VimPilot #jamboree
   - type: Respirator
     damage:
       types:

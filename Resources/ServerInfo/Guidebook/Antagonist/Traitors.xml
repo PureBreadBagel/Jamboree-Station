@@ -120,4 +120,11 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     <GuideEntityEmbed Entity="FoodMeatCorgi" Caption=""/>
   </Box>
 
+   ## Lore
+
+  The Syndicate's first venture into the art of espionage and sabotage occurred during a time when Nanotrasen did not have mindshield technology, which resulted in
+  them being able to infiltrate as the Captain of said station. This captain, through masterful deception, was able to aquire the nuclear codes from Central Command,
+  leading to one of the first instances of a nuclear detonation occuring on Nanotrasen property. Though this wouldn't be the last, this would be the first in a long
+  line of conflicts between the Syndicate and Nanotrasen.
+
 </Document>

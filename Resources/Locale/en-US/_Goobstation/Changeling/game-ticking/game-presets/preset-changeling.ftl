@@ -6,8 +6,9 @@
 
 changeling-roundend-name = changeling
 
-objective-issuer-hivemind = [color=orange]The Hive[/color]
-objective-issuer-tiger = [color=crimson]Tiger Cooperative[/color]
+# just removed this cause eh, not needed, objective-issuer-self = [color=orange]The Self[/color]
+# both changed to get a different perspective on changelings
+objective-issuer-atavist = [color=crimson]The Neo-Atavists[/color]
 
 roundend-prepend-changeling-absorbed-named = [color=white]{$name}[/color] has absorbed a total of [color=red]{$number}[/color] organics.
 roundend-prepend-changeling-stolen-named = [color=white]{$name}[/color] has extracted a total of [color=orange]{$number}[/color] DNA samples.
@@ -16,7 +17,7 @@ roundend-prepend-changeling-stolen = Someone had extracted a total of [color=ora
 
 changeling-gamemode-title = Changelings
 changeling-gamemode-description =
-    The changeling hive has boarded the station, ready to take anything it desires - be it your equipment, your faces, or your lives!
+    One or more changelings have boarded the station, ready to take anything they desires - be it your equipment, your faces, or your lives!
 
 changeling-role-greeting =
     You are a changeling who has absorbed and taken the form of {$name}!
