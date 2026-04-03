@@ -1029,3 +1029,30 @@ Entries:
         limbs!
   id: 101
   time: '2026-04-02T10:06:53.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Add
+      message: >-
+        The Bartender after serving many drinks and listening to chefs can now
+        understand Space Italian, but not speak it.
+    - type: Add
+      message: The HOP can now understand and speak Space Italian!
+    - type: Tweak
+      message: >-
+        CQC got nerfed...CQCs neck snap NO LONGER instantly kills the target. It
+        now only heavily damages them while accounting for armor resistences!
+        Now you can survive what was deemed impossible...
+    - type: Tweak
+      message: >-
+        The guidebook for CQC was changed to represent the nerf of CQC. Nobody
+        likes an outdated guidebook!
+    - type: Tweak
+      message: >-
+        Removed outdated information from gas miners. They can not be
+        unanchored.
+    - type: Tweak
+      message: >-
+        The medical doctor entry got updated to include the difference between
+        Vital Damage and Overall Damage. Along with the unrevivable trait.
+  id: 102
+  time: '2026-04-03T19:35:02.0000000+00:00'
