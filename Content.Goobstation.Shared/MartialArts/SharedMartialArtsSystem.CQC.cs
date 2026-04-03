@@ -136,8 +136,8 @@ public partial class SharedMartialArtsSystem
                 {
                     _pulling.TryStopPull(args.Target, pullable);
 
-                    var blunt = new DamageSpecifier(_proto.Index<DamageTypePrototype>("Blunt"), damageToKill.Value);
-                    _damageable.TryChangeDamage(args.Target, blunt, true, targetPart: TargetBodyPart.Chest);
+                    var blunt = new DamageSpecifier(_proto.Index<DamageTypePrototype>("Blunt"), damageToKill.Value * 0.65);
+                    _damageable.TryChangeDamage(args.Target, blunt, false, targetPart: TargetBodyPart.Chest);
 
                     var (partType, symmetry) = _body.ConvertTargetBodyPart(targeting.Target);
                     var targetedBodyPart = _body.GetBodyChildrenOfType(args.Target, partType, body, symmetry)

@@ -194,10 +194,11 @@
   - Robotics # Goob
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
+    implants: [ MindShieldImplant, SpaceItalianTranslatorImplant ] # Jamboree - HOP should be able to understand and speak space italian, and have a mind shield implant to protect against mind control.
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
+
 
 - type: startingGear
   id: HoPGear
