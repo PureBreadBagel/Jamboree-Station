@@ -198,9 +198,7 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
-      - type: GrantCqc
-        startingStage: Hard
-        isBlocked: true # Jamboree - HOP is the head of personnel, including the kitchen. Of course they should have Close Quarters Cooking! Its blocked like a regular chef, they can only use it near a chef spawn point!
+
 
 - type: startingGear
   id: HoPGear
