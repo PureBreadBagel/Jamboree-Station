@@ -53,3 +53,31 @@
     sprite: _DV/Clothing/Neck/Cloaks/witchcloak.rsi
   - type: Clothing
     sprite: _DV/Clothing/Neck/Cloaks/witchcloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCentcommCloakBoat
+  name: central command boat cloak
+  description: A emerald greeen durathread boat cloak with a red felt lining and gold trim. Somehow, it's even more expensive than it looks.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Neck/Cloaks/boatcloakcc.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Neck/Cloaks/boatcloakcc.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckHeadOfSecurityCloakBoat
+  name: head of security boat cloak
+  description: A rish gray durathread boat cloak with a red felt lining and gold trim. Somehow, it's even more expensive than it looks.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Neck/Cloaks/boatcloakhos.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Neck/Cloaks/boatcloakhos.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
