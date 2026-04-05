@@ -160,10 +160,8 @@ public sealed class ServerUpdateManager : IPostInjectInit
     float GetNewRespawnTime(int playerCount) =>
         playerCount switch
         {
-            > 50 => 1200.0f,
-            > 30 => 900.0f,
-            > 20 => 600.0f,
-            <= 20 => 300.0f,
+
+            > 1 => 1200.0f,
         };
 
     void IPostInjectInit.PostInject()
