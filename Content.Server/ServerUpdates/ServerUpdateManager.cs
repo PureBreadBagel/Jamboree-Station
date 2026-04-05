@@ -157,12 +157,7 @@ public sealed class ServerUpdateManager : IPostInjectInit
         return _uptimeRestart != TimeSpan.Zero && _gameTiming.RealTime > _uptimeRestart;
     }
 
-    float GetNewRespawnTime(int playerCount) =>
-        playerCount switch
-        {
-
-            > 1 => 1200.0f,
-        };
+    float GetNewRespawnTime(int playerCount) => 1200.0f; // Jamboree: 20 minutes respawn time!
 
     void IPostInjectInit.PostInject()
     {
