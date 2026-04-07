@@ -9,9 +9,10 @@
   id: VisitorAlien
   equipment:
     jumpsuit: ClothingUniformJumpsuitHawaiBlack
-    eyes: ClothingEyesGlassesCheapSunglasses
+    eyes: ClothingEyesGlassesSunglasses # Jamboree, you are cheap no more!
     shoes: ClothingShoesFakeJordans
     head: ClothingHeadHatStrawHat
+    neck: TravelCamera # Jamboree, time to take pics!
     id: VisitorPDA
     belt: ClothingBeltStorageWaistbag
     ears: ClothingHeadsetGrey
