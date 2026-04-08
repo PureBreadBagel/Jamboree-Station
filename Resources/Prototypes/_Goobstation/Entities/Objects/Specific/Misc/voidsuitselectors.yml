@@ -47,6 +47,7 @@
   - type: SetSelector
     possibleSets:
     - VoidsuitSelectorHeadOfSecurityVoidsuit
+    - VoidsuitSelectorHeadOfSecurityParadesuit # Jamboree, added parade suit to the selector
     - VoidsuitSelectorHeadOfSecurityHardsuit
 
 # engineer

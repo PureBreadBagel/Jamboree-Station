@@ -213,6 +213,13 @@ selectable-set-headofsecurity-voidsuit-desc =
     the armour value of the vital organs and increase mobility
     compared to the standard security hardsuit.
 
+# Jamboree, Adding HOS Parade suit to the selector
+selectable-set-headofsecurity-paradesuit-name = Head of security's parade hardsuit
+selectable-set-headofsecurity-paradesuit-desc =
+    A light hardsuit made of fine materials, adorned with medals and decorations, and fitted for formal occasions.
+    It's armor value is comparable to the standard Head of security hardsuit, but it's style is undeniable.
+# Jamboree, Adding HOS Parade suit to the selector /END
+
 selectable-set-headofsecurity-modsuit-name = Head of security's 'bulwark' modsuit
 selectable-set-headofsecurity-modsuit-desc =
     A modular hardsuit with expensive plastitanium armour for the head of security's use.

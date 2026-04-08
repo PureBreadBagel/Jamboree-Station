@@ -291,7 +291,7 @@
   parent: ClothingOuterHardsuitSecurityRed
   id: ClothingOuterHardsuitHeadOfSecurityExperimental
   name: FI-52 "Honor Guard" parade hardsuit
-  description: A special hardsuit that protects against hazardous, low pressure environments. Has an experimental inbuilt stimulant autoinjector system.
+  description: A special hardsuit that protects against hazardous, low pressure environments, and whatever rotten tomatoes might be thrown at you as you march on. #Jamboree, description changed due to removal of injections system
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/hos-expi.rsi
@@ -300,11 +300,11 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitHeadOfSecurityExperimental
-  - type: ClothingAutoInject
-    reagents:
-      Epinephrine: 10
-      Bicaridine: 10
-      TranexamicAcid: 5
+#  - type: ClothingAutoInject # Jamboree, changed so that this isn't just a better version of both the standard HOS hardsuit and the modsuit
+#    reagents:
+#      Epinephrine: 10
+#      Bicaridine: 10
+#      TranexamicAcid: 5
   - type: Item
     size: Huge
 
