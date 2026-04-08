@@ -920,6 +920,7 @@
   - ChaplainUniformSun #imp
   - ChaplainUniformTech #imp
   - PilgrimJumpsuit #frontier
+  - ResonantJumpsuit #Jamboree
   - ServiceMJ # goob
 
 - type: loadoutGroup
@@ -963,6 +964,7 @@
   - ChaplainNeckTidal #imp
   - ChaplainNeckSun #imp
   - ChaplainNeckDragon #imp
+  - ResonantCloak #Jamboree
   - Crucifix #frontier
   - KnightCloak #ADT
 
@@ -974,6 +976,7 @@
   - BlackShoes
   - ClothFootWraps #jamboree, frontier content
   - SandalShoe #jamboree, goob content
+  - ResonantShoes #jamboree
 
 - type: loadoutGroup
   id: JanitorHead

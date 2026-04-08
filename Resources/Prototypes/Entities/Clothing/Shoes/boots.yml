@@ -169,15 +169,15 @@
     sprite: Clothing/Shoes/Boots/combatboots.rsi
 
 - type: entity
-  parent: ClothingShoesMilitaryBase
+  parent: ClothingShoesSurvivalBase #jamboree edit
   id: ClothingShoesHighheelBoots
   name: high-heeled boots
-  description: Snazy boots for when you want to be stylish, yet prepared.
+  description: Snazy boots for when you want to be stylish, yet practical. # Jamboree edit, removing damage from roundstart clothings. Is a bit busted
   components:
-  - type: MeleeWeapon
-    damage:
-      types:
-        Piercing: 6
+#  - type: MeleeWeapon # Jamboree, removing damages from roundstart clothings. Is a bit busted
+#    damage:
+#      types:
+#        Piercing: 6
   - type: Sprite
     sprite: Clothing/Shoes/Boots/highheelboots.rsi
   - type: Clothing
@@ -321,7 +321,7 @@
     node: boots
 
 - type: entity
-  parent: ClothingShoesMilitaryBase
+  parent: ClothingShoesSurvivalBase # Jamboree edit
   id: ClothingShoesBootsCowboyBrown
   name: brown cowboy boots
   description: They got spurs that jingle and/or jangle.

@@ -1,0 +1,119 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "All sprites modified by Bibble for Jamboree, majority taken from main repo for ss14, bingle and gondola and xeno and stickperson sprites taken from Goobstation, hate and smiley made custom for Jamboree, eye taken from tgstation in ss13",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "ai_bingle"
+        },
+        {
+            "name": "ai_clown"
+        },
+        {
+            "name": "ai_eyeball",
+            "delays": [
+            [
+                0.75,
+                0.75
+            ]
+            ]
+        },
+        {
+            "name": "ai_flame",
+            "delays": [
+            [
+                0.75,
+                0.75,
+                0.75,
+                0.75
+            ]
+            ]
+        },
+        {
+            "name": "ai_ghosty",
+            "delays": [
+            [
+                0.75,
+                0.75
+            ]
+            ]
+        },
+        {
+            "name": "ai_gondola",
+            "delays": [
+            [
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.75
+            ]
+            ]
+        },
+        {
+            "name": "ai_gorilla"
+        },
+        {
+            "name": "ai_hate"
+        },
+        {
+            "name": "ai_jared"
+        },
+        {
+            "name": "ai_lizard",
+            "delays": [
+            [
+                0.75,
+                0.75,
+                0.75,
+                0.75
+            ]
+            ]
+        },
+        {
+            "name": "ai_pai",
+            "delays": [
+            [
+                0.75,
+                0.75
+            ]
+            ]
+        },
+        {
+            "name": "ai_pequeno",
+            "delays": [
+            [
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.75
+            ]
+            ]
+        },
+        {
+            "name": "ai_ritual"
+        },
+        {
+            "name": "ai_smiley"
+        },
+        {
+            "name": "ai_stickperson",
+            "delays": [
+            [
+                0.75,
+                0.75
+            ]
+            ]
+        },
+        {
+            "name": "ai_xeno"
+        }
+    ]
+}

@@ -1,0 +1,148 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Jamboree holograms (Bibble)
+- type: stationAiCustomization
+  id: StationAiHologramBingle
+  name: station-ai-hologram-bingle
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_bingle
+
+- type: stationAiCustomization
+  id: StationAiHologramClown
+  name: station-ai-hologram-clown
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_clown
+
+- type: stationAiCustomization
+  id: StationAiHologramEyeball
+  name: station-ai-hologram-eyeball
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_eyeball
+
+- type: stationAiCustomization
+  id: StationAiHologramFlame
+  name: station-ai-hologram-flame
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_flame
+
+- type: stationAiCustomization
+  id: StationAiHologramGhosty
+  name: station-ai-hologram-ghosty
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_ghosty
+
+- type: stationAiCustomization
+  id: StationAiHologramGondola
+  name: station-ai-hologram-gondola
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_gondola
+
+- type: stationAiCustomization
+  id: StationAiHologramGorilla
+  name: station-ai-hologram-gorilla
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_gorilla
+
+- type: stationAiCustomization
+  id: StationAiHologramHate
+  name: station-ai-hologram-hate
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_hate
+
+- type: stationAiCustomization
+  id: StationAiHologramJared
+  name: station-ai-hologram-jared
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_jared
+
+- type: stationAiCustomization
+  id: StationAiHologramLizard
+  name: station-ai-hologram-lizard
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_lizard
+
+- type: stationAiCustomization
+  id: StationAiHologramPAI
+  name: station-ai-hologram-pai
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_pai
+
+- type: stationAiCustomization
+  id: StationAiHologramPequeno
+  name: station-ai-hologram-pequeno
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_pequeno
+
+- type: stationAiCustomization
+  id: StationAiHologramRitual
+  name: station-ai-hologram-ritual
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_ritual
+
+- type: stationAiCustomization
+  id: StationAiHologramSmiley
+  name: station-ai-hologram-smiley
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_smiley
+
+- type: stationAiCustomization
+  id: StationAiHologramStickperson
+  name: station-ai-hologram-stickperson
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_stickperson
+
+- type: stationAiCustomization
+  id: StationAiHologramXeno
+  name: station-ai-hologram-xeno
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Jamboree/Mobs/Silicon/holograms.rsi
+      state: ai_xeno
