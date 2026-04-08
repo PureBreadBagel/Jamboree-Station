@@ -1070,3 +1070,40 @@ Entries:
       message: The respawn time is 20 minutes instead of 5.
   id: 104
   time: '2026-04-06T01:12:44.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added 16 new AI holographic avatars! Some include: The Clown, the
+        Gondola, the Bingle, the Xeno, and many more!
+    - type: Add
+      message: >-
+        The HOS's Parade Hardsuit is now in the HOS' hardsuit selector! Get
+        ready to get fancy!
+    - type: Remove
+      message: >-
+        The HOS's Parade Hardsuit no longer has an auto injection system. Mainly
+        nerfed so it isn't a better HOS hardsuit!
+    - type: Tweak
+      message: >-
+        The Resonant Clothing Set found in the contraband inventory of the
+        Autodrobe is now in the Chaplain's loadout!
+    - type: Tweak
+      message: >-
+        The cowboy boots and high-heeled boots no longer have the "50% lowered
+        slowdown from injuries" and "50% lower time to get up from stun" stats.
+        Yeehaw!
+    - type: Remove
+      message: All gar glasses, and high-heeled boots, no longer deal damage.
+    - type: Remove
+      message: >-
+        The boxer and musician figurines have been removed from the Autodrobe's
+        contraband inventory! GET YOUR TOYS FROM THE GOOD CLEAN FUN LIKE THE
+        REST OF US!!!!!!!!
+    - type: Remove
+      message: >-
+        The fake heretic gear is removed from the Autodrobe's contraband
+        inventory! They will return with the Costume Trader... with new sprites
+        too...
+  id: 105
+  time: '2026-04-08T05:59:29.0000000+00:00'
