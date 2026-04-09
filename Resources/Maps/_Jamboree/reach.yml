@@ -1,15 +1,11 @@
-# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Map
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/27/2026 05:26:25
-  entityCount: 2589
+  time: 04/09/2026 08:34:35
+  entityCount: 2587
 maps:
 - 1
 grids:
@@ -13401,13 +13397,6 @@ entities:
     - type: Transform
       pos: -16.5,-2.5
       parent: 2
-- proto: RapidSyringeGun
-  entities:
-  - uid: 1842
-    components:
-    - type: Transform
-      pos: 10.615371,-4.579793
-      parent: 2
 - proto: RCD
   entities:
   - uid: 1843
@@ -14966,13 +14955,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -4.5,5.5
-      parent: 2
-- proto: SyringeInaprovaline
-  entities:
-  - uid: 2072
-    components:
-    - type: Transform
-      pos: 10.559818,-4.3941536
       parent: 2
 - proto: Table
   entities:
