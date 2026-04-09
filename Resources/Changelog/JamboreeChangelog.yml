@@ -1107,3 +1107,23 @@ Entries:
         too...
   id: 105
   time: '2026-04-08T05:59:29.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added material silos to Glacier and Byoin! They should be synced up with
+        all roundstart lathes!
+    - type: Tweak
+      message: >-
+        Moved the Saltern material silo into the vault. It is now also linked to
+        all lathes by default!
+    - type: Fix
+      message: >-
+        Added the Psychologist's office's door back. Now your therapy won't have
+        an unwelcome audience!
+    - type: Remove
+      message: >-
+        Removed the syringe gun from Reach. You can still get one in the kit,
+        but no duplicates!!!
+  id: 106
+  time: '2026-04-09T09:31:50.0000000+00:00'
