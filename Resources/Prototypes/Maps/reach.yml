@@ -47,6 +47,7 @@
         - type: StationJobs
           availableJobs:
             NanotrasenRepresentative: [ 1, 1 ]
+            StationAi: [ 1, 1 ] #jamboree, AI for Reach!
 #            BlueshieldOfficer: [ 1, 1 ] # Goobstation
             Captain: [ 1, 1 ]
             HeadOfSecurity: [ 1, 1 ]
