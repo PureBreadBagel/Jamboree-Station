@@ -1127,3 +1127,12 @@ Entries:
         but no duplicates!!!
   id: 106
   time: '2026-04-09T09:31:50.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Tweak
+      message: >-
+        The hairline for the "Buzzcut" hairstyle has been given a small upgrade.
+        The original barber of this cut has since been executed for their
+        heinous crimes.
+  id: 107
+  time: '2026-04-10T01:02:35.0000000+00:00'
