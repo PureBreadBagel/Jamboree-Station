@@ -1136,3 +1136,9 @@ Entries:
         heinous crimes.
   id: 107
   time: '2026-04-10T01:02:35.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Remove
+      message: limer_treats curse has been removed. He is free from baguettes.
+  id: 108
+  time: '2026-04-12T01:36:45.0000000+00:00'
