@@ -1142,3 +1142,13 @@ Entries:
       message: limer_treats curse has been removed. He is free from baguettes.
   id: 108
   time: '2026-04-12T01:36:45.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Remove
+      message: Disabled the Shadow Anomaly from spawning! Darkness reigns no more!
+    - type: Remove
+      message: >-
+        Removed the Revolutionary Manifesto from spawning in maints. The library
+        has other fantastic books!
+  id: 109
+  time: '2026-04-16T20:45:48.0000000+00:00'
