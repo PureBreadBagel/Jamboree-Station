@@ -22,8 +22,32 @@
   - type: Defibrillator
     zapHeal:
       types:
-        Asphyxiation: -40
+        Asphyxiation: -80 # cmd gear tweaks 3
   - type: DoAfter
-  - type: UseDelay
   - type: StealTarget # Jamboree - cmd/steal gear tweaks
     stealGroup: CMO
+  - type: DefibGloves
+    whitelist:
+      requireAll: true
+      components:
+      - MobState
+      - Respirator
+
+
+- type: entity
+  parent: [ClothingHandsBase, BaseCommandContraband]
+  id: ClothingHandsGlovesSol
+  name: sol gloves
+  description: Incredibly advanced medical technology, a defibrillator literally at your fingertips. You will need to remove the glove from your hand to use it.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Hands/Gloves/defibgloves.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/Hands/Gloves/defibgloves.rsi
+  - type: Fiber
+    fiberMaterial: fibers-latex
+  - type: FingerprintMask
+  - type: StealTarget # Jamboree - cmd/steal gear tweaks
+    stealGroup: HOS
+  - type: SolGloves
+

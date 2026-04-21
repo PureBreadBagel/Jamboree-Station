@@ -33,3 +33,15 @@
         enum.GeneratorVisualLayers.Unlit:
           True: { visible: true }
           False: { visible: false }
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.5,0.4,0.3"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+        hard: False

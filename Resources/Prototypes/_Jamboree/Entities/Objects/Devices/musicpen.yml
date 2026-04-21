@@ -1,0 +1,32 @@
+﻿- type: entity
+  name: musical pen
+  parent: Pen
+  id: MusicPen
+  description: A disguised music player with a variety of modes that looks like a luxury pen. You can still write with it!
+  components:
+  - type: Sprite
+    state: luxury_pen
+  - type: Item
+    heldPrefix: luxury_pen
+  - type: Instrument
+    program: 27
+    allowPercussion: true
+    respectMidiLimits: false
+  - type: SwappableInstrument
+    instrumentList:
+      "Clean": { 27: 0 }
+      "Electro": { 62: 0 }
+      "Bubbles": { 63: 0 }
+      "Overdrive": { 29: 0 }
+      "Distortion": { 30: 0 }
+      "Harmonics": { 31: 0 }
+  - type: ActivatableUI
+    inHandsOnly: false # Goobstation
+    singleUser: true
+    requireActiveHand: false # Goobstation
+    verbText: verb-instrument-openui
+    key: enum.InstrumentUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.InstrumentUiKey.Key:
+        type: InstrumentBoundUserInterface

@@ -1,0 +1,69 @@
+﻿using System.Linq;
+using Content.Shared._EinsteinEngines.Silicon.Components;
+using Content.Shared._Imp.Drone;
+using Content.Shared._Jamboree.CaptainFlag;
+using Content.Shared._Shitmed.Damage;
+using Content.Shared._Shitmed.Targeting;
+using Content.Shared.Damage;
+using Content.Shared.Examine;
+using Content.Shared.Mobs.Components;
+using Content.Shared.Mobs.Systems;
+using Content.Shared.NPC;
+using Content.Shared.NukeOps;
+using Content.Shared.Silicons.Laws.Components;
+using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
+
+namespace Content.Server._Jamboree.CaptainFlag;
+
+public sealed class BuffNearbyActionSystem : EntitySystem
+{
+    [Dependency] private readonly DamageableSystem _damageable = default!;
+    [Dependency] private readonly EntityLookupSystem _entityLookup = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
+    [Dependency] private readonly ExamineSystemShared _occlusion = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
+
+    public override void Initialize()
+    {
+        SubscribeLocalEvent<CaptainRallyActionEvent>(OnCaptainRally);
+    }
+
+    private void OnCaptainRally(CaptainRallyActionEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        args.Handled = true;
+
+        var performer = args.Performer;
+        var action = args.Action;
+
+        if (!TryComp<CaptainRallyActionComponent>(action, out var comp))
+            return;
+
+        var targets = _entityLookup.GetEntitiesInRange(performer, comp.Range)
+            .Where(e =>
+                HasComp<MobStateComponent>(e) // only entities that are mobs, are alive, and don't have the latter 5 components can be healed
+                && !_mobState.IsDead(e)
+                && !HasComp<SiliconComponent>(e)
+                && !HasComp<NukeOperativeComponent>(e)
+                && !HasComp<ActiveNPCComponent>(e)
+                && !HasComp<DroneComponent>(e) // drones don't have silicon component :(
+                && !HasComp<SiliconLawBoundComponent>(e)) // cyborgs don't have silicon component (!?!?!?!?!?!?!?)
+            .Where(e => _occlusion.InRangeUnOccluded(performer, e, comp.Range));
+
+
+        foreach (var target in targets)
+        {
+            _damageable.TryChangeDamage(target,
+                comp.Healing,
+                targetPart: TargetBodyPart.All,
+                ignoreBlockers: true,
+                splitDamage: SplitDamageBehavior.SplitEnsureAll);
+            Spawn(comp.RalliedEffect, Transform(target).Coordinates); // spawn effect on the target
+        }
+        Spawn(comp.RallyEffect, Transform(performer).Coordinates); // spawn effect on the user
+        _audio.PlayPvs(comp.RallySoundPath, performer, new AudioParams(-2f, 1f, SharedAudioSystem.DefaultSoundRange, 1f, false, 0f));
+    }
+}

@@ -49,3 +49,5 @@
     doAfterDuration: 2.5
   - type: StealTarget # Jamboree - cmd/steal gear tweak
     stealGroup: Warden
+  - type: WeaponActionGranter
+    weaponAction: ActionWardenHalberd

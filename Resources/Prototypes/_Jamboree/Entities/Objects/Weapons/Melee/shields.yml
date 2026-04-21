@@ -1,0 +1,55 @@
+﻿- type: entity
+  name: sol shield
+  parent: [ BaseItem, BaseCommandContraband ]
+  id: SolShield
+  description: A sharp blade with a cane shaped hilt, the captain's insignia is engraved on the base of the blade.
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/cane_blade.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: 65
+    attackRate: 1.25
+    damage:
+      types:
+        Slash: 15
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    size: Normal
+    sprite: Objects/Weapons/Melee/cane_blade.rsi
+  - type: Tag
+    tags:
+    - CaneBlade
+  - type: DisarmMalus
+  - type: Execution
+  - type: StealTarget # Jamboree - cmd/steal gear tweaks
+    stealGroup: HOS
+  - type: Boomerang
+    returnSpeed: 15
+    maxHops: 4
+  - type: SolShield
+  - type: Blocking
+    passiveBlockModifier:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+    activeBlockModifier:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+      flatReductions:
+        Blunt: 1
+        Slash: 1
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: ItemToggle
+  - type: ComponentToggler
+    components:
+    - type: StaminaDamageOnCollide
+      damage: 50
+  - type: UseDelay
+    useDelay: 5
