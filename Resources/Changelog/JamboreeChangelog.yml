@@ -1152,3 +1152,9 @@ Entries:
         has other fantastic books!
   id: 109
   time: '2026-04-16T20:45:48.0000000+00:00'
+- author: Gorse1
+  changes:
+    - type: Fix
+      message: Fixed syndicate scouts getting two survival boxes. Now they get one.
+  id: 110
+  time: '2026-04-24T05:43:29.0000000+00:00'
