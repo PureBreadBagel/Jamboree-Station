@@ -172,9 +172,9 @@
     gloves: ClothingHandsGlovesCombat
     back: ClothingBackpack
     shoes: ClothingShoesBootsCombatFilled
-  storage:
-    back:
-    - BoxSurvivalSyndicate
+#  storage: # Jamboree - no double survival boxes for syndie footsoldiers
+#    back:
+#    - BoxSurvivalSyndicate
 
 - type: startingGear
   id: SyndicateFootsoldierTeamLeaderGear
