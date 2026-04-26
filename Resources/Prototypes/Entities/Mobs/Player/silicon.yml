@@ -450,6 +450,11 @@
     - Tradeband
     - Schechi
     - NewKinPidgin
+    - FloorGoblin #jamboree
+    - YowKriol #jamboree
+    - Calcic #jamboree
+    - Gruntish #jamboree
+    - SpaceItalian #jamboree
     understands:
     - TauCetiBasic
     - Canilunzt
@@ -471,6 +476,11 @@
     - Sign
     - Schechi
     - NewKinPidgin
+    - FloorGoblin #jamboree
+    - YowKriol #jamboree
+    - Calcic #jamboree
+    - Gruntish #jamboree
+    - SpaceItalian #jamboree
   - type: SpeechSynthesis # Corvax-Frontier-Barks
     voice: Borg
 
