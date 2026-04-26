@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Separate yml file for scrap armor since it has so many construction steps.
 # Listed from first step of crafting to the final armor
 
@@ -51,7 +55,7 @@
 
 # The armor itself
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseMajorContraband]
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseMajorContraband, ClothingBeltUtility]
   id: ClothingOuterArmorScrap
   name: scrap armor
   description: A tider's gleaming plate mail. Bail up, or you're a dead man.

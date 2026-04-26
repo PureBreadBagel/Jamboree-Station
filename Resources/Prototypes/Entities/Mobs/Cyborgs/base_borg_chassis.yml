@@ -443,10 +443,53 @@
   - type: LanguageKnowledge # Einstein Engines - Languages
     speaks:
     - TauCetiBasic
+    - Canilunzt
+    - Bubblish
+    - Nekomimetic
+    - Draconic
+    - SolCommon
+    - RootSpeak
+    - Moffic
+    - ValyrianStandard
+    - Chittin
+    - SiikMaas
     - RobotTalk
+    - Marish
+    - Elyran
+    - Freespeak
+    - Tradeband
+    - Schechi
+    - NewKinPidgin
+    - FloorGoblin #jamboree
+    - YowKriol #jamboree
+    - Calcic #jamboree
+    - Gruntish #jamboree
+    - SpaceItalian #jamboree
     understands:
     - TauCetiBasic
+    - Canilunzt
+    - Bubblish
+    - Nekomimetic
+    - Draconic
+    - SolCommon
+    - RootSpeak
+    - Moffic
+    - ValyrianStandard
+    - Chittin
+    - SiikMaas
     - RobotTalk
+    - Marish
+    - Elyran
+    - Freespeak
+    - Tradeband
+    - Sign
+    - Schechi
+    - NewKinPidgin
+    - FloorGoblin #jamboree
+    - YowKriol #jamboree
+    - Calcic #jamboree
+    - Gruntish #jamboree
+    - SpaceItalian #jamboree
   - type: ProtectedFromStepTriggers
   - type: DamageOnInteractProtection
     damageProtection:
