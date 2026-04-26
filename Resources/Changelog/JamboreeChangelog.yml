@@ -1178,3 +1178,31 @@ Entries:
         wary...
   id: 112
   time: '2026-04-26T06:40:10.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added tennis equipment! Items, such as the rackets, have yet to be
+        mapped into places, but the ball is available in the toy chest!
+    - type: Add
+      message: Added a belt for Central Command to use to punish innocent tiders.
+    - type: Add
+      message: Added a new jumpsuit for Central Command officers. The drip is insane!
+    - type: Tweak
+      message: >-
+        Borgs and the Station AI now understand most crew-specific languages!
+        Call them if you need a sudden translator!
+    - type: Add
+      message: Added a sign language implanter as being researchable!
+    - type: Add
+      message: >-
+        Added distress signalers to the SecTech vendor! Now hired on officers
+        can call for help too!
+    - type: Add
+      message: >-
+        Added a new alert level obtainable by using an emag! Calling all
+        traitors to the bridge!
+    - type: Add
+      message: Added a tutu to the Autodrobe. Now you can do ballet... I guess...
+  id: 113
+  time: '2026-04-26T07:15:12.0000000+00:00'
