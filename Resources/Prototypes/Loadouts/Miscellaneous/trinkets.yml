@@ -188,6 +188,22 @@
     - CigPackBlack
   groupBy: "smokeables"
 
+# jamboree - adding more ciggies to loadout
+- type: loadout
+  id: CigPackPurple
+  storage:
+    back:
+    - CigPackPurple
+  groupBy: "smokeables"
+
+- type: loadout
+  id: CigPackCandy
+  storage:
+    back:
+    - CigPackCandy
+  groupBy: "smokeables"
+# jamboree - end
+
 - type: loadout
   id: CigarCase
   effects:

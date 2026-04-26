@@ -197,6 +197,8 @@
   - CigPackRed
   - CigPackBlue
   - CigPackBlack
+  - CigPackPurple #jambo, DV
+  - CigPackCandy #jambo, DV
   - CigarCase
   - CigarGold
   - ClothingNeckLGBTPin
@@ -264,9 +266,13 @@
   loadouts:
   - Glasses
   - Monocle #ADT
+  - Eyepatch #Jamboree
+  - CheapSunglasses # Goobstation
   - GlassesJamjar
   - GlassesJensen
-  - CheapSunglasses # Goobstation
+  - DripGar #jamboree, moving drip
+  - DripGarOrange #jamboree, moving drip
+  - DripGigaGar #jamboree, moving drip
 
 - type: loadoutGroup
   id: Animals  # Goobstation
@@ -2271,8 +2277,6 @@
   maxLimit: 3
   loadouts:
   - DripHighHeels
-  - DripGigaGar
-  - DripGarOrange
   - DripWehcellentCap
   - DripBling
   - DripSolidHeadband
