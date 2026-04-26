@@ -263,8 +263,8 @@
 - type: entity
   parent: [ ClothingUniformJumpsuitNavyGold, BaseCentcommContraband ]
   id: ClothingUniformJumpsuitCentralCommandLiaison
-  name: CentComm Liaison Jumpsuit
-  description: Rumor has it, the CCO that first saw the Outer Command uniform was so jealous that they stained it green with their envy.
+  name: centcomm liaison jumpsuit #decapitalized
+  description: It is said that this is the jumpsuit which invented the "regal casual" fashion style. #description changed cause no Outcomm... whatever that is (Jamboree)
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/Centcom/centcomsuit_liaison.rsi
