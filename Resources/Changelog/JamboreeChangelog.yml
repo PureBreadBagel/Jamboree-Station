@@ -1158,3 +1158,15 @@ Entries:
       message: Fixed syndicate scouts getting two survival boxes. Now they get one.
   id: 110
   time: '2026-04-24T05:43:29.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the eyepatch, gar glasses, orange gar glasses, and giga gar
+        glasses to the glasses loadout menu! Get stylish!
+    - type: Tweak
+      message: >-
+        The texture for the jamjar glasses have been updated! I wonder why they
+        are called jamjar glasses. I don't see any jam in them...
+  id: 111
+  time: '2026-04-26T06:04:56.0000000+00:00'
