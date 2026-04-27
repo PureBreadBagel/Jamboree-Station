@@ -877,6 +877,7 @@
   - ChaplainPlagueHat
   - ChaplainWitchHat
   - ChaplainWitchHatAlt
+  - ClownMitre #jamboree addition
   - ChaplainWizard #jamboree addition
   - ChaplainHeadDruid #imp
   - ChaplainHeadMoon #imp
@@ -1068,6 +1069,7 @@
   loadouts:
   - JesterHat
   - JesterAltHat
+  - ClownMitre #wizden
   - EvilJesterHat #imp
   - CircusClownHat #imp
   - WearyClownHat #TB
