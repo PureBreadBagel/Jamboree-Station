@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/26/2026 22:54:18
+  time: 04/27/2026 00:29:51
   entityCount: 13077
 maps:
 - 1
@@ -36245,7 +36245,7 @@ entities:
       pos: -5.5,11.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -1915.3649
+      secondsUntilStateChange: -1968.4779
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 1114.2322211
@@ -57985,6 +57985,20 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -7.5,53.5
       parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        10109:
+        - - Pressed
+          - Toggle
+        10108:
+        - - Pressed
+          - Toggle
+        10110:
+        - - Pressed
+          - Toggle
+        10107:
+        - - Pressed
+          - Toggle
 - proto: LockerAtmosphericsFilled
   entities:
   - uid: 8570
