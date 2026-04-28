@@ -73,6 +73,7 @@
     shoes: ClothingShoesColorWhite
     id: ReporterPDA
     ears: ClothingHeadsetService
+    neck: SurveillanceWirelessCameraBodyEntertainment # Jamboree, bodycam for reporters round start
   storage: # DeltaV: Give reporters tape recording equipment
     back:
     - TapeRecorder

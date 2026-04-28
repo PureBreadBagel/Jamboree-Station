@@ -41,6 +41,43 @@
     sprite: _Goobstation/Clothing/Neck/Misc/nopro.rsi
     quickEquip: true
 
+#Jamboree, making the Nopro a neck item
+- type: entity
+  parent: ClothingNeckBase
+  id: SurveillanceWirelessCameraBodyEntertainment
+  name: nopro camera
+  description: A body mounted camera. It's watching you.
+  components:
+    - type: DeviceNetwork
+      deviceNetId: Wireless
+      receiveFrequencyId: SurveillanceCameraEntertainment
+      transmitFrequencyId: SurveillanceCamera
+    - type: SurveillanceCamera
+      networkSet: true
+      nameSet: True
+      mobile: True  # Goobstation - mobile cameras fix
+      id: NoPro Camera
+    - type: Eye
+    - type: WirelessNetworkConnection
+      range: 200
+    - type: SurveillanceCameraMicrophone
+      blacklist:
+        components:
+          - SurveillanceCamera
+          - SurveillanceCameraMonitor
+          - RadioSpeaker
+    - type: ActiveListener
+      range: 10
+    - type: ClothingGrantComponent
+      component:
+      - type: StationAiVision
+        range: 4
+    - type: Sprite
+      sprite: _Goobstation/Clothing/Neck/Misc/nopro.rsi
+    - type: Clothing
+      sprite: _Goobstation/Clothing/Neck/Misc/nopro.rsi
+      quickEquip: true
+
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckFellForItAward
