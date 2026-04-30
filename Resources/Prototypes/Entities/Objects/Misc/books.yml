@@ -189,6 +189,7 @@
   - type: Tag
     tags:
     - Book
+    - Paper # Goobstation - Moth food
   - type: GuideHelp
     openOnActivation: true
     guides:

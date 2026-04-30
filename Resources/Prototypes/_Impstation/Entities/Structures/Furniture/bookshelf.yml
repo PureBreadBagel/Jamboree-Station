@@ -17,6 +17,3 @@
         !type:DamageTrigger
         damage: 90 # three times stronger than a normal bookshelf so people will smash those for wood first
     maxItemSize: Normal
-    whitelist:
-      tags:
-        - Guidebook # and only guidebooks. make sure to add the Book and Guidebook tags to any new guidebook you write
