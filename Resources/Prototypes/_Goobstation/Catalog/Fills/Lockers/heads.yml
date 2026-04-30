@@ -36,6 +36,7 @@
       amount: !type:ConstantNumberSelector
         value: 5
     - id: NanoRepStationReport # Goobstation
+    - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerNanorepFilled
