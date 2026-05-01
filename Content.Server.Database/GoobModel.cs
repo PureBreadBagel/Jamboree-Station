@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -60,6 +64,28 @@ public sealed class PollOption
     public int DisplayOrder { get; set; }
 
     public List<PollVote> Votes { get; set; } = default!;
+}
+
+[Table("poll_seen")]
+[Index(nameof(PollId))]
+[Index(nameof(PlayerUserId))]
+public sealed class PollSeen
+{
+    [Key]
+    public int Id { get; set; }
+
+    [Required]
+    public int PollId { get; set; }
+
+    public Poll Poll { get; set; } = default!;
+
+    [Required, ForeignKey("Player")]
+    public Guid PlayerUserId { get; set; }
+
+    public Player Player { get; set; } = default!;
+
+    [Required]
+    public DateTime SeenAt { get; set; }
 }
 
 [Table("poll_votes")]

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Goob Station Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Linq;
 using System.Threading.Tasks;
 using Content.Server.Administration;
@@ -6,7 +10,7 @@ using Robust.Shared.Console;
 
 namespace Content.Goobstation.Server.Polls;
 
-[AdminCommand(AdminFlags.Admin)]
+[AdminCommand(AdminFlags.Polls)]
 public sealed class CreatePollCommand : LocalizedEntityCommands
 {
     [Dependency] private readonly PollManager _pollManager = default!;
@@ -76,7 +80,7 @@ public sealed class CreatePollCommand : LocalizedEntityCommands
     }
 }
 
-[AdminCommand(AdminFlags.Admin)]
+[AdminCommand(AdminFlags.Polls)]
 public sealed class ClosePollCommand : LocalizedEntityCommands
 {
     [Dependency] private readonly PollManager _pollManager = default!;

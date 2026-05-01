@@ -1,0 +1,26 @@
+- type: entity
+  id: BookshelfGuidebooksFilled
+  parent: BookshelfGuidebooks
+  suffix: filled
+  components:
+  - type: StorageFill
+    contents:
+    # ALL GUIDEBOOKS, ONLY GUIDEBOOKS. Imp guidebooks sorted in alphabetically by item name, not including titles that start with an article
+    - id: BookBartendersManual #bartender's manual
+    - id: BookChemicalCompendium #chempendium
+    - id: BookEngineersHandbook #engineer's handbook
+    - id: BookHowToCookForFortySpaceman #How To Cook For Forty Spacemen
+    - id: BookHowToKeepStationClean #how to keep station clean
+    - id: BookHowToRockAndStone #how to rock and stone
+    - id: BookHowToSurvive #how to survive
+    - id: BookLeafLoversSecret #leaf lover's secret
+    - id: BookMedicalReferenceBook #medical reference book
+    - id: BookAtmosAirAlarms #Newton's Guide to Atmos: Air Alarms
+    - id: BookAtmosDistro #Newton's Guide to Atmos: The Distro
+    - id: BookAtmosVentsMore #Newton's Guide to Atmos: Vents and More
+    - id: BookAtmosWaste #Newton's Guide to Atmos: Waste
+    - id: BookScientistsGuidebook #scientist's guidebook
+    - id: BookSecurity #security 101
+    - id: BookSpaceEncyclopedia #space encyclopedia
+    - id: BookSpaceLaw #space law
+    - id: BookTheBookOfControl #the book of control

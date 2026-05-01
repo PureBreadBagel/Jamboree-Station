@@ -203,25 +203,25 @@
   - type: DamageOtherOnHit
     damage:
       types:
-  # Goobstation Edit Start - Moth food
-  - type: Food
-    requiresSpecialDigestion: true
-    delay: 15
-    forceFeedDelay: 15
-  - type: BadFood
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-  - type: FlavorProfile
-    flavors:
-    - paper
-    ignoreReagents:
-    - Fiber
-  # Goobstation Edit End
+  - type: ContainerContainer
+    containers:
+      stash: !type:ContainerSlot {}
+  - type: Speech
+    speechVerb: Default # for pais (In the secret stash)
+  - type: SecretStash
+    secretStashName: secret-stash-book
+    blacklist:
+      components:
+      - SecretStash
+      - NukeDisk
+      tags:
+      - QuantumSpinInverter
+      - FakeNukeDisk
+  - type: ToolOpenable
+    openToolQualityNeeded: Slicing
+    closeToolQualityNeeded: null # can't exactly un-cut a book
+    hasVerbs: false
+    name: secret-stash-book
 
 - type: entity
   id: BookSpaceEncyclopedia
@@ -590,6 +590,9 @@
       color: gold
   - type: Paper
     content: book-text-atmos-distro
+  - type: Tag #imp
+    tags:
+    - Book
 
 - type: entity
   parent: BookBase
@@ -609,6 +612,9 @@
       color: gold
   - type: Paper
     content: book-text-atmos-waste
+  - type: Tag #imp
+    tags:
+    - Book
 
 - type: entity
   parent: BookBase
@@ -628,6 +634,9 @@
       color: gold
   - type: Paper
     content: book-text-atmos-alarms
+  - type: Tag #imp
+    tags:
+    - Book
 
 - type: entity
   parent: BookBase
