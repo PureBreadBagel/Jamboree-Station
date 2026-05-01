@@ -1206,3 +1206,13 @@ Entries:
       message: Added a tutu to the Autodrobe. Now you can do ballet... I guess...
   id: 113
   time: '2026-04-26T07:15:12.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added several new pieces of sports equipment to the visiting mime ship!
+        If you see a mime ghost role, JOIN IN AS IT!!!
+    - type: Tweak
+      message: Added cameras, turret controls, and more for AI convenience to Cluster!
+  id: 114
+  time: '2026-04-30T20:29:47.0000000+00:00'
