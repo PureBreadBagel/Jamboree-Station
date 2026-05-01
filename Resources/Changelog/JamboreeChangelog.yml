@@ -1259,3 +1259,28 @@ Entries:
         trinket menu, and the new balls in the trinket menu!
   id: 116
   time: '2026-05-01T04:38:18.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the polling booth, and item that allows admins to create in game
+        polls that last between rounds! They are mapped in the libraries of
+        Amber, Atlas, Byoin, Cluster, Glacier, Packed, Omega, Reach, and
+        Saltern! (the same goes for the other changes in this PR
+    - type: Add
+      message: >-
+        Added the document printer, a lathe with a large reservoir of premade
+        docs to use in many cases! They are mapped in the HOP's office and the
+        library, but also appear as flatpacks in every command member's locker!
+        (And the ntr and warden's lockers!)
+    - type: Add
+      message: >-
+        Added the guidebookshelf, a bookshelf in every library full of
+        guidebooks! If you need to learn, heading to the library is finally the
+        way to go!
+    - type: Tweak
+      message: >-
+        Central Command has been updated with a polling area, a guidebookshelf,
+        and multiple document printers!
+  id: 117
+  time: '2026-05-01T05:59:39.0000000+00:00'
