@@ -1230,3 +1230,32 @@ Entries:
       message: Fake Jordans are no longer contraband.
   id: 115
   time: '2026-05-01T03:41:37.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the Magic 9 Ball! Select it in your trinket menu or go to your
+        nearest Good Clean Fun to learn the answers of the universe!
+    - type: Add
+      message: >-
+        Added the Honkmother Mitre! Now chaplains and clowns can both show their
+        allegiance to the Honkmother, hallowed be her name.
+    - type: Add
+      message: >-
+        Added the press hat and press vest for reporter! Gotta look good when
+        snooping around!
+    - type: Tweak
+      message: >-
+        Chaplains, Boxers, and Radio Hosts can now have alternate names for
+        their jobs! Now people will know when you really are holy!
+    - type: Tweak
+      message: >-
+        Balls have been added to the trinket menu and the SweatMax vending
+        machine! Time to break some legs out there!
+    - type: Tweak
+      message: >-
+        Several things in the loadout have been placed into groups. Some
+        include: All colored assistant jumpsuits and skirts, doodads in the
+        trinket menu, and the new balls in the trinket menu!
+  id: 116
+  time: '2026-05-01T04:38:18.0000000+00:00'
