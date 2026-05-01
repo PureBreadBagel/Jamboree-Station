@@ -247,6 +247,7 @@ loadout-group-medical-glasses = Medical glasses
 
 # Wildcards
 loadout-group-reporter-jumpsuit = Reporter jumpsuit
+loadout-group-reporter-head = Reporter hat
 
 loadout-group-psychologist-jumpsuit = Psychologist jumpsuit
 

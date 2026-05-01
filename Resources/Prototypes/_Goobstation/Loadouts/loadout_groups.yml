@@ -1146,8 +1146,9 @@
 - type: loadoutGroup
   id: ReporterOuterClothing
   name: loadout-group-reporter-outerclothing
+  minLimit: 0 #added
   loadouts:
-  - NoPro
+  - ReporterPressVest #wizden
 
 - type: loadoutGroup
   id: ReporterEnvirohelm

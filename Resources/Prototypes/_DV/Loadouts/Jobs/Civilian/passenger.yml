@@ -121,111 +121,133 @@
   id: GreyTurtleneck
   equipment:
     jumpsuit: ClothingUniformTurtleneckColorGrey
+  groupBy: "turtles"
 
 - type: loadout
   id: GreyTurtleneckSkirt
   equipment:
     jumpsuit: ClothingUniformTurtleneckSkirtColorGrey
+  groupBy: "turtleskirt"
 
 - type: loadout
   id: WhiteTurtleneck
   equipment:
     jumpsuit: ClothingUniformTurtleneckColorWhite
+  groupBy: "turtles"
 
 - type: loadout
   id: WhiteTurtleneckSkirt
   equipment:
     jumpsuit: ClothingUniformTurtleneckSkirtColorWhite
+  groupBy: "turtleskirt"
 
 - type: loadout
   id: BlackTurtleneck
   equipment:
     jumpsuit: ClothingUniformTurtleneckColorBlack
+  groupBy: "turtles"
 
 - type: loadout
   id: BlackTurtleneckSkirt
   equipment:
     jumpsuit: ClothingUniformTurtleneckSkirtColorBlack
+  groupBy: "turtleskirt"
 
 - type: loadout
   id: RedTurtleneck
   equipment:
     jumpsuit: ClothingUniformTurtleneckColorRed
+  groupBy: "turtles"
 
 - type: loadout
   id: RedTurtleneckSkirt
   equipment:
     jumpsuit: ClothingUniformTurtleneckSkirtColorRed
+  groupBy: "turtleskirt"
 
 - type: loadout
   id: BlueTurtleneck
   equipment:
     jumpsuit: ClothingUniformTurtleneckColorBlue
+  groupBy: "turtles"
 
 - type: loadout
   id: BlueTurtleneckSkirt
   equipment:
     jumpsuit: ClothingUniformTurtleneckSkirtColorBlue
+  groupBy: "turtleskirt"
 
 - type: loadout
   id: YellowTurtleneck
   equipment:
     jumpsuit: ClothingUniformTurtleneckColorYellow
+  groupBy: "turtles"
 
 - type: loadout
   id: YellowTurtleneckSkirt
   equipment:
     jumpsuit: ClothingUniformTurtleneckSkirtColorYellow
+  groupBy: "turtleskirt"
 
 - type: loadout
   id: GreenTurtleneck
   equipment:
     jumpsuit: ClothingUniformTurtleneckColorGreen
+  groupBy: "turtles"
 
 - type: loadout
   id: GreenTurtleneckSkirt
   equipment:
     jumpsuit: ClothingUniformTurtleneckSkirtColorGreen
+  groupBy: "turtleskirt"
 
 - type: loadout
   id: OrangeTurtleneck
   equipment:
     jumpsuit: ClothingUniformTurtleneckColorOrange
+  groupBy: "turtles"
 
 - type: loadout
   id: OrangeTurtleneckSkirt
   equipment:
     jumpsuit: ClothingUniformTurtleneckSkirtColorOrange
+  groupBy: "turtleskirt"
 
 - type: loadout
   id: PurpleTurtleneck
   equipment:
     jumpsuit: ClothingUniformTurtleneckColorPurple
+  groupBy: "turtles"
 
 - type: loadout
   id: PurpleTurtleneckSkirt
   equipment:
     jumpsuit: ClothingUniformTurtleneckSkirtColorPurple
+  groupBy: "turtleskirt"
 
 - type: loadout
   id: PinkTurtleneck
   equipment:
     jumpsuit: ClothingUniformTurtleneckColorPink
+  groupBy: "turtles"
 
 - type: loadout
   id: PinkTurtleneckSkirt
   equipment:
     jumpsuit: ClothingUniformTurtleneckSkirtColorPink
+  groupBy: "turtleskirt"
 
 - type: loadout
   id: TealTurtleneck
   equipment:
     jumpsuit: ClothingUniformTurtleneckColorTeal
+  groupBy: "turtles"
 
 - type: loadout
   id: TealTurtleneckSkirt
   equipment:
     jumpsuit: ClothingUniformTurtleneckSkirtColorTeal
+  groupBy: "turtleskirt"
 
 - type: loadout
   id: NavalCoat

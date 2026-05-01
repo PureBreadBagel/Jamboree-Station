@@ -31,7 +31,7 @@
 - type: loadout
   id: NoPro
   equipment:
-    outerClothing: SurveillanceWirelessCameraBodyEntertainment
+    neck: SurveillanceWirelessCameraBodyEntertainment
 
 - type: loadout
   id: LoadoutHonkopsMask

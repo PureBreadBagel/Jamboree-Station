@@ -296,6 +296,7 @@
 
 - type: roleLoadout
   id: JobChaplain
+  canCustomizeName: true #wizden
   groups:
   - GroupTankHarness
   - ChaplainHead
@@ -869,6 +870,7 @@
   id: JobReporter
   groups:
   - GroupTankHarness
+  - ReporterHead
   - ReporterJumpsuit
   - ReporterOuterClothing # Goobstation - Bodycams
   - CommonBackpack
@@ -902,6 +904,7 @@
 
 - type: roleLoadout
   id: JobBoxer
+  canCustomizeName: true
   groups:
   - GroupTankHarness
   - BoxerJumpsuit
