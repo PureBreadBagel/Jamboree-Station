@@ -1216,3 +1216,17 @@ Entries:
       message: Added cameras, turret controls, and more for AI convenience to Cluster!
   id: 114
   time: '2026-04-30T20:29:47.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the Travel Camera! Check your nearest maints locker for the chance
+        of having a picture day! Alien Tourists get them for free!
+    - type: Tweak
+      message: >-
+        Alien Tourists now have a slightly updated ship! New merch, a new
+        holopad, and a jukebox for real vacation vibes!
+    - type: Tweak
+      message: Fake Jordans are no longer contraband.
+  id: 115
+  time: '2026-05-01T03:41:37.0000000+00:00'
