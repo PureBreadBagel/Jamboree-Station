@@ -16,4 +16,7 @@
     - trigger:
         !type:DamageTrigger
         damage: 90 # three times stronger than a normal bookshelf so people will smash those for wood first
+  - type: Storage
+    grid:
+    - 0,0,9,3
     maxItemSize: Normal

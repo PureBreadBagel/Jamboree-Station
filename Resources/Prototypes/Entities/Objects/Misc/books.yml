@@ -593,7 +593,6 @@
   - type: Tag #imp
     tags:
     - Book
-    - Guidebook
 
 - type: entity
   parent: BookBase
@@ -616,7 +615,6 @@
   - type: Tag #imp
     tags:
     - Book
-    - Guidebook
 
 - type: entity
   parent: BookBase
@@ -639,7 +637,6 @@
   - type: Tag #imp
     tags:
     - Book
-    - Guidebook
 
 - type: entity
   parent: BookBase
