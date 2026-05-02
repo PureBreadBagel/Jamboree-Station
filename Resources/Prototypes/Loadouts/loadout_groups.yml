@@ -2232,6 +2232,11 @@
   loadouts:
   - BoxerShorts
   - BoxerShortsWithTop
+  # DV additions
+  - WrestlerCostumeGreen
+  - WrestlerCostumeRed
+  - WrestlerCostumeBlue
+  - WrestlerCostumeYellow
 
 - type: loadoutGroup
   id: BoxerGloves
@@ -2241,6 +2246,15 @@
   - BlueBoxingGloves
   - GreenBoxingGloves
   - YellowBoxingGloves
+
+- type: loadoutGroup
+  id: BoxerMask
+  name: loadout-group-boxer-mask
+  minLimit: 0
+  loadouts:
+  - BoxerDominoMask
+  - WrestlingMaskLuchaRed
+  - WrestlingMaskLuchaBlue
 
 # Other
 - type: loadoutGroup

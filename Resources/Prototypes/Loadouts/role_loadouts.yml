@@ -907,6 +907,7 @@
   canCustomizeName: true
   groups:
   - GroupTankHarness
+  - BoxerMask #DV
   - BoxerJumpsuit
   - BoxerGloves
   - CommonBackpack
