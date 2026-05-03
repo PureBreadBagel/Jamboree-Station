@@ -1284,3 +1284,23 @@ Entries:
         and multiple document printers!
   id: 117
   time: '2026-05-01T05:59:39.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Griffy, the Safety Dog, has come to the Jamboree Sector to lay down the
+        Mandate! As VIP Members, security can find our lovable mascot in the
+        armory!
+    - type: Add
+      message: >-
+        Cindy the Red Chaos Cat, known mascot figure and Syndicate Terrorist,
+        has entered the Jamboree Sector. Do not listen to their anarchist ways! 
+    - type: Tweak
+      message: >-
+        Added Griffy, the Safety Dog, to Amber, Atlas, Byoin, Cluster, Glacier,
+        Omega, Packed, and Saltern! Griffy's tour will extend to our full
+        catalog (alongside our other unmapped features) of stations soon!
+    - type: Tweak
+      message: Cluster has had it's AI satellite updated (again)
+  id: 118
+  time: '2026-05-03T08:00:28.0000000+00:00'
