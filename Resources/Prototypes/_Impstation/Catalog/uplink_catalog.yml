@@ -4,9 +4,6 @@
   description: uplink-mascot-cindy-suit-bundle-desc
   icon: { sprite: _Impstation/Clothing/OuterClothing/Hardsuits/cindysuit.rsi, state: full }
   productEntity: ClothingBackpackDuffelSyndicateFilledMascotCindy
-  discountCategory: veryRareDiscounts
-  discountDownTo:
-    Telecrystal: 25 #Jamboree - raised price for parity with the other stuff in uplinks
   cost:
     Telecrystal: 30 #Jamboree - raised price for parity with the other stuff in uplinks
   categories:

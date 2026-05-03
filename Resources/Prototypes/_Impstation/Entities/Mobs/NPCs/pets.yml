@@ -3,7 +3,6 @@
   parent: MobMcGriff
   components:
   - type: Sprite
-    drawDepth: Mobs
     sprite: _Impstation/Mobs/Pets/mascotgriffy.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
