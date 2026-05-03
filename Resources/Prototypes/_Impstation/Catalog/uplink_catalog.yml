@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: listing
+  id: UplinkMascotCindySuitBundle
+  name: uplink-mascot-cindy-suit-bundle-name
+  description: uplink-mascot-cindy-suit-bundle-desc
+  icon: { sprite: _Impstation/Clothing/OuterClothing/Hardsuits/cindysuit.rsi, state: full }
+  productEntity: ClothingBackpackDuffelSyndicateFilledMascotCindy
+  cost:
+    Telecrystal: 30 #Jamboree - raised price for parity with the other stuff in uplinks
+  categories:
+  - UplinkPointless
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+        - SurplusBundle

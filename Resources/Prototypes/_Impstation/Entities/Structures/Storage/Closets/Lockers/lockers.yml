@@ -1,0 +1,16 @@
+# Griffy
+- type: entity
+  id: LockerGriffy
+  parent: LockerBaseSecure
+  name: griffy suit locker
+  description: A standard-issue Nanotrasen mascot storage unit.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Impstation/Structures/Storage/closet.rsi
+  - type: AccessReader
+    access: [["Security"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: griffy
+    stateDoorOpen: griffy_open
+    stateDoorClosed: griffy_door
