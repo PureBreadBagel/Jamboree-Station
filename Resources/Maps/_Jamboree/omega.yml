@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/01/2026 00:20:39
-  entityCount: 13775
+  time: 05/03/2026 06:16:40
+  entityCount: 13776
 maps:
 - 1
 grids:
@@ -60211,13 +60211,6 @@ entities:
     - type: Transform
       pos: -37.5,22.5
       parent: 2
-- proto: GunSafeRifleLecter
-  entities:
-  - uid: 9131
-    components:
-    - type: Transform
-      pos: -37.5,20.5
-      parent: 2
 - proto: GunSafeShotgunKammerer
   entities:
   - uid: 9132
@@ -62115,6 +62108,13 @@ entities:
     - type: Transform
       pos: -4.5,26.5
       parent: 2
+- proto: LockerGriffyFilled
+  entities:
+  - uid: 4418
+    components:
+    - type: Transform
+      pos: -37.5,20.5
+      parent: 2
 - proto: LockerHeadOfPersonnelFilled
   entities:
   - uid: 9296
@@ -63878,6 +63878,13 @@ entities:
     components:
     - type: Transform
       pos: 10.5,52.5
+      parent: 2
+- proto: PlushieGriffy
+  entities:
+  - uid: 4419
+    components:
+    - type: Transform
+      pos: -36.21698,14.462713
       parent: 2
 - proto: PlushieLizard
   entities:
