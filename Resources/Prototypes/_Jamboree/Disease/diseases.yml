@@ -17,3 +17,22 @@
       DiseaseBehaviorFeelUnwell: 0.8
       DiseaseBehaviorHeadache: 0.3
       DiseaseBehaviorCough: 0.3
+
+- type: entity
+  id: DiseaseMalaria
+  parent: DiseaseBase
+  name: Malaria
+  description: Damn mosquitos...
+  components:
+  - type: Disease
+    diseaseType: Parasite
+    infectionRate: 0.02 # 80 seconds i think...
+    immunityGainRate: 1.0
+    genotype: 93357
+    effects:
+      DiseaseBehaviorFeelUnwell: 0.8
+      DiseaseBehaviorHeadache: 0.6
+      DiseaseBehaviorVomit: 0.5
+      DiseaseBehaviorCold: 0.2
+
+

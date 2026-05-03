@@ -1,0 +1,23 @@
+﻿- type: polymorph
+  id: Blonk
+  configuration:
+    entity: MobBlonk
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    polymorphSound: /Audio/Items/bikehorn.ogg
+    revertOnDeath: true
+    revertOnCrit: true
+
+- type: polymorph
+  id: Shadowkin
+  configuration:
+    entity: MobShadowkinRandom
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    polymorphSound: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
+    revertOnDeath: true
+    revertOnCrit: false

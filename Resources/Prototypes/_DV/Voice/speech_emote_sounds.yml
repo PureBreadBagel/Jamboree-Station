@@ -101,6 +101,8 @@
       collection: Wurble
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: SoundsHarpyMale
@@ -237,6 +239,8 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: MaleVulpkanin
@@ -287,6 +291,8 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: MobDog
@@ -345,6 +351,8 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: FemaleRodentia
@@ -385,6 +393,8 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: UnisexChitinid
@@ -427,6 +437,8 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: FemaleFeroxi
@@ -469,6 +481,8 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: MaleFeroxi
@@ -511,3 +525,5 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
