@@ -52,21 +52,25 @@
         on to do stun damage.
 
      - Sol Gloves
-        You must be wearing these gloves in order for the shield to
-        return to you. They are not insulated.
+        The shield will return to whomever is wearing these. They are not
+        insulated.
+
+     - Sergeant Sol Comic
+        A first edition comic book.
   sprite:
-    sprite: _Goobstation/Objects/Weapons/Guns/Battery/lawbringer.rsi
+    sprite: _Jamboree/Objects/Weapons/Melee/shields.rsi/solshield.rsi
     state: icon
   content:
   - SolShield
   - ClothingHandsGlovesSol
+  - BookSergeantSolComic
 
 - type: selectableSet
   id: NonlethalLauncherKit
   name: GL-06 Riot Grenade Launcher Kit
   description: |
     - GL-06 Riot Grenade Launcher
-      Will only load one 40mm shell at a time. Aim carefully.
+        Will only load one 40mm shell at a time. Aim carefully.
 
     - 40mm Baton Grenades x4
         Baton grenades will deal 80 stamina damage on contact,
@@ -156,7 +160,7 @@
   description: |
     - Firepower Mk.6 Armor
        Once toggled, the gauntlets can toggle from lethal and disabler modes.
-       The helmet has a voice modulator and MIDI player.
+       The helmet has a MIDI player.
 
     - Screwdriver
        Use this to remove the power cell in the suit.
@@ -188,7 +192,7 @@
   sprite:
     sprite: Objects/Devices/hand_teleporter.rsi
     state: icon
-  content: # TODO - merge tether and force guns for a special RD one
+  content:
   - HandTeleporter
   - WeaponTetherGun
   - WeaponForceGun
@@ -277,7 +281,7 @@
   id: HOPMusicianKit
   name: Musician Kit
   description: |
-     - MusicPen
+     - MusicPen™
         It's a pocket-sized supersynth, for your
         stealthy music operations.
 
@@ -287,13 +291,8 @@
     sprite: Objects/Fun/Instruments/h_synthesizer.rsi
     state: icon
   content:
-  - ClothingOuterCoatMusicianFurCoat
-  - SaxophoneInstrument
-  - TrumpetInstrument
-  - ViolinInstrument
-#  - SynthesizerInstrument # cmd selector fixes
+  - MusicPen
   - SuperSynthesizerInstrument # cmd selector fixes
-  - HarmonicaInstrument
 
 - type: selectableSet
   id: HOPBureaucratKit
@@ -387,8 +386,8 @@
         Choose which religion you wish to preach from
         a variety of choices.
   sprite:
-    sprite: Mobs/Pets/corgi.rsi
-    state: ian
+    sprite: _Jamboree/Objects/Misc/divingeguide.rsi
+    state: icon
   content:
   - DivineGuide
   - ClothingNeckStoleChaplain
@@ -794,18 +793,31 @@
         A disguised cane that holds a sabre. It's a bit
         duller than the captain's normal sabre.
 
-     - Captain Lollypops x4
+     - Captain Lollypops x2
         Yummy-licious! Give to the hostage holder
         to bolster negotiations.
+
+     - Nanotrasen Stoges Packet
+        Smoking IS good for you. These have medication
+        that releases into your system when smoked.
+
+     - Derringer
+        A very small, highly concealable pistol that
+        can only hold two rounds at a time. It fires
+        .22 magnum.
+
+     - .22 Magnum Box
+        14 rounds for the derringer.
   sprite:
-    sprite: Objects/Weapons/Melee/cane_blade.rsi
+    sprite: _Jamboree/Objects/Weapons/Guns/Pistols/derringer.rsi
     state: icon
   content:
   - CaneSheathFilledCaptain
   - FoodSnackLollypopWrappedCaptain
   - FoodSnackLollypopWrappedCaptain
-  - FoodSnackLollypopWrappedCaptain
-  - FoodSnackLollypopWrappedCaptain
+  - WeaponPistolDerringer
+  - MagazineBoxMagnum22
+  - CigPackBlueshield
 
 - type: selectableSet
   id: CapPirateKit
@@ -821,7 +833,7 @@
         screaming.
 
      - .45 Magnum Ammunition Box
-        Ammunition for the revolver.
+        12 rounds for the revolver.
   sprite:
     sprite: Objects/Weapons/Guns/Revolvers/pirate_revolver.rsi
     state: icon

@@ -1,0 +1,10 @@
+﻿- type: entity
+  id: BulletMagnum22
+  name: bullet (.22 magnum)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 15

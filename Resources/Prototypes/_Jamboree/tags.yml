@@ -3,3 +3,6 @@
 
 - type: Tag
   id: CartridgeQuarterCannon
+
+- type: Tag
+  id: CartridgeMagnum22

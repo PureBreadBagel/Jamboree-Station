@@ -8,13 +8,14 @@
     sprite: _Jamboree/Objects/Weapons/Melee/captainflag.rsi
     state: icon
   - type: MeleeWeapon
-    wideAnimationRotation: 250
     attackRate: 0.75
+    animationRotation: -135
+    wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 15
+        Blunt: 12.5
     soundHit:
-      path: /Audio/Weapons/bladeslice.ogg
+      path: /Audio/Weapons/genhit3.ogg
   - type: Item
     size: Normal
     sprite: _Jamboree/Objects/Weapons/Melee/captainflaginhand.rsi
@@ -24,3 +25,5 @@
     weaponAction: ActionCaptainRally
   - type: StealTarget
     stealGroup: Captain
+  - type: MeleeRequiresWield
+  - type: Wieldable

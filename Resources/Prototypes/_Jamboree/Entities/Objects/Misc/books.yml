@@ -1,0 +1,12 @@
+﻿- type: entity
+  id: BookSergeantSolComic
+  parent: [ BaseItem, BaseCommandContraband ]
+  name: sergeant sol volume 1 comic book
+  description: A first edition sergeant sol comic book. These are VERY hard to come by. Don't let it fall into the wrong hands.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Objects/Misc/Books/solcomic.rsi
+    layers:
+    - state: icon
+  - type: StealTarget
+    stealGroup: HOS

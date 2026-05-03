@@ -2,23 +2,29 @@
   name: sol shield
   parent: [ BaseItem, BaseCommandContraband ]
   id: SolShield
-  description: A sharp blade with a cane shaped hilt, the captain's insignia is engraved on the base of the blade.
+  description: A replica of Sergeant Sol's shield. It functions as a stun baton, and will return to whomever is wearing the gloves when thrown.
   components:
-  - type: Sharp
   - type: Sprite
-    sprite: Objects/Weapons/Melee/cane_blade.rsi
-    state: icon
+    sprite: _Jamboree/Objects/Weapons/Melee/shields.rsi/solshield.rsi
+    layers:
+    - states: icon
+      map: [ "enum.ToggleableVisuals.Layer" ]
   - type: MeleeWeapon
     wideAnimationRotation: 65
     attackRate: 1.25
     damage:
       types:
-        Slash: 15
+        Blunt: 10
+    bluntStaminaDamageFactor: 0.0
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Blunt: 0
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: Item
     size: Normal
-    sprite: Objects/Weapons/Melee/cane_blade.rsi
+    heldPrefix: off
   - type: Tag
     tags:
     - CaneBlade
@@ -26,9 +32,6 @@
   - type: Execution
   - type: StealTarget # Jamboree - cmd/steal gear tweaks
     stealGroup: HOS
-  - type: Boomerang
-    returnSpeed: 15
-    maxHops: 4
   - type: SolShield
   - type: Blocking
     passiveBlockModifier:
@@ -47,9 +50,58 @@
       types:
         Blunt: 4
   - type: ItemToggle
+    predictable: false
+    soundActivate:
+      collection: sparks
+      params:
+        variation: 0.250
+    soundDeactivate:
+      collection: sparks
+      params:
+        variation: 0.250
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+      params:
+        variation: 0.250
   - type: ComponentToggler
     components:
     - type: StaminaDamageOnCollide
-      damage: 50
+      damage: 20
+    - type: DamageOtherOnHit
+      damage:
+        types:
+          Blunt: 0
   - type: UseDelay
-    useDelay: 5
+    useDelay: stunbaton
+  - type: ItemTogglePrefix
+    prefixOn: on
+    prefixOff: off
+  - type: StaminaDamageOnHit
+    damage: 15
+    overtime: 30
+    lightAttackDamageMultiplier: 4
+    lightAttackOvertimeDamageMultiplier: 0
+    sound: /Audio/Weapons/egloves.ogg
+  - type: DelayedKnockdownOnHit
+    useDelay: stunbaton
+  - type: UseDelayBlockMelee
+    delays:
+    - stunbaton
+  - type: LandAtCursor
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { state: shield-active }
+          False: { state: icon }
+  - type: Appearance
+  - type: Stunbaton
+    energyPerUse: 50
+    lightAttackEnergyMultiplier: 2
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1
+    canEmp: true

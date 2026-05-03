@@ -38,14 +38,14 @@
   parent: [ClothingHandsBase, BaseCommandContraband]
   id: ClothingHandsGlovesSol
   name: sol gloves
-  description: Incredibly advanced medical technology, a defibrillator literally at your fingertips. You will need to remove the glove from your hand to use it.
+  description: Replicas of Sergeant Sol's gloves. Wearing these will allow the Sol Shield to return to you when thrown.
   components:
   - type: Sprite
-    sprite: _Jamboree/Clothing/Hands/Gloves/defibgloves.rsi
+    sprite: _Jamboree/Clothing/Hands/Gloves/solgloves.rsi
   - type: Clothing
-    sprite: _Jamboree/Clothing/Hands/Gloves/defibgloves.rsi
+    sprite: _Jamboree/Clothing/Hands/Gloves/solgloves.rsi
   - type: Fiber
-    fiberMaterial: fibers-latex
+    fiberMaterial: fibers-heroic
   - type: FingerprintMask
   - type: StealTarget # Jamboree - cmd/steal gear tweaks
     stealGroup: HOS

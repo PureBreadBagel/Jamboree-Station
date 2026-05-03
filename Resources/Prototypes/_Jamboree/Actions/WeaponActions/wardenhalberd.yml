@@ -19,8 +19,8 @@
   - type: Sprite
     sprite: _Jamboree/Effects/WeaponActions/wardenhalberdslash.rsi
     layers:
-    - state: halberdslash
-      scale: 1.2, 1.2
+    - state: effect
+      scale: 1.5, 1.5
       shader: unshaded
     noRot: false
   - type: Physics
@@ -48,7 +48,7 @@
     soundHit: null
     forceSound: true
   - type: TimedDespawn
-    lifetime: 0.52
+    lifetime: 0.30
   - type: Tag
     tags:
     - HideContextMenu

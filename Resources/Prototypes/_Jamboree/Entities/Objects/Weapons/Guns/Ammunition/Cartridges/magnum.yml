@@ -1,0 +1,20 @@
+﻿- type: entity
+  id: CartridgeMagnum22
+  name: cartridge (.22 magnum)
+  description: A small coin modeled after one used by an insignificant nation from the Sol system.
+  parent: [ BaseCartridgeMagnum, BaseCommandContraband ]
+  components:
+  - type: Tag
+    tags:
+    - CartridgeMagnum22
+  - type: CartridgeAmmo
+    proto: BulletMagnum22
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+    - state: tip
+      map: [ "enum.AmmoVisualLayers.Tip" ]
+      color: "#add8e6"
+  - type: Appearance

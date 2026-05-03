@@ -1,0 +1,13 @@
+﻿- type: entity
+  parent: [BaseItem, BaseCommandContraband]
+  id: DivineGuide
+  name: dummy's guide to the divine
+  description: A document containing the basics of enchanting and bible use. You will not be able to perform the more nuanced chaplain tasks with just this basic guide.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Objects/Misc/divingeguide.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: DivineGuide
+    spawnedProto: Ash
