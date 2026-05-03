@@ -6,9 +6,9 @@
   productEntity: ClothingBackpackDuffelSyndicateFilledMascotCindy
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 25
+    Telecrystal: 25 #Jamboree - raised price for parity with the other stuff in uplinks
   cost:
-    Telecrystal: 30
+    Telecrystal: 30 #Jamboree - raised price for parity with the other stuff in uplinks
   categories:
   - UplinkPointless
   conditions:
