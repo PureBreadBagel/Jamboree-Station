@@ -5,7 +5,7 @@
     Steel: 200
     Glass: 100
     Gold: 100
-    Bluespace: 100
+    BSCrystal: 100
 
 - type: latheRecipe
   id: EnergySodaDispenserMachineCircuitboard
@@ -13,4 +13,4 @@
   materials:
     Steel: 300
     Glass: 200
-    Bluespace: 110
+    BSCrystal: 110
