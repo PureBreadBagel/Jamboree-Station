@@ -128,7 +128,7 @@
   - type: Sprite
     sprite: Structures/smalldispensers.rsi
     drawdepth: SmallObjects
-    state: booze
+    state: industrial-working
   - type: EnergyReagentDispenser
     reagents:
       Vodka: 8
