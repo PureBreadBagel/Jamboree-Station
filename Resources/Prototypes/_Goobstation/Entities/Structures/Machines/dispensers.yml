@@ -125,10 +125,12 @@
   description: A bluespace dispenser that produces alcoholic reagents.
   components:
   - type: Rotatable
+  - type: Transform
+    noRot: false
   - type: Sprite
     sprite: Structures/smalldispensers.rsi
     drawdepth: SmallObjects
-    state: industrial-working
+    state: booze
   - type: EnergyReagentDispenser
     reagents:
       Vodka: 8

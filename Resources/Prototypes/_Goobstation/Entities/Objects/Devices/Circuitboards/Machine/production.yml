@@ -142,7 +142,28 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
-          
+
+- type: entity
+  id: EnergyBoozeDispenserMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: energy booze dispenser machine board
+  description: A machine printed circuit board for an energy booze dispenser.
+  components:
+    - type: Sprite
+      state: service
+    - type: MachineBoard
+      prototype: EnergyBoozeDispenser
+      stackRequirements:
+        Manipulator: 1
+        Glass: 2
+        Steel: 5
+      tagRequirements:
+        GlassBeaker:
+          amount: 2
+          defaultPrototype: Beaker
+
+
+
 - type: entity
   id: TelecomTransmitterCircuitboard
   parent: BaseMachineCircuitboard
