@@ -1,6 +1,7 @@
 - type: entity
   id: TaskVial
   parent: BaseChemistryEmptyVial
+  suffix: TASK
   description: A special vial, that could be inserted inside a NTRs task console.
   components:
   - type: Tag
@@ -10,6 +11,7 @@
 - type: entity
   id: TaskBottle
   parent: DrinkGlass
+  suffix: TASK
   components:
   - type: Tag
     tags:
@@ -19,6 +21,7 @@
 - type: entity
   id: TaskJug
   parent: Jug
+  suffix: TASK
   components:
   - type: Tag
     tags:
