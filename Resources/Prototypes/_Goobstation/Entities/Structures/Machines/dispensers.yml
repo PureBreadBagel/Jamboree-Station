@@ -112,6 +112,34 @@
       Potassium: 8
       # Radium: 15
       Silicon: 3
+      TableSalt: 10
       Sodium: 5
       Sugar: 5
       # Sulfur: 5
+
+
+- type: entity
+  id: EnergyBoozeDispenser
+  parent: EnergyChemDispenser
+  name: energy booze dispenser
+  description: A bluespace dispenser that produces alcoholic reagents.
+  components:
+  - type: Rotatable
+  - type: Sprite
+    sprite: Structures/smalldispensers.rsi
+    drawdepth: SmallObjects
+    state: booze
+  - type: EnergyReagentDispenser
+    reagents:
+      Vodka: 8
+      Gin: 8
+      Rum: 8
+      Tequila: 8
+      Whiskey: 8
+  - type: GuideHelp
+    guides:
+    - Bartender
+    - Drinks
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
