@@ -351,6 +351,7 @@
   - SyringeBluespace
   - MedkitCombat # Goobstation - remove medkitcombat from static to research
   - VialBluespace # goob edit - bluespace vials
+  - EnergyChemDispenserMachineCircuitboard # Jamboree - move E-Chem board from static to research
   # Goobstation R&D Console rework start
   position: 4,5
   technologyPrerequisites:
