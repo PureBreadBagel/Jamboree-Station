@@ -136,8 +136,8 @@
       prototype: EnergyChemDispenser
       stackRequirements:
         Manipulator: 1
-        Glass: 1
-        Steel: 3
+        Glass: 5
+        Steel: 5
       tagRequirements:
         GlassBeaker:
           amount: 2
@@ -155,12 +155,32 @@
       prototype: EnergyBoozeDispenser
       stackRequirements:
         Manipulator: 1
-        Glass: 2
+        Glass: 5
         Steel: 5
       tagRequirements:
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+
+- type: entity
+  id: EnergySodaDispenserMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: energy soda dispenser machine board
+  description: A machine printed circuit board for an energy soda dispenser.
+  components:
+  - type: Sprite
+    state: service
+  - type: MachineBoard
+    prototype: EnergySodaDispenser
+    stackRequirements:
+      Manipulator: 1
+      Glass: 5
+      Steel: 5
+      tagRequirements:
+        GlassBeaker:
+          amount: 2
+          defaultPrototype: Beaker
+
 
 
 

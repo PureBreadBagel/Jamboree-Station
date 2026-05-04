@@ -1,0 +1,16 @@
+- type: latheRecipe
+  id: EnergyBoozeDispenserMachineCircuitboard
+  result: EnergyBoozeDispenserMachineCircuitboard
+  materials:
+    Steel: 200
+    Glass: 100
+    Gold: 100
+    Bluespace: 100
+
+- type: latheRecipe
+  id: EnergySodaDispenserMachineCircuitboard
+  result: EnergySodaDispenserMachineCircuitboard
+  materials:
+    Steel: 300
+    Glass: 200
+    Bluespace: 110

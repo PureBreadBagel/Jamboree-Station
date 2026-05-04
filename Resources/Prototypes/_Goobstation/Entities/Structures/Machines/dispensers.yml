@@ -5,18 +5,10 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  id: EnergyChemDispenser
+  id: EnergyReagentDispenserBase
+  abstract: true
   parent: SmallConstructibleMachine
-  name: energy chemical dispenser
-  suffix: energy
-  description: A bluespace Chemical Dispenser that uses station energy to synthesize Reagents. The future is here and now.
-  placement:
-    mode: SnapgridCenter
   components:
-  - type: Sprite
-    sprite: Structures/dispensers.rsi
-    state: industrial-working
-    snapCardinals: true
   - type: Transform
     anchored: true
     noRot: true
@@ -72,14 +64,8 @@
   - type: StaticPrice
     price: 1000
   - type: WiresPanel
-  - type: GuideHelp
-    guides:
-    - Chemicals
-    - Chemist
   - type: StealTarget
     stealGroup: ChemDispenser
-  - type: Machine
-    board: EnergyChemDispenserMachineCircuitboard
   - type: ActivatableUI
     key: enum.EnergyReagentDispenserUiKey.Key
   - type: UserInterface
@@ -88,12 +74,33 @@
         type: EnergyReagentDispenserBoundUserInterface
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
-  - type: EnergyReagentDispenser #Keep on bottom for view's sake, format is reagentProto: Cost
+  - type: EnergyReagentDispenser
     energyBeakerSlot:
       whitelistFailPopup: reagent-dispenser-component-cannot-put-entity-message
       whitelist:
         components:
         - FitsInDispenser
+    reagents: {}
+
+
+- type: entity
+  id: EnergyChemDispenser
+  parent: EnergyReagentDispenserBase
+  name: energy chemical dispenser
+  suffix: energy
+  description: A bluespace Chemical Dispenser that uses station energy to synthesize Reagents. The future is here and now.
+  components:
+  - type: Sprite
+    sprite: Structures/dispensers.rsi
+    state: industrial-working
+    snapCardinals: true
+  - type: Machine
+    board: EnergyChemDispenserMachineCircuitboard
+  - type: GuideHelp
+    guides:
+    - Chemicals
+    - Chemist
+  - type: EnergyReagentDispenser
     reagents:
       Aluminium: 8
       Carbon: 3
@@ -104,43 +111,28 @@
       Hydrogen: 3
       Iodine: 8
       Iron: 5
-      # Lithium: 12
       Mercury: 12
       Nitrogen: 3
       Oxygen: 3
       Phosphorus: 5
       Potassium: 8
-      # Radium: 15
       Silicon: 3
       TableSalt: 10
       Sodium: 5
       Sugar: 5
-      # Sulfur: 5
 
 
 - type: entity
   id: EnergyBoozeDispenser
+  parent: EnergyReagentDispenserBase
   name: energy booze dispenser
-  suffix: Filled
-  description: A bluespace booze dispenser that uses station energy to produce alcoholic reagents.
-  parent: ReagentDispenserBase
+  description: A bluespace dispenser that produces alcoholic reagents.
   components:
-  - type: Rotatable
   - type: Sprite
     sprite: Structures/smalldispensers.rsi
-    drawdepth: SmallObjects
     state: booze
-  - type: Storage
-    openOnActivate: false
-    whitelist:
-      tags:
-      - DrinkBottle
-      - type: ContainerContainer
-    containers:
-      machine_board: !type:Container
-      machine_parts: !type:Container
-      energyBeakerSlot: !type:ContainerSlot
-      storagebase: !type:Container
+    drawdepth: SmallObjects
+  - type: Rotatable
   - type: Transform
     noRot: false
   - type: Machine
@@ -149,37 +141,49 @@
     guides:
     - Bartender
     - Drinks
-  - type: UserInterface
-    interfaces:
-      enum.EnergyReagentDispenserUiKey.Key:
-        type: EnergyReagentDispenserBoundUserInterface
-      enum.StorageUiKey.Key:
-        type: StorageBoundUserInterface
-  - type: EnergyReagentDispenser #Keep on bottom for view's sake, format is reagentProto: Cost
-    energyBeakerSlot:
-      whitelistFailPopup: reagent-dispenser-component-cannot-put-entity-message
-      whitelist:
-        components:
-        - FitsInDispenser
+  - type: EnergyReagentDispenser
     reagents:
-      Aluminium: 8
-      Carbon: 3
-      Chlorine: 12
-      Copper: 5
-      Ethanol: 8
-      Fluorine: 12
-      Hydrogen: 3
-      Iodine: 8
-      Iron: 5
-      # Lithium: 12
-      Mercury: 12
-      Nitrogen: 3
-      Oxygen: 3
-      Phosphorus: 5
-      Potassium: 8
-      # Radium: 15
-      Silicon: 3
-      TableSalt: 10
-      Sodium: 5
-      Sugar: 5
-      # Sulfur: 5
+      Ale: 8
+      Beer: 8
+      CoffeeLiqueur: 8
+      Cognac: 8
+      Gin: 8
+      Mead: 8
+      Rum: 8
+      Tequila: 8
+      Vermouth: 8
+      Vodka: 8
+      Whiskey: 8
+      Wine: 8
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
+
+
+- type: entity
+  id: EnergySodaDispenser
+  parent: EnergyReagentDispenserBase
+  name: energy soda dispenser
+  description: A bluespace dispenser that produces soda reagents.
+  components:
+  - type: Sprite
+    sprite: Structures/smalldispensers.rsi
+    state: soda
+    drawdepth: SmallObjects
+  - type: Machine
+    board: EnergySodaDispenserMachineCircuitboard
+  - type: GuideHelp
+    guides:
+    - Bartender
+    - Drinks
+  - type: EnergyReagentDispenser
+    reagents:
+      CoconutWater: 6
+      Coffee: 7
+      Cream: 8
+      GreenTea: 10
+      RootBeer: 8
+      CreamSoda: 8
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
