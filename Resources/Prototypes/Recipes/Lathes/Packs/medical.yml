@@ -105,7 +105,8 @@
   - ChemMasterMachineCircuitboard
   - CondenserMachineCircuitBoard
   - HotplateMachineCircuitboard
-  - EnergyChemDispenserMachineCircuitboard #Goob edit - all things that get base med boards get E-Chem
+
+
 
 ## Dynamic
 
@@ -117,6 +118,7 @@
   - SyringeCryostasis
   - BluespaceBeaker
   - SyringeBluespace
+  - EnergyChemDispenserMachineCircuitboard # Jamboree - move E-Chem board from static to research
   - MedkitCombat #goob - Move combat kit to research
   - VialBluespace # goob edit - bluespace vials
 

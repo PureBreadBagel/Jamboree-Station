@@ -158,18 +158,3 @@
     Plastic: 500
     Cloth: 500
 
-- type: latheRecipe
-  id: EnergyChemDispenserMachineCircuitboard
-  result: EnergyChemDispenserMachineCircuitboard
-  completetime: 15
-  materials:
-    Steel: 2000
-    Glass: 1000
-    Bluespace: 300
-    Gold: 500
-  technologyPrerequisites:
-  - BluespaceChemistry
-
-  icon:
-    sprite: Structures/dispensers.rsi
-    state: industrial-working

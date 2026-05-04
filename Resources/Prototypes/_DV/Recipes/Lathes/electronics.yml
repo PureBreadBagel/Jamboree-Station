@@ -9,3 +9,13 @@
   icon:
     sprite: _DV/Structures/Machines/advanced_microwave.rsi
     state: mw
+
+- type: latheRecipe
+  id: EnergyChemDispenserMachineCircuitboard
+  result: EnergyChemDispenserMachineCircuitboard
+  completetime: 15
+  materials:
+    Steel: 2000
+    Glass: 1000
+    Bluespace: 300
+    Gold: 500
