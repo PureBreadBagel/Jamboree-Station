@@ -155,5 +155,6 @@
       Glass: 62
       Plasma: 25
       Silver: 12
+      BSCrystal: 25
   - type: StaticPrice
     price: 65
