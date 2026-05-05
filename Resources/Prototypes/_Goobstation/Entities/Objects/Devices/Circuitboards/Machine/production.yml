@@ -138,6 +138,7 @@
         Manipulator: 1
         Glass: 5
         Steel: 5
+        BluespaceCrystal: 2
       tagRequirements:
         GlassBeaker:
           amount: 2
@@ -157,6 +158,7 @@
         Manipulator: 1
         Glass: 5
         Steel: 5
+        BluespaceCrystal: 1
       tagRequirements:
         GlassBeaker:
           amount: 2
@@ -176,6 +178,7 @@
       Manipulator: 1
       Glass: 5
       Steel: 5
+      BluespaceCrystal: 1
       tagRequirements:
         GlassBeaker:
           amount: 2

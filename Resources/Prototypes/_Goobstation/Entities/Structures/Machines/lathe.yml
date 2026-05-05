@@ -237,6 +237,7 @@
         - RawMaterial
         - Ingot
 
+
 - type: entity
   id: ServiceTechFab
   parent: [BaseLatheLube, BaseSiloUtilizer]
@@ -296,5 +297,6 @@
         - Sheet
         - RawMaterial
         - Ingot
+
 
 
