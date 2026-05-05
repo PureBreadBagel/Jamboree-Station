@@ -21,6 +21,7 @@
     tags:
     - BluespaceCrystal
     - RawMaterial
+    - Sheet
   - type: Stack
     stackType: Bluespace
     baseLayer: base
