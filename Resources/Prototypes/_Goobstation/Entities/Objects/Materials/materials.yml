@@ -20,7 +20,7 @@
 
 - type: entity
   parent: MaterialBase
-  id: MaterialBSCrystal
+  id: MaterialBSCrystalGS
   name: bluespace crystal
   suffix: Full
   components:
@@ -54,7 +54,7 @@
     - Ingot
 
 - type: entity
-  parent: MaterialBSCrystal
+  parent: MaterialBSCrystalGS
   id: MaterialBSCrystal1
   suffix: Single
   components:
@@ -62,7 +62,7 @@
     count: 1
 
 - type: entity # Jamboree
-  parent: MaterialBSCrystal
+  parent: MaterialBSCrystalGS
   id: MaterialBSCrystal3
   suffix: Plural
   components:
@@ -70,7 +70,7 @@
     count: 3
 
 - type: entity # Jamboree
-  parent: MaterialBSCrystal
+  parent: MaterialBSCrystalGS
   id: MaterialBSCrystal5
   suffix: Plural
   components:
@@ -78,7 +78,7 @@
     count: 5
 
 - type: entity
-  parent: MaterialBSCrystal
+  parent: MaterialBSCrystalGS
   id: MaterialBSCrystalUnprocessed
   name: unprocessed bluespace crystal
   suffix: Full
