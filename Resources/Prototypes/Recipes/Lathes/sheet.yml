@@ -34,7 +34,7 @@
 
 - type: latheRecipe
   id: BSCrystal1
-  result: MaterialBluespace1
+  result: MaterialBSCrystal1
   applyMaterialDiscount: false
   completetime: 1
   materials:

@@ -88,9 +88,9 @@
 - type: weightedRandomEntity
   id: OracleRewardCrystals
   weights:
-    MaterialBluespace1: 3 # Jamboree
-    MaterialBluespace3: 10 # Jamboree
-    MaterialBluespace5: 2 # Jamboree
+    MaterialBSCrystal1: 3 # Jamboree
+    MaterialBSCrystal3: 10 # Jamboree
+    MaterialSCrystal5: 2 # Jamboree
 
 - type: weightedRandom
   id: OracleRewardReagents

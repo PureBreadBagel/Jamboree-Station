@@ -2,7 +2,7 @@
   id: Bluespace
   name: stack-bluespace
   icon: { sprite: _EinsteinEngines/Objects/Materials/materials.rsi, state: bluespace }
-  spawn: MaterialBluespace1
+  spawn: MaterialBSCrystal1
   maxCount: 5
 
 - type: stack

@@ -1,6 +1,6 @@
 - type: material
   id: Bluespace
-  stackEntity: MaterialBluespace1
+  stackEntity: MaterialBSCrystal1
   name: materials-bluespace
   unit: materials-unit-piece
   icon: { sprite: _EinsteinEngines/Objects/Materials/materials.rsi, state: bluespace }
