@@ -5,6 +5,7 @@
     Steel: 200
     Glass: 100
     Gold: 300
+  technology: BluespaceChemistry
 
 - type: latheRecipe
   id: EnergySodaDispenserMachineCircuitboard
@@ -13,4 +14,4 @@
     Steel: 300
     Glass: 200
     Gold: 250
-
+  technology: BluespaceChemistry
