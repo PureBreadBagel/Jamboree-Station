@@ -90,7 +90,7 @@
   weights:
     MaterialBSCrystal1: 3 # Jamboree
     MaterialBSCrystal3: 10 # Jamboree
-    MaterialSCrystal5: 2 # Jamboree
+    MaterialBSCrystal5: 2 # Jamboree
 
 - type: weightedRandom
   id: OracleRewardReagents
