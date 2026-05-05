@@ -179,10 +179,10 @@
       Glass: 5
       Steel: 5
       BluespaceCrystal: 1
-      tagRequirements:
-        GlassBeaker:
-          amount: 2
-          defaultPrototype: Beaker
+    tagRequirements:
+      GlassBeaker:
+        amount: 2
+        defaultPrototype: Beaker
 
 
 
