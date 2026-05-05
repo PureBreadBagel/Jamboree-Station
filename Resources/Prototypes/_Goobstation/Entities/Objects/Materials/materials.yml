@@ -55,7 +55,7 @@
 
 - type: entity
   parent: MaterialBSCrystalGS
-  id: MaterialBSCrystal1
+  id: MaterialBSCrystal1GS
   suffix: Single
   components:
   - type: Stack
@@ -63,7 +63,7 @@
 
 - type: entity # Jamboree
   parent: MaterialBSCrystalGS
-  id: MaterialBSCrystal3
+  id: MaterialBSCrystal3GS
   suffix: Plural
   components:
   - type: Stack
@@ -71,7 +71,7 @@
 
 - type: entity # Jamboree
   parent: MaterialBSCrystalGS
-  id: MaterialBSCrystal5
+  id: MaterialBSCrystal5GS
   suffix: Plural
   components:
   - type: Stack
