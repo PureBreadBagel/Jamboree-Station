@@ -136,7 +136,6 @@
     - SharedBoards
     - ShuttleBoards
     - ShuttleBoardsGoob
-    - BluespaceTheory
     - ScienceClothing
     - ConstructionBagOfHolding
   - type: EmagLatheRecipes
@@ -274,6 +273,7 @@
     - TapeRecorderStatic
     - CondimentStatic
     dynamicPacks:
+    - BluespaceTheory
     - Janitor
     - Instruments
     - FauxTiles

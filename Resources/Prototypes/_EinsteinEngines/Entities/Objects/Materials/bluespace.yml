@@ -13,7 +13,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      Bluespace: 100
+      BSCrystal: 100
   - type: EmitSoundOnUse
     sound:
       collection: RadiationPulse
