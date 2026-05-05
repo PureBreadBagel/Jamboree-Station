@@ -41,6 +41,9 @@
     state: bluespace
   - type: Stack
     count: 1
+  - type: Tag
+    tags:
+    - RawMaterial
 
 - type: entity
   parent: MaterialBluespace1
@@ -49,6 +52,9 @@
   components:
   - type: Stack
     count: 3
+  - type: Tag
+    tags:
+    - RawMaterial
 
 - type: entity
   parent: MaterialBluespace1
@@ -57,7 +63,9 @@
   components:
   - type: Stack
     count: 5
-
+  - type: Tag
+    tags:
+    - RawMaterial
 - type: entity
   parent: MaterialBase
   id: MaterialNormality
