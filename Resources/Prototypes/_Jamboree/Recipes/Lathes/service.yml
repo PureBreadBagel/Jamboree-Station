@@ -19,3 +19,13 @@
     Glass: 200
     Gold: 250
 
+- type: latheRecipePack
+  id: EnergyChemicalDispensersService
+  recipes:
+    - EnergyBoozeDispenserMachineCircuitboard
+    - EnergySodaDispenserMachineCircuitboard
+
+- type: latheRecipePack
+  id: EnergyChemicalDispensersMedical
+  recipes:
+    -EnergyChemDispenserMachineCircuitboard
