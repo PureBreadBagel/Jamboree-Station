@@ -602,6 +602,8 @@
     # Goobstation Packs
     - SharedBoards
     - ShuttleBoardsGoob
+    - EnergyChemicalDispensersService
+    - EnergyChemicalDispensersMedical
 
   - type: MaterialStorage
     whitelist:
@@ -895,6 +897,7 @@
     # Einstein Engines Packs
     - Translators # Language
     - TranslatorImplanters # Language
+    - EnergyChemicalDispensersMedical
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: EmagLatheRecipes # Goobstation Packs
