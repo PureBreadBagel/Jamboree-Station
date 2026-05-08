@@ -272,7 +272,6 @@
     - TapeRecorderStatic
     - CondimentStatic
     dynamicPacks:
-    - BluespaceTheory
     - Janitor
     - Instruments
     - FauxTiles
@@ -287,6 +286,7 @@
     - ServiceBoardsGoob # goob
     # Einstein Engines Packs
     - Translators
+    - EnergyChemicalDispensersService
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ServiceBoardsEvilStatic # Donk Co microwave circiutboard

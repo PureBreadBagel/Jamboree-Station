@@ -19,6 +19,15 @@
     Glass: 200
     Gold: 250
 
+- type: latheRecipe
+  id: EnergyChemDispenserMachineCircuitboard
+  result: EnergyChemDispenserMachineCircuitboard
+  completetime: 15
+  materials:
+    Steel: 2000
+    Glass: 1000
+    Gold: 500
+
 - type: latheRecipePack
   id: EnergyChemicalDispensersService
   recipes:
@@ -28,4 +37,4 @@
 - type: latheRecipePack
   id: EnergyChemicalDispensersMedical
   recipes:
-    -EnergyChemDispenserMachineCircuitboard
+    - EnergyChemDispenserMachineCircuitboard
