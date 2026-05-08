@@ -89,7 +89,7 @@
     materialComposition:
       BSCrystalUnprocessed: 100
   - type: UnclaimedOre
-    miningPoints: 250
+    miningPoints: 1000
 
 - type: entity
   parent: MaterialBSCrystalUnprocessed
