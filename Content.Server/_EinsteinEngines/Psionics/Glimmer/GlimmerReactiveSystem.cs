@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Audio;
 using Content.Server.Power.Components;
 using Content.Server.Electrocution;
@@ -190,7 +194,7 @@ public sealed class GlimmerReactiveSystem : EntitySystem
 
     private void OnDestroyed(EntityUid uid, SharedGlimmerReactiveComponent component, DestructionEventArgs args)
     {
-        Spawn("MaterialBluespace1", Transform(uid).Coordinates);
+        Spawn("MaterialBSCrystal1", Transform(uid).Coordinates);
 
         var tier = _glimmerSystem.GetGlimmerTier();
         if (tier < GlimmerTier.High)

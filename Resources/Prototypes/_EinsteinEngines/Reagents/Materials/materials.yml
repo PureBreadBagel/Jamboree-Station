@@ -1,6 +1,10 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: material
   id: Bluespace
-  stackEntity: MaterialBluespace1
+  stackEntity: MaterialBSCrystal1
   name: materials-bluespace
   unit: materials-unit-piece
   icon: { sprite: _EinsteinEngines/Objects/Materials/materials.rsi, state: bluespace }

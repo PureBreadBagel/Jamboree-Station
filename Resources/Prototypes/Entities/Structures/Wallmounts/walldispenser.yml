@@ -66,8 +66,8 @@
         !type:DamageTrigger
         damage: 50
       behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
     - trigger:
         !type:DamageTypeTrigger
         damageType: Heat
@@ -101,7 +101,13 @@
           Quantity: 5000
   - type: DrainableSolution
     solution: tank
-  - type: ReagentTank
+  - type: SolutionRegeneration
+    solution: tank
+    duration: 5
+    generated:
+      reagents:
+      - ReagentId: SpaceCleaner
+        Quantity: 10
   - type: ExaminableSolution
     solution: tank
 

@@ -92731,7 +92731,7 @@ entities:
     - type: Transform
       pos: -16.526192,-30.49661
       parent: 2
-- proto: MaterialBluespace1
+- proto: MaterialBSCrystal1
   entities:
   - uid: 6677
     components:
@@ -94048,13 +94048,13 @@ entities:
         Recheck that all your pumps are on.
 
 
-        Now on your inlet into the burn chamber (typically a empty room with a pipe in and 1 pipe out of it) you want to input 2 gasses that are mixed, using 2 ports and a gas mixer, input plasma and oxygen at the following ratio: 3% plasma, 97% oxygen. With the following flow rate on a pump: 101.3. 
+        Now on your inlet into the burn chamber (typically a empty room with a pipe in and 1 pipe out of it) you want to input 2 gasses that are mixed, using 2 ports and a gas mixer, input plasma and oxygen at the following ratio: 3% plasma, 97% oxygen. With the following flow rate on a pump: 101.3.
 
 
         Now locate the entrance to the burn chamber and open one of the blast doors using either a nearbye button or a door remote (if you are CE). Immedietly place a holofan over the now open door to be left there.
 
 
-        On the side that is exposed to the teg room place one passive vent. On the side exposed to space place another passive vent. Then add a inlet pressure regulator to flow the gas into the vent in space from the interior vent, click it and set its threshhold to 4000, you may need to adjust this every now and then until its at a stable rate where the TeG stays at max output (the line on its middle part should be at green consistently). 
+        On the side that is exposed to the teg room place one passive vent. On the side exposed to space place another passive vent. Then add a inlet pressure regulator to flow the gas into the vent in space from the interior vent, click it and set its threshhold to 4000, you may need to adjust this every now and then until its at a stable rate where the TeG stays at max output (the line on its middle part should be at green consistently).
 
 
         Once the regulator is set up, activate the spare welder and throw it into the chamber to light the gas. Plasma and oxygen mixtures can be stubborn to light and this is NORMAL, give it 3-4 minutes and if it doesnt consistently light please check the following:
@@ -94366,7 +94366,7 @@ entities:
         For this ship, I give these remarks:
 
 
-        The de-commissioning of the NT-Adventurer is a true tragedy on every front. Where once this vessel served as a pioneer of the Jamboree Sector, it now remains here as a ruin on the Byoin station. 
+        The de-commissioning of the NT-Adventurer is a true tragedy on every front. Where once this vessel served as a pioneer of the Jamboree Sector, it now remains here as a ruin on the Byoin station.
 
 
         Central Command had promised its restoration. Said it would have been a symbol of "A new age of freedom". In the end, I suppose these are simply lies or things that fell through.
