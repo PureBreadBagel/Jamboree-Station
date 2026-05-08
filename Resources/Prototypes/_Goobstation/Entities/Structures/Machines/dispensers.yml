@@ -128,9 +128,9 @@
       Cryoxadone: 30
       Carbon: 10
       Copper: 8
-      Chlorine: 15
+      Chlorine: 10
       Ethanol: 8
-      Fluorine: 12
+      Fluorine: 10
       Hydrogen: 10
       Iron: 6
       Iodine: 10
@@ -139,15 +139,15 @@
       Nitrogen: 10
       Phosphorus: 8
       Potassium: 8
-      Radium: 20
+      Radium: 10
       Silicon: 8
-      Sodium: 15
+      Sodium: 10
       Sugar: 5
       Sulfur: 11
-      TableSalt: 11
+      TableSalt: 20
   - type: Battery
-    maxCharge: 1800
-    startingCharge: 1800
+    maxCharge: 3000
+    startingCharge: 3000
 
 
 
@@ -227,9 +227,6 @@
       Tea: 5
       TonicWater: 5
       Water: 1
-
-
-
   - type: Battery
     maxCharge: 2000
     startingCharge: 2000
