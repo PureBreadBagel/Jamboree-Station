@@ -5,6 +5,7 @@
 - type: latheRecipe
   id: EnergyBoozeDispenserMachineCircuitboard
   result: EnergyBoozeDispenserMachineCircuitboard
+  completetime: 10
   materials:
     Steel: 200
     Glass: 100
@@ -14,6 +15,7 @@
 - type: latheRecipe
   id: EnergySodaDispenserMachineCircuitboard
   result: EnergySodaDispenserMachineCircuitboard
+  completetime: 10
   materials:
     Steel: 300
     Glass: 200
