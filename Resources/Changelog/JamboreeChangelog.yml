@@ -1337,3 +1337,17 @@ Entries:
         their eChem boards once researched.
   id: 119
   time: '2026-05-08T05:12:17.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Fix
+      message: Echem booze and soda can now go on tables
+    - type: Fix
+      message: >-
+        Redundant bluespace oreprocessor now accepts unprocessed instead of
+        automatically turning bluespace processed.
+    - type: Fix
+      message: >-
+        Echem machine boards can now be assembled by hand rather than just being
+        only flatpacked.
+  id: 120
+  time: '2026-05-08T18:22:52.0000000+00:00'
