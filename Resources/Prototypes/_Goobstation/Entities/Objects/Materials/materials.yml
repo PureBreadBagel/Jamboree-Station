@@ -85,6 +85,9 @@
   components:
   - type: Stack
     stackType: BSCrystalUnprocessed
+  - type: PhysicalComposition
+    materialComposition:
+      BSCrystalUnprocessed: 100
   - type: UnclaimedOre
     miningPoints: 250
 

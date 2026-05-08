@@ -33,12 +33,12 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: latheRecipe
-  id: BSCrystal1
+  id: BSCrystal1Raw
   result: MaterialBSCrystal1
   applyMaterialDiscount: false
   completetime: 1
   materials:
-    BSCrystal: 250
+    BSCrystalUnprocessed: 250
 
 
 - type: latheRecipe
