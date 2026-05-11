@@ -36,10 +36,10 @@
     JugSulfur: 1
   contrabandInventory:
     DrinkLithiumFlask: 1
+  emaggedInventory: # Goobsation
     StrangePill: 3
     ChemistryBottleToxin: 1
     ChemistryBottleLead: 2
-  emaggedInventory: # Goobsation
     VestineChemistryVial: 1
 
 - type: vendingMachineInventory

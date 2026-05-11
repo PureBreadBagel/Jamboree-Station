@@ -160,8 +160,6 @@
     ClothingUniformJumpsuitPirateLuffy: 1 #frontier
     ClothingShoesBootsPirateLuffy: 1 #frontier
     ClothingShoesBling: 1
-    ClothingShoesBootsCowboyFancy: 1
-    ClothingOuterDogi: 1
     ClothingMaskSexyClown: 1
     ClothingMaskSexyMime: 1
     ClothingHeadHatCowboyBountyHunter: 1
@@ -177,3 +175,5 @@
   emaggedInventory: # goob
     ClothingOuterPonchoClassicRobust: 1
     ClothingHeadHatCowboyBrownRobust: 1
+    ClothingShoesBootsCowboyFancy: 1 #jamboree, moved for similar reasoning as Dogi
+    ClothingOuterDogi: 1 #jamboree, moved to emagged cause it is an armor providing item
