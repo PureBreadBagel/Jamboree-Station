@@ -1,6 +1,5 @@
 ﻿using Content.Goobstation.Shared.Boomerang;
 using Content.Shared._Jamboree.CommandGear.SolShield;
-using Content.Shared.Clothing;
 using Content.Shared.Inventory;
 using Content.Shared.Throwing;
 
@@ -23,15 +22,20 @@ public sealed class SolShieldSystem : EntitySystem
 
         var user = args.User.Value;
 
-        var boomerang = EnsureComp<BoomerangComponent>(uid);
+        if (TryComp<BoomerangComponent>(uid, out var existing) &&
+            existing.Thrower != null)
+            return;
 
-        boomerang.Thrower = null;
-
-        if (_inventory.TryGetSlotEntity(user, "gloves", out var gloves) &&
-            HasComp<SolGlovesComponent>(gloves.Value))
+        if (!_inventory.TryGetSlotEntity(user, "gloves", out var gloves) ||
+            gloves is not {} gloveUid ||
+            !HasComp<SolGlovesComponent>(gloveUid))
         {
-            _boomerang.SetThrower((uid, boomerang), user);
+            RemCompDeferred<BoomerangComponent>(uid);
+            return;
         }
+
+        var boomerang = EnsureComp<BoomerangComponent>(uid);
+        _boomerang.SetThrower((uid, boomerang), user);
     }
 
     private void OnLanded(EntityUid uid, SolShieldComponent component, LandEvent args)
@@ -40,15 +44,17 @@ public sealed class SolShieldSystem : EntitySystem
             return;
 
         if (boomerang.Thrower == null)
+        {
+            RemCompDeferred<BoomerangComponent>(uid);
             return;
+        }
 
         var thrower = boomerang.Thrower.Value;
 
         if (!_inventory.TryGetSlotEntity(thrower, "gloves", out var gloves) ||
             !HasComp<SolGlovesComponent>(gloves.Value))
         {
-            boomerang.Thrower = null;
-            component.Thrown = false;
+            RemCompDeferred<BoomerangComponent>(uid);
         }
     }
 }

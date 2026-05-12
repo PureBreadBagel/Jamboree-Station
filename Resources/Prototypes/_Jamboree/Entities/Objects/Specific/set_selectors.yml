@@ -32,7 +32,7 @@
   - type: SetSelector
     possibleSets:
     - EnergyRevolverKit
-#    - HOSSniperKit # TODO - finish this
+    - HOSSniperKit
     - HOSSolKit
     - LawbringerKit
     - NonlethalLauncherKit

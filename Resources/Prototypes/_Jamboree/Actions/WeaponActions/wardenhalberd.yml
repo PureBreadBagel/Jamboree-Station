@@ -1,7 +1,7 @@
 - type: entity
   id: ActionWardenHalberd
   name: Sweep
-  description: Perform a sweeping motion with the halberd, hitting an area infront of you.
+  description: Perform a sweeping motion, hitting an area infront of you.
   components:
   - type: InstantAction
     event: !type:EventWardenHalberdAction
@@ -44,7 +44,7 @@
     penetrate: true
     damage:
       types:
-        Blunt: 30
+        Slash: 0
     soundHit: null
     forceSound: true
   - type: TimedDespawn

@@ -22,14 +22,22 @@
   - ClothingBeltHolsterFilledBlueshield
   - HOSHoloCigar
 
-#- type: selectableSet
-#  id: HOSSniperKit
-#  name: Marksman Kit
-#  description: Includes the HB-92 "Kovalskyi" sniper rifle. Pick your targets wisely.
-#  sprite:
-#    sprite: _Goobstation/Objects/Weapons/Guns/Battery/erevolver.rsi
-#    state: icon
-#  content: # TODO - add HB-92 "Kovalskyi"
+- type: selectableSet
+  id: HOSSniperKit
+  name: Marksman Kit
+  description: |
+    - HB-92 "Kovalskyi" Marksman Laser
+        A destructive laser sniper. An accuracy module allows you to
+        aim further without using a scope.
+
+    - Railgun Capacitor x1
+        Ammunition for the Kovalskyi. It must be recharged after 3 shots.
+  sprite:
+    sprite: _Jamboree/Objects/Weapons/Guns/Snipers/kovalskyi.rsi
+    state: icon
+  content:
+  - WeaponSniperRailgun
+  - MagazineRailgun
 
 - type: selectableSet
   id: LawbringerKit
@@ -494,7 +502,7 @@
   name: Electrician Kit
   description: |
      - Antique Power Cell
-        It's a microreactor powercell but older
+        It's a microreactor power cell but older
         and more cool looking.
 
      - Micro-Fission Generator
@@ -630,7 +638,7 @@
         still infinite healing. It cannot heal
         silicons.
   sprite:
-    sprite: _Jamboree/Objects/Specific/Medical/cmomedigun.rsi
+    sprite: _Jamboree/Objects/Devices/cmomedigun.rsi
     state: icon
   content:
   - CMOMedigunBackpack
