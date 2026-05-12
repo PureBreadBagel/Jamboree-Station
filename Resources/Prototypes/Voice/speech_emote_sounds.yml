@@ -547,6 +547,8 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg
     Surprised: # Goob
@@ -554,8 +556,6 @@
   params:
     variation: 0.125
     pitch: 0.75
-    Mars: # jamboree - juice that makes you mar
-      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: FemaleDwarf
@@ -596,6 +596,8 @@
       collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg
     Surprised: # Goob
@@ -603,8 +605,6 @@
   params:
     variation: 0.125
     pitch: 0.75
-    Mars: # jamboree - juice that makes you mar
-      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: UnisexMoth
