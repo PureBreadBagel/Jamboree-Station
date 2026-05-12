@@ -198,7 +198,7 @@
 # jamboree, adding creased nano-trainers
 - type: entity
   parent: ClothingShoesBaseButcherable
-  id: ClothingShoesCreasedJordans
+  id: ClothingShoesCreasedJordansNT
   name: creased nanotrainers #change name from creased jordans cause one: we don't own those shoes, and two: they are a bit too memey.
   suffix: jordans
   description: No wait... this can't be.... THEY'RE CREASED!
