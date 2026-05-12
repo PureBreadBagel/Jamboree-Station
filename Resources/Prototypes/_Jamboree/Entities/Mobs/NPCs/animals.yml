@@ -166,7 +166,6 @@
   - type: FactionException
   - type: NpcFactionMember
     factions:
-    - Passive
     - Blonk
   - type: HTN
     rootTask:
