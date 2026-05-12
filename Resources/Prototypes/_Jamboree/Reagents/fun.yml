@@ -4,7 +4,6 @@
   group: Toxins
   desc: reagent-desc-blonkliquid
   physicalDesc: reagent-physical-desc-blonky
-  flavor: teal
   color: "#008080"
   metabolisms:
     Poison:
@@ -26,7 +25,6 @@
   group: Toxins
   desc: reagent-desc-marjuice
   physicalDesc: reagent-physical-desc-martian
-  flavor: teal
   color: "#5F8575"
   metabolisms:
     Poison:
