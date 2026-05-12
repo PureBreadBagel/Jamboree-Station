@@ -97,7 +97,7 @@
     sprite: Objects/Specific/Service/vending_machine_restock.rsi
     state: base
   product: CrateVendingMachineRestockClothesFilled
-  cost: 5700 #have to raise price so that things work lol
+  cost: 6000 #have to raise price so that things work lol
   category: cargoproduct-category-name-service
   group: market
 

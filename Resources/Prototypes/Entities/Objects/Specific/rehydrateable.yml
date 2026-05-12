@@ -264,12 +264,6 @@
   - type: Tag # overwriting PlushieCarp tags to remove ClothMade and Payload
     tags:
     - PlushieCarp
-  - type: GibThisGuy  # Goobstation
-    requireBoth: true
-    icNames:
-    - Audrey White
-    ocNames:
-    - Rosef
 
 - type: entity
   parent: MonkeyCube

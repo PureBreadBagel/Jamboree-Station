@@ -56,42 +56,6 @@
       - HEVSuit
 
 - type: entity
-  parent: ClothingOuterBase
-  id: SurveillanceWirelessCameraBodyEntertainment
-  name: nopro camera
-  description: A body mounted camera. It's watching you.
-  components:
-    - type: DeviceNetwork
-      deviceNetId: Wireless
-      receiveFrequencyId: SurveillanceCameraEntertainment
-      transmitFrequencyId: SurveillanceCamera
-    - type: SurveillanceCamera
-      networkSet: true
-      nameSet: True
-      mobile: True  # Goobstation - mobile cameras fix
-      id: NoPro Camera
-    - type: Eye
-    - type: WirelessNetworkConnection
-      range: 200
-    - type: SurveillanceCameraMicrophone
-      blacklist:
-        components:
-          - SurveillanceCamera
-          - SurveillanceCameraMonitor
-          - RadioSpeaker
-    - type: ActiveListener
-      range: 10
-    - type: ClothingGrantComponent
-      component:
-      - type: StationAiVision
-        range: 4
-    - type: Sprite
-      sprite: _Goobstation/Clothing/OuterClothing/Misc/nopro.rsi
-    - type: Clothing
-      sprite: _Goobstation/Clothing/OuterClothing/Misc/nopro.rsi
-      quickEquip: true
-
-- type: entity
   parent: ClothingOuterWizardCentCommReal
   id: WhiteRobes
   name: robes of the chosen one
@@ -136,6 +100,18 @@
     - Hair
     - HeadTop
     - HeadSide
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterSuitTutu
+  name: tutu
+  description: Why?..
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/OuterClothing/Misc/tutu.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/OuterClothing/Misc/tutu.rsi
+    quickEquip: true
 
 - type: entity
   parent: ClothingOuterBaseToggleable

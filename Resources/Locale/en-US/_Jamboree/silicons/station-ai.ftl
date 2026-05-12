@@ -1,0 +1,16 @@
+station-ai-hologram-bingle = Bingle appearance
+station-ai-hologram-clown = Clown appearance
+station-ai-hologram-eyeball = Eyeball appearance
+station-ai-hologram-flame = Flame appearance
+station-ai-hologram-ghosty = Ghost appearance
+station-ai-hologram-gondola = Gondola appearance
+station-ai-hologram-gorilla = Gorilla appearance
+station-ai-hologram-hate = Monolith appearance
+station-ai-hologram-jared = Flesh creature appearance
+station-ai-hologram-lizard = Lizard appearance
+station-ai-hologram-pai = PAI appearance
+station-ai-hologram-pequeno = Pequeno appearance
+station-ai-hologram-ritual = Ritual appearance
+station-ai-hologram-smiley = Smiley face appearance
+station-ai-hologram-stickperson = Stick person appearance
+station-ai-hologram-xeno = Xeno appearance

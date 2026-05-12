@@ -7,77 +7,92 @@
 - type: loadout
   id: DripHighHeels
   storage:
-    back: 
+    back:
     - ClothingShoesHighheelBoots
 
 - type: loadout
   id: DripGigaGar
-  storage:
-    back: 
-    - ClothingEyesGlassesGarGiga
+  equipment:
+    eyes: ClothingEyesGlassesGarGiga
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 72000 #20 hours of adventuring.
 
 - type: loadout
   id: DripGar
-  storage:
-   back: 
-    - ClothingEyesGlassesGar
+  equipment:
+    eyes: ClothingEyesGlassesGar
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 36000 #10 hours of adventuring.
 
 - type: loadout
   id: DripGarOrange
-  storage:
-    back: 
-    - ClothingEyesGlassesGarOrange
+  equipment:
+    eyes: ClothingEyesGlassesGarOrange
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 36000 #10 hours of adventuring.
 
 - type: loadout
   id: DripBling
   storage:
-    back: 
+    back:
     - ClothingNeckBling
 
 - type: loadout
   id: DripSolidHeadband
   storage:
-    back: 
+    back:
     - ClothingHeadHatSolidHeadband
 
 - type: loadout
   id: DripSombrero
   storage:
-    back: 
+    back:
     - ClothingHeadHatSombrero
 
 - type: loadout
   id: DripPoncho
   storage:
-    back: 
+    back:
     - ClothingOuterPoncho
 
 - type: loadout
   id: DripUshanka
   storage:
-    back: 
+    back:
     - ClothingHeadHatUshanka
-  
+
 - type: loadout
   id: DripWehcellentCap
   storage:
-    back: 
+    back:
     - ClothingHeadWehcellentCap
 
 - type: loadout
   id: DripYakuzaCoat
   storage:
-    back: 
+    back:
     - ClothingOuterDameDane
 
 - type: loadout
   id: DripYakuzaOutfit
   storage:
-    back: 
+    back:
     - ClothingUniformJumpsuitDameDane
 
 - type: loadout
   id: DripYakuzaShoes
   storage:
-    back: 
+    back:
     - ClothingShoesDameDane

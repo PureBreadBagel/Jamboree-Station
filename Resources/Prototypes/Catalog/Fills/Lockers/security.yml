@@ -131,6 +131,7 @@
     - id: Wrench # Goobstation
     - id: ContrabandDetectorFlatpack # Goobstation
     - id: SecurityMegaphone # goob - loudspeakers
+    - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entityTable
   id: FillLockerWardenHarduit
@@ -212,6 +213,8 @@
     - id: MedkitAdvancedFilled
     - id: BoxSyringe
     - id: BoxBodyBag # Goob Station
+    - id: WeaponGrapplingGun # Jamboree
+    - id: HandheldGPSBasic # Jamboree
 
 - type: entity
   id: LockerDetectiveFilled

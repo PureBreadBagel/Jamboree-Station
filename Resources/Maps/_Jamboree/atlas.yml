@@ -8,8 +8,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/31/2026 03:38:44
-  entityCount: 9296
+  time: 05/03/2026 06:02:13
+  entityCount: 9301
 maps:
 - 1
 grids:
@@ -4449,7 +4449,7 @@ entities:
       pos: 4.5,19.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -8056.7856
+      secondsUntilStateChange: -8355.357
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -6107,11 +6107,6 @@ entities:
     - type: Transform
       pos: -8.5,-11.5
       parent: 2
-  - uid: 438
-    components:
-    - type: Transform
-      pos: -6.5,-10.5
-      parent: 2
   - uid: 439
     components:
     - type: Transform
@@ -6121,11 +6116,6 @@ entities:
     components:
     - type: Transform
       pos: -9.5,-8.5
-      parent: 2
-  - uid: 441
-    components:
-    - type: Transform
-      pos: -5.5,-10.5
       parent: 2
   - uid: 442
     components:
@@ -6137,20 +6127,17 @@ entities:
     - type: Transform
       pos: -6.5,-8.5
       parent: 2
-  - uid: 444
-    components:
-    - type: Transform
-      pos: -10.5,-8.5
-      parent: 2
-  - uid: 445
-    components:
-    - type: Transform
-      pos: -11.5,-8.5
-      parent: 2
   - uid: 446
     components:
     - type: Transform
       pos: -9.5,-11.5
+      parent: 2
+- proto: BookshelfGuidebooksFilled
+  entities:
+  - uid: 444
+    components:
+    - type: Transform
+      pos: -11.5,-8.5
       parent: 2
 - proto: BoozeDispenser
   entities:
@@ -18551,6 +18538,88 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 26.5,15.5
       parent: 2
+- proto: CarpetCyan
+  entities:
+  - uid: 438
+    components:
+    - type: Transform
+      pos: -8.5,-8.5
+      parent: 2
+  - uid: 441
+    components:
+    - type: Transform
+      pos: -8.5,-9.5
+      parent: 2
+  - uid: 2885
+    components:
+    - type: Transform
+      pos: -12.5,-8.5
+      parent: 2
+  - uid: 2886
+    components:
+    - type: Transform
+      pos: -12.5,-9.5
+      parent: 2
+  - uid: 2898
+    components:
+    - type: Transform
+      pos: -11.5,-9.5
+      parent: 2
+  - uid: 2899
+    components:
+    - type: Transform
+      pos: -10.5,-9.5
+      parent: 2
+  - uid: 2900
+    components:
+    - type: Transform
+      pos: -10.5,-8.5
+      parent: 2
+  - uid: 2901
+    components:
+    - type: Transform
+      pos: -9.5,-9.5
+      parent: 2
+  - uid: 2908
+    components:
+    - type: Transform
+      pos: -5.5,-11.5
+      parent: 2
+  - uid: 2909
+    components:
+    - type: Transform
+      pos: -7.5,-11.5
+      parent: 2
+  - uid: 2910
+    components:
+    - type: Transform
+      pos: -6.5,-11.5
+      parent: 2
+  - uid: 6152
+    components:
+    - type: Transform
+      pos: -6.5,-9.5
+      parent: 2
+  - uid: 6153
+    components:
+    - type: Transform
+      pos: -7.5,-9.5
+      parent: 2
+  - uid: 9298
+    components:
+    - type: Transform
+      pos: -4.5,-9.5
+      parent: 2
+  - uid: 9299
+    components:
+    - type: Transform
+      pos: -5.5,-9.5
+      parent: 2
+  - uid: 9300
+    components:
+    - type: Transform
+      pos: -6.5,-10.5
+      parent: 2
 - proto: CarpetGreen
   entities:
   - uid: 2879
@@ -18588,18 +18657,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 3.5,11.5
-      parent: 2
-  - uid: 2885
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -12.5,-9.5
-      parent: 2
-  - uid: 2886
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -11.5,-9.5
       parent: 2
   - uid: 2887
     components:
@@ -18664,30 +18721,6 @@ entities:
       parent: 2
 - proto: CarpetOrange
   entities:
-  - uid: 2898
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -4.5,-9.5
-      parent: 2
-  - uid: 2899
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -5.5,-9.5
-      parent: 2
-  - uid: 2900
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -6.5,-9.5
-      parent: 2
-  - uid: 2901
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -7.5,-9.5
-      parent: 2
   - uid: 2902
     components:
     - type: Transform
@@ -18720,24 +18753,6 @@ entities:
       parent: 2
 - proto: CarpetPurple
   entities:
-  - uid: 2908
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -7.5,-11.5
-      parent: 2
-  - uid: 2909
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -6.5,-11.5
-      parent: 2
-  - uid: 2910
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -5.5,-11.5
-      parent: 2
   - uid: 2911
     components:
     - type: Transform
@@ -20869,15 +20884,6 @@ entities:
       parent: 2
     - type: Physics
       canCollide: False
-- proto: ClothingNeckScarfStripedGreen
-  entities:
-  - uid: 3251
-    components:
-    - type: Transform
-      pos: -4.4588356,-8.442022
-      parent: 2
-    - type: Physics
-      canCollide: False
 - proto: ClothingNeckScarfStripedZebra
   entities:
   - uid: 3253
@@ -21291,14 +21297,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -27.5,-11.5
       parent: 2
-- proto: ComputerSalvageExpedition
-  entities:
-  - uid: 3376
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -36.5,18.5
-      parent: 2
 - proto: ComputerSalvageJobBoard
   entities:
   - uid: 9183
@@ -21335,6 +21333,12 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -33.5,19.5
+      parent: 2
+  - uid: 3376
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -36.5,18.5
       parent: 2
 - proto: ComputerSolarControl
   entities:
@@ -24466,7 +24470,7 @@ entities:
   - uid: 3817
     components:
     - type: Transform
-      pos: 27.5,-2.5
+      pos: 26.5,-4.5
       parent: 2
   - uid: 3818
     components:
@@ -25071,6 +25075,13 @@ entities:
       parent: 2
     - type: FaxMachine
       name: Reporter and Radio Host
+  - uid: 9301
+    components:
+    - type: Transform
+      pos: -4.5,-8.5
+      parent: 2
+    - type: FaxMachine
+      name: Library
 - proto: FaxMachineCaptain
   entities:
   - uid: 3907
@@ -40586,13 +40597,6 @@ entities:
     - type: Transform
       pos: 10.5,22.5
       parent: 2
-- proto: GunSafeSubMachineGunDrozd
-  entities:
-  - uid: 6124
-    components:
-    - type: Transform
-      pos: 8.5,24.5
-      parent: 2
 - proto: HandheldGPSBasic
   entities:
   - uid: 6125
@@ -41185,20 +41189,6 @@ entities:
     components:
     - type: Transform
       pos: 23.5,-5.5
-      parent: 2
-- proto: HospitalCurtainsOpen
-  entities:
-  - uid: 6152
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -8.5,-8.5
-      parent: 2
-  - uid: 6153
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -11.5,-9.5
       parent: 2
 - proto: HydroponicsToolClippers
   entities:
@@ -41823,6 +41813,13 @@ entities:
     components:
     - type: Transform
       pos: 26.5,6.5
+      parent: 2
+- proto: LockerGriffyFilled
+  entities:
+  - uid: 6124
+    components:
+    - type: Transform
+      pos: 8.5,24.5
       parent: 2
 - proto: LockerHeadOfPersonnelFilled
   entities:
@@ -42853,6 +42850,13 @@ entities:
     components:
     - type: Transform
       pos: -44.093796,-23.6402
+      parent: 2
+- proto: PollBooth
+  entities:
+  - uid: 445
+    components:
+    - type: Transform
+      pos: -10.5,-8.5
       parent: 2
 - proto: PonderingOrb
   entities:
@@ -45104,6 +45108,30 @@ entities:
     - type: Transform
       pos: -57.5,2.5
       parent: 2
+- proto: PrinterDoc
+  entities:
+  - uid: 3251
+    components:
+    - type: Transform
+      pos: -5.5,-10.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
+  - uid: 9297
+    components:
+    - type: Transform
+      pos: 28.5,-2.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: Protolathe
   entities:
   - uid: 6706

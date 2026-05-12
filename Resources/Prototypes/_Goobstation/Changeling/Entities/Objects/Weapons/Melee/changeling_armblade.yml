@@ -69,6 +69,4 @@
         Structural: 1
   - type: TimedDespawn
     lifetime: 60
-  - type: GibThisGuy
-    ocNames:
-    - BombasterDS
+

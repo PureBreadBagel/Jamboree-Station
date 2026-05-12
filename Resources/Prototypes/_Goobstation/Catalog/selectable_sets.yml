@@ -540,6 +540,18 @@
   content:
   - ClothingModsuitHeadOfSecurityPowerCell
 
+# Jamboree, HOS Parade suit
+- type: selectableSet
+  id: VoidsuitSelectorHeadOfSecurityParadesuit
+  name: selectable-set-headofsecurity-paradesuit-name
+  description: selectable-set-headofsecurity-paradesuit-desc
+  sprite:
+    sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/hos-expi.rsi
+    state: icon
+  content:
+  - ClothingOuterHardsuitHeadOfSecurityExperimental
+# Jamboree, HOS Parade suit /END
+
 # engineer
 
 - type: selectableSet

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Goob Station Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: loadout
   id: ChaplainEnvirosuit
   equipment:
@@ -61,3 +65,19 @@
   id: MonkHabit
   equipment:
     outerClothing: ClothingOuterArmorMonk
+
+# Jamboree, moving Resonant stuff from the theater vending machine
+- type: loadout
+  id: ResonantCloak
+  equipment:
+    neck: ClothingNeckCloakResonant
+
+- type: loadout
+  id: ResonantJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitResonant
+
+- type: loadout
+  id: ResonantShoes
+  equipment:
+    shoes: ClothingShoesResonant

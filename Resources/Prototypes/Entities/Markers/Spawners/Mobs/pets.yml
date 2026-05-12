@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: MarkerBase
   id: SpawnMobAlexander
@@ -168,9 +172,11 @@
     layers:
     - state: green
     - state: ai
-  - type: ConditionalSpawner
+  - type: RandomSpawner # imp edit
     prototypes:
-    - MobMcGriff
+      - MobMcGriff
+    rarePrototypes: # imp
+      - MobMascotGriffy # imp
 
 - type: entity
   parent: MarkerBase

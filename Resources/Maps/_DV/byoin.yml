@@ -8,8 +8,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/27/2026 04:30:48
-  entityCount: 19083
+  time: 05/03/2026 06:04:57
+  entityCount: 19086
 maps:
 - 1
 grids:
@@ -10105,6 +10105,13 @@ entities:
     - type: Transform
       pos: -12.5,-27.5
       parent: 2
+  - uid: 10679
+    components:
+    - type: MetaData
+      name: Psychologist's Room
+    - type: Transform
+      pos: 6.5,-31.5
+      parent: 2
 - proto: AirlockMedicalLocked
   entities:
   - uid: 1669
@@ -10635,7 +10642,7 @@ entities:
   - uid: 10648
     components:
     - type: MetaData
-      name: Reporter Office
+      name: Vacant Room
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 24.5,-21.5
@@ -10700,6 +10707,8 @@ entities:
       parent: 2
   - uid: 8668
     components:
+    - type: MetaData
+      name: Musician's Room
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 24.5,-15.5
@@ -11744,6 +11753,8 @@ entities:
     - type: Transform
       pos: 27.5,20.5
       parent: 2
+    - type: SiloUtilizer
+      silo: 8591
 - proto: AnalysisComputerCircuitboard
   entities:
   - uid: 925
@@ -16357,11 +16368,6 @@ entities:
     - type: Transform
       pos: 45.59665,29.442795
       parent: 2
-  - uid: 8378
-    components:
-    - type: Transform
-      pos: 15.668539,-11.601838
-      parent: 2
 - proto: Beaker
   entities:
   - uid: 8620
@@ -17262,7 +17268,7 @@ entities:
   - uid: 6068
     components:
     - type: Transform
-      pos: 11.722658,-28.426964
+      pos: 0.96195984,-20.358688
       parent: 2
 - proto: BookScientistsGuidebook
   entities:
@@ -17305,11 +17311,6 @@ entities:
     - type: Transform
       pos: 4.5,-36.5
       parent: 2
-  - uid: 7509
-    components:
-    - type: Transform
-      pos: 9.5,-13.5
-      parent: 2
   - uid: 9614
     components:
     - type: Transform
@@ -17319,6 +17320,13 @@ entities:
     components:
     - type: Transform
       pos: 9.5,-14.5
+      parent: 2
+- proto: BookshelfGuidebooksFilled
+  entities:
+  - uid: 5465
+    components:
+    - type: Transform
+      pos: 9.5,-13.5
       parent: 2
 - proto: BookSpaceEncyclopedia
   entities:
@@ -17657,12 +17665,12 @@ entities:
   - uid: 14359
     components:
     - type: Transform
-      pos: 25.737526,22.945885
+      pos: 25.713041,23.853825
       parent: 2
   - uid: 14360
     components:
     - type: Transform
-      pos: 25.268776,22.977135
+      pos: 25.322416,23.885075
       parent: 2
 - proto: BoxLightbulb
   entities:
@@ -37476,6 +37484,8 @@ entities:
     - type: Transform
       pos: -17.5,-10.5
       parent: 2
+    - type: SiloUtilizer
+      silo: 8591
 - proto: Carpet
   entities:
   - uid: 3134
@@ -42994,11 +43004,15 @@ entities:
     - type: Transform
       pos: -5.5,8.5
       parent: 2
+    - type: SiloUtilizer
+      silo: 8591
   - uid: 15744
     components:
     - type: Transform
       pos: 28.5,-14.5
       parent: 2
+    - type: SiloUtilizer
+      silo: 8591
 - proto: CircuitImprinterMachineCircuitboard
   entities:
   - uid: 10857
@@ -43969,7 +43983,7 @@ entities:
   - uid: 11058
     components:
     - type: Transform
-      pos: 19.241795,12.761748
+      pos: 19.555721,12.812468
       parent: 2
 - proto: ClothingBeltStorageWaistbag
   entities:
@@ -44227,7 +44241,7 @@ entities:
   - uid: 8897
     components:
     - type: Transform
-      pos: 19.593119,12.536125
+      pos: 18.180721,15.499968
       parent: 2
   - uid: 11088
     components:
@@ -45413,6 +45427,12 @@ entities:
       parent: 2
 - proto: ComputerShuttleMiningLavaland
   entities:
+  - uid: 5161
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -20.5,-3.5
+      parent: 2
   - uid: 8292
     components:
     - type: Transform
@@ -46226,7 +46246,7 @@ entities:
   - uid: 7577
     components:
     - type: Transform
-      pos: 15.44727,-11.470786
+      pos: 10.605468,-10.194168
       parent: 2
   - uid: 9084
     components:
@@ -46447,7 +46467,7 @@ entities:
       pos: 5.5,24.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -8296.296
+      secondsUntilStateChange: -9844.813
       state: Opening
 - proto: CurtainsGreenOpen
   entities:
@@ -52642,11 +52662,6 @@ entities:
     - type: Transform
       pos: 9.5,-2.5
       parent: 2
-  - uid: 6535
-    components:
-    - type: Transform
-      pos: 5.5,13.5
-      parent: 2
   - uid: 6631
     components:
     - type: Transform
@@ -52667,10 +52682,10 @@ entities:
     - type: Transform
       pos: 5.5,-21.5
       parent: 2
-  - uid: 8374
+  - uid: 7509
     components:
     - type: Transform
-      pos: 15.5,-14.5
+      pos: 5.5,12.5
       parent: 2
   - uid: 8800
     components:
@@ -53284,7 +53299,7 @@ entities:
   - uid: 10699
     components:
     - type: Transform
-      pos: 23.678764,27.810047
+      pos: 23.27622,25.675821
       parent: 2
 - proto: DrinkGrapeSodaGlass
   entities:
@@ -54913,6 +54928,8 @@ entities:
     - type: Transform
       pos: -4.5,8.5
       parent: 2
+    - type: SiloUtilizer
+      silo: 8591
 - proto: EngineeringTechFabCircuitboard
   entities:
   - uid: 12369
@@ -54973,6 +54990,8 @@ entities:
     - type: Transform
       pos: 55.5,-15.5
       parent: 2
+    - type: SiloUtilizer
+      silo: 8591
 - proto: ExplosivesSignMed
   entities:
   - uid: 2355
@@ -55198,6 +55217,13 @@ entities:
       parent: 2
     - type: FaxMachine
       name: Bridge
+  - uid: 8242
+    components:
+    - type: Transform
+      pos: 13.5,-13.5
+      parent: 2
+    - type: FaxMachine
+      name: Library
   - uid: 10156
     components:
     - type: Transform
@@ -59244,7 +59270,7 @@ entities:
   - uid: 7160
     components:
     - type: Transform
-      pos: 11.410158,-28.317589
+      pos: 11.964622,-28.356234
       parent: 2
 - proto: FoodBoxDonkpocketPizza
   entities:
@@ -90536,11 +90562,6 @@ entities:
       parent: 2
 - proto: LampGold
   entities:
-  - uid: 5465
-    components:
-    - type: Transform
-      pos: 13.577133,-13.313443
-      parent: 2
   - uid: 10231
     components:
     - type: Transform
@@ -91752,6 +91773,13 @@ entities:
     - type: Transform
       pos: 21.5,24.5
       parent: 2
+- proto: LockerGriffyFilled
+  entities:
+  - uid: 8374
+    components:
+    - type: Transform
+      pos: 25.5,22.5
+      parent: 2
 - proto: LockerHeadOfPersonnelFilled
   entities:
   - uid: 1966
@@ -92375,11 +92403,6 @@ entities:
     - type: Transform
       pos: 83.5,-22.5
       parent: 2
-  - uid: 8375
-    components:
-    - type: Transform
-      pos: 13.5,-11.5
-      parent: 2
   - uid: 8579
     components:
     - type: Transform
@@ -92456,11 +92479,6 @@ entities:
     components:
     - type: Transform
       pos: 10.5,-18.5
-      parent: 2
-  - uid: 8591
-    components:
-    - type: Transform
-      pos: 39.5,1.5
       parent: 2
   - uid: 11202
     components:
@@ -92713,7 +92731,7 @@ entities:
     - type: Transform
       pos: -16.526192,-30.49661
       parent: 2
-- proto: MaterialBluespace1
+- proto: MaterialBSCrystal1
   entities:
   - uid: 6677
     components:
@@ -92744,6 +92762,65 @@ entities:
     - type: Transform
       pos: 6.342188,11.644176
       parent: 2
+- proto: MaterialSilo
+  entities:
+  - uid: 8591
+    components:
+    - type: Transform
+      pos: 23.5,27.5
+      parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        1525:
+        - - MaterialSilo
+          - FillbotAnyItem
+        - - MaterialSilo
+          - MaterialSiloUtilizer
+        1339:
+        - - MaterialSilo
+          - MaterialSiloUtilizer
+        - - MaterialSilo
+          - FillbotAnyItem
+        7038:
+        - - MaterialSilo
+          - FillbotAnyItem
+        - - MaterialSilo
+          - MaterialSiloUtilizer
+        3135:
+        - - MaterialSilo
+          - MaterialSiloUtilizer
+        - - MaterialSilo
+          - FillbotAnyItem
+        9062:
+        - - MaterialSilo
+          - MaterialSiloUtilizer
+        - - MaterialSilo
+          - FillbotAnyItem
+        7728:
+        - - MaterialSilo
+          - MaterialSiloUtilizer
+        - - MaterialSilo
+          - FillbotAnyItem
+        16796:
+        - - MaterialSilo
+          - MaterialSiloUtilizer
+        - - MaterialSilo
+          - FillbotAnyItem
+        15744:
+        - - MaterialSilo
+          - FillbotAnyItem
+        - - MaterialSilo
+          - MaterialSiloUtilizer
+        6577:
+        - - MaterialSilo
+          - FillbotAnyItem
+        - - MaterialSilo
+          - MaterialSiloUtilizer
+        15808:
+        - - MaterialSilo
+          - FillbotAnyItem
+        - - MaterialSilo
+          - MaterialSiloUtilizer
 - proto: MaterialToothSpaceCarp1
   entities:
   - uid: 7990
@@ -92847,7 +92924,7 @@ entities:
   - uid: 5965
     components:
     - type: Transform
-      pos: 23.460014,27.419422
+      pos: 23.448095,26.472696
       parent: 2
 - proto: MedicalBed
   entities:
@@ -92890,6 +92967,8 @@ entities:
     - type: Transform
       pos: 1.5,-21.5
       parent: 2
+    - type: SiloUtilizer
+      silo: 8591
 - proto: MedicalTechFabCircuitboard
   entities:
   - uid: 8167
@@ -92965,7 +93044,7 @@ entities:
   - uid: 4676
     components:
     - type: Transform
-      pos: 18.859478,15.680929
+      pos: 18.915096,15.515593
       parent: 2
   - uid: 6688
     components:
@@ -93563,6 +93642,8 @@ entities:
     - type: Transform
       pos: -21.5,-3.5
       parent: 2
+    - type: SiloUtilizer
+      silo: 8591
 - proto: OreProcessorMachineCircuitboard
   entities:
   - uid: 6062
@@ -93967,13 +94048,13 @@ entities:
         Recheck that all your pumps are on.
 
 
-        Now on your inlet into the burn chamber (typically a empty room with a pipe in and 1 pipe out of it) you want to input 2 gasses that are mixed, using 2 ports and a gas mixer, input plasma and oxygen at the following ratio: 3% plasma, 97% oxygen. With the following flow rate on a pump: 101.3. 
+        Now on your inlet into the burn chamber (typically a empty room with a pipe in and 1 pipe out of it) you want to input 2 gasses that are mixed, using 2 ports and a gas mixer, input plasma and oxygen at the following ratio: 3% plasma, 97% oxygen. With the following flow rate on a pump: 101.3.
 
 
         Now locate the entrance to the burn chamber and open one of the blast doors using either a nearbye button or a door remote (if you are CE). Immedietly place a holofan over the now open door to be left there.
 
 
-        On the side that is exposed to the teg room place one passive vent. On the side exposed to space place another passive vent. Then add a inlet pressure regulator to flow the gas into the vent in space from the interior vent, click it and set its threshhold to 4000, you may need to adjust this every now and then until its at a stable rate where the TeG stays at max output (the line on its middle part should be at green consistently). 
+        On the side that is exposed to the teg room place one passive vent. On the side exposed to space place another passive vent. Then add a inlet pressure regulator to flow the gas into the vent in space from the interior vent, click it and set its threshhold to 4000, you may need to adjust this every now and then until its at a stable rate where the TeG stays at max output (the line on its middle part should be at green consistently).
 
 
         Once the regulator is set up, activate the spare welder and throw it into the chamber to light the gas. Plasma and oxygen mixtures can be stubborn to light and this is NORMAL, give it 3-4 minutes and if it doesnt consistently light please check the following:
@@ -94285,7 +94366,7 @@ entities:
         For this ship, I give these remarks:
 
 
-        The de-commissioning of the NT-Adventurer is a true tragedy on every front. Where once this vessel served as a pioneer of the Jamboree Sector, it now remains here as a ruin on the Byoin station. 
+        The de-commissioning of the NT-Adventurer is a true tragedy on every front. Where once this vessel served as a pioneer of the Jamboree Sector, it now remains here as a ruin on the Byoin station.
 
 
         Central Command had promised its restoration. Said it would have been a symbol of "A new age of freedom". In the end, I suppose these are simply lies or things that fell through.
@@ -94897,6 +94978,13 @@ entities:
     - type: Transform
       pos: -7.519964,-12.346696
       parent: 2
+- proto: PollBooth
+  entities:
+  - uid: 6535
+    components:
+    - type: Transform
+      pos: 14.5,-11.5
+      parent: 2
 - proto: PonderingOrb
   entities:
   - uid: 6662
@@ -95389,11 +95477,6 @@ entities:
     - type: Transform
       pos: 40.5,-8.5
       parent: 2
-  - uid: 8377
-    components:
-    - type: Transform
-      pos: 14.5,-11.5
-      parent: 2
   - uid: 8520
     components:
     - type: Transform
@@ -95586,12 +95669,6 @@ entities:
     - type: Transform
       pos: -26.5,17.5
       parent: 2
-  - uid: 5161
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -20.5,-3.5
-      parent: 2
   - uid: 7067
     components:
     - type: Transform
@@ -95611,6 +95688,12 @@ entities:
     components:
     - type: Transform
       pos: 49.5,17.5
+      parent: 2
+  - uid: 15782
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -16.5,-2.5
       parent: 2
   - uid: 15845
     components:
@@ -97731,6 +97814,31 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 78.5,16.5
       parent: 2
+- proto: PrinterDoc
+  entities:
+  - uid: 1385
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 5.5,13.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
+  - uid: 8236
+    components:
+    - type: Transform
+      pos: 15.5,-14.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: ProximitySensor
   entities:
   - uid: 17188
@@ -98048,11 +98156,6 @@ entities:
     components:
     - type: Transform
       pos: 102.5,-16.5
-      parent: 2
-  - uid: 8236
-    components:
-    - type: Transform
-      pos: 15.5,-11.5
       parent: 2
   - uid: 8556
     components:
@@ -99014,16 +99117,6 @@ entities:
     components:
     - type: Transform
       pos: 4.5,-34.5
-      parent: 2
-  - uid: 8229
-    components:
-    - type: Transform
-      pos: 15.5,-11.5
-      parent: 2
-  - uid: 8242
-    components:
-    - type: Transform
-      pos: 15.5,-11.5
       parent: 2
   - uid: 12563
     components:
@@ -102212,6 +102305,8 @@ entities:
     - type: Transform
       pos: 25.5,25.5
       parent: 2
+    - type: SiloUtilizer
+      silo: 8591
     - type: TechnologyDatabase
       supportedDisciplines:
       - Industrial
@@ -102244,6 +102339,8 @@ entities:
     - type: Transform
       pos: 20.5,35.5
       parent: 2
+    - type: SiloUtilizer
+      silo: 8591
     - type: TechnologyDatabase
       supportedDisciplines:
       - Industrial
@@ -106486,10 +106583,10 @@ entities:
       parent: 2
 - proto: SpawnMobCorgi
   entities:
-  - uid: 1385
+  - uid: 8229
     components:
     - type: Transform
-      pos: 5.5,13.5
+      pos: 5.5,12.5
       parent: 2
 - proto: SpawnMobCrabAtmos
   entities:
@@ -106587,13 +106684,6 @@ entities:
     components:
     - type: Transform
       pos: 34.5,17.5
-      parent: 2
-- proto: SpawnMobSlothPaperwork
-  entities:
-  - uid: 10895
-    components:
-    - type: Transform
-      pos: 15.5,-14.5
       parent: 2
 - proto: SpawnMobWalter
   entities:
@@ -106770,6 +106860,11 @@ entities:
     - type: Transform
       pos: 34.5,28.5
       parent: 2
+  - uid: 15813
+    components:
+    - type: Transform
+      pos: 29.5,49.5
+      parent: 2
   - uid: 16229
     components:
     - type: Transform
@@ -106864,6 +106959,11 @@ entities:
     - type: Transform
       pos: 12.5,-14.5
       parent: 2
+  - uid: 15877
+    components:
+    - type: Transform
+      pos: 34.5,43.5
+      parent: 2
 - proto: SpawnPointMedicalDoctor
   entities:
   - uid: 6314
@@ -106925,6 +107025,11 @@ entities:
     - type: Transform
       pos: 5.5,-7.5
       parent: 2
+  - uid: 15843
+    components:
+    - type: Transform
+      pos: 29.5,46.5
+      parent: 2
   - uid: 16230
     components:
     - type: Transform
@@ -106961,6 +107066,11 @@ entities:
     components:
     - type: Transform
       pos: 5.5,-5.5
+      parent: 2
+  - uid: 15853
+    components:
+    - type: Transform
+      pos: 29.5,47.5
       parent: 2
   - uid: 16547
     components:
@@ -107074,6 +107184,16 @@ entities:
     components:
     - type: Transform
       pos: 8.5,-8.5
+      parent: 2
+  - uid: 15876
+    components:
+    - type: Transform
+      pos: 29.5,48.5
+      parent: 2
+  - uid: 15903
+    components:
+    - type: Transform
+      pos: 40.5,41.5
       parent: 2
   - uid: 16225
     components:
@@ -107916,6 +108036,11 @@ entities:
     components:
     - type: Transform
       pos: 4.5,-2.5
+      parent: 2
+  - uid: 15781
+    components:
+    - type: Transform
+      pos: 11.5,-28.5
       parent: 2
 - proto: StationRadioRig
   entities:
@@ -110677,7 +110802,8 @@ entities:
   - uid: 3259
     components:
     - type: Transform
-      pos: -20.5,-3.5
+      rot: 3.141592653589793 rad
+      pos: -16.5,-2.5
       parent: 2
   - uid: 3681
     components:
@@ -111210,11 +111336,6 @@ entities:
     - type: Transform
       pos: 25.5,23.5
       parent: 2
-  - uid: 8643
-    components:
-    - type: Transform
-      pos: 25.5,22.5
-      parent: 2
   - uid: 10188
     components:
     - type: Transform
@@ -111468,11 +111589,6 @@ entities:
     components:
     - type: Transform
       pos: 21.5,13.5
-      parent: 2
-  - uid: 10679
-    components:
-    - type: Transform
-      pos: 23.5,27.5
       parent: 2
   - uid: 11839
     components:
@@ -112256,7 +112372,7 @@ entities:
   - uid: 16423
     components:
     - type: Transform
-      pos: 23.470396,26.48287
+      pos: 23.448095,26.003946
       parent: 2
 - proto: ToolboxMechanicalFilled
   entities:
@@ -113013,6 +113129,18 @@ entities:
     components:
     - type: Transform
       pos: -6.5,9.5
+      parent: 2
+- proto: VendingMachineFitness
+  entities:
+  - uid: 1378
+    components:
+    - type: Transform
+      pos: 48.5,-24.5
+      parent: 2
+  - uid: 15753
+    components:
+    - type: Transform
+      pos: 42.5,-30.5
       parent: 2
 - proto: VendingMachineGames
   entities:
@@ -123532,11 +123660,6 @@ entities:
     - type: Transform
       pos: 43.5,24.5
       parent: 2
-  - uid: 18826
-    components:
-    - type: Transform
-      pos: 25.5,22.5
-      parent: 2
 - proto: WeaponDisabler
   entities:
   - uid: 607
@@ -125075,12 +125198,5 @@ entities:
     components:
     - type: Transform
       pos: 49.829628,-9.412865
-      parent: 2
-- proto: WristwatchGold
-  entities:
-  - uid: 1378
-    components:
-    - type: Transform
-      pos: 23.473537,25.58564
       parent: 2
 ...

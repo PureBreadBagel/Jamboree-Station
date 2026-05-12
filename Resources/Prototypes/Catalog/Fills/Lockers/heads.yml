@@ -173,6 +173,7 @@
 #    - id: ClothingHandsKnuckleDustersQM # jamboree - available in gear selector
     - id: SalvageJobBoardComputerCircuitboard # Goobstation - This doesn't really have a use right now but it's there incase it ever gets use again
     - id: CargoMegaphone # goob - loudspeaker
+    - id: PrinterDocFlatpack  # Corvax-Printer
 #    - id: SlotMachineHighRollerFlatPack # Jamboree - available in gear selector
     - id: QMUndeterminedWeapon # Jamboree - command gear selectors
 
@@ -211,6 +212,7 @@
     - id: CaptainUndeterminedWeapon # Jamboree - command gear selectors
     - id: CommandMegaphone # Jamboree, cause why cap no get loud?
     - id: HeadSkeleton # A skull to accompany your skeleton crew
+    - id: PrinterDocFlatpack  # Corvax-Printer
       conditions:
       - !type:PlayerCountCondition
         max: 15
@@ -303,6 +305,7 @@
     - id: ClothingEyesHudCommand
     - id: ServiceTechFabCircuitboard # Goobstation - Service Techfab
     - id: CommandMegaphone # goob - loudspeakers
+    - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
@@ -336,6 +339,7 @@
     - id: RCDAmmo
     - id: RubberStampCE
     - id: MetalFoamGrenade
+    - id: PrinterDocFlatpack  # Corvax-Printer
     # Goobstation V
     - id: BaseHandheldStationMapPowerCe
     - id: EngineeringTechFabCircuitboard
@@ -422,6 +426,7 @@
     - id: DiseaseDiagnoserFlatPack
     - id: VaccinatorFlatPack
     # Goobstation End
+    - id: PrinterDocFlatpack  # Corvax-Printer
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -484,6 +489,7 @@
 #    - id: ClothingBeltGeminiHoloProjector # jamboree - available in gear selector
     - id: XenobiologyBountyComputerCircuitboard # Goobstation
     - id: MMI # Goobstation
+    - id: PrinterDocFlatpack  # Corvax-Printer
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -548,6 +554,7 @@
     - id: DrinkHosFlask
     - id: SecurityMegaphone # Jamboree, cause why hos no get loud
     - id: ClothingBeltSheathHeadOfSecurityFilled # Goobstation - security revamp
+    - id: PrinterDocFlatpack  # Corvax-Printer
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable

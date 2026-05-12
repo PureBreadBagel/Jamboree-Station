@@ -188,6 +188,61 @@
     - CigPackBlack
   groupBy: "smokeables"
 
+# jamboree - adding more ciggies to loadout
+- type: loadout
+  id: CigPackPurple
+  storage:
+    back:
+    - CigPackPurple
+  groupBy: "smokeables"
+
+- type: loadout
+  id: CigPackCandy
+  storage:
+    back:
+    - CigPackCandy
+  groupBy: "smokeables"
+
+# jamboree - balls!
+- type: loadout
+  id: Basketball
+  storage:
+    back:
+    - Basketball
+  groupBy: "balls"
+
+- type: loadout
+  id: Football
+  storage:
+    back:
+    - Football
+  groupBy: "balls"
+
+- type: loadout
+  id: Tennisball
+  storage:
+    back:
+    - TennisBall
+  groupBy: "balls"
+
+- type: loadout
+  id: Beachball
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: Command
+  storage:
+    back:
+    - BeachBall
+  groupBy: "balls"
+
+- type: loadout
+  id: Magic9Ball
+  storage:
+    back:
+    - Magic9Ball
+  groupBy: "doodads"
+# jamboree - end
+
 - type: loadout
   id: CigarCase
   effects:
@@ -413,12 +468,14 @@
   storage:
     back:
     - ToyRubberDuck
+  groupBy: "doodads"
 
 - type: loadout
   id: DiceBag
   storage:
     back:
     - DiceBag
+  groupBy: "doodads"
 
 - type: loadout
   id: MagicCrayon #NF
@@ -431,6 +488,7 @@
   storage:
     back:
     - CrayonMagic
+  groupBy: "doodads"
 
 #ADT
 - type: loadout
@@ -444,6 +502,7 @@
   storage:
     back:
     - LethalCompanyAirHorn
+  groupBy: "doodads"
 
 # Playing Cards (GoobStation)
 - type: loadout

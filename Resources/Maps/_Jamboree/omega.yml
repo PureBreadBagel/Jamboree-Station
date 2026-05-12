@@ -8,8 +8,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/31/2026 03:59:46
-  entityCount: 13781
+  time: 05/03/2026 06:16:40
+  entityCount: 13776
 maps:
 - 1
 grids:
@@ -11675,13 +11675,6 @@ entities:
     - type: Transform
       pos: -25.436514,-18.48842
       parent: 2
-- proto: BookRandom
-  entities:
-  - uid: 1153
-    components:
-    - type: Transform
-      pos: -30.557493,-18.387486
-      parent: 2
 - proto: BookRandomStory
   entities:
   - uid: 1154
@@ -11800,11 +11793,6 @@ entities:
     - type: Transform
       pos: -22.5,-18.5
       parent: 2
-  - uid: 1176
-    components:
-    - type: Transform
-      pos: -23.5,-14.5
-      parent: 2
   - uid: 1177
     components:
     - type: Transform
@@ -11829,6 +11817,13 @@ entities:
     components:
     - type: Transform
       pos: -29.5,-17.5
+      parent: 2
+- proto: BookshelfGuidebooksFilled
+  entities:
+  - uid: 1176
+    components:
+    - type: Transform
+      pos: -23.5,-16.5
       parent: 2
 - proto: BoozeDispenser
   entities:
@@ -28048,36 +28043,6 @@ entities:
     - type: Transform
       pos: -1.5,-16.5
       parent: 2
-  - uid: 4415
-    components:
-    - type: Transform
-      pos: -25.5,-15.5
-      parent: 2
-  - uid: 4416
-    components:
-    - type: Transform
-      pos: -25.5,-16.5
-      parent: 2
-  - uid: 4417
-    components:
-    - type: Transform
-      pos: -24.5,-15.5
-      parent: 2
-  - uid: 4418
-    components:
-    - type: Transform
-      pos: -24.5,-16.5
-      parent: 2
-  - uid: 4419
-    components:
-    - type: Transform
-      pos: -23.5,-15.5
-      parent: 2
-  - uid: 4420
-    components:
-    - type: Transform
-      pos: -23.5,-16.5
-      parent: 2
 - proto: CarpetBlack
   entities:
   - uid: 4423
@@ -30685,12 +30650,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -22.5,-19.5
-      parent: 2
-  - uid: 4924
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -22.5,-15.5
       parent: 2
   - uid: 4925
     components:
@@ -33524,14 +33483,6 @@ entities:
     - type: Transform
       pos: 25.5,-17.5
       parent: 2
-- proto: ComputerSalvageExpedition
-  entities:
-  - uid: 5239
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 22.5,16.5
-      parent: 2
 - proto: ComputerSalvageJobBoard
   entities:
   - uid: 13774
@@ -33568,6 +33519,12 @@ entities:
       parent: 2
 - proto: ComputerShuttleMiningLavaland
   entities:
+  - uid: 5239
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 22.5,16.5
+      parent: 2
   - uid: 11638
     components:
     - type: Transform
@@ -60258,13 +60215,6 @@ entities:
     - type: Transform
       pos: -37.5,22.5
       parent: 2
-- proto: GunSafeRifleLecter
-  entities:
-  - uid: 9131
-    components:
-    - type: Transform
-      pos: -37.5,20.5
-      parent: 2
 - proto: GunSafeShotgunKammerer
   entities:
   - uid: 9132
@@ -60339,7 +60289,7 @@ entities:
   - uid: 9143
     components:
     - type: Transform
-      pos: 9.005315,26.569424
+      pos: 8.726932,26.800106
       parent: 2
   - uid: 9144
     components:
@@ -62162,6 +62112,13 @@ entities:
     - type: Transform
       pos: -4.5,26.5
       parent: 2
+- proto: LockerGriffyFilled
+  entities:
+  - uid: 4418
+    components:
+    - type: Transform
+      pos: -37.5,20.5
+      parent: 2
 - proto: LockerHeadOfPersonnelFilled
   entities:
   - uid: 9296
@@ -63662,6 +63619,13 @@ entities:
     - type: Transform
       pos: -25.484861,30.57598
       parent: 2
+- proto: PaperBin20
+  entities:
+  - uid: 1153
+    components:
+    - type: Transform
+      pos: -30.5,-18.5
+      parent: 2
 - proto: PaperStickyNoteGreen
   entities:
   - uid: 11030
@@ -63919,6 +63883,13 @@ entities:
     - type: Transform
       pos: 10.5,52.5
       parent: 2
+- proto: PlushieGriffy
+  entities:
+  - uid: 4419
+    components:
+    - type: Transform
+      pos: -36.21698,14.462713
+      parent: 2
 - proto: PlushieLizard
   entities:
   - uid: 9533
@@ -63932,6 +63903,13 @@ entities:
     components:
     - type: Transform
       pos: 7.4569645,-43.401207
+      parent: 2
+- proto: PollBooth
+  entities:
+  - uid: 4416
+    components:
+    - type: Transform
+      pos: -23.5,-14.5
       parent: 2
 - proto: PortableFlasher
   entities:
@@ -66843,6 +66821,30 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 33.77101,11.085178
       parent: 1
+- proto: PrinterDoc
+  entities:
+  - uid: 4415
+    components:
+    - type: Transform
+      pos: -32.5,-16.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
+  - uid: 4417
+    components:
+    - type: Transform
+      pos: 9.5,26.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: Protolathe
   entities:
   - uid: 9956
@@ -76798,11 +76800,6 @@ entities:
     components:
     - type: Transform
       pos: 8.5,24.5
-      parent: 2
-  - uid: 11557
-    components:
-    - type: Transform
-      pos: 9.5,26.5
       parent: 2
   - uid: 11558
     components:
@@ -87291,13 +87288,6 @@ entities:
       parent: 2
 - proto: WeaponCapacitorRecharger
   entities:
-  - uid: 13483
-    components:
-    - type: Transform
-      pos: 9.5,26.5
-      parent: 2
-    - type: Physics
-      canCollide: False
   - uid: 13484
     components:
     - type: Transform

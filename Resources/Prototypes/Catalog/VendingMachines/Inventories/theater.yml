@@ -127,6 +127,7 @@
     ClothingOuterDameDane: 2
     ClothingUniformMrSpaceWide: 2 #imp
     ClothingUniformMrSpaceWideSkirt: 2 #imp
+    ClothingHeadHatMitreClown: 1
     ClothingOuterClownPriest: 1
     ClothingMaskSadMime: 1
     ClothingMaskScaredMime: 1
@@ -150,6 +151,7 @@
     ClothingCostumeGingerbreadHead: 1 #goob
     ClothingOuterSuitHotDog: 1 # Goob
     ClothingOuterSuitPickle: 1
+    ClothingOuterSuitTutu: 2 # Goob
     ClothingHeadHatTinfoilHat: 2 # Goobstation
   contrabandInventory:
     ClothingHeadHatRichard: 1
@@ -163,15 +165,15 @@
     ClothingMaskSexyClown: 1
     ClothingMaskSexyMime: 1
     ClothingHeadHatCowboyBountyHunter: 1
-    ToyFigurineBoxer: 1
-    ToyFigurineMusician: 1
+#    ToyFigurineBoxer: 1 # Jamboree, removed mainly because figurines can be gotten other ways. Same applies for below
+#    ToyFigurineMusician: 1
     WeaponLauncherTaiwanPond: 1 # Goobstation
     GrenadeToy: 5 # Goobstation
-    ClothingShoesResonant: 1 # Goobstation
-    ClothingNeckCloakResonant: 1 # Goobstation
-    ClothingUniformJumpsuitResonant: 1 # Goobstation
-    ClothingOuterArmorHereticCostume: 1 # Goobstation
-    ToyBladeEldritch: 1 # Goobstation
+#    ClothingShoesResonant: 1 # Goobstation # Jamboree, giving to the chaplain
+#    ClothingNeckCloakResonant: 1 # Goobstation # Jamboree, giving to the chaplain
+#    ClothingUniformJumpsuitResonant: 1 # Goobstation # Jamboree, giving to the chaplain
+#    ClothingOuterArmorHereticCostume: 1 # Goobstation # Jamboree, removed temporarily as antag costumes will be going to the Costume Trader. Plus a resprite should happen.
+#    ToyBladeEldritch: 1 # Goobstation # Jamboree, removed temporarily as antag costumes will be going to the Costume Trader. Plus a resprite should happen.
   emaggedInventory: # goob
     ClothingOuterPonchoClassicRobust: 1
     ClothingHeadHatCowboyBrownRobust: 1

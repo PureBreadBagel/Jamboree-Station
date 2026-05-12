@@ -130,6 +130,22 @@
         Slash: 0.9
         Piercing: 0.9
 
+# Jamboree: Need a type of boot that can hold knife and stuff, but doesn't have armor. I.e, for the cowboy boots
+- type: entity
+  abstract: true
+  parent: [ClothingShoesBase, ClothingSlotBase]
+  id: ClothingShoesSurvivalBase #changed for simplicity sake
+  components:
+  - type: Matchbox
+  - type: ItemSlots
+    slots:
+      item:
+        name: clothing-boots-sidearm
+        whitelist:
+          tags:
+          - Knife
+          - Sidearm
+
 - type: entity
   abstract: true
   id: ClothingShoesBootsSecFilled

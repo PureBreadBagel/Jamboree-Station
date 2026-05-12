@@ -8,8 +8,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/03/2026 04:54:01
-  entityCount: 23436
+  time: 05/03/2026 06:00:43
+  entityCount: 23420
 maps:
 - 1
 grids:
@@ -14860,6 +14860,15 @@ entities:
       parent: 2
 - proto: ActionToggleLight
   entities:
+  - uid: 2319
+    mapInit: true
+    paused: true
+    components:
+    - type: Transform
+      parent: 15816
+    - type: Action
+      container: 15816
+      originalIconColor: '#FFFFFFFF'
   - uid: 22924
     mapInit: true
     paused: true
@@ -28567,11 +28576,6 @@ entities:
     - type: Transform
       pos: 18.5,-35.5
       parent: 2
-  - uid: 2258
-    components:
-    - type: Transform
-      pos: 14.5,-38.5
-      parent: 2
   - uid: 2259
     components:
     - type: Transform
@@ -28627,11 +28631,6 @@ entities:
     - type: Transform
       pos: 35.5,-1.5
       parent: 2
-  - uid: 2270
-    components:
-    - type: Transform
-      pos: 14.5,-42.5
-      parent: 2
   - uid: 2271
     components:
     - type: Transform
@@ -28651,6 +28650,13 @@ entities:
     components:
     - type: Transform
       pos: 15.5,-35.5
+      parent: 2
+- proto: BookshelfGuidebooksFilled
+  entities:
+  - uid: 2258
+    components:
+    - type: Transform
+      pos: 14.5,-38.5
       parent: 2
 - proto: BookSpaceLaw
   entities:
@@ -64070,23 +64076,6 @@ entities:
     - type: Transform
       pos: 71.56463,-77.43635
       parent: 2
-- proto: ClothingHeadHelmetRiot
-  entities:
-  - uid: 9161
-    components:
-    - type: Transform
-      pos: -20.614132,6.803402
-      parent: 2
-  - uid: 9162
-    components:
-    - type: Transform
-      pos: -20.591784,6.61318
-      parent: 2
-  - uid: 9163
-    components:
-    - type: Transform
-      pos: -20.58104,6.4969034
-      parent: 2
 - proto: ClothingHeadMailCarrier
   entities:
   - uid: 9141
@@ -64225,76 +64214,6 @@ entities:
     components:
     - type: Transform
       pos: 27.65064,-12.475961
-      parent: 2
-- proto: ClothingOuterArmorBulletproof
-  entities:
-  - uid: 9185
-    components:
-    - type: Transform
-      pos: -21.188942,6.61409
-      parent: 2
-  - uid: 9186
-    components:
-    - type: Transform
-      pos: -21.173317,6.52034
-      parent: 2
-  - uid: 9187
-    components:
-    - type: Transform
-      pos: -21.286655,6.6918373
-      parent: 2
-- proto: ClothingOuterArmorReflective
-  entities:
-  - uid: 9188
-    components:
-    - type: Transform
-      pos: -20.224054,6.715275
-      parent: 2
-- proto: ClothingOuterArmorRiot
-  entities:
-  - uid: 9189
-    components:
-    - type: Transform
-      pos: -20.871235,6.678402
-      parent: 2
-    - type: GroupExamine
-      group:
-      - hoverMessage: ""
-        contextText: verb-examine-group-other
-        icon: /Textures/Interface/examine-star.png
-        components:
-        - Armor
-        - ClothingSpeedModifier
-        entries:
-        - message: This decreases your speed by [color=yellow]10%[/color].
-          priority: 0
-          component: ClothingSpeedModifier
-        - message: >-
-            It provides the following protection:
-
-            - [color=yellow]Blunt[/color] damage reduced by [color=lightblue]60%[/color].
-
-            - [color=yellow]Slash[/color] damage reduced by [color=lightblue]60%[/color].
-
-            - [color=yellow]Piercing[/color] damage reduced by [color=lightblue]30%[/color].
-
-            - [color=yellow]Heat[/color] damage reduced by [color=lightblue]10%[/color].
-
-            - [color=yellow]Caustic[/color] damage reduced by [color=lightblue]10%[/color].
-
-            - [color=orange]Explosion[/color] damage reduced by [color=lightblue]10%[/color].
-          priority: 0
-          component: Armor
-        title: null
-  - uid: 9190
-    components:
-    - type: Transform
-      pos: -20.888659,6.503805
-      parent: 2
-  - uid: 9191
-    components:
-    - type: Transform
-      pos: -20.888659,6.610859
       parent: 2
 - proto: ClothingOuterCoatLabChem
   entities:
@@ -66114,6 +66033,13 @@ entities:
     components:
     - type: Transform
       pos: 17.5,-52.5
+      parent: 2
+- proto: CrateSecurityRiot
+  entities:
+  - uid: 9161
+    components:
+    - type: Transform
+      pos: -21.5,6.5
       parent: 2
 - proto: CrateSecurityTrackingMindshieldImplants
   entities:
@@ -74362,6 +74288,13 @@ entities:
       parent: 2
     - type: FaxMachine
       name: Bridge
+  - uid: 10848
+    components:
+    - type: Transform
+      pos: 18.5,-41.5
+      parent: 2
+    - type: FaxMachine
+      name: Library
   - uid: 18011
     components:
     - type: Transform
@@ -74382,11 +74315,6 @@ entities:
     components:
     - type: Transform
       pos: 22.5,-41.5
-      parent: 2
-  - uid: 10848
-    components:
-    - type: Transform
-      pos: 18.5,-41.5
       parent: 2
 - proto: filingCabinetDrawer
   entities:
@@ -77198,11 +77126,6 @@ entities:
     components:
     - type: Transform
       pos: -28.344467,-26.498697
-      parent: 2
-  - uid: 11153
-    components:
-    - type: Transform
-      pos: 17.574814,-40.49702
       parent: 2
   - uid: 11154
     components:
@@ -109365,8 +109288,22 @@ entities:
   - uid: 15816
     components:
     - type: Transform
-      pos: 18.047396,-41.177155
+      pos: 17.925674,-41.21362
       parent: 2
+    - type: HandheldLight
+      toggleActionEntity: 2319
+    - type: ContainerContainer
+      containers:
+        cell_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        actions: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 2319
+    - type: ActionsContainer
 - proto: LauncherCreamPie
   entities:
   - uid: 15817
@@ -110623,6 +110560,13 @@ entities:
     components:
     - type: Transform
       pos: -29.5,-58.5
+      parent: 2
+- proto: LockerGriffyFilled
+  entities:
+  - uid: 9162
+    components:
+    - type: Transform
+      pos: -20.5,6.5
       parent: 2
 - proto: LockerHeadOfPersonnelFilled
   entities:
@@ -112383,7 +112327,7 @@ entities:
   - uid: 16178
     components:
     - type: Transform
-      pos: -15.3951,-48.34461
+      pos: -16.515347,-48.36899
       parent: 2
 - proto: MaterialCloth1
   entities:
@@ -112421,7 +112365,7 @@ entities:
   - uid: 16184
     components:
     - type: Transform
-      pos: -16.066975,-48.422733
+      pos: -16.780972,-48.11899
       parent: 2
 - proto: MaterialSilo
   entities:
@@ -113755,11 +113699,6 @@ entities:
     - type: Transform
       pos: 17.558317,12.469315
       parent: 2
-  - uid: 16390
-    components:
-    - type: Transform
-      pos: 17.49144,-40.72635
-      parent: 2
 - proto: PersonalAI
   entities:
   - uid: 16391
@@ -114061,6 +114000,14 @@ entities:
     components:
     - type: Transform
       pos: -38.450157,-51.567135
+      parent: 2
+- proto: PollBooth
+  entities:
+  - uid: 2270
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 14.5,-42.5
       parent: 2
 - proto: PortableFlasher
   entities:
@@ -117624,6 +117571,41 @@ entities:
     - type: Transform
       pos: 41.507294,-9.45423
       parent: 2
+- proto: PrinterDoc
+  entities:
+  - uid: 8891
+    components:
+    - type: Transform
+      pos: 17.5,-40.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
+  - uid: 11153
+    components:
+    - type: Transform
+      pos: -15.5,-48.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
+  - uid: 16390
+    components:
+    - type: Transform
+      pos: 19.5,-39.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: Protolathe
   entities:
   - uid: 17055
@@ -124745,42 +124727,6 @@ entities:
     components:
     - type: Transform
       pos: 25.686981,-58.556297
-      parent: 2
-- proto: RiotBulletShield
-  entities:
-  - uid: 18423
-    components:
-    - type: Transform
-      pos: -21.73,6.5
-      parent: 2
-  - uid: 18424
-    components:
-    - type: Transform
-      pos: -21.509254,6.5594025
-      parent: 2
-- proto: RiotLaserShield
-  entities:
-  - uid: 18425
-    components:
-    - type: Transform
-      pos: -21.73,6.63
-      parent: 2
-  - uid: 18426
-    components:
-    - type: Transform
-      pos: -21.509254,6.6375275
-      parent: 2
-- proto: RiotShield
-  entities:
-  - uid: 18427
-    components:
-    - type: Transform
-      pos: -21.71,6.432082
-      parent: 2
-  - uid: 18428
-    components:
-    - type: Transform
-      pos: -21.478004,6.457841
       parent: 2
 - proto: RobocopCircuitBoard
   entities:
@@ -132238,11 +132184,6 @@ entities:
     - type: Transform
       pos: -12.5,-8.5
       parent: 2
-  - uid: 19563
-    components:
-    - type: Transform
-      pos: -20.5,6.5
-      parent: 2
   - uid: 19564
     components:
     - type: Transform
@@ -132732,11 +132673,6 @@ entities:
     components:
     - type: Transform
       pos: 21.5,14.5
-      parent: 2
-  - uid: 19668
-    components:
-    - type: Transform
-      pos: -21.5,6.5
       parent: 2
   - uid: 19669
     components:
@@ -134250,11 +134186,6 @@ entities:
     - type: Transform
       pos: -16.5,-48.5
       parent: 2
-  - uid: 19934
-    components:
-    - type: Transform
-      pos: -15.5,-48.5
-      parent: 2
   - uid: 19935
     components:
     - type: Transform
@@ -134970,7 +134901,7 @@ entities:
   - uid: 20058
     components:
     - type: Transform
-      pos: -16.557547,-48.286213
+      pos: -11.905972,-47.90024
       parent: 2
 - proto: ToyFigurineHeadOfSecurity
   entities:
@@ -134978,13 +134909,6 @@ entities:
     components:
     - type: Transform
       pos: -20.808966,10.972251
-      parent: 2
-- proto: ToyFigurineLibrarian
-  entities:
-  - uid: 20060
-    components:
-    - type: Transform
-      pos: 18.762903,-41.257965
       parent: 2
 - proto: ToyFigurineMedicalDoctor
   entities:

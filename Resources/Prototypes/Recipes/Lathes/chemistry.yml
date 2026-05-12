@@ -81,6 +81,7 @@
     Plastic: 500
     Plasma: 150
     Silver: 50
+    BSCrystal: 260
 
 - type: latheRecipe
   id: SyringeBluespace
@@ -92,6 +93,7 @@
     Glass: 250
     Plasma: 100
     Silver: 50
+    BSCrystal: 100
 
 - type: latheRecipe
   id: PillCanister

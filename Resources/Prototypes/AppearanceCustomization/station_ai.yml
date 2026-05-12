@@ -52,6 +52,24 @@
   - StationAiHologramKobold
   - StationAiHologramMonkey
   - StationAiHologramScurret # goob
+  # Jamboree holograms (Bibble)
+  - StationAiHologramBingle
+  - StationAiHologramClown
+  - StationAiHologramEyeball
+  - StationAiHologramFlame
+  - StationAiHologramGhosty
+  - StationAiHologramGondola
+  - StationAiHologramGorilla
+  - StationAiHologramHate
+  - StationAiHologramJared
+  - StationAiHologramLizard
+  - StationAiHologramPAI
+  - StationAiHologramPequeno
+  - StationAiHologramRitual
+  - StationAiHologramSmiley
+  - StationAiHologramStickperson
+  - StationAiHologramXeno
+  # Jamboree holograms END (Bibble)
 
 # Iconography
 - type: stationAiCustomization

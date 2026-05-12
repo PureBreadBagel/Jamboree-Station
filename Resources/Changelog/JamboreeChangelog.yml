@@ -1064,3 +1064,296 @@ Entries:
         minutes to respawn!
   id: 103
   time: '2026-04-03T20:51:09.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Fix
+      message: The respawn time is 20 minutes instead of 5.
+  id: 104
+  time: '2026-04-06T01:12:44.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added 16 new AI holographic avatars! Some include: The Clown, the
+        Gondola, the Bingle, the Xeno, and many more!
+    - type: Add
+      message: >-
+        The HOS's Parade Hardsuit is now in the HOS' hardsuit selector! Get
+        ready to get fancy!
+    - type: Remove
+      message: >-
+        The HOS's Parade Hardsuit no longer has an auto injection system. Mainly
+        nerfed so it isn't a better HOS hardsuit!
+    - type: Tweak
+      message: >-
+        The Resonant Clothing Set found in the contraband inventory of the
+        Autodrobe is now in the Chaplain's loadout!
+    - type: Tweak
+      message: >-
+        The cowboy boots and high-heeled boots no longer have the "50% lowered
+        slowdown from injuries" and "50% lower time to get up from stun" stats.
+        Yeehaw!
+    - type: Remove
+      message: All gar glasses, and high-heeled boots, no longer deal damage.
+    - type: Remove
+      message: >-
+        The boxer and musician figurines have been removed from the Autodrobe's
+        contraband inventory! GET YOUR TOYS FROM THE GOOD CLEAN FUN LIKE THE
+        REST OF US!!!!!!!!
+    - type: Remove
+      message: >-
+        The fake heretic gear is removed from the Autodrobe's contraband
+        inventory! They will return with the Costume Trader... with new sprites
+        too...
+  id: 105
+  time: '2026-04-08T05:59:29.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added material silos to Glacier and Byoin! They should be synced up with
+        all roundstart lathes!
+    - type: Tweak
+      message: >-
+        Moved the Saltern material silo into the vault. It is now also linked to
+        all lathes by default!
+    - type: Fix
+      message: >-
+        Added the Psychologist's office's door back. Now your therapy won't have
+        an unwelcome audience!
+    - type: Remove
+      message: >-
+        Removed the syringe gun from Reach. You can still get one in the kit,
+        but no duplicates!!!
+  id: 106
+  time: '2026-04-09T09:31:50.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Tweak
+      message: >-
+        The hairline for the "Buzzcut" hairstyle has been given a small upgrade.
+        The original barber of this cut has since been executed for their
+        heinous crimes.
+  id: 107
+  time: '2026-04-10T01:02:35.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Remove
+      message: limer_treats curse has been removed. He is free from baguettes.
+  id: 108
+  time: '2026-04-12T01:36:45.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Remove
+      message: Disabled the Shadow Anomaly from spawning! Darkness reigns no more!
+    - type: Remove
+      message: >-
+        Removed the Revolutionary Manifesto from spawning in maints. The library
+        has other fantastic books!
+  id: 109
+  time: '2026-04-16T20:45:48.0000000+00:00'
+- author: Gorse1
+  changes:
+    - type: Fix
+      message: Fixed syndicate scouts getting two survival boxes. Now they get one.
+  id: 110
+  time: '2026-04-24T05:43:29.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the eyepatch, gar glasses, orange gar glasses, and giga gar
+        glasses to the glasses loadout menu! Get stylish!
+    - type: Tweak
+      message: >-
+        The texture for the jamjar glasses have been updated! I wonder why they
+        are called jamjar glasses. I don't see any jam in them...
+  id: 111
+  time: '2026-04-26T06:04:56.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Space Whales have been sighted at the edges of the Jamboree Sector. Be
+        wary...
+  id: 112
+  time: '2026-04-26T06:40:10.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added tennis equipment! Items, such as the rackets, have yet to be
+        mapped into places, but the ball is available in the toy chest!
+    - type: Add
+      message: Added a belt for Central Command to use to punish innocent tiders.
+    - type: Add
+      message: Added a new jumpsuit for Central Command officers. The drip is insane!
+    - type: Tweak
+      message: >-
+        Borgs and the Station AI now understand most crew-specific languages!
+        Call them if you need a sudden translator!
+    - type: Add
+      message: Added a sign language implanter as being researchable!
+    - type: Add
+      message: >-
+        Added distress signalers to the SecTech vendor! Now hired on officers
+        can call for help too!
+    - type: Add
+      message: >-
+        Added a new alert level obtainable by using an emag! Calling all
+        traitors to the bridge!
+    - type: Add
+      message: Added a tutu to the Autodrobe. Now you can do ballet... I guess...
+  id: 113
+  time: '2026-04-26T07:15:12.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added several new pieces of sports equipment to the visiting mime ship!
+        If you see a mime ghost role, JOIN IN AS IT!!!
+    - type: Tweak
+      message: Added cameras, turret controls, and more for AI convenience to Cluster!
+  id: 114
+  time: '2026-04-30T20:29:47.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the Travel Camera! Check your nearest maints locker for the chance
+        of having a picture day! Alien Tourists get them for free!
+    - type: Tweak
+      message: >-
+        Alien Tourists now have a slightly updated ship! New merch, a new
+        holopad, and a jukebox for real vacation vibes!
+    - type: Tweak
+      message: Fake Jordans are no longer contraband.
+  id: 115
+  time: '2026-05-01T03:41:37.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the Magic 9 Ball! Select it in your trinket menu or go to your
+        nearest Good Clean Fun to learn the answers of the universe!
+    - type: Add
+      message: >-
+        Added the Honkmother Mitre! Now chaplains and clowns can both show their
+        allegiance to the Honkmother, hallowed be her name.
+    - type: Add
+      message: >-
+        Added the press hat and press vest for reporter! Gotta look good when
+        snooping around!
+    - type: Tweak
+      message: >-
+        Chaplains, Boxers, and Radio Hosts can now have alternate names for
+        their jobs! Now people will know when you really are holy!
+    - type: Tweak
+      message: >-
+        Balls have been added to the trinket menu and the SweatMax vending
+        machine! Time to break some legs out there!
+    - type: Tweak
+      message: >-
+        Several things in the loadout have been placed into groups. Some
+        include: All colored assistant jumpsuits and skirts, doodads in the
+        trinket menu, and the new balls in the trinket menu!
+  id: 116
+  time: '2026-05-01T04:38:18.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the polling booth, and item that allows admins to create in game
+        polls that last between rounds! They are mapped in the libraries of
+        Amber, Atlas, Byoin, Cluster, Glacier, Packed, Omega, Reach, and
+        Saltern! (the same goes for the other changes in this PR
+    - type: Add
+      message: >-
+        Added the document printer, a lathe with a large reservoir of premade
+        docs to use in many cases! They are mapped in the HOP's office and the
+        library, but also appear as flatpacks in every command member's locker!
+        (And the ntr and warden's lockers!)
+    - type: Add
+      message: >-
+        Added the guidebookshelf, a bookshelf in every library full of
+        guidebooks! If you need to learn, heading to the library is finally the
+        way to go!
+    - type: Tweak
+      message: >-
+        Central Command has been updated with a polling area, a guidebookshelf,
+        and multiple document printers!
+  id: 117
+  time: '2026-05-01T05:59:39.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Griffy, the Safety Dog, has come to the Jamboree Sector to lay down the
+        Mandate! As VIP Members, security can find our lovable mascot in the
+        armory!
+    - type: Add
+      message: >-
+        Cindy the Red Chaos Cat, known mascot figure and Syndicate Terrorist,
+        has entered the Jamboree Sector. Do not listen to their anarchist ways! 
+    - type: Tweak
+      message: >-
+        Added Griffy, the Safety Dog, to Amber, Atlas, Byoin, Cluster, Glacier,
+        Omega, Packed, and Saltern! Griffy's tour will extend to our full
+        catalog (alongside our other unmapped features) of stations soon!
+    - type: Tweak
+      message: Cluster has had it's AI satellite updated (again)
+  id: 118
+  time: '2026-05-03T08:00:28.0000000+00:00'
+- author: PureBreadBagel, IrisTheAmped
+  changes:
+    - type: Add
+      message: >-
+        What's this? NanoTrasen has experimented with Bluespace technology to
+        allow Bartenders and Chemists alike to benefit from eChems! Energy
+        Chemical, Booze and Soda Dispensers are now available behind Bluespace
+        Chemistry research! Now Bartenders can get drunk and Chemists can
+        produce chems at a rapid pace! (Keep in mind you need bluespace crystals
+        while assembling the machine.)
+    - type: Fix
+      message: >-
+        Fixed Bluespace crystals identity crisis; should now be able to get into
+        fabricators.
+    - type: Tweak
+      message: >-
+        Some bluespace recipes have been edited to include the one and only
+        bluespace crystals.
+    - type: Tweak
+      message: >-
+        NanoTrasens higher budget grant has allowed wallmounted Space Cleaner to
+        slowly regenerate its supply over time, Janitors have their job a little
+        easier. 
+    - type: Fix
+      message: Bluespace crystals can now be inserted into techfabs.
+    - type: Tweak
+      message: The Oracle now dispenses the correct Bluespace Crystals
+    - type: Tweak
+      message: >-
+        The Circuit Imprinter, Service TechFab, and Medical TechFab can produce
+        their eChem boards once researched.
+  id: 119
+  time: '2026-05-08T05:12:17.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Fix
+      message: Echem booze and soda can now go on tables
+    - type: Fix
+      message: >-
+        Redundant bluespace oreprocessor now accepts unprocessed instead of
+        automatically turning bluespace processed.
+    - type: Fix
+      message: >-
+        Echem machine boards can now be assembled by hand rather than just being
+        only flatpacked.
+  id: 120
+  time: '2026-05-08T18:22:52.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Fix
+      message: the echem for medical should be craftable now
+  id: 121
+  time: '2026-05-08T23:02:02.0000000+00:00'

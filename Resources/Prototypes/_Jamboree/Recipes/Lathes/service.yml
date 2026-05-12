@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: latheRecipe
+  id: EnergyBoozeDispenserMachineCircuitboard
+  result: EnergyBoozeDispenserMachineCircuitboard
+  completetime: 10
+  materials:
+    Steel: 200
+    Glass: 100
+    Gold: 300
+
+
+- type: latheRecipe
+  id: EnergySodaDispenserMachineCircuitboard
+  result: EnergySodaDispenserMachineCircuitboard
+  completetime: 10
+  materials:
+    Steel: 300
+    Glass: 200
+    Gold: 250
+
+- type: latheRecipePack
+  id: EnergyChemicalDispensersService
+  recipes:
+    - EnergyBoozeDispenserMachineCircuitboard
+    - EnergySodaDispenserMachineCircuitboard
+
+- type: latheRecipePack
+  id: EnergyChemicalDispensersMedical
+  recipes:
+    - EnergyChemDispenserMachineCircuitboard
