@@ -1369,3 +1369,16 @@ Entries:
       message: Added juice that makes you mar. I bet you can't guess what it does.
   id: 122
   time: '2026-05-13T00:12:36.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Tweak
+      message: >-
+        Many vending machines have had their contraband inventories tweaked,
+        with many contraband items instead being moved to their emagged
+        inventory equivalents. 
+    - type: Tweak
+      message: >-
+        Air Jordans have been reworked/renamed into two new shoe sets:
+        Nanotrainers and Syndikicks! 
+  id: 123
+  time: '2026-05-13T22:24:37.0000000+00:00'
