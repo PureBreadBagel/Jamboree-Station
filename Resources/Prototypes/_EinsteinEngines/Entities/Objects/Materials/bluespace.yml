@@ -1,6 +1,10 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: MaterialBase
-  id: MaterialBluespace
+  id: MaterialBSCrystal
   suffix: Full
   name: bluespace crystal
   components:
@@ -13,7 +17,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      Bluespace: 100
+      BSCrystal: 100
   - type: EmitSoundOnUse
     sound:
       collection: RadiationPulse
@@ -22,7 +26,7 @@
     - BluespaceCrystal
     - RawMaterial
   - type: Stack
-    stackType: Bluespace
+    stackType: BSCrystal
     baseLayer: base
     layerStates:
     - bluespace
@@ -33,31 +37,39 @@
     size: Small
 
 - type: entity
-  parent: MaterialBluespace
-  id: MaterialBluespace1
+  parent: MaterialBSCrystal
+  id: MaterialBSCrystal1
   suffix: 1
   components:
   - type: Sprite
     state: bluespace
   - type: Stack
     count: 1
+  - type: Tag
+    tags:
+    - RawMaterial
 
 - type: entity
-  parent: MaterialBluespace1
-  id: MaterialBluespace3
+  parent: MaterialBSCrystal1
+  id: MaterialBSCrystal3
   suffix: 3
   components:
   - type: Stack
     count: 3
+  - type: Tag
+    tags:
+    - RawMaterial
 
 - type: entity
-  parent: MaterialBluespace1
-  id: MaterialBluespace5
+  parent: MaterialBSCrystal1
+  id: MaterialBSCrystal5
   suffix: 5
   components:
   - type: Stack
     count: 5
-
+  - type: Tag
+    tags:
+    - RawMaterial
 - type: entity
   parent: MaterialBase
   id: MaterialNormality

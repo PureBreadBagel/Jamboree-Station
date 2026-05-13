@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "imported from google by Gorse1 for Jamboree",
+    "size": {
+        "x": 351,
+        "y": 234
+    },
+    "states": [
+        {
+            "name": "icon"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: accent
+  id: blonk
+  fullReplacements:
+  - accent-words-blonk-1
+  - accent-words-blonk-2
+  - accent-words-blonk-3
+  - accent-words-blonk-4
+  - accent-words-blonk-5
+
+- type: accent
+  id: mosquito
+  fullReplacements:
+  - accent-words-mosquito-1
+  - accent-words-mosquito-2
+  - accent-words-mosquito-3
+  - accent-words-mosquito-4
+

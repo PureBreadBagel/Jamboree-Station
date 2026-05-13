@@ -1,4 +1,8 @@
-﻿- type: entity
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
   id: Meowl # jamboree - shitposting era real
   name: meowl
   suffix: Admeme
@@ -48,4 +52,14 @@
   components:
   - type: Sprite
     sprite: _Jamboree/Objects/Fun/gungle-ungus-bingle.rsi
+    state: icon
+
+- type: entity
+  parent: BaseBinglePlushie
+  id: PlushieBingleBibbleSpingle
+  name: bibble spingle plushie
+  description: You can't be serious.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Objects/Fun/bibble-spingle.rsi
     state: icon

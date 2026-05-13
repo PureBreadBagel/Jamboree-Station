@@ -20,7 +20,7 @@
 
 - type: entity
   parent: MaterialBase
-  id: MaterialBSCrystal
+  id: MaterialBSCrystalGS
   name: bluespace crystal
   suffix: Full
   components:
@@ -54,39 +54,42 @@
     - Ingot
 
 - type: entity
-  parent: MaterialBSCrystal
-  id: MaterialBSCrystal1
+  parent: MaterialBSCrystalGS
+  id: MaterialBSCrystal1GS
   suffix: Single
   components:
   - type: Stack
     count: 1
 
 - type: entity # Jamboree
-  parent: MaterialBSCrystal
-  id: MaterialBSCrystal3
+  parent: MaterialBSCrystalGS
+  id: MaterialBSCrystal3GS
   suffix: Plural
   components:
   - type: Stack
     count: 3
 
 - type: entity # Jamboree
-  parent: MaterialBSCrystal
-  id: MaterialBSCrystal5
+  parent: MaterialBSCrystalGS
+  id: MaterialBSCrystal5GS
   suffix: Plural
   components:
   - type: Stack
     count: 5
 
 - type: entity
-  parent: MaterialBSCrystal
+  parent: MaterialBSCrystalGS
   id: MaterialBSCrystalUnprocessed
   name: unprocessed bluespace crystal
   suffix: Full
   components:
   - type: Stack
     stackType: BSCrystalUnprocessed
+  - type: PhysicalComposition
+    materialComposition:
+      BSCrystalUnprocessed: 100
   - type: UnclaimedOre
-    miningPoints: 250
+    miningPoints: 1000
 
 - type: entity
   parent: MaterialBSCrystalUnprocessed

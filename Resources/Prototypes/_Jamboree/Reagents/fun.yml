@@ -1,0 +1,53 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: reagent
+  id: BlonkLiquid
+  name: reagent-name-blonkliquid
+  group: Toxins
+  desc: reagent-desc-blonkliquid
+  physicalDesc: reagent-physical-desc-blonky
+  color: "#008080"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.05
+      effects:
+      - !type:PopupMessage
+        type: Local
+        messages: [ "reagent-popup-blonkliquid" ]
+        probability: 0.1
+      - !type:Polymorph
+        prototype: Blonk
+        conditions:
+        - !type:ReagentThreshold
+          min: 100
+
+- type: reagent
+  id: JuiceThatMakesYouMar
+  name: reagent-name-marjuice
+  group: Toxins
+  desc: reagent-desc-marjuice
+  physicalDesc: reagent-physical-desc-martian
+  color: "#5F8575"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.05
+      effects:
+      - !type:Emote
+        emote: Mars
+        showInChat: true
+        showInGuidebook: true
+        force: true
+        probability: 0.5
+      - !type:Polymorph
+        prototype: Shadowkin
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+      - !type:AdjustReagent
+        reagent: JuiceThatMakesYouMar
+        amount: -20
+        conditions:
+        - !type:ReagentThreshold
+          min: 50

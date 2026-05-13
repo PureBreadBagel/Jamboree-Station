@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "copyright": "Taken from tgstation, Griffy locker sprites made by Bibble for jamboree, modified from the base security locker sprite and inspired by the original griffy locker sprites from impstation.",
+    "license": "CC-BY-SA-3.0",
+    "states": [
+        {
+            "name": "griffy"
+        },
+        {
+            "name": "griffy_door"
+        },
+        {
+            "name": "griffy_open"
+        },
+        {
+            "name": "generic_icon"
+        },
+        {
+            "name": "generic"
+        },
+        {
+            "name": "generic_open"
+        },
+        {
+            "name": "generic_door"
+        },
+        {
+            "name": "locked"
+        },
+        {
+            "name": "unlocked"
+        },
+        {
+            "name": "welded"
+        }
+    ]
+}

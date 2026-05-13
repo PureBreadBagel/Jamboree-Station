@@ -71,7 +71,6 @@
     - CameraBoards
     - ShuttleBoards
     - ShuttleBoardsGoob
-    - BluespaceTheory
     - ScienceClothing
     - UpgradeKits
   - type: EmagLatheRecipes
@@ -136,7 +135,6 @@
     - SharedBoards
     - ShuttleBoards
     - ShuttleBoardsGoob
-    - BluespaceTheory
     - ScienceClothing
     - ConstructionBagOfHolding
   - type: EmagLatheRecipes
@@ -237,6 +235,7 @@
         - RawMaterial
         - Ingot
 
+
 - type: entity
   id: ServiceTechFab
   parent: [BaseLatheLube, BaseSiloUtilizer]
@@ -287,6 +286,7 @@
     - ServiceBoardsGoob # goob
     # Einstein Engines Packs
     - Translators
+    - EnergyChemicalDispensersService
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ServiceBoardsEvilStatic # Donk Co microwave circiutboard
@@ -296,3 +296,6 @@
         - Sheet
         - RawMaterial
         - Ingot
+
+
+

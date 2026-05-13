@@ -12,6 +12,7 @@ using Content.Server.Paper;
 using Content.Shared.Popups;
 using Content.Shared.Tag;
 using Content.Shared.Verbs;
+using Content.Shared.DV.Paper;
 using Robust.Server.Audio;
 using Robust.Shared.Player;
 
@@ -72,7 +73,7 @@ public sealed class SignatureSystem : EntitySystem
         if (paperEvent.Cancelled)
             return false;
 
-        var signatureName = DetermineEntitySignature(signer);
+        var signatureName = DetermineEntitySignature(signer, pen);
 
         var stampInfo = new StampDisplayInfo()
         {
@@ -110,11 +111,15 @@ public sealed class SignatureSystem : EntitySystem
         }
     }
 
-    private string DetermineEntitySignature(EntityUid uid)
+    private string DetermineEntitySignature(EntityUid uid, EntityUid pen)
     {
         // Goobstation - Allow devils to sign their true name.
         if (TryComp<DevilComponent>(uid, out var devilComp) && !string.IsNullOrWhiteSpace(devilComp.TrueName))
             return devilComp.TrueName;
+
+        // If the entity has pen with the SignatureWriter component, use that name
+        if (TryComp<SignatureWriterComponent>(pen, out var signatureComp) && signatureComp.NameOverride != null)
+            return signatureComp.NameOverride;
 
         // If the entity has an ID, use the name on it.
         if (_idCard.TryFindIdCard(uid, out var id) && !string.IsNullOrWhiteSpace(id.Comp.FullName))

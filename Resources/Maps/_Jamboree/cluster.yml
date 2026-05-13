@@ -1,11 +1,15 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Map
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/01/2026 03:37:05
-  entityCount: 13033
+  time: 05/03/2026 06:12:12
+  entityCount: 13060
 maps:
 - 1
 grids:
@@ -8627,6 +8631,16 @@ entities:
     - type: Transform
       pos: -3.5,56.5
       parent: 2
+  - uid: 10025
+    components:
+    - type: Transform
+      pos: -5.5,46.5
+      parent: 2
+  - uid: 10727
+    components:
+    - type: Transform
+      pos: -7.5,46.5
+      parent: 2
 - proto: BoxBeaker
   entities:
   - uid: 544
@@ -16050,6 +16064,26 @@ entities:
     - type: Transform
       pos: -19.5,-24.5
       parent: 2
+  - uid: 8629
+    components:
+    - type: Transform
+      pos: -11.5,48.5
+      parent: 2
+  - uid: 8630
+    components:
+    - type: Transform
+      pos: -13.5,48.5
+      parent: 2
+  - uid: 8631
+    components:
+    - type: Transform
+      pos: -13.5,55.5
+      parent: 2
+  - uid: 8632
+    components:
+    - type: Transform
+      pos: -12.5,55.5
+      parent: 2
   - uid: 8742
     components:
     - type: Transform
@@ -16109,6 +16143,16 @@ entities:
     components:
     - type: Transform
       pos: -16.5,-27.5
+      parent: 2
+  - uid: 10742
+    components:
+    - type: Transform
+      pos: -12.5,52.5
+      parent: 2
+  - uid: 12735
+    components:
+    - type: Transform
+      pos: -12.5,48.5
       parent: 2
   - uid: 12969
     components:
@@ -16209,6 +16253,116 @@ entities:
     components:
     - type: Transform
       pos: -15.5,-33.5
+      parent: 2
+  - uid: 13034
+    components:
+    - type: Transform
+      pos: 1.5,47.5
+      parent: 2
+  - uid: 13035
+    components:
+    - type: Transform
+      pos: -4.5,47.5
+      parent: 2
+  - uid: 13036
+    components:
+    - type: Transform
+      pos: -4.5,46.5
+      parent: 2
+  - uid: 13037
+    components:
+    - type: Transform
+      pos: -4.5,44.5
+      parent: 2
+  - uid: 13038
+    components:
+    - type: Transform
+      pos: -4.5,43.5
+      parent: 2
+  - uid: 13039
+    components:
+    - type: Transform
+      pos: -4.5,42.5
+      parent: 2
+  - uid: 13040
+    components:
+    - type: Transform
+      pos: -4.5,58.5
+      parent: 2
+  - uid: 13041
+    components:
+    - type: Transform
+      pos: -4.5,59.5
+      parent: 2
+  - uid: 13042
+    components:
+    - type: Transform
+      pos: -11.5,59.5
+      parent: 2
+  - uid: 13043
+    components:
+    - type: Transform
+      pos: -11.5,58.5
+      parent: 2
+  - uid: 13044
+    components:
+    - type: Transform
+      pos: -11.5,57.5
+      parent: 2
+  - uid: 13045
+    components:
+    - type: Transform
+      pos: 1.5,57.5
+      parent: 2
+  - uid: 13046
+    components:
+    - type: Transform
+      pos: 1.5,58.5
+      parent: 2
+  - uid: 13047
+    components:
+    - type: Transform
+      pos: 6.5,54.5
+      parent: 2
+  - uid: 13048
+    components:
+    - type: Transform
+      pos: 5.5,54.5
+      parent: 2
+  - uid: 13049
+    components:
+    - type: Transform
+      pos: 6.5,48.5
+      parent: 2
+  - uid: 13050
+    components:
+    - type: Transform
+      pos: 5.5,48.5
+      parent: 2
+  - uid: 13051
+    components:
+    - type: Transform
+      pos: 1.5,46.5
+      parent: 2
+  - uid: 13052
+    components:
+    - type: Transform
+      pos: 1.5,45.5
+      parent: 2
+  - uid: 13053
+    components:
+    - type: Transform
+      pos: 2.5,45.5
+      parent: 2
+  - uid: 13054
+    components:
+    - type: Transform
+      pos: 2.5,47.5
+      parent: 2
+  - uid: 13055
+    components:
+    - type: Transform
+      pos: 2.5,46.5
       parent: 2
 - proto: CableApcStack
   entities:
@@ -56561,12 +56715,26 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -43.5,29.5
       parent: 2
+- proto: GunSafeLaserCarbine
+  entities:
+  - uid: 10749
+    components:
+    - type: Transform
+      pos: 38.5,10.5
+      parent: 2
 - proto: GunSafePistolMk58
   entities:
-  - uid: 8392
+  - uid: 8633
     components:
     - type: Transform
       pos: 38.5,13.5
+      parent: 2
+- proto: GunSafeRifleLecter
+  entities:
+  - uid: 8394
+    components:
+    - type: Transform
+      pos: 38.5,11.5
       parent: 2
 - proto: GunSafeShotgunKammerer
   entities:
@@ -56574,13 +56742,6 @@ entities:
     components:
     - type: Transform
       pos: 38.5,12.5
-      parent: 2
-- proto: GunSafeSubMachineGunDrozd
-  entities:
-  - uid: 8394
-    components:
-    - type: Transform
-      pos: 38.5,11.5
       parent: 2
 - proto: Handcuffs
   entities:
@@ -57665,11 +57826,6 @@ entities:
     - type: Transform
       pos: -10.55713,54.97145
       parent: 2
-  - uid: 8553
-    components:
-    - type: Transform
-      pos: -7.5221167,46.845314
-      parent: 2
   - uid: 8554
     components:
     - type: Transform
@@ -57782,6 +57938,28 @@ entities:
     - type: Physics
       angularDamping: 0
       linearDamping: 0
+- proto: LockableButtonCommand
+  entities:
+  - uid: 10027
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -7.5,53.5
+      parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        10109:
+        - - Pressed
+          - Toggle
+        10110:
+        - - Pressed
+          - Toggle
+        10107:
+        - - Pressed
+          - Toggle
+        10108:
+        - - Pressed
+          - Toggle
 - proto: LockerAtmosphericsFilled
   entities:
   - uid: 8570
@@ -58102,6 +58280,13 @@ entities:
         - 0
         - 0
         - 0
+- proto: LockerGriffyFilled
+  entities:
+  - uid: 8634
+    components:
+    - type: Transform
+      pos: 36.5,13.5
+      parent: 2
 - proto: LockerHeadOfPersonnelFilled
   entities:
   - uid: 4313
@@ -58457,40 +58642,6 @@ entities:
     components:
     - type: Transform
       pos: 29.556211,16.447828
-      parent: 2
-- proto: MagazineRifle
-  entities:
-  - uid: 8629
-    components:
-    - type: Transform
-      pos: 36.271854,13.401509
-      parent: 2
-  - uid: 8630
-    components:
-    - type: Transform
-      pos: 36.50623,13.401509
-      parent: 2
-  - uid: 8631
-    components:
-    - type: Transform
-      pos: 36.72498,13.417134
-      parent: 2
-  - uid: 8632
-    components:
-    - type: Transform
-      pos: 36.646854,13.526509
-      parent: 2
-- proto: MagazineShotgunBeanbag
-  entities:
-  - uid: 8633
-    components:
-    - type: Transform
-      pos: 38.602123,10.763362
-      parent: 2
-  - uid: 8634
-    components:
-    - type: Transform
-      pos: 38.602123,10.482112
       parent: 2
 - proto: MailMetricsCartridge
   entities:
@@ -66875,11 +67026,6 @@ entities:
       parent: 2
 - proto: RubberStampApproved
   entities:
-  - uid: 10025
-    components:
-    - type: Transform
-      pos: -5.3658667,46.70469
-      parent: 2
   - uid: 10026
     components:
     - type: Transform
@@ -66887,11 +67033,6 @@ entities:
       parent: 2
 - proto: RubberStampDenied
   entities:
-  - uid: 10027
-    components:
-    - type: Transform
-      pos: -5.6314917,46.532814
-      parent: 2
   - uid: 10028
     components:
     - type: Transform
@@ -70093,6 +70234,11 @@ entities:
     - type: Transform
       pos: -16.5,8.5
       parent: 2
+  - uid: 12732
+    components:
+    - type: Transform
+      pos: -6.5,53.5
+      parent: 2
   - uid: 12992
     components:
     - type: Transform
@@ -70522,6 +70668,37 @@ entities:
     components:
     - type: Transform
       pos: 29.5,18.5
+      parent: 2
+- proto: SurveillanceCameraAssembly
+  entities:
+  - uid: 13056
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -13.5,52.5
+      parent: 2
+  - uid: 13057
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -12.5,58.5
+      parent: 2
+  - uid: 13058
+    components:
+    - type: Transform
+      pos: -4.5,59.5
+      parent: 2
+  - uid: 13059
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 6.5,54.5
+      parent: 2
+  - uid: 13060
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 2.5,46.5
       parent: 2
 - proto: SurveillanceCameraCommand
   entities:
@@ -71818,18 +71995,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -2.5,44.5
       parent: 2
-  - uid: 10726
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -7.5,46.5
-      parent: 2
-  - uid: 10727
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -5.5,46.5
-      parent: 2
   - uid: 10728
     components:
     - type: Transform
@@ -71906,11 +72071,6 @@ entities:
     - type: Transform
       pos: 0.5,18.5
       parent: 2
-  - uid: 10742
-    components:
-    - type: Transform
-      pos: 36.5,13.5
-      parent: 2
   - uid: 10743
     components:
     - type: Transform
@@ -71940,11 +72100,6 @@ entities:
     components:
     - type: Transform
       pos: 23.5,5.5
-      parent: 2
-  - uid: 10749
-    components:
-    - type: Transform
-      pos: 38.5,10.5
       parent: 2
   - uid: 10750
     components:
@@ -72704,6 +72859,12 @@ entities:
       parent: 2
 - proto: TableReinforced
   entities:
+  - uid: 8553
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -6.5,53.5
+      parent: 2
   - uid: 10886
     components:
     - type: Transform
@@ -72789,6 +72950,12 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 14.5,21.5
+      parent: 2
+  - uid: 12733
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -6.5,51.5
       parent: 2
   - uid: 13013
     components:
@@ -73542,6 +73709,13 @@ entities:
     components:
     - type: Transform
       pos: 17.586515,25.675646
+      parent: 2
+- proto: ToyAi
+  entities:
+  - uid: 8392
+    components:
+    - type: Transform
+      pos: -6.528203,51.715393
       parent: 2
 - proto: ToyFigurineChiefMedicalOfficer
   entities:
@@ -83220,103 +83394,176 @@ entities:
     - type: Transform
       pos: -11.5,59.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12718
     components:
     - type: Transform
       pos: -4.5,59.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12719
     components:
     - type: Transform
       pos: -13.5,48.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12720
     components:
     - type: Transform
       pos: -13.5,55.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12721
     components:
     - type: Transform
       pos: -10.5,55.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12722
     components:
     - type: Transform
       pos: -10.5,49.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12723
     components:
     - type: Transform
       pos: -2.5,49.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12724
     components:
     - type: Transform
       pos: -2.5,55.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12725
     components:
     - type: Transform
       pos: 6.5,48.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12726
     components:
     - type: Transform
       pos: 1.5,58.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12727
     components:
     - type: Transform
       pos: 6.5,54.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12728
     components:
     - type: Transform
       pos: 2.5,45.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12729
     components:
     - type: Transform
       pos: -4.5,42.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12730
     components:
     - type: Transform
       pos: -6.5,45.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 10726
   - uid: 12731
     components:
     - type: Transform
       pos: -1.5,45.5
       parent: 2
-- proto: WeaponLaserCarbine
+- proto: WeaponEnergyTurretAIControlPanel
   entities:
-  - uid: 12732
+  - uid: 10726
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 38.039623,10.575862
+      rot: -1.5707963267948966 rad
+      pos: -5.5,53.5
       parent: 2
-  - uid: 12733
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 38.30525,10.607112
-      parent: 2
+    - type: DeviceList
+      devices:
+      - 12719
+      - 12729
+      - 12730
+      - 12728
+      - 12725
+      - 12727
+      - 12726
+      - 12718
+      - 12717
+      - 12720
+      - 12722
+      - 12723
+      - 12724
+      - 12721
 - proto: WeaponPistolMk58
   entities:
   - uid: 12734
     components:
     - type: Transform
       pos: 29.446836,16.541578
-      parent: 2
-- proto: WeaponRifleLecter
-  entities:
-  - uid: 12735
-    components:
-    - type: Transform
-      pos: 36.459354,13.651509
       parent: 2
 - proto: WelderIndustrialAdvanced
   entities:

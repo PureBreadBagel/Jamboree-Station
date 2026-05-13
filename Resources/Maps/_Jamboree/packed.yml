@@ -1,10 +1,14 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Map
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/01/2026 00:34:23
+  time: 05/03/2026 06:19:53
   entityCount: 15193
 maps:
 - 1
@@ -40075,11 +40079,6 @@ entities:
       parent: 2
 - proto: DeployableBarrier
   entities:
-  - uid: 6133
-    components:
-    - type: Transform
-      pos: 39.5,28.5
-      parent: 2
   - uid: 6134
     components:
     - type: Transform
@@ -68361,6 +68360,13 @@ entities:
     components:
     - type: Transform
       pos: 19.5,39.5
+      parent: 2
+- proto: LockerGriffyFilled
+  entities:
+  - uid: 6133
+    components:
+    - type: Transform
+      pos: 39.5,28.5
       parent: 2
 - proto: LockerHeadOfPersonnelFilled
   entities:

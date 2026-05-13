@@ -1,11 +1,15 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Map
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/01/2026 00:42:39
-  entityCount: 12148
+  time: 05/03/2026 06:22:17
+  entityCount: 12145
 maps:
 - 1
 grids:
@@ -4391,7 +4395,7 @@ entities:
       pos: 30.5,3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -8257.565
+      secondsUntilStateChange: -8356.209
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -6986,11 +6990,6 @@ entities:
       parent: 2
     - type: BallisticAmmoProvider
       unspawnedCount: 12
-  - uid: 501
-    components:
-    - type: Transform
-      pos: -11.305756,18.242832
-      parent: 2
 - proto: BoxBodyBag
   entities:
   - uid: 502
@@ -7204,13 +7203,6 @@ entities:
     components:
     - type: Transform
       pos: 13.942519,-15.320015
-      parent: 2
-- proto: BoxLethalshot
-  entities:
-  - uid: 531
-    components:
-    - type: Transform
-      pos: -11.600906,18.242832
       parent: 2
 - proto: BoxLightMixed
   entities:
@@ -49899,9 +49891,9 @@ entities:
     - type: Transform
       pos: -14.5,19.5
       parent: 2
-- proto: GunSafeSubMachineGunDrozd
+- proto: GunSafeShotgunKammerer
   entities:
-  - uid: 7821
+  - uid: 501
     components:
     - type: Transform
       pos: -14.5,21.5
@@ -51014,13 +51006,6 @@ entities:
     - type: Transform
       pos: 6.5050597,9.9238615
       parent: 2
-- proto: JetpackSecurityFilled
-  entities:
-  - uid: 7988
-    components:
-    - type: Transform
-      pos: -11.571391,18.68531
-      parent: 2
 - proto: Jukebox
   entities:
   - uid: 7989
@@ -51410,6 +51395,13 @@ entities:
     components:
     - type: Transform
       pos: -0.5,18.5
+      parent: 2
+- proto: LockerGriffyFilled
+  entities:
+  - uid: 7821
+    components:
+    - type: Transform
+      pos: -13.5,18.5
       parent: 2
 - proto: LockerHeadOfPersonnelFilled
   entities:
@@ -58759,6 +58751,11 @@ entities:
       parent: 2
 - proto: SheetGlass
   entities:
+  - uid: 7988
+    components:
+    - type: Transform
+      pos: -11.387291,18.452265
+      parent: 2
   - uid: 9217
     components:
     - type: Transform
@@ -58851,8 +58848,18 @@ entities:
     - type: Transform
       pos: 19.62285,7.50161
       parent: 2
+  - uid: 9249
+    components:
+    - type: Transform
+      pos: -11.543541,18.421015
+      parent: 2
 - proto: SheetSteel
   entities:
+  - uid: 531
+    components:
+    - type: Transform
+      pos: -11.309166,18.46789
+      parent: 2
   - uid: 9238
     components:
     - type: Transform
@@ -58897,11 +58904,6 @@ entities:
     components:
     - type: Transform
       pos: 35.04859,15.921068
-      parent: 2
-  - uid: 9249
-    components:
-    - type: Transform
-      pos: -13.701841,18.488804
       parent: 2
 - proto: SheetSteel10
   entities:
@@ -64083,11 +64085,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -14.5,16.5
-      parent: 2
-  - uid: 9955
-    components:
-    - type: Transform
-      pos: -13.5,18.5
       parent: 2
   - uid: 9956
     components:
@@ -74466,18 +74463,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponShotgunKammerer
-  entities:
-  - uid: 11845
-    components:
-    - type: Transform
-      pos: -13.420591,18.645054
-      parent: 2
-  - uid: 11846
-    components:
-    - type: Transform
-      pos: -13.373716,18.332554
-      parent: 2
 - proto: WeaponWaterBlaster
   entities:
   - uid: 11847

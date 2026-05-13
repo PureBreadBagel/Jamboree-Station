@@ -33,6 +33,15 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: latheRecipe
+  id: BSCrystal1Raw
+  result: MaterialBSCrystal1
+  applyMaterialDiscount: false
+  completetime: 1
+  materials:
+    BSCrystalUnprocessed: 250
+
+
+- type: latheRecipe
   id: SheetSteel
   result: SheetSteel1
   completetime: 0
@@ -235,6 +244,7 @@
   completetime: 0
   materials:
     RawUranium: 100
+
 
 - type: latheRecipe
   id: IngotGold1

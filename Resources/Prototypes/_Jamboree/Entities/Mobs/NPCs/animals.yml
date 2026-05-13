@@ -6,7 +6,7 @@
   name: mosquito
   parent: [ SimpleMobBase, FlyingMobBase ]
   id: MobMosquito
-  suffix: Admeme
+  suffix: Malaria
   description: It's like a bee but worse in every way, and really annoying.
   components:
   - type: CombatMode
@@ -94,3 +94,120 @@
         volume: 4
         maxDistance: 10
         variation: 0.3
+  - type: GrantDisease
+    baseDisease: DiseaseMalaria
+    complexity: 35
+    possibleTypes:
+    - Parasite
+  - type: DiseaseOnHit
+    spreadParams:
+      chance: 0.6
+      power: 1
+      spreadType: Blood
+  - type: ShowDiseaseIcons
+  - type: DiseaseCarrier
+    effectImmune: true
+  - type: PleebnarGibbable
+  - type: GroupRetaliation
+    range: 5
+  - type: ReplacementAccent
+    accent: mosquito
+  - type: MeleeWeapon
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Pierce: 1
+    altDisarm: false
+
+- type: entity
+  name: blonk
+  parent: [ SimpleMobBase, MobCombat ]
+  id: MobBlonk
+  suffix: Admeme
+  description: blonk
+  components:
+  - type: CombatMode
+  - type: Sprite
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: blonk
+      sprite: _Jamboree/Mobs/Animals/blonk.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.75
+        density: 30
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Dead
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: blonk
+      Dead:
+        Base: blonk-dead
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: PuddleBloodSmall
+  - type: Bloodstream
+    bloodReagent: BlonkLiquid
+    bloodMaxVolume: 110 # just enough for 1 polymorph
+  - type: NPCRetaliation
+  - type: FactionException
+  - type: NpcFactionMember
+    factions:
+    - Blonk
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 400
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+  - type: NoSlip
+  - type: Insulated
+  - type: MeleeWeapon
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 5
+    attackRate: 5
+    autoAttack: true
+    altDisarm: false
+  - type: Speech
+    speechSounds: PleebnarPVC
+    speechVerb: Wawa
+  - type: Vocal
+    sounds:
+      Male: Scurret
+      Female: Scurret
+      Unsexed: Scurret
+    wilhelmProbability: 0.001
+  - type: ReplacementAccent
+    accent: blonk
+  - type: NameIdentifier
+    group: GenericNumber
+  - type: BodyEmotes # Grants them clapping and so on.
+    soundsId: Scurret
+  - type: Tag
+    tags:
+    - FootstepSound
+    - DoorBumpOpener
+  - type: GroupRetaliation
+    range: 15 # you have angered the blonkmind

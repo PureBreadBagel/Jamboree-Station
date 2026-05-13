@@ -25,6 +25,9 @@
   - type: Tag
     tags:
     - HelmetEVA
+  - type: VoiceMask
+    voiceMaskName: The Griffin
+    addAction: false
 
 - type: entity
   parent: ClothingHeadHelmetArmoredBase
@@ -55,6 +58,9 @@
   - type: Tag
     tags:
     - HelmetEVA
+  - type: VoiceMask
+    voiceMaskName: The Owl
+    addAction: false
 
 # fake
 - type: entity
@@ -68,6 +74,9 @@
     sprite: _Jamboree/Clothing/SuperSuit/Head/owl_h.rsi
   - type: Clothing
     sprite: _Jamboree/Clothing/SuperSuit/Head/owl_h.rsi
+  - type: VoiceMask
+    voiceMaskName: Owl
+    addAction: false
 
 - type: entity
   parent: ClothingHeadBase
@@ -80,3 +89,6 @@
     sprite: _Jamboree/Clothing/SuperSuit/Head/griffin_h.rsi
   - type: Clothing
     sprite: _Jamboree/Clothing/SuperSuit/Head/griffin_h.rsi
+  - type: VoiceMask
+    voiceMaskName: Griffin
+    addAction: false

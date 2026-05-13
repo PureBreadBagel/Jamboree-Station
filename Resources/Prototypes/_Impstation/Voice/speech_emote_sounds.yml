@@ -22,6 +22,8 @@
       collection: RobotBeeps
     Honk:
       collection: BikeHorn
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
     Weh:
       collection: Weh
   params:

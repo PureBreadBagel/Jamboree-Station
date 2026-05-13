@@ -50,6 +50,8 @@
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: FemaleGoblin
@@ -98,3 +100,5 @@
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg

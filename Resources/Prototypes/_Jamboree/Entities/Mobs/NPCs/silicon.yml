@@ -74,4 +74,18 @@
     damage:
       types:
         Blunt: 0
-
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 50
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: camera-bug
+      Dead:
+        Base: camera-bug-dead

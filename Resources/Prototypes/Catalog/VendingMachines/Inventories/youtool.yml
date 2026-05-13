@@ -48,8 +48,10 @@
     SprayPainterAmmo: 5
   # Some engineer forgot to take the multitool out the youtool when working on it, happens.
   contrabandInventory:
-    Multitool: 2
-    ClothingBeltUtility: 3
-    ClothingHandsGlovesColorYellow: 1
+    ClothingHeadHatWeldingMaskFlame: 1
+    DrinkBeerCan: 3 #jamboree, cause all good engineers drink
   emaggedInventory: # goob
     ClothingHandsGlovesExplosiveShock: 1
+    ClothingHandsGlovesColorYellow: 1
+    Multitool: 1
+    ClothingBeltUtility: 1

@@ -173,6 +173,7 @@
     - id: PlushieMoth
     - id: PlushieArachind
     - id: PlushiePenguin
+    - id: PlushieGriffy #imp
 
 - type: entityTable
   id: AllPottedPlantsTable

@@ -104,6 +104,8 @@
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: FemaleHuman
@@ -150,6 +152,8 @@
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds ## GOOB CONTENT START
   id: MonkeyMode
@@ -194,6 +198,8 @@
       collection: MaleDeathGasp
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg ## GOOB CONTENT END
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: MaleReptilian
@@ -230,6 +236,8 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: FemaleReptilian
@@ -266,6 +274,8 @@
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: MaleSlime
@@ -314,6 +324,8 @@
       collection: MaleDeathGasp
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
   params:
@@ -364,6 +376,8 @@
       collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Surprised: # Goob
@@ -414,6 +428,8 @@
       path: /Audio/_Goobstation/Voice/Vox/vox_deathgasp.ogg
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
   params:
@@ -452,10 +468,13 @@
       collection: Dionacough
     Yawn: #goob
       collection: Dionayawn
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
     Sigh: #goob
       collection: Dionasigh
   params:
     variation: 0.125
+
 
 - type: emoteSounds
   id: UnisexArachnid
@@ -486,6 +505,8 @@
       path: /Audio/_Goobstation/Voice/surprised.ogg
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: UnisexDwarf
@@ -526,6 +547,8 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg
     Surprised: # Goob
@@ -573,6 +596,8 @@
       collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg
     Surprised: # Goob
@@ -630,6 +655,8 @@
       collection: MaleSneezes
     Cough:
       collection: MaleCoughs
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: MaleMoth
@@ -680,6 +707,8 @@
       collection: MaleSneezes
     Cough:
       collection: MaleCoughs
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: FemaleMoth
@@ -730,6 +759,8 @@
       collection: FemaleSneezes
     Cough:
       collection: FemaleCoughs
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
 - type: emoteSounds
   id: UnisexSilicon
@@ -1025,3 +1056,5 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: WawaDeath
+    Mars: # jamboree - juice that makes you mar
+      path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
