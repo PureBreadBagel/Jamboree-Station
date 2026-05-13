@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: HandTeleporterOneWay
+  suffix: One-Way
+  parent: BaseItem
+  name: one-way teleporter
+  description: Allows you to open stable portal gates that are not limited by distance. Only the original portal can be walked through.
+  components:
+  - type: Sprite
+    sprite: /Textures/Objects/Devices/hand_teleporter.rsi
+    layers:
+    - state: icon
+      color: orange
+  - type: HandTeleporter
+    allowPortalsOnDifferentGrids: true
+    allowPortalsOnDifferentMaps: true
+    firstPortalPrototype: PortalOneWay
+    secondPortalPrototype: PortalOneWay2

@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: ImmovableRodKeepTiles
+  id: ImmovableMeowl
+  name: immovable meowl
+  description: hello
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Objects/Fun/meowl.rsi
+    state: icon
+    rotation: 90
+    noRot: false
+    scale: 0.2, 0.2

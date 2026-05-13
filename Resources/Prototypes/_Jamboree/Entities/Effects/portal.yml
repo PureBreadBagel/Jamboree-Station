@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: PortalOneWay2
+  name: one-way portal
+  categories: [ HideSpawnMenu ]
+  description: You can't walk back through this. Actually, you shouldn't even SEE this..
+  components:
+  - type: Transform
+    anchored: True
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.48,0.25,0.48"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+
+- type: entity
+  id: PortalOneWay
+  parent: BasePortal
+  name: one-way portal
+  description: Are you sure you want to walk through it?
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Effects/portal.rsi
+    layers:
+    - state: portal-oneway
+  - type: PointLight
+    color: Orange
+    radius: 3
+    energy: 1
+    netsync: false
