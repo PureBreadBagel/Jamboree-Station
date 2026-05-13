@@ -124,10 +124,11 @@
     tags: [] # ignore "WhitelistChameleon" tag
 
 - type: entity
-  parent: [ClothingShoesBootsMagBase, BaseMajorContraband]
+  parent: [ClothingShoesBootsMagBase, BaseSyndicateContraband]
   id: ClothingShoesRealJordans
-  name: air jordans
-  description: State-of-the-art, official, uncreased Jordans that protect you from slipping when turned on.
+  name: syndikicks #name changed from air jordans cause one: we don't own those shoes, and two: they are a bit too memey.
+  suffix: jordans
+  description: State-of-the-art, official, uncreased Syndi-Kicks that protect you from slipping when turned on.
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/Shoes/Boots/jordans.rsi
@@ -165,20 +166,22 @@
 
 - type: entity
   parent: ClothingShoesBaseButcherable #Jamboree, It is no longer a crime to have fake jordans.
-  id: ClothingShoesFakeJordans
-  name: air jordans
-  suffix: fake
-  description: Upon closer inspection, something feels off about these. Are they.. creased? No, it can't be that. Wait, the logo looks a little off...
+  id: ClothingShoesFakeJordans #not changing ID cause it would make spawners a bit more irritating.
+  name: nanotrainers
+  suffix: jordans
+  description: The immaculateness of these shoes is really the only thing that captain's and tiders can agree upon.
   components:
   - type: Sprite
-    sprite: _Goobstation/Clothing/Shoes/Boots/jordans.rsi
+    sprite: _Jamboree/Clothing/Shoes/Boots/ntjordans.rsi
+    state: icon
   - type: Clothing
-    sprite: _Goobstation/Clothing/Shoes/Boots/jordans.rsi
+    sprite: _Jamboree/Clothing/Shoes/Boots/ntjordans.rsi
 
 - type: entity
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesCreasedJordans
-  name: creased air jordans
+  name: creased syndikicks #change name from creased jordans cause one: we don't own those shoes, and two: they are a bit too memey.
+  suffix: jordans
   description: No wait... this can't be.... THEY'RE CREASED!
   components:
   - type: Sprite
@@ -192,6 +195,24 @@
   - type: StaticPrice
     price: 1
 
+# jamboree, adding creased nano-trainers
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesCreasedJordansNT
+  name: creased nanotrainers #change name from creased jordans cause one: we don't own those shoes, and two: they are a bit too memey.
+  suffix: jordans
+  description: No wait... this can't be.... THEY'RE CREASED!
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Shoes/Boots/ntjordans.rsi
+    state: icon-creased
+  - type: Clothing
+    sprite: _Jamboree/Clothing/Shoes/Boots/ntjordans.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
+  - type: StaticPrice
+    price: 1
 
 - type: entity
   parent: [BaseCommandContraband, ClothingShoesBootsJack]
@@ -210,8 +231,9 @@
 - type: entity
   parent: [ClothingShoesBootsMagBase, BaseMajorContraband]
   id: ClothingShoesRealJordansAutographed
-  name: air jordans
-  description: These aren't just any Jordans, these were signed my Micheal Jordan himself. These must be worth a FORTUNE.
+  name: mint-condition limited edition first release syndikicks
+  suffix: jordans
+  description: These aren't just any Syndikicks... they're mint-condition limited edition first release syndikicks!!! These must be worth a FORTUNE!!!
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/Shoes/Boots/jordans.rsi

@@ -146,4 +146,4 @@
   contrabandInventory:
     ChemistryBottleEthanol: 3
     DrinkBottleOfNothingFull: 1
-    DrinkPoisonWinebottleFull: 2
+#    DrinkPoisonWinebottleFull: 2 #jamboree, nerfing contraband inventory

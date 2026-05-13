@@ -192,12 +192,12 @@
     ClothingUniformJumpsuitCasualSyndicate: 2 # Goobstation
     ClothingUniformJumpsuitMercer: 1 # Goobstation
     ClothingOuterCoatZeusJacket: 1 # Goobstation
-    ClothingShoesRealJordans: 1 #IF YOU WANT TO REMOVE THIS, DO. I THINK ITS FUNNY AND ILYA DOES TOO SO ITS GOING IN
     ToyFigurinePassenger: 1
     ToyFigurineGreytider: 1
-    ClothingBackpackSatchelSmugglerUnanchored: 1
     ClothingHeadHatSolidHeadband: 2
     ClothingNeckFellForItAward: 1 # Goobstation
   # DO NOT ADD MORE, USE UNIFORM DYING
   emaggedInventory: #Goobstation
     ClothingOuterCoatSyndieCapArmored: 1
+    ClothingBackpackSatchelSmugglerUnanchored: 1 #jamboree, moved to emagged cause its contra
+    ClothingShoesRealJordans: 1 #jamboree, moved to emagged as it is contraband and seems to be immediately headed for in a lot of instances
