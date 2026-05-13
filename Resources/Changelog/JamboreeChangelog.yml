@@ -1357,3 +1357,15 @@ Entries:
       message: the echem for medical should be craftable now
   id: 121
   time: '2026-05-08T23:02:02.0000000+00:00'
+- author: Gorse1
+  changes:
+    - type: Add
+      message: Beware the admins.
+    - type: Add
+      message: Blonks have arrived in the Jamboree sector. Don't drink their blood.
+    - type: Add
+      message: Mosquitos now give malaria! Stay away from them!
+    - type: Add
+      message: Added juice that makes you mar. I bet you can't guess what it does.
+  id: 122
+  time: '2026-05-13T00:12:36.0000000+00:00'
