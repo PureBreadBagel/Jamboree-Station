@@ -50,8 +50,8 @@
   contrabandInventory:
     ClothingHeadHatWeldingMaskFlame: 1
     DrinkBeerCan: 3 #jamboree, cause all good engineers drink
+    ClothingHandsGlovesColorYellow: 1
   emaggedInventory: # goob
     ClothingHandsGlovesExplosiveShock: 1
-    ClothingHandsGlovesColorYellow: 1
     Multitool: 1
     ClothingBeltUtility: 1
