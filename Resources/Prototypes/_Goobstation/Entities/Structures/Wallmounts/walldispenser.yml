@@ -19,4 +19,5 @@
           Quantity: 2000
   - type: ReagentTank
   - type: SolutionRegeneration
-    remove: true
+    generated:
+      reagents: []
