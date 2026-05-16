@@ -1,16 +1,56 @@
+# SPDX-FileCopyrightText: 2026 Goob Station Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
-  parent: CleanerDispenser
   id: CapsaicinDispenser
   name: capsaicin dispenser
-  description: A wallmount dispenser capable of dispensing capsaicin. Refill your pepperspray here.
+  description: A wallmount dispenser capable of dispensing capsaicin. Get your pepper spray here!
+
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wallmount
+
   components:
+  - type: WallMount
+    arc: 175
+
   - type: Sprite
     sprite: Structures/Storage/tanks.rsi
-    state: pepperdispenser # This was already in the files lol.
+    state: pepperdispenser
+
+  - type: Appearance
+  - type: InteractionOutline
+  - type: Clickable
+
+  - type: Transform
+    anchored: true
+
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
   - type: SolutionContainerManager
     solutions:
       tank:
         reagents:
         - ReagentId: OleoresinCapsaicin
           Quantity: 2000
+
+  - type: DrainableSolution
+    solution: tank
+
   - type: ReagentTank
+
+  - type: ExaminableSolution
+    solution: tank
