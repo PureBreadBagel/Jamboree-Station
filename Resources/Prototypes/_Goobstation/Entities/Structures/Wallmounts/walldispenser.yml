@@ -19,9 +19,4 @@
           Quantity: 2000
   - type: ReagentTank
   - type: SolutionRegeneration
-    solution: tank
-    duration: 10
-    generated:
-      reagents:
-      - ReagentId: OleOresinCapsaicin
-        Quantity: 1
+    remove: true
