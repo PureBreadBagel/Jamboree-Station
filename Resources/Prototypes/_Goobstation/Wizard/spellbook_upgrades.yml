@@ -273,24 +273,24 @@
   - !type:ListingLimitedStockCondition
     stock: 2
 
-- type: listing
-  id: SpellbookSmiteUpgrade
-  productUpgradeId: SpellbookSmiteUpgrade
-  name: spellbook-upgrade-smite-name
-  description: spellbook-upgrade-smite-desc
-  icon:
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: gib
-  cost:
-    WizCoin: 2
-  categories:
-  - SpellbookOffensive
-  conditions:
-  - !type:BuyBeforeCondition
-    whitelist:
-    - SpellbookSmite
-  - !type:ListingLimitedStockCondition
-    stock: 2
+#- type: listing
+#  id: SpellbookSmiteUpgrade
+#  productUpgradeId: SpellbookSmiteUpgrade
+#  name: spellbook-upgrade-smite-name
+#  description: spellbook-upgrade-smite-desc
+#  icon:
+#    sprite: _Goobstation/Wizard/actions.rsi
+#    state: gib
+#  cost:
+#    WizCoin: 2
+#  categories:
+#  - SpellbookOffensive
+#  conditions:
+#  - !type:BuyBeforeCondition
+#    whitelist:
+#    - SpellbookSmite
+#  - !type:ListingLimitedStockCondition
+#    stock: 2
 
 - type: listing
   id: SpellbookRodFormUpgrade

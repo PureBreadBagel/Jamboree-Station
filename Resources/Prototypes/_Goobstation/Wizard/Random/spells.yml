@@ -30,7 +30,7 @@
     ActionLesserSummonBees: 2
     ActionSummonSimians: 2
     ActionSanguineStrike: 2
-    ActionSmite: 2
+#    ActionSmite: 2
     ActionMagicMissile: 2
     ActionDisableTech: 1
     ActionSmoke: 1
@@ -71,7 +71,7 @@
     ActionLesserSummonBees: 2
     ActionSummonSimians: 2
     ActionSanguineStrike: 2
-    ActionSmite: 2
+#    ActionSmite: 2
     ActionMagicMissile: 2
     ActionDisableTech: 1
     ActionSmoke: 1
@@ -102,7 +102,7 @@
     ActionScreamForMe: 1
     ActionLesserSummonBees: 2
     ActionSummonSimians: 2
-    ActionSmite: 2
+ #   ActionSmite: 2
 
 - type: weightedRandomEntity
   id: MobilitySpellTable
