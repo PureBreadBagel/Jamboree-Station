@@ -1390,3 +1390,11 @@ Entries:
       message: Wallmount Welding Fuel containers dont regenerate Space Cleaner Fluid
   id: 124
   time: '2026-05-16T00:53:26.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Remove
+      message: >-
+        Removed the Smite spell from the Wizard's Grimoire! Insta-death is no
+        more!
+  id: 125
+  time: '2026-05-20T23:44:45.0000000+00:00'
