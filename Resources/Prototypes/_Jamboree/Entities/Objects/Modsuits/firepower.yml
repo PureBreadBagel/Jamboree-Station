@@ -274,6 +274,6 @@
       isLayerAnimated: false
       toggleAction: ActionToggleFlightFirepower
       staminaDrainRate: 1
-      flapInterval: 2
+      flapInterval: 10
       flapSound:
         path: /Audio/_Jamboree/Effects/booster.ogg

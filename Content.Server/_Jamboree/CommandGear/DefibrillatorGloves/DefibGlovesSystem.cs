@@ -22,25 +22,25 @@ public override void Initialize()
         if (args.Handled)
             return;
 
-        var user = args.User;
-        var target = args.Target;
 
-        if (user == target)
+
+
+        if (args.User == args.Target)
             return;
 
-        if (!_inventory.TryGetSlotEntity(user, "gloves", out var gloves))
+        if (!_inventory.TryGetSlotEntity(args.User, "gloves", out var gloves))
             return;
 
         if (!TryComp<Shared._Jamboree.CommandGear.DefibrillatorGloves.DefibGlovesComponent>(gloves, out var gloveComp))
             return;
 
-        if (_whitelist.IsWhitelistFail(gloveComp.Whitelist, target))
+        if (_whitelist.IsWhitelistFail(gloveComp.Whitelist, args.Target))
             return;
 
         if (!TryComp<DefibrillatorComponent>(gloves.Value, out var defibComp))
             return;
 
-        _defib.TryStartZap(gloves.Value, target, user, defibComp);
+        _defib.TryStartZap(gloves.Value, args.Target, args.User, defibComp);
 
         args.Handled = true;
     }

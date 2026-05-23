@@ -25,22 +25,16 @@ public sealed class WeaponActionAttackSystem : EntitySystem
 
     private void OnHit(Entity<WeaponActionEntityComponent> ent, ref StartCollideEvent args)
     {
-        if (!HasComp<MobStateComponent>(args.OtherEntity) || HasComp<WeaponActionComponent>(args.OtherEntity))
+        if (!HasComp<MobStateComponent>(args.OtherEntity))
             return;
 
-        _damage.TryChangeDamage(args.OtherEntity, ent.Comp.Damage, false, true, targetPart: TargetBodyPart.Chest);
+        _damage.TryChangeDamage(args.OtherEntity, ent.Comp.Damage, targetPart: TargetBodyPart.Chest);
 
         if (!ent.Comp.Knockdown)
         {
             return;
         }
-        else
-        {
-            _layingDown.TryLieDown(args.OtherEntity);
-        }
-
-      
-
+        _layingDown.TryLieDown(args.OtherEntity);
         _audio.PlayPvs(ent.Comp.HitSound, ent, new AudioParams(-2f, 1f, SharedAudioSystem.DefaultSoundRange, 1f, false, 0f));
     }
 }

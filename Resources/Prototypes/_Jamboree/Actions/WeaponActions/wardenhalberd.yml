@@ -8,7 +8,6 @@
   - type: Action
     useDelay: 15
     checkConsciousness: true
-  - type: WeaponAction
 
 - type: entity
   id: HalberdSlash
@@ -38,21 +37,11 @@
         mask:
         - BulletImpassable
         - Opaque
-  - type: Projectile
-    impactEffect: null
-    deleteOnCollide: false
-    penetrate: true
-    damage:
-      types:
-        Slash: 0
-    soundHit: null
-    forceSound: true
   - type: TimedDespawn
     lifetime: 0.30
   - type: Tag
     tags:
     - HideContextMenu
-  - type: WeaponAction
   - type: WeaponActionEntity
     knockdown: true
     damage:

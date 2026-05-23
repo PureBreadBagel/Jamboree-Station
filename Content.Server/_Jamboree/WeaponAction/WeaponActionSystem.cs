@@ -15,15 +15,15 @@ public sealed class WeaponActionSystem : EntitySystem
 
     public override void Initialize()
     {
-        SubscribeLocalEvent<WeaponActionGranterComponent, EventWardenHalberdAction>(OnWardenHalberdAction);
+        SubscribeLocalEvent<EventWardenHalberdAction>(OnWardenHalberdAction);
     }
 
-    private void OnWardenHalberdAction(Entity<WeaponActionGranterComponent> ent, ref EventWardenHalberdAction args)
+    private void OnWardenHalberdAction(EventWardenHalberdAction args)
     {
         if (args.Handled)
             return;
 
-        var uid = ent.Owner;
+        var uid = args.Performer;
 
         args.Handled = true;
 
@@ -40,6 +40,6 @@ public sealed class WeaponActionSystem : EntitySystem
         _gun.ShootProjectile(slash, dir, Vector2.Zero, uid, uid, args.Speed);
         _gun.SetTarget(slash, null, out _);
 
-        _audio.PlayPvs(ent.Comp.UseSound, ent, new AudioParams(-2f, 1f, SharedAudioSystem.DefaultSoundRange, 1f, false, 0f));
+        _audio.PlayPvs(args.UseSound, slash, new AudioParams(-2f, 1f, SharedAudioSystem.DefaultSoundRange, 1f, false, 0f));
     }
 }

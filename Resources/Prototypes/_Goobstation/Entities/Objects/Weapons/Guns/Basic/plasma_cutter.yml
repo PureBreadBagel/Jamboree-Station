@@ -38,6 +38,13 @@
       Steel: 125
       Glass: 75
       Plasma: 75
+  - type: RestrictGunshotsByUserTag # Jamboree
+    doesntContain:
+    - FirepowerGauntletsWorn # Jamboree - firepower modsuit
+    messages:
+    - generic-cannot-shoot-1
+    - generic-cannot-shoot-2
+    - generic-cannot-shoot-3
 
 - type: entity
   parent: WeaponPlasmaCutter

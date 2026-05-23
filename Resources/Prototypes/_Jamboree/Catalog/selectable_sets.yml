@@ -806,12 +806,13 @@
         duller than the captain's normal sabre.
 
      - Captain Lollypops x2
-        Yummy-licious! Give to the hostage holder
-        to bolster negotiations.
+        Give to the hostage holder to bolster negotiations.
+        Yummy-licious!
 
      - Nanotrasen Stoges Packet
-        Smoking IS good for you. These have medication
-        that releases into your system when smoked.
+        These cigarettes have medication that releases into
+        your system when smoked. I guess Smoking IS good
+        for you.
 
      - Derringer
         A very small, highly concealable pistol that
@@ -840,12 +841,11 @@
         pirates that got cocky. Don't lose it.
 
      - Nanotrasen Pirate Revolver
-        It takes .45 magnum, and is quite
-        unwieldy. Best used when running and
+        It takes .45 magnum. Best used when running and
         screaming.
 
      - .45 Magnum Ammunition Box
-        12 rounds for the revolver.
+        12 rounds for the pirate revolver.
   sprite:
     sprite: Objects/Weapons/Guns/Revolvers/pirate_revolver.rsi
     state: icon
@@ -859,12 +859,12 @@
   name: Lordship Kit
   description: |
      - Captain's Zweihander
-        A large plasteel blade. It can stab forward
-        a distance to catch threats running away.
+        A large plasteel blade. It hits very hard,
+        but is heavy and slow to swing.
 
      - Captain's Plate Armor
         A gold adorned set of plate armor. Quite
-        protective.
+        protective, but not space-proof.
 
      - Captain's Plate Helmet
         It's lined with velvet padding!
