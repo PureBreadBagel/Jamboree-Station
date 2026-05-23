@@ -49,5 +49,7 @@
   - type: FingerprintMask
   - type: StealTarget # Jamboree - cmd/steal gear tweaks
     stealGroup: HOS
-  - type: SolGloves
+  - type: Tag
+    tags:
+    - SolGloves
 

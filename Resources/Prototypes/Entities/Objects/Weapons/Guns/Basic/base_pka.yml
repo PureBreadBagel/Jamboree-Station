@@ -118,3 +118,10 @@
         Blunt: 5
   - type: AltFireMelee
     attackType: Heavy
+  - type: RestrictGunshotsByUserTag # Jamboree - firepower modsuit
+    doesntContain:
+    - FirepowerGauntletsWorn
+    messages:
+    - generic-cannot-shoot-1
+    - generic-cannot-shoot-2
+    - generic-cannot-shoot-3

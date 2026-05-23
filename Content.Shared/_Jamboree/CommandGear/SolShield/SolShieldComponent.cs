@@ -3,5 +3,4 @@
 [RegisterComponent]
 public sealed partial class SolShieldComponent : Component
 {
-    public bool Thrown;
 }

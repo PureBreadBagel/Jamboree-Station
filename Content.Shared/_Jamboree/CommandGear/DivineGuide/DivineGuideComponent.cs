@@ -1,7 +1,7 @@
 ﻿using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._Jamboree.DivineGuide;
+namespace Content.Shared._Jamboree.CommandGear.DivineGuide;
 
 [RegisterComponent]
 public sealed partial class DivineGuideComponent : Component

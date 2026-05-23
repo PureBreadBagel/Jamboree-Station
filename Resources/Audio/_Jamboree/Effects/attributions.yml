@@ -1,4 +1,9 @@
 ﻿- files: ["warhorn.ogg"]
   license: "CC-BY-NC-SA-3.0"
-  copyright: "Taken from freesound_community on pixabay, converted from MP3 to OGG format"
+  copyright: "Taken from freesound_community on pixabay, converted from MP3 to OGG format by Gorse"
   source: "https://pixabay.com/sound-effects/film-special-effects-horn002-106060/"
+
+- files: ["booster.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Taken from freesound_community on pixabay, converted from MP3 to OGG, shortened, and converted to Mono by Gorse"
+  source: "https://pixabay.com/sound-effects/city-jet-engine-startup-14537/"

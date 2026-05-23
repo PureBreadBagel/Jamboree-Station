@@ -11,4 +11,7 @@ public sealed partial class WeaponActionEntityComponent : Component
 
     [DataField]
     public SoundSpecifier HitSound = new SoundPathSpecifier("/Audio/_Goobstation/Wraith/Attack/Flesh_Stab_1.ogg");
+
+    [DataField]
+    public bool Knockdown = false;
 }

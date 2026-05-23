@@ -25,11 +25,8 @@
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: Item
-    size: Normal
+    size: Large
     heldPrefix: off
-  - type: Tag
-    tags:
-    - CaneBlade
   - type: DisarmMalus
   - type: Execution
   - type: StealTarget # Jamboree - cmd/steal gear tweaks

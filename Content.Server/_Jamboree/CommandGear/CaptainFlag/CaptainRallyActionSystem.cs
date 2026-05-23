@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using Content.Shared._EinsteinEngines.Silicon.Components;
 using Content.Shared._Imp.Drone;
-using Content.Shared._Jamboree.CaptainFlag;
 using Content.Shared._Jamboree.CommandGear.CaptainFlag;
 using Content.Shared._Shitmed.Damage;
 using Content.Shared._Shitmed.Targeting;
@@ -50,13 +49,13 @@ public sealed class BuffNearbyActionSystem : EntitySystem
 
         var targets = _entityLookup.GetEntitiesInRange(performer, comp.Range)
             .Where(e =>
-                HasComp<MobStateComponent>(e) // only entities that are mobs, are alive, and don't have the latter 5 components can be healed
+                HasComp<MobStateComponent>(e) // blacklisted components
                 && !_mobState.IsDead(e)
                 && !HasComp<SiliconComponent>(e)
                 && !HasComp<NukeOperativeComponent>(e)
                 && !HasComp<ActiveNPCComponent>(e)
-                && !HasComp<DroneComponent>(e) // drones don't have silicon component :(
-                && !HasComp<SiliconLawBoundComponent>(e)) // cyborgs don't have silicon component (!?!?!?!?!?!?!?)
+                && !HasComp<DroneComponent>(e)
+                && !HasComp<SiliconLawBoundComponent>(e))
             .Where(e => _occlusion.InRangeUnOccluded(performer, e, comp.Range));
 
 

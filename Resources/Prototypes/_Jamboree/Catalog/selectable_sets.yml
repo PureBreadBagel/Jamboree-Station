@@ -27,7 +27,7 @@
   name: Marksman Kit
   description: |
     - HB-92 "Kovalskyi" Marksman Laser
-        A destructive laser sniper. An accuracy module allows you to
+        A destructive laser sniper. An inbuilt accuracy module allows you to
         aim further without using a scope.
 
     - Railgun Capacitor x1
@@ -57,32 +57,34 @@
   description: |
      - Sol Shield
         Can be thrown normally for blunt damage, or optionally toggled
-        on to do stun damage.
+        on to do stun damage. It does not do damage when thrown by someone
+        not wearing the gloves, making it basically useless for anyone who
+        steals it.
 
      - Sol Gloves
-        The shield will return to whomever is wearing these. They are not
+        The shield will return to whoever is wearing these. They are not
         insulated.
 
      - Sergeant Sol Comic
-        A first edition comic book.
+        A very rare first edition comic book.
   sprite:
     sprite: _Jamboree/Objects/Weapons/Melee/shields.rsi/solshield.rsi
     state: icon
   content:
   - SolShield
   - ClothingHandsGlovesSol
-  - BookSergeantSolComic
+  - SpawnSolComicRandom
 
 - type: selectableSet
   id: NonlethalLauncherKit
   name: GL-06 Riot Grenade Launcher Kit
   description: |
     - GL-06 Riot Grenade Launcher
-        Will only load one 40mm shell at a time. Aim carefully.
+        Will only load one 40mm shell at a time, but is very effective. Aim carefully.
 
     - 40mm Baton Grenades x4
-        Baton grenades will deal 80 stamina damage on contact,
-        and 50 more over a short time.
+        Baton grenades will deal 80 stamina damage on initial impact,
+        and 50 more over a short period after.
 
     - 40mm Flash Grenades x6
         Flash grenades have the same functionality as a flashbang,
@@ -114,7 +116,7 @@
         self-recharge.
 
      - Krav Maga Gloves
-        Provide the wearer with Krav Maga, a powerful martial
+        Provides the wearer with Krav Maga, a powerful martial
         art.
   sprite:
     sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
@@ -146,7 +148,9 @@
   name: Guardsman Kit
   description: |
     - Warden's Halberd
-       Can perform a wide sweeping attack.
+       It's a solid melee weapon, but also comes with the ability to
+       swing in a wide area infront of you, knocking down anyone
+       within range.
 
     - Warden's Plate Armor
        Repurposed plate armor that used to sit on display. It's not

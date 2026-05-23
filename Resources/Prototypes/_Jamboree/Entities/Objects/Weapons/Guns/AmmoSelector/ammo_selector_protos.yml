@@ -1,0 +1,9 @@
+﻿- type: selectableAmmo
+  id: BulletDisablerFirepower
+  desc: Disabler bolt.
+  icon:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    state: omnilaser
+  color: "#00B2FF"
+  protoId: BulletDisabler
+  fireCost: 75

@@ -1,7 +1,6 @@
 ﻿using Content.Shared._Jamboree.WeaponAction;
 using Content.Shared.Actions;
 using Content.Shared.Hands;
-using Content.Shared.Ian;
 
 namespace Content.Server._Jamboree.WeaponAction;
 

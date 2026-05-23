@@ -1,11 +1,10 @@
 ﻿using Content.Goobstation.Common.Religion;
 using Content.Goobstation.Shared.Enchanting.Components;
-using Content.Shared._Jamboree.DivineGuide;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Popups;
 using Robust.Shared.Audio.Systems;
 
-namespace Content.Server._Jamboree.DivineGuide;
+namespace Content.Server._Jamboree.CommandGear.DivineGuide;
 
 public sealed class DivineGuideSystem : EntitySystem
 {
@@ -13,10 +12,10 @@ public sealed class DivineGuideSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     public override void Initialize()
     {
-        SubscribeLocalEvent<DivineGuideComponent, UseInHandEvent>(OnUse);
+        SubscribeLocalEvent<Shared._Jamboree.CommandGear.DivineGuide.DivineGuideComponent, UseInHandEvent>(OnUse);
     }
 
-    private void OnUse(EntityUid uid, DivineGuideComponent component, UseInHandEvent args)
+    private void OnUse(EntityUid uid, Shared._Jamboree.CommandGear.DivineGuide.DivineGuideComponent component, UseInHandEvent args)
     {
         if (args.Handled)
             return;

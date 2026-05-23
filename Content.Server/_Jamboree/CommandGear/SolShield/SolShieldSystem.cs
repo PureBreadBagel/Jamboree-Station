@@ -1,6 +1,7 @@
 ﻿using Content.Goobstation.Shared.Boomerang;
 using Content.Shared._Jamboree.CommandGear.SolShield;
 using Content.Shared.Inventory;
+using Content.Shared.Tag;
 using Content.Shared.Throwing;
 
 namespace Content.Server._Jamboree.CommandGear.SolShield;
@@ -9,6 +10,7 @@ public sealed class SolShieldSystem : EntitySystem
 {
     [Dependency] private readonly BoomerangSystem _boomerang = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
+    [Dependency] private readonly TagSystem _tag = default!;
     public override void Initialize()
     {
         SubscribeLocalEvent<SolShieldComponent, ThrownEvent>(OnThrown);
@@ -28,7 +30,7 @@ public sealed class SolShieldSystem : EntitySystem
 
         if (!_inventory.TryGetSlotEntity(user, "gloves", out var gloves) ||
             gloves is not {} gloveUid ||
-            !HasComp<SolGlovesComponent>(gloveUid))
+            !_tag.HasTag(gloveUid, "SolGloves"))
         {
             RemCompDeferred<BoomerangComponent>(uid);
             return;
@@ -52,7 +54,7 @@ public sealed class SolShieldSystem : EntitySystem
         var thrower = boomerang.Thrower.Value;
 
         if (!_inventory.TryGetSlotEntity(thrower, "gloves", out var gloves) ||
-            !HasComp<SolGlovesComponent>(gloves.Value))
+            !_tag.HasTag(gloves.Value, "SolGloves"))
         {
             RemCompDeferred<BoomerangComponent>(uid);
         }

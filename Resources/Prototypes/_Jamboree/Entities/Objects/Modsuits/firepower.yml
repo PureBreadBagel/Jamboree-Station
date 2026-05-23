@@ -37,9 +37,12 @@
         shader: unshaded
   - type: StealTarget
     stealGroup: Warden
+  - type: ClothingGrantTag
+    isActive: True
+    tag: FirepowerGauntletsWorn
 
 - type: entity
-  parent: [ClothingModsuitGauntletsStandard, BaseSecurityContraband]
+  parent: [BaseItem, ClothingModsuitGauntletsStandard, BaseSecurityContraband]
   id: ClothingModsuitGauntletsFirepower
   name: Firepower Mk.6 Armor gauntlets
   description: A pair of heavily modified self recharging modsuit gauntlets capable of firing disabling and laser bolts.
@@ -58,38 +61,52 @@
       - state: equipped-HAND-sealed-vox
       - state: equipped-HAND-sealed-unshaded-vox
         shader: unshaded
+  - type: AmmoSelector
+    prototypes:
+    - BulletDisablerFirepower
+    - BulletEnergyGunLaser
+  - type: ActivatableUI
+    key: enum.AmmoSelectorUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.AmmoSelectorUiKey.Key:
+        type: AmmoSelectorMenuBoundUserInterface
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisabler
+    fireCost: 100
+    capacity: 15
+    shots: 15
   - type: ComponentToggler
     components:
-    - type: ProjectileBatteryAmmoProvider
-      proto: BulletDisabler
-      fireCost: 50
-    - type: AmmoSelector
-      prototypes:
-      - BulletDisabler
-      - BulletEnergyGunLaser
-    - type: ActivatableUI
-      key: enum.AmmoSelectorUiKey.Key
     - type: Gun
+      fireRate: 2
       useKey: false
-      fireRate: 4
       soundGunshot:
         path: /Audio/_DV/Weapons/Guns/Gunshots/laser.ogg
       soundEmpty:
         path: /Audio/_DV/Weapons/Guns/Empty/dry_fire.ogg
-    - type: UserInterface
-      interfaces:
-        enum.AmmoSelectorUiKey.Key:
-          type: AmmoSelectorMenuBoundUserInterface
     - type: Insulated
+    - type: MeleeWeapon
+      attackRate: 1.5
+      canHeavyAttack: false
+      damage:
+        types:
+          Blunt: 7
+          Structural: 10 # rip and tear (through railings/small chairs)
+      soundHit:
+        collection: MetalThud
+      angle: 0
+      animation: WeaponArcThrust
+      range: 1.2
+      mustBeEquippedToUse: true
   - type: Battery
     maxCharge: 1500
     startingCharge: 1500
   - type: BatterySelfRecharger
     autoRechargeRate: 25
     autoRecharge: true
-    autoRechargePauseTime: 10
+    autoRechargePauseTime: 15
     autoRechargePause: true
-
 
 - type: entity
   parent: [ClothingModsuitHelmetStandard, ShowSecurityIcons, BaseSecurityContraband]
@@ -142,7 +159,7 @@
     verbText: verb-instrument-openui
     key: enum.InstrumentUiKey.Key
   - type: SpeechSoundsReplacer
-    speechSounds: Chrono
+    speechSounds: Lathe
   - type: UserInterface
     interfaces:
       enum.InstrumentUiKey.Key:
@@ -153,14 +170,8 @@
       program: 62
     - type: SwappableInstrument
       instrumentList:
-        "Synth": {62: 0}
-        "Friend": {2: 0}
         "Overdriven": {29: 0}
-        "Bass": {33: 0}
         "Rock": {29: 0}
-        "Acoustic": {24: 0}
-        "Flute": {73: 0}
-        "Sax": {66: 0}
     - type: BreathMask
     - type: PressureProtection
       highPressureMultiplier: 0.5
@@ -255,3 +266,14 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
+  - type: ClothingGrantComponent
+    component:
+    - type: Flight
+      staminaDrainMultiplier: 0.25
+      isAnimated: false
+      isLayerAnimated: false
+      toggleAction: ActionToggleFlightFirepower
+      staminaDrainRate: 1
+      flapInterval: 2
+      flapSound:
+        path: /Audio/_Jamboree/Effects/booster.ogg

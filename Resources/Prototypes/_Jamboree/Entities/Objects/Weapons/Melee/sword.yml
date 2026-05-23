@@ -36,5 +36,3 @@
   - type: StaticPrice
     price: 30000
   - type: MeleeRequiresWield
-  - type: WeaponActionGranter
-    weaponAction: ActionZweihanderStab

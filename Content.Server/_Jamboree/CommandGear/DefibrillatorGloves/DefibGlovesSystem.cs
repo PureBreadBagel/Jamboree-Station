@@ -1,12 +1,10 @@
 ﻿using Content.Server.Medical;
-using Content.Shared._Jamboree.DefibrillatorGloves;
 using Content.Shared.Interaction;
 using Content.Shared.Inventory;
 using Content.Shared.Medical;
-using Content.Shared.Timing;
 using Content.Shared.Whitelist;
 
-namespace Content.Server._Jamboree.DefibrillatorGloves;
+namespace Content.Server._Jamboree.CommandGear.DefibrillatorGloves;
 
 public sealed class DefibGlovesSystem : EntitySystem
 {
@@ -33,7 +31,7 @@ public override void Initialize()
         if (!_inventory.TryGetSlotEntity(user, "gloves", out var gloves))
             return;
 
-        if (!TryComp<DefibGlovesComponent>(gloves, out var gloveComp))
+        if (!TryComp<Shared._Jamboree.CommandGear.DefibrillatorGloves.DefibGlovesComponent>(gloves, out var gloveComp))
             return;
 
         if (_whitelist.IsWhitelistFail(gloveComp.Whitelist, target))

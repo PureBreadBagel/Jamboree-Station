@@ -9,3 +9,9 @@
 
 - type: Tag
   id: MagazineRailgun
+
+- type: Tag
+  id: FirepowerGauntletsWorn
+
+- type: Tag
+  id: SolGloves

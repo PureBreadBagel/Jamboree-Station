@@ -13,5 +13,6 @@ public sealed partial class WeaponActionGranterComponent : Component
     [DataField]
     public EntityUid? WeaponActionEntity;
 
+    [DataField]
     public SoundSpecifier UseSound = new SoundPathSpecifier("/Audio/_Goobstation/Weapons/MantisBlades/mantis_retract2.ogg");
 }

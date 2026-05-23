@@ -19,6 +19,10 @@
     boltClosed: false
     soundRack:
       path: /Audio/Effects/kaching.ogg
+    soundBoltClosed:
+      path: /Audio/Effects/kaching.ogg
+    soundBoltOpened:
+      path: /Audio/Effects/kaching.ogg
   - type: ItemSlots
     slots:
       gun_magazine:

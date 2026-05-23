@@ -1,12 +1,12 @@
 - type: entity
   id: ActionWardenHalberd
   name: Sweep
-  description: Perform a sweeping motion, hitting an area infront of you.
+  description: Perform a sweeping motion, hitting and knocking down things infront of you.
   components:
   - type: InstantAction
     event: !type:EventWardenHalberdAction
   - type: Action
-    useDelay: 1
+    useDelay: 15
     checkConsciousness: true
   - type: WeaponAction
 
@@ -54,6 +54,7 @@
     - HideContextMenu
   - type: WeaponAction
   - type: WeaponActionEntity
+    knockdown: true
     damage:
       types:
         Slash: 15

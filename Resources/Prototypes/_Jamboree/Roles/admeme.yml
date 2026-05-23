@@ -5,7 +5,7 @@
     outerClothing: ClothingOuterArmorSergeantSol
     shoes: ClothingShoesBootsJackFilled
     head: ClothingHeadHelmetSergeantSol
-    eyes: ClothingEyesGlassesSecurityAdvanced
+    eyes: ClothingEyesThermalVisionGogglesNukie
     id: AgentIDCard
     ears: ClothingHeadsetAltSecurity
     gloves: ClothingHandsGlovesSol
@@ -16,6 +16,7 @@
   storage:
     back:
     - MedkitCombatFilled
-    - BookSergeantSolComic
+    - BookSergeantSolComic1
+    - BookSergeantSolComic2
     - DeathAcidifierImplanter
     - ScrollTeleportApprentice

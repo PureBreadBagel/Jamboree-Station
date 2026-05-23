@@ -1,9 +1,9 @@
-﻿using Content.Shared.Damage;
-using Content.Shared.Whitelist;
+﻿using Content.Shared.Actions;
+using Content.Shared.Damage;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._Jamboree.CaptainFlag;
+namespace Content.Shared._Jamboree.CommandGear.CaptainFlag;
 
 [RegisterComponent]
 public sealed partial class CaptainRallyActionComponent : Component
@@ -37,4 +37,18 @@ public sealed partial class CaptainRallyActionComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier RallySoundPath = new SoundPathSpecifier("/Audio/_Jamboree/Effects/warhorn.ogg");
+}
+
+public sealed partial class CaptainRallyActionEvent : InstantActionEvent
+{
+}
+
+[RegisterComponent]
+public sealed partial class CaptainRallySpeedModifiedComponent : Component
+{
+    [DataField]
+    public float WalkSpeedMultiplier = 1.2f;
+
+    [DataField]
+    public float SprintSpeedMultiplier = 1.2f;
 }
