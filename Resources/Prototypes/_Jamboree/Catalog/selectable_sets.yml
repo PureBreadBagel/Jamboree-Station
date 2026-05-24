@@ -6,7 +6,7 @@
 
 - type: selectableSet
   id: EnergyRevolverKit
-  name: EG-4 Energy Revolver Kit
+  name: Wrangler Kit
   description: |
     - EG-04 Equalizer
         Comes with lethal and disabler energy speedloaders that are
@@ -68,7 +68,7 @@
      - Sergeant Sol Comic
         A very rare first edition comic book.
   sprite:
-    sprite: _Jamboree/Objects/Weapons/Melee/shields.rsi/solshield.rsi
+    sprite: _Jamboree/Objects/Weapons/Melee/Shields/solshield.rsi
     state: icon
   content:
   - SolShield
@@ -77,7 +77,7 @@
 
 - type: selectableSet
   id: NonlethalLauncherKit
-  name: GL-06 Riot Grenade Launcher Kit
+  name: Controller Kit
   description: |
     - GL-06 Riot Grenade Launcher
         Will only load one 40mm shell at a time, but is very effective. Aim carefully.
@@ -291,7 +291,7 @@
 
 - type: selectableSet
   id: HOPMusicianKit
-  name: Musician Kit
+  name: Performer Kit
   description: |
      - MusicPen™
         It's a pocket-sized supersynth, for your
@@ -655,7 +655,7 @@
   description: |
      - Quartermaster's Engraved Knuckledusters
         Is this made of real gold? I dunno. Does
-        it punch shit good? Hell yeah.
+        it punch good? Hell yeah.
 
      - Quarter Cannon
         A modified SMG that shoots quarters. It's

@@ -5,7 +5,7 @@
   description: A replica of Sergeant Sol's shield. It functions as a stun baton, and will return to whomever is wearing the gloves when thrown.
   components:
   - type: Sprite
-    sprite: _Jamboree/Objects/Weapons/Melee/shields.rsi/solshield.rsi
+    sprite: _Jamboree/Objects/Weapons/Melee/Shields/solshield.rsi
     layers:
     - states: icon
       map: [ "enum.ToggleableVisuals.Layer" ]
