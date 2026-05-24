@@ -83,7 +83,7 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
             base.Initialize();
 
             SubscribeLocalEvent<EnergyReagentDispenserComponent,
-             EntRemovedFromContainerMessage>(OnBeakerRemoved); // JAMBOREE: Reset the stored energy when the beaker is removed to prevent exploits with swapping containers
+            EntRemovedFromContainerMessage>(OnBeakerRemoved); // JAMBOREE: Reset the stored energy when the beaker is removed to prevent exploits with swapping containers
 
             SubscribeLocalEvent<EnergyReagentDispenserComponent, ComponentStartup>(SubscribeUpdateUiState);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, SolutionContainerChangedEvent>(SubscribeUpdateUiState);
