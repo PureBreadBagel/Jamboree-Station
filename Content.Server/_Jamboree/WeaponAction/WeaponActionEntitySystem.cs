@@ -1,4 +1,8 @@
-﻿using Content.Goobstation.Common.Standing;
+// SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Content.Goobstation.Common.Standing;
 using Content.Goobstation.Shared.Knockdown;
 using Content.Shared._Jamboree.WeaponAction;
 using Content.Shared._Shitmed.Targeting;

@@ -1,4 +1,8 @@
-﻿using System.Numerics;
+// SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Numerics;
 using Content.Shared._Jamboree.WeaponAction;
 using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Shared.Audio;
