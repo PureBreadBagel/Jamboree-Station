@@ -147,7 +147,7 @@
       TableSalt: 20
   - type: Battery
     maxCharge: 3000
-    startingCharge: 3000
+    startingCharge: 400
 
 
 
@@ -186,7 +186,7 @@
       Wine: 5
   - type: Battery
     maxCharge: 2000
-    startingCharge: 2000
+    startingCharge: 400
 
 
 - type: entity
@@ -229,4 +229,4 @@
       Water: 1
   - type: Battery
     maxCharge: 2000
-    startingCharge: 2000
+    startingCharge: 400
