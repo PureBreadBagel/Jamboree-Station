@@ -123,6 +123,9 @@ namespace Content.Client.Paper.UI
         // we're able to resize this UI or not. Default to everything enabled:
         private DragMode _allowedResizeModes = ~DragMode.None;
 
+        // Store original margin to restore when switching modes // Starlight-edit
+        private Thickness _originalContentMargin; // Starlight-edit
+
         private readonly Type[] _allowedTags = new Type[] {
             typeof(BoldItalicTag),
             typeof(BoldTag),
@@ -130,10 +133,13 @@ namespace Content.Client.Paper.UI
             typeof(ColorTag),
             typeof(HeadingTag),
             typeof(ItalicTag),
-            typeof(MonoTag)
+            typeof(MonoTag),
         };
 
         public event Action<string>? OnSaved;
+        public event Action? Typing; // DeltaV
+        public event Action? SubmitPressed; // DeltaV
+        public event Action<int>? OnSignatureRequested; // Starlight-edit
 
         private int _MaxInputLength = -1;
         public int MaxInputLength
@@ -162,12 +168,14 @@ namespace Content.Client.Paper.UI
 
             Input.OnKeyBindDown += args => // Solution while TextEdit don't have events
             {
+                Typing?.Invoke(); // DeltaV
                 if (args.Function == EngineKeyFunctions.MultilineTextSubmit)
                 {
                     // SaveButton is disabled when we hit the max input limit. Just check
                     // that flag instead of trying to calculate the input length again
                     if (!SaveButton.Disabled)
                     {
+                        SubmitPressed?.Invoke(); // DeltaV
                         RunOnSaved();
                         args.Handle();
                     }
@@ -263,9 +271,12 @@ namespace Content.Client.Paper.UI
                 _paperContentLineScale = visuals.ContentImageNumLines;
             }
 
-            PaperContent.Margin = new Thickness(
+            // Starlight-edit begin
+            _originalContentMargin = new Thickness(
                     visuals.ContentMargin.Left, visuals.ContentMargin.Top,
                     visuals.ContentMargin.Right, visuals.ContentMargin.Bottom);
+            PaperContent.Margin = _originalContentMargin;
+            // Starlight-edit end
 
             if (visuals.MaxWritableArea != null)
             {
@@ -310,6 +321,7 @@ namespace Content.Client.Paper.UI
             if (WrittenTextLabel.TryGetStyleProperty<Font>("font", out var font))
             {
                 float fontLineHeight = font.GetLineHeight(1.0f);
+
                 // This positions the texture so the font baseline is on the bottom:
                 _paperContentTex.ExpandMarginTop = font.GetDescent(UIScale);
                 // And this scales the texture so that it's a single text line:
@@ -343,9 +355,10 @@ namespace Content.Client.Paper.UI
             bool wasEditing = InputContainer.Visible;
             InputContainer.Visible = isEditing;
             EditButtons.Visible = isEditing;
-
-            var msg = new FormattedMessage();
-            msg.AddMarkupPermissive(state.Text);
+            // Starlight
+            WrittenTextLabel.Visible = !isEditing;
+            BlankPaperIndicator.Visible = !isEditing && state.Text.Length == 0;
+            // End
 
             // For premade documents, we want to be able to edit them rather than
             // replace them.
@@ -361,20 +374,26 @@ namespace Content.Client.Paper.UI
                 Input.InsertAtCursor(state.Text);
             }
 
-            for (var i = 0; i <= state.StampedBy.Count * 3 + 1; i++)
+            // Starlight start, paperwork tag shit
+            if (isEditing)
             {
-                msg.AddMarkupPermissive("\r\n");
+                // Reset margin to original when editing (no tag buttons visible)
+                PaperContent.Margin = _originalContentMargin;
             }
-            WrittenTextLabel.SetMessage(msg, _allowedTags, DefaultTextColor);
 
-            WrittenTextLabel.Visible = !isEditing && state.Text.Length > 0;
-            BlankPaperIndicator.Visible = !isEditing && state.Text.Length == 0;
+            var fm = new FormattedMessage();
+            fm.AddMarkupPermissive(state.Text);
+            WrittenTextLabel.SetMessage(fm, _allowedTags, DefaultTextColor);
+
+            PaperContent.Margin = new Thickness(_originalContentMargin.Left, _originalContentMargin.Top,
+                _originalContentMargin.Right, _originalContentMargin.Bottom);
+            // Starlight End
 
             StampDisplay.RemoveAllChildren();
             StampDisplay.RemoveStamps();
-            foreach(var stamper in state.StampedBy)
+            foreach (var stamper in state.StampedBy)
             {
-                StampDisplay.AddStamp(new StampWidget{ StampInfo = stamper });
+                StampDisplay.AddStamp(new StampWidget { StampInfo = stamper });
             }
         }
 
@@ -407,7 +426,7 @@ namespace Content.Client.Paper.UI
                 mode |= DragMode.Right;
             }
 
-            if((mode & _allowedResizeModes) == DragMode.None)
+            if ((mode & _allowedResizeModes) == DragMode.None)
             {
                 return DragMode.Move;
             }
