@@ -76,9 +76,14 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly BatterySystem _battery = default!;
 
+
+
         public override void Initialize()
         {
             base.Initialize();
+
+            SubscribeLocalEvent<EnergyReagentDispenserComponent,
+             EntRemovedFromContainerMessage>(OnBeakerRemoved); // JAMBOREE: Reset the stored energy when the beaker is removed to prevent exploits with swapping containers
 
             SubscribeLocalEvent<EnergyReagentDispenserComponent, ComponentStartup>(SubscribeUpdateUiState);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, SolutionContainerChangedEvent>(SubscribeUpdateUiState);
@@ -211,25 +216,33 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
                 return;
 
             _battery.SetCharge(reagentDispenser.Owner, battery.CurrentCharge - powerRequired);
+            reagentDispenser.Comp.StoredEnergySpent += powerRequired;
             ClickSound(reagentDispenser);
-            UpdateUiState(reagentDispenser);
+            UpdateUiState(reagentDispenser); // Replaced this to track the energy spent // JAMBOREE
         }
 
         private void OnClearContainerSolutionMessage(Entity<EnergyReagentDispenserComponent> reagentDispenser, ref EnergyReagentDispenserClearContainerSolutionMessage message)
         {
             var outputContainerNullable = _itemSlotsSystem.GetItemOrNull(reagentDispenser, SharedEnergyReagentDispenser.OutputSlotName);
             if (outputContainerNullable is not { Valid: true } outputContainer
-                || !_solutionContainerSystem.TryGetFitsInDispenser(outputContainer, out var solution, out var soln))
+                || !_solutionContainerSystem.TryGetFitsInDispenser(outputContainer, out var solution, out _))
                 return;
 
-            var refundedPower = soln.Sum(reagent => GetPowerCostForReagent(reagent.Reagent.Prototype, (int) reagent.Quantity, reagentDispenser));
-            if (refundedPower > 0)
-                _battery.AddCharge(reagentDispenser, refundedPower);
+            if (reagentDispenser.Comp.StoredEnergySpent > 0f)
+            {
+                _battery.AddCharge(reagentDispenser, reagentDispenser.Comp.StoredEnergySpent);
+                reagentDispenser.Comp.StoredEnergySpent = 0f; // Add restored energy back to the battery instead of a ridiculous amount. JAMBOREE
+            }
 
             _solutionContainerSystem.RemoveAllSolution(solution.Value);
             UpdateUiState(reagentDispenser);
             ClickSound(reagentDispenser);
         }
+
+        private void OnBeakerRemoved(Entity<EnergyReagentDispenserComponent> ent, ref EntRemovedFromContainerMessage args)
+        {
+        ent.Comp.StoredEnergySpent = 0f;
+        } // Remove the stored energy spent when the containers removed to prevent the exploit of swapping containers to restore energy. JAMBOREE
 
         private void ClickSound(Entity<EnergyReagentDispenserComponent> reagentDispenser) =>
             _audioSystem.PlayPvs(reagentDispenser.Comp.ClickSound, reagentDispenser, AudioParams.Default.WithVolume(-2f));
