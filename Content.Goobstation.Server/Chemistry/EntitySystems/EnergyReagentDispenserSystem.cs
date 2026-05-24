@@ -241,7 +241,9 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
 
         private void OnBeakerRemoved(Entity<EnergyReagentDispenserComponent> ent, ref EntRemovedFromContainerMessage args)
         {
-        ent.Comp.StoredEnergySpent = 0f;
+            ent.Comp.StoredEnergySpent = 0f;
+            UpdateUiState(ent); // Update the UI to reflect the reset energy when the beaker is removed. JAMBOREE
+
         } // Remove the stored energy spent when the containers removed to prevent the exploit of swapping containers to restore energy. JAMBOREE
 
         private void ClickSound(Entity<EnergyReagentDispenserComponent> reagentDispenser) =>
