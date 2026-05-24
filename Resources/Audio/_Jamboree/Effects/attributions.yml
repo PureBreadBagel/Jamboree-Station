@@ -1,4 +1,8 @@
-﻿- files: ["warhorn.ogg"]
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- files: ["warhorn.ogg"]
   license: "CC-BY-NC-SA-3.0"
   copyright: "Taken from freesound_community on pixabay, converted from MP3 to OGG format by Gorse"
   source: "https://pixabay.com/sound-effects/film-special-effects-horn002-106060/"

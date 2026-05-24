@@ -1,4 +1,8 @@
-﻿using Content.Goobstation.Common.Religion;
+// SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Content.Goobstation.Common.Religion;
 using Content.Goobstation.Shared.Enchanting.Components;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Popups;

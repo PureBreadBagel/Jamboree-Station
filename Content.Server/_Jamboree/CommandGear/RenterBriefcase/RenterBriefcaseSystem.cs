@@ -1,4 +1,8 @@
-﻿using Content.Shared._Jamboree.RenterBriefcase;
+// SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Content.Shared._Jamboree.RenterBriefcase;
 using Content.Shared.Hands.Components;
 using Content.Shared.Item;
 using Content.Shared.Teleportation.Components;
