@@ -175,6 +175,8 @@
         type: RemoteDevicesBoundUserInterface
       enum.CamWarpUiKey.Key: # Goobstation-Ai-Camera-Jumping
         type: AiCameraWarpBoundUserInterface
+      enum.StoreUiKey.Key: # DeltaV - AI shop system
+        type: StoreBoundUserInterface
   - type: IntrinsicUI
     uis:
       enum.RadarConsoleUiKey.Key:
@@ -197,6 +199,17 @@
     canShuttle: false
     title: comms-console-announcement-title-station-ai
     color: "#5ed7aa"
+  # Begin DeltaV - AI Shop System
+  - type: StationAiShop
+  - type: Store
+    categories:
+    - AiAbilities
+    currencyWhitelist:
+    - AiMemory
+    balance:
+      AiMemory: 3
+    grantActionsToMind: false
+  # End DeltaV - AI Shop System
   - type: ShowJobIcons
   - type: ShowHealthIcons #Goobstation
   - type: ShowHealthBars #Goobstation

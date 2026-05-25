@@ -215,6 +215,7 @@
   - type: Tag # Goobstation - Prevent RCD from making lights in one tile
     tags:
     - WallLight
+    - LightFixture # DeltaV - we need this for an action whitelist
   placement:
     mode: SnapgridCenter
     snap:
