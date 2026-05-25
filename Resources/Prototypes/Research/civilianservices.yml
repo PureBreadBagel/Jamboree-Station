@@ -363,8 +363,8 @@
   id: ServiceBluespaceChemistry
   name: research-technology-service-energy-chem
   icon:
-    sprite: _Goobstation/Structures/Machines/service_dispenser.rsi
-    state: industrial
+    sprite: _Goobstation/Objects/Specific/Hydroponics/bluespace_tomato.rsi
+    state: icon
   discipline: CivilianServices
   tier: 2
   cost: 7500

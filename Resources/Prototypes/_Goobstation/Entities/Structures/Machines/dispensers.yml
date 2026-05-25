@@ -116,7 +116,7 @@
   - type: Sprite
     sprite: Structures/dispensers.rsi
     state: industrial-working
-    snapCardinals: true
+    snapCardinals: false
   - type: Machine
     board: EnergyChemDispenserMachineCircuitboard
   - type: GuideHelp
@@ -163,7 +163,7 @@
     sprite: Structures/smalldispensers.rsi
     state: booze
     drawdepth: SmallObjects
-    snapCardinals: true
+    snapCardinals: false
   - type: Rotatable
   - type: Transform
     noRot: false
@@ -202,7 +202,7 @@
     sprite: Structures/smalldispensers.rsi
     state: soda
     drawdepth: SmallObjects
-    snapCardinals: true
+    snapCardinals: false
   - type: Machine
     board: EnergySodaDispenserMachineCircuitboard
   - type: GuideHelp
@@ -246,7 +246,7 @@
   - type: Sprite
     sprite: Structures/dispensers.rsi
     state: industrial-working
-    snapCardinals: true
+    snapCardinals: false
   - type: Machine
     board: ServiceEnergyChemMachineCircuitboard
   - type: EnergyReagentDispenser
