@@ -188,8 +188,8 @@
       Whiskey: 5
       Wine: 5
   - type: Battery
-    maxCharge: 2000
-    startingCharge: 400
+    maxCharge: 2500
+    startingCharge: 100
 
 
 - type: entity
@@ -232,8 +232,8 @@
       TonicWater: 5
       Water: 1
   - type: Battery
-    maxCharge: 2000
-    startingCharge: 400
+    maxCharge: 2500
+    startingCharge: 100
 
 
 
@@ -282,5 +282,5 @@
       HorseradishSauce: 4
       Cornoil: 4
   - type: Battery
-    maxCharge: 2000
-    startingCharge: 400
+    maxCharge: 3000
+    startingCharge: 100
