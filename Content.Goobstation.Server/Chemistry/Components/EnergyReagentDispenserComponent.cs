@@ -88,5 +88,8 @@ namespace Content.Goobstation.Server.Chemistry.Components
 
         [DataField]
         public Dictionary<string, float> Reagents = [];
+
+        [DataField]
+        public float StoredEnergySpent = 0f;
     }
 }
