@@ -30,10 +30,10 @@
 - type: entity
   id: CrateNPCXenobioSlime
   parent: CrateLivestock
-  name: crate of xenobio slimes
-  description: A crate containing two xenobio slimes for experiments.
+  name: xenobiology slime crate
+  description: A crate containing a singular grey slime for xenobiology related experiments. #changed name and description to be more specific
   components:
   - type: StorageFill
     contents:
     - id: MobSlimeXenobioBabyGrey
-      amount: 2
+      amount: 1
