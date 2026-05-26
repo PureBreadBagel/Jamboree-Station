@@ -74,7 +74,6 @@
   - type: IntrinsicRadioReceiver
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
     - Command
     - CentCom
@@ -97,12 +96,3 @@
   - type: GravityWell
     baseRadialAcceleration: 6
     maxRange: 8
-  - type: Tag
-    tags:
-    - GhostOnlyWarp
-  - type: WarpPoint
-    follow: true
-    location: Honkmother
-    blacklist:
-      tags:
-      - GhostOnlyWarp
