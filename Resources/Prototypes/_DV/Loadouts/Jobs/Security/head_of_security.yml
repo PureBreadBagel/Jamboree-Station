@@ -85,3 +85,14 @@
   id: HoSCowboy
   equipment:
     head: ClothingHeadHatHosCowboyhat
+
+- type: loadout
+  id: HeadofSecurityCavalier
+  equipment:
+    head: ClothingHeadHatHeadOfSecurityCavalier
+
+# Neck
+- type: loadout
+  id: HeadOfSecurityCloakBoat
+  equipment:
+    neck: ClothingNeckHeadOfSecurityCloakBoat

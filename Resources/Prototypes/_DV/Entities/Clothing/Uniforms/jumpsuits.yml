@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitHoPMess
@@ -129,3 +133,49 @@
     sprite: _DV/Clothing/Uniforms/Jumpsuit/admin_assistant.rsi
   - type: Clothing
     sprite: _DV/Clothing/Uniforms/Jumpsuit/admin_assistant.rsi
+
+# Wrestling gear--collegiate, prowrestling, lucha libre
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitWrestlerCostumeGreen
+  name: plain wrestler leotard
+  description: When you wanta show off your muscles, but don't wanta show off too much skin.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Uniforms/Jumpsuit/WrestlerCostumeGreen.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Uniforms/Jumpsuit/WrestlerCostumeGreen.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitWrestlerCostumeRed
+  name: bold wrestler trunks
+  description: OOHHH YEAH, SNAP INTO A SUS JERKY, BROTHER!
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Uniforms/Jumpsuit/WrestlerCostumeRed.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Uniforms/Jumpsuit/WrestlerCostumeRed.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitWrestlerCostumeYellow
+  name: striped wrestler leotard
+  description: Punching tiger, hidden dragon.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Uniforms/Jumpsuit/WrestlerCostumeYellow.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Uniforms/Jumpsuit/WrestlerCostumeYellow.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitWrestlerCostumeBlue
+  name: glamorous wrestler leotard
+  description: Power, Technique, and Beauty! Master the basics!
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Uniforms/Jumpsuit/WrestlerCostumeBlue.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Uniforms/Jumpsuit/WrestlerCostumeBlue.rsi

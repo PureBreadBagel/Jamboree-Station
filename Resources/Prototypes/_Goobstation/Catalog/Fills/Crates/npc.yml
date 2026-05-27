@@ -26,3 +26,14 @@
     contents:
       - id: MobLootbug
         amount: 3
+
+- type: entity
+  id: CrateNPCXenobioSlime
+  parent: CrateLivestock
+  name: xenobiology slime crate
+  description: A crate containing a singular grey slime for xenobiology related experiments. #changed name and description to be more specific
+  components:
+  - type: StorageFill
+    contents:
+    - id: MobSlimeXenobioBabyGrey
+      amount: 1

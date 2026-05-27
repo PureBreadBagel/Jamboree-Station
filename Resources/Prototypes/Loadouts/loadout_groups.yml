@@ -355,11 +355,12 @@
   - CaptainHead
   - CaptainCap
   - CaptainBeret
-  - CaptainCrusherCap
-  - CaptainTricorne
+  - CaptainCrusherCap #imp
+  - CaptainTricorne #imp
+  - CaptainCavalier #DV
 
 - type: loadoutGroup
-  id: CaptainGlasses
+  id: CaptainGlasses #all imp
   name: loadout-group-captain-glasses
   loadouts:
   - CaptainSunglasses
@@ -389,6 +390,7 @@
   - VeteranCaptainMantle # ADT
   - CaptainGreatcoat # imp
   - CaptainAdmiralCloak # imp
+  - CaptainBoatCloak # DeltaV
 
 - type: loadoutGroup
   id: CaptainBackpack
@@ -1761,6 +1763,7 @@
   - HoSCowboy #Delta V
   - HOSBucket #TP
   - HOSUshanka #Jamboree, GoobResprite & reuse
+  - HeadofSecurityCavalier # DeltaV
 
 - type: loadoutGroup
   id: HeadofSecurityJumpsuit
@@ -1782,8 +1785,9 @@
   loadouts:
   - HeadofSecurityCloak
   - HeadofSecurityMantle
-  - Bodycam # Goobstation - Body cameras
   - HeadofSecurityGreatcoat #imp
+  - HeadOfSecurityCloakBoat #dv
+  - Bodycam # Goobstation - Body cameras
 
 - type: loadoutGroup
   id: HeadofSecurityOuterClothing
@@ -2232,6 +2236,11 @@
   loadouts:
   - BoxerShorts
   - BoxerShortsWithTop
+  # DV additions
+  - WrestlerCostumeGreen
+  - WrestlerCostumeRed
+  - WrestlerCostumeBlue
+  - WrestlerCostumeYellow
 
 - type: loadoutGroup
   id: BoxerGloves
@@ -2241,6 +2250,15 @@
   - BlueBoxingGloves
   - GreenBoxingGloves
   - YellowBoxingGloves
+
+- type: loadoutGroup
+  id: BoxerMask
+  name: loadout-group-boxer-mask
+  minLimit: 0
+  loadouts:
+  - BoxerDominoMask
+  - WrestlingMaskLuchaRed
+  - WrestlingMaskLuchaBlue
 
 # Other
 - type: loadoutGroup
