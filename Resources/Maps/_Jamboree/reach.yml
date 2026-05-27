@@ -1,10 +1,14 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Map
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/01/2026 00:32:40
+  time: 05/27/2026 04:36:58
   entityCount: 2728
 maps:
 - 1
@@ -1626,6 +1630,11 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -27.5,4.5
       parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        2727:
+        - - DoorStatus
+          - DoorBolt
     - type: DeviceLinkSink
       invokeCounter: 1
   - uid: 2655
@@ -1634,6 +1643,11 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -27.5,-3.5
       parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        2728:
+        - - DoorStatus
+          - DoorBolt
     - type: DeviceLinkSink
       invokeCounter: 1
   - uid: 2727
@@ -1641,6 +1655,8 @@ entities:
     - type: Transform
       pos: -26.5,5.5
       parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
     - type: DeviceLinkSource
       linkedPorts:
         2654:
@@ -1651,6 +1667,8 @@ entities:
     - type: Transform
       pos: -26.5,-4.5
       parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
     - type: DeviceLinkSource
       linkedPorts:
         2655:
@@ -5759,6 +5777,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 20.5,-3.5
       parent: 2
+- proto: CaptainIDCard
+  entities:
+  - uid: 1648
+    components:
+    - type: Transform
+      pos: 24.659811,2.535263
+      parent: 2
 - proto: CargoTechFab
   entities:
   - uid: 774
@@ -8093,12 +8118,12 @@ entities:
     - type: Transform
       pos: 21.5,-3.5
       parent: 2
-- proto: DoorRemoteAll
+- proto: DoorRemoteCustom
   entities:
   - uid: 1078
     components:
     - type: Transform
-      pos: 24.467216,2.2952216
+      pos: 24.487936,2.316513
       parent: 2
 - proto: DrinkVodkaBottleFull
   entities:
@@ -12552,13 +12577,6 @@ entities:
     components:
     - type: Transform
       pos: -4.5,4.5
-      parent: 2
-- proto: HoPIDCard
-  entities:
-  - uid: 1648
-    components:
-    - type: Transform
-      pos: 24.607841,2.6858466
       parent: 2
 - proto: HOPUndeterminedWeapon
   entities:
