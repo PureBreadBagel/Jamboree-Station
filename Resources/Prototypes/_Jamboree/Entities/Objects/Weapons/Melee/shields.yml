@@ -22,8 +22,6 @@
     activatedDamage:
       types:
         Blunt: 0
-    soundHit:
-      path: /Audio/Weapons/bladeslice.ogg
   - type: Item
     size: Large
     heldPrefix: off
@@ -67,7 +65,9 @@
     - type: StaminaDamageOnCollide
       damage: 20
   - type: UseDelay
-    useDelay: stunbaton
+    delays:
+      stunbaton:
+        length: 2.5
   - type: ItemTogglePrefix
     prefixOn: on
     prefixOff: off

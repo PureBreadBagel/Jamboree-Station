@@ -2,7 +2,7 @@
   name: quarter cannon
   parent: [BaseWeaponRifle, BaseCommandContraband]
   id: WeaponRifleQuarterCannon
-  description: An old "Tommy Gun" modified to shoot... quarters? Whatever floats your boat.
+  description: An old "Tommy Gun" modified to shoot... quarters?
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/SMGs/typewriter.rsi
@@ -12,9 +12,9 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
+    fireRate: 5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/smg.ogg
-      fireRate: 5
   - type: ChamberMagazineAmmoProvider
     boltClosed: false
     soundRack:
