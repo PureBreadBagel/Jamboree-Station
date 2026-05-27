@@ -42,3 +42,4 @@ research-technology-advanced-power-generation = Advanced Power Generation
 research-technology-bluespace-construction-storage = Bluespace Construction Storage
 research-technology-extended-communication = Extended Communications
 research-technology-radio-music-communication = Radio Music Communications
+research-technology-service-energy-chem = Organic Electrosynthesis
