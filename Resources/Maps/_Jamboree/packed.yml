@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Map
@@ -9,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 05/03/2026 06:19:53
-  entityCount: 15193
+  entityCount: 15194
 maps:
 - 1
 grids:
@@ -80044,6 +80040,13 @@ entities:
     - type: Transform
       pos: 24.5,39.5
       parent: 2
+- proto: SpawnPointRoboticist
+  entities:
+  - uid: 15174
+    components:
+    - type: Transform
+      pos: 51.5,20.5
+      parent: 2
 - proto: SpawnPointSalvageSpecialist
   entities:
   - uid: 12021
@@ -96321,7 +96324,6 @@ entities:
       pos: 96.5,27.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 10080
   - uid: 14864
@@ -96331,7 +96333,6 @@ entities:
       pos: 96.5,33.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 10080
   - uid: 14865
@@ -96341,7 +96342,6 @@ entities:
       pos: 92.5,27.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 10080
   - uid: 14873
@@ -96351,7 +96351,6 @@ entities:
       pos: 84.5,32.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 10080
   - uid: 15038
@@ -96361,7 +96360,6 @@ entities:
       pos: 86.5,32.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 10080
   - uid: 15082
@@ -96371,7 +96369,6 @@ entities:
       pos: 92.5,33.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 10080
 - proto: WeaponEnergyTurretAIControlPanel
