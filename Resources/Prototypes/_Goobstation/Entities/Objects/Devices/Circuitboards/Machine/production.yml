@@ -195,12 +195,6 @@
       Steel: 5
     chemicalComposition:
       Silicon: 5
-      BSCrystal: 1
-
-    tagRequirements:
-      GlassBeaker:
-        amount: 2
-        defaultPrototype: Beaker
 
 
 
