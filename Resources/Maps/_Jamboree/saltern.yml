@@ -74260,8 +74260,7 @@ entities:
       pos: -18.5,41.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11829
@@ -74271,8 +74270,7 @@ entities:
       pos: -15.5,41.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11830
@@ -74282,8 +74280,7 @@ entities:
       pos: -15.5,37.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11831
@@ -74293,8 +74290,7 @@ entities:
       pos: -9.5,36.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11832
@@ -74304,8 +74300,7 @@ entities:
       pos: -13.5,39.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11833
@@ -74315,8 +74310,7 @@ entities:
       pos: -25.5,41.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11834
@@ -74326,8 +74320,7 @@ entities:
       pos: -25.5,37.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11835
@@ -74337,8 +74330,7 @@ entities:
       pos: -21.5,41.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11836
@@ -74348,8 +74340,7 @@ entities:
       pos: -21.5,37.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11837
@@ -74359,8 +74350,7 @@ entities:
       pos: -27.5,42.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11838
@@ -74370,8 +74360,7 @@ entities:
       pos: -20.5,44.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11839
@@ -74381,8 +74370,7 @@ entities:
       pos: -11.5,44.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11840
@@ -74392,8 +74380,7 @@ entities:
       pos: -25.5,34.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11841
@@ -74403,8 +74390,7 @@ entities:
       pos: -15.5,34.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
   - uid: 11842
@@ -74414,8 +74400,7 @@ entities:
       pos: -21.5,34.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 2585
 - proto: WeaponEnergyTurretAIControlPanel

@@ -59198,8 +59198,7 @@ entities:
       pos: -51.5,7.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 7407
   - uid: 7675
@@ -59209,8 +59208,7 @@ entities:
       pos: -51.5,16.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 7407
   - uid: 8869
@@ -59220,8 +59218,7 @@ entities:
       pos: -51.5,11.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 7407
   - uid: 8875
@@ -59231,8 +59228,7 @@ entities:
       pos: -51.5,10.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 7407
   - uid: 8879
@@ -59242,8 +59238,7 @@ entities:
       pos: -47.5,11.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 7407
   - uid: 8888
@@ -59253,8 +59248,7 @@ entities:
       pos: -46.5,9.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 7407
 - proto: WeaponEnergyTurretAIControlPanel
