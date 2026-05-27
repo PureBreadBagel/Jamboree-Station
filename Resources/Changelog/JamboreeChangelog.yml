@@ -1430,3 +1430,9 @@ Entries:
       message: 'You can now blink, with a funny sound to accompany it! '
   id: 127
   time: '2026-05-27T04:50:35.0000000+00:00'
+- author: EchoOfNothing
+  changes:
+    - type: Add
+      message: Station AI can now access AI store to buy abilities!
+  id: 128
+  time: '2026-05-27T04:56:37.0000000+00:00'
