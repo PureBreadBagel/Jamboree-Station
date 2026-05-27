@@ -1406,3 +1406,27 @@ Entries:
         re-sprites. See the PR for details.
   id: 126
   time: '2026-05-27T04:30:17.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        A xenobiology slime crate has been added to the cargo request console
+        for 6300 spesos! Get your slime while supplies last!
+    - type: Add
+      message: A new gamemode for low pop has been added called Secret + Low Pop!
+    - type: Add
+      message: >-
+        Boxers have gained some more attire similar to the Terran wrestlers and
+        heroes of old!
+    - type: Add
+      message: >-
+        The HOS and Captain have recieved a new cloak and hat each! For the
+        suave rogues of the station!
+    - type: Tweak
+      message: Scissors have been added to the service techfab and the standard lathe!
+    - type: Add
+      message: The Honkmother has arrived.
+    - type: Add
+      message: 'You can now blink, with a funny sound to accompany it! '
+  id: 127
+  time: '2026-05-27T04:50:35.0000000+00:00'
