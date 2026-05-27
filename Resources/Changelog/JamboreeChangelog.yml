@@ -1436,3 +1436,21 @@ Entries:
       message: Station AI can now access AI store to buy abilities!
   id: 128
   time: '2026-05-27T04:56:37.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        The Energy Food Synthesizer has made its way to the Jamboree Sector
+        (thanks to PurebreadBagel in the discord!) Check out PR#280 for more
+        details!
+    - type: Tweak
+      message: >-
+        Reach's HOP ID and super door remote have been replaced with a Captain
+        ID card and a custom door remote!
+    - type: Tweak
+      message: >-
+        Central Command has received some small quality of life changes, such as
+        the implementation of E-Chem/Soda/Booze/Food and the addition of some
+        virology related machines!
+  id: 129
+  time: '2026-05-27T06:11:04.0000000+00:00'
