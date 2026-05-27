@@ -155735,19 +155735,13 @@ entities:
     - type: Transform
       pos: -114.5,13.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 25117
   - uid: 23988
     components:
     - type: Transform
       pos: -109.5,37.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 23989
@@ -155756,8 +155750,7 @@ entities:
       pos: -113.5,37.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 23990
@@ -155766,8 +155759,7 @@ entities:
       pos: -114.5,15.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 23991
@@ -155776,8 +155768,7 @@ entities:
       pos: -114.5,19.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 23992
@@ -155786,8 +155777,7 @@ entities:
       pos: -108.5,19.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 23993
@@ -155796,8 +155786,7 @@ entities:
       pos: -108.5,15.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 23994
@@ -155806,8 +155795,7 @@ entities:
       pos: -107.5,21.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 23995
@@ -155816,8 +155804,7 @@ entities:
       pos: -107.5,30.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 23996
@@ -155826,8 +155813,7 @@ entities:
       pos: -115.5,30.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 23997
@@ -155837,8 +155823,7 @@ entities:
       pos: -108.5,9.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 23998
@@ -155847,8 +155832,7 @@ entities:
       pos: -109.5,2.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 23999
@@ -155857,8 +155841,7 @@ entities:
       pos: -123.5,17.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 24000
@@ -155867,8 +155850,7 @@ entities:
       pos: -115.5,21.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 24001
@@ -155877,8 +155859,7 @@ entities:
       pos: -113.5,2.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
   - uid: 24002
@@ -155888,8 +155869,7 @@ entities:
       pos: -114.5,9.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 25117
 - proto: WeaponEnergyTurretAIControlPanel
