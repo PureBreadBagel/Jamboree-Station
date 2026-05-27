@@ -172,13 +172,13 @@
   description: |
     - Firepower Mk.6 Armor
        Once toggled, the gauntlets can toggle from lethal and disabler modes.
-       The helmet has a MIDI player.
+       The helmet has a MIDI player. The suit is also capable of flight.
 
     - Screwdriver
        Use this to remove the power cell in the suit.
   sprite:
-    sprite: _DV/Objects/Weapons/Guns/Battery/multiphase_energygun.rsi
-    state: icon
+    sprite: _Jamboree/Clothing/OuterClothing/Modsuits/firepower.rsi
+    state: control
   content:
   - ClothingModsuitFirepower
   - Screwdriver
@@ -190,7 +190,7 @@
   name: Resonance Kit
   description: |
      - Hand Teleporter
-        Places portals freely, which can be freely moved between.
+        Use to place portals that can be moved between.
 
      - Tether Gun
         Moves objects slowly and accurately.
@@ -360,7 +360,7 @@
   name: Ian Lover Kit
   description: |
      - Ian Suit
-        I hope this isn't made of real ian.
+        I hope this isn't made of real Ian.
 
      - Ian Pinpointer
         Will automatically target your beloved corgi. Don't let
@@ -511,7 +511,7 @@
 
      - Micro-Fission Generator
         A small generator that can be freely picked
-        up and moved. Provides 10kW of power to MV
+        up and moved. Provides 20kW of power to MV
         cables.
   sprite:
     sprite: Objects/Power/power_cells.rsi

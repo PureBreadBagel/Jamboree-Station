@@ -1,8 +1,8 @@
 ﻿- type: entity
   parent: [ClothingHandsBase, BaseCommandContraband]
   id: ClothingHandsGlovesCMODefib
-  name: cmo's defibrillator gloves
-  description: Incredibly advanced medical technology, a defibrillator literally at your fingertips. You will need to remove the glove from your hand to use it.
+  name: defibrillator gloves
+  description: Incredibly advanced medical technology, a defibrillator literally at your fingertips.
   components:
   - type: Sprite
     sprite: _Jamboree/Clothing/Hands/Gloves/defibgloves.rsi
@@ -24,6 +24,7 @@
       types:
         Asphyxiation: -80 # cmd gear tweaks 3
   - type: DoAfter
+  - type: UseDelay
   - type: StealTarget # Jamboree - cmd/steal gear tweaks
     stealGroup: CMO
   - type: DefibGloves

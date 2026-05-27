@@ -66,10 +66,6 @@
     components:
     - type: StaminaDamageOnCollide
       damage: 20
-    - type: DamageOtherOnHit
-      damage:
-        types:
-          Blunt: 0
   - type: UseDelay
     useDelay: stunbaton
   - type: ItemTogglePrefix

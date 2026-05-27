@@ -5,7 +5,13 @@
   description: The main controller for a Firepower modsuit.
   components:
   - type: Sprite
-    sprite: _Goobstation/Clothing/OuterClothing/Modsuits/corporate.rsi
+    sprite: _Jamboree/Clothing/OuterClothing/Modsuits/firepower.rsi
+    layers:
+    - state: control
+    - state: control-sealed
+      visible: false
+      shader: unshaded
+      map: [ "sealed" ]
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingModsuitHelmetFirepower
@@ -49,18 +55,19 @@
   categories: [HideSpawnMenu]
   components:
   - type: Sprite
-    sprite: _Goobstation/Clothing/OuterClothing/Modsuits/corporate.rsi
+    sprite: _Jamboree/Clothing/OuterClothing/Modsuits/firepower.rsi
+    layers:
+    - state: gauntlets
+    - state: gauntlets-sealed
+      visible: false
+      map: [ "sealed" ]
   - type: SealableClothingVisuals
     spriteLayer: sealed
     clothingVisuals:
       gloves:
       - state: equipped-HAND-sealed
-      - state: equipped-HAND-sealed-unshaded
-        shader: unshaded
       gloves-vox:
       - state: equipped-HAND-sealed-vox
-      - state: equipped-HAND-sealed-unshaded-vox
-        shader: unshaded
   - type: AmmoSelector
     prototypes:
     - BulletDisablerFirepower
@@ -116,7 +123,12 @@
   categories: [HideSpawnMenu]
   components:
   - type: Sprite
-    sprite: _Goobstation/Clothing/OuterClothing/Modsuits/corporate.rsi
+    sprite: _Jamboree/Clothing/OuterClothing/Modsuits/firepower.rsi
+    layers:
+    - state: helmet
+    - state: helmet-sealed
+      visible: false
+      map: [ "sealed" ]
   - type: Armor
     traumaDeductions:
       Dismemberment: 0.3
@@ -136,22 +148,16 @@
   - type: FlashSoundSuppression
     protectionRange: 1
   - type: PointLight
-    color: "#fc8a00"
+    color: "#ee4B2B"
   - type: SealableClothingVisuals
     spriteLayer: sealed
     clothingVisuals:
       head:
       - state: equipped-HEAD-sealed
-      - state: equipped-HEAD-sealed-unshaded
-        shader: unshaded
       head-vox:
       - state: equipped-HEAD-sealed-vox
-      - state: equipped-HEAD-sealed-unshaded-vox
-        shader: unshaded
       head-vulpkanin:
       - state: equipped-HEAD-sealed
-      - state: equipped-HEAD-sealed-unshaded
-        shader: unshaded
   - type: ActivatableUI
     inHandsOnly: false
     singleUser: true
@@ -191,10 +197,15 @@
   categories: [HideSpawnMenu]
   components:
   - type: Sprite
-    sprite: _Goobstation/Clothing/OuterClothing/Modsuits/corporate.rsi
+    sprite: _Jamboree/Clothing/OuterClothing/Modsuits/firepower.rsi
+    layers:
+    - state: chestplate
+    - state: chestplate-sealed
+      visible: false
+      map: [ "sealed" ]
   - type: ClothingSpeedModifier
-    walkModifier: 1
-    sprintModifier: 1
+    walkModifier: 0.9
+    sprintModifier: 0.9
   - type: Armor
     traumaDeductions:
       Dismemberment: 0.3
@@ -241,7 +252,11 @@
   components:
   - type: Appearance
   - type: Sprite
-    sprite: _Goobstation/Clothing/OuterClothing/Modsuits/corporate.rsi
+    sprite: _Jamboree/Clothing/OuterClothing/Modsuits/firepower.rsi
+    layers:
+    - state: boots
+    - state: boots-sealed
+      map: [ "sealed" ]
   - type: Tag
     tags:
     - WhitelistChameleon
@@ -250,17 +265,13 @@
     clothingVisuals:
       shoes:
       - state: equipped-FEET-sealed
-      - state: equipped-FEET-sealed-unshaded
-        shader: unshaded
       shoes-vox:
       - state: equipped-FEET-sealed-vox
-      - state: equipped-FEET-sealed-unshaded-vox
-        shader: unshaded
   - type: ItemToggle
   - type: ToggleClothing
     action: ActionToggleMagboots
   - type: ModifyStandingUpTime
-    multiplier: .25
+    multiplier: 1.5
   - type: Magboots
     enabledPrefix: null
   - type: ClothingSpeedModifier
@@ -269,11 +280,11 @@
   - type: ClothingGrantComponent
     component:
     - type: Flight
-      staminaDrainMultiplier: 0.25
+      staminaDrainMultiplier: 0.75
       isAnimated: false
       isLayerAnimated: false
       toggleAction: ActionToggleFlightFirepower
-      staminaDrainRate: 1
+      staminaDrainRate: 5
       flapInterval: 10
       flapSound:
         path: /Audio/_Jamboree/Effects/booster.ogg
