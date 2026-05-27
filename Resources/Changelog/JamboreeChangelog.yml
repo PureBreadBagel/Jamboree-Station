@@ -1398,3 +1398,11 @@ Entries:
         more!
   id: 125
   time: '2026-05-20T23:44:45.0000000+00:00'
+- author: Gorse1
+  changes:
+    - type: Add
+      message: >-
+        Command Selectors 2.0 is here, with lots of new content, tweaks, and
+        re-sprites. See the PR for details.
+  id: 126
+  time: '2026-05-27T04:30:17.0000000+00:00'
