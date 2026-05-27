@@ -1,0 +1,17 @@
+﻿- type: Tag
+  id: MagazineQuarterCannon
+
+- type: Tag
+  id: CartridgeQuarterCannon
+
+- type: Tag
+  id: CartridgeMagnum22
+
+- type: Tag
+  id: MagazineRailgun
+
+- type: Tag
+  id: FirepowerGauntletsWorn
+
+- type: Tag
+  id: SolGloves

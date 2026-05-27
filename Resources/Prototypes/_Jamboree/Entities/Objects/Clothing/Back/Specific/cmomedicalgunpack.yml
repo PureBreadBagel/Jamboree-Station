@@ -37,7 +37,7 @@
   - type: Charger
     slotId: charger_slot
     portable: true
-    chargeRate: 2.5
+    chargeRate: 0.25 # cmd gear selector tweaks 2 - was 2
     whitelist:
       components:
       - MediGun

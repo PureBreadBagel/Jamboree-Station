@@ -1,0 +1,23 @@
+﻿- type: entity
+  id: CartridgeQuarter
+  name: quarter
+  description: A small coin modeled after one used by an insignificant nation from the Sol system.
+  parent: [ BaseCartridge, BaseCommandContraband ]
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeQuarterCannon
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+    proto: BulletQuarter
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Misc/coins.rsi
+    scale: 0.5, 0.5
+    layers:
+    - state: coin_iron
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10

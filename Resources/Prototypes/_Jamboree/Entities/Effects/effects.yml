@@ -1,0 +1,24 @@
+﻿- type: entity
+  id: EffectCaptainRally
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedDespawn
+    lifetime: 1.0
+  - type: PointLight
+    enabled: true
+    radius: 2
+    energy: 3
+    color: "#FAA019"
+    netsync: false
+  - type: LightFade
+    duration: 1.0
+  - type: Sprite
+    drawdepth: Effects
+    sprite: _Jamboree/Effects/captainrallyeffect.rsi
+    state: effect
+    noRot: true
+    scale: 2, 2
+  - type: Tag
+    tags:
+    - HideContextMenu
+  - type: AnimationPlayer

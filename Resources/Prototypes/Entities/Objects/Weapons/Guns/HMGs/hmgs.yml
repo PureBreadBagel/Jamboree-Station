@@ -114,6 +114,13 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: StaticPrice
     price: 500
+  - type: RestrictGunshotsByUserTag # Jamboree - firepower modsuit
+    doesntContain:
+    - FirepowerGauntletsWorn
+    messages:
+    - generic-cannot-shoot-1
+    - generic-cannot-shoot-2
+    - generic-cannot-shoot-3
   # No chamber because HMG may want its own
   # Goobstation edit start
   - type: EmitSoundOnPickup

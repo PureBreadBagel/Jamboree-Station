@@ -1,0 +1,18 @@
+﻿- type: entity
+  id: ActionCaptainRally
+  name: Rally
+  description: Rally those around you, motivating them to fight.
+  components:
+  - type: InstantAction
+    event: !type:CaptainRallyActionEvent
+  - type: Action
+    useDelay: 15
+    checkConsciousness: true
+  - type: CaptainRallyAction
+    healing:
+      groups:
+        Brute: -27
+      types:
+        Heat: -9
+        Cold: -9
+        Shock: -9

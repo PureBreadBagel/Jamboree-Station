@@ -1,7 +1,7 @@
 ﻿- type: entity
   id: MREFabMachineBoard
   parent: [BaseMachineCircuitboard, BaseCommandContraband]
-  name: MRE fabricator machine board
+  name: M.R.E fabricator machine board
   description: A machine printed circuit board for an MRE fabricator.
   components:
   - type: MachineBoard

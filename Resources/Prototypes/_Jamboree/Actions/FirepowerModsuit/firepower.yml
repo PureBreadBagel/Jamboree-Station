@@ -1,0 +1,12 @@
+﻿- type: entity
+  parent: BaseAction
+  id: ActionToggleFlightFirepower
+  name: Fly
+  description: Activate the Firepower's inbuilt thrusters and take flight.
+  components:
+  - type: Action
+    checkCanInteract: false
+    icon: { sprite: _EinsteinEngines/Interface/Actions/flight.rsi, state: flight_off }
+    iconOn: { sprite : _EinsteinEngines/Interface/Actions/flight.rsi, state: flight_on }
+  - type: InstantAction
+    event: !type:ToggleFlightEvent

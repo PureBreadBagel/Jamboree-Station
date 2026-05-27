@@ -126,10 +126,11 @@
   - type: RestrictGunshotsByUserTag
     doesntContain:
     - Oni
+    - FirepowerGauntletsWorn # Jamboree - firepower modsuit
     messages:
-    - oni-cannot-shoot-guns-1
-    - oni-cannot-shoot-guns-2
-    - oni-cannot-shoot-guns-3
+    - generic-cannot-shoot-1 # Jamboree - was oni-cannot-shoot-x
+    - generic-cannot-shoot-2
+    - generic-cannot-shoot-3
   # Goobstation edit end
   - type: AltFireMelee # Goobstation V
     attackType: Heavy

@@ -253,3 +253,10 @@
   - type: Tag
     tags:
     - LaserLMG
+  - type: RestrictGunshotsByUserTag # Jamboree
+    doesntContain:
+    - FirepowerGauntletsWorn # Jamboree - firepower modsuit
+    messages:
+    - generic-cannot-shoot-1
+    - generic-cannot-shoot-2
+    - generic-cannot-shoot-3

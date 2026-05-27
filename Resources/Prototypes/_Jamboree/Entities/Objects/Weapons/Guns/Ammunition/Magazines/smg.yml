@@ -1,0 +1,30 @@
+﻿- type: entity
+  id: MagazineQuarter
+  name: "magazine (quarter)"
+  parent: [ BaseItem, BaseCommandContraband ]
+  components:
+  - type: Tag
+    tags:
+    - MagazineQuarterCannon
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgeQuarter
+    whitelist:
+      tags:
+      - CartridgeQuarterCannon
+    capacity: 20
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/Guns/SMGs/typewriter.rsi
+    layers:
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Base"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance

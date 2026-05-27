@@ -1,0 +1,10 @@
+﻿- type: entity
+  parent: [ClothingUniformBase, BaseMagicalContraband]
+  id: ClothingUniformJumpsuitSergeantSol
+  name: sergeant sol's jumpsuit
+  description: A jumpsuit worn by the legendary sergeant sol. Are you worthy of even looking at this?
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Uniform/Jumpsuit/sergeantsol.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/Uniform/Jumpsuit/sergeantsol.rsi

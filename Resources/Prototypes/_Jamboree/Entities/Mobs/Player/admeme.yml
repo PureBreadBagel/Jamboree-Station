@@ -1,0 +1,11 @@
+﻿- type: entity
+  parent: MobHuman
+  id: MobHumanSergeantSol
+  suffix: Admeme
+  name: Sergeant Sol
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+  - type: Loadout
+    prototypes: [ SergeantSolGear ]
+  - type: AntagImmune

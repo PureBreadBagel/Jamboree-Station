@@ -19,3 +19,69 @@
     ammoSlots: [ null, null, null, null, null ]
   - type: StealTarget
     stealGroup: Captain # Jamboree - cmd/steal gear tweaks
+
+- type: entity
+  name: derringer
+  parent: BaseItem
+  id: WeaponPistolDerringer
+  description: It shoots, but smaller. Fires .22 magnum.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Objects/Weapons/Guns/Pistols/derringer.rsi
+    layers:
+    - state: icon
+      map: [ "enum.GunVisualLayers.Base" ]
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: AmmoCounter
+  - type: Gun
+    selectedMode: SemiAuto
+    fireRate: 4
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: UseDelay
+    delay: 0.66
+  - type: ContainerContainer
+    containers:
+      revolver-ammo: !type:Container
+  - type: RevolverAmmoProvider
+    whitelist:
+      tags:
+      - CartridgeMagnum22
+    proto: CartridgeMagnum22
+    capacity: 2
+    chambers: [ True, True ]
+    ammoSlots: [ null, null ]
+    soundEject:
+      path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+  - type: StaticPrice
+    price: 500
+  - type: Multishot
+    missChance: 0.4
+    spreadMultiplier: 3
+    spreadAddition: 40
+  - type: EmitSoundOnPickup
+    sound:
+      collection: RevolversPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: RevolversDrop
+  - type: RestrictGunshotsByUserTag
+    doesntContain:
+    - Oni
+    messages:
+    - oni-cannot-shoot-guns-1
+    - oni-cannot-shoot-guns-2
+    - oni-cannot-shoot-guns-3
+  - type: EmitSoundOnLand
+    sound:
+      collection: RevolversDrop
+  - type: StealTarget
+    stealGroup: Captain
