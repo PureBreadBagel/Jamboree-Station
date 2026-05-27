@@ -155730,10 +155730,6 @@ entities:
       pos: -108.5,13.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 25117
   - uid: 23987
     components:
     - type: Transform
