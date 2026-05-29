@@ -7,7 +7,7 @@
   - type: Sprite
     sprite: _Jamboree/Objects/Weapons/Melee/Shields/solshield.rsi
     layers:
-    - states: icon
+    - state: icon
       map: [ "enum.ToggleableVisuals.Layer" ]
   - type: MeleeWeapon
     wideAnimationRotation: 65

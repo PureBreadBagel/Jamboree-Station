@@ -26,7 +26,7 @@
   recipes:
     - EnergyBoozeDispenserMachineCircuitboard
     - EnergySodaDispenserMachineCircuitboard
-
+    - ServiceEnergyChemMachineCircuitboard
 - type: latheRecipePack
   id: EnergyChemicalDispensersMedical
   recipes:
