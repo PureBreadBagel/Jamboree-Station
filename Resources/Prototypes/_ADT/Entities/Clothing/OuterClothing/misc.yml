@@ -56,7 +56,7 @@
     sprite: ADT/Clothing/Uniforms/Jumpsuit/empress_of_light.rsi
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: ClothingOuterBase
   id: ADTClothingOuterEggman
   name: rotund scientist's suit #changed name
   description: A suit modeled after a famous mad scientist. You feel a master plan forming inside of you... #changed description
