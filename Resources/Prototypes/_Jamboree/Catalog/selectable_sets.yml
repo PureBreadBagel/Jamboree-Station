@@ -5,64 +5,119 @@
 # Head of Security
 
 - type: selectableSet
-  id: EnergyRevolverSet
-  name: EG-4 Energy Revolver Kit
-  description: Includes an awesome energy revolver and sanctioned holo-cigar. Yeehaw, criminals!
+  id: EnergyRevolverKit
+  name: Wrangler Kit
+  description: |
+    - EG-04 Equalizer
+        Comes with lethal and disabler energy speedloaders that are
+        self-recharging.
+
+    - Sanctioned Holocigar
+        It's syndicate functionality has been stripped, and only serves to
+        make you look awesome. Music still included.
   sprite:
     sprite: _Goobstation/Objects/Weapons/Guns/Battery/erevolver.rsi
     state: icon
   content:
   - ClothingBeltHolsterFilledBlueshield
-  - ClothingHeadHatCowboyBountyHunter
-  - ClothingNeckMantleBH
   - HOSHoloCigar
 
-#- type: selectableSet
-#  id: HOSSniperKit
-#  name: Marksman Kit
-#  description: Includes the HB-92 "Kovalskyi" sniper rifle. Pick your targets wisely.
-#  sprite:
-#    sprite: _Goobstation/Objects/Weapons/Guns/Battery/erevolver.rsi
-#    state: icon
-#  content: # TODO - add HB-92 "Kovalskyi"
+- type: selectableSet
+  id: HOSSniperKit
+  name: Marksman Kit
+  description: |
+    - HB-92 "Kovalskyi" Marksman Laser
+        A destructive laser sniper. An inbuilt accuracy module allows you to
+        aim further without using a scope.
+
+    - Railgun Capacitor x1
+        Ammunition for the Kovalskyi. It must be recharged after 3 shots.
+  sprite:
+    sprite: _Jamboree/Objects/Weapons/Guns/Snipers/kovalskyi.rsi
+    state: icon
+  content:
+  - WeaponSniperRailgun
+  - MagazineRailgun
 
 - type: selectableSet
-  id: LawbringerSet
-  name: Lawbringer Set
-  description: Includes the lawbringer, a marvel of criminal-stopping technology.
+  id: LawbringerKit
+  name: Lawbringer Kit
+  description: |
+    - Lawbringer
+        A self-recharging energy pistol with 7 different firemodes.
   sprite:
     sprite: _Goobstation/Objects/Weapons/Guns/Battery/lawbringer.rsi
     state: icon
   content:
   - WeaponEnergyGunLawbringer
 
-#- type: selectableSet
-#  id: HOSSolKit
-#  name: Sentinel Kit
-#  description: Includes the Sol Shield and matching glove. This shield will return to you when thrown.
-#  sprite:
-#    sprite: _Goobstation/Objects/Weapons/Guns/Battery/lawbringer.rsi
-#    state: icon
-#  content: # TODO - add Sol Shield and Sol Shield Glove
+- type: selectableSet
+  id: HOSSolKit
+  name: Sentinel Kit
+  description: |
+     - Sol Shield
+        Can be thrown normally for blunt damage, or optionally toggled
+        on to do stun damage. It does not do damage when thrown by someone
+        not wearing the gloves, making it basically useless for anyone who
+        steals it.
+
+     - Sol Gloves
+        The shield will return to whoever is wearing these. They are not
+        insulated.
+
+     - Sergeant Sol Comic
+        A very rare first edition comic book.
+  sprite:
+    sprite: _Jamboree/Objects/Weapons/Melee/Shields/solshield.rsi
+    state: icon
+  content:
+  - SolShield
+  - ClothingHandsGlovesSol
+  - SpawnSolComicRandom
 
 - type: selectableSet
-  id: NonlethalLauncherSet
-  name: GL-06 Riot Grenade Launcher Set
-  description: Includes a GL-06 grenade launcher and 40mm flash and baton shells to supply it. An expert at crowd dispersion.
+  id: NonlethalLauncherKit
+  name: Controller Kit
+  description: |
+    - GL-06 Riot Grenade Launcher
+        Will only load one 40mm shell at a time, but is very effective. Aim carefully.
+
+    - 40mm Baton Grenades x4
+        Baton grenades will deal 80 stamina damage on initial impact,
+        and 50 more over a short period after.
+
+    - 40mm Flash Grenades x6
+        Flash grenades have the same functionality as a flashbang,
+        but much more potent.
   sprite:
     sprite: _Goobstation/Objects/Weapons/Guns/Launchers/riotlauncher.rsi
     state: base
   content:
   - WeaponLauncherNonLethal
-  - BoxGrenadesFlash
-  - BoxGrenadesBaton
+  - GrenadeBaton
+  - GrenadeBaton
+  - GrenadeBaton
+  - GrenadeBaton
+  - GrenadeFlash
+  - GrenadeFlash
+  - GrenadeFlash
+  - GrenadeFlash
+  - GrenadeFlash
+  - GrenadeFlash
 
 # Warden
 
 - type: selectableSet
-  id: WardenClassicSet
+  id: WardenClassicKit
   name: Classic Kit
-  description: Contains the energy shotgun and krav maga gloves.
+  description: |
+     - Energy Shotgun
+        Can switch firemodes to lethal or disabler. Does not
+        self-recharge.
+
+     - Krav Maga Gloves
+        Provides the wearer with Krav Maga, a powerful martial
+        art.
   sprite:
     sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
     state: icon
@@ -71,9 +126,16 @@
   - ClothingHandsGlovesKravMaga
 
 - type: selectableSet
-  id: MultiphaseSet
+  id: MultiphaseKit
   name: Dispatcher Kit
-  description: Includes a powerful energy pistol with three firemodes and a portable camera tablet.
+  description: |
+     - X-01 Multiphase
+        Can change between ion, lethal, and disabler bolts. Does not
+        self-recharge, but has a high capacity.
+
+     - Camera Tablet
+        View cameras from anywhere on the station! Definitely not a
+        camera bug with extra plastic on it.
   sprite:
     sprite: _DV/Objects/Weapons/Guns/Battery/multiphase_energygun.rsi
     state: icon
@@ -84,7 +146,18 @@
 - type: selectableSet
   id: WardenGuardKit
   name: Guardsman Kit
-  description: Contains a unique halberd and set of plate armor.
+  description: |
+    - Warden's Halberd
+       It's a solid melee weapon, but also comes with the ability to
+       swing in a wide area infront of you, knocking down anyone
+       within range.
+
+    - Warden's Plate Armor
+       Repurposed plate armor that used to sit on display. It's not
+       space-proofed.
+
+    - Warden's Plate Helmet
+       Good luck seeing through this. It's not space proof.
   sprite:
     sprite: _Jamboree/Objects/Weapons/Melee/wardenhalberd.rsi
     state: icon
@@ -93,25 +166,45 @@
   - ClothingHeadHatWardenArmor
   - ClothingOuterArmorWardenGuard
 
-#- type: selectableSet
-#  id: WardenArmorKit
-#  name: Firepower Kit
-#  description: Includes a versatile and powerful suit of armor capable of defeating your foes.
-#  sprite:
-#    sprite: _DV/Objects/Weapons/Guns/Battery/multiphase_energygun.rsi
-#    state: icon
-#  content: # TODO - add firepower armor
+- type: selectableSet
+  id: WardenArmorKit
+  name: Firepower Kit
+  description: |
+    - Firepower Mk.6 Armor
+       Once toggled, the gauntlets can toggle from lethal and disabler modes.
+       The helmet has a MIDI player. The suit is also capable of flight.
+
+    - Screwdriver
+       Use this to remove the power cell in the suit.
+  sprite:
+    sprite: _Jamboree/Clothing/OuterClothing/Modsuits/firepower.rsi
+    state: control
+  content:
+  - ClothingModsuitFirepower
+  - Screwdriver
 
 # Research Director
 
 - type: selectableSet
   id: RDResonanceKit
   name: Resonance Kit
-  description: Includes a handheld teleporter and physics guns.
+  description: |
+     - Hand Teleporter
+        Use to place portals that can be moved between.
+
+     - Tether Gun
+        Moves objects slowly and accurately.
+
+     - Force Gun
+        Throws objects violently with no regard for life.
+
+     - High Capacity Power Cells x2
+        Batteries intended for use in the physics guns. Maybe
+        microwave them.
   sprite:
     sprite: Objects/Devices/hand_teleporter.rsi
     state: icon
-  content: # TODO - merge tether and force guns for a special RD one
+  content:
   - HandTeleporter
   - WeaponTetherGun
   - WeaponForceGun
@@ -121,7 +214,15 @@
 - type: selectableSet
   id: RDHologramKit
   name: Holographics Kit
-  description: Includes a gemini projector and special forcefield projector.
+  description: |
+     - AX-32 "Gemini" Holoprojector Rig
+        When equipped to the belt slot, will form a holographic
+        clone of you that you can boss around.
+
+     - RD's Field Projector
+        It's an overtuned forcefield projector. It will make
+        more powerful forcefields that can take a beating,
+        but will not last as long.
   sprite:
     sprite: _Jamboree/Structures/Holo/RDfield.rsi
     state: icon
@@ -129,19 +230,41 @@
   - ClothingBeltGeminiHoloProjector
   - RDHoloprojectorField
 
-#- type: selectableSet
-#  id: RDRenterKit
-#  name: Renter's Kit
-#  description: Includes a briefcase that functions as a pocket dimension.
-#  sprite:
-#    sprite: Objects/Storage/Briefcases/briefcase_brown.rsi
-#    state: icon
-#  content: # TODO - add pocket dimension briefcase
+- type: selectableSet
+  id: RDRenterKit
+  name: Dimension Shifter Kit
+  description: |
+     - Renter's Briefcase
+        When opened, will open a portal to a pocket
+        dimension. Bring a jacket, it may be cold outside.
+
+     - Extradimensional Orange
+        Travelling between dimensions can be very taxing
+        on the body! Make sure you stay fed.
+  sprite:
+    sprite: Objects/Storage/Briefcases/briefcase_brown.rsi
+    state: icon
+  content:
+  - BriefcaseRenter
+  - FoodExtradimensionalOrange
 
 - type: selectableSet
   id: RDAnomKit
-  name: Anomaly Hunter Set
-  description: Includes a C.H.I.M.P Handcannon, turbo recharger, special gorilla gauntlet, and anomaly scanner.
+  name: Anomaly Hunter Kit
+  description: |
+     - C.H.I.M.P Handcannon
+        A handheld A.P.E. Needs to be recharged manually.
+
+     - Anomaly Scanner
+        RD, you really should know what this does.
+
+     - Turbo Recharger Circuitboard
+        Intended for use with the C.H.I.M.P. Needs to be
+        manually constructed.
+
+     - G.O.R.I.L.L.A Gauntlet Mk2
+        A G.O.R.I.L.L.A Gauntlet fitted to sit on the hand.
+        It still needs anomaly cores to launch things.
   sprite:
     sprite: _Jamboree/Objects/Weapons/Melee/gorillamk2.rsi
     state: icon
@@ -167,25 +290,43 @@
 #  - HydroponicsTrayFlatpack
 
 - type: selectableSet
-  id: HOPMusicianSet
-  name: HOP Musician kit
-  description: Includes some instruments, including a super synth, and a VERY nice coat, that is DEFINITELY authentic.
+  id: HOPMusicianKit
+  name: Performer Kit
+  description: |
+     - MusicPen™
+        It's a pocket-sized supersynth, for your
+        stealthy music operations.
+
+     - Super Synthesizer
+        The ultimate instrument. Play ANYTHING!
   sprite:
     sprite: Objects/Fun/Instruments/h_synthesizer.rsi
     state: icon
   content:
-  - ClothingOuterCoatMusicianFurCoat
-  - SaxophoneInstrument
-  - TrumpetInstrument
-  - ViolinInstrument
-#  - SynthesizerInstrument # cmd selector fixes
+  - MusicPen
   - SuperSynthesizerInstrument # cmd selector fixes
-  - HarmonicaInstrument
 
 - type: selectableSet
   id: HOPBureaucratKit
   name: Bureaucrat Kit
-  description: Includes some paper supplies and a portable handheld holopad.
+  description: |
+     - Brown Briefcase
+        Holding this increases your credibility by almost
+        32%.
+
+     - Folders x2
+        Put paper in it. Go crazy.
+
+     - Handheld Holopad
+        It's a handheld holopad. Wow. When you pick up
+        a call, the hologram will be placed on the ground
+        near you.
+
+     - Approved Stamp
+        Yes!
+
+     - Denied Stamp
+        No!
   sprite:
     sprite: _Jamboree/Objects/Devices/handheldholopad.rsi
     state: icon
@@ -198,23 +339,39 @@
   - RubberStampDenied
 
 - type: selectableSet
-  id: HOPKitchenSet
+  id: HOPKitchenKit
   name: Restauranteer Kit
-  description: Includes some kitchen supplies and a very nice frying pan.
+  description: |
+     - Chef's Hat
+        Try putting a mouse in it and wearing it.
+
+     - Fighting Pan
+        On top of being a frying pan, it can be thrown
+        and will return to you.
   sprite:
     sprite: _Jamboree/Objects/Weapons/Melee/fryingpan.rsi
     state: icon
   content:
   - ClothingHeadHatChef
   - FryingPan
-  - DrinkShaker
-  - CustomDrinkJug
-  - RagItem
 
 - type: selectableSet
-  id: HOPIanSet
-  name: Ian Lover Set
-  description: Contains everything an aspiring HOP needs to worship the almighty Ian, including an Ian pinpointer.
+  id: HOPIanKit
+  name: Ian Lover Kit
+  description: |
+     - Ian Suit
+        I hope this isn't made of real Ian.
+
+     - Ian Pinpointer
+        Will automatically target your beloved corgi. Don't let
+        it fall into the wrong hands!
+
+     - Ian Toy
+        Squeak!
+
+     - Ian Bedsheet
+        Ever regret going to sleep because you have to
+        stop looking at Ian? No more!
   sprite:
     sprite: Mobs/Pets/corgi.rsi
     state: ian
@@ -225,9 +382,47 @@
   - BedsheetIan
 
 - type: selectableSet
-  id: HOPClownSet
-  name: Chicannery Kit
-  description: All the necessary clowning gear. This unfortunately does not relieve you of your duties.
+  id: HOPReligionKit
+  name: Priest Kit
+  description: |
+     - Dummy's Guide to the Divine
+        A single use book that will teach you
+        the basics of chaplainery, like worship
+        and even enchantment!
+
+     - Chaplain Stole
+        A scar- Ahem. STOLE. A stole that symbolizes
+        priestly authority.
+
+     - Bluespace Scripture Beacon
+        Choose which religion you wish to preach from
+        a variety of choices.
+  sprite:
+    sprite: _Jamboree/Objects/Misc/divingeguide.rsi
+    state: icon
+  content:
+  - DivineGuide
+  - ClothingNeckStoleChaplain
+  - ChaplainUndeterminedBible
+
+- type: selectableSet
+  id: HOPClownKit
+  name: Chicanery Kit
+  description: |
+     - Clown Mask
+        Put it on. Take it off. Be funny.
+
+     - Clown Shoes
+        It might take you a bit to get used
+        to walking in these.
+
+     - Push Horn
+        Will push people around you when honked. You
+        are liable for any damages caused by this.
+
+     - Banana Cream Pies x3
+        Use by applying to target's face with
+        firm force.
   sprite:
     sprite: Clothing/Mask/clown.rsi
     state: icon
@@ -244,7 +439,14 @@
 - type: selectableSet
   id: CERCDKit
   name: Builder's Kit
-  description: Includes an experimental RCD and RPD that recharge over time.
+  description: |
+     - Experimental RCD
+        Places things like walls, windows, and tiles. Recharges
+        automatically.
+
+     - Experimental RPD
+        Places things like pipes, radiators, and connector ports.
+        Recharges automatically.
   sprite:
     sprite: Objects/Tools/rcd.rsi
     state: icon
@@ -255,7 +457,28 @@
 - type: selectableSet
   id: CENailgunKit
   name: Tider Defense Kit
-  description: Includes an "industrial" nailgun, modified sledgehammer, and an armored hardhat to fend off the inevitable hoards of assistants.
+  description: |
+     - Industrial Nailgun
+        It's literally a Mk58 with the ammunition
+        switched out for nails. Don't tell security.
+
+     - Nailgun Magazine
+        For insertion into nailgun.
+
+     - Nail Box
+        Any damage to bodily function caused by
+        ingestion of nails is not the fault of
+        Nanotrasen, as proven in Michael McEatNail
+        Vs. Nanotrasen, 2563.
+
+     - Armored Hardhat
+        A hardhat with more robust protection
+        than one of those tacky orange ones.
+
+     - Modified Sledgehammer
+        It's a sledgehammer armed with a device
+        that will send things you hit flying
+        a short distance.
   sprite:
     sprite: _Jamboree/Objects/Weapons/Guns/Nailgun/CEnailgun.rsi
     state: icon
@@ -281,7 +504,15 @@
 - type: selectableSet
   id: CEPowerKit
   name: Electrician Kit
-  description: Includes a portable microgenerator and antique power cell.
+  description: |
+     - Antique Power Cell
+        It's a microreactor power cell but older
+        and more cool looking.
+
+     - Micro-Fission Generator
+        A small generator that can be freely picked
+        up and moved. Provides 20kW of power to MV
+        cables.
   sprite:
     sprite: Objects/Power/power_cells.rsi
     state: antique
@@ -292,14 +523,26 @@
 - type: selectableSet
   id: CESurvivalKit
   name: Survivalist Kit
-  description: Includes a spanish army knife and MRE fabricator.
+  description: |
+     - Spanish Army Knife
+        Will act as all the basic tools, combined
+        into one.
+
+     - M.R.E.
+        Nutribricks may serve as a suitable substitute
+        for construction bricks if left out of packaging
+        for too long.
+
+     - M.R.E Fabricator Circuitboard
+        Use biomass to make various M.R.E meals. Must be
+        constructed manually.
   sprite:
     sprite: Objects/Tools/debug.rsi
     state: icon
   content:
   - ToolDebug
   - BoxMRE
-  - MREFabMachineBoard # TODO: make MREFab sprite
+  - MREFabMachineBoard
 
 #- type: selectableSet
 #  id: CEAtmosKit
@@ -315,7 +558,17 @@
 - type: selectableSet
   id: CMOInjectionKit
   name: Injection Kit
-  description: Includes a hypospray and syringe gun that can administer medicine very quickly. This is the choice of most CMOs.
+  description: |
+     - Hypospray
+        Will apply medicine to a target much quicker
+        than a syringe.
+
+     - Rapid Syringe Gun
+        It's a syringe gun, but rapid. And more expensive.
+
+     - Pax Syringe Box
+        For use in the rapid syringe gun. Pax will
+        prevent anyone injected from attacking for a time.
   sprite:
     sprite: Objects/Specific/Medical/hypospray.rsi
     state: hypo
@@ -342,7 +595,19 @@
 - type: selectableSet
   id: CMOReviveKit
   name: Resuscitation Kit
-  description: Includes the CMO's specialty defibrillator gloves and some resuscitation and preservation supplies.
+  description: |
+     - Embalming Fluid Bottle
+        A bottle of formaldehyde. Will repel wraiths and also
+        prevent bodies from rotting.
+
+     - Epinepherine Bottles x2
+        Inject a critical person with epinephrine
+        and watch them go.
+
+     - CMO's Defribrillator Gloves
+        Can be worn on the hands, and will act as a
+        defibrillator even while worn. It will not
+        run out of charge.
   sprite:
     sprite: _Jamboree/Clothing/Hands/Gloves/defibgloves.rsi
     state: icon
@@ -350,7 +615,7 @@
   - ChemistryBottleFormaldehyde
   - ChemistryBottleEpinephrine
   - ChemistryBottleEpinephrine
-  - ClothingHandsGlovesCMODefib # TODO: make it able to defib while being equipped
+  - ClothingHandsGlovesCMODefib
 
 #- type: selectableSet
 #  id: CMOMindKit
@@ -364,9 +629,20 @@
 - type: selectableSet
   id: CMODoktorKit
   name: Doktor Kit
-  description: Includes a medigun and backpack to roleplay a certainly mentally stable medic.
+  description: |
+     - CMO's Medigun Backpack
+        This is used to store the beam gun, and
+        will recharge it at 0.25kW. Can be worn
+        on the back or backpack slot.
+
+     - CMO's Medical Beam Gun
+        It is a bit weaker than central command
+        issued beam guns, and will need to be
+        recharged. At the end of the day, it is
+        still infinite healing. It cannot heal
+        silicons.
   sprite:
-    sprite: _Jamboree/Objects/Specific/Medical/cmomedigun.rsi
+    sprite: _Jamboree/Objects/Devices/cmomedigun.rsi
     state: icon
   content:
   - CMOMedigunBackpack
@@ -376,19 +652,49 @@
 - type: selectableSet
   id: QMMafiaKit
   name: Mafiosa Kit
-  description: Includes some knuckledusters to "encourage" trespassers to leave.
+  description: |
+     - Quartermaster's Engraved Knuckledusters
+        Is this made of real gold? I dunno. Does
+        it punch good? Hell yeah.
+
+     - Quarter Cannon
+        A modified SMG that shoots quarters. It's
+        not very effective but will get the job done.
+
+     - Quarter Box
+        A box of quarters. Wow.
+
+     - Quarter Magazine
+        A magazine of quarters. Wow.
   sprite:
     sprite: _Goobstation/Clothing/Hands/Gloves/knuckleduster.rsi
     state: goldenknuckleduster
-  content: # TODO - add quarter cannon
+  content:
   - ClothingHandsKnuckleDustersQM
-  - CigarGoldCase
-  - FlippoEngravedLighter
+  - WeaponRifleQuarterCannon
+  - MagazineBoxQuarter
+  - MagazineQuarter
 
 - type: selectableSet
   id: QMGamblingKit
   name: Gambler's Kit
-  description: Includes a high roller slot machine, slot machine, claw machine, and coin flipper. Just one more spin..
+  description: |
+     - Claw Machine Flatpack
+        The claw machine is free to use, and has
+        a chance to reward you with a plushie!
+
+     - Slot Machine Flatpack
+        Costs money, and will reward you if you
+        win.
+
+     - Coin Flipper Flatpack
+        Costs money, and will double whatever you
+        put in if you win. If you lose, you lose
+        everything.
+
+     - High Roller Slot Machine Flatpack
+        It costs 100k to spin. You DO have a chance
+        to win 1 million, though.
   sprite:
     sprite: _Goobstation/Structures/Machines/slotmachines/slotmachine.rsi
     state: slotmachine
@@ -401,7 +707,24 @@
 - type: selectableSet
   id: QMShittleKit
   name: Spare Shuttle Parts Kit
-  description: Includes 4 thrusters, a gyroscope, a shuttle console, and means to set up power. Shittles are not covered by nanotrasen insurance.
+  description: |
+     - Thruster Flatpacks x4
+        Makes the shuttle move. Duh.
+
+     - Shuttle Console Circuitboard
+        It's needed to pilot the shuttle. Mind-piloting
+        technology coming soon.
+
+     - Gyroscope Flatpack
+        The gyroscope will let your shuttle turn safely.
+
+     - Wallmount Generator Electronics
+        Provides a small amount of power. Not bad for
+        the amount of space it takes up.
+
+     - Wallmount Substation Electronics
+        A substation, for the wall. Technology has gone
+        too far.
   sprite:
     sprite: Structures/Shuttles/thruster.rsi
     state: base
@@ -427,21 +750,46 @@
 - type: selectableSet
   id: QMTraderKit
   name: Wallstreet Kit
-  description: Includes a stock trading cartridge and cool hardsuit.
+  description: |
+     - Stock Broker Hardsuit
+        Don't tell anyone it's a painted
+        luxury mining hardsuit. They'll judge
+        you.
+
+     - Oxygen Tank
+        Might need this.
+
+     - Nitrogen Tank
+        Might need this too.
+
+     - StockTrading Cartridge
+        Insert into PDA to get the StockTrading
+        app! It's gambling for grown-ups.
   sprite:
     sprite: _DV/Objects/Devices/cartridge.rsi
     state: cart-stonk
   content:
   - ClothingOuterHardsuitBroker
   - OxygenTankFilled
+  - NitrogenTankFilled
   - StockTradingCartridge
 
 # Captain
 
 - type: selectableSet
-  id: AntiqueLaserSet
-  name: Classic Set
-  description: Includes an antique laser pistol and fancy sabre. The classic.
+  id: AntiqueLaserKit
+  name: Classic Kit
+  description: |
+     - Antique Laser Pistol
+        A self recharging laser pistol. As good
+        as it gets.
+
+     - Captain Sabre Sheath
+        Insert sabre here.
+
+     - Captain Sabre
+        It's pretty sharp and lightweight. Hope
+        you like getting your hands dirty.
   sprite:
     sprite: Objects/Weapons/Guns/Battery/antiquelasergun.rsi
     state: icon
@@ -450,23 +798,54 @@
   - ClothingBeltSheathFilled
 
 - type: selectableSet
-  id: CaneBladeSet
-  name: Diplomat Set
-  description: Includes a disguised cane blade and some lollypops to boost negotiations.
+  id: CapDiplomatKit
+  name: Diplomat Kit
+  description: |
+     - Captain's Cane Blade
+        A disguised cane that holds a sabre. It's a bit
+        duller than the captain's normal sabre.
+
+     - Captain Lollypops x2
+        Give to the hostage holder to bolster negotiations.
+        Yummy-licious!
+
+     - Nanotrasen Stoges Packet
+        These cigarettes have medication that releases into
+        your system when smoked. I guess Smoking IS good
+        for you.
+
+     - Derringer
+        A very small, highly concealable pistol that
+        can only hold two rounds at a time. It fires
+        .22 magnum.
+
+     - .22 Magnum Box
+        14 rounds for the derringer.
   sprite:
-    sprite: Objects/Weapons/Melee/cane_blade.rsi
+    sprite: _Jamboree/Objects/Weapons/Guns/Pistols/derringer.rsi
     state: icon
   content:
   - CaneSheathFilledCaptain
   - FoodSnackLollypopWrappedCaptain
   - FoodSnackLollypopWrappedCaptain
-  - FoodSnackLollypopWrappedCaptain
-  - FoodSnackLollypopWrappedCaptain
+  - WeaponPistolDerringer
+  - MagazineBoxMagnum22
+  - CigPackBlueshield
 
 - type: selectableSet
-  id: CapPirateSet
-  name: Buccaneer Set
-  description: Includes an energy cutlass and flintlock pistol. YARRGHHH!
+  id: CapPirateKit
+  name: Buccaneer Kit
+  description: |
+     - Nanotrasen Energy Cutlass
+        A "borrowed" energy weapon from some
+        pirates that got cocky. Don't lose it.
+
+     - Nanotrasen Pirate Revolver
+        It takes .45 magnum. Best used when running and
+        screaming.
+
+     - .45 Magnum Ammunition Box
+        12 rounds for the pirate revolver.
   sprite:
     sprite: Objects/Weapons/Guns/Revolvers/pirate_revolver.rsi
     state: icon
@@ -474,13 +853,21 @@
   - EnergyCutlassNT
   - WeaponRevolverPirateNT
   - MagazineBoxMagnum
-  - ClothingHeadHatCaptainTricorne
-  - ClothingEyesGlassesCaptaineyepatch
 
 - type: selectableSet
-  id: CapLordSet
-  name: Lordship Set
-  description: Includes an ornate set of plate armor and zweihander.
+  id: CapLordKit
+  name: Lordship Kit
+  description: |
+     - Captain's Zweihander
+        A large plasteel blade. It hits very hard,
+        but is heavy and slow to swing.
+
+     - Captain's Plate Armor
+        A gold adorned set of plate armor. Quite
+        protective, but not space-proof.
+
+     - Captain's Plate Helmet
+        It's lined with velvet padding!
   sprite:
     sprite: _Jamboree/Objects/Weapons/Melee/captainzweihander.rsi
     state: icon
@@ -489,14 +876,24 @@
   - ClothingOuterArmorCaptainPlate
   - ClothingHeadHatCaptainPlate
 
-#- type: selectableSet
-#  id: CapSupportSet
-#  name: Station Leader Set
-#  description: Includes a flag that can rally your crew, healing them in the process.
-#  sprite:
-#    sprite: Objects/Weapons/Melee/cane.rsi
-#    state: cane
-#  content: # TODO - make a flag and give a new component, similar to healnearonpray but captain specific
+- type: selectableSet
+  id: CapSupportKit
+  name: Station Leader Kit
+  description: |
+     - Captain's Battle Standard
+        Use to heal and rally crew members around
+        you. Rallied crew will move slightly faster
+        for a short duration.
+
+     - Retro Laser Blaster
+        Pew! Pew! Pew! It's not that effective, but
+        it's better than nothing.
+  sprite:
+    sprite: _Jamboree/Objects/Weapons/Melee/captainflag.rsi
+    state: icon
+  content:
+  - CaptainFlag
+  - WeaponLaserGun
 
 #- type: selectableSet
 #  id: CapBerserkerSet

@@ -352,10 +352,25 @@
   - MedkitCombat # Goobstation - remove medkitcombat from static to research
   - VialBluespace # goob edit - bluespace vials
   - EnergyChemDispenserMachineCircuitboard # Jamboree - add energy chem dispenser medical circuitboard to research
-  - EnergyBoozeDispenserMachineCircuitboard # Jamboree - add energy booze dispenser service circuitboard to research
-  - EnergySodaDispenserMachineCircuitboard # Jamboree - add energy soda dispenser service circuitboard to research
   # Goobstation R&D Console rework start
   position: 4,5
   technologyPrerequisites:
   - BiochemicalStasis
   # Goobstation R&D Console rework end
+
+- type: technology  # Goobstation
+  id: ServiceBluespaceChemistry
+  name: research-technology-service-energy-chem
+  icon:
+    sprite: Objects/Specific/Hydroponics/blue_tomato.rsi
+    state: produce
+  discipline: CivilianServices
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - ServiceEnergyChemMachineCircuitboard
+  - EnergyBoozeDispenserMachineCircuitboard # Jamboree - add energy booze dispenser service circuitboard to research
+  - EnergySodaDispenserMachineCircuitboard # Jamboree - add energy soda dispenser service circuitboard to research
+  position: -4,7
+  technologyPrerequisites:
+  - MeatManipulation

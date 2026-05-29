@@ -1,0 +1,49 @@
+- type: entity
+  id: ActionWardenHalberd
+  name: Sweep
+  description: Perform a sweeping motion, hitting and knocking down things infront of you.
+  components:
+  - type: InstantAction
+    event: !type:EventWardenHalberdAction
+  - type: Action
+    useDelay: 15
+    checkConsciousness: true
+
+- type: entity
+  id: HalberdSlash
+  name: halberd slash
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: MovementIgnoreGravity
+  - type: Sprite
+    sprite: _Jamboree/Effects/WeaponActions/wardenhalberdslash.rsi
+    layers:
+    - state: effect
+      scale: 1.5, 1.5
+      shader: unshaded
+    noRot: false
+  - type: Physics
+    bodyType: Dynamic
+    linearDamping: 1
+    angularDamping: 0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1, -0.5, 1, 0.5"
+        density: 1
+        hard: false
+        mask:
+        - BulletImpassable
+        - Opaque
+  - type: TimedDespawn
+    lifetime: 0.30
+  - type: Tag
+    tags:
+    - HideContextMenu
+  - type: WeaponActionEntity
+    knockdown: true
+    damage:
+      types:
+        Slash: 15

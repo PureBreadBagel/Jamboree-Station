@@ -53,16 +53,30 @@ public sealed partial class SharedRestrictSystem : EntitySystem
 
     private void OnAttemptGunshot(Entity<RestrictGunshotsByUserTagComponent> ent, ref ShotAttemptedEvent args)
     {
-        if(!_tagSystem.HasAllTags(args.User, ent.Comp.Contains) || _tagSystem.HasAnyTag(args.User, ent.Comp.DoesntContain))
+        if (!_tagSystem.HasAllTags(args.User, ent.Comp.Contains) || _tagSystem.HasAnyTag(args.User, ent.Comp.DoesntContain))
         {
             var time = _timing.CurTime;
 
-            if(ent.Comp.Messages.Count != 0 && time > ent.Comp.LastPopup + TimeSpan.FromSeconds(1))
+            if (ent.Comp.Messages.Count != 0 && time > ent.Comp.LastPopup + TimeSpan.FromSeconds(1))
             {
                 ent.Comp.LastPopup = time;
-                _popup.PopupClient(Loc.GetString(_random.Pick(ent.Comp.Messages)), args.User);
-            }
 
+                if (_tagSystem.HasTag(args.User, "Oni")) // Jamboree - All tags but Oni have a more generic message so this component is viable for use with other components
+                {
+                    var oniMessages = new[]
+                    {
+                        "oni-cannot-shoot-guns-1", "oni-cannot-shoot-guns-2", "oni-cannot-shoot-guns-3"
+                    };
+
+                    _popup.PopupClient(Loc.GetString(_random.Pick(oniMessages)), args.User);
+                }
+                else
+                {
+                    _popup.PopupClient(
+                        Loc.GetString(_random.Pick(ent.Comp.Messages)),
+                        args.User);
+                }
+            }
             args.Cancel();
         }
     }

@@ -132,3 +132,10 @@
     weldingDamage:
       types:
         Heat: 20
+  - type: SolutionRegeneration
+    solution: tank
+    duration: 5
+    generated:
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 10

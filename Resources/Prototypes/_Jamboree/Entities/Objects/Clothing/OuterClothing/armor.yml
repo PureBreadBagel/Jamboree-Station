@@ -84,3 +84,51 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingHeadHatHoodSubzeroHOS
+
+- type: entity
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseMagicalContraband]
+  id: ClothingOuterArmorSergeantSol
+  name: sergeant sol's raid suit
+  description: An ancient raid suit worn by Sergeant Sol. The paint has long since faded, given it is just as ancient as the hero himself.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/OuterClothing/Armor/sergeantsol.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Jamboree/Clothing/OuterClothing/Armor/sergeantsol.rsi
+  - type: Armor
+    coverage:
+    - Chest
+    - Groin
+    - Arm
+    - Hand
+    - Leg
+    - Foot
+    - Tail
+    traumaDeductions:
+      Dismemberment: 0.5
+      OrganDamage: 0.5
+      BoneDamage: 0.5
+      VeinsDamage: 0
+      NerveDamage: 0
+    modifiers:
+      coefficients:
+        Blunt: 0.05
+        Slash: 0.05
+        Piercing: 0.05
+        Heat: 0.05
+        Caustic: 0.05
+  - type: ExplosionResistance
+    damageCoefficient: 0.25
+  - type: StaminaResistance
+    damageCoefficient: 0.2
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: Appearance
+  - type: ModifyDelayedKnockdown
+    delayDelta: 3
+    knockdownTimeDelta: -3
+  - type: Item
+    size: Normal

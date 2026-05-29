@@ -1,0 +1,49 @@
+﻿- type: entity
+  parent: BriefcaseBase
+  id: BriefcaseRenter
+  name: renter's briefcase
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Objects/Devices/renterbriefcase.rsi
+    layers:
+      - state: icon
+        map: [ "base" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.BriefcaseVisuals.State:
+        base:
+          Icon: { state: icon }
+          Opening: { state: opening }
+          Open: { state: open }
+          Closing: { state: closing }
+  - type: Item
+    sprite: _Jamboree/Objects/Devices/renterbriefcase.rsi
+    size: Ginormous
+  - type: Portal
+    canTeleportToOtherMaps: true
+    randomTeleport: false
+  - type: StealTarget
+    stealGroup: RD
+  - type: CargoSellBlacklist
+  - type: RenterBriefcase
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 190
+        mask:
+        - HighImpassable
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.48,0.25,0.48"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+  - type: Physics
+    sleepingAllowed: False
+  - type: Appearance

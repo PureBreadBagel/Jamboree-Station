@@ -87,6 +87,8 @@
   id: EnergyReagentDispenserPortableBase
   abstract: true
   parent: EnergyReagentDispenserBase
+  placement:
+    mode: SnapgridCenter
   components:
   - type: Transform
     anchored: false
@@ -114,7 +116,7 @@
   - type: Sprite
     sprite: Structures/dispensers.rsi
     state: industrial-working
-    snapCardinals: true
+    snapCardinals: false
   - type: Machine
     board: EnergyChemDispenserMachineCircuitboard
   - type: GuideHelp
@@ -147,7 +149,7 @@
       TableSalt: 20
   - type: Battery
     maxCharge: 3000
-    startingCharge: 3000
+    startingCharge: 400
 
 
 
@@ -161,6 +163,7 @@
     sprite: Structures/smalldispensers.rsi
     state: booze
     drawdepth: SmallObjects
+    snapCardinals: false
   - type: Rotatable
   - type: Transform
     noRot: false
@@ -185,8 +188,8 @@
       Whiskey: 5
       Wine: 5
   - type: Battery
-    maxCharge: 2000
-    startingCharge: 2000
+    maxCharge: 2500
+    startingCharge: 100
 
 
 - type: entity
@@ -199,6 +202,7 @@
     sprite: Structures/smalldispensers.rsi
     state: soda
     drawdepth: SmallObjects
+    snapCardinals: false
   - type: Machine
     board: EnergySodaDispenserMachineCircuitboard
   - type: GuideHelp
@@ -218,6 +222,7 @@
       JuiceLime: 5
       JuiceOrange: 5
       JuiceWatermelon: 5
+      JuiceTomato: 5
       LemonLime: 5
       RootBeer: 5
       SodaWater: 5
@@ -228,5 +233,56 @@
       TonicWater: 5
       Water: 1
   - type: Battery
-    maxCharge: 2000
-    startingCharge: 2000
+    maxCharge: 2500
+    startingCharge: 100
+
+
+
+- type: entity
+  id: ServiceEnergyChemDispenser
+  parent: EnergyReagentDispenserBase
+  name: Energy food synthesizer
+  description: A bluespace food synthesizer that uses station energy to create a variety of food based reagents! Now you can create terrible food without worry and bring shame to all chefs!
+  components:
+  - type: Sprite
+    sprite: Structures/dispensers.rsi
+    state: industrial-working
+    snapCardinals: false
+  - type: Machine
+    board: ServiceEnergyChemMachineCircuitboard
+  - type: EnergyReagentDispenser
+    reagents:
+      Flour: 4
+      Cornmeal: 4
+      Rice: 4
+      Egg: 12
+      Milk: 12
+      Sugar: 5
+      Water: 1
+      # Uncommon ingredients
+      Enzyme: 30
+      Fat: 20
+      UncookedAnimalProteins: 20
+      MilkSoy: 16
+      Oats: 14
+      Vinegar: 8
+      OilOlive: 5
+      JuiceLime: 5
+      JuicePineapple: 11
+      # Condiments
+      TableSalt: 20
+      Blackpepper: 10
+      BbqSauce: 5
+      Soysauce: 4
+      Mustard: 5
+      Ketchup: 5
+      Mayo: 5
+      Hotsauce: 6
+      Syrup: 20
+      Vinaigrette: 9
+      Astrotame: 8
+      HorseradishSauce: 4
+      Cornoil: 4
+  - type: Battery
+    maxCharge: 3000
+    startingCharge: 100

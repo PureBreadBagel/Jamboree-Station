@@ -1,7 +1,7 @@
 ﻿- type: entity
   id: MREFab
   parent: [BaseLathe, BaseCommandContraband]
-  name: MRE fabricator
+  name: M.R.E fabricator
   description: Prints MREs using biomass. Nanotrasen is not responsible for any harm resulting from the ingestion of said produced MRE.
   components:
   - type: Sprite

@@ -1,8 +1,8 @@
 ﻿- type: entity
   parent: [ClothingHandsBase, BaseCommandContraband]
   id: ClothingHandsGlovesCMODefib
-  name: cmo's defibrillator gloves
-  description: Incredibly advanced medical technology, a defibrillator literally at your fingertips. You will need to remove the glove from your hand to use it.
+  name: defibrillator gloves
+  description: Incredibly advanced medical technology, a defibrillator literally at your fingertips.
   components:
   - type: Sprite
     sprite: _Jamboree/Clothing/Hands/Gloves/defibgloves.rsi
@@ -22,8 +22,35 @@
   - type: Defibrillator
     zapHeal:
       types:
-        Asphyxiation: -40
+        Asphyxiation: -80 # cmd gear tweaks 3
   - type: DoAfter
   - type: UseDelay
   - type: StealTarget # Jamboree - cmd/steal gear tweaks
     stealGroup: CMO
+  - type: DefibGloves
+    whitelist:
+      requireAll: true
+      components:
+      - MobState
+      - Respirator
+
+
+- type: entity
+  parent: [ClothingHandsBase, BaseCommandContraband]
+  id: ClothingHandsGlovesSol
+  name: sol gloves
+  description: Replicas of Sergeant Sol's gloves. Wearing these will allow the Sol Shield to return to you when thrown.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Hands/Gloves/solgloves.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/Hands/Gloves/solgloves.rsi
+  - type: Fiber
+    fiberMaterial: fibers-heroic
+  - type: FingerprintMask
+  - type: StealTarget # Jamboree - cmd/steal gear tweaks
+    stealGroup: HOS
+  - type: Tag
+    tags:
+    - SolGloves
+

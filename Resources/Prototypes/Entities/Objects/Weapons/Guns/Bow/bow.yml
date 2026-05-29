@@ -66,6 +66,13 @@
   - type: UnwieldOnShoot # Goobstation
   - type: UseDelayBlockShoot # Goobstation
   - type: UndetectableContraband #Goobstation-Contraband detector
+  - type: RestrictGunshotsByUserTag # Jamboree - firepower modsuit
+    doesntContain:
+    - FirepowerGauntletsWorn
+    messages:
+    - generic-cannot-shoot-1
+    - generic-cannot-shoot-2
+    - generic-cannot-shoot-3
 
 - type: entity
   id: BowImprovised

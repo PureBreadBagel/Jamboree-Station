@@ -10,3 +10,12 @@
   license: "CC-BY-SA-4.0"
   copyright: "Spritework by Pinkbat5"
   source: "https://github.com/Pinkbat5"
+  copyright: "Created by Carousel for Impstation"
+  source: "https://github.com/impstation/imp-station-14"
+
+- files:
+  - blink.png
+  license: "CC0-1.0"
+  copyright: "Created by Rarenth for Impstation, recolored by Bibble for Jamboree"
+  source: "https://github.com/impstation/imp-station-14"
+  source: "https://github.com/JamboreeStation/Jamboree-Station"

@@ -1,0 +1,41 @@
+﻿- type: entity
+  parent: MarkerBase
+  id: SpawnSolComicRandom
+  name: Sol Comic Spawner
+  suffix: Random Comic
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _Jamboree/Objects/Misc/Books/solcomic.rsi
+      state: volume1
+  - type: RandomSpawner
+    prototypes:
+    - BookSergeantSolComic1
+    - BookSergeantSolComic2
+
+- type: entity
+  id: BookSergeantSolComic1
+  parent: [ BaseItem, BaseCommandContraband ]
+  name: sergeant sol volume 1 comic book
+  description: A first edition sergeant sol comic book. These are VERY hard to come by. Don't let it fall into the wrong hands.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Objects/Misc/Books/solcomic.rsi
+    layers:
+    - state: volume1
+  - type: StealTarget
+    stealGroup: HOS
+
+- type: entity
+  id: BookSergeantSolComic2
+  parent: [ BaseItem, BaseCommandContraband ]
+  name: sergeant sol volume 2 comic book
+  description: A first edition sergeant sol comic book. These are VERY hard to come by. Don't let it fall into the wrong hands.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Objects/Misc/Books/solcomic.rsi
+    layers:
+    - state: volume2
+  - type: StealTarget
+    stealGroup: HOS

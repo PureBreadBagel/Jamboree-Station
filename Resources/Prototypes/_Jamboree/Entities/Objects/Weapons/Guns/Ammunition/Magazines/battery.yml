@@ -1,0 +1,22 @@
+﻿- type: entity
+  id: MagazineRailgun
+  name: "capacitor (railgun)"
+  parent: [ BaseItem, BaseCommandContraband ]
+  components:
+  - type: Item
+    size: Small
+  - type: HitscanBatteryAmmoProvider
+    proto: LaserRailgun
+    fireCost: 700
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/Guns/SMGs/typewriter.rsi
+    layers:
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Appearance
+  - type: Tag
+    tags:
+    - MagazineRailgun
+  - type: Battery
+    maxCharge: 2100
+    startingCharge: 2100

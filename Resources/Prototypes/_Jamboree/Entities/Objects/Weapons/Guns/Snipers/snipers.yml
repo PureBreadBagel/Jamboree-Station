@@ -1,0 +1,57 @@
+﻿- type: entity
+  name: HB-92 "Kovalskyi" Marksman Laser
+  parent: [BaseItem, BaseGunWieldable]
+  id: WeaponSniperRailgun
+  description: A laser railgun equipped with an advanced accuracy system, allowing for a scope-like function without a scope.
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: ["enum.GunVisualLayers.Base"]
+    sprite: _Jamboree/Objects/Weapons/Guns/Snipers/kovalskyi.rsi
+  - type: Item
+    sprite: _Jamboree/Objects/Weapons/Guns/Snipers/kovalskyi.rsi
+    size: Huge
+    shape:
+    - 0,0,6,1
+    storedRotation: 45
+  - type: Clothing
+    sprite: _Jamboree/Objects/Weapons/Guns/Snipers/kovalskyi.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 0.50
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Jamboree/Weapons/Guns/Gunshots/railgun_shot.ogg
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: StaticPrice
+    price: 5000
+  - type: StealTarget
+    stealGroup: HOS
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 4
+    pvsIncrease: 0.8
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRailgun
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        whitelist:
+          tags:
+          - MagazineRailgun

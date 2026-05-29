@@ -83,7 +83,7 @@
     ClothingHeadSailorCap: 1 #imp
     ClothingNeckSailorAscot: 1 #imp
     ClothingUniformSailorSuit: 1 #imp
-    ClothingMaskBurglar: 1 #imp
+    ClothingEyesWrestlerMaskDomino: 2 #DV, switching the suspicious criminal mask for the domino mask since it has more applicability
     ClothingUniformBurglarJumpsuit: 1 #imp
     ClothingHeadDevilHorns: 1 #imp
     ClothingNeckDevilWings: 1 #imp

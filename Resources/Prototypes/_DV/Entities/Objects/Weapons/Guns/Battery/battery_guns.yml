@@ -77,7 +77,7 @@
     - HighRiskItem
     - Sidearm
   - type: StealTarget
-    stealGroup: HOS # Jamboree - was WeaponEnergyGunMultiphase
+    stealGroup: Warden # Jamboree - was WeaponEnergyGunMultiphase
   - type: StaticPrice
     price: 750
   - type: Multishot

@@ -321,23 +321,24 @@
     - SpellbookFullRandom
     - SpellbookSemiRandom
 
-- type: listing
-  id: SpellbookSmite
-  productUpgradeId: SpellbookSmiteUpgrade
-  name: spellbook-smite-name
-  description: spellbook-smite-desc
-  productAction: ActionSmite
-  cost:
-    WizCoin: 2
-  categories:
-  - SpellbookOffensive
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-  - !type:BuyBeforeCondition
-    blacklist:
-    - SpellbookFullRandom
-    - SpellbookSemiRandom
+# - type: listing
+#  id: SpellbookSmite
+#  productUpgradeId: SpellbookSmiteUpgrade
+#  name: spellbook-smite-name
+#  description: spellbook-smite-desc
+#  productAction: ActionSmite
+#  cost:
+#    WizCoin: 2
+#  categories:
+#  - SpellbookOffensive
+#  conditions:
+#  - !type:ListingLimitedStockCondition
+#    stock: 1
+#  - !type:BuyBeforeCondition
+#    blacklist:
+#    - SpellbookFullRandom
+#    - SpellbookSemiRandom
+# Jamboree, No more smite
 
 # Defensive
 - type: listing

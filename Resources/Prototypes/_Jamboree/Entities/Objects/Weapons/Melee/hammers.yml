@@ -1,5 +1,5 @@
 ﻿- type: entity
-  name: chief engineer's sledgehammer
+  name: modified sledgehammer
   parent: [ BaseItem, BaseCommandContraband ]
   id: CESledgehammer
   description: There is a small device on the side that significantly increases the sledgehammer's impact force. It will send things it hits flying.

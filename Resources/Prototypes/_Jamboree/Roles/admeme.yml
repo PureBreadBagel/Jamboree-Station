@@ -1,0 +1,22 @@
+﻿- type: startingGear
+  id: SergeantSolGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSergeantSol
+    outerClothing: ClothingOuterArmorSergeantSol
+    shoes: ClothingShoesBootsJackFilled
+    head: ClothingHeadHelmetSergeantSol
+    eyes: ClothingEyesThermalVisionGogglesNukie
+    id: AgentIDCard
+    ears: ClothingHeadsetAltSecurity
+    gloves: ClothingHandsGlovesSol
+    back: ClothingBackpackSatchel
+    belt: ClothingBeltAssaultFilled
+  inhand:
+  - SolShield
+  storage:
+    back:
+    - MedkitCombatFilled
+    - BookSergeantSolComic1
+    - BookSergeantSolComic2
+    - DeathAcidifierImplanter
+    - ScrollTeleportApprentice

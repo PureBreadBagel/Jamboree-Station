@@ -1,0 +1,102 @@
+﻿- type: entity
+  name: sol shield
+  parent: [ BaseItem, BaseCommandContraband ]
+  id: SolShield
+  description: A replica of Sergeant Sol's shield. It functions as a stun baton, and will return to whomever is wearing the gloves when thrown.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Objects/Weapons/Melee/Shields/solshield.rsi
+    layers:
+    - states: icon
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: MeleeWeapon
+    wideAnimationRotation: 65
+    attackRate: 1.25
+    damage:
+      types:
+        Blunt: 10
+    bluntStaminaDamageFactor: 0.0
+    soundHit:
+      path: /Audio/Weapons/smash.ogg
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Blunt: 0
+  - type: Item
+    size: Large
+    heldPrefix: off
+  - type: DisarmMalus
+  - type: Execution
+  - type: StealTarget # Jamboree - cmd/steal gear tweaks
+    stealGroup: HOS
+  - type: SolShield
+  - type: Blocking
+    passiveBlockModifier:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+    activeBlockModifier:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+      flatReductions:
+        Blunt: 1
+        Slash: 1
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      collection: sparks
+      params:
+        variation: 0.250
+    soundDeactivate:
+      collection: sparks
+      params:
+        variation: 0.250
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+      params:
+        variation: 0.250
+  - type: ComponentToggler
+    components:
+    - type: StaminaDamageOnCollide
+      damage: 20
+  - type: UseDelay
+    delays:
+      stunbaton:
+        length: 2.5
+  - type: ItemTogglePrefix
+    prefixOn: on
+    prefixOff: off
+  - type: StaminaDamageOnHit
+    damage: 15
+    overtime: 30
+    lightAttackDamageMultiplier: 4
+    lightAttackOvertimeDamageMultiplier: 0
+    sound: /Audio/Weapons/egloves.ogg
+  - type: DelayedKnockdownOnHit
+    useDelay: stunbaton
+  - type: UseDelayBlockMelee
+    delays:
+    - stunbaton
+  - type: LandAtCursor
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { state: shield-active }
+          False: { state: icon }
+  - type: Appearance
+  - type: Stunbaton
+    energyPerUse: 50
+    lightAttackEnergyMultiplier: 2
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1
+    canEmp: true
