@@ -36,5 +36,7 @@
   - type: EntityTableContainerFill # Jamboree - Containerfill is the new storagefill.
     containers:
       entity_storage:
-        - id: MobXenobioSlime
-          amount: 1
+        !type:GroupSelector
+        children:
+          - id: MobXenobioSlime
+            weight: 1
