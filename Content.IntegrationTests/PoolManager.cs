@@ -282,7 +282,20 @@ public static partial class PoolManager
         ITestContextLike testContext)
     {
         if (!_initialized)
-            throw new InvalidOperationException($"Pool manager has not been initialized");
+        {
+            lock (PairLock) // Jamboree, but we don't want multiple tests trying to initialize at the same time if they all start at once for some reason.
+            {
+                if (!_initialized)
+                {
+                    if (_dead)
+                    {
+                        throw new InvalidOperationException("Pool manager has been shut down");
+                    }
+
+                    Startup();
+                }
+            }
+        }
 
         // Trust issues with the AsyncLocal that backs this.
         var testOut = testContext.Out;
