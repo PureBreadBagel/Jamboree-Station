@@ -99,6 +99,20 @@
       forceEnableEmergencyLights: true
       emergencyLightColor: DodgerBlue
       shuttleTime: 600
+    red:
+      announcement: alert-level-red-announcement
+      sound: /Audio/Misc/redalert.ogg
+      color: Red
+      emergencyLightColor: Red
+      forceEnableEmergencyLights: true
+      shuttleTime: 600 #No reduction in time as we don't have swiping for red alert like in /tg/. Shuttle times are intended to create friction, so having a way to brainlessly bypass that would be dumb.
+    amber:
+      announcement: alert-level-amber-announcement
+      sound: /Audio/_Goobstation/Announcements/amberalarm.ogg
+      color: "#8A3324"
+      emergencyLightColor: "#8A3324"
+      forceEnableEmergencyLights: true
+      shuttleTime: 600
     violet:
       announcement: alert-level-violet-announcement
       sound: /Audio/Misc/notice1.ogg
@@ -113,13 +127,13 @@
       emergencyLightColor: Goldenrod
       forceEnableEmergencyLights: true
       shuttleTime: 600
-    red:
-      announcement: alert-level-red-announcement
-      sound: /Audio/Misc/redalert.ogg
-      color: Red
-      emergencyLightColor: Red
+    cyan: # Funky
+      announcement: alert-level-cyan-announcement
+      sound: /Audio/_Funkystation/Misc/cyan.ogg
+      color: Cyan
+      emergencyLightColor: Cyan
       forceEnableEmergencyLights: true
-      shuttleTime: 600 #No reduction in time as we don't have swiping for red alert like in /tg/. Shuttle times are intended to create friction, so having a way to brainlessly bypass that would be dumb.
+      shuttleTime: 600
     gamma:
       announcement: alert-level-gamma-announcement
       selectable: false
@@ -183,12 +197,5 @@
         path: /Audio/Items/bikehorn.ogg
       color: Magenta
       emergencyLightColor: Magenta
-      forceEnableEmergencyLights: true
-      shuttleTime: 600
-    amber:
-      announcement: alert-level-amber-announcement
-      sound: /Audio/_Goobstation/Announcements/amberalarm.ogg
-      color: "#8A3324"
-      emergencyLightColor: "#8A3324"
       forceEnableEmergencyLights: true
       shuttleTime: 600
