@@ -148,7 +148,7 @@ public sealed class ContainerFillSystem : EntitySystem
             var spawns = _entityTable.GetSpawns(table);
             foreach (var proto in spawns)
             {
-                var spawn = Spawn(proto, coords);
+                var spawn = SpawnAtPosition(proto, coords);
                 if (!_containerSystem.Insert(spawn, container, containerXform: xform))
                 {
                     var alreadyContained = container.ContainedEntities.Count > 0 ? string.Join("\n", container.ContainedEntities.Select(e => $"\t - {ToPrettyString(e)}")) : "< empty >";
