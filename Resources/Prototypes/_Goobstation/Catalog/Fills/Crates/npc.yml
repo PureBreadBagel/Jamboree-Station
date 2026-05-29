@@ -35,6 +35,6 @@
   components:
   - type: EntityTableContainerFill # Jamboree - Containerfill is the new storagefill.
     containers:
-      storage:
+      entity_storage:
         - id: MobXenobioSlime
           amount: 1
