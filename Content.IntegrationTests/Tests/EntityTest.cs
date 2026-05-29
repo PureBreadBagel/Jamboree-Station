@@ -432,8 +432,7 @@ namespace Content.IntegrationTests.Tests
 
             var coords = new MapCoordinates(Vector2.Zero, mapId);
 
-            await server.WaitIdleAsync();
-            await client.WaitIdleAsync();
+            await pair.RunTicksSync(3);
 
             // We consider only non-audio entities, as some entities will just play sounds when they spawn.
             int Count(IEntityManager ent) =>  ent.EntityCount - ent.Count<AudioComponent>();
@@ -449,9 +448,7 @@ namespace Content.IntegrationTests.Tests
                     var clientEntities = new HashSet<EntityUid>(Entities(client.EntMan));
                     EntityUid uid = default;
                     await server.WaitPost(() => uid = server.EntMan.SpawnEntity(protoId, coords));
-
-                    await server.WaitIdleAsync();
-                    await client.WaitIdleAsync();
+                    await pair.RunTicksSync(3);
 
                     // If the entity deleted itself, check that it didn't spawn other entities
                     if (!server.EntMan.EntityExists(uid))
@@ -474,8 +471,7 @@ namespace Content.IntegrationTests.Tests
                         BuildDiffString(clientEntities, Entities(client.EntMan), client.EntMan));
 
                     await server.WaitPost(() => server.EntMan.DeleteEntity(uid));
-                    await server.WaitIdleAsync();
-                    await client.WaitIdleAsync();
+                    await pair.RunTicksSync(3);
 
                     // Check that the number of entities has gone back to the original value.
                     Assert.That(Count(server.EntMan), Is.EqualTo(count), $"Server prototype {protoId} failed on deletion: count didn't reset properly\n" +
