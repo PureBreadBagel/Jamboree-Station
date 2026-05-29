@@ -1,15 +1,11 @@
-# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Map
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/03/2026 06:22:17
-  entityCount: 12145
+  time: 05/29/2026 16:58:08
+  entityCount: 12146
 maps:
 - 1
 grids:
@@ -4395,7 +4391,7 @@ entities:
       pos: 30.5,3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -8356.209
+      secondsUntilStateChange: -8405.649
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -61414,6 +61410,13 @@ entities:
     - type: Transform
       pos: 33.5,-0.5
       parent: 2
+- proto: SpawnPointVirologist
+  entities:
+  - uid: 9955
+    components:
+    - type: Transform
+      pos: 18.5,-5.5
+      parent: 2
 - proto: SpawnPointWarden
   entities:
   - uid: 9585
@@ -74260,7 +74263,6 @@ entities:
       pos: -18.5,41.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11829
@@ -74270,7 +74272,6 @@ entities:
       pos: -15.5,41.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11830
@@ -74280,7 +74281,6 @@ entities:
       pos: -15.5,37.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11831
@@ -74290,7 +74290,6 @@ entities:
       pos: -9.5,36.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11832
@@ -74300,7 +74299,6 @@ entities:
       pos: -13.5,39.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11833
@@ -74310,7 +74308,6 @@ entities:
       pos: -25.5,41.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11834
@@ -74320,7 +74317,6 @@ entities:
       pos: -25.5,37.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11835
@@ -74330,7 +74326,6 @@ entities:
       pos: -21.5,41.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11836
@@ -74340,7 +74335,6 @@ entities:
       pos: -21.5,37.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11837
@@ -74350,7 +74344,6 @@ entities:
       pos: -27.5,42.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11838
@@ -74360,7 +74353,6 @@ entities:
       pos: -20.5,44.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11839
@@ -74370,7 +74362,6 @@ entities:
       pos: -11.5,44.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11840
@@ -74380,7 +74371,6 @@ entities:
       pos: -25.5,34.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11841
@@ -74390,7 +74380,6 @@ entities:
       pos: -15.5,34.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
   - uid: 11842
@@ -74400,7 +74389,6 @@ entities:
       pos: -21.5,34.5
       parent: 2
     - type: DeviceNetwork
-      configurators: []
       deviceLists:
       - 2585
 - proto: WeaponEnergyTurretAIControlPanel
