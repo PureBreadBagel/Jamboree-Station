@@ -38,5 +38,5 @@
       entity_storage:
         !type:GroupSelector
         children:
-          - id: MobXenobioSlime
+          - id: MobSlimeXenobioBabyGrey
             weight: 1
