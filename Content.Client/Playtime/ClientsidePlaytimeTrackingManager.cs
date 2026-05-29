@@ -103,6 +103,14 @@ public sealed class ClientsidePlaytimeTrackingManager
 
         _sawmill.Info($"Recorded {timeDiffMinutes} minutes of living playtime!");
 
-        _configurationManager.SaveToFile(); // We don't like that we have to save the entire config just to store playtime stats '^'
+        try
+        {
+            _configurationManager.SaveToFile();   // We don't like that we have to save the entire config just to store playtime stats '^'
+        }
+        catch (Exception e)
+        {
+            _sawmill.Error($"Failed to save Data to config file! Exception: {e}");
+        } // JAMBOREE: Catch the exception. I would rather not have it write to a config file that doesnt exist.
+
     }
 }
