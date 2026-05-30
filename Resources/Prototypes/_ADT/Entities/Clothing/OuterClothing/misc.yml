@@ -62,13 +62,19 @@
 - type: entity
   parent: ClothingOuterBase
   id: ADTClothingOuterEggman
-  name: rotund scientist's suit #changed name
-  description: A suit modeled after a famous mad scientist. You feel a master plan forming inside of you... #changed description
+  name: rotund scientist's suit
+  description: A suit modeled after a famous mad scientist. You feel a master plan forming inside of you...
   components:
   - type: Sprite
     sprite: ADT/Clothing/OuterClothing/Misc/eggman.rsi
+
   - type: Clothing
     sprite: ADT/Clothing/OuterClothing/Misc/eggman.rsi
-  - type: ToggleableClothing #Jamboree
+
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot
+
+  - type: ToggleableClothing
     clothingPrototypes:
       head: ADTClothingHeadRobotnikHead
