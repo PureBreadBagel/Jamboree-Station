@@ -71,9 +71,6 @@
   - type: Clothing
     sprite: ADT/Clothing/OuterClothing/Misc/eggman.rsi
 
-  - type: ContainerContainer
-    containers:
-      toggleable-clothing: !type:ContainerSlot
 
   - type: ToggleableClothing
     clothingPrototypes:
