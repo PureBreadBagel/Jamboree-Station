@@ -102,4 +102,4 @@
       path: "/Audio/Weapons/bladeslice.ogg"
   - type: PhysicalComposition
     materialComposition:
-      Steel: 200
+      Steel: 120
