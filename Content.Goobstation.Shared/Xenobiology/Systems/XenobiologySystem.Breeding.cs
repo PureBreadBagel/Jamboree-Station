@@ -25,7 +25,9 @@ public partial class XenobiologySystem
 
     private void OnPendingSlimeMapInit(Entity<PendingSlimeSpawnComponent> ent, ref MapInitEvent args)
     {
-        if (!_net.IsServer) return;
+        if (!_net.IsServer)
+        return;
+
 
         // it sucks but it works and now y*ml warriors can add more slimes 500% faster
         var slime = SpawnSlime(ent, ent.Comp.BasePrototype, ent.Comp.Breed);
