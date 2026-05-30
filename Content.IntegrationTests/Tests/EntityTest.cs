@@ -407,9 +407,10 @@ namespace Content.IntegrationTests.Tests
                 // makes an announcement on mapInit.
                 "AnnounceOnSpawn",
 
-                "PendingSlimeSpawn", // shut the fuck up please
+                "EntityTableContainerFill",
+                "MobSlimeXenobioBabyPending", // shut the fuck up please
                 "Slime", // please
-                "CrateNPCXenobioSlime", // XenoBioslimes are currently ignored until we can find out why its failing.
+
                 "Singularity",
 
             };
