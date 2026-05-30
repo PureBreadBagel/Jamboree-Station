@@ -21,7 +21,7 @@
   parent: BaseAction
   id: ActionStationAiRgbLighting
   name: ai-rgb-lighting-name
-  description: ai-rgb-lighting-desc
+  description: Adjust a light's color controller to add or remove an RGB effect.
   components:
   - type: Action
     itemIconStyle: BigAction
@@ -43,7 +43,7 @@
   parent: BaseAction
   id: ActionStationAiLightSynthesizer
   name: ai-light-synthesizer-name
-  description: ai-light-synthesizer-desc
+  description: Send some nanites to synthesize a replacement light bulb in a fixture.
   components:
   - type: Action
     itemIconStyle: BigAction
@@ -67,7 +67,7 @@
   parent: BaseAction
   id: ActionStationAiBikeHorn
   name: ai-bike-horn-name
-  description: ai-bike-horn-desc
+  description: Play an amusing audio clip from a holopad.
   components:
   - type: Action
     itemIconStyle: BigAction
@@ -93,7 +93,7 @@
   parent: BaseAction
   id: ActionStationAiHoloPointer
   name: ai-holopointer-name
-  description: ai-holopointer-desc
+  description: Circle an area of interest with a hologram.
   components:
   - type: Action
     itemIconStyle: BigAction
@@ -134,7 +134,7 @@
   parent: BaseAction
   id: ActionStationAiRepairNanites
   name: ai-repair-nanites-name
-  description: ai-repair-nanites-desc
+  description: Send nanites to repair a damaged Borg chassis.
   components:
   - type: Action
     itemIconStyle: BigAction
@@ -160,7 +160,7 @@
   parent: BaseAction
   id: ActionStationAiEmergencySealant
   name: ai-emergency-sealant-name
-  description: ai-emergency-sealant-desc
+  description: Deploy some metal foam to seal breaches.
   components:
   - type: Action
     itemIconStyle: BigAction
