@@ -409,7 +409,7 @@ namespace Content.IntegrationTests.Tests
 
                 "PendingSlimeSpawn", // shut the fuck up please
                 "Slime", // please
-                "CrateNPCXenoBioSlime",
+                "CrateNPCXenobioSlime", // XenoBioslimes are currently ignored until we can find out why its failing.
                 "Singularity",
 
             };

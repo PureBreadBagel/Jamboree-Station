@@ -69,6 +69,11 @@
     sprite: ADT/Clothing/OuterClothing/Misc/eggman.rsi
 
   - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
 
   - type: Clothing
     sprite: ADT/Clothing/OuterClothing/Misc/eggman.rsi
