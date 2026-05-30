@@ -408,7 +408,10 @@ namespace Content.IntegrationTests.Tests
                 "AnnounceOnSpawn",
 
                 "PendingSlimeSpawn", // shut the fuck up please
-                "Slime" // please
+                "Slime", // please
+                "CrateNPCXenoBioSlime",
+                "Singularity",
+
             };
 
             Assert.That(server.CfgMan.GetCVar(CVars.NetPVS), Is.False);

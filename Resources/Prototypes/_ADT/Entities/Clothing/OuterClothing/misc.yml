@@ -68,9 +68,10 @@
   - type: Sprite
     sprite: ADT/Clothing/OuterClothing/Misc/eggman.rsi
 
+  - type: ContainerContainer
+
   - type: Clothing
     sprite: ADT/Clothing/OuterClothing/Misc/eggman.rsi
-
 
   - type: ToggleableClothing
     clothingPrototypes:
