@@ -408,7 +408,7 @@ namespace Content.IntegrationTests.Tests
                 "AnnounceOnSpawn",
 
                 "EntityTableContainerFill",
-                "MobSlimeXenobioBabyPending", // shut the fuck up please
+                "PendingSlimeSpawn", // shut the fuck up please
                 "Slime", // please
 
                 "Singularity",

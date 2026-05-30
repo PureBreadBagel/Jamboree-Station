@@ -28,7 +28,7 @@ public partial class XenobiologySystem
     {
 
 
-        if (!_net.IsServer)
+        if (!_net.IsClient)
         return;
 
 
