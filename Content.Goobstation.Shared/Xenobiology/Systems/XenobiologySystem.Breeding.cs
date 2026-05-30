@@ -26,6 +26,8 @@ public partial class XenobiologySystem
 
     private void OnPendingSlimeMapInit(Entity<PendingSlimeSpawnComponent> ent, ref MapInitEvent args)
     {
+
+
         if (!_net.IsServer)
         return;
 
@@ -94,8 +96,7 @@ public partial class XenobiologySystem
     /// </summary>
     private void DoMitosis(Entity<SlimeComponent> ent)
     {
-        if (_net.IsClient)
-            return;
+
 
         var offspringCount = _random.Next(1, ent.Comp.MaxOffspring + 1);
         _audio.PlayPredicted(ent.Comp.MitosisSound, ent, ent);
@@ -146,7 +147,7 @@ public partial class XenobiologySystem
             _appearance.SetData(newEntityUid, XenoSlimeVisuals.Shader, newSlime.Shader);
 
         _appearance.SetData(newEntityUid, XenoSlimeVisuals.Color, newSlime.SlimeColor);
-        _metaData.SetEntityName(newEntityUid, newBreed.BreedName);
+
 
         return new Entity<SlimeComponent>(newEntityUid, newSlime);
     }

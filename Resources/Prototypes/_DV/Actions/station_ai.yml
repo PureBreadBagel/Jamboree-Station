@@ -20,7 +20,7 @@
 - type: entity
   parent: BaseAction
   id: ActionStationAiRgbLighting
-  name: ai-rgb-lighting-name
+  name: RGB Lighting Controller
   description: Adjust a light's color controller to add or remove an RGB effect.
   components:
   - type: Action
@@ -42,7 +42,7 @@
 - type: entity
   parent: BaseAction
   id: ActionStationAiLightSynthesizer
-  name: ai-light-synthesizer-name
+  name: Light Synthesizer
   description: Send some nanites to synthesize a replacement light bulb in a fixture.
   components:
   - type: Action
@@ -66,7 +66,7 @@
 - type: entity
   parent: BaseAction
   id: ActionStationAiBikeHorn
-  name: ai-bike-horn-name
+  name: HONK.MP3
   description: Play an amusing audio clip from a holopad.
   components:
   - type: Action
@@ -92,7 +92,7 @@
 - type: entity
   parent: BaseAction
   id: ActionStationAiHoloPointer
-  name: ai-holopointer-name
+  name: Holo-Pointer
   description: Circle an area of interest with a hologram.
   components:
   - type: Action
@@ -133,7 +133,7 @@
 - type: entity
   parent: BaseAction
   id: ActionStationAiRepairNanites
-  name: ai-repair-nanites-name
+  name: Repair Nanites
   description: Send nanites to repair a damaged Borg chassis.
   components:
   - type: Action
@@ -159,7 +159,7 @@
 - type: entity
   parent: BaseAction
   id: ActionStationAiEmergencySealant
-  name: ai-emergency-sealant-name
+  name: Emergency Sealant
   description: Deploy some metal foam to seal breaches.
   components:
   - type: Action
