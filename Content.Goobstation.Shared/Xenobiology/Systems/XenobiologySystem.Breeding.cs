@@ -6,6 +6,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using System.Linq;
 using Content.Goobstation.Common.CCVar;
 using Content.Goobstation.Shared.Xenobiology.Components;
 using Content.Shared.Nutrition.Components;
@@ -32,7 +33,9 @@ public partial class XenobiologySystem
         // it sucks but it works and now y*ml warriors can add more slimes 500% faster
         var slime = SpawnSlime(ent, ent.Comp.BasePrototype, ent.Comp.Breed);
         if (!slime.HasValue)
-            return;
+        {
+         QueueDel(ent); return;
+        }
 
         var s = slime.Value.Comp;
         // every xenobio slime copy is personalized. feel free to tweak it as you like
@@ -41,6 +44,8 @@ public partial class XenobiologySystem
         s.MaxOffspring += _random.Next(-1, 2);
         s.ExtractsProduced += _random.Next(0, 2);
         s.MitosisHunger *= _random.NextFloat(.75f, 1.2f);
+
+        QueueDel(ent);
     }
 
     private void OnSlimeMapInit(Entity<SlimeComponent> ent, ref MapInitEvent args)
@@ -130,7 +135,10 @@ public partial class XenobiologySystem
         || !_prototypeManager.TryIndex(selectedBreed, out var newBreed) || _net.IsClient)
             return null;
 
-        var newEntityUid = SpawnNextToOrDrop(newEntityProto, parent, null, newBreed.Components);
+        var newEntityUid = SpawnNextToOrDrop(newEntityProto, parent);
+        _metaData.SetEntityName(newEntityUid, newBreed.BreedName);
+
+
         if (!TryComp<SlimeComponent>(newEntityUid, out var newSlime))
             return null;
 

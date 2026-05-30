@@ -423,12 +423,6 @@ namespace Content.IntegrationTests.Tests
                 .Where(p => !pair.IsTestPrototype(p))
                 .Where(p => !excluded.Any(p.Components.ContainsKey))
                 .Where(p => p.Categories.All(x => x.ID != SpawnerCategory))
-
-                .Where(p => !p.Components.ContainsKey("PendingSlimeSpawn") &&
-                !p.Components.ContainsKey("Slime") &&
-                !p.Components.ContainsKey("MobGrowth") &&
-                !p.Components.ContainsKey("HTN") &&
-                !p.Components.ContainsKey("NpcFactionMember"))
                 .Select(p => p.ID)
                 .ToList();
 
