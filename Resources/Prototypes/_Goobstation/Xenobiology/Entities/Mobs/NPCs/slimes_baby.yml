@@ -1,5 +1,5 @@
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyGrey
   name: grey slime
   components:
@@ -7,7 +7,7 @@
     breed: GreyMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyOrange
   name: orange slime
   components:
@@ -15,7 +15,7 @@
     breed: OrangeMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyPurple
   name: purple slime
   components:
@@ -23,7 +23,7 @@
     breed: PurpleMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyBlue
   name: blue slime
   components:
@@ -31,7 +31,7 @@
     breed: BlueMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyMetal
   name: metal slime
   components:
@@ -39,7 +39,7 @@
     breed: MetalMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyYellow
   name: yellow slime
   components:
@@ -47,7 +47,7 @@
     breed: YellowMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyDarkPurple
   name: dark purple slime
   components:
@@ -55,7 +55,7 @@
     breed: DarkPurpleMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyDarkBlue
   name: dark blue slime
   components:
@@ -63,7 +63,7 @@
     breed: DarkBlueMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabySilver
   name: silver slime
   components:
@@ -71,7 +71,7 @@
     breed: SilverMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyBluespace
   name: bluespace slime
   components:
@@ -79,7 +79,7 @@
     breed: BluespaceMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabySepia
   name: sepia slime
   components:
@@ -87,7 +87,7 @@
     breed: SepiaMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyCerulean
   name: cerulean slime
   components:
@@ -95,7 +95,7 @@
     breed: CeruleanMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyPyrite
   name: pyrite slime
   components:
@@ -103,7 +103,7 @@
     breed: PyriteMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyRed
   name: red slime
   components:
@@ -111,7 +111,7 @@
     breed: RedMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyGreen
   name: green slime
   components:
@@ -119,7 +119,7 @@
     breed: GreenMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyPink
   name: pink slime
   components:
@@ -127,7 +127,7 @@
     breed: PinkMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyGold
   name: gold slime
   components:
@@ -135,7 +135,7 @@
     breed: GoldMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyOil
   name: oil slime
   components:
@@ -143,7 +143,7 @@
     breed: OilMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyLightPink
   name: light pink slime
   components:
@@ -151,7 +151,7 @@
     breed: LightPinkMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyBlack
   name: black slime
   components:
@@ -159,7 +159,7 @@
     breed: BlackMutation
 
 - type: entity
-  parent: MobSlimeXenobioBabyPending
+  parent: BaseMobSlimeXenobio
   id: MobSlimeXenobioBabyAdamantine
   name: adamantite slime
   components:
