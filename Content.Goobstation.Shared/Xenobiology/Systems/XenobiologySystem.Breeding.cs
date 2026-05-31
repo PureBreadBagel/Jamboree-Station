@@ -6,7 +6,6 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using System.Linq;
 using Content.Goobstation.Common.CCVar;
 using Content.Goobstation.Shared.Xenobiology.Components;
 using Content.Shared.Nutrition.Components;
@@ -28,7 +27,7 @@ public partial class XenobiologySystem
     {
 
 
-        if (!_net.IsClient)
+        if (!_net.IsServer)
         return;
 
 
@@ -36,7 +35,7 @@ public partial class XenobiologySystem
         var slime = SpawnSlime(ent, ent.Comp.BasePrototype, ent.Comp.Breed);
         if (!slime.HasValue)
         {
-         QueueDel(ent); return;
+         return;
         }
 
         var s = slime.Value.Comp;
@@ -47,7 +46,7 @@ public partial class XenobiologySystem
         s.ExtractsProduced += _random.Next(0, 2);
         s.MitosisHunger *= _random.NextFloat(.75f, 1.2f);
 
-        QueueDel(ent);
+
     }
 
     private void OnSlimeMapInit(Entity<SlimeComponent> ent, ref MapInitEvent args)
@@ -136,10 +135,8 @@ public partial class XenobiologySystem
         || !_prototypeManager.TryIndex(selectedBreed, out var newBreed) || _net.IsClient)
             return null;
 
-        var newEntityUid = SpawnNextToOrDrop(newEntityProto, parent);
+        var newEntityUid = SpawnNextToOrDrop(newEntityProto, parent, null, newBreed.Components);
         _metaData.SetEntityName(newEntityUid, newBreed.BreedName);
-
-
         if (!TryComp<SlimeComponent>(newEntityUid, out var newSlime))
             return null;
 
