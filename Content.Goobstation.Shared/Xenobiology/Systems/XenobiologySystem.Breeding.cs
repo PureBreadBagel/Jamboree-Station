@@ -25,18 +25,12 @@ public partial class XenobiologySystem
 
     private void OnPendingSlimeMapInit(Entity<PendingSlimeSpawnComponent> ent, ref MapInitEvent args)
     {
-
-
-        if (!_net.IsServer)
-        return;
-
+        if (!_net.IsServer) return;
 
         // it sucks but it works and now y*ml warriors can add more slimes 500% faster
         var slime = SpawnSlime(ent, ent.Comp.BasePrototype, ent.Comp.Breed);
         if (!slime.HasValue)
-        {
-         return;
-        }
+            return;
 
         var s = slime.Value.Comp;
         // every xenobio slime copy is personalized. feel free to tweak it as you like
@@ -45,8 +39,6 @@ public partial class XenobiologySystem
         s.MaxOffspring += _random.Next(-1, 2);
         s.ExtractsProduced += _random.Next(0, 2);
         s.MitosisHunger *= _random.NextFloat(.75f, 1.2f);
-
-
     }
 
     private void OnSlimeMapInit(Entity<SlimeComponent> ent, ref MapInitEvent args)
@@ -95,7 +87,8 @@ public partial class XenobiologySystem
     /// </summary>
     private void DoMitosis(Entity<SlimeComponent> ent)
     {
-
+        if (_net.IsClient)
+            return;
 
         var offspringCount = _random.Next(1, ent.Comp.MaxOffspring + 1);
         _audio.PlayPredicted(ent.Comp.MitosisSound, ent, ent);
@@ -136,7 +129,6 @@ public partial class XenobiologySystem
             return null;
 
         var newEntityUid = SpawnNextToOrDrop(newEntityProto, parent, null, newBreed.Components);
-        _metaData.SetEntityName(newEntityUid, newBreed.BreedName);
         if (!TryComp<SlimeComponent>(newEntityUid, out var newSlime))
             return null;
 
@@ -144,7 +136,7 @@ public partial class XenobiologySystem
             _appearance.SetData(newEntityUid, XenoSlimeVisuals.Shader, newSlime.Shader);
 
         _appearance.SetData(newEntityUid, XenoSlimeVisuals.Color, newSlime.SlimeColor);
-
+        _metaData.SetEntityName(newEntityUid, newBreed.BreedName);
 
         return new Entity<SlimeComponent>(newEntityUid, newSlime);
     }
