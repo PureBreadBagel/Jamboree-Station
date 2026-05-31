@@ -43,10 +43,7 @@ public abstract class ToolshedTest : IInvocationContext
     [TearDown]
     public async Task TearDownInternal()
     {
-        if (Pair != null)
-        {
-            await Pair.CleanReturnAsync();
-        }
+        await Pair.CleanReturnAsync();
         await TearDown();
     }
 

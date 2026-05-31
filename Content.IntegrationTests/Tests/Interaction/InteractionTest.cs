@@ -290,11 +290,8 @@ public abstract partial class InteractionTest
     [TearDown]
     public async Task TearDownInternal()
     {
-        if (Pair != null)
-        {
-            await Server.WaitPost(() => MapSystem.DeleteMap(MapId));
-            await Pair.CleanReturnAsync(); // Jamboree, but we want to make sure the map is deleted before we return the pair to the pool!
-        }
+        await Server.WaitPost(() => MapSystem.DeleteMap(MapId));
+        await Pair.CleanReturnAsync();
         await TearDown();
     }
 
