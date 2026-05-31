@@ -151,7 +151,7 @@ public sealed class ContainerFillSystem : EntitySystem
             {
                 var spawn = Spawn(proto, coords);
 
-                Log.Info($"Spawned {ToPrettyString(spawn)} ({proto}) in container {containerId} for {ToPrettyString(ent)}");
+
 
 
                 if (!_containerSystem.Insert(spawn, container, containerXform: xform))
