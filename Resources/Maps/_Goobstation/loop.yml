@@ -41364,13 +41364,6 @@ entities:
     - type: Transform
       pos: -43.446762,58.440586
       parent: 2
-- proto: ClothingBeltChemBagXenobiology
-  entities:
-  - uid: 12750
-    components:
-    - type: Transform
-      pos: 9.430773,27.676239
-      parent: 2
 - proto: ClothingBeltMedicalEMTFilled
   entities:
   - uid: 6516
@@ -83808,12 +83801,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 7.5,64.5
-      parent: 2
-  - uid: 11733
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 9.5,27.5
       parent: 2
   - uid: 12579
     components:

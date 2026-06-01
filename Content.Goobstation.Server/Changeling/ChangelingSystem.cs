@@ -703,6 +703,12 @@ public sealed partial class ChangelingSystem : SharedChangelingSystem
         foreach (var type in types)
             _polymorph.CopyPolymorphComponent(uid, newEnt, nameof(type));
 
+        // CopyPolymorphComponent fails to copy the HumanoidAppearanceComponent in TransformData
+        // outside of the first list item so this has to be done manually unfortunately
+        if (TryComp<ChangelingIdentityComponent>(newEnt, out var newComp)
+            && comp != null)
+            newComp.AbsorbedDNA = comp.AbsorbedDNA;
+
         RaiseNetworkEvent(new LoadActionsEvent(GetNetEntity(uid)), newEnt);
 
         return newUid;
