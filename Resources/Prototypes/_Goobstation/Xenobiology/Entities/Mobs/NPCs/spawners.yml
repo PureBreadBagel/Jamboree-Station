@@ -11,6 +11,6 @@
   - type: RandomSpawner
     prototypes:
     - MobSlimeXenobioBabyGrey
-    - MobSlimeXenobioBabyGrey # more chance to get spawned because it's the mother of all slimes
+    - MobSlimeXenobioBabyOrange
     - MobSlimeXenobioBabyPurple
     - MobSlimeXenobioBabyBlue

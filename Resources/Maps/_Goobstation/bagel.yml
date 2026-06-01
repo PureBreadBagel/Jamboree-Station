@@ -1,11 +1,15 @@
+# SPDX-FileCopyrightText: 2026 Goob Station Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 meta:
   format: 7
   category: Map
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/30/2025 02:58:58
-  entityCount: 25061
+  time: 10/12/2025 18:58:10
+  entityCount: 25007
 maps:
 - 1
 grids:
@@ -62762,13 +62766,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -109.5,11.5
       parent: 2
-- proto: ComputerScienceXenobiologyBounty
-  entities:
-  - uid: 9551
-    components:
-    - type: Transform
-      pos: -67.5,0.5
-      parent: 2
 - proto: ComputerShuttleCargo
   entities:
   - uid: 9552
@@ -71154,36 +71151,6 @@ entities:
     components:
     - type: Transform
       pos: -40.5,22.5
-      parent: 2
-  - uid: 10905
-    components:
-    - type: Transform
-      pos: -71.5,1.5
-      parent: 2
-  - uid: 10906
-    components:
-    - type: Transform
-      pos: -71.5,-2.5
-      parent: 2
-  - uid: 10907
-    components:
-    - type: Transform
-      pos: -75.5,-2.5
-      parent: 2
-  - uid: 10908
-    components:
-    - type: Transform
-      pos: -75.5,1.5
-      parent: 2
-  - uid: 10909
-    components:
-    - type: Transform
-      pos: -67.5,1.5
-      parent: 2
-  - uid: 10910
-    components:
-    - type: Transform
-      pos: -67.5,-2.5
       parent: 2
 - proto: FancyTableSpawner
   entities:
@@ -110648,9 +110615,7 @@ entities:
     - type: Transform
       pos: -43.5,-10.5
       parent: 2
-- proto: LockerScienceFilledXenobiology
-  entities:
-  - uid: 16646
+  - uid: 16591
     components:
     - type: Transform
       pos: -66.5,0.5
@@ -110660,12 +110625,7 @@ entities:
     - type: Transform
       pos: -65.5,0.5
       parent: 2
-  - uid: 16648
-    components:
-    - type: Transform
-      pos: -63.5,0.5
-      parent: 2
-  - uid: 16649
+  - uid: 16593
     components:
     - type: Transform
       pos: -64.5,0.5
@@ -128631,13 +128591,6 @@ entities:
     components:
     - type: Transform
       pos: 60.464996,-29.58106
-      parent: 2
-- proto: SlimeGrinder
-  entities:
-  - uid: 19531
-    components:
-    - type: Transform
-      pos: -71.5,0.5
       parent: 2
 - proto: SMESAdvancedEmpty
   entities:
@@ -158225,59 +158178,7 @@ entities:
     components:
     - type: Transform
       pos: -16.536282,-2.5396385
-      parent: 24729
-- proto: XenobioSlimeBabySpawner
-  entities:
-  - uid: 24705
-    components:
-    - type: Transform
-      pos: -74.5,3.5
-      parent: 2
-  - uid: 24706
-    components:
-    - type: Transform
-      pos: -73.5,3.5
-      parent: 2
-  - uid: 24707
-    components:
-    - type: Transform
-      pos: -73.5,2.5
-      parent: 2
-  - uid: 24708
-    components:
-    - type: Transform
-      pos: -72.5,2.5
-      parent: 2
-  - uid: 24709
-    components:
-    - type: Transform
-      pos: -73.5,-3.5
-      parent: 2
-  - uid: 24710
-    components:
-    - type: Transform
-      pos: -74.5,-4.5
-      parent: 2
-  - uid: 24711
-    components:
-    - type: Transform
-      pos: -72.5,-4.5
-      parent: 2
-  - uid: 24712
-    components:
-    - type: Transform
-      pos: -68.5,-3.5
-      parent: 2
-  - uid: 24713
-    components:
-    - type: Transform
-      pos: -69.5,-4.5
-      parent: 2
-  - uid: 24714
-    components:
-    - type: Transform
-      pos: -69.5,-2.5
-      parent: 2
+      parent: 24675
 - proto: XylophoneInstrument
   entities:
   - uid: 24715

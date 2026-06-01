@@ -17,7 +17,6 @@ using Content.Shared.Hands;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Inventory;
-using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Popups;
 using Content.Shared.Stunnable;
@@ -53,6 +52,7 @@ public sealed partial class XenoVacuumSystem : EntitySystem
 
         // Interaction
         SubscribeLocalEvent<XenoVacuumTankComponent, ExaminedEvent>(OnTankExamined);
+        SubscribeLocalEvent<XenoVacuumComponent, GotEmaggedEvent>(OnGotEmagged);
         SubscribeLocalEvent<XenoVacuumComponent, GotEquippedHandEvent>(OnEquippedHand);
         SubscribeLocalEvent<XenoVacuumComponent, GotUnequippedHandEvent>(OnUnequippedHand);
         SubscribeLocalEvent<XenoVacuumComponent, AfterInteractEvent>(OnAfterInteract);
@@ -96,6 +96,16 @@ public sealed partial class XenoVacuumSystem : EntitySystem
 
         Dirty(ent);
         Dirty(tank.Value, tankComp);
+    }
+
+    private void OnGotEmagged(Entity<XenoVacuumComponent> ent, ref GotEmaggedEvent args)
+    {
+        if (!_emag.CompareFlag(args.Type, EmagType.Interaction)
+        || _emag.CheckFlag(ent, EmagType.Interaction)
+        || HasComp<EmaggedComponent>(ent))
+            return;
+
+        args.Handled = true;
     }
 
     private void OnAfterInteract(Entity<XenoVacuumComponent> ent, ref AfterInteractEvent args)
@@ -171,7 +181,7 @@ public sealed partial class XenoVacuumSystem : EntitySystem
 
         var tankComp = tank.Value.Comp;
 
-        if (!_whitelist.IsWhitelistPass(vacuum.Comp.EntityWhitelist, target))
+        if (!HasComp<EmaggedComponent>(vacuum) && !_whitelist.IsWhitelistPass(vacuum.Comp.EntityWhitelist, target))
         {
             var invalidEntityPopup = Loc.GetString("xeno-vacuum-suction-fail-invalid-entity-popup", ("ent", target));
             _popup.PopupEntity(invalidEntityPopup, vacuum, user);

@@ -19,6 +19,7 @@ namespace Content.Goobstation.Server.EntityEffects;
 public sealed partial class SpeciesChange : EntityEffect
 {
     [DataField(required: true)] public ProtoId<SpeciesPrototype> NewSpecies;
+    [DataField] public bool Polymorph = true;
 
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
         => Loc.GetString("reagent-effect-guidebook-change-species", ("species", NewSpecies));
@@ -28,10 +29,17 @@ public sealed partial class SpeciesChange : EntityEffect
         if (!args.EntityManager.TryGetComponent<HumanoidAppearanceComponent>(args.TargetEntity, out var appearance))
             return;
 
+        if (!Polymorph)
+        {
+            var humanoidAppearanceSystem = args.EntityManager.System<SharedHumanoidAppearanceSystem>();
+            humanoidAppearanceSystem.SetSpecies(args.TargetEntity, NewSpecies);
+            return;
+        }
+
         var polymorphSystem = args.EntityManager.System<PolymorphSystem>();
         var protMan = IoCManager.Resolve<IPrototypeManager>();
 
-        if (protMan.TryIndex(NewSpecies, out var species))
+        if (Polymorph && protMan.TryIndex(NewSpecies, out var species))
         {
             var config = new PolymorphConfiguration
             {
@@ -40,8 +48,7 @@ public sealed partial class SpeciesChange : EntityEffect
                 Forced = true,
                 Inventory = PolymorphInventoryChange.Transfer,
                 RevertOnCrit = false,
-                RevertOnDeath = false,
-                TransferName = true,
+                RevertOnDeath = false
             };
 
             var @new = polymorphSystem.PolymorphEntity(args.TargetEntity, config);
