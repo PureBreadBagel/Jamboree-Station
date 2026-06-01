@@ -26,10 +26,6 @@ namespace Content.Shared.Heretic;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class HereticComponent : Component
 {
-
-    [DataField]
-    public List<ProtoId<HereticKnowledgePrototype>> ResearchedKnowledge = new();
-
     [DataField]
     public List<ProtoId<HereticKnowledgePrototype>> BaseKnowledge = new()
     {
