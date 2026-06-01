@@ -109,12 +109,6 @@
   result: SlimeGrinderMachineCircuitboard
 
 - type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseResearchComputerRecipeCategory ]
-  icon: _Goobstation/Structures/Machines/Icons/Computers/xenobiology.png
-  id: XenobiologyBountyComputerCircuitboard
-  result: XenobiologyBountyComputerCircuitboard
-
-- type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
   id: RadiationCollectorCircuitboard
   result: RadiationCollectorCircuitboard
