@@ -406,7 +406,6 @@ namespace Content.IntegrationTests.Tests
 
                 // makes an announcement on mapInit.
                 "AnnounceOnSpawn",
-                "Singularity",
 
                 "PendingSlimeSpawn", // shut the fuck up please
                 "Slime" // please
