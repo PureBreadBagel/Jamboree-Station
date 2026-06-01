@@ -131,12 +131,6 @@ public partial class XenobiologySystem
             return null;
 
         var newEntityUid = SpawnNextToOrDrop(newEntityProto, parent, null, newBreed.Components);
-
-        if (_containerSystem.TryGetContainingContainer(parent, out var container))
-        {
-            _containerSystem.Insert(newEntityUid, container);
-        }
-
         if (!TryComp<SlimeComponent>(newEntityUid, out var newSlime))
             return null;
 
