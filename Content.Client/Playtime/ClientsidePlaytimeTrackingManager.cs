@@ -107,6 +107,6 @@ public sealed class ClientsidePlaytimeTrackingManager
 
         _sawmill.Info($"Recorded {timeDiffMinutes} minutes of living playtime!");
 
-        _configurationManager.SaveToFile(); // We don't like that we have to save the entire config just to store playtime stats '^'
+      //  _configurationManager.SaveToFile();  We don't like that we have to save the entire config just to store playtime stats '^'
     }
 }
