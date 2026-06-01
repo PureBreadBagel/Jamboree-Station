@@ -80,6 +80,7 @@ namespace Content.IntegrationTests.Tests
         private static readonly ProtoId<EntityCategoryPrototype> SpawnerCategory = "Spawner";
 
         [Test, NonParallelizable] // Goobstation edit - NonParallelizable
+        [Test, NonParallelizable] // Goobstation edit - NonParallelizable
         public async Task SpawnAndDeleteAllEntitiesOnDifferentMaps()
         {
             // This test dirties the pair as it simply deletes ALL entities when done. Overhead of restarting the round
@@ -106,8 +107,22 @@ namespace Content.IntegrationTests.Tests
                 .ToList();
             // Goobstation edit end
 
+            // Goobstation edit start - moved this up and out of server.WaitPost
+            var protoIds = prototypeMan
+                .EnumeratePrototypes<EntityPrototype>()
+                .Where(p => !p.Abstract)
+                .Where(p => !pair.IsTestPrototype(p))
+                .Where(p => !p.Components.ContainsKey("MapGrid")) // This will smash stuff otherwise.
+                .Where(p => !p.Components.ContainsKey("MobReplacementRule")) // goob edit - fuck them mimics
+                .Where(p => !p.Components.ContainsKey("Supermatter")) // Goobstation - Supermatter eats everything, oh no!
+                .Where(p => !p.Components.ContainsKey("RoomFill")) // This comp can delete all entities, and spawn others
+                .Select(p => p.ID)
+                .ToList();
+            // Goobstation edit end
+
             await server.WaitPost(() =>
             {
+                /* Goobstation
                 /* Goobstation
                 var protoIds = prototypeMan
                     .EnumeratePrototypes<EntityPrototype>()
@@ -119,6 +134,7 @@ namespace Content.IntegrationTests.Tests
                     .Where(p => !p.Components.ContainsKey("RoomFill")) // This comp can delete all entities, and spawn others
                     .Select(p => p.ID)
                     .ToList();
+                    Goobstation */
                     Goobstation */
 
                 foreach (var protoId in protoIds)
@@ -132,6 +148,41 @@ namespace Content.IntegrationTests.Tests
                 }
             });
 
+            // Goobstation Edit Start  (this test isn't even worth the effort tbh)
+            // Run up to 15 ticks, but stop early if memory usage exceeds 13 GB
+            // At the time of writing (2025-10-22) Wizden reaches at most like 9-10 GB on SpawnAndDirtyAllEntities
+            // Goob gets to about ~12GB, if we reach 16 GB on integrationtests we'll time out from GitHub
+            //
+            // This area on my local testing is where most of the memory builds up, so run it as long as we can within reason.
+            // i mean yeah you could run the test in batches of entities but its not really a stress test then is it.
+
+            const int maxTicks = 15; // (default wizden)
+            const long memoryLimitBytes = 13L * 1024 * 1024 * 1024; // 13 GB, depends on how close you wanna fly to the sun.
+
+            var warninglog = true; // if we stop caring about this test turn this off.
+
+            for (var tick = 0; tick < maxTicks; tick++)
+            {
+                await pair.RunTicksSync(1);
+
+                var memoryUsed = GC.GetTotalMemory(forceFullCollection: false);
+
+                // debug logging but tbh just use debugger
+                // await TestContext.Progress.WriteLineAsync($"[EntityTest SpawnAndDeleteAllEntitiesOnDifferentMaps] Memory usage = {memoryUsed / (1024 * 1024 * 1024.0):F2} GB at tick {tick + 1}");
+
+                if (memoryUsed < memoryLimitBytes)
+                    continue;
+                if (warninglog)
+                    await TestContext.Progress.WriteLineAsync(
+                        "Warning:\n"+
+                        $"[SpawnAndDeleteAllEntitiesOnDifferentMaps] Memory usage reached {memoryUsed / (1024 * 1024 * 1024.0):F2} GB at tick {tick + 1} out of {maxTicks} \n" +
+                        "Stopping early (limit: 13 GB)." +
+                        $"\nWe spawned a total of {protoIds.Count} entities and held on for {tick+1} ticks. We're probably fine."
+                    );
+
+                break; // stop ticking early
+            }
+            // Goobstation Edit End
             // Goobstation Edit Start  (this test isn't even worth the effort tbh)
             // Run up to 15 ticks, but stop early if memory usage exceeds 13 GB
             // At the time of writing (2025-10-22) Wizden reaches at most like 9-10 GB on SpawnAndDirtyAllEntities
@@ -256,6 +307,7 @@ namespace Content.IntegrationTests.Tests
         ///     all components on every entity.
         /// </summary>
         [Test, NonParallelizable] // Goobstation edit - NonParallelizable
+        [Test, NonParallelizable] // Goobstation edit - NonParallelizable
         public async Task SpawnAndDirtyAllEntities()
         {
             // This test dirties the pair as it simply deletes ALL entities when done. Overhead of restarting the round
@@ -307,7 +359,6 @@ namespace Content.IntegrationTests.Tests
                     }
                 });
 
-<<<<<<< HEAD
                 // Goobstation Edit Start  (this test isn't even worth the effort tbh)
                 // Run up to 15 ticks, but stop early if memory usage exceeds 13 GB
                 // At the time of writing (2025-10-22) Wizden reaches at most like 9-10 GB on this test
@@ -315,7 +366,34 @@ namespace Content.IntegrationTests.Tests
                 //
                 // This area on my local testing is where most of the memory builds up, so run it as long as we can within reason.
                 // i mean yeah you could run the test in batches of entities but its not really a stress test then is it.
-=======
+
+                const int maxTicks = 15; // (default wizden)
+                const long memoryLimitBytes = 13L * 1024 * 1024 * 1024; // 13 GB
+
+                var warninglog = true; // if we stop caring about this test turn this off.
+
+                for (var tick = 0; tick < maxTicks; tick++)
+                {
+                    await pair.RunTicksSync(1);
+
+                    var memoryUsed = GC.GetTotalMemory(forceFullCollection: false);
+
+                    // debug logging but tbh just use debugger
+                    // await TestContext.Progress.WriteLineAsync($"[EntityTest SpawnAndDirtyAllEntities] Memory usage = {memoryUsed / (1024 * 1024 * 1024.0):F2} GB at tick {tick + 1}");
+
+                    if (memoryUsed < memoryLimitBytes)
+                        continue;
+                    if (warninglog)
+                        await TestContext.Progress.WriteLineAsync(
+                            "Warning:\n" +
+                            $"[SpawnAndDirtyAllEntities] Memory usage reached {memoryUsed / (1024 * 1024 * 1024.0):F2} GB at tick {tick + 1} out of {maxTicks}\n" +
+                            "Stopping early (limit: 13 GB)." +
+                            $"\nWe spawned and dirtied {protoIds.Count} entities and held on for {tick + 1} ticks. We're probably fine."
+                        );
+
+                    break; // stop ticking early
+                }
+                // Goobstation Edit End
             // Goobstation Edit Start  (this test isn't even worth the effort tbh)
             // Run up to 15 ticks, but stop early if memory usage exceeds 13 GB
             // At the time of writing (2025-10-22) Wizden reaches at most like 9-10 GB on this test
@@ -351,35 +429,6 @@ namespace Content.IntegrationTests.Tests
                 break; // stop ticking early
             }
             // Goobstation Edit End
->>>>>>> 1b21ef89ca (Make SpawnAndDeleteAllEntitiesOnDifferentMaps & SpawnAndDirtyAllEntities tests NonParallelizable (#4823))
-
-                const int maxTicks = 15; // (default wizden)
-                const long memoryLimitBytes = 13L * 1024 * 1024 * 1024; // 13 GB
-
-                var warninglog = true; // if we stop caring about this test turn this off.
-
-                for (var tick = 0; tick < maxTicks; tick++)
-                {
-                    await pair.RunTicksSync(1);
-
-                    var memoryUsed = GC.GetTotalMemory(forceFullCollection: false);
-
-                    // debug logging but tbh just use debugger
-                    // await TestContext.Progress.WriteLineAsync($"[EntityTest SpawnAndDirtyAllEntities] Memory usage = {memoryUsed / (1024 * 1024 * 1024.0):F2} GB at tick {tick + 1}");
-
-                    if (memoryUsed < memoryLimitBytes)
-                        continue;
-                    if (warninglog)
-                        await TestContext.Progress.WriteLineAsync(
-                            "Warning:\n" +
-                            $"[SpawnAndDirtyAllEntities] Memory usage reached {memoryUsed / (1024 * 1024 * 1024.0):F2} GB at tick {tick + 1} out of {maxTicks}\n" +
-                            "Stopping early (limit: 13 GB)." +
-                            $"\nWe spawned and dirtied {protoIds.Count} entities and held on for {tick + 1} ticks. We're probably fine."
-                        );
-
-                    break; // stop ticking early
-                }
-                // Goobstation Edit End
 
                 // Make sure the client actually received the entities
                 // 500 is completely arbitrary. Note that the client & sever entity counts aren't expected to match.
@@ -572,7 +621,7 @@ namespace Content.IntegrationTests.Tests
             return false;
         }
 
-        [Test]
+        [Test, TestNonParallelizable] // Goobstation edit - NonParallelizable]
         public async Task AllComponentsOneToOneDeleteTest()
         {
             var skipComponents = new[]
@@ -654,3 +703,4 @@ namespace Content.IntegrationTests.Tests
         }
     }
 }
+
