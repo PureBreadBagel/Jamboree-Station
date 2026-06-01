@@ -31,8 +31,12 @@
   id: CrateNPCXenobioSlime
   parent: CrateLivestock
   name: xenobiology slime crate
-  description: A crate containing a singular grey slime for xenobiology related experiments.
+  description: A crate containing a singular grey slime for xenobiology related experiments. #changed name and description to be more specific
   components:
-  - type: StorageFill
-    contents:
-      - id: MobSlimeXenobioBabyGrey
+  - type: EntityTableContainerFill # Jamboree - Containerfill is the new storagefill.
+    containers:
+      entity_storage:
+        !type:GroupSelector
+        children:
+          - id: MobSlimeXenobioBabyGrey
+            weight: 1

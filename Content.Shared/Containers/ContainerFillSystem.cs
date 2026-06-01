@@ -104,11 +104,11 @@ public sealed class ContainerFillSystem : EntitySystem
         var xform = Transform(uid);
         var coords = new EntityCoordinates(uid, Vector2.Zero);
 
-        foreach (var (containerId, prototypes) in component.Containers)
+        foreach (var (contaienrId, prototypes) in component.Containers)
         {
-            if (!_containerSystem.TryGetContainer(uid, containerId, out var container, containerComp))
+            if (!_containerSystem.TryGetContainer(uid, contaienrId, out var container, containerComp))
             {
-                Log.Error($"Entity {ToPrettyString(uid)} with a {nameof(ContainerFillComponent)} is missing a container ({containerId}).");
+                Log.Error($"Entity {ToPrettyString(uid)} with a {nameof(ContainerFillComponent)} is missing a container ({contaienrId}).");
                 continue;
             }
 
@@ -149,10 +149,6 @@ public sealed class ContainerFillSystem : EntitySystem
             foreach (var proto in spawns)
             {
                 var spawn = Spawn(proto, coords);
-
-                Log.Info($"Spawned {ToPrettyString(spawn)} ({proto}) in container {containerId} for {ToPrettyString(ent)}");
-
-
                 if (!_containerSystem.Insert(spawn, container, containerXform: xform))
                 {
                     var alreadyContained = container.ContainedEntities.Count > 0 ? string.Join("\n", container.ContainedEntities.Select(e => $"\t - {ToPrettyString(e)}")) : "< empty >";
