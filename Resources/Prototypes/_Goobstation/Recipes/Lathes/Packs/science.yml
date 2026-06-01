@@ -23,8 +23,3 @@
   recipes:
   - SlimeGrinderMachineCircuitboard
   - ClothingBackpackXenoBioTank
-
-- type: latheRecipePack
-  id: XenobagHoldingPack
-  recipes: 
-  - ClothingBeltChemBagXenobiologyHolding
