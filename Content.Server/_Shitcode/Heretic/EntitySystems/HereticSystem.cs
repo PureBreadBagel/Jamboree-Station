@@ -143,6 +143,9 @@ public sealed class HereticSystem : EntitySystem
         return true;
     }
 
+    private void OnPolymorphed(Entity<HereticComponent> ent, ref PolymorphedEvent args)
+    => _polymorph.CopyPolymorphComponent<HereticComponent>(ent, args.NewEntity);
+
     public void UpdateKnowledge(EntityUid uid,
         HereticComponent comp,
         float amount,

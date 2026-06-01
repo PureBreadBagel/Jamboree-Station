@@ -43,10 +43,10 @@ public sealed partial class HereticKnowledgeSystem : EntitySystem
         {
             foreach (var act in data.ActionPrototypes)
             {
-                if (hasMind)
-                    _actionContainer.AddAction(mind, act);
+                if (_mind.TryGetMind(uid, out var mindId, out var mind))
+                _actionContainer.AddAction(mindId, act);
                 else
-                    _action.AddAction(uid, act);
+                _action.AddAction(uid, act);
             }
         }
 

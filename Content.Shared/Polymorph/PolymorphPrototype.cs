@@ -58,6 +58,10 @@ public sealed partial class PolymorphPrototype : IPrototype, IInheritingPrototyp
 [Serializable, NetSerializable]
 public sealed partial record PolymorphConfiguration
 {
+    [DataField]
+    public HashSet<string> CopiedComponents = new();
+
+
     /// <summary>
     /// What entity the polymorph will turn the target into
     /// must be in here because it makes no sense if it isn't
