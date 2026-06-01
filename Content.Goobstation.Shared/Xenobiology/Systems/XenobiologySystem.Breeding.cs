@@ -43,8 +43,9 @@ public partial class XenobiologySystem
         s.ExtractsProduced += _random.Next(0, 2);
         s.MitosisHunger *= _random.NextFloat(.75f, 1.2f);
 
-        Transform(slimeUID).Coordinates = coords;
         QueueDel(ent);
+        Transform(slimeUID).Coordinates = coords;
+
     }
 
     private void OnSlimeMapInit(Entity<SlimeComponent> ent, ref MapInitEvent args)
