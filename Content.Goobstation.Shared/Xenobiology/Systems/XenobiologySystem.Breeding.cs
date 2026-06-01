@@ -39,6 +39,8 @@ public partial class XenobiologySystem
         s.MaxOffspring += _random.Next(-1, 2);
         s.ExtractsProduced += _random.Next(0, 2);
         s.MitosisHunger *= _random.NextFloat(.75f, 1.2f);
+
+        QueueDel(ent); // Remove the pending slime spawn
     }
 
     private void OnSlimeMapInit(Entity<SlimeComponent> ent, ref MapInitEvent args)
