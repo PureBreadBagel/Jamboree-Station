@@ -180,4 +180,4 @@
   parent: [ BaseElectronicsRecipe, BaseCircuitryRecipeCategory ]
   id: CameraElectronics
   icon: { sprite: Structures/Wallmounts/camera.rsi, state: cameracase }
-  result: CameraElectronics # h
+  result: CameraElectronics
