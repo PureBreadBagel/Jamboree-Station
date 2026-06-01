@@ -147,3 +147,9 @@
   - ThrusterMachineCircuitboard
   - GyroscopeMachineCircuitboard
   - MiniGravityGeneratorCircuitboard
+
+- type: latheRecipePack
+  id: ScienceBoardsGoob
+  recipes:
+  - SlimeGrinderMachineCircuitboard
+  - XenobiologyBountyComputerCircuitboard
