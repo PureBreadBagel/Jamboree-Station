@@ -78,8 +78,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/23/2025 09:41:49
-  entityCount: 31765
+  time: 12/30/2025 15:44:21
+  entityCount: 31831
 maps:
 - 1
 grids:
@@ -15274,7 +15274,7 @@ entities:
       pos: 26.5,17.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -68590.57
+      secondsUntilStateChange: -70546.07
       state: Opening
     - type: DeviceLinkSink
       invokeCounter: 1
@@ -16386,7 +16386,7 @@ entities:
       pos: 41.5,62.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -25857.254
+      secondsUntilStateChange: -27812.758
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -21438,7 +21438,7 @@ entities:
     components:
     - type: Transform
       pos: 77.5,50.5
-      parent: 12
+      parent: 2
 - proto: BirdToyInstrument
   entities:
   - uid: 1376
@@ -79187,7 +79187,7 @@ entities:
       parent: 2
 - proto: ClosetL3ScienceFilled
   entities:
-  - uid: 1744
+  - uid: 12611
     components:
     - type: Transform
       pos: -40.5,-28.5
@@ -79211,7 +79211,7 @@ entities:
     components:
     - type: Transform
       pos: -35.5,-22.5
-      parent: 12
+      parent: 2
 - proto: ClosetL3SecurityFilled
   entities:
   - uid: 12616
@@ -79637,7 +79637,7 @@ entities:
       parent: 2
 - proto: ClosetRadiationSuitFilled
   entities:
-  - uid: 2315
+  - uid: 12686
     components:
     - type: Transform
       pos: -33.5,-39.5
@@ -79780,14 +79780,14 @@ entities:
     components:
     - type: Transform
       pos: 47.5,-4.5
-      parent: 12
+      parent: 2
 - proto: ClothingBeltChemBagXenobiology
   entities:
-  - uid: 23447
+  - uid: 12709
     components:
     - type: Transform
       pos: -40.6208,-49.27347
-      parent: 12
+      parent: 2
 - proto: ClothingBeltMedicalEMTFilled
   entities:
   - uid: 12710
@@ -80398,19 +80398,6 @@ entities:
     - type: InsideEntityStorage
 - proto: ClothingMultipleHeadphones
   entities:
-  - uid: 27908
-    components:
-    - type: Transform
-      pos: -25.446548,64.671776
-      parent: 12
-  - uid: 29599
-    components:
-    - type: Transform
-      rot: -6.283185307179586 rad
-      pos: -50.5738,76.70312
-      parent: 12
-- proto: ClothingNeckCloakAce
-  entities:
   - uid: 12812
     components:
     - type: Transform
@@ -80419,8 +80406,23 @@ entities:
   - uid: 12813
     components:
     - type: Transform
+      rot: -6.283185307179586 rad
+      pos: -50.5738,76.70312
+      parent: 2
+- proto: ClothingNeckCloakAce
+  entities:
+  - uid: 12814
+    components:
+    - type: Transform
+      pos: -4.464142,51.52777
+      parent: 2
+- proto: ClothingNeckCloakTrans
+  entities:
+  - uid: 12815
+    components:
+    - type: Transform
       pos: -0.13286686,29.66557
-      parent: 12
+      parent: 2
 - proto: ClothingNeckScarfStripedBlue
   entities:
   - uid: 12816
@@ -81904,15 +81906,15 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 54.5,-26.5
-      parent: 12
+      parent: 2
 - proto: ComputerScienceXenobiologyBounty
   entities:
-  - uid: 23445
+  - uid: 13036
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -41.5,-49.5
-      parent: 12
+      parent: 2
 - proto: ComputerShuttleCargo
   entities:
   - uid: 13037
@@ -101373,7 +101375,7 @@ entities:
     components:
     - type: Transform
       pos: -13.48246,53.407932
-      parent: 12
+      parent: 2
 - proto: FoodApple
   entities:
   - uid: 16081
@@ -146193,24 +146195,24 @@ entities:
     components:
     - type: Transform
       pos: -42.5,-30.5
-      parent: 12
+      parent: 2
 - proto: LockerScienceFilledXenobiology
   entities:
-  - uid: 1568
+  - uid: 22373
     components:
     - type: Transform
       pos: -45.5,-41.5
-      parent: 12
-  - uid: 15167
+      parent: 2
+  - uid: 22374
     components:
     - type: Transform
       pos: -45.5,-42.5
-      parent: 12
-  - uid: 17089
+      parent: 2
+  - uid: 22375
     components:
     - type: Transform
       pos: -40.5,-41.5
-      parent: 12
+      parent: 2
 - proto: LockerScientist
   entities:
   - uid: 905
@@ -166433,26 +166435,26 @@ entities:
     components:
     - type: Transform
       pos: 54.49004,14.54105
-      parent: 12
+      parent: 2
 - proto: SlimeGrinder
   entities:
-  - uid: 1520
+  - uid: 25713
     components:
     - type: Transform
       pos: -43.5,-41.5
-      parent: 12
+      parent: 2
 - proto: SlimeScannerXenobio
   entities:
-  - uid: 22632
+  - uid: 25714
     components:
     - type: Transform
       pos: -37.4958,-42.96097
-      parent: 12
-  - uid: 23444
+      parent: 2
+  - uid: 25715
     components:
     - type: Transform
       pos: -37.3083,-43.46097
-      parent: 12
+      parent: 2
 - proto: SMESAdvanced
   entities:
   - uid: 25716
@@ -169183,7 +169185,7 @@ entities:
       parent: 2
 - proto: SpawnPointVirologist
   entities:
-  - uid: 234440
+  - uid: 26192
     components:
     - type: Transform
       pos: -12.5,-59.5
@@ -173709,8 +173711,8 @@ entities:
     components:
     - type: Transform
       pos: -34.5,-44.5
-      parent: 12
-  - uid: 17099
+      parent: 2
+  - uid: 26869
     components:
     - type: Transform
       pos: -29.5,-44.5
@@ -202298,44 +202300,44 @@ entities:
     components:
     - type: Transform
       pos: -23.775642,-15.327034
-      parent: 12
+      parent: 2
 - proto: XenobioSlimeBabySpawner
   entities:
-  - uid: 17145
+  - uid: 31824
     components:
     - type: Transform
       pos: -45.5,-45.5
-      parent: 12
-  - uid: 22631
+      parent: 2
+  - uid: 31825
     components:
     - type: Transform
       pos: -44.5,-46.5
-      parent: 12
-  - uid: 23449
+      parent: 2
+  - uid: 31826
     components:
     - type: Transform
       pos: -45.5,-48.5
-      parent: 12
-  - uid: 23450
+      parent: 2
+  - uid: 31827
     components:
     - type: Transform
       pos: -37.5,-46.5
-      parent: 12
-  - uid: 23451
+      parent: 2
+  - uid: 31828
     components:
     - type: Transform
       pos: -38.5,-48.5
-      parent: 12
-  - uid: 23452
+      parent: 2
+  - uid: 31829
     components:
     - type: Transform
       pos: -37.5,-48.5
-      parent: 12
-  - uid: 23453
+      parent: 2
+  - uid: 31830
     components:
     - type: Transform
       pos: -37.5,-49.5
-      parent: 12
+      parent: 2
 - proto: Zipties
   entities:
   - uid: 31831

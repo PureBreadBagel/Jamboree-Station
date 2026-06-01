@@ -128,16 +128,6 @@
 
 - type: entity
   parent: PosterBase
-  id: PosterLegitGoobDurkPlush
-  name: "Durk Plushie Advertisement"
-  description: "A poster depicting some sort of plush character being delivered soon to a station near you"
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Structures/posters.rsi
-    state: goob_poster13_legit
-
-- type: entity
-  parent: PosterBase
   id: PosterLegitGoobWelderBomb
   name: "Dangers of Fuel Tanks"
   description: "A poster depicting a leaking fuel tank... something inside you wonders what would happen if you put a welding torch near it"
@@ -194,4 +184,4 @@
   components:
   - type: Sprite
     sprite: _Goobstation/Structures/posters.rsi
-    state: goob_poster2_contraband
+    state: goob_poster3_contraband

@@ -6,13 +6,7 @@
   components:
   - type: SlimeScanner
   - type: Sprite
-<<<<<<< HEAD
     sprite: _Goobstation/Xenobiology/Specific/Xenobiology/slime_scanner.rsi
-=======
-    noRot: true
-    sprite: _Goobstation/Xenobiology/Specific/Xenobiology/slime_scanner.rsi
-    drawdepth: HighFloorObjects
->>>>>>> 85bf46ff6f (Xenobiology & General improvements (bounty) (bloat included) (#5044))
     layers:
     - state: icon
     - state: analyzer

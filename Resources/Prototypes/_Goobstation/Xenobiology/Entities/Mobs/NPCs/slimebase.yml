@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Goob Station Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   abstract: true
   parent: [ SimpleMobBase, MobCombat ]
@@ -7,10 +11,10 @@
   components:
   - type: Appearance
   - type: Hunger
-    startingHunger: 50
+    startingHunger: 40
     thresholds:
-      Overfed: 250
-      Okay: 100
+      Overfed: 150
+      Okay: 75
       Peckish: 25 #Baby Slimes will begin hunting here, Adult Slimes will target their tamers here.
       Starving: 10
       Dead: 0
@@ -109,6 +113,12 @@
   - type: Body
     prototype: Slimes
     requiredLegs: 1
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Burn: 5
+    animation: WeaponArcPunch
+    soundHit: /Audio/Weapons/punch3.ogg
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-slimes
@@ -159,7 +169,7 @@
       state: base
       color: "#FFFFFF"
   - type: MobGrowth
-    hungerRequired: 100
+    hungerRequired: 75
     currentStage: baby
     stages:
       baby:
@@ -179,7 +189,7 @@
   description: It looks so much like jelly. I wonder what it tastes like?
   components:
   - type: MobGrowth
-    hungerRequired: 100
+    hungerRequired: 75
     currentStage: adult
     stages:
       baby:
@@ -201,4 +211,4 @@
     layers:
       - state: green
       - sprite: _Goobstation/Xenobiology/Mobs/slimesBaby.rsi
-    state: base
+        state: base

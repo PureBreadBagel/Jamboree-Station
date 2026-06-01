@@ -102,6 +102,14 @@ public sealed class HereticSystem : EntitySystem
         Subs.CVar(_cfg, GoobCVars.AscensionRequiresObjectives, value => _ascensionRequiresObjectives = value, true);
     }
 
+    private void OnPolymorphed(Entity<HereticComponent> ent, ref PolymorphedEvent args)
+    {
+        if (args.IsRevert)
+            return;
+
+        _polymorph.CopyPolymorphComponent<HereticComponent>(ent, args.NewEntity);
+    }
+
     private void OnRestart(RoundRestartCleanupEvent ev)
     {
         _timer = 0f;
@@ -209,11 +217,7 @@ public sealed class HereticSystem : EntitySystem
             _eye.SetVisibilityMask(ent, eye.VisibilityMask | HereticVisFlags, eye);
 
         foreach (var k in ent.Comp.BaseKnowledge)
-            _knowledge.AddKnowledge(ent, ent.Comp, k, research: false);
-
-        // in case of polymorph
-        foreach (var k in ent.Comp.ResearchedKnowledge)
-            _knowledge.AddKnowledge(ent, ent.Comp, k, research: false);
+            _knowledge.AddKnowledge(ent, ent.Comp, k);
 
         if (ent.Comp.KnowledgeRequiredTags.Count == 0)
             GenerateRequiredKnowledgeTags(ent);

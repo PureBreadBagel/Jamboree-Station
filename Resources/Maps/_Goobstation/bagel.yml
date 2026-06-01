@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/23/2025 08:37:00
-  entityCount: 25026
+  time: 12/30/2025 02:58:58
+  entityCount: 25061
 maps:
 - 1
 grids:
@@ -62764,7 +62764,7 @@ entities:
       parent: 2
 - proto: ComputerScienceXenobiologyBounty
   entities:
-  - uid: 25025
+  - uid: 9551
     components:
     - type: Transform
       pos: -67.5,0.5
@@ -71155,32 +71155,32 @@ entities:
     - type: Transform
       pos: -40.5,22.5
       parent: 2
-  - uid: 25009
+  - uid: 10905
     components:
     - type: Transform
       pos: -71.5,1.5
       parent: 2
-  - uid: 25010
+  - uid: 10906
     components:
     - type: Transform
       pos: -71.5,-2.5
       parent: 2
-  - uid: 25011
+  - uid: 10907
     components:
     - type: Transform
       pos: -75.5,-2.5
       parent: 2
-  - uid: 25012
+  - uid: 10908
     components:
     - type: Transform
       pos: -75.5,1.5
       parent: 2
-  - uid: 25013
+  - uid: 10909
     components:
     - type: Transform
       pos: -67.5,1.5
       parent: 2
-  - uid: 25014
+  - uid: 10910
     components:
     - type: Transform
       pos: -67.5,-2.5
@@ -110650,7 +110650,7 @@ entities:
       parent: 2
 - proto: LockerScienceFilledXenobiology
   entities:
-  - uid: 16591
+  - uid: 16646
     components:
     - type: Transform
       pos: -66.5,0.5
@@ -110660,12 +110660,12 @@ entities:
     - type: Transform
       pos: -65.5,0.5
       parent: 2
-  - uid: 16593
+  - uid: 16648
     components:
     - type: Transform
       pos: -63.5,0.5
       parent: 2
-  - uid: 25026
+  - uid: 16649
     components:
     - type: Transform
       pos: -64.5,0.5
@@ -128634,7 +128634,7 @@ entities:
       parent: 2
 - proto: SlimeGrinder
   entities:
-  - uid: 25008
+  - uid: 19531
     components:
     - type: Transform
       pos: -71.5,0.5
@@ -158225,55 +158225,55 @@ entities:
     components:
     - type: Transform
       pos: -16.536282,-2.5396385
-      parent: 24675
+      parent: 24729
 - proto: XenobioSlimeBabySpawner
   entities:
-  - uid: 25015
+  - uid: 24705
     components:
     - type: Transform
       pos: -74.5,3.5
       parent: 2
-  - uid: 25016
+  - uid: 24706
     components:
     - type: Transform
       pos: -73.5,3.5
       parent: 2
-  - uid: 25017
+  - uid: 24707
     components:
     - type: Transform
       pos: -73.5,2.5
       parent: 2
-  - uid: 25018
+  - uid: 24708
     components:
     - type: Transform
       pos: -72.5,2.5
       parent: 2
-  - uid: 25019
+  - uid: 24709
     components:
     - type: Transform
       pos: -73.5,-3.5
       parent: 2
-  - uid: 25020
+  - uid: 24710
     components:
     - type: Transform
       pos: -74.5,-4.5
       parent: 2
-  - uid: 25021
+  - uid: 24711
     components:
     - type: Transform
       pos: -72.5,-4.5
       parent: 2
-  - uid: 25022
+  - uid: 24712
     components:
     - type: Transform
       pos: -68.5,-3.5
       parent: 2
-  - uid: 25023
+  - uid: 24713
     components:
     - type: Transform
       pos: -69.5,-4.5
       parent: 2
-  - uid: 25024
+  - uid: 24714
     components:
     - type: Transform
       pos: -69.5,-2.5
