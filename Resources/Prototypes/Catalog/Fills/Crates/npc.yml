@@ -290,9 +290,9 @@
   id: CrateNPCMothroach
   parent: CrateLivestock
   name: crate of mothroaches
-  description: A crate containing four mothroaches.
+  description: A crate containing five mothroaches.
   components:
   - type: StorageFill
     contents:
       - id: MobMothroach
-        amount: 4
+        amount: 5
