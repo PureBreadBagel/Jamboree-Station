@@ -108,7 +108,7 @@
     Food:
       effects:
       - !type:SatiateHunger
-        factor: 0.15
+        factor: 0.05
 
 - type: reagent
   id: Ketchunaise
@@ -123,9 +123,9 @@
     Food:
       effects:
       - !type:SatiateHunger
-        factor: 0.3
+        factor: 0.03
       - !type:SatiateThirst
-        factor: -0.1
+        factor: -0.01
 
 - type: reagent
   id: LaughinSyrup
@@ -150,9 +150,9 @@
     Food:
       effects:
       - !type:SatiateHunger
-        factor: 0.15
+        factor: 0.015
       - !type:SatiateThirst
-        factor: -0.1
+        factor: -0.01
 
 - type: reagent
   id: Mustard
@@ -167,7 +167,7 @@
     Food:
       effects:
       - !type:SatiateHunger
-        factor: 0.1
+        factor: 0.01
 
 - type: reagent
   id: Vinaigrette
