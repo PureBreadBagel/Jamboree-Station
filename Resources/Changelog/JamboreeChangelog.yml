@@ -1454,3 +1454,36 @@ Entries:
         virology related machines!
   id: 129
   time: '2026-05-27T06:11:04.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Fix
+      message: The eggman suit doesnt spawn with twice the components anymore.
+    - type: Fix
+      message: The food synthesiser is craftable via fabricators once researched.
+    - type: Fix
+      message: >-
+        the slimes no longer entity leak, when they are deleted all components
+        associated with them gets deleted.
+    - type: Fix
+      message: The Sol Shield now loads their sprite correctly
+    - type: Tweak
+      message: EntityTests have been updated to exclude audio, along with extra fixes
+    - type: Fix
+      message: >-
+        The Bluespace Vial and Barber Scissors no longer give you more items
+        when you dissasemble them. No more inflation!
+    - type: Fix
+      message: Most maps have been fixed to no longer have invalid NetworkIDs
+    - type: Fix
+      message: >-
+        BSOs were still running rampant on stations as their spawns werent
+        removed! They have been removed for a future BSO rework...Long live
+        BSOs...
+    - type: Fix
+      message: Config files dont get saved for playtime when theres no cfg file.
+    - type: Tweak
+      message: The Food Synthesiser can create Coldsauce.
+    - type: Tweak
+      message: 'Some condiments restore tiny amounts of hunger. '
+  id: 130
+  time: '2026-06-02T21:42:47.0000000+00:00'
