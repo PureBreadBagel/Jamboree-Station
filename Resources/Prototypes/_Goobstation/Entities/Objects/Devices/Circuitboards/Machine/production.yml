@@ -163,6 +163,12 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+    - type: PhysicalComposition
+      materialComposition:
+        Glass: 5
+        Steel: 5
+      chemicalComposition:
+        Silicon: 5
 
 - type: entity
   id: EnergySodaDispenserMachineCircuitboard
@@ -178,12 +184,17 @@
       Manipulator: 1
       Glass: 5
       Steel: 5
-      BSCrystal: 1
-
+      BSCrystal: 2
     tagRequirements:
       GlassBeaker:
         amount: 2
         defaultPrototype: Beaker
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 5
+      Steel: 5
+    chemicalComposition:
+      Silicon: 5
 
 
 

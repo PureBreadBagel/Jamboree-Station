@@ -37329,7 +37329,7 @@ entities:
         vinyl: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: 1950
+
 - proto: WallmountTelescreen
   entities:
   - uid: 3449

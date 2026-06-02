@@ -18103,8 +18103,7 @@ entities:
       pos: -28.5,3.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 1642
   - uid: 2663
@@ -18114,8 +18113,7 @@ entities:
       pos: -28.5,-2.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 1642
   - uid: 2710
@@ -18125,8 +18123,7 @@ entities:
       pos: -29.5,-4.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 1642
   - uid: 2711
@@ -18136,8 +18133,7 @@ entities:
       pos: -29.5,5.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 1642
 - proto: WeaponEnergyTurretAIControlPanel

@@ -123707,8 +123707,7 @@ entities:
       pos: 76.5,-18.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 6734
       - 8646
@@ -123718,8 +123717,7 @@ entities:
       pos: 89.5,-17.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 6734
       - 8646
@@ -123729,8 +123727,7 @@ entities:
       pos: 83.5,-11.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 6734
       - 8646
@@ -123740,8 +123737,7 @@ entities:
       pos: 83.5,-17.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 6734
       - 8646
@@ -123751,8 +123747,7 @@ entities:
       pos: 89.5,-11.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 6734
       - 8646
@@ -123793,8 +123788,7 @@ entities:
       pos: 77.5,-15.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 6735
       - 8646
