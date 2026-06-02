@@ -142,7 +142,7 @@ public sealed class StandingStateSystem : EntitySystem
         if (standingState.LifeStage <= ComponentLifeStage.Starting)
             return true;
 
-        if (playSound)
+        if (playSound && !EntityManager.IsQueuedForDeletion(uid))
         {
             _audio.PlayPredicted(standingState.DownSound, uid, uid);
         }

@@ -28,9 +28,12 @@ public partial class XenobiologySystem
         if (!_net.IsServer) return;
 
         // it sucks but it works and now y*ml warriors can add more slimes 500% faster
+        var coords = Transform(ent).Coordinates;
         var slime = SpawnSlime(ent, ent.Comp.BasePrototype, ent.Comp.Breed);
         if (!slime.HasValue)
-            return;
+        return;
+
+        var slimeUID = slime.Value.Owner;
 
         var s = slime.Value.Comp;
         // every xenobio slime copy is personalized. feel free to tweak it as you like
@@ -39,6 +42,10 @@ public partial class XenobiologySystem
         s.MaxOffspring += _random.Next(-1, 2);
         s.ExtractsProduced += _random.Next(0, 2);
         s.MitosisHunger *= _random.NextFloat(.75f, 1.2f);
+
+        QueueDel(ent);
+        Transform(slimeUID).Coordinates = coords;
+
     }
 
     private void OnSlimeMapInit(Entity<SlimeComponent> ent, ref MapInitEvent args)

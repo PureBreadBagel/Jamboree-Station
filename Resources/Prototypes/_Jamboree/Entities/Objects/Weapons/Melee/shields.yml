@@ -1,4 +1,8 @@
-﻿- type: entity
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
   name: sol shield
   parent: [ BaseItem, BaseCommandContraband ]
   id: SolShield
@@ -7,7 +11,7 @@
   - type: Sprite
     sprite: _Jamboree/Objects/Weapons/Melee/Shields/solshield.rsi
     layers:
-    - states: icon
+    - state: icon
       map: [ "enum.ToggleableVisuals.Layer" ]
   - type: MeleeWeapon
     wideAnimationRotation: 65

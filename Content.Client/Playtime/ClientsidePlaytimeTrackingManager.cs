@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.CCVar;
 using Robust.Client.Player;
 using Robust.Shared.Network;
@@ -94,7 +98,7 @@ public sealed class ClientsidePlaytimeTrackingManager
             return;
         }
 
-        // At less than 1 minute of time diff, there's not much point, and saving regardless will brick tests
+        // At less than 1 minute of time diff, there's not much point
         // The reason this isn't checking for 0 is because TotalMinutes is fractional, rather than solely whole minutes
         if (timeDiffMinutes < 1)
             return;
@@ -103,6 +107,6 @@ public sealed class ClientsidePlaytimeTrackingManager
 
         _sawmill.Info($"Recorded {timeDiffMinutes} minutes of living playtime!");
 
-        _configurationManager.SaveToFile(); // We don't like that we have to save the entire config just to store playtime stats '^'
+      //  _configurationManager.SaveToFile();  We don't like that we have to save the entire config just to store playtime stats '^'
     }
 }

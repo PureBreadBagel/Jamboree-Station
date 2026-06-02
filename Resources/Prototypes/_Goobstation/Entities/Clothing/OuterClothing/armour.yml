@@ -462,7 +462,7 @@
     sprite: _ShitChap/Clothing/OuterClothing/Misc/ancient.rsi
 
 - type: entity
-  parent: [ClothingOuterStorageBase, ClothingOuterBaseToggleable] #changed from ClothingOuterArmorTemplar because it is not gonna be armor
+  parent: ClothingOuterBaseToggleable #changed from ClothingOuterArmorTemplar because it is not gonna be armor
   id: ClothingOuterArmorAdept
   name: adept robes
   description: The ideal outfit for burning the unfaithful.
@@ -488,7 +488,7 @@
     sprite: _ShitChap/Clothing/OuterClothing/Misc/clock.rsi
 
 - type: entity
-  parent: [ClothingOuterStorageBase, ClothingOuterBaseToggleable]
+  parent: ClothingOuterBaseToggleable
   id: ClothingOuterArmorMonk
   name: monk's habit
   description: A few steps above rended sackcloth.

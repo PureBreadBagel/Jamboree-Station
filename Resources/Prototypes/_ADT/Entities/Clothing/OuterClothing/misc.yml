@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 #Коробка с подтяжками (для клунь)
 
 - type: entity
@@ -56,15 +60,24 @@
     sprite: ADT/Clothing/Uniforms/Jumpsuit/empress_of_light.rsi
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: ClothingOuterBase
   id: ADTClothingOuterEggman
-  name: rotund scientist's suit #changed name
-  description: A suit modeled after a famous mad scientist. You feel a master plan forming inside of you... #changed description
+  name: rotund scientist's suit
+  description: A suit modeled after a famous mad scientist. You feel a master plan forming inside of you...
   components:
   - type: Sprite
     sprite: ADT/Clothing/OuterClothing/Misc/eggman.rsi
+
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+
   - type: Clothing
     sprite: ADT/Clothing/OuterClothing/Misc/eggman.rsi
-  - type: ToggleableClothing #Jamboree
+
+  - type: ToggleableClothing
     clothingPrototypes:
       head: ADTClothingHeadRobotnikHead

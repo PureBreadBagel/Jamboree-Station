@@ -83395,8 +83395,7 @@ entities:
       pos: -11.5,59.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12718
@@ -83405,8 +83404,7 @@ entities:
       pos: -4.5,59.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12719
@@ -83415,8 +83413,7 @@ entities:
       pos: -13.5,48.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12720
@@ -83425,8 +83422,7 @@ entities:
       pos: -13.5,55.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12721
@@ -83435,8 +83431,7 @@ entities:
       pos: -10.5,55.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12722
@@ -83445,8 +83440,7 @@ entities:
       pos: -10.5,49.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12723
@@ -83455,8 +83449,7 @@ entities:
       pos: -2.5,49.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12724
@@ -83465,8 +83458,7 @@ entities:
       pos: -2.5,55.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12725
@@ -83475,8 +83467,7 @@ entities:
       pos: 6.5,48.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12726
@@ -83485,8 +83476,7 @@ entities:
       pos: 1.5,58.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12727
@@ -83495,8 +83485,7 @@ entities:
       pos: 6.5,54.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12728
@@ -83505,8 +83494,7 @@ entities:
       pos: 2.5,45.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12729
@@ -83515,8 +83503,7 @@ entities:
       pos: -4.5,42.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12730
@@ -83525,8 +83512,7 @@ entities:
       pos: -6.5,45.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 10726
   - uid: 12731
