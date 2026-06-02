@@ -45,6 +45,11 @@
   flavor: sweet
   color: darkred
   recognizable: true
+  metabolisms:
+    Food:
+      effects:
+      - !type:SatiateHunger
+        factor: 0.2
 
 - type: reagent
   id: Coldsauce
@@ -54,6 +59,11 @@
   physicalDesc: reagent-physical-desc-cold
   flavor: cold
   color: skyblue
+  metabolisms:
+    Food:
+      effects:
+      - !type:SatiateHunger
+        factor: 0.2
 
 - type: reagent
   id: Cornoil
@@ -94,6 +104,11 @@
   flavor: tomato
   color: red
   recognizable: true
+  metabolisms:
+    Food:
+      effects:
+      - !type:SatiateHunger
+        factor: 0.15
 
 - type: reagent
   id: Ketchunaise
@@ -104,6 +119,13 @@
   flavor: ketchunaise
   color: "#fba399"
   recognizable: true
+  metabolisms:
+    Food:
+      effects:
+      - !type:SatiateHunger
+        factor: 0.3
+      - !type:SatiateThirst
+        factor: -0.1
 
 - type: reagent
   id: LaughinSyrup
@@ -124,6 +146,13 @@
   flavor: mayonnaise
   color: "#f9f5e5"
   recognizable: true
+  metabolisms:
+    Food:
+      effects:
+      - !type:SatiateHunger
+        factor: 0.15
+      - !type:SatiateThirst
+        factor: -0.1
 
 - type: reagent
   id: Mustard
@@ -134,6 +163,11 @@
   flavor: mustard
   color: "#ffdb58"
   recognizable: true
+  metabolisms:
+    Food:
+      effects:
+      - !type:SatiateHunger
+        factor: 0.1
 
 - type: reagent
   id: Vinaigrette
