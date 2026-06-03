@@ -197,8 +197,8 @@ language-Qiilour-description =
 
 language-Schechi-name = Schechi
 language-Schechi-description =
-    The language of Resomi, primarily featuring frontal sounds made without rounding. Fluent speakers sound quite close to birdsong.
-
+    The language of Avali, primarily featuring frontal sounds made without rounding. Fluent speakers sound quite close to birdsong.
+# changed for jamboree
 language-NewKinPidgin-name = Ka'rakk
 language-NewKinPidgin-description = A language which has been developed by combining elements of various Vox languages.
     Many Vox who speak this language lement that they cannot speak the "true" Vox language, often the one that is native to their clan.
