@@ -41,30 +41,30 @@
   - type: Sprite
     layers:
     - state: icon-base
-      color: "#3c6381"
+      color: "#41579a"
     - state: icon-sling
-      color: "#d6a033"
+      color: "#0c3507"
     - state: icon-clasp
       color: "#f6d56a"
   - type: Clothing
     clothingVisuals:
       back:
       - state: base-equipped-BACKPACK
-        color: "#3c6381"
+        color: "#41579a"
       - state: sling-equipped-BACKPACK
-        color: "#d6a033"
+        color: "#0c3507"
       - state: clasp-equipped-BACKPACK
         color: "#f6d56a"
   - type: Item
     inhandVisuals:
       left:
       - state: base-inhand-left
-        color: "#3c6381"
+        color: "#41579a"
       - state: clasp-inhand-left
         color: "#f6d56a"
       right:
       - state: base-inhand-right
-        color: "#3c6381"
+        color: "#41579a"
       - state: clasp-inhand-right
         color: "#f6d56a"
 

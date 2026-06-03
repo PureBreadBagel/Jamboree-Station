@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# ACO Lockers
+- type: entity
+  id: LockerACO
+  parent: LockerBaseSecure
+  name: ACO locker
+  description: A standard-issue Nanotrasen storage unit. Contains the supplies needed for a stand-in captain.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: Structures/Storage/closet.rsi
+  - type: AccessReader
+    access: [["Command"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: cap
+    stateDoorOpen: cap_open
+    stateDoorClosed: aco_door

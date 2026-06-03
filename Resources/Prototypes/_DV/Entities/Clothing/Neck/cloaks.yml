@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ClothingNeckBase, BaseCommandContraband]
   id: ClothingNeckCloakMystagogue
   name: research director's other cloak #credit to impstation for the original idea
   #suffix: Delta-V (credit to DV but we don't have a suffix like this)
@@ -15,9 +15,9 @@
     sprite: _DV/Clothing/Neck/Cloaks/mystacloak.rsi
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ClothingNeckBase, BaseCommandContraband]
   id: ClothingNeckCloakBoat
-  name: NanoTrasen boat cloak
+  name: nanoTrasen boat cloak #decapitalization
   description: A regal blue durathread boat cloak with a red felt lining and gold trim. Somehow, it's even more expensive than it looks.
   components:
   - type: Sprite
@@ -50,7 +50,7 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckCloakWitchCloak
-  name: Witch's cloak
+  name: witch's cloak
   description: a comfortable and encompassing brown cloak that comes up over your face.
   components:
   - type: Sprite
@@ -73,10 +73,10 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ClothingNeckBase, BaseCommandContraband]
   id: ClothingNeckHeadOfSecurityCloakBoat
   name: head of security boat cloak
-  description: A rish gray durathread boat cloak with a red felt lining and gold trim. Somehow, it's even more expensive than it looks.
+  description: A rish gray durathread boat cloak with a red felt lining and gold trim. Somehow, it's even more expensive than it looks. It includes a sewn in bodycam. #Jamboree, credit to Ratbite for the idea
   components:
   - type: Sprite
     sprite: _DV/Clothing/Neck/Cloaks/boatcloakhos.rsi
@@ -85,3 +85,27 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+  - type: DeviceNetwork # Jamboree, adding bodycams to the HOS mantles/cloaks/etc.
+    deviceNetId: Wired # :clueless:
+    receiveFrequencyId: SurveillanceCameraSecurity
+    transmitFrequencyId: SurveillanceCamera
+  - type: SurveillanceCamera
+    networkSet: true
+    nameSet: True
+    mobile: True  # Goobstation - mobile cameras fix
+    id: Bodycam
+  - type: Eye
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: SurveillanceCameraMicrophone
+    blacklist:
+      components:
+      - SurveillanceCamera
+      - SurveillanceCameraMonitor
+      - RadioSpeaker
+  - type: ActiveListener
+    range: 10
+  - type: ClothingGrantComponent
+    component:
+    - type: StationAiVision
+      range: 4

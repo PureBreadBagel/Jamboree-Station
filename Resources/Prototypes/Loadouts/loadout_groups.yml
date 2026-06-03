@@ -355,9 +355,10 @@
   - CaptainHead
   - CaptainCap
   - CaptainBeret
+  - CaptainCavalier #DV
   - CaptainCrusherCap #imp
   - CaptainTricorne #imp
-  - CaptainCavalier #DV
+
 
 - type: loadoutGroup
   id: CaptainGlasses #all imp
@@ -386,11 +387,12 @@
   - CaptainCloak
   - CaptainCloakFormal
   - CaptainMantle
+  - CaptainBoatCloak # DeltaV
   - VeteranCaptainCloak # goob
   - VeteranCaptainMantle # ADT
   - CaptainGreatcoat # imp
   - CaptainAdmiralCloak # imp
-  - CaptainBoatCloak # DeltaV
+
 
 - type: loadoutGroup
   id: CaptainBackpack
@@ -1760,10 +1762,11 @@
   - HeadofSecurityHead
   - HeadofSecurityBeret
   - HeadofSecuritySpecialBeret # Goobstation
+  - HeadofSecurityCavalier # DeltaV
   - HoSCowboy #Delta V
   - HOSBucket #TP
   - HOSUshanka #Jamboree, GoobResprite & reuse
-  - HeadofSecurityCavalier # DeltaV
+
 
 - type: loadoutGroup
   id: HeadofSecurityJumpsuit
@@ -1783,11 +1786,12 @@
   name: loadout-group-head-of-security-neck
   minLimit: 0
   loadouts:
+  - Bodycam # Goobstation - Body cameras
   - HeadofSecurityCloak
   - HeadofSecurityMantle
-  - HeadofSecurityGreatcoat #imp
   - HeadOfSecurityCloakBoat #dv
-  - Bodycam # Goobstation - Body cameras
+  - HeadofSecurityGreatcoat #imp
+
 
 - type: loadoutGroup
   id: HeadofSecurityOuterClothing
