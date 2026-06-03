@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- files: ["alien_teleport"]
+  license: "CC-BY-4.0"
+  copyright: 'Darkrell, JustAdler'
+  source: "https://github.com/ss14Starlight/space-station-14"

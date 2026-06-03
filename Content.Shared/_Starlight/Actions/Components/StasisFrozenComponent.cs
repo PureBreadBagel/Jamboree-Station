@@ -1,0 +1,24 @@
+// SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Robust.Shared.GameStates;
+using Content.Shared._Starlight.Actions.EntitySystems;
+
+namespace Content.Shared._Starlight.Actions.Components;
+
+/// <summary>
+/// Component that prevents an entity from performing most actions while in stasis.
+/// This component is automatically added when an entity enters stasis and removed when they exit.
+/// It blocks movement, interaction, speech, and other actions, but allows the exit stasis action.
+/// </summary>
+[RegisterComponent, Access(typeof(SharedStasisFrozenSystem))]
+[NetworkedComponent, AutoGenerateComponentState]
+public sealed partial class StasisFrozenComponent : Component
+{
+    /// <summary>
+    /// Whether the player is also muted while in stasis.
+    /// When true, prevents the entity from speaking or emoting.
+    /// </summary>
+    [DataField, AutoNetworkedField] public bool Muted = false;
+}

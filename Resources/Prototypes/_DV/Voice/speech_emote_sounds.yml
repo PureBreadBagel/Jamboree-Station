@@ -103,6 +103,12 @@
       path: /Audio/_Goobstation/Voice/surprised.ogg
     Mars: # jamboree - juice that makes you mar
       path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
+    Scree: # Omu, give harpy more emotes
+      collection: ResomiScrees
+    Call: # Omu, give harpy more emotes
+      collection: ResomiCalls
+    Squawk: # Omu, give harpy more emotes
+      collection: ResomiSquawk
 
 - type: emoteSounds
   id: SoundsHarpyMale
@@ -189,6 +195,12 @@
       collection: Mars
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Scree: # Omu, give harpy more emotes
+      collection: ResomiScrees
+    Call: # Omu, give harpy more emotes
+      collection: ResomiCalls
+    Squawk: # Omu, give harpy more emotes
+      collection: ResomiSquawk
 
 - type: emoteSounds
   id: FemaleVulpkanin

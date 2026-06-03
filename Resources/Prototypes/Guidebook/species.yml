@@ -50,6 +50,7 @@
     - Plasmaman
     - Feroxi
     - Goblin # Frontier
+    - Avali # Starlight
 
 - type: guideEntry
   id: Arachnid
@@ -141,3 +142,8 @@
   id: Plasmaman
   name: species-name-plasmaman
   text: "/ServerInfo/Guidebook/Mobs/Plasmaman.xml"
+
+- type: guideEntry # Starlight
+  id: Avali
+  name: species-name-avali
+  text: "/ServerInfo/Guidebook/Mobs/Avali.xml"
