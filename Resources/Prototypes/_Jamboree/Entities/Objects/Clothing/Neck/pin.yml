@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCommandContraband]
+  id: ClothingNeckPinACO
+  name: acting commanding officer's pin
+  description: A blue pin with a gold star on it for the stand-in for a captain. Only for good noodles!
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Neck/Pins/ACO.rsi
