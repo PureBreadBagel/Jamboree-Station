@@ -1487,3 +1487,19 @@ Entries:
       message: 'Some condiments restore tiny amounts of hunger. '
   id: 130
   time: '2026-06-02T21:42:47.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the ACO locker as a pre-made locker! It is currently umapped, but
+        comes with a special pin to denote you are the ACO!
+    - type: Tweak
+      message: >-
+        The Head of Personnel's clothing has been made to be all of one color
+        scheme (That being more similar to Wizden)!
+    - type: Fix
+      message: >-
+        All captain clothing sprites have been recolored so they are
+        synergistic! 
+  id: 131
+  time: '2026-06-03T10:09:20.0000000+00:00'
