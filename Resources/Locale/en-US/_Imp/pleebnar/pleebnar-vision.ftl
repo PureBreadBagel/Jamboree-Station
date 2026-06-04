@@ -1,7 +1,7 @@
 pleebnar-vision-none-name = none
 
-pleebnar-vision-1 = A pack of Newports.
-pleebnar-vision-1-name = Newports
+pleebnar-vision-1 = A pack of Nomads.
+pleebnar-vision-1-name = Nomads
 
 pleebnar-vision-2 = A field of flowers blooming.
 pleebnar-vision-2-name = Flowers
@@ -102,8 +102,8 @@ pleebnar-vision-33-name = Ranch Dressing
 pleebnar-vision-34 = A wheel turning unendingly.
 pleebnar-vision-34-name = Wheel
 
-pleebnar-vision-35 = A pack of Oldports.
-pleebnar-vision-35-name = Oldports
+pleebnar-vision-35 = A pack of Oldmads.
+pleebnar-vision-35-name = Oldmads
 
 pleebnar-vision-36 = An ocean of blood, you see a person is floating face down in it.
 pleebnar-vision-36-name = Blood
@@ -228,7 +228,7 @@ pleebnar-vision-75-name = Cradle
 pleebnar-vision-76 = Your mothers face covered in insects; she is smiling,
 pleebnar-vision-76-name = Bugs
 
-pleebnar-vision-77 = A gray alien being rolled up into a Newport cigarette.
+pleebnar-vision-77 = A gray alien being rolled up into a Nomad cigarette.
 pleebnar-vision-77-name = Grays
 
 pleebnar-vision-78 = You, standing over your own corpse.
@@ -249,7 +249,7 @@ pleebnar-vision-82-name = Church
 pleebnar-vision-83 = A family at around an empty dinner table; they have no faces.
 pleebnar-vision-83-name = Family
 
-pleebnar-vision-84 = You see a cyan haired imp whom is quickly enshrouded by white smoke.
+pleebnar-vision-84 = You see a devilish figure poking taller people with a pitchfork.
 pleebnar-vision-84-name = The imp
 
 pleebnar-vision-85 = A universe where everything is the same except 'alien' is spelled 'alian'.
@@ -267,7 +267,7 @@ pleebnar-vision-88-name = Futility
 pleebnar-vision-89 = Yourself and your surroundings from a birds-eye view.
 pleebnar-vision-89-name = Above
 
-pleebnar-vision-90 = The recently cooked flesh of a large bird, headlessly dancing -- a slow, almost sensual dance.
+pleebnar-vision-90 = The recently cooked flesh of a large bird, headlessly dancing -- a beautiful and complex dance.
 pleebnar-vision-90-name = Yurkey
 
 pleebnar-vision-91 = A large red arrow above your heard, pointing directly southwest of you.
@@ -399,7 +399,7 @@ pleebnar-vision-132-name = Idol
 pleebnar-vision-133 = A childhood friend you do not remember.
 pleebnar-vision-133-name = Familiarity
 
-pleebnar-vision-134 = A puddle of hyper-realistic scary blood
+pleebnar-vision-134 = A puddle of hyper-realistic scary blood.
 pleebnar-vision-134-name = Creepy
 
 pleebnar-vision-135 = A small green alien pledging allegiance to the logo of Nanotrasen.
@@ -435,8 +435,8 @@ pleebnar-vision-144-name = Preservation
 pleebnar-vision-145 = You see a butcher shop, with every cut of meat replaced by squares cut from finely embroidered carpets.
 pleebnar-vision-145-name = Carpet
 
-pleebnar-vision-146 = An animal made of liquid drinking itself.
-pleebnar-vision-146-name = Self-suck
+pleebnar-vision-146 = You see yourself from the perspective of a small green creature.
+pleebnar-vision-146-name = Self
 
 pleebnar-vision-147 = A disembodied heart, beating beneath the floor tiles.
 pleebnar-vision-147-name = Thumping
@@ -459,8 +459,8 @@ pleebnar-vision-152-name = Unleashed
 pleebnar-vision-153 = A cavernous hole in the station's hull. It's growing.
 pleebnar-vision-153-name = Decay
 
-pleebnar-vision-154 = A pack of Nowports.
-pleebnar-vision-154-name = Nowports
+pleebnar-vision-154 = A pack of Nowmads.
+pleebnar-vision-154-name = Nowmads
 
 pleebnar-vision-155 = Walking through twisting hallways of rusted metal. Cables hang from the ceiling like vines. The walls creak around you.
 pleebnar-vision-155-name = Derelict
