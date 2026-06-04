@@ -6,13 +6,7 @@
   cost: 1
   components:
   - type: LanguageSpeaker
-  countsTowardsMaxTraits: false
   languagesSpoken:
   - BieselEckeckyik
   languagesUnderstood:
   - BieselEckeckyik
-  requirements: # omu
-    - !type:SpeciesRequirement
-      species:
-        - Thaven
-      inverted: true
