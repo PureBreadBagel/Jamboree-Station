@@ -29,10 +29,10 @@
     state: plushie_goblin
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_NF/Voice/Goblin/goblin-scream-1.ogg
+      path: /Audio/_NF/Voice/Goblin/goblin_scream_1.ogg
   - type: EmitSoundOnLand
     sound:
-      path: /Audio/_NF/Voice/Goblin/goblin-cry-2.ogg
+      path: /Audio/_NF/Voice/Goblin/goblin_cry_2.ogg
   - type: EmitSoundOnCollide
     sound:
-      path: /Audio/_NF/Voice/Goblin/goblin-cry-2.ogg
+      path: /Audio/_NF/Voice/Goblin/goblin_cry_2.ogg
