@@ -1527,3 +1527,25 @@ Entries:
         we have on Jamboree. Check em out when pleebing around!
   id: 133
   time: '2026-06-04T06:13:37.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Ported Thaven, as seen on Impstation! They feature many cool new
+        mechanics, with their primary one being a mood system similar to borg
+        laws! Check them out the character creator and learn more by checking
+        the guidebook!
+    - type: Add
+      message: >-
+        Added Thaven related plants and alcohol from Gardenstation! Get yourself
+        some kelp brews!
+    - type: Add
+      message: >-
+        Added a Thaven and Goblin plushie from Impstation. Finally, my own
+        goblin to hold!
+    - type: Add
+      message: >-
+        Added Smiley Face toys and Teddy Bears from the Den! Cause I have am
+        smile writing this :)
+  id: 134
+  time: '2026-06-04T08:38:34.0000000+00:00'
