@@ -1511,3 +1511,19 @@ Entries:
         the character creation menu today!
   id: 132
   time: '2026-06-03T21:41:37.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added breaching charges and a breaching hammer, available to Security!
+        For when Cargonia decides to create a defense budget!
+    - type: Tweak
+      message: Shiva and Smile now have been reworked slightly!
+    - type: Tweak
+      message: Shiva is now able to be selected as a ghost role!
+    - type: Fix
+      message: >-
+        Some pleebnar visions have been changed to be more in line with content
+        we have on Jamboree. Check em out when pleebing around!
+  id: 133
+  time: '2026-06-04T06:13:37.0000000+00:00'
