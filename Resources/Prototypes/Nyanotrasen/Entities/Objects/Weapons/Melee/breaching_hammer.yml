@@ -22,7 +22,7 @@
         Piercing: 3
         Structural: 10
     soundHit:
-      path: /Audio/Nyanotrasen/Weapons/club.ogg
+      collection: MetalThud
     bluntStaminaDamageFactor: 1.50 # 15 stamina damage
 #  - type: MeleeStaminaCost
 #    swing: 10
