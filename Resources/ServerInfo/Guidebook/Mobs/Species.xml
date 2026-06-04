@@ -43,10 +43,12 @@ SPDX-License-Identifier: AGPL-3.0-or-later
   <Box>
     <GuideEntityEmbed Entity="MobPlasmaman" Caption="Plasmaman"/> <!-- Jamboree, doing this cause it was left out of the crew -->
     <GuideEntityEmbed Entity="MobChitinid" Caption="Chitinid"/> <!-- Jamboree, doing this so it isn't being cut off -->
+    <GuideEntityEmbed Entity="MobThaven" Caption="Thaven"/> <!-- Omu: ported from Impstation -->
     <GuideEntityEmbed Entity="MobFeroxi" Caption="Feroxi"/>
     <GuideEntityEmbed Entity="MobYowie" Caption="Yowie"/> <!-- Jamboree, return of the Yowie -->
-<!--    Frontier specific species -->
-    <GuideEntityEmbed Entity="MobGoblin" Caption="Goblin"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="MobGoblin" Caption="Goblin"/> <!-- Frontier specific species -->
 
     <GuideEntityEmbed Entity="MobAvali" Caption="Avali"/> <!-- Starlight -->
   </Box>

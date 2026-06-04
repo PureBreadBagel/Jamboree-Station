@@ -437,6 +437,9 @@
   available: false
   icon: Interface/Emotes/chirp.png
   whitelist:
+    tags:
+      - HarpyEmotes # Omu, allow harpy to chirp
+      - ThavenEmotes # gds
     components:
     - Nymph
     - Vocal

@@ -27,6 +27,11 @@
     containers:
       stash: !type:ContainerSlot {}
 
+## Plushies
+# imp comment: The difference between a "squeaky toy" and a "plushie" is that plushies have stashes and
+# are made of cloth (edible by moths). BaseSqueakyToy is at _DEN/Entities/Objects/Fun/toys.yml
+
+
 ## Rubber
 
 - type: entity
