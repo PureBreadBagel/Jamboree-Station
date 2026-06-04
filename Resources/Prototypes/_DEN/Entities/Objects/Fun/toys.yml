@@ -43,7 +43,7 @@
     price: 5
 
 - type: entity
-  parent: BaseSqueakyToy
+  parent: BasePlushie
   id: SqueakySmileyGuy
   name: smiley guy
   description: Socially acceptable toy for the kind of office desk worker whose job makes them want to become a serial killer. # also known as a "stress toy"

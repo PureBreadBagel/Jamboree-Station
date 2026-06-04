@@ -131,7 +131,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: BaseSqueakyToy
+  parent: BasePlushie
   id: PlushieHeartInsert
   name: plush heart insert
   description: "Fun fact: a plushie can survive just fine without this."
