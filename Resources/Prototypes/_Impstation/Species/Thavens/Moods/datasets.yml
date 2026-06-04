@@ -74,7 +74,6 @@
   - Salty Sweet Miso Cola Soup
   - Bread Dog
   - Mothroachburger
-  - Gunkslider # Omu
   - Eckeyiish kelpfry # omu, porting stuff from garden
   - Eckeyiish kelp stew # omu, porting stuff from garden
   - Kelp pods # omu, porting stuff from garden
@@ -141,7 +140,7 @@
   - Chief Medical Officer
   - Research Director
   - Head of Security
-  - Administrative Assistant
+  - Nanotrasen Representative
 
 - type: dataset
   id: ThavenMoodSpeechRestrictions
