@@ -1503,3 +1503,11 @@ Entries:
         synergistic! 
   id: 131
   time: '2026-06-03T10:09:20.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added Avali, a species of Space Raptors from Starlight! Avali-able in
+        the character creation menu today!
+  id: 132
+  time: '2026-06-03T21:41:37.0000000+00:00'
