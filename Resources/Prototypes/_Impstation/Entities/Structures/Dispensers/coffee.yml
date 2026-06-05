@@ -44,9 +44,7 @@
   suffix: Empty
   parent: ImpCoffeeMachine
   components:
-  - type: ReagentDispenser
   - type: Storage
-    openOnActivate: false
     whitelist:
       tags:
       - DrinkBottle
