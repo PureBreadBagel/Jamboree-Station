@@ -1561,3 +1561,24 @@ Entries:
         ability has also been made, since they can't move in space!
   id: 135
   time: '2026-06-05T06:21:58.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the Conspirator from Harmony, an RP focused antag! Check it out in
+        the guidebook and get ready for a conspiracy to form!
+    - type: Add
+      message: >-
+        Added Spacepresso machines! As of yet unmapped, but the disposable cups
+        that come with them are now in the both the Booze-o-Mat and the coffee
+        vendor!
+    - type: Add
+      message: >-
+        Added Caramexinin: A chemical which is supposed to combat the effects of
+        theobromine when consumed! Rejoice: Chocolate is back on the menu!
+    - type: Tweak
+      message: >-
+        Monkin' Donuts, after a big stock hit, has decided to include a wider
+        variety of donuts in it's vendors! 
+  id: 136
+  time: '2026-06-05T23:23:57.0000000+00:00'
