@@ -70,7 +70,7 @@
   id: CanilunztTranslator
   parent: [ TranslatorPoweredBase ]
   name: Canilunzt translator
-  description: Translates speech between Canilunzt and Galactic Common, allowing your local yeepers to communicate with the locals and vice versa!
+  description: Translates speech between Canilunzt and Tau-Ceti Basic, allowing your local yeepers to communicate with the locals and vice versa!
   components:
   - type: HandheldTranslator
     spoken:
@@ -87,7 +87,7 @@
   id: BubblishTranslator
   parent: [ TranslatorPoweredBase ]
   name: Bubblish translator
-  description: Translates speech between Bubblish and Galactic Common, helping communicate with slimes and slime people.
+  description: Translates speech between Bubblish and Tau-Ceti Basic, helping communicate with slimes and slime people.
   components:
   - type: HandheldTranslator
     spoken:
@@ -104,7 +104,7 @@
   id: NekomimeticTranslator
   parent: [ TranslatorPoweredBase ]
   name: Nekomimetic translator
-  description: Translates speech between Nekomimetic and Galactic Common, enabling you to communicate with your pet cats.
+  description: Translates speech between Nekomimetic and Tau-Ceti Basic, enabling you to communicate with your pet cats.
   components:
   - type: HandheldTranslator
     spoken:
@@ -138,7 +138,7 @@
   id: SolCommonTranslator
   parent: [ TranslatorPoweredBase ]
   name: Sol Common translator
-  description: Translates speech between Sol Common and Galactic Common. Like a true Earthman!
+  description: Translates speech between Sol Common and Tau-Ceti Basic. Like a true Earthman!
   components:
   - type: HandheldTranslator
     spoken:
@@ -155,7 +155,7 @@
   id: NovuNedericTranslator
   parent: [ TranslatorPoweredBase ]
   name: Novu-Nederic translator
-  description: Translates speech between Novu-Nederic and Galactic Common. Like a true Earthman!
+  description: Translates speech between Novu-Nederic and Tau-Ceti Basic. Like a true Earthman!
   components:
   - type: HandheldTranslator
     spoken:
@@ -172,7 +172,7 @@
   id: RootSpeakTranslator
   parent: [ TranslatorPoweredBase ]
   name: RootSpeak translator
-  description: Translates speech between RootSpeak and Galactic Common. You may now speak for the trees.
+  description: Translates speech between RootSpeak and Tau-Ceti Basic. You may now speak for the trees.
   components:
   - type: HandheldTranslator
     spoken:
@@ -189,7 +189,7 @@
   id: MofficTranslator
   parent: [ TranslatorPoweredBase ]
   name: Moffic translator
-  description: Translates speech between Moffic and Galactic Common, helping you understand the buzzes of your pet mothroach!
+  description: Translates speech between Moffic and Tau-Ceti Basic, helping you understand the buzzes of your pet mothroach!
   components:
   - type: HandheldTranslator
     spoken:
@@ -206,7 +206,7 @@
   id: XenoTranslator
   parent: [ TranslatorPoweredBase ]
   name: Xeno translator
-  description: Translates speech between Xeno and Galactic Common. This will probably not help you survive an encounter, though.
+  description: Translates speech between Xeno and Tau-Ceti Basic. This will probably not help you survive an encounter, though.
   components:
   - type: HandheldTranslator
     spoken:
@@ -352,7 +352,7 @@
   id: SchechiTranslator
   parent: [ TranslatorPoweredBase ]
   name: Schechi translator
-  description: Interprets the birdsong known as Schechi and translates it to Galactic Common. Primarily spoken by Resomi.
+  description: Interprets the birdsong known as Schechi and translates it to Tau-Ceti Basic. Primarily spoken by Avali.
   components:
   - type: HandheldTranslator
     spoken:
@@ -369,7 +369,7 @@
   id: GruntishTranslator
   parent: [ TranslatorPoweredBase ]
   name: Gruntish translator
-  description: Interprets the mess known as Gruntish and translates it to Galactic Common. Primarily spoken by oni.
+  description: Interprets the mess known as Gruntish and translates it to Tau-Ceti Basic. Primarily spoken by oni.
   components:
   - type: HandheldTranslator
     spoken:
