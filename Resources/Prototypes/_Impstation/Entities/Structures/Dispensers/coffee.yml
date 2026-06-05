@@ -39,12 +39,3 @@
   - type: StealTarget
     stealGroup: BoozeDispenser
 
-- type: entity
-  id: ImpCoffeeMachineEmpty
-  suffix: Empty
-  parent: ImpCoffeeMachine
-  components:
-  - type: Storage
-    whitelist:
-      tags:
-      - DrinkBottle
