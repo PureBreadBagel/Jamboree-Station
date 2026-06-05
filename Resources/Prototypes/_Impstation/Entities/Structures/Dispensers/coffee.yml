@@ -16,7 +16,7 @@
   - type: ReagentDispenser
   - type: Storage
     openOnActivate: false
-    storageWhitelist:
+    whitelist:
       tags:
       - DrinkBottle
   - type: StorageFill
@@ -45,7 +45,8 @@
   parent: ImpCoffeeMachine
   components:
   - type: ReagentDispenser
-    storageWhitelist:
+  - type: Storage
+    openOnActivate: false
+    whitelist:
       tags:
       - DrinkBottle
-    pack: EmptyInventory
