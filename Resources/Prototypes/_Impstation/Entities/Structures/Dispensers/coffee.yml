@@ -22,10 +22,12 @@
   - type: StorageFill
     contents:
     - id: DrinkCoffeeJug
-    - id: DrinkCreamCartonXL
+    - id: IMPDrinkJugMilkCream
     - id: DrinkSugarJug
     - id: DrinkIceJug
-    - id: DrinkSoyMilkCarton
+    - id: IMPDrinkJugMilk
+    - id: IMPDrinkJugMilkSoy
+    - id: IMPDrinkJugMilkOat
     - id: JugCaramexinin
   - type: Transform
     noRot: false
