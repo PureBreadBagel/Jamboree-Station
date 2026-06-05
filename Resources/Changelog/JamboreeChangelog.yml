@@ -1549,3 +1549,15 @@ Entries:
         smile writing this :)
   id: 134
   time: '2026-06-04T08:38:34.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Remove
+      message: 'Red Sun in the Sky has been removed from the Jukebox! '
+    - type: Tweak
+      message: Slightly changed the HoP's cap's texture. It is a little more blue!
+    - type: Fix
+      message: >-
+        Avali now properly fly faster while in Zero G. Clarification on their
+        ability has also been made, since they can't move in space!
+  id: 135
+  time: '2026-06-05T06:21:58.0000000+00:00'
