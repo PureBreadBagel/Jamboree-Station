@@ -13,7 +13,6 @@
       - state: coffeemachine
       - state: unshaded
         shader: unshaded
-  - type: ReagentDispenser
   - type: Storage
     openOnActivate: false
     whitelist:
