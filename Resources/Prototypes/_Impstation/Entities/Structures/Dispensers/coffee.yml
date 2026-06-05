@@ -25,7 +25,6 @@
     - id: DrinkCreamCartonXL
     - id: DrinkSugarJug
     - id: DrinkIceJug
-    - id: DrinkMilkCarton
     - id: DrinkSoyMilkCarton
     - id: JugCaramexinin
   - type: Transform
@@ -39,3 +38,12 @@
   - type: StealTarget
     stealGroup: BoozeDispenser
 
+- type: entity
+  id: ImpCoffeeMachineEmpty
+  suffix: Empty
+  parent: ImpCoffeeMachine
+  components:
+  - type: Storage
+    whitelist:
+      tags:
+      - DrinkBottle
