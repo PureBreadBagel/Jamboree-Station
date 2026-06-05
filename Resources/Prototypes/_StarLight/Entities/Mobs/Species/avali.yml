@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   save: false
   name: Urist McAvali
@@ -115,8 +119,8 @@
         Female: FemaleAvali
         Unsexed: MaleAvali # Omu end
     - type: MovementSpeedModifier
-      weightlessAcceleration: 1.6 # Avalis are specifically built to fly in low-g environments
-      weightlessFriction: 1
+      weightlessAcceleration: 3 # Avalis are specifically built to fly in low-g environments
+      weightlessFriction: 1 # changed to make even more noticeable flightwise
       weightlessModifier: 1
     - type: Damageable
       damageContainer: Biological
