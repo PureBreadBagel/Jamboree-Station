@@ -27,6 +27,7 @@
     DrinkTeacup: 5
     DrinkGreenTea: 5
     DrinkHotCoco: 5
+    DrinkDisposableCup: 5 #imp item
   contrabandInventory:
     DrinkTeapot: 2
     DrinkNothing: 2

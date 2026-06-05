@@ -9,10 +9,14 @@
 - type: vendingMachineInventory
   id: DonutInventory
   startingInventory:
+    FoodDonutPlain: 5 #Jamboree
     FoodDonutChocolate: 5
+    FoodDonutCaramel: 5 #Jamboree
     FoodDonutApple: 3
     FoodDonutPink: 3
+    FoodDonutHomer: 3 #Jamboree
     FoodDonutBungo: 3
+    FoodDonutMeat: 3 #Jamboree
   contrabandInventory:
     FoodBagel: 2
     FoodBagelPoppy: 2

@@ -1,0 +1,116 @@
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: JugCaramexinin
+  name: caramexinin jug
+  suffix: For Drinks, Full
+  description: A small portion of galaxythistle-derived sweetener. 5u in a coffee cup will prevent poisoning in animals!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: Caramexinin
+          Quantity: 150 #Jamboree, changed because it is weird for it to be so low
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-caramexinin
+
+#making milk and such as items since the coffee machine can't fit the soy milk and milk cartons
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: IMPDrinkJugMilk
+  name: milk jug
+  suffix: For Drinks, Full
+  description: Milk? In a jug? How novel!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: Milk
+          Quantity: 150 #Jamboree, changed because it is weird for it to be so low
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-milk
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: IMPDrinkJugMilkSoy
+  name: soy milk jug
+  suffix: For Drinks, Full
+  description: Soy milk? In a jug? How novel!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: MilkSoy
+          Quantity: 150 #Jamboree, changed because it is weird for it to be so low
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-milk-soy
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: IMPDrinkJugMilkCream
+  name: cream jug
+  suffix: For Drinks, Full
+  description: Cream? In a jug? How novel!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: Cream
+          Quantity: 150 #Jamboree, changed because it is weird for it to be so low
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-cream
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: IMPDrinkJugMilkOat
+  name: oat milk jug
+  suffix: For Drinks, Full
+  description: Oat milk? In a jug? How novel!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: MilkOat
+          Quantity: 150 #Jamboree, changed because it is weird for it to be so low
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-milk-oat
+
+# end stuff
+
+- type: entity
+  parent: DrinkBase
+  id: DrinkDisposableCup
+  name: disposable cup
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      Cardboard: 25
+  - type: ExaminableSolution
+    solution: drink
+  - type: FitsInDispenser
+    solution: drink
+  - type: Tag
+    tags:
+      - DrinkGlass
+  - type: Sprite
+    sprite: _Impstation/Objects/Consumable/Drinks/coffeecup.rsi
+    state: icon
+  - type: Appearance
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30

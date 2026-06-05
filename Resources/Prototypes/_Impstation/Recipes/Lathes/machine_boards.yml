@@ -1,0 +1,6 @@
+# Bar
+- type: latheRecipe
+  parent: [ BaseCircuitboardRecipe, BaseServiceMachineRecipeCategory ]
+  id: ImpCoffeeMachineCircuitboard
+  icon: { sprite:  _Impstation/Structures/coffeemachine.rsi, state: coffeemachine } # Imp
+  result: ImpCoffeeMachineCircuitboard
