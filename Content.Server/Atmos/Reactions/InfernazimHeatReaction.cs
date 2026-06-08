@@ -13,28 +13,27 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
         GasMixture mixture,
         IGasMixtureHolder? holder,
         AtmosphereSystem atmosphereSystem,
-        float heatScale)
+        float reactionDelta)
     {
-        if (heatScale <= 0f)
+        if (reactionDelta <= 0f)
             return ReactionResult.NoReaction;
 
-        const float targetTemperature = 7800f; // extremely hot gas
+        var temperature = mixture.Temperature;
+        const float targetTemperature = 7800f;
 
-        if (mixture.Temperature >= targetTemperature)
+        if (temperature >= targetTemperature)
             return ReactionResult.NoReaction;
 
-        var heatCap = atmosphereSystem.GetHeatCapacity(mixture, true);
-        if (heatCap <= Atmospherics.MinimumHeatCapacity)
+        var heatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true);
+        if (heatCapacity <= Atmospherics.MinimumHeatCapacity)
             return ReactionResult.NoReaction;
 
-        var deltaEnergy = (targetTemperature - mixture.Temperature) * heatCap * 0.08f / heatScale;
+        var deltaTemp = targetTemperature - temperature;
 
-        var newHeatCap = atmosphereSystem.GetHeatCapacity(mixture, true);
-        if (newHeatCap <= Atmospherics.MinimumHeatCapacity)
-            return ReactionResult.NoReaction;
+        var energyChange = deltaTemp * heatCapacity * 0.05f / reactionDelta;
 
         mixture.Temperature =
-            (mixture.Temperature * heatCap + deltaEnergy) / newHeatCap;
+            (temperature * heatCapacity + energyChange) / heatCapacity;
 
         return ReactionResult.Reacting;
     }

@@ -744,3 +744,25 @@
         - !type:ReagentThreshold
           reagent: Frezon
           min: 1
+
+- type: reagent
+  id: Infernazim
+  name: Infernazim
+  desc: Extremely high temperature atmospheric gas.
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#ff3b3b"
+
+  guideName: Infernazim
+  guideDesc: Extremely hot atmospheric reaction gas. You feel as if you're burning alive just being near it, yet feel it was created for a purpose.
+
+- type: reagent
+  id: Cryonxium
+  name: Cryonxium
+  desc: Extremely low temperature coolant gas.
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#3bc7ff"
+
+  guideName: Cryonxium
+  guideDesc: Ultra-cold atmospheric coolant gas used in cryogenic reactions, you think Frezon would be jealous of this?
