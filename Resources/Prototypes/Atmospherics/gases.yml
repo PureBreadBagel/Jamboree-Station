@@ -147,7 +147,7 @@
   gasOverlaySprite: /Textures/Effects/atmospherics.rsi
   gasOverlayState: infernazim
   gasMolesVisible: 0.2
-  color: ff5500
+  color: 9b0128
   reagent: Infernazim
   pricePerMole: 0.1
 
