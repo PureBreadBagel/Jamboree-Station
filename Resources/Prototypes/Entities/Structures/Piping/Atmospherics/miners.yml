@@ -204,7 +204,7 @@
 - type: entity
   name: infernazim gas miner
   parent: GasMinerBase
-  id: GasMinerNitrousOxide
+  id: GasMinerInfernazim
   components:
     - type: GasMiner
       spawnGas: Infernazim
