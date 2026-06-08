@@ -751,10 +751,15 @@
   desc: Extremely high temperature atmospheric gas.
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
-  color: "#ff3b3b"
+  color: "#9b0128"
+
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Ignite
 
   guideName: Infernazim
-  guideDesc: Extremely hot atmospheric reaction gas. You feel as if you're burning alive just being near it, yet feel it was created for a purpose.
+  guideDesc: Extremely hot atmospheric reaction gas. You feel as if you're burning alive just being near it, yet feel as if it was built from pity of the gods.
 
 - type: reagent
   id: Cryonxium
@@ -762,7 +767,15 @@
   desc: Extremely low temperature coolant gas.
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
-  color: "#3bc7ff"
+  color: "#63b4c6"
+
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cold: 5
 
   guideName: Cryonxium
   guideDesc: Ultra-cold atmospheric coolant gas used in cryogenic reactions, you think Frezon would be jealous of this?

@@ -145,7 +145,7 @@
   heatCapacityRatio: 1.5
   molarMass: 10
   gasOverlaySprite: /Textures/Effects/atmospherics.rsi
-  gasOverlayState: plasma
+  gasOverlayState: infernazim
   gasMolesVisible: 0.2
   color: ff5500
   reagent: Infernazim
@@ -158,7 +158,7 @@
   heatCapacityRatio: 1.5
   molarMass: 10
   gasOverlaySprite: /Textures/Effects/atmospherics.rsi
-  gasOverlayState: frezon
+  gasOverlayState: cryonxium
   gasMolesVisible: 0.2
   color: 66ccff
   reagent: Cryonxium
