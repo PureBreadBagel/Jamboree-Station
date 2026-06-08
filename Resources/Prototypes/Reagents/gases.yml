@@ -747,7 +747,7 @@
 
 - type: reagent
   id: Infernazim
-  name: Infernazim
+  name: reagent-name-infernazim
   desc: reagent-desc-infernazim
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
@@ -772,13 +772,10 @@
         multiplier: 0.2
       - !type:Ignite
 
-  guideName: Infernazim
-  guideDesc: Extremely hot atmospheric reaction gas. You feel as if you're burning alive just being near it, yet feel as if it was built from pity of the gods.
-
 
 - type: reagent
   id: Kaltrenoxide
-  name: Kaltrenoxide
+  name: reagent-name-kaltrenoxide
   desc: reagent-desc-kaltrenoxide
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
@@ -792,5 +789,3 @@
           types:
             Cold: 5
 
-  guideName: Kaltrenoxide
-  guideDesc: You think frezon would be jealous?
