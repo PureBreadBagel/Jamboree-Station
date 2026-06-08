@@ -153,13 +153,13 @@
 
 - type: gas
   id: 14
-  name: gases-cryonxium
+  name: gases-kaltrenoxide
   specificHeat: 1000
   heatCapacityRatio: 1.5
   molarMass: 10
   gasOverlaySprite: /Textures/Effects/atmospherics.rsi
-  gasOverlayState: cryonxium
+  gasOverlayState: kaltrenoxide
   gasMolesVisible: 0.2
   color: 66ccff
-  reagent: Cryonxium
+  reagent: Kaltrenoxide
   pricePerMole: 0.1

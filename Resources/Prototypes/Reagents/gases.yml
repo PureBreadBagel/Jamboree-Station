@@ -759,7 +759,10 @@
       - !type:HealthChange
         damage:
           types:
-            Heat: 6
+            Heat: 5
+      - !type:FlammableReaction
+        multiplier: 0.1
+      - !type:Ignite
 
   reactiveEffects:
     Flammable:
@@ -774,8 +777,8 @@
 
 
 - type: reagent
-  id: Cryonxium
-  name: Cryonxium
+  id: Kaltrenoxide
+  name: Kaltrenoxide
   desc: Extremely low temperature coolant gas.
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
@@ -789,5 +792,5 @@
           types:
             Cold: 5
 
-  guideName: Cryonxium
+  guideName: Kaltrenoxide
   guideDesc: Ultra-cold atmospheric coolant gas used in cryogenic reactions, you think Frezon would be jealous of this?

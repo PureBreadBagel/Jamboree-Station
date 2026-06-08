@@ -7,7 +7,7 @@ namespace Content.Server.Atmos.Reactions;
 
 [UsedImplicitly]
 [DataDefinition]
-public sealed partial class CryonxiumCoolantReaction : IGasReactionEffect
+public sealed partial class KaltrenoxideCoolantReaction : IGasReactionEffect
 {
     public ReactionResult React(
         GasMixture mixture,

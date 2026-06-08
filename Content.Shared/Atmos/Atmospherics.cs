@@ -293,7 +293,7 @@ namespace Content.Shared.Atmos
             [Gas.Tritium] = Loc.GetString("gas-tritium-abbreviation"),
             [Gas.WaterVapor] = Loc.GetString("gas-water-vapor-abbreviation"),
             [Gas.Infernazim] = Loc.GetString("gas-infernazim-abbreviation"),
-            [Gas.Cryonxium] = Loc.GetString("gas-cryonxium-abbreviation"),
+            [Gas.Kaltrenoxide] = Loc.GetString("gas-kaltrenoxide-abbreviation"),
         };
 
         #region Excited Groups
@@ -519,6 +519,6 @@ namespace Content.Shared.Atmos
 
         Infernazim = 13, // Jam! 7800K gas!
 
-        Cryonxium = 14, // Jam! 73K gas!
+        Kaltrenoxide = 14, // Jam! 73K gas!
     }
 }

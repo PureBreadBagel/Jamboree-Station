@@ -117,7 +117,7 @@
   - !type:N2ODecompositionReaction {}
 
 - type: gasReaction
-  id: CryonxiumCoolant
+  id: kaltrenoxideCoolant
   priority: 2
   minimumRequirements:
     - 0 # oxygen
@@ -134,9 +134,9 @@
     - 0 # nitrium
     - 0 # pluoxium
     - 0 # infernazim
-    - 0.01 # cryonxium
+    - 0.01 # kaltrenoxide
   effects:
-    - !type:CryonxiumCoolantReaction {}
+    - !type:KaltrenoxideCoolantReaction {}
 
 - type: gasReaction
   id: InfernazimHeat
@@ -156,7 +156,7 @@
     - 0 # nitrium
     - 0 # pluoxium
     - 0.01 # infernazim
-    - 0 # cryonxium
+    - 0 # kaltrenoxide
   effects:
     - !type:InfernazimHeatReaction {}
 

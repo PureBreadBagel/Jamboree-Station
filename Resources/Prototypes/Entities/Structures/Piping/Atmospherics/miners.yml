@@ -210,9 +210,9 @@
       spawnGas: Infernazim
 
 - type: entity
-  name: cryonxium gas miner
+  name: Kaltrenoxide gas miner
   parent: GasMinerBase
-  id: GasMinerCryonxium
+  id: GasMinerKaltrenoxide
   components:
     - type: GasMiner
-      spawnGas: Cryonxium
+      spawnGas: Kaltrenoxide
