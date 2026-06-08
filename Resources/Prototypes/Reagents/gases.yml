@@ -756,10 +756,22 @@
   metabolisms:
     Poison:
       effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Heat: 6
+
+  reactiveEffects:
+    Flammable:
+      methods: [ Touch ]
+      effects:
+      - !type:FlammableReaction
+        multiplier: 0.2
       - !type:Ignite
 
   guideName: Infernazim
   guideDesc: Extremely hot atmospheric reaction gas. You feel as if you're burning alive just being near it, yet feel as if it was built from pity of the gods.
+
 
 - type: reagent
   id: Cryonxium
