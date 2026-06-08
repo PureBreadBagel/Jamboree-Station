@@ -748,7 +748,7 @@
 - type: reagent
   id: Infernazim
   name: Infernazim
-  desc: Extremely high temperature atmospheric gas.
+  desc: A gas mined from the burning anger of a dying star. Its unnaturally warm it could turn you into a pile of ash...
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
   color: "#9b0128"
@@ -779,7 +779,7 @@
 - type: reagent
   id: Kaltrenoxide
   name: Kaltrenoxide
-  desc: Extremely low temperature coolant gas.
+  desc: You think frezon would be jealous? It feels unnaturally cold, as if the mere air has the same feeling as ice shards scratching a body to frostbite.
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
   color: "#63b4c6"
@@ -793,4 +793,4 @@
             Cold: 5
 
   guideName: Kaltrenoxide
-  guideDesc: Ultra-cold atmospheric coolant gas used in cryogenic reactions, you think Frezon would be jealous of this?
+  guideDesc: You think frezon would be jealous?

@@ -192,3 +192,5 @@ spray-painter-style-canisters-plasma = Plasma
 spray-painter-style-canisters-storage = Storage
 spray-painter-style-canisters-tritium = Tritium
 spray-painter-style-canisters-water-vapor = Water vapor
+spray-painter-style-canisters-kaltrenoxide = Kaltrenoxide
+spray-painter-style-canisters-infernazim = Infernazim
