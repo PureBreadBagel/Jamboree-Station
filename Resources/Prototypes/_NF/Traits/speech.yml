@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: trait
   id: GoblinAccent
   name: trait-goblin-accent-name
@@ -6,3 +10,12 @@
   cost: 2
   components:
   - type: GoblinAccent
+
+- type: trait
+  id: StreetPunkAccentTrait
+  name: trait-streetpunk-accent-name
+  description: trait-streetpunk-accent-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: StreetpunkAccent
