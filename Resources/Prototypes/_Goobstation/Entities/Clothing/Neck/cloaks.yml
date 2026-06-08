@@ -120,30 +120,6 @@
   - type: Clothing
     sprite: _Goobstation/Clothing/Neck/Cloaks/highcmdcape.rsi
 
-# High command cloak
-- type: entity
-  parent: [ClothingNeckBase, BaseCentcommContraband]
-  id: ClothingNeckCloakHighCommand
-  name: high central command cloak
-  description: A magnificent green cloak featuring luxurious gold-lined edges.
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Clothing/Neck/Cloaks/cchighcommand.rsi
-  - type: Clothing
-    sprite: _Goobstation/Clothing/Neck/Cloaks/cchighcommand.rsi
-
-# High command CAPE
-- type: entity
-  parent: [ClothingNeckBase, BaseCentcommContraband]
-  id: ClothingNeckCloakHighCommandCape
-  name: high central command cape
-  description: A lavish green-and-red cape decorated with gold trim and ornate epaulettes.
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Clothing/Neck/Cloaks/highcmdcape.rsi
-  - type: Clothing
-    sprite: _Goobstation/Clothing/Neck/Cloaks/highcmdcape.rsi
-
 # Golden central command cloak
 - type: entity
   parent: [ClothingNeckBase, BaseCentcommContraband]
