@@ -200,3 +200,19 @@
   components:
     - type: GasMiner
       spawnGas: NitrousOxide
+
+- type: entity
+  name: infernazim gas miner
+  parent: GasMinerBase
+  id: GasMinerNitrousOxide
+  components:
+    - type: GasMiner
+      spawnGas: Infernazim
+
+- type: entity
+  name: cryonxium gas miner
+  parent: GasMinerBase
+  id: GasMinerCryonxium
+  components:
+    - type: GasMiner
+      spawnGas: Cryonxium

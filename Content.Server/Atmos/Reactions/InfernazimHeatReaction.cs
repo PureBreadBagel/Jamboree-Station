@@ -1,6 +1,7 @@
 using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Reactions;
+using Content.Server.Radiation.Systems;
 using JetBrains.Annotations;
 
 namespace Content.Server.Atmos.Reactions;
@@ -9,6 +10,8 @@ namespace Content.Server.Atmos.Reactions;
 [DataDefinition]
 public sealed partial class InfernazimHeatReaction : IGasReactionEffect
 {
+    [Dependency] private readonly RadiationSystem _radiation = default!;
+
     public ReactionResult React(
         GasMixture mixture,
         IGasMixtureHolder? holder,
@@ -29,11 +32,20 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
             return ReactionResult.NoReaction;
 
         var deltaTemp = targetTemperature - temperature;
-
         var energyChange = deltaTemp * heatCapacity * 0.05f / reactionDelta;
 
         mixture.Temperature =
             (temperature * heatCapacity + energyChange) / heatCapacity;
+
+
+        if (holder != null)
+        {
+
+            _radiation.IrradiateEntity(
+                EntityUid.Invalid,
+                5f * reactionDelta,
+                reactionDelta);
+        }
 
         return ReactionResult.Reacting;
     }
