@@ -748,7 +748,7 @@
 - type: reagent
   id: Infernazim
   name: Infernazim
-  desc: A gas mined from the burning anger of a dying star. Its unnaturally warm it could turn you into a pile of ash...
+  desc: reagent-desc-infernazim
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
   color: "#9b0128"
@@ -779,7 +779,7 @@
 - type: reagent
   id: Kaltrenoxide
   name: Kaltrenoxide
-  desc: You think frezon would be jealous? It feels unnaturally cold, as if the mere air has the same feeling as ice shards scratching a body to frostbite.
+  desc: reagent-desc-kaltrenoxide
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
   color: "#63b4c6"
