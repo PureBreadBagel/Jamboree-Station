@@ -2,6 +2,7 @@ using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Reactions;
 using JetBrains.Annotations;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Atmos.Reactions;
 
@@ -19,7 +20,9 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
             return ReactionResult.NoReaction;
 
         var temperature = mixture.Temperature;
-        const float targetTemperature = 7800f;
+
+
+        const float targetTemperature = 6000f;
 
         if (temperature >= targetTemperature)
             return ReactionResult.NoReaction;
@@ -29,10 +32,12 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
             return ReactionResult.NoReaction;
 
         var deltaTemp = targetTemperature - temperature;
-        var energyChange = deltaTemp * heatCapacity * 0.05f / reactionDelta;
 
-        mixture.Temperature =
-            (temperature * heatCapacity + energyChange) / heatCapacity;
+        // Limit how much one tick can add so it does not instantly nuke the pipe net.
+        var maxStep = 750f * reactionDelta;
+        var step = MathF.Min(deltaTemp, maxStep);
+
+        mixture.Temperature = temperature + step;
 
         return ReactionResult.Reacting;
     }

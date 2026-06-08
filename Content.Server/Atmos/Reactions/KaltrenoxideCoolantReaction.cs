@@ -2,6 +2,7 @@ using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Reactions;
 using JetBrains.Annotations;
+using System;
 
 namespace Content.Server.Atmos.Reactions;
 
@@ -19,6 +20,8 @@ public sealed partial class KaltrenoxideCoolantReaction : IGasReactionEffect
             return ReactionResult.NoReaction;
 
         var temperature = mixture.Temperature;
+
+        // Cold but still safely above absolute zero
         const float targetTemperature = 73.15f;
 
         if (temperature <= targetTemperature)
@@ -30,10 +33,12 @@ public sealed partial class KaltrenoxideCoolantReaction : IGasReactionEffect
 
         var deltaTemp = targetTemperature - temperature;
 
-        var energyChange = deltaTemp * heatCapacity * 0.05f / reactionDelta;
+        // Rate limit cooling so it doesn't instantly collapse atmos pressure/TEG side
+        var maxStep = 500f * reactionDelta;
 
-        mixture.Temperature =
-            (temperature * heatCapacity + energyChange) / heatCapacity;
+        var step = MathF.Max(deltaTemp, -maxStep);
+
+        mixture.Temperature = temperature + step;
 
         return ReactionResult.Reacting;
     }
