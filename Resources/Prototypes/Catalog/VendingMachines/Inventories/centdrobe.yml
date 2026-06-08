@@ -27,6 +27,7 @@
     ClothingUniformJumpsuitCentcomOfficer: 3
     ClothingNeckCentcommCloakBoat: 3 # DeltaV - Centcomm Drip
     ClothingUniformJumpsuitCentcomOfficial: 3
+    ClothingUniformJumpskirtCentcomPencilSkirt: 3
     ClothingUniformJumpsuitCentcomAgent: 3
     ClothingUniformJumpsuitCentcomFormal: 3
     ClothingUniformJumpskirtCentcomFormalDress: 3
@@ -41,10 +42,18 @@
     ClothingOuterWinterCentcom: 3
     ClothingOuterWinterCCWarden: 3 #DV
     ClothingOuterCoatExpensive: 1
+    ClothingOuterArmoredJacketCentralCommand: 2
     ADTClothingBackpackWinRAR: 1 #ADT
     ClothingNeckScarfStripedCentcom: 3
     ClothingNeckCloakCentcom: 3
     ClothingNeckMantleCentcom: 3 #DV
+    ClothingNeckCloakHighCommand: 3
+    ClothingNeckCloakHighCommandCape: 2
+    ClothingNeckCloakCentComPoncho: 3
+    ClothingNeckMantleEpaulettes: 1
   contrabandInventory:
+    ClothingUniformJumpsuitGoldenLiaison: 2
+    ClothingNeckCloakGoldenCentComm: 2
+    ClothingHeadHatGoldCentcom: 2
     ToyFigurineCaptain: 1
     ToyFigurineHeadOfPersonnel: 1

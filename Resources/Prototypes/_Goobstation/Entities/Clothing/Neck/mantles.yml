@@ -19,3 +19,14 @@
   - type: Clothing
     sprite: _Goobstation/Clothing/Neck/Mantle/bsomantle.rsi
 
+#Central command epaulettes
+- type: entity
+  parent: [ ClothingNeckBase, BaseCentcommContraband ]
+  id: ClothingNeckMantleEpaulettes
+  name: golden epaulettes
+  description: Exquisitely-crafted gold epaulettes symbolizing admiralty within Central Command.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Neck/Mantle/epaulettes.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Neck/Mantle/epaulettes.rsi
