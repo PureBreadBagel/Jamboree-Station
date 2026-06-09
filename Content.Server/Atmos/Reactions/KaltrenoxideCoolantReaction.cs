@@ -36,7 +36,7 @@ public sealed partial class KaltrenoxideCoolantReaction : IGasReactionEffect
         if (heatCapacity <= Atmospherics.MinimumHeatCapacity)
         return ReactionResult.NoReaction;
 
-        const float coolingPerSecond = 700000f;
+        const float coolingPerSecond = 80000f;
         mixture.Temperature -= (coolingPerSecond * reactionDelta) / heatCapacity;
 
         return ReactionResult.Reacting;

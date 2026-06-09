@@ -35,7 +35,7 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
         if (heatCapacity <= Atmospherics.MinimumHeatCapacity)
          return ReactionResult.NoReaction;
 
-        const float energyPerSecond = 700000f;
+        const float energyPerSecond = 80000f;
 
         mixture.Temperature += (energyPerSecond * reactionDelta) / heatCapacity;
         return ReactionResult.Reacting;
