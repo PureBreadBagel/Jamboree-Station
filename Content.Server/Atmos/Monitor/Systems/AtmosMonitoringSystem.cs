@@ -228,12 +228,12 @@ public sealed class AtmosMonitorSystem : EntitySystem
                 if (component.TileGas != null)
                 {
                     var gases = new Dictionary<Gas, float>();
-                    if (component.GasThresholds != null)
+                    foreach (var gas in Enum.GetValues<Gas>())
                     {
-                        foreach (var gas in component.GasThresholds.Keys)
+                        var moles = component.TileGas.GetMoles(gas);
+                        if (moles > 0f)
                         {
-                            var fractionGas = component.TileGas.GetMoles(gas) / component.TileGas.TotalMoles;
-                            gases.Add(gas, fractionGas);
+                            gases[gas] = moles;
                         }
                     }
 
