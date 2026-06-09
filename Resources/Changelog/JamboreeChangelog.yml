@@ -1592,3 +1592,16 @@ Entries:
       message: Added the Streetpunk Accent Trait! Time to chrome the EFF up!
   id: 137
   time: '2026-06-08T02:28:58.0000000+00:00'
+- author: 'PureBreadBagel, Bibble, ProbablyNotADoctor, YoruMidnight '
+  changes:
+    - type: Add
+      message: >-
+        Nanotrasen just discovered 2 new gases, Infernazim and Kaltrenoxide!
+        They have their own sprites, along with their own gas miners! These
+        gasses are unnaturally warm...And Cold!
+    - type: Add
+      message: >-
+        There is new types of gan canisters for both Infernazim and
+        Kaltrenoxide. You can also spray paint these!
+  id: 138
+  time: '2026-06-09T05:27:10.0000000+00:00'
