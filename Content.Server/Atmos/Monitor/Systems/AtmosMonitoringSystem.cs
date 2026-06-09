@@ -230,11 +230,7 @@ public sealed class AtmosMonitorSystem : EntitySystem
                     var gases = new Dictionary<Gas, float>();
                     foreach (var gas in Enum.GetValues<Gas>())
                     {
-                        var moles = component.TileGas.GetMoles(gas);
-                        if (moles > 0f)
-                        {
-                            gases[gas] = moles;
-                        }
+                        gases.Add(gas, component.TileGas.GetMoles(gas));
                     }
 
                     payload.Add(AtmosDeviceNetworkSystem.SyncData, new AtmosSensorData(
