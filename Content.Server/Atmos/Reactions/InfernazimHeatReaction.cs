@@ -1,12 +1,8 @@
-// SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Reactions;
 using JetBrains.Annotations;
-using Robust.Shared.Utility;
+using System;
 
 namespace Content.Server.Atmos.Reactions;
 
@@ -23,25 +19,22 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
         if (reactionDelta <= 0f)
             return ReactionResult.NoReaction;
 
-        var temperature = mixture.Temperature;
-
-
-        const float targetTemperature = 6000f;
-
-        if (temperature >= targetTemperature)
-            return ReactionResult.NoReaction;
-
         var heatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true);
         if (heatCapacity <= Atmospherics.MinimumHeatCapacity)
             return ReactionResult.NoReaction;
 
-        var deltaTemp = targetTemperature - temperature;
+        const float energyPerSecond = 25000f;
+        const float maxDeltaTemp = 250f;
 
-        // Limit how much one tick can add so it does not instantly nuke the pipe net.
-        var maxStep = 750f * reactionDelta;
-        var step = MathF.Min(deltaTemp, maxStep);
+        var deltaTemp =
+            (energyPerSecond * reactionDelta) / heatCapacity;
 
-        mixture.Temperature = temperature + step;
+        deltaTemp = MathF.Min(deltaTemp, maxDeltaTemp * reactionDelta);
+
+        if (deltaTemp <= 0f)
+            return ReactionResult.NoReaction;
+
+        mixture.Temperature += deltaTemp;
 
         return ReactionResult.Reacting;
     }
