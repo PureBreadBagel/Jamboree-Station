@@ -1605,3 +1605,11 @@ Entries:
         Kaltrenoxide. You can also spray paint these!
   id: 138
   time: '2026-06-09T05:27:10.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Fix
+      message: >-
+        Fixed the client crashing for opening up the air alarm. (forgot to add
+        the 2 new gases into the gasthresholds...)
+  id: 139
+  time: '2026-06-09T16:34:21.0000000+00:00'
