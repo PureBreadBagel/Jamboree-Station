@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Reactions;
@@ -19,24 +23,21 @@ public sealed partial class KaltrenoxideCoolantReaction : IGasReactionEffect
         if (reactionDelta <= 0f)
             return ReactionResult.NoReaction;
 
+        var temperature = mixture.Temperature;
+
+        // Cold but still safely above absolute zero
+        const float targetTemperature = 73.15f;
+
+        if (temperature <= targetTemperature)
+            return ReactionResult.NoReaction;
+
         var heatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true);
+
         if (heatCapacity <= Atmospherics.MinimumHeatCapacity)
-            return ReactionResult.NoReaction;
+        return ReactionResult.NoReaction;
 
-        const float coolingPerSecond = 25000f;
-        const float minTemperature = 73.15f;
-        const float maxDeltaTemp = 250f;
-
-        var deltaTemp =
-            (coolingPerSecond * reactionDelta) / heatCapacity;
-
-        deltaTemp = MathF.Min(deltaTemp, maxDeltaTemp * reactionDelta);
-
-        if (deltaTemp <= 0f)
-            return ReactionResult.NoReaction;
-
-        var newTemp = mixture.Temperature - deltaTemp;
-        mixture.Temperature = MathF.Max(minTemperature, newTemp);
+        const float coolingPerSecond = 700000f;
+        mixture.Temperature -= (coolingPerSecond * reactionDelta) / heatCapacity;
 
         return ReactionResult.Reacting;
     }

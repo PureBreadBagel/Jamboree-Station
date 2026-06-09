@@ -209,7 +209,7 @@
   components:
     - type: GasMiner
       spawnGas: Infernazim
-      maxExternalPressure: 6000
+      maxExternalPressure: 1000
 - type: entity
   name: kaltrenoxide gas miner
   parent: GasMinerBase
