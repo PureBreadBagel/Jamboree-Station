@@ -184,3 +184,14 @@
   id: SandalShoe
   equipment:
     shoes: ClothingShoesSandals #goob
+
+# Shrine Maiden
+- type: loadout
+  id: ShrineWig
+  equipment:
+    head: ClothingHeadHatShrineMaidenWig
+
+- type: loadout
+  id: ShrineSuit
+  equipment:
+    outerClothing: ClothingOuterSuitShrineMaiden

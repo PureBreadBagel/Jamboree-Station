@@ -889,6 +889,8 @@
   - ChaplainWitchHatAlt
   - ClownMitre #jamboree addition
   - ChaplainWizard #jamboree addition
+  - ShrineWig #jamboree addition
+  - RastaHat #jambo
   - ChaplainHeadDruid #imp
   - ChaplainHeadMoon #imp
   - ChaplainHeadTidal #imp
@@ -951,6 +953,7 @@
   - ChaplainHoodie
   - ClownRobes #jamboree addition
   - ChaplainWizardRobe #jamboree addition
+  - ShrineSuit #jamboree addition
   - ChaplainOuterMoon #imp
   - ChaplainOuterSilent #imp
   - TechPriestSuit #nyanotrasen
@@ -2241,6 +2244,7 @@
   loadouts:
   - BoxerShorts
   - BoxerShortsWithTop
+  - GladiatorSuit # Jamboree
   # DV additions
   - WrestlerCostumeGreen
   - WrestlerCostumeRed
@@ -2262,6 +2266,7 @@
   minLimit: 0
   loadouts:
   - BoxerDominoMask
+  - GladiatorHelm # Jamboree
   - WrestlingMaskLuchaRed
   - WrestlingMaskLuchaBlue
 
