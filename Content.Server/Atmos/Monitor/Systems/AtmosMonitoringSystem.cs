@@ -228,9 +228,11 @@ public sealed class AtmosMonitorSystem : EntitySystem
                 if (component.TileGas != null)
                 {
                     var gases = new Dictionary<Gas, float>();
-                    foreach (var gas in Enum.GetValues<Gas>())
+                    foreach (var (gas, threshold) in allThresholdData.GasThresholds)
                     {
-                        gases.Add(gas, component.TileGas.GetMoles(gas));
+                        var fractionGas = component.TileGas.GetMoles(gas) / component.TileGas.TotalMoles;
+                        gases.Add(gas, fractionGas);
+                        SetThreshold(uid, AtmosMonitorThresholdType.Gas, threshold, gas);
                     }
 
                     payload.Add(AtmosDeviceNetworkSystem.SyncData, new AtmosSensorData(
