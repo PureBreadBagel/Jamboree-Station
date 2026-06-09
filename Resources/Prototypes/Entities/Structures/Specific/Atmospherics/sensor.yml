@@ -108,6 +108,9 @@
         Nitrium: danger
         Pluoxium: ignore
         # </Goobstation>
+        # JAMBOREE GASES
+        Infernazim: danger
+        Kaltrenoxide: danger
     - type: Tag
       tags:
         - AirSensor
