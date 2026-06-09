@@ -30,3 +30,9 @@ reagent-desc-nitrous-oxide = You know how everything seems funnier when you're t
 
 reagent-name-frezon = frezon
 reagent-desc-frezon = A highly effective coolant.. and hallucinogenic.
+
+reagent-name-kaltrenoxide = Kaltrenoxide
+reagent-desc-kaltrenoxide = You think Frezon would be jealous? It feels unnaturally cold...
+
+reagent-name-infernazim = Infernazim
+reagent-desc-infernazim = A gas mined from the burning anger of a dying star...

@@ -744,3 +744,48 @@
         - !type:ReagentThreshold
           reagent: Frezon
           min: 1
+
+- type: reagent
+  id: Infernazim
+  name: reagent-name-infernazim
+  desc: reagent-desc-infernazim
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#9b0128"
+
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Heat: 5
+      - !type:FlammableReaction
+        multiplier: 0.1
+      - !type:Ignite
+
+  reactiveEffects:
+    Flammable:
+      methods: [ Touch ]
+      effects:
+      - !type:FlammableReaction
+        multiplier: 0.2
+      - !type:Ignite
+
+
+- type: reagent
+  id: Kaltrenoxide
+  name: reagent-name-kaltrenoxide
+  desc: reagent-desc-kaltrenoxide
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#63b4c6"
+
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cold: 5
+

@@ -116,6 +116,52 @@
   effects:
   - !type:N2ODecompositionReaction {}
 
+- type: gasReaction
+  id: kaltrenoxideCoolant
+  priority: 2
+  minimumRequirements:
+    - 0 # oxygen
+    - 0 # nitrogen
+    - 0 # CO2
+    - 0 # plasma
+    - 0 # tritium
+    - 0 # water vapor
+    - 0 # ammonia
+    - 0 # n2o
+    - 0 # frezon
+    - 0 # BZ
+    - 0 # healium
+    - 0 # nitrium
+    - 0 # pluoxium
+    - 0 # infernazim
+    - 0.01 # kaltrenoxide
+  effects:
+    - !type:KaltrenoxideCoolantReaction {}
+
+- type: gasReaction
+  id: InfernazimHeat
+  priority: 2
+  minimumRequirements:
+    - 0 # oxygen
+    - 0 # nitrogen
+    - 0 # CO2
+    - 0 # plasma
+    - 0 # tritium
+    - 0 # water vapor
+    - 0 # ammonia
+    - 0 # n2o
+    - 0 # frezon
+    - 0 # BZ
+    - 0 # healium
+    - 0 # nitrium
+    - 0 # pluoxium
+    - 0.01 # infernazim
+    - 0 # kaltrenoxide
+  effects:
+    - !type:InfernazimHeatReaction {}
+
+
+
 #- type: gasReaction
 #  id: WaterVaporPuddle
 #  priority: 1

@@ -200,3 +200,20 @@
   components:
     - type: GasMiner
       spawnGas: NitrousOxide
+
+- type: entity
+  name: infernazim gas miner
+  parent: GasMinerBase
+  id: GasMinerInfernazim
+  description: A gas miner that mines Infernazim from a superheated star. Terrifyingly hot...Best not to get too close to this one.
+  components:
+    - type: GasMiner
+      spawnGas: Infernazim
+      maxExternalPressure: 6000
+- type: entity
+  name: kaltrenoxide gas miner
+  parent: GasMinerBase
+  id: GasMinerKaltrenoxide
+  components:
+    - type: GasMiner
+      spawnGas: Kaltrenoxide

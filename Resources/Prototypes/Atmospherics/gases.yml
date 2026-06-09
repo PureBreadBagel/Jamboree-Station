@@ -136,3 +136,30 @@
   color: 3a758c
   reagent: Frezon
   pricePerMole: 3 # Goobstation - Gas Prices
+
+
+- type: gas
+  id: 13
+  name: gases-infernazim
+  specificHeat: 1000
+  heatCapacityRatio: 1.5
+  molarMass: 10
+  gasOverlaySprite: /Textures/Effects/atmospherics.rsi
+  gasOverlayState: infernazim
+  gasMolesVisible: 0.2
+  color: 9b0128
+  reagent: Infernazim
+  pricePerMole: 0.1
+
+- type: gas
+  id: 14
+  name: gases-kaltrenoxide
+  specificHeat: 1000
+  heatCapacityRatio: 1.5
+  molarMass: 10
+  gasOverlaySprite: /Textures/Effects/atmospherics.rsi
+  gasOverlayState: kaltrenoxide
+  gasMolesVisible: 0.2
+  color: 66ccff
+  reagent: Kaltrenoxide
+  pricePerMole: 0.1
