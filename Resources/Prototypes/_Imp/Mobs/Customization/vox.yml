@@ -582,11 +582,11 @@
   - sprite: _Impstation/Mobs/Customization/Vox/hair.rsi
     state: windswept
 
-# HeadSide
+# Headside (made into just Hair)
 
 - type: marking
   id: SideQuills
-  bodyPart: HeadSide
+  bodyPart: Hair
   markingCategory: HeadSide
   speciesRestriction: [ Vox ]
   sprites:
@@ -599,7 +599,7 @@
 
 - type: marking
   id: VoxStreamers
-  bodyPart: HeadSide
+  bodyPart: Hair
   markingCategory: HeadSide
   speciesRestriction: [ Vox ]
   sprites:
