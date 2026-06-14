@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2024 Kill_Me_I_Noobs <118206719+Vonsant@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 Kill_Me_I_Noobs <118206719+vonsant@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 JamboreeBot <JamboreeBot@proton.me>
-//
+// SPDX-FileCopyrightText: 2026 PureBreadBagel <PureBreadBagel@no=reply.github.com>
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Runtime.InteropServices;
@@ -41,7 +41,7 @@ public sealed class RespawnSystem : EntitySystem
         // Respawn timer should start when the player is dead.
         if (e.NewMobState == MobState.Dead)
         {
-            ResetRespawnTime(e.Target, session);
+            ResetRespawnTime(e.Target, session); // e.Target is the entity that changed state.
             return;
         }
         // If player is no longer dead, clear the respawn timer.
