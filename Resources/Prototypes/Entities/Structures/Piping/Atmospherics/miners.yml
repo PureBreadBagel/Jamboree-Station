@@ -217,3 +217,4 @@
   components:
     - type: GasMiner
       spawnGas: Kaltrenoxide
+      maxExternalPressure: 200

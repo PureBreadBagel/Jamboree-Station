@@ -23,46 +23,67 @@ public sealed partial class KaltrenoxideCoolantReaction : IGasReactionEffect
     private const float NitrogenDecayPerSecond = 0.25f;
 
     public ReactionResult React(
-        GasMixture mixture, // Mixture is basically how much gas is in the tile.
-        IGasMixtureHolder? holder, // Holder is the entity that holds the gas mixture, such as a tile or a container.
-        AtmosphereSystem atmosphereSystem, // AtmosphereSystem is the system that handles all the gas reactions and other gas related stuff.
-        float reactionDelta) // reactionDelta is the time since the last reaction, in seconds.
+    GasMixture mixture,
+    IGasMixtureHolder? holder,
+    AtmosphereSystem atmosphereSystem,
+    float reactionDelta)
     {
         if (reactionDelta <= 0f)
-            return ReactionResult.NoReaction; // If the reactionDelta is less than or equal to 0, then we don't want to do anything.
+            return ReactionResult.NoReaction;
 
         var reacted = false;
 
-        // Normal cooling behavior.
+        var kaltStart = mixture.GetMoles(Gas.Kaltrenoxide);
+        if (kaltStart <= 0f)
+            return ReactionResult.NoReaction;
+
+        // -------------------------
+        // COOLING (temperature effect)
+        // -------------------------
         if (mixture.Temperature > TargetTemperature)
         {
-            var heatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true); // Get the heat capacity of the mixture, which is how much energy it takes to change the temperature of the mixture by 1 degree.
-            if (heatCapacity > Atmospherics.MinimumHeatCapacity) // If the heat capacity is too low, we don't want to cool it down because it will just make it worse.
+            var heatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true);
+
+            if (heatCapacity > Atmospherics.MinimumHeatCapacity)
             {
-                mixture.Temperature -= CoolingPerSecond * reactionDelta / heatCapacity; // Cool the mixture down towards the target temperature.
+                mixture.Temperature -= (CoolingPerSecond * reactionDelta) / heatCapacity;
                 reacted = true;
             }
         }
 
-        // Passive decay over time.
-        var passiveDecay = PassiveDecayPerSecond * reactionDelta;
+        // -------------------------
+        // PASSIVE DECAY
+        // -------------------------
+        var passiveDecay = MathF.Min(
+            kaltStart,
+            PassiveDecayPerSecond * reactionDelta);
+
         if (passiveDecay > 0f)
         {
-            mixture.AdjustMoles(Gas.Kaltrenoxide, -passiveDecay); // Kaltrenoxide decays away...
+            mixture.AdjustMoles(Gas.Kaltrenoxide, -passiveDecay);
             reacted = true;
         }
 
-        // Nitrogen kills Kaltrenoixde faster! >:]
-        var nitrogenMoles = mixture.GetMoles(Gas.Nitrogen); // Get the amount of Nitrogen in the mixture.
-        if (nitrogenMoles > 0f)
+        // -------------------------
+        // NITROGEN DESTRUCTION
+        // -------------------------
+        var nitrogen = mixture.GetMoles(Gas.Nitrogen);
+
+        if (nitrogen > 0f)
         {
-            var nitrogenFactor = MathF.Min(1f, nitrogenMoles / 5f);
-            var nitrogenDecay = NitrogenDecayPerSecond * reactionDelta * nitrogenFactor;
+            var nitrogenFactor = MathF.Min(1f, nitrogen / 5f);
 
-            mixture.AdjustMoles(Gas.Kaltrenoxide, -nitrogenDecay); // Kaltrenoxide dies due to nitrogens cringyness.
-            reacted = true;
+            var nitrogenDecay = MathF.Min(
+                mixture.GetMoles(Gas.Kaltrenoxide),
+                NitrogenDecayPerSecond * reactionDelta * nitrogenFactor);
+
+            if (nitrogenDecay > 0f)
+            {
+                mixture.AdjustMoles(Gas.Kaltrenoxide, -nitrogenDecay);
+                reacted = true;
+            }
         }
 
-        return reacted ? ReactionResult.Reacting : ReactionResult.NoReaction; // Return whether or not the reaction actually did anything.
+        return reacted ? ReactionResult.Reacting : ReactionResult.NoReaction;
     }
 }

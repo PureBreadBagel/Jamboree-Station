@@ -21,64 +21,69 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
     private const float ConversionPerSecond = 0.25f; // The mole conversion rate of Infernazim when it is touching Oxygen or Kaltrenoxide.
 
     public ReactionResult React(
-        GasMixture mixture, // Mixture is basically how much gas is in the tile.
-        IGasMixtureHolder? holder, // Holder is the entity that holds the gas mixture, such as a tile or a container.
-        AtmosphereSystem atmosphereSystem, // AtmosphereSystem is the system that handles all the gas reactions and other gas related stuff.
-        float reactionDelta) // reactionDelta is the time since the last reaction, in seconds.
+    GasMixture mixture,
+    IGasMixtureHolder? holder,
+    AtmosphereSystem atmosphereSystem,
+    float reactionDelta)
     {
         if (reactionDelta <= 0f)
             return ReactionResult.NoReaction;
 
         var reacted = false;
 
-        var infernazim = mixture.GetMoles(Gas.Infernazim); // Get the amount of Infernazim in the mixture.
-        if (infernazim <= 0f)
-            return ReactionResult.NoReaction; // If there is no Infernazim in the mixture, then we don't want to do anything.
+        var infernazimStart = mixture.GetMoles(Gas.Infernazim);
+        if (infernazimStart <= 0f)
+            return ReactionResult.NoReaction;
 
-        var oxygen = mixture.GetMoles(Gas.Oxygen); // Get the amount of Oxygen in the mixture.
-        var kaltrenoxide = mixture.GetMoles(Gas.Kaltrenoxide); // Get the amount of Kaltrenoxide in the mixture.
+        var oxygen = mixture.GetMoles(Gas.Oxygen);
+        var kaltrenoxide = mixture.GetMoles(Gas.Kaltrenoxide);
 
-
-
-        var catalyst = oxygen + kaltrenoxide; // The catalyst is the sum of Oxygen and Kaltrenoxide, which are the gases that Infernazim reacts with.
+        // -------------------------
+        // CONVERSION (O2 / Kalt → Water Vapor)
+        // -------------------------
+        var catalyst = oxygen + kaltrenoxide;
 
         if (catalyst > 0f)
         {
             var catalystFactor = MathF.Min(1f, catalyst / 5f);
 
             var converted = MathF.Min(
-                infernazim,
-                ConversionPerSecond * reactionDelta * catalystFactor); // The amount of Infernazim that will be converted to Water Vapor, based on the amount of catalyst present and the reaction delta.
+                infernazimStart,
+                ConversionPerSecond * reactionDelta * catalystFactor);
 
             if (converted > 0f)
             {
-                mixture.AdjustMoles(Gas.Infernazim, -converted); // Remove the converted amount of Infernazim from the mixture.
-                mixture.AdjustMoles(Gas.WaterVapor, converted); // Ditto but oposite. Add water vapor instead lol.
+                mixture.AdjustMoles(Gas.Infernazim, -converted);
+                mixture.AdjustMoles(Gas.WaterVapor, converted);
                 reacted = true;
-
-                infernazim -= converted; // DELETE THE INFERNAZIUM RAHHHH
             }
         }
 
+        // -------------------------
+        // PASSIVE DECAY
+        // -------------------------
+        var decay = MathF.Min(
+            mixture.GetMoles(Gas.Infernazim),
+            PassiveDecayPerSecond * reactionDelta);
 
-        var decay = MathF.Min(infernazim, PassiveDecayPerSecond * reactionDelta); // The amount of Infernazim that will decay away, based on the passive decay rate and the reaction delta.
         if (decay > 0f)
         {
             mixture.AdjustMoles(Gas.Infernazim, -decay);
-            reacted = true; // Infernazim decays away over time, even when nothing is touching it...Too bad not even the dying star can stop its own decay huh?
+            reacted = true;
         }
 
-        if (infernazim > 0f && mixture.Temperature < TargetTemperature)
+
+        if (infernazimStart > 0f && mixture.Temperature < TargetTemperature)
         {
-            var heatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true); // Get the heat capacity of the mixture, which is how much energy it takes to change the temperature of the mixture by 1 degree.
+            var heatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true);
 
             if (heatCapacity > Atmospherics.MinimumHeatCapacity)
             {
-                mixture.Temperature += EnergyPerSecond * reactionDelta / heatCapacity; // GRRRR HEAT IT UP RAHH!
+                mixture.Temperature += EnergyPerSecond * reactionDelta / heatCapacity;
                 reacted = true;
             }
         }
 
-        return reacted ? ReactionResult.Reacting : ReactionResult.NoReaction; // Return whether or not the reaction actually did anything.
+        return reacted ? ReactionResult.Reacting : ReactionResult.NoReaction;
     }
 }
