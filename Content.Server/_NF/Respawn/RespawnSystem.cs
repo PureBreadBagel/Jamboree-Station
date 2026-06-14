@@ -23,24 +23,36 @@ public sealed class RespawnSystem : EntitySystem
 
     private readonly Dictionary<ICommonSession, TimeSpan> _respawnResetTimes = [];
 
-    public override void Initialize()
+    public override void Initialize() // when the game starts
     {
-        SubscribeLocalEvent<MobStateChangedEvent>(OnMobStateChanged);
-        SubscribeLocalEvent<MindContainerComponent, MindRemovedMessage>(OnMindRemoved);
-        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup);
+        SubscribeLocalEvent<MobStateChangedEvent>(OnMobStateChanged); // MobStateChangedEvent is raised when a mob's state changes, such as when it dies or is revived.
+        SubscribeLocalEvent<MindContainerComponent, MindRemovedMessage>(OnMindRemoved); // MindRemovedMessage is raised when a mind is removed from an entity, such as when a player disconnects or is killed.
+        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup); // RoundRestartCleanupEvent is raised when the round restarts, such as when the server is restarted or the round ends.
 
         _player.PlayerStatusChanged += OnPlayerStatusChanged;
     }
 
     private void OnMobStateChanged(MobStateChangedEvent e)
     {
-        if (e.NewMobState != MobState.Dead)
+        // Jam, Find the player controlling the entity state being changed.
+        if (!_player.TryGetSessionByEntity(e.Target, out var session)) // failsafe for if session not found. The session is the players client.
             return;
 
-        if (!_player.TryGetSessionByEntity(e.Target, out var session))
+        // Respawn timer should start when the player is dead.
+        if (e.NewMobState == MobState.Dead)
+        {
+            ResetRespawnTime(e.Target, session);
             return;
+        }
+        // If player is no longer dead, clear the respawn timer.
+        ClearRespawnTime(session);
+    }
 
-        ResetRespawnTime(e.Target, session);
+    private void ClearRespawnTime(ICommonSession session)
+    {
+        // Jam, reset the respawn timer for the player, and send a network event to the client to clear the respawn timer.
+        if (_respawnResetTimes.Remove(session))
+            SendRespawnResetTime(session, null);
     }
 
     private void OnMindRemoved(EntityUid entity, MindContainerComponent component, MindRemovedMessage e)
@@ -54,18 +66,18 @@ public sealed class RespawnSystem : EntitySystem
         if (!_player.TryGetSessionById(e.Mind.Comp.UserId.Value, out var session))
             return;
 
-        ResetRespawnTime(entity, session);
+        ResetRespawnTime(entity, session); // Oh hey babe. Tryna bypass the respawn timer? Hah Nooooo.
     }
 
     private void OnRoundRestartCleanup(RoundRestartCleanupEvent e)
     {
-        _respawnResetTimes.Clear();
+        _respawnResetTimes.Clear(); // Clear literally everyones respawn timer when the round restarts, duh.
     }
 
     private void OnPlayerStatusChanged(object? sender, SessionStatusEventArgs e)
     {
         if (e.NewStatus == Robust.Shared.Enums.SessionStatus.Connected)
-            SendRespawnResetTime(e.Session, GetRespawnResetTime(e.Session));
+            SendRespawnResetTime(e.Session, GetRespawnResetTime(e.Session)); // If player reconnects, get their OG respawn timer.
     }
 
     private void ResetRespawnTime(EntityUid entity, ICommonSession session)
@@ -73,7 +85,7 @@ public sealed class RespawnSystem : EntitySystem
         if (!HasComp<RespawnResetComponent>(entity))
             return;
 
-        ref var respawnTime = ref CollectionsMarshal.GetValueRefOrAddDefault(_respawnResetTimes, session, out _);
+        ref var respawnTime = ref CollectionsMarshal.GetValueRefOrAddDefault(_respawnResetTimes, session, out _); // Get the respawn time for the player, or add a new entry if it doesn't exist.
 
         respawnTime = _timing.CurTime;
 
@@ -82,7 +94,7 @@ public sealed class RespawnSystem : EntitySystem
 
     private void SendRespawnResetTime(ICommonSession session, TimeSpan? time)
     {
-        RaiseNetworkEvent(new RespawnResetEvent(time), session);
+        RaiseNetworkEvent(new RespawnResetEvent(time), session); // Sends a network thing to the server to tell the client what the respawn timer is. The client will then display the respawn timer to the player.
     }
 
     public TimeSpan? GetRespawnResetTime(ICommonSession session)
