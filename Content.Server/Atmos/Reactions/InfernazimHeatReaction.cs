@@ -17,14 +17,14 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
     private const float TargetTemperature = 6000f; // The target temp that Infernazim wants to be at. In Kelvin.
     private const float EnergyPerSecond = 80000f; // How much energy Infernazim generates so it can get to the target temp.
 
-    private const float PassiveDecayPerSecond = 0.02f; // The mole decay rate of Infernazim when nothing is touching it.
+    private const float PassiveDecayPerSecond = 0.08f; // The mole decay rate of Infernazim when nothing is touching it.
     private const float ConversionPerSecond = 0.25f; // The mole conversion rate of Infernazim when it is touching Oxygen or Kaltrenoxide.
 
     public ReactionResult React(
-    GasMixture mixture,
-    IGasMixtureHolder? holder,
-    AtmosphereSystem atmosphereSystem,
-    float reactionDelta)
+    GasMixture mixture, // The gas mixture is where the reaction is happening. It contains the gases and their properties, such as moles and temperature.
+    IGasMixtureHolder? holder, // What tile is holding gas.
+    AtmosphereSystem atmosphereSystem, // The AtmosphereSystem is a system that handles all the gas reactions and properties in the game.
+    float reactionDelta) // Reaction Delta is  how much time passed in seconds since the last gas reacton.
     {
         if (reactionDelta <= 0f)
             return ReactionResult.NoReaction;
@@ -38,31 +38,25 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
         var oxygen = mixture.GetMoles(Gas.Oxygen);
         var kaltrenoxide = mixture.GetMoles(Gas.Kaltrenoxide);
 
-        // -------------------------
-        // CONVERSION (O2 / Kalt → Water Vapor)
-        // -------------------------
-        var catalyst = oxygen + kaltrenoxide;
+        var catalyst = oxygen + kaltrenoxide; // The catalyst is the amount of Oxygen and Kaltrenoxide present. The more catalyst, the more Infernazim will be converted to Water Vapor and Kaltrenoxide.
 
         if (catalyst > 0f)
         {
             var catalystFactor = MathF.Min(1f, catalyst / 5f);
 
-            var converted = MathF.Min(
-                infernazimStart,
-                ConversionPerSecond * reactionDelta * catalystFactor);
+            var converted = MathF.Min(infernazimStart,
+            kaltrenoxide * ConversionPerSecond * reactionDelta * catalystFactor); // Wow, this is a lot of math. This is calculating how much Infernazim will be converted to Water Vapor and Kaltrenoxide based on how much Oxygen and Kaltrenoxide is present. The more Oxygen and Kaltrenoxide, the more Infernazim will be converted.
 
             if (converted > 0f)
             {
-                mixture.AdjustMoles(Gas.Infernazim, -converted);
+                mixture.AdjustMoles(Gas.Infernazim, -converted); // Remove Infernazim from the mixture because it hates OXYGEN, but hates Kaltrenoxide more.
                 mixture.AdjustMoles(Gas.WaterVapor, converted);
+                mixture.AdjustMoles(Gas.Kaltrenoxide, -converted); // Remove Kaltrenoxide from the mixture because Infernazim hates it more than Oxygen.
                 reacted = true;
             }
         }
 
-        // -------------------------
-        // PASSIVE DECAY
-        // -------------------------
-        var decay = MathF.Min(
+        var decay = MathF.Min( // The mole decay rate of Infernazim when nothing is touching it.
             mixture.GetMoles(Gas.Infernazim),
             PassiveDecayPerSecond * reactionDelta);
 
@@ -75,7 +69,7 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
 
         if (infernazimStart > 0f && mixture.Temperature < TargetTemperature)
         {
-            var heatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true);
+            var heatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true); // The heat capacity is how much energy it takes to raise the temperature of the gas mixture by 1 degree. The more heat capacity, the less the temperature will change.
 
             if (heatCapacity > Atmospherics.MinimumHeatCapacity)
             {
