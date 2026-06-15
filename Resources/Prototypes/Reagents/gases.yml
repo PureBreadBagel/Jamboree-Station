@@ -754,15 +754,13 @@
   color: "#9b0128"
 
   metabolisms:
-    Poison:
+    Gas:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Heat: 5
-      - !type:FlammableReaction
-        multiplier: 0.1
-      - !type:Ignite
+      - !type:AdjustTemperature
+        conditions:
+        - !type:Temperature
+          max: 6000
+        amount: 8000
 
   reactiveEffects:
     Flammable:
@@ -771,7 +769,6 @@
       - !type:FlammableReaction
         multiplier: 0.2
       - !type:Ignite
-
 
 - type: reagent
   id: Kaltrenoxide
@@ -782,10 +779,10 @@
   color: "#63b4c6"
 
   metabolisms:
-    Poison:
+    Gas:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Cold: 5
-
+      - !type:AdjustTemperature
+        conditions:
+        - !type:Temperature
+          max: -200
+        amount: -8000
