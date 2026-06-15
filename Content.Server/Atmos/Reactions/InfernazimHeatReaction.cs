@@ -44,14 +44,20 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
         {
             var catalystFactor = MathF.Min(1f, catalyst / 5f);
 
-            var converted = MathF.Min(infernazimStart,
-            kaltrenoxide * ConversionPerSecond * reactionDelta * catalystFactor); // Wow, this is a lot of math. This is calculating how much Infernazim will be converted to Water Vapor and Kaltrenoxide based on how much Oxygen and Kaltrenoxide is present. The more Oxygen and Kaltrenoxide, the more Infernazim will be converted.
+            // Wow, this is a lot of math. This is calculating how much Infernazim will be converted to Water Vapor and Kaltrenoxide based on how much Oxygen and Kaltrenoxide is present. The more Oxygen and Kaltrenoxide, the more Infernazim will be converted.
+            var converted = MathF.Min(
+                infernazimStart,
+                catalyst * ConversionPerSecond * reactionDelta * catalystFactor);
 
             if (converted > 0f)
             {
                 mixture.AdjustMoles(Gas.Infernazim, -converted); // Remove Infernazim from the mixture because it hates OXYGEN, but hates Kaltrenoxide more.
                 mixture.AdjustMoles(Gas.WaterVapor, converted);
-                mixture.AdjustMoles(Gas.Kaltrenoxide, -converted); // Remove Kaltrenoxide from the mixture because Infernazim hates it more than Oxygen.
+
+                // Remove Kaltrenoxide from the mixture because Infernazim hates it more than Oxygen.
+                var kaltrenConsumed = MathF.Min(kaltrenoxide, converted);
+                mixture.AdjustMoles(Gas.Kaltrenoxide, -kaltrenConsumed);
+
                 reacted = true;
             }
         }
@@ -66,14 +72,18 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
             reacted = true;
         }
 
+        var infernazimRemaining = mixture.GetMoles(Gas.Infernazim);
 
-        if (infernazimStart > 0f && mixture.Temperature < TargetTemperature)
+        if (infernazimRemaining > 0f && mixture.Temperature < TargetTemperature)
         {
             var heatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true); // The heat capacity is how much energy it takes to raise the temperature of the gas mixture by 1 degree. The more heat capacity, the less the temperature will change.
 
             if (heatCapacity > Atmospherics.MinimumHeatCapacity)
             {
-                mixture.Temperature += EnergyPerSecond * reactionDelta / heatCapacity;
+                mixture.Temperature = MathF.Min(
+                    TargetTemperature,
+                    mixture.Temperature + EnergyPerSecond * reactionDelta / heatCapacity);
+
                 reacted = true;
             }
         }

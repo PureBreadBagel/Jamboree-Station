@@ -40,11 +40,14 @@ public sealed partial class KaltrenoxideCoolantReaction : IGasReactionEffect
 
         if (mixture.Temperature > TargetTemperature)
         {
-            var heatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true);
+            var heatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true); // All this to make sure it doesnt overshoot -200C
 
             if (heatCapacity > Atmospherics.MinimumHeatCapacity)
             {
-                mixture.Temperature -= CoolingPerSecond * reactionDelta / heatCapacity;
+                mixture.Temperature = MathF.Max(
+                    TargetTemperature,
+                    mixture.Temperature - CoolingPerSecond * reactionDelta / heatCapacity);
+
                 reacted = true;
             }
         }
