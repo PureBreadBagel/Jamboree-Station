@@ -1619,3 +1619,17 @@ Entries:
       message: The Streamers and Quills markings for Vox are no longer invisible!
   id: 140
   time: '2026-06-10T18:31:59.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Tweak
+      message: >-
+        Infernazium and Kaltrenoxide have been tweaked heavily. They no longer
+        instantly heat/cool gas, decay on their own and have gas reactions.
+        Infernazium turns into water vapor when O2 is around, and Kaltrenoxide
+        goes away rapidly near N2.
+    - type: Fix
+      message: >-
+        Respawning system had a bit of a refix. You shouldnt be able to bypass
+        spawn times.
+  id: 141
+  time: '2026-06-15T21:31:45.0000000+00:00'
