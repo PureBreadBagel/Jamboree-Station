@@ -15,10 +15,10 @@ namespace Content.Server.Atmos.Reactions;
 public sealed partial class InfernazimHeatReaction : IGasReactionEffect
 {
     private const float TargetTemperature = 6000f; // The target temp that Infernazim wants to be at. In Kelvin.
-    private const float EnergyPerSecond = 80000f; // How much energy Infernazim generates so it can get to the target temp.
+    private const float EnergyPerSecond = 400000f; // How much energy Infernazim generates so it can get to the target temp.
 
-    private const float PassiveDecayPerSecond = 0.08f; // The mole decay rate of Infernazim when nothing is touching it.
-    private const float ConversionPerSecond = 0.25f; // The mole conversion rate of Infernazim when it is touching Oxygen or Kaltrenoxide.
+    private const float PassiveDecayPerSecond = 0.20f; // The mole decay rate of Infernazim when nothing is touching it.
+    private const float ConversionPerSecond = 0.50f; // The mole conversion rate of Infernazim when it is touching Oxygen or Kaltrenoxide.
 
     public ReactionResult React(
     GasMixture mixture, // The gas mixture is where the reaction is happening. It contains the gases and their properties, such as moles and temperature.
