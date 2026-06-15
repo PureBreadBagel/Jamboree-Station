@@ -14,5 +14,5 @@
       - metallic
       - meaty
   - type: Sprite
-    sprite: _Jamboree/Objects/Consumable/Food/burrito.rsi
+    sprite: _Jamboree/Objects/Consumable/Food/danitoburrito.rsi
     state: icon
