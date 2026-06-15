@@ -47,7 +47,7 @@ public sealed class RespawnSystem : EntitySystem
         // Respawn timer should start when the player is dead.
         if (e.NewMobState == MobState.Dead)
         {
-            ResetRespawnTime(e.Target, session); // e.Target is the entity that changed state.
+            ResetRespawnTime(session); // e.Target is the entity that changed state.
             return;
         }
 
@@ -76,7 +76,7 @@ public sealed class RespawnSystem : EntitySystem
         if (!_player.TryGetSessionById(e.Mind.Comp.UserId.Value, out var session))
             return;
 
-        ResetRespawnTime(entity, session);
+        ResetRespawnTime(session);
     }
 
     private void OnRoundRestartCleanup(RoundRestartCleanupEvent e)
