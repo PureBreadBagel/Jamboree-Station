@@ -214,7 +214,8 @@
   name: kaltrenoxide gas miner
   parent: GasMinerBase
   id: GasMinerKaltrenoxide
+  description: A gas miner that mines kaltrenoxide from an ice gas giant. It feels cold, yet brittle.
   components:
     - type: GasMiner
       spawnGas: Kaltrenoxide
-      maxExternalPressure: 200
+      maxExternalPressure: 300
