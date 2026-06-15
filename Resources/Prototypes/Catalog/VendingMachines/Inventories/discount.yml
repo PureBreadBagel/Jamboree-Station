@@ -27,6 +27,7 @@
     FoodSnackPopcorn: 3
     FoodSnackEnergy: 3
     FoodMealHotDog: 3 #added by jambo
+    DanitoBurrito: 3 #added by jambo
     CigPackMixed: 2
     DiscountDanLighter: 3 #Jamboree change
   contrabandInventory:
