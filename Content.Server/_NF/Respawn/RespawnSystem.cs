@@ -76,7 +76,7 @@ public sealed class RespawnSystem : EntitySystem
         if (!_player.TryGetSessionById(e.Mind.Comp.UserId.Value, out var session))
             return;
 
-        ResetRespawnTime(entity, session); // Oh hey babe. Tryna bypass the respawn timer? Hah Nooooo.
+        ResetRespawnTime(entity, session);
     }
 
     private void OnRoundRestartCleanup(RoundRestartCleanupEvent e)
