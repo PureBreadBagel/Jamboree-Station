@@ -23,6 +23,10 @@ public sealed class RespawnSystem : EntitySystem
 
     private readonly Dictionary<ICommonSession, TimeSpan> _respawnResetTimes = [];
 
+
+
+
+
     public override void Initialize() // when the game starts
     {
         SubscribeLocalEvent<MobStateChangedEvent>(OnMobStateChanged); // MobStateChangedEvent is raised when a mob's state changes, such as when it dies or is revived.
@@ -31,6 +35,8 @@ public sealed class RespawnSystem : EntitySystem
 
         _player.PlayerStatusChanged += OnPlayerStatusChanged;
     }
+
+
 
     private void OnMobStateChanged(MobStateChangedEvent e)
     {
@@ -44,8 +50,12 @@ public sealed class RespawnSystem : EntitySystem
             ResetRespawnTime(e.Target, session); // e.Target is the entity that changed state.
             return;
         }
-        // If player is no longer dead, clear the respawn timer.
-        ClearRespawnTime(session);
+
+        if (e.NewMobState == MobState.Alive)
+        {
+            // If player is no longer dead, clear the respawn timer.
+            ClearRespawnTime(session);
+        }
     }
 
     private void ClearRespawnTime(ICommonSession session)
@@ -82,10 +92,7 @@ public sealed class RespawnSystem : EntitySystem
 
     private void ResetRespawnTime(EntityUid entity, ICommonSession session)
     {
-        if (!HasComp<RespawnResetComponent>(entity))
-            return;
-
-        ref var respawnTime = ref CollectionsMarshal.GetValueRefOrAddDefault(_respawnResetTimes, session, out _); // Get the respawn time for the player, or add a new entry if it doesn't exist.
+        ref var respawnTime = ref CollectionsMarshal.GetValueRefOrAddDefault(_respawnResetTimes, session, out _);
 
         respawnTime = _timing.CurTime;
 
