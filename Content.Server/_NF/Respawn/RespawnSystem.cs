@@ -90,7 +90,7 @@ public sealed class RespawnSystem : EntitySystem
             SendRespawnResetTime(e.Session, GetRespawnResetTime(e.Session)); // If player reconnects, get their OG respawn timer.
     }
 
-    private void ResetRespawnTime(EntityUid entity, ICommonSession session)
+    private void ResetRespawnTime(ICommonSession session)
     {
         ref var respawnTime = ref CollectionsMarshal.GetValueRefOrAddDefault(_respawnResetTimes, session, out _);
 
