@@ -18,7 +18,7 @@
   playTimeTracker: JobNavyOfficer
   setPreference: false
   startingGear: NavyOfficerGear
-  icon: "JobIconNanotrasen"
+  icon: "JobIconNavyOfficer"
   supervisors: job-supervisors-commander
   canBeAntag: false
   accessGroups:
@@ -55,7 +55,7 @@
   playTimeTracker: JobNavyCaptain
   setPreference: false
   startingGear: NavyCaptainGear
-  icon: "JobIconNanotrasen"
+  icon: "JobIconNavyCaptain"
   supervisors: job-supervisors-null
   canBeAntag: false
   requirements:
@@ -96,7 +96,7 @@
   playTimeTracker: JobNavyOfficerUndercover
   setPreference: false
   startingGear: NavyOfficerUndercoverGear
-  icon: "JobIconNanotrasen"
+  icon: "JobIconNavyOfficer"
   supervisors: job-supervisors-commander
   canBeAntag: false
   requirements:
@@ -138,7 +138,7 @@
   playTimeTracker: JobSpecialOperationsOfficer
   setPreference: false
   startingGear: SpecialOperationsOfficerGear
-  icon: "JobIconNanotrasen"
+  icon: "JobIconSpecialOperationsOfficer"
   supervisors: job-supervisors-commander
   canBeAntag: false
   requirements:
@@ -180,7 +180,7 @@
   playTimeTracker: JobDiplomat
   setPreference: false
   startingGear: DiplomatGear
-  icon: "JobIconNanotrasen"
+  icon: "JobIconDiplomat"
   supervisors: job-supervisors-commander
   canBeAntag: false
   requirements:
@@ -218,7 +218,7 @@
   playTimeTracker: JobInspector
   setPreference: false
   startingGear: InspectorGear
-  icon: "JobIconNanotrasen"
+  icon: "JobIconInspector"
   supervisors: job-supervisors-commander
   canBeAntag: false
   requirements:

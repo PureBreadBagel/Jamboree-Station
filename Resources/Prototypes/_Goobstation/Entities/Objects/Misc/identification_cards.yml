@@ -66,7 +66,7 @@
     - state: ert_security
   - type: IdCard
     jobTitle: job-name-hecu
-    jobIcon: JobIconNanotrasen
+    jobIcon: JobIconHecu #jamboree
   - type: Access
     groups:
     - AllAccess
@@ -253,7 +253,7 @@
     - state: ert_security
   - type: IdCard
     jobTitle: job-name-diplomat
-    jobIcon: JobIconNanotrasen
+    jobIcon: JobIconDiplomat #jamboree
   - type: PresetIdCard
     job: Diplomat
 
