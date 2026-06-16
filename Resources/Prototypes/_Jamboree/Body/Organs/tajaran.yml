@@ -1,0 +1,13 @@
+- type: entity
+  id: OrganTajaranEyes
+  description: These eyes gleam with a hunter's grace.
+  parent: OrganHumanEyes
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Mobs/Species/Tajaran/organs.rsi
+    layers:
+    - state: eyes
+  - type: Organ
+    onAdd:
+    - type: FlashVulnerable
+    - type: TajaranNightVision
