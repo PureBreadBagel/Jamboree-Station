@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: OrganTajaranEyes
+  description: These eyes gleam with a hunter's grace.
+  parent: OrganHumanEyes
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Mobs/Species/Tajaran/organs.rsi
+    layers:
+    - state: eyes
+  - type: Organ
+    onAdd:
+    - type: FlashVulnerable
+    - type: TajaranNightVision
