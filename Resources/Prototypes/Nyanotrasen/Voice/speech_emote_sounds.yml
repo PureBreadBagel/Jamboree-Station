@@ -58,6 +58,8 @@
       path: /Audio/_Goobstation/Voice/surprised.ogg
     Mars: # jamboree - juice that makes you mar
       path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
+    Trill: # Omu
+      collection: Trill
 
 - type: emoteSounds
   id: FemaleFelinid
@@ -108,3 +110,5 @@
       path: /Audio/_Goobstation/Voice/surprised.ogg
     Mars: # jamboree - juice that makes you mar
       path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
+    Trill: # Omu
+      collection: Trill
