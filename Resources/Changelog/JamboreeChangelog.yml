@@ -1675,3 +1675,11 @@ Entries:
         there is now the debriefing room!
   id: 145
   time: '2026-06-18T21:32:59.0000000+00:00'
+- author: EchoOfNothing
+  changes:
+    - type: Add
+      message: Felinids and tajarans can trill now!
+    - type: Tweak
+      message: Trill emote now has different audio.
+  id: 146
+  time: '2026-06-18T21:33:48.0000000+00:00'
