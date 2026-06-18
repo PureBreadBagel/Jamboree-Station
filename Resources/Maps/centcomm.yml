@@ -1,15 +1,11 @@
-# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/18/2026 16:47:46
-  entityCount: 7053
+  time: 06/18/2026 18:11:45
+  entityCount: 7050
 maps: []
 grids:
 - 1668
@@ -27447,21 +27443,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -17.5,-32.5
       parent: 1668
-- proto: Gavel
-  entities:
-  - uid: 7053
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 29.07557,20.575434
-      parent: 1668
-- proto: GavelBlock
-  entities:
-  - uid: 7052
-    components:
-    - type: Transform
-      pos: 27.747444,20.778559
-      parent: 1668
 - proto: GeneratorBasic15kW
   entities:
   - uid: 5176
@@ -37596,14 +37577,6 @@ entities:
       name: blob sample tube
     - type: Transform
       pos: -10.854535,6.5409007
-      parent: 1668
-- proto: TrialTimer
-  entities:
-  - uid: 7051
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 30.5,21.5
       parent: 1668
 - proto: TunnelClownBusinessCard
   entities:
