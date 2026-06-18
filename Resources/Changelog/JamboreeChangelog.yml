@@ -1653,3 +1653,25 @@ Entries:
       message: A couple more typing indicators can now be seen!
   id: 144
   time: '2026-06-18T16:12:06.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        The Code of Conduct guidebook is hot of the presses! Assistants come
+        with it round start, heads have it in their lockers, and the library is
+        getting a fresh restock! Check it out now!
+    - type: Add
+      message: >-
+        Toby, the CentComm penguin, has returned from the war! He now serves as
+        the CC bartender!
+    - type: Tweak
+      message: >-
+        Central Command has received a huge update! Some highlights include: A
+        command debriefing room close to the lobby, a command break room, a
+        mailing unit which delivers contraband straight to the armory, and more!
+    - type: Remove
+      message: >-
+        There is no longer a dedicated courtroom at Central Command. Instead,
+        there is now the debriefing room!
+  id: 145
+  time: '2026-06-18T21:32:59.0000000+00:00'
