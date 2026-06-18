@@ -1,15 +1,11 @@
-# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/18/2026 19:04:40
-  entityCount: 7059
+  time: 06/18/2026 20:47:36
+  entityCount: 7032
 maps: []
 grids:
 - 1668
@@ -3858,24 +3854,6 @@ entities:
     - type: Transform
       pos: 9.5,-23.5
       parent: 1668
-- proto: AllTraitorCodesPaper
-  entities:
-  - uid: 6026
-    components:
-    - type: MetaData
-      desc: The syndicate thinks they are secret, they in fact are not.
-    - type: Transform
-      pos: -11.848904,4.841624
-      parent: 1668
-- proto: AltarFangs
-  entities:
-  - uid: 2085
-    components:
-    - type: MetaData
-      desc: This used to be a altar of narcy, sadly NT has murdered that cult in oil so narcy was not summoned.
-    - type: Transform
-      pos: -12.5,4.5
-      parent: 1668
 - proto: AlwaysPoweredlightRed
   entities:
   - uid: 814
@@ -3887,15 +3865,6 @@ entities:
     components:
     - type: Transform
       pos: 3.5,-21.5
-      parent: 1668
-- proto: AmbuzolPlusMedipen
-  entities:
-  - uid: 5862
-    components:
-    - type: MetaData
-      desc: This pen was discovered before the first outbreak. It's a mystery how NT acquired it.
-    - type: Transform
-      pos: -10.6244135,4.5721507
       parent: 1668
 - proto: AmnestizineHypospray
   entities:
@@ -4168,23 +4137,6 @@ entities:
     components:
     - type: Transform
       pos: -2.5,-40.5
-      parent: 1668
-- proto: ArmBlade
-  entities:
-  - uid: 1268
-    components:
-    - type: MetaData
-      desc: A grotesque blade made out of bone and flesh that cleaves through people as a hot knife through butter. But fails to cut any NT made armor.
-      name: severed arm blade
-    - type: Transform
-      pos: -10.442729,4.5096507
-      parent: 1668
-- proto: Ash
-  entities:
-  - uid: 3828
-    components:
-    - type: Transform
-      pos: -11.866825,6.520464
       parent: 1668
 - proto: Ashtray
   entities:
@@ -4506,15 +4458,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 19.5,-32.5
-      parent: 1668
-- proto: BaseUplinkRadio
-  entities:
-  - uid: 1189
-    components:
-    - type: MetaData
-      desc: Nuclear operatives exist, sadly they are poorly funded compared to our own operatives. Ours succeed, they fall to a cadet.
-    - type: Transform
-      pos: -12.014473,6.766891
       parent: 1668
 - proto: Bed
   entities:
@@ -4981,6 +4924,14 @@ entities:
     - type: Transform
       pos: 21.5,6.5
       parent: 1668
+- proto: BookCodeofConduct
+  entities:
+  - uid: 1447
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -12.459131,4.594088
+      parent: 1668
 - proto: BookIanAntarctica
   entities:
   - uid: 345
@@ -5131,7 +5082,7 @@ entities:
   - uid: 6990
     components:
     - type: Transform
-      pos: -20.564053,6.0545297
+      pos: -20.585873,4.8523846
       parent: 1668
 - proto: BoxFolderCentComClipboard
   entities:
@@ -17200,13 +17151,6 @@ entities:
     - type: Transform
       pos: 4.613023,18.594856
       parent: 1668
-- proto: CentcomIDCard
-  entities:
-  - uid: 3721
-    components:
-    - type: Transform
-      pos: -16.521366,8.567018
-      parent: 1668
 - proto: CentcommComputerComms
   entities:
   - uid: 353
@@ -19450,6 +19394,14 @@ entities:
     - type: Transform
       pos: 20.568373,-22.468605
       parent: 1668
+- proto: ClothingBeltMonozygoticHoloProjector
+  entities:
+  - uid: 3635
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -10.574557,6.6020207
+      parent: 1668
 - proto: ClothingBeltSecurityFilled
   entities:
   - uid: 443
@@ -19641,14 +19593,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingHeadHatPwig
-  entities:
-  - uid: 7055
-    components:
-    - type: Transform
-      parent: 7051
-    - type: Physics
-      canCollide: False
 - proto: ClothingHeadHatSyndie
   entities:
   - uid: 6929
@@ -19731,6 +19675,13 @@ entities:
     - type: Transform
       pos: 21.493792,-17.470217
       parent: 1668
+- proto: ClothingMaskGoldenCursed
+  entities:
+  - uid: 768
+    components:
+    - type: Transform
+      pos: -11.527682,6.6645207
+      parent: 1668
 - proto: ClothingMaskMuzzleShock
   entities:
   - uid: 1720
@@ -19747,15 +19698,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingMaskNinja
-  entities:
-  - uid: 5945
-    components:
-    - type: MetaData
-      desc: This one has a crack in it, on closer inspection it was the result of an NT blade.
-    - type: Transform
-      pos: -10.288156,6.059138
-      parent: 1668
 - proto: ClothingOuterArmorCult
   entities:
   - uid: 72
@@ -19783,14 +19725,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingOuterRobesJudge
-  entities:
-  - uid: 7054
-    components:
-    - type: Transform
-      parent: 7051
-    - type: Physics
-      canCollide: False
 - proto: ClothingOuterWizard
   entities:
   - uid: 6925
@@ -19855,16 +19789,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: CodexCicatrix
-  entities:
-  - uid: 3771
-    components:
-    - type: MetaData
-      desc: Some heretics ascend to godhood - this one was an inconvenience to our profits.
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -11.31995,6.692339
-      parent: 1668
 - proto: ComfyChair
   entities:
   - uid: 28
@@ -20141,6 +20065,18 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -24.5,3.5
+      parent: 1668
+  - uid: 3708
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -9.5,-28.5
+      parent: 1668
+  - uid: 3721
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -9.5,-27.5
       parent: 1668
   - uid: 5422
     components:
@@ -20449,36 +20385,12 @@ entities:
     - type: Transform
       pos: -10.526073,-9.613518
       parent: 1668
-- proto: CosmicCultLawBoard
-  entities:
-  - uid: 5860
-    components:
-    - type: MetaData
-      desc: A pathetic attempt of a god to change the laws of our AI construct, they clearly have never heard of remote law updats.
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -12.508928,6.595016
-      parent: 1668
 - proto: CrateArmoryCombatMedicalHardsuit
   entities:
   - uid: 526
     components:
     - type: Transform
       pos: -9.5,18.5
-      parent: 1668
-- proto: CrateArmoryLaser
-  entities:
-  - uid: 512
-    components:
-    - type: Transform
-      pos: -5.5,25.5
-      parent: 1668
-- proto: CrateArmoryPistols
-  entities:
-  - uid: 768
-    components:
-    - type: Transform
-      pos: -7.5,25.5
       parent: 1668
 - proto: CrateChemistryS
   entities:
@@ -23080,14 +22992,6 @@ entities:
     - type: Transform
       pos: -4.527169,1.7698727
       parent: 1668
-- proto: DrinkVacuumFlask
-  entities:
-  - uid: 7057
-    components:
-    - type: Transform
-      parent: 7051
-    - type: Physics
-      canCollide: False
 - proto: DrinkWaterBottleFull
   entities:
   - uid: 342
@@ -23110,29 +23014,12 @@ entities:
     - type: Transform
       pos: -20.182804,-9.296771
       parent: 1668
-- proto: DrinkWhiskeyBottleFull
-  entities:
-  - uid: 7056
-    components:
-    - type: Transform
-      parent: 7051
-    - type: Physics
-      canCollide: False
 - proto: DVSmartFridgeMedical
   entities:
   - uid: 1290
     components:
     - type: Transform
       pos: 8.5,-12.5
-      parent: 1668
-- proto: Ectoplasm
-  entities:
-  - uid: 5885
-    components:
-    - type: MetaData
-      desc: Death does not end employment status, get back to work.
-    - type: Transform
-      pos: -10.484159,5.0459843
       parent: 1668
 - proto: EffectSpark
   entities:
@@ -24061,14 +23948,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: FoodSnackPopcorn
-  entities:
-  - uid: 7059
-    components:
-    - type: Transform
-      parent: 7051
-    - type: Physics
-      canCollide: False
 - proto: GambamovCircuitBoard
   entities:
   - uid: 6819
@@ -27609,12 +27488,11 @@ entities:
       count: 2
 - proto: GuidebookCodexUmbra
   entities:
-  - uid: 1447
+  - uid: 1189
     components:
-    - type: MetaData
-      desc: A devil sometimes makes contracts, but the crew sometimes forgets, we already own their soul.
     - type: Transform
-      pos: -10.239562,6.6804953
+      rot: -1.5707963267948966 rad
+      pos: -10.599756,4.594088
       parent: 1668
 - proto: GunneryServerUltra
   entities:
@@ -27704,15 +27582,6 @@ entities:
     - type: Transform
       pos: -3.4985683,16.513187
       parent: 1668
-- proto: HighCommandPDA
-  entities:
-  - uid: 5875
-    components:
-    - type: MetaData
-      desc: Our agent was given this PDA before he infiltrated and killed half of high command, and the syndicate thinks they're the pros.
-    - type: Transform
-      pos: -11.030173,4.752286
-      parent: 1668
 - proto: HighSecArmoryLocked
   entities:
   - uid: 19
@@ -27752,19 +27621,16 @@ entities:
       parent: 1668
 - proto: HighSecCentralCommandLocked
   entities:
+  - uid: 1268
+    components:
+    - type: Transform
+      pos: -13.5,5.5
+      parent: 1668
   - uid: 1278
     components:
     - type: Transform
       pos: 7.5,-1.5
       parent: 1668
-  - uid: 3791
-    components:
-    - type: Transform
-      pos: -13.5,5.5
-      parent: 1668
-    - type: AccessReader
-      access:
-      - - Xenoborg
   - uid: 3797
     components:
     - type: Transform
@@ -27827,15 +27693,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 22.5,12.5
-      parent: 1668
-- proto: Intellicard
-  entities:
-  - uid: 6020
-    components:
-    - type: MetaData
-      desc: Some AIs believe going malf is a good idea. We kindly remind them that Android Hell is a real place, and you will be going there.
-    - type: Transform
-      pos: -10.671659,5.7178593
       parent: 1668
 - proto: JanitorialTrolley
   entities:
@@ -28367,15 +28224,15 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 2058
           - 2059
-          - 2070
-          - 2072
-          - 2075
-          - 2113
-          - 2133
-          - 2208
           - 2242
+          - 2208
+          - 2133
+          - 2113
+          - 2075
+          - 2072
+          - 2070
+          - 2058
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -28539,7 +28396,7 @@ entities:
   - uid: 6922
     components:
     - type: Transform
-      pos: -18.47654,4.596927
+      pos: -12.446636,6.6200867
       parent: 1668
 - proto: MedicalBeamGun
   entities:
@@ -28690,15 +28547,6 @@ entities:
       parent: 1668
 - proto: MopItem
   entities:
-  - uid: 6021
-    components:
-    - type: MetaData
-      desc: The most feared by the demonic forces, using it our janitors have dealt with many a foe.
-      name: implement of cleaning
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -12.51799,6.481013
-      parent: 1668
   - uid: 6230
     components:
     - type: Transform
@@ -28918,11 +28766,6 @@ entities:
       parent: 1668
 - proto: PaintingSaturn
   entities:
-  - uid: 3776
-    components:
-    - type: Transform
-      pos: -9.5,5.5
-      parent: 1668
   - uid: 6949
     components:
     - type: Transform
@@ -31079,6 +30922,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -27.5,-8.5
       parent: 1668
+  - uid: 1360
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -10.5,5.5
+      parent: 1668
   - uid: 1386
     components:
     - type: Transform
@@ -31378,13 +31227,6 @@ entities:
     components:
     - type: Transform
       pos: -15.5,6.5
-      parent: 1668
-    - type: ApcPowerReceiver
-      powerLoad: 0
-  - uid: 3708
-    components:
-    - type: Transform
-      pos: -11.5,6.5
       parent: 1668
     - type: ApcPowerReceiver
       powerLoad: 0
@@ -33876,22 +33718,6 @@ entities:
     - type: Transform
       pos: -3.5,-23.5
       parent: 1668
-- proto: RevolutionaryManifesto
-  entities:
-  - uid: 1360
-    components:
-    - type: MetaData
-      desc: This book is filled with secret NT codewords.
-    - type: Transform
-      pos: -10.598979,6.6190257
-      parent: 1668
-- proto: RevsFastDrawImplanter
-  entities:
-  - uid: 3894
-    components:
-    - type: Transform
-      pos: -10.317729,4.7909007
-      parent: 1668
 - proto: RubberStampApproved
   entities:
   - uid: 6982
@@ -33956,13 +33782,6 @@ entities:
     components:
     - type: Transform
       pos: -12.532179,11.55442
-      parent: 1668
-- proto: SciFlash
-  entities:
-  - uid: 1943
-    components:
-    - type: Transform
-      pos: -10.333354,6.4627757
       parent: 1668
 - proto: Screen
   entities:
@@ -34042,60 +33861,6 @@ entities:
     - type: Transform
       pos: 3.5,-3.5
       parent: 1668
-- proto: SheetBrass1
-  entities:
-  - uid: 5884
-    components:
-    - type: MetaData
-      desc: This used to be a "god", we killed them, now they serve as a chair and spare material.
-    - type: Transform
-      pos: -12.486593,4.549161
-      parent: 1668
-- proto: ShelfGlass
-  entities:
-  - uid: 7051
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 24.5,20.5
-      parent: 1668
-    - type: UserInterface
-      actors:
-        enum.StorageUiKey.Key:
-        - invalid
-    - type: Storage
-      storedItems:
-        7054:
-          position: 1,3
-          _rotation: South
-        7055:
-          position: 3,3
-          _rotation: South
-        7056:
-          position: 0,0
-          _rotation: South
-        7057:
-          position: 0,3
-          _rotation: South
-        7058:
-          position: 2,0
-          _rotation: South
-        7059:
-          position: 3,1
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 7054
-          - 7055
-          - 7056
-          - 7057
-          - 7058
-          - 7059
-    - type: ActiveUserInterface
 - proto: ShowcaseRobotAntique
   entities:
   - uid: 6931
@@ -34797,8 +34562,7 @@ entities:
       desc: Some spare change
       name: spare spesos
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -19.868233,10.573585
+      pos: -11.506006,4.672213
       parent: 1668
 - proto: SpawnGavelBlock
   entities:
@@ -36544,6 +36308,12 @@ entities:
     - type: Transform
       pos: -27.5,-5.5
       parent: 1668
+  - uid: 512
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -12.5,6.5
+      parent: 1668
   - uid: 597
     components:
     - type: Transform
@@ -36691,11 +36461,23 @@ entities:
       rot: 3.141592653589793 rad
       pos: 20.5,14.5
       parent: 1668
+  - uid: 1943
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -11.5,4.5
+      parent: 1668
   - uid: 1952
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 16.5,15.5
+      parent: 1668
+  - uid: 2085
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -11.5,6.5
       parent: 1668
   - uid: 2342
     components:
@@ -36760,22 +36542,20 @@ entities:
   - uid: 3634
     components:
     - type: Transform
-      pos: -10.5,4.5
-      parent: 1668
-  - uid: 3635
-    components:
-    - type: Transform
+      rot: -1.5707963267948966 rad
       pos: -10.5,6.5
       parent: 1668
   - uid: 3636
     components:
     - type: Transform
-      pos: -11.5,6.5
+      rot: -1.5707963267948966 rad
+      pos: -10.5,4.5
       parent: 1668
   - uid: 3637
     components:
     - type: Transform
-      pos: -12.5,6.5
+      rot: -1.5707963267948966 rad
+      pos: -12.5,4.5
       parent: 1668
   - uid: 3697
     components:
@@ -36827,16 +36607,6 @@ entities:
     components:
     - type: Transform
       pos: 21.5,-21.5
-      parent: 1668
-  - uid: 5873
-    components:
-    - type: Transform
-      pos: -11.5,4.5
-      parent: 1668
-  - uid: 5886
-    components:
-    - type: Transform
-      pos: -10.5,5.5
       parent: 1668
   - uid: 6453
     components:
@@ -37379,6 +37149,18 @@ entities:
     - type: Transform
       pos: -23.5,11.5
       parent: 1668
+  - uid: 3771
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -6.5,-21.5
+      parent: 1668
+  - uid: 3772
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -5.5,-21.5
+      parent: 1668
   - uid: 6606
     components:
     - type: Transform
@@ -37433,15 +37215,6 @@ entities:
     components:
     - type: Transform
       pos: -0.5,-21.5
-      parent: 1668
-- proto: Telecrystal25
-  entities:
-  - uid: 3772
-    components:
-    - type: MetaData
-      desc: A poor knockoff of our bluespace technology.
-    - type: Transform
-      pos: -11.6637,6.489214
       parent: 1668
 - proto: TelescopicBatonAdvanced
   entities:
@@ -37671,16 +37444,6 @@ entities:
     components:
     - type: Transform
       pos: -20.47715,15.513819
-      parent: 1668
-- proto: TreasureSampleTube
-  entities:
-  - uid: 5861
-    components:
-    - type: MetaData
-      desc: A sample extracted from a Level 5 Biohazard. Many interns died to obtain this sample.
-      name: blob sample tube
-    - type: Transform
-      pos: -10.854535,6.5409007
       parent: 1668
 - proto: TunnelClownBusinessCard
   entities:
@@ -44072,26 +43835,6 @@ entities:
     - type: DeviceList
       devices:
       - 6760
-- proto: WeaponPulsePistol
-  entities:
-  - uid: 7058
-    components:
-    - type: Transform
-      parent: 7051
-    - type: Gun
-      burstCooldownModified: 0.25
-    - type: Physics
-      canCollide: False
-- proto: WeaponRevolverPirateEmpty
-  entities:
-  - uid: 6029
-    components:
-    - type: MetaData
-      desc: These used to exist, then they realised we are armed and resisting, now they are dead.
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -11.788538,4.3303256
-      parent: 1668
 - proto: WeaponTaser
   entities:
   - uid: 3727
@@ -44442,53 +44185,5 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 2.5,-17.5
-      parent: 1668
-- proto: WizardsGrimoire
-  entities:
-  - uid: 5863
-    components:
-    - type: MetaData
-      desc: This one has pulse holes all over it.
-      name: stolen wizards grimoire
-    - type: Transform
-      pos: -11.5306635,4.5096507
-      parent: 1668
-    - type: Supermatter
-      whitelist: {}
-      dustSound: !type:SoundPathSpecifier
-        path: /Audio/_Goobstation/Wizard/supermatter.ogg
-      delamSound: !type:SoundPathSpecifier
-        path: /Audio/_Goobstation/Supermatter/delamming.ogg
-      delamAlarm: !type:SoundPathSpecifier
-        path: /Audio/Machines/alarm.ogg
-      gasStorage:
-        Oxygen: 0
-        Nitrogen: 0
-        CarbonDioxide: 0
-        Plasma: 0
-        Tritium: 0
-        WaterVapor: 0
-        BZ: 0
-        Healium: 0
-        Pluoxium: 0
-- proto: Wonderprod
-  entities:
-  - uid: 6019
-    components:
-    - type: MetaData
-      desc: A outdated tool, used by a civilisation thinking itself better than us.
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -10.509799,5.809138
-      parent: 1668
-- proto: XenoEggDestroyed
-  entities:
-  - uid: 6022
-    components:
-    - type: MetaData
-      desc: Who could've guessed pulse weapons cut through these like butter. It's a wonder military companies struggle taking them out.
-      name: destroyed xeno egg
-    - type: Transform
-      pos: -10.5,5.5
       parent: 1668
 ...
