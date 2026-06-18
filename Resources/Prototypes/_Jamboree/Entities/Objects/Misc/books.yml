@@ -39,3 +39,20 @@
     - state: volume2
   - type: StealTarget
     stealGroup: HOS
+
+- type: entity
+  id: BookCodeofConduct
+  parent: BaseGuidebook
+  name: the code of conduct #jamboree
+  description: A set of Nanotrasen guidelines and instructions that is to be followed everyone aboard their stations.
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+    - state: cover_strong
+      color: "#1a5e96"
+    - state: icon_letter_N
+      color: "#f7d61a"
+  - type: GuideHelp
+    guides:
+    - CodeOfConduct

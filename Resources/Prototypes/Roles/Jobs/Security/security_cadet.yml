@@ -139,7 +139,7 @@
     id: SecurityCadetPDA
     ears: ClothingHeadsetAltSecurityRegular # Goobstation
     belt: ClothingBeltSecurityFilled
-    #pocket1: WeaponDisabler #Goobstation (Disablers in belts)
+    pocket1: BookSpaceLaw
     pocket2: BookSecurity
   storage:
     back:

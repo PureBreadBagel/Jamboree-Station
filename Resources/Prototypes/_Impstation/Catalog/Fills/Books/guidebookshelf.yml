@@ -22,5 +22,6 @@
     - id: BookScientistsGuidebook #scientist's guidebook
     - id: BookSecurity #security 101
     - id: BookSpaceEncyclopedia #space encyclopedia
-    - id: BookSpaceLaw #space law
+    - id: BookSpaceLaw #Jamboree, Legal Mandate
+    - id: BookCodeofConduct #Jamboree, code of conduct
     - id: BookTheBookOfControl #the book of control

@@ -1,0 +1,13 @@
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobTobyPenguin
+  name: Toby Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: tobypenguin
+      sprite: _Jamboree/Mobs/Animals/tobypenguin.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobTobyPenguin

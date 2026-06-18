@@ -37,6 +37,7 @@
         value: 5
     - id: NanoRepStationReport # Goobstation
     - id: PrinterDocFlatpack  # Corvax-Printer
+    - id: BookCodeofConduct # Jamboree COC
 
 - type: entity
   id: LockerNanorepFilled

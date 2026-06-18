@@ -1,0 +1,43 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  name: Toby
+  parent: MobPenguin
+  id: MobTobyPenguin
+  description: The greatest member of Central Command to ever live. His judging stare will haunt you for the rest of your days.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Mobs/Animals/tobypenguin.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: tobypenguin
+      sprite: _Jamboree/Mobs/Animals/tobypenguin.rsi
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: tobypenguin
+      Critical:
+        Base: tobypenguin-dead
+      Dead:
+        Base: tobypenguin-dead
+  - type: NoSlip
+  - type: Insulated
+  - type: Speech
+    speechSounds: Parrot
+    speechVerb: Parrot
+  - type: Vocal
+    sounds:
+      Unsexed: Parrot
+  - type: AutoImplant
+    implants: [ BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant]
+  - type: Access
+    groups:
+    - AllAccess
+    - Silicon
+    tags:
+    - CentralCommand
+    # Goobstation
+    - NanotrasenRepresentative
+    - BlueshieldOfficer
