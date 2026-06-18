@@ -1641,3 +1641,9 @@ Entries:
         as shadowkin.
   id: 142
   time: '2026-06-17T20:10:45.0000000+00:00'
+- author: EchoOfNothing
+  changes:
+    - type: Fix
+      message: Radio icons are now visible.
+  id: 143
+  time: '2026-06-18T13:01:30.0000000+00:00'
