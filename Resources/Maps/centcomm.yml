@@ -1,14 +1,10 @@
-# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/18/2026 00:12:40
+  time: 06/18/2026 13:29:18
   entityCount: 7046
 maps: []
 grids:
