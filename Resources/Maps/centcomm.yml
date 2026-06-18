@@ -1,15 +1,11 @@
-# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 meta:
   format: 7
   category: Grid
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/18/2026 13:29:18
-  entityCount: 7046
+  time: 06/18/2026 14:40:44
+  entityCount: 7050
 maps: []
 grids:
 - 1668
@@ -3198,13 +3194,6 @@ entities:
     - type: Transform
       pos: 7.5,19.5
       parent: 1668
-- proto: AirlockAssemblyCentralCommand
-  entities:
-  - uid: 592
-    components:
-    - type: Transform
-      pos: 21.5,22.5
-      parent: 1668
 - proto: AirlockAtmosphericsLocked
   entities:
   - uid: 4746
@@ -3441,6 +3430,11 @@ entities:
       parent: 1668
 - proto: AirlockCentralCommandLocked
   entities:
+  - uid: 592
+    components:
+    - type: Transform
+      pos: 21.5,22.5
+      parent: 1668
   - uid: 651
     components:
     - type: Transform
@@ -5272,6 +5266,14 @@ entities:
         1607:
         - - Timer
           - Open
+- proto: ButtonFrameGrey
+  entities:
+  - uid: 7048
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 23.5,20.5
+      parent: 1668
 - proto: CableApcExtension
   entities:
   - uid: 33
@@ -28071,6 +28073,19 @@ entities:
         810:
         - - Pressed
           - Toggle
+- proto: LockableButtonCommand
+  entities:
+  - uid: 7047
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 23.5,20.5
+      parent: 1668
+    - type: DeviceLinkSource
+      linkedPorts:
+        592:
+        - - Pressed
+          - DoorBolt
 - proto: LockerAtmosphericsFilledHardsuit
   entities:
   - uid: 3790
@@ -43569,6 +43584,20 @@ entities:
       rot: 3.141592653589793 rad
       pos: -5.5,27.5
       parent: 1668
+  - uid: 2493
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 25.5,20.5
+      parent: 1668
+    - type: AccessReader
+      access:
+      - - CentralCommand
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 6768
   - uid: 6747
     components:
     - type: Transform
@@ -43657,41 +43686,30 @@ entities:
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 25.5,20.5
+      pos: 31.5,15.5
       parent: 1668
+    - type: AccessReader
+      access:
+      - - CentralCommand
     - type: DeviceNetwork
       configurators:
       - invalid
       deviceLists:
-      - 2493
-    - type: AccessReader
-      access:
-      - - CentralCommand
+      - 6768
   - uid: 6764
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 31.5,20.5
+      pos: 25.5,15.5
       parent: 1668
-    - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 2493
-  - uid: 6768
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 28.5,12.5
-      parent: 1668
-    - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 2493
     - type: AccessReader
       access:
       - - CentralCommand
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 6768
   - uid: 6769
     components:
     - type: Transform
@@ -43770,19 +43788,36 @@ entities:
     - type: AccessReader
       access:
       - - CentralCommand
-- proto: WeaponEnergyTurretCommandControlPanel
-  entities:
-  - uid: 2493
+  - uid: 7049
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 30.5,21.5
+      rot: 3.141592653589793 rad
+      pos: 31.5,20.5
       parent: 1668
-    - type: DeviceList
-      devices:
-      - 6761
-      - 6764
+    - type: AccessReader
+      access:
+      - - CentralCommand
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
       - 6768
+  - uid: 7050
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 28.5,12.5
+      parent: 1668
+    - type: AccessReader
+      access:
+      - - CentralCommand
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 6768
+- proto: WeaponEnergyTurretCommandControlPanel
+  entities:
   - uid: 5618
     components:
     - type: Transform
@@ -43837,9 +43872,6 @@ entities:
       - 6756
       - 6758
       - 6760
-      - 6761
-      - 6764
-      - 6768
       - 6770
       - 6769
       - 6771
@@ -43879,6 +43911,19 @@ entities:
     - type: DeviceList
       devices:
       - 6747
+  - uid: 6768
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 29.5,20.5
+      parent: 1668
+    - type: DeviceList
+      devices:
+      - 2493
+      - 7049
+      - 6764
+      - 6761
+      - 7050
 - proto: WeaponEnergyTurretSecurity
   entities:
   - uid: 2929
