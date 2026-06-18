@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: BookshelfGuidebooksFilled
   parent: BookshelfGuidebooks
@@ -22,5 +26,6 @@
     - id: BookScientistsGuidebook #scientist's guidebook
     - id: BookSecurity #security 101
     - id: BookSpaceEncyclopedia #space encyclopedia
-    - id: BookSpaceLaw #space law
+    - id: BookSpaceLaw #Jamboree, Legal Mandate
+    - id: BookCodeofConduct #Jamboree, code of conduct
     - id: BookTheBookOfControl #the book of control

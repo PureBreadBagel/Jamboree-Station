@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobTobyPenguin
+  name: Toby Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: tobypenguin
+      sprite: _Jamboree/Mobs/Animals/tobypenguin.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobTobyPenguin

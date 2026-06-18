@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: BaseItem
+  id: GavelBlock
+  name: gavel block
+  description: This is what they hit.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/gavelhammer.rsi
+    state: gavelblock
+  - type: Appearance
+  - type: GavelBlock
+    hitSound:
+      path: /Audio/_Starlight/Items/gavelhammer.ogg
+  - type: Item
+    size: Small
+  - type: StaticPrice
+    price: 300

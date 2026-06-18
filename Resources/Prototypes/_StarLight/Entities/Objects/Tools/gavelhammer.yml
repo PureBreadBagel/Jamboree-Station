@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: BaseItem
+  id: GavelHammer
+  name: gavel hammer
+  description: This is what they hit with.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/gavelhammer.rsi
+    state: icon
+  - type: Appearance
+  - type: MeleeWeapon
+    attackRate: 0.4
+    damage:
+      groups:
+        Brute: 1
+  - type: Item
+    size: Small
+  - type: GavelHammer
+  - type: StaticPrice
+    price: 300

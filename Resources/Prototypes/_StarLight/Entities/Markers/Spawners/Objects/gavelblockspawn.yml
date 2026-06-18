@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnGavelBlock
+  name: Gavel Block Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: gavelblock
+      sprite: _Starlight/Objects/Tools/gavelhammer.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - GavelBlock

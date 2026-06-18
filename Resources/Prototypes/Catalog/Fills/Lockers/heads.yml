@@ -170,7 +170,7 @@
     - id: AstroNavCartridge
     - id: CargoTechFabCircuitboard # Goobstation - Cargo Techfab
     - id: MailTeleporterMachineCircuitboard # GoobStation port of DeltaV mail
-#    - id: ClothingHandsKnuckleDustersQM # jamboree - available in gear selector
+    - id: BookCodeofConduct #Jamboree, all heads get CoC
     - id: SalvageJobBoardComputerCircuitboard # Goobstation - This doesn't really have a use right now but it's there incase it ever gets use again
     - id: CargoMegaphone # goob - loudspeaker
     - id: PrinterDocFlatpack  # Corvax-Printer
@@ -195,7 +195,7 @@
     - id: CaptainIDCard
     - id: CigarGoldCase
       prob: 0.25
-#    - id: ClothingBeltSheathFilled # jamboree - available in gear selector
+    - id: BookCodeofConduct # jamboree all heads get CoC
     - id: ClothingHeadsetAltCommand
     - id: ClothingOuterArmorCaptainCarapace
     - id: CommsComputerCircuitboard
@@ -299,6 +299,7 @@
     - id: ComputerCargoRequestServiceFlatpack # Goobstation
   #  - id: RubberStampApproved # jamboree - available in gear selector
   #  - id: RubberStampDenied # jamboree - available in gear selector
+    - id: BookCodeofConduct #jamboree, all command get CoC
     - id: RubberStampHop
     - id: WeaponDisabler
     - id: HOPUndeterminedWeapon # Jamboree - command gear selectors
@@ -347,7 +348,7 @@
     - id: CartridgeRocketSingularityBuster
     - id: WeaponLauncherSingularityBuster
     - id: MachinePowerTransmissionLaserFlatpack
-#    - id: RCDRechargingCE # jamboree - available in gear selector
+    - id: BookCodeofConduct #jamboree, all heads get CoC
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -402,7 +403,7 @@
     - id: CMOUndeterminedWeapon # Jamboree - command gear selectors
     - id: ClothingMaskSterile
     - id: DoorRemoteMedical
-    # - id: HandheldCrewMonitor # Goobstation - in webbing
+    - id: BookCodeofConduct #all heads get COC jamboree
 #    - id: Hypospray # jamboree - available in gear selector
     - id: MedicalTechFabCircuitboard
     - id: ComputerCargoRequestMedicalFlatpack # Goobstation
@@ -475,7 +476,7 @@
     - id: ClothingBeltUtilityFilled
     - id: ClothingHeadsetAltScience
     - id: DoorRemoteResearch
-    #- id: HandTeleporter # jamboree - available in gear selector
+    - id: BookCodeofConduct #jamboree COC book
     - id: RDUndeterminedWeapon # Jamboree - command gear selectors
     #- id: ProtolatheMachineCircuitboard # Goobstation - Science Techfab
     - id: ResearchComputerCircuitboard
@@ -534,6 +535,7 @@
     children:
     #- id: WeaponEnergyShotgun # Goobstation - security revamp
     - id: BookSpaceLaw
+    - id: BookCodeofConduct #jamboree COC
     - id: BoxEncryptionKeySecurity
     - id: CigarGoldCase
       prob: 0.50
@@ -607,3 +609,5 @@
     - id: SpaceCash1000
     - id: BeachBall
     - id: BikeHorn
+    - id: BookCodeofConduct #jamboree, code of conduct
+    - id: MindShieldImplanter #jamboree, for aspiring ACOs
