@@ -1683,3 +1683,11 @@ Entries:
       message: Trill emote now has different audio.
   id: 146
   time: '2026-06-18T21:33:48.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        You can now fistbump, highfive, and dap up people using the interact
+        menu!
+  id: 147
+  time: '2026-06-19T17:06:26.0000000+00:00'
