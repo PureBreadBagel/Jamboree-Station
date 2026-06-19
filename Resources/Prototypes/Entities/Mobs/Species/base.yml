@@ -501,6 +501,7 @@
   - type: Sprinter # Goobstation
   - type: MindControllable # Goobstation
   - type: VisibleContraband # Goobstation
+  - type: RMCHandEmotes #RMC
 
 - type: entity
   save: false
