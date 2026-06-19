@@ -27,7 +27,7 @@
       - chest
       organs:
         brain: OrganHumanBrain
-        eyes: OrganHumanEyes
+        eyes: OrganTajaranEyes
     chest:
       part: ChestTajaran
       connections:

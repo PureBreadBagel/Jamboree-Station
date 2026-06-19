@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Goob Station Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared.StatusIcon;
 using Robust.Client.GameObjects;
@@ -17,7 +21,7 @@ public sealed class IconTag : IMarkupTagHandler
 
     public string Name => "icon";
 
-    public bool TryGetControl(MarkupNode node, [NotNullWhen(true)] out Control? control)
+    public bool TryCreateControl(MarkupNode node, [NotNullWhen(true)] out Control? control)
     {
         if (!node.Attributes.TryGetValue("src", out var id) || id.StringValue == null)
         {

@@ -393,7 +393,6 @@ namespace Content.Server.GameTicking
                 }
             }
 
-            AddComp<RespawnResetComponent>(mob);
 
             if (player.UserId == new Guid("{e887eb93-f503-4b65-95b6-2f282c014192}"))
             {

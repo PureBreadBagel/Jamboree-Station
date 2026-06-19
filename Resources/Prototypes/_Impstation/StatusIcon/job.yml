@@ -1,0 +1,66 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDeathsquad
+  icon:
+    sprite: /Textures/_Impstation/Interface/Misc/job_icons.rsi # imp
+    state: DeathSquad
+
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCBURN
+  icon:
+    sprite: /Textures/_Impstation/Interface/Misc/job_icons.rsi # imp
+    state: CBURN
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconERTLeader
+  icon:
+    sprite: /Textures/_Impstation/Interface/Misc/job_icons.rsi # imp
+    state: ERTLeader
+
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconERTSecurity
+  icon:
+    sprite: /Textures/_Impstation/Interface/Misc/job_icons.rsi # imp
+    state: ERTSecurity
+
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconERTMedic
+  icon:
+    sprite: /Textures/_Impstation/Interface/Misc/job_icons.rsi # imp
+    state: ERTMedical
+
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconERTEngineer
+  icon:
+    sprite: /Textures/_Impstation/Interface/Misc/job_icons.rsi # imp
+    state: ERTEngineer
+
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconERTJanitor
+  icon:
+    sprite: /Textures/_Impstation/Interface/Misc/job_icons.rsi # imp
+    state: ERTJanitor
+
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconERTChaplain
+  icon:
+    sprite: /Textures/_Impstation/Interface/Misc/job_icons.rsi # imp
+    state: ERTChaplain
+

@@ -13,7 +13,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     <GuideEntityEmbed Entity="MobTajaran" Caption=""/>
   </Box>
 
-  Tajara are a species of omnivorous, bipedal humanoids with features strongly resembling Terran felines.
+  Tajaran are a species of omnivorous, bipedal humanoids with features strongly resembling Terran felines.
   Their most distinguishing traits include a layer of fur, large ears atop their heads, and a tail that aids in balance.
 
   ## Mechanics
@@ -23,6 +23,8 @@ SPDX-License-Identifier: AGPL-3.0-or-later
   Their layer of fur gives them some [color=#1e90ff]resistance to Cold[/color], at the cost of [color=#ec3a3a]taking more Heat damage[/color]
 
   They use their claws for unarmed attacks, dealing [color=#ec3a3a]Slashing[/color] and [color=#ec3a3a]Piercing[/color] damage.
+
+  As a result of their eyes being more sensitive, they can [color=#1e90ff]see better in low-light conditions[/color], though not as well as shadowkin. However, this also means that [color=#ec3a3a]flashes have a stronger effect[/color] on them.
 
   Thanks to their innate agility, they [color=#1e90ff]take reduced damage from impacts or falls[/color], and their soft feet allow them to [color=#1e90ff]walk shoeless without making noise[/color].
 

@@ -5,9 +5,11 @@
 
 - type: entity
   id: Butt
-  name: "butt"
-  parent: [BaseItem]
+  name: butt #changed bunch of stuff (as in adding butts from Monke/Boomerstation)
+  description: The begining of the first joke. The end of the last.
+  parent: [BaseItem, ClothingHeadBase]
   components:
   - type: Sprite
-    sprite: _Goobstation/Mobs/butt.rsi
-    state: "butt"
+    sprite: _Monkestation/Species/Human/butt.rsi
+  - type: Clothing
+    sprite: _Monkestation/Species/Human/butt.rsi

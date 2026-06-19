@@ -1613,3 +1613,73 @@ Entries:
         the 2 new gases into the gasthresholds...)
   id: 139
   time: '2026-06-09T16:34:21.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Fix
+      message: The Streamers and Quills markings for Vox are no longer invisible!
+  id: 140
+  time: '2026-06-10T18:31:59.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Tweak
+      message: >-
+        Infernazium and Kaltrenoxide have been tweaked heavily. They no longer
+        instantly heat/cool gas, decay on their own and have gas reactions.
+        Infernazium turns into water vapor when O2 is around, and Kaltrenoxide
+        goes away rapidly near N2.
+    - type: Fix
+      message: >-
+        Respawning system had a bit of a refix. You shouldnt be able to bypass
+        spawn times.
+  id: 141
+  time: '2026-06-15T21:31:45.0000000+00:00'
+- author: EchoOfNothing
+  changes:
+    - type: Add
+      message: >-
+        Tajaran now have better night vision than most species, but not as good
+        as shadowkin.
+  id: 142
+  time: '2026-06-17T20:10:45.0000000+00:00'
+- author: EchoOfNothing
+  changes:
+    - type: Fix
+      message: Radio icons are now visible.
+  id: 143
+  time: '2026-06-18T13:01:30.0000000+00:00'
+- author: EchoOfNothing
+  changes:
+    - type: Add
+      message: A couple more typing indicators can now be seen!
+  id: 144
+  time: '2026-06-18T16:12:06.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        The Code of Conduct guidebook is hot of the presses! Assistants come
+        with it round start, heads have it in their lockers, and the library is
+        getting a fresh restock! Check it out now!
+    - type: Add
+      message: >-
+        Toby, the CentComm penguin, has returned from the war! He now serves as
+        the CC bartender!
+    - type: Tweak
+      message: >-
+        Central Command has received a huge update! Some highlights include: A
+        command debriefing room close to the lobby, a command break room, a
+        mailing unit which delivers contraband straight to the armory, and more!
+    - type: Remove
+      message: >-
+        There is no longer a dedicated courtroom at Central Command. Instead,
+        there is now the debriefing room!
+  id: 145
+  time: '2026-06-18T21:32:59.0000000+00:00'
+- author: EchoOfNothing
+  changes:
+    - type: Add
+      message: Felinids and tajarans can trill now!
+    - type: Tweak
+      message: Trill emote now has different audio.
+  id: 146
+  time: '2026-06-18T21:33:48.0000000+00:00'

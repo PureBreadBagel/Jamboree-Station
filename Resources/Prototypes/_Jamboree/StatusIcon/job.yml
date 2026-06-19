@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDiplomat
+  icon:
+    sprite: /Textures/_Jamboree/Interface/Misc/job_icons.rsi # jamboree
+    state: diplomat
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconInspector
+  icon:
+    sprite: /Textures/_Jamboree/Interface/Misc/job_icons.rsi # jamboree
+    state: inspector
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconNavyCaptain
+  icon:
+    sprite: /Textures/_Jamboree/Interface/Misc/job_icons.rsi # jamboree
+    state: navycaptain
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconNavyOfficer
+  icon:
+    sprite: /Textures/_Jamboree/Interface/Misc/job_icons.rsi # jamboree
+    state: navyofficer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSpecialOperationsOfficer
+  icon:
+    sprite: /Textures/_Jamboree/Interface/Misc/job_icons.rsi # jamboree
+    state: specialoperationsofficer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconHecu
+  icon:
+    sprite: /Textures/_Jamboree/Interface/Misc/job_icons.rsi # jamboree
+    state: hecu

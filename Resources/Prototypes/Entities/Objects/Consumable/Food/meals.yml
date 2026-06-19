@@ -729,7 +729,7 @@
   name: space dog 2
   parent: FoodMealBase
   id: FoodMealHotDog
-  description: Thanks to the wonders of archeology, cloning science, and necromancy, the space dog returns for the modern consumer! Thanks Discount Dan!
+  description: Thanks to the wonders of archeology, cloning science, and necromancy, the space dog returns for the modern consumer! Thank you, Discount Dan!
   components:
   - type: FlavorProfile
     flavors:

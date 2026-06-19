@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Sprites made by Bibble for Jamboree, hecu is a recolor of mercenary icon from NF",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "diplomat"
+        },
+        {
+            "name": "inspector"
+        },
+        {
+            "name": "navycaptain"
+        },
+        {
+            "name": "navyofficer"
+        },
+        {
+            "name": "specialoperationsofficer"
+        },
+        {
+            "name": "hecu"
+        }
+    ]
+}

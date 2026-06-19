@@ -485,8 +485,8 @@
 - type: entity
   id: BookSpaceLaw
   parent: BaseGuidebook
-  name: the legal mandate
-  description: A set of Nanotrasen guidelines for keeping order on their space stations.
+  name: the legal mandate #jamboree
+  description: A set of Nanotrasen guidelines outlining the possible criminal violations and the punishments associated with them, the different alert proceedures, and the rights of prisoners. #Jamboree
   components:
   - type: Sprite
     layers:
@@ -539,7 +539,7 @@
           icon_aurora: Sixteen
           icon_briefcase: ""
           icon_eye: ""
-          icon_letter_N: ""
+#          icon_letter_N: "" #Jamboree, so that there isn't confusion between this book and the Code of Conduct book!
           icon_letter_P: ""
           icon_lightning: ""
           icon_planet: ""
