@@ -1,7 +1,8 @@
 // SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
-
+using System.Numerics;
+using Content.Shared.Weapons.Melee;
 using Content.Shared.Bed.Cryostorage;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Coordinates;
@@ -22,9 +23,8 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared._RMC14.Emote;
 
-public abstract class SharedRMCEmoteSystem : EntitySystem
+public sealed class SharedRMCEmoteSystem : EntitySystem
 {
-    [Dependency] private readonly IConfigurationManager _config = default!;
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly RotateToFaceSystem _rotate = default!;
@@ -32,8 +32,7 @@ public abstract class SharedRMCEmoteSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedInteractionSystem _interaction = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-
-    private TimeSpan _emoteCooldown;
+    [Dependency] private readonly SharedMeleeWeaponSystem _melee = default!;
 
     private readonly float _interactRange = 1f;
 
@@ -42,41 +41,6 @@ public abstract class SharedRMCEmoteSystem : EntitySystem
         SubscribeLocalEvent<RMCHandEmotesComponent, InteractHandEvent>(OnInteractHand);
         SubscribeLocalEvent<RMCHandEmotesComponent, GetVerbsEvent<InteractionVerb>>(OnGetInteractionVerbs);
         SubscribeLocalEvent<RMCHandEmotesComponent, MoveInputEvent>(OnMove);
-
-    }
-
-    public virtual void TryEmoteWithChat(
-        EntityUid source,
-        ProtoId<EmotePrototype> emote,
-        bool hideLog = false,
-        string? nameOverride = null,
-        bool ignoreActionBlocker = false,
-        bool forceEmote = false,
-        TimeSpan? cooldown = null)
-    {
-    }
-
-    public bool TryEmote(Entity<EmoteCooldownComponent?> cooldown)
-    {
-        if (!Resolve(cooldown, ref cooldown.Comp, false))
-            return true;
-
-        var time = _timing.CurTime;
-        if (time < cooldown.Comp.NextEmote)
-            return false;
-
-        cooldown.Comp.NextEmote = time + _emoteCooldown;
-        Dirty(cooldown);
-        return true;
-    }
-
-    public void ResetCooldown(Entity<EmoteCooldownComponent?> cooldown)
-    {
-        if (!Resolve(cooldown, ref cooldown.Comp, false))
-            return;
-
-        cooldown.Comp.NextEmote = _timing.CurTime + _emoteCooldown;
-        Dirty(cooldown);
     }
 
     private void OnInteractHand(Entity<RMCHandEmotesComponent> ent, ref InteractHandEvent args)
@@ -185,9 +149,7 @@ public abstract class SharedRMCEmoteSystem : EntitySystem
         ent.Comp.Target = target.Owner;
         ent.Comp.LeaveHangingAt = _timing.CurTime + ent.Comp.LeftHangingDelay;
         ent.Comp.State = state;
-
-        if (_net.IsServer)
-            ent.Comp.SpawnedEffect = SpawnAttachedTo(effect, ent.Owner.ToCoordinates());
+        ent.Comp.SpawnedEffect = PredictedSpawnAttachedTo(effect, ent.Owner.ToCoordinates());
 
         _popup.PopupPredicted(popupSelf, popup, ent.Owner, ent.Owner, PopupType.Medium);
         Dirty(ent);
@@ -198,8 +160,8 @@ public abstract class SharedRMCEmoteSystem : EntitySystem
         ent.Comp.Target = null;
         ent.Comp.Active = false;
 
-        if (_net.IsServer && ent.Comp.SpawnedEffect != null)
-            QueueDel(ent.Comp.SpawnedEffect);
+        if (ent.Comp.SpawnedEffect != null)
+            PredictedQueueDel(ent.Comp.SpawnedEffect);
 
         ent.Comp.SpawnedEffect = null;
 
@@ -251,16 +213,15 @@ public abstract class SharedRMCEmoteSystem : EntitySystem
         _popup.PopupClient(popupSelf, uid, uid, PopupType.Medium);
         _popup.PopupClient(popupSelfTarget, targetUid, targetUid, PopupType.Medium);
 
+        DoAnimation(targetUid, uid);
+
         _rotate.TryFaceCoordinates(uid, _transform.GetMapCoordinates(targetUid).Position);
         _rotate.TryFaceCoordinates(targetUid, _transform.GetMapCoordinates(uid).Position);
 
-        if (_net.IsServer)
-        {
-            var others = Filter.PvsExcept(uid).RemovePlayerByAttachedEntity(targetUid);
-            _popup.PopupEntity(popup, uid, others, true);
+        _popup.PopupPredicted(null, popup, uid, targetUid);
 
-            _audio.PlayPvs(sound, uid);
-        }
+        _audio.PlayPredicted(sound, uid, targetUid);
+        DoAnimation(uid, targetUid);
 
         CancelHandEmotes(ent);
         CancelHandEmotes(target);
@@ -286,5 +247,14 @@ public abstract class SharedRMCEmoteSystem : EntitySystem
             var leaveHangingMessage = Loc.GetString("rmc-hands-emotes-left-hanging");
             _popup.PopupEntity(leaveHangingMessage, uid, uid, PopupType.SmallCaution);
         }
+    }
+
+    public void DoAnimation(EntityUid user, EntityUid target)
+    {
+        var userXform = Transform(user);
+        var targetPos = _transform.GetWorldPosition(target);
+        var localPos = Vector2.Transform(targetPos, _transform.GetInvWorldMatrix(userXform));
+        localPos = userXform.LocalRotation.RotateVec(localPos);
+        _melee.DoLunge(user, target, Angle.Zero, localPos, null, Angle.Zero, false, true);
     }
 }
