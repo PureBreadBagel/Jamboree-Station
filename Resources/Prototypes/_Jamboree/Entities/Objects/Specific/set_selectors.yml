@@ -17,6 +17,8 @@
     - CapLordKit
     - CapSupportKit
     maxSelectedSets: 1
+  - type: StealTarget # Command selector fixes 3 or something
+    stealGroup: Captain
 
 # Head of Security
 
@@ -37,6 +39,8 @@
     - LawbringerKit
     - NonlethalLauncherKit
     maxSelectedSets: 1
+  - type: StealTarget # Command selector fixes 3 or something
+    stealGroup: HOS
 
 # Chief Medical Officer
 
@@ -57,6 +61,8 @@
 #    - CMOMindKit # TODO - finish this
 #    - CMOCloningKit # disabled for now, available in CMO's locker at roundstart
     maxSelectedSets: 1
+  - type: StealTarget # Command selector fixes 3 or something
+    stealGroup: CMO
 
 # Quartermaster
 
@@ -116,6 +122,8 @@
     - RDAnomKit
     - RDRenterKit
     maxSelectedSets: 1
+  - type: StealTarget # Command selector fixes 3 or something
+    stealGroup: RD
 
 # Head of Personnel
 
@@ -157,4 +165,6 @@
     - WardenGuardKit
     - WardenArmorKit # TODO - sprite this
     maxSelectedSets: 1
+  - type: StealTarget # Command selector fixes 3 or something
+    stealGroup: Warden
 
