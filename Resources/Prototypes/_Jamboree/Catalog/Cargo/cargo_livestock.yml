@@ -1,0 +1,9 @@
+﻿- type: cargoProduct
+  id: LivestockCow
+  icon:
+    sprite: Mobs/Animals/mouse.rsi
+    state: icon-0
+  product: CrateNPCPlagueMouse
+  cost: 5000
+  category: cargoproduct-category-name-medical
+  group: market
