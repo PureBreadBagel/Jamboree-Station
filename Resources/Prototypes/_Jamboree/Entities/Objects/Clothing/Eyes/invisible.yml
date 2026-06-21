@@ -1,0 +1,25 @@
+﻿- type: entity
+  parent: ClothingEyesGlassesCentComm
+  id: ClothingEyesGlassesInvisible
+  suffix: DO NOT MAP # Just don't...
+  name: bluespace assisted glasses
+  description: An set of glasses that utilize bluespace technology, bending light and becoming invisible to the naked eye when worn. These have similar functions to central command sunglasses.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Glasses/covertglasses.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/Eyes/Glasses/covertglasses.rsi
+  - type: StripMenuInvisible # No peeking!
+
+- type: entity
+  parent: ClothingEyesGlassesDeathsquad
+  id: ClothingEyesGlassesInvisibleCombat
+  suffix: DO NOT MAP # Just don't...
+  name: bluespace assisted battle glasses
+  description: An set of glasses that utilize bluespace technology, bending light and becoming invisible to the naked eye when worn. These have similar functions to central command sunglasses, and a built in neural link to the a library of martial arts movies.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Glasses/covertglasses.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/Eyes/Glasses/covertglasses.rsi
+  - type: StripMenuInvisible # No peeking!

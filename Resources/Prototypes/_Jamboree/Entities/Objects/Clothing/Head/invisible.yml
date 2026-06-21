@@ -1,0 +1,12 @@
+﻿- type: entity
+  parent: ClothingHeadHatCentcomcap
+  id: ClothingHeadHelmetInvisible
+  suffix: DO NOT MAP # Just don't...
+  name: bluespace assisted helmet
+  description: A helmet that utilizes bluespace technology, bending light and becoming invisible to the naked eye when worn.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Head/Helmet/coverthelmet.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/Head/Helmet/coverthelmet.rsi
+  - type: StripMenuInvisible # No peeking!

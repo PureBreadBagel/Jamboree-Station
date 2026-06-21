@@ -1,0 +1,52 @@
+﻿- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesInvisible
+  suffix: DO NOT MAP # Just don't...
+  name: bluespace assisted gloves
+  description: An set of gloves that utilize bluespace technology, bending light and becoming invisible to the naked eye when worn.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Hands/Gloves/covertgloves.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/Hands/Gloves/covertgloves.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-classified
+    fiberColor: fibers-green
+  - type: StripMenuInvisible # No peeking!
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesInvisibleCombat
+  suffix: DO NOT MAP # Just don't...
+  name: bluespace assisted battle gloves
+  description: An set of gloves that utilize bluespace technology, bending light and becoming invisible to the naked eye when worn. These ones appear to be empowered as to pack more of a punch.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Hands/Gloves/covertgloves.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/Hands/Gloves/covertgloves.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-classified
+    fiberColor: fibers-green
+  - type: StripMenuInvisible # No peeking!
+  - type: ClothingGrantComponent
+    component:
+    - type: Prying
+      pryPowered: true
+      force: true
+      speedModifier: 4.5
+  - type: MeleeWeapon
+    attackRate: 1.2
+    damage:
+      types:
+        Blunt: 32
+        Structural: 80
+    mustBeEquippedToUse: true
+    soundHit:
+      path: /Audio/_Goobstation/Weapons/Effects/metalcrush.ogg
+    canWideSwing: false
+  - type: StaminaDamageOnHit
+    damage: 45
+    overtime: 80
