@@ -35,12 +35,13 @@
     Paper: 10
     Envelope: 10
     HandLabeler: 2
+    ClothingNeckLanyard: 4
     EncryptionKeyCargo: 2
     EncryptionKeyEngineering: 2
     EncryptionKeyMedical: 2
     EncryptionKeyScience: 2
     EncryptionKeySecurity: 1
-    EncryptionKeyService: 3
+    EncryptionKeyService: 4
   contrabandInventory:
     BalloonNT: 2
     LuxuryPen: 1
