@@ -58,3 +58,26 @@
         Slash: 0.7
         Piercing: 0.7
         Heat: 0.8
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatShamebrero
+  name: shamebrero
+  suffix: Self Unremovable
+  description: "The perfect hat to make someone reflect on their shame. Comes with an inbuilt locking and shocking mechanism, with the shocking able to be done via a remote signaller."
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Head/Hats/shamebrero.rsi
+    state: icon
+  - type: Clothing
+    stripDelay: 10
+    equipDelay: 5 # to avoid accidentally falling into the trap associated with SelfUnremovableClothing
+  - type: SelfUnremovableClothing
+  - type: ShockOnTrigger
+    damage: 5
+    duration: 3
+    cooldown: 4
+  - type: TriggerOnSignal
+  - type: DeviceLinkSink
+    ports:
+      - Trigger
