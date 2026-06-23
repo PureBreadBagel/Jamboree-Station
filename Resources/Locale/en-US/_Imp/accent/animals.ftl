@@ -1,4 +1,4 @@
-#pleebnar
+# pleebnar
 accent-words-pleebnar-1 = Glup!
 accent-words-pleebnar-2 = Pisk!
 accent-words-pleebnar-3 = weblele...

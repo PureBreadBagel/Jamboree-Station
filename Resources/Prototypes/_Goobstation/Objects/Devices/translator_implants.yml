@@ -15,37 +15,40 @@
   - type: TranslatorImplant
     spoken:
       - TauCetiBasic # Common Languages -
-      - SolCommon
+      - SolCommon # Human and Dwarf Language and Trait
       - Elyran
       - Freespeak
       - NovuNederic
       - Tradeband
       - Sign
       - SpaceItalian # Job Specific -
-      - Bubblish # Species Languages -
-      - Calcic
-      - Canilunzt
-      - Chittin
-      - FloorGoblin
-      - Gruntish
-      - NewKinPidgin # = Ka'rakk
-      - Marish
-      - Moffic
-      - Nehina
-      - Nekomimetic
-      - RobotTalk
-      - RootSpeak
-      - SiikMaas
-      - Draconic # = Sinta'Unathi
-      - Schechi
-      - ValyrianStandard
-      - YowKriol
-      - Azaziba # Depricated Languages -
-      - Delvahii
-      - Eldritch
-      - NalRasan
-      - SiikTajr
-      - YaSsa
+      - Bubblish # Slime Language
+      - Calcic # Plamamen and Skeleton Language
+      - Canilunzt # Vulpakanin Language
+      - Chittin # Chitinid Language
+      - FloorGoblin # Gobling Language
+      - Gruntish # Oni Lanugage
+      - NewKinPidgin # = Ka'rakk, Vox Language
+      - Marish # Shadowkin Language
+      - Moffic # Moth Language
+      - Nehina # Feroxi Language
+      - Nekomimetic # Felinid Lanugage
+      - RobotTalk # Borg/IPC Language
+      - RootSpeak # Diona Lanugage
+      - SiikMaas # Tajaran Language
+      - Draconic # = Sinta'Unathi, Reptillian Language
+      - Schechi # Avali Language
+      - ValyrianStandard # Harpy Language
+      - YowKriol # Yowie Language
+#      - Azaziba # Depricated Languages -
+#      - Delvahii
+      - Eldritch # Eventually Cthulhoid Language
+#      - NalRasan
+#      - SiikTajr
+      - BieselEckeckyik
+      - Eckeckyik # Thaven Language
+      - Xeeplian # Abductor/Xeeplian Language
+#      - YaSsa
       - Cheval # Animal Languages -
       - Carptongue
       - Deer
@@ -59,37 +62,40 @@
 
     understood:
       - TauCetiBasic # Common Languages -
-      - SolCommon
+      - SolCommon # Human and Dwarf Language and Trait
       - Elyran
       - Freespeak
       - NovuNederic
       - Tradeband
       - Sign
       - SpaceItalian # Job Specific -
-      - Bubblish # Species Languages -
-      - Calcic
-      - Canilunzt
-      - Chittin
-      - FloorGoblin
-      - Gruntish
-      - NewKinPidgin # = Ka'rakk
-      - Marish
-      - Moffic
-      - Nehina
-      - Nekomimetic
-      - RobotTalk
-      - RootSpeak
-      - SiikMaas
-      - Draconic # = Sinta'Unathi
-      - Schechi
-      - ValyrianStandard
-      - YowKriol
-      - Azaziba # Depricated Languages -
-      - Delvahii
-      - Eldritch
-      - NalRasan
-      - SiikTajr
-      - YaSsa
+      - Bubblish # Slime Language
+      - Calcic # Plamamen and Skeleton Language
+      - Canilunzt # Vulpakanin Language
+      - Chittin # Chitinid Language
+      - FloorGoblin # Gobling Language
+      - Gruntish # Oni Lanugage
+      - NewKinPidgin # = Ka'rakk, Vox Language
+      - Marish # Shadowkin Language
+      - Moffic # Moth Language
+      - Nehina # Feroxi Language
+      - Nekomimetic # Felinid Lanugage
+      - RobotTalk # Borg/IPC Language
+      - RootSpeak # Diona Lanugage
+      - SiikMaas # Tajaran Language
+      - Draconic # = Sinta'Unathi, Reptillian Language
+      - Schechi # Avali Language
+      - ValyrianStandard # Harpy Language
+      - YowKriol # Yowie Language
+#      - Azaziba # Depricated Languages -
+#      - Delvahii
+      - Eldritch # Eventually Cthulhoid Language
+#      - NalRasan
+#      - SiikTajr
+      - BieselEckeckyik
+      - Eckeckyik # Thaven Language
+      - Xeeplian # Abductor/Xeeplian Language
+#      - YaSsa
       - Cheval # Animal Languages -
       - Carptongue
       - Deer
@@ -99,7 +105,6 @@
       - Mouse
       - Monkey
       - Kobold
-
 
 
 
