@@ -1699,3 +1699,9 @@ Entries:
         on other people!
   id: 148
   time: '2026-06-19T19:24:15.0000000+00:00'
+- author: Gorse1
+  changes:
+    - type: Remove
+      message: Removed Herobrine
+  id: 149
+  time: '2026-06-23T00:20:37.0000000+00:00'
