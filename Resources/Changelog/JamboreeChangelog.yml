@@ -1691,3 +1691,17 @@ Entries:
         menu!
   id: 147
   time: '2026-06-19T17:06:26.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the ability to give handshakes! This feature when right-clicking
+        on other people!
+  id: 148
+  time: '2026-06-19T19:24:15.0000000+00:00'
+- author: Gorse1
+  changes:
+    - type: Remove
+      message: Removed Herobrine
+  id: 149
+  time: '2026-06-23T00:20:37.0000000+00:00'

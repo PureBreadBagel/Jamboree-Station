@@ -42,3 +42,11 @@
   components:
   - type: Sprite
     state: emote_dapup
+
+- type: entity
+  parent: RMCEffectEmoteBase
+  id: RMCEffectHandshake
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: emote_handshake
