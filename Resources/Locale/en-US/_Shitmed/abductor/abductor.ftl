@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-species-name-abductor = alien
+species-name-abductor = Xeeplian
 
 abductors-weapon-restricted-1 = You press the button and it does nothing.
 abductors-weapon-restricted-2 = Seems like you've grabbed the blade.
