@@ -14,3 +14,176 @@
   name: foxwithguns - Whimsical Woods
   path:
     path: /Audio/_Jamboree/Jukebox/whimsicalwoods.ogg
+
+# Wario Land 5 Itch Game Soundtrack (still under fox's normal license)
+
+- type: jukebox
+  id: beyondtherainbow
+  name: foxwithguns - Beyond The Rainbow
+  path:
+    path: /Audio/_Jamboree/Jukebox/beyond-the-rainbow.ogg
+
+- type: jukebox
+  id: centrifugalforce
+  name: foxwithguns - Centrifugal Force
+  path:
+    path: /Audio/_Jamboree/Jukebox/centrifugal-force.ogg
+
+- type: jukebox
+  id: cursedgenes
+  name: foxwithguns - Cursed Genes
+  path:
+    path: /Audio/_Jamboree/Jukebox/cursed-genes.ogg
+
+- type: jukebox
+  id: destinysmirror
+  name: foxwithguns - Destiny's Mirror
+  path:
+    path: /Audio/_Jamboree/Jukebox/destiny-s-mirror.ogg
+
+- type: jukebox
+  id: gambledtoshambles
+  name: foxwithguns - Gambled to Shambles
+  path:
+    path: /Audio/_Jamboree/Jukebox/gambled-to-shambles.ogg
+
+- type: jukebox
+  id: gonefishin
+  name: foxwithguns - Gone Fishin'
+  path:
+    path: /Audio/_Jamboree/Jukebox/gone-fishin.ogg
+
+- type: jukebox
+  id: morbingtime
+  name: foxwithguns - Morbing Time
+  path:
+    path: /Audio/_Jamboree/Jukebox/morbing-time.ogg
+
+- type: jukebox
+  id: pridemonth
+  name: foxwithguns - Pride Month
+  path:
+    path: /Audio/_Jamboree/Jukebox/pride-month.ogg
+
+- type: jukebox
+  id: theblartening
+  name: foxwithguns - The Blartening
+  path:
+    path: /Audio/_Jamboree/Jukebox/the-blartening.ogg
+
+- type: jukebox
+  id: tutorial
+  name: foxwithguns - Tutorial
+  path:
+    path: /Audio/_Jamboree/Jukebox/tutorial.ogg
+
+- type: jukebox
+  id: warioisseveralyearslateforschool
+  name: foxwithguns - Wario is Several Years Late for School
+  path:
+    path: /Audio/_Jamboree/Jukebox/wario-is-several-years-late-for-school.ogg
+
+- type: jukebox
+  id: yellowcapzone
+  name: foxwithguns - Yellow Cap Zone
+  path:
+    path: /Audio/_Jamboree/Jukebox/yellow-cap-zone.ogg
+
+- type: jukebox
+  id: yinandyang
+  name: foxwithguns - Yin and Yang
+  path:
+    path: /Audio/_Jamboree/Jukebox/yin-and-yang.ogg
+
+# Singles and Features
+- type: jukebox
+  id: wizardstheory
+  name: foxwithguns and The Middlemen - Wizard's Theory
+  path:
+    path: /Audio/_Jamboree/Jukebox/wizards-theory.ogg
+
+- type: jukebox
+  id: namesforfrogs
+  name: foxwithguns - Names for Frogs
+  path:
+    path: /Audio/_Jamboree/Jukebox/names-for-frogs.ogg
+
+# Webdisk
+
+- type: jukebox
+  id: 6125lucyssong
+  name: foxwithguns - 6.1.25 (Lucy's Song)
+  path:
+    path: /Audio/_Jamboree/Jukebox/6125-lucy's-song.ogg
+
+- type: jukebox
+  id: agodsdelusion
+  name: foxwithguns - A God's Delusion
+  path:
+    path: /Audio/_Jamboree/Jukebox/a-god's-delusion.ogg
+
+- type: jukebox
+  id: blackandwhite
+  name: foxwithguns - Black & White
+  path:
+    path: /Audio/_Jamboree/Jukebox/black-&-white.ogg
+
+- type: jukebox
+  id: kaleidoscope
+  name: foxwithguns - Kaleidoscope
+  path:
+    path: /Audio/_Jamboree/Jukebox/kaleidoscope.ogg
+
+- type: jukebox
+  id: life-story
+  name: foxwithguns - Life Story
+  path:
+    path: /Audio/_Jamboree/Jukebox/life-story.ogg
+
+- type: jukebox
+  id: lsddreamemulator
+  name: foxwithguns - LSD Dream Emulator
+  path:
+    path: /Audio/_Jamboree/Jukebox/lsd-dream-emulator.ogg
+
+- type: jukebox
+  id: numberstations
+  name: foxwithguns - Number Stations
+  path:
+    path: /Audio/_Jamboree/Jukebox/number-stations.ogg
+
+- type: jukebox
+  id: ohyeah
+  name: foxwithguns - Oh Yeah
+  path:
+    path: /Audio/_Jamboree/Jukebox/oh-yeah.ogg
+
+- type: jukebox
+  id: sulfoxide
+  name: foxwithguns - Sulfoxide
+  path:
+    path: /Audio/_Jamboree/Jukebox/sulfoxide.ogg
+
+- type: jukebox
+  id: talesfromaninbox
+  name: foxwithguns - Tales from an Inbox
+  path:
+    path: /Audio/_Jamboree/Jukebox/tales-from-an-inbox.ogg
+
+- type: jukebox
+  id: thingofbleach
+  name: foxwithguns - Thing of Bleach
+  path:
+    path: /Audio/_Jamboree/Jukebox/thingofbleach.ogg
+
+- type: jukebox
+  id: umbrellaman
+  name: foxwithguns - Umbrella Man
+  path:
+    path: /Audio/_Jamboree/Jukebox/umbrella-man.ogg
+
+- type: jukebox
+  id: zombieyondeathlawn
+  name: foxwithguns - Zombieyon (Death Lawn)
+  path:
+    path: /Audio/_Jamboree/Jukebox/zombieyon-death-lawn.ogg
