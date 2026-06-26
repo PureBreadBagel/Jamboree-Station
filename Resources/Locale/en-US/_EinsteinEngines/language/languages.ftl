@@ -99,8 +99,9 @@ language-Chittin-description =
 
 language-Xeeplian-name = Xeeplian
 language-Xeeplian-description =
-    Our language is highly advanced, efficient and to the point.
-    We have taken a liking to mimic some of the inferior lifeforms' babbling in the further pursuit of Our goals.
+    A language created by the Xeeplian species. Given the Abduction Counsel's strong grip upon many parts of Xeeplian society, some words in this
+    language appear to mock the "inferior" Tau Ceti Basic. Those not familiar with the language often find themselves coming into hostility with speakers
+    of this language either due to these mocking words or the strange sounds of the rest of the language.
 
 # Animal Languages
 
