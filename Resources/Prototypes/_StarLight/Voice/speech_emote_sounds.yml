@@ -52,8 +52,10 @@
       path: /Audio/_Starlight/Voice/Resomi/resomi_whistle.ogg
     Chirp:
       collection: ResomiChirp
-    Gulp: # Omu
+    Gulp: # gds - more thaven emotes
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+    Surprised: # Goob
+      path: /Audio/_Goobstation/Voice/surprised.ogg
 
 - type: emoteSounds
   id: FemaleAvali
@@ -108,5 +110,7 @@
       path: /Audio/_Starlight/Voice/Resomi/resomi_whistle.ogg
     Chirp:
       collection: ResomiChirp
-    Gulp: # Omu
+    Gulp: # goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+    Surprised: # Goob
+      path: /Audio/_Goobstation/Voice/surprised.ogg

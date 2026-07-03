@@ -36,6 +36,8 @@
       collection: Weh
     Gulp: # gds - more thaven emotes
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+    Surprised: # Goob
+      path: /Audio/_Goobstation/Voice/surprised.ogg
     Hiss: #
       path: /Audio/Animals/snake_hiss.ogg
     Meow:
@@ -87,6 +89,8 @@
       collection: Weh
     Gulp: # gds - more thaven emotes
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+    Surprised: # Goob
+      path: /Audio/_Goobstation/Voice/surprised.ogg
     Hiss: #
       path: /Audio/Animals/snake_hiss.ogg
     Meow:
