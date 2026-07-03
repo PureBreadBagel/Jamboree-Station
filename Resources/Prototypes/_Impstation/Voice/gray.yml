@@ -17,7 +17,7 @@
     Laugh:
       path: /Audio/_Impstation/Voice/Gray/gray_laugh.ogg
     Sneeze:
-      collection: UnisexSneezes
+      collection: MaleSneezes
     Cough:
       path: /Audio/_Impstation/Voice/Gray/gray_cough.ogg
     Hiss:
