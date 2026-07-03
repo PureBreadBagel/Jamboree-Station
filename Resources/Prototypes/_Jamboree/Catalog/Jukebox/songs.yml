@@ -174,7 +174,7 @@
   id: thingofbleach
   name: foxwithguns - Thing of Bleach
   path:
-    path: /Audio/_Jamboree/Jukebox/thingofbleach.ogg
+    path: /Audio/_Jamboree/Jukebox/thing-of-bleach.ogg
 
 - type: jukebox
   id: umbrellaman

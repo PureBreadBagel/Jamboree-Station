@@ -68,12 +68,6 @@
     path: /Audio/_DV/Jukebox/Patricia_Taxxon_-_Minute_-_MONO.ogg
 
 - type: jukebox
-  id: SunbeamPhoron
-  name: Sunbeamstress - Phoron Will Make Us Rich
-  path:
-    path: /Audio/_DV/Jukebox/Phoron_Will_Make_Us_RichMONO2.ogg
-
-- type: jukebox
   id: NymphsForest
   name: Psirius - Nymphs of the Forest
   path:
