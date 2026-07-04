@@ -212,6 +212,8 @@
     minimumPlayers: 5
     weight: 5
     duration: 15
+  - type: GameRule
+    chaosScore: 30
   - type: VentCrittersRule
     min: 1           # @  10 Pop -> Spawns  6 mice, 1 pitbull
     max: 1           # @  50 Pop -> Spawns 12 mice, 2 pitbulls
