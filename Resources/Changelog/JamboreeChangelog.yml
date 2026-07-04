@@ -1713,3 +1713,20 @@ Entries:
       message: Added 28 songs by the artist Foxwithguns to the jukebox!
   id: 150
   time: '2026-07-03T21:32:27.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the amber alert level from Goobstation: An alert level to indicate
+        to all members of the crew it is time to unite and take on a threat
+        together!
+    - type: Add
+      message: >-
+        Added the cyan alert level from Funkystation: An alert level to indicate
+        to the crew that there is a silicon related threat aboard!
+    - type: Tweak
+      message: >-
+        The LM and CoC has been updated to include the procedures for these new
+        alert levels! Get to hittin the books!
+  id: 151
+  time: '2026-07-04T06:53:31.0000000+00:00'
