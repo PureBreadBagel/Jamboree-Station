@@ -92,3 +92,11 @@
   - type: VoiceMask
     voiceMaskName: Griffin
     addAction: false
+
+# Freedom Operative (MURICA!!! FUCK YEAH!!!)
+- type: entity
+  parent: ClothingHeadCowlGriffinReal
+  id: ClothingHeadCowlFreedom
+  name: freedom operative helmet
+  suffix: Admeme
+  description: Giving you liberty. Or giving you death.
