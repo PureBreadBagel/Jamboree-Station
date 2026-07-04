@@ -208,7 +208,7 @@
   - type: StationEvent
     startAnnouncement: station-event-pitbull-start-announcement
     startAudio:
-      path: /Audio/_DV/Announcements/attention.ogg
+      path: /Audio/Announcements/attention.ogg
     minimumPlayers: 5
     weight: 5
     duration: 15

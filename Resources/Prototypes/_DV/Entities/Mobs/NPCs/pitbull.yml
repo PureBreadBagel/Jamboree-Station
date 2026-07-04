@@ -104,7 +104,6 @@
   - type: NpcFactionMember
     factions:
       - PetsNT
-      - Cat # Not a cat but we want them to attack mice
   - type: RandomMetadata
     nameSegments: [NamesPitbulls]
 
