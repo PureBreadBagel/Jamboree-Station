@@ -1,0 +1,77 @@
+﻿- type: constructionGraph
+  id: GlassesPrescriptionSec
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: glassesSecurityPrescription
+      steps:
+      - tag: GlassesSecurity
+        name: construction-graph-tag-security-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/secglasses.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: glassesSecurityPrescription
+    entity: ClothingEyesPrescriptionGlassesSec
+
+- type: constructionGraph
+  id: HudPrescriptionSec
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: hudSecurityPrescription
+      steps:
+      - tag: HudSecurity
+        name: construction-graph-tag-security-hud
+        icon:
+          sprite: Clothing/Eyes/Hud/sec.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: hudSecurityPrescription
+    entity: ClothingEyesPrescriptionHudSecurity
+
+- type: constructionGraph
+  id: EyepatchPrescriptionSec
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: eyepatchSecurityPrescription
+      steps:
+      - tag: HudSecurity
+        name: construction-graph-tag-security-eyepatch
+        icon:
+          sprite: Clothing/Eyes/Hud/secpatch.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: eyepatchSecurityPrescription
+    entity: ClothingEyesPrescriptionEyepatchHudSecurity

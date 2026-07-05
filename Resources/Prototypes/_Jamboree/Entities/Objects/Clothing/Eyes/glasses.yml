@@ -1,0 +1,83 @@
+﻿- type: entity
+  parent: ClothingEyesGlassesCommand
+  id: ClothingEyesPrescriptionGlassesCommand
+  name: prescription administration glasses
+  description: Your insurance doesn't cover these. Don't lose them.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Glasses/prescriptionglasses.rsi
+    state: commandglasses
+  - type: VisionCorrection
+  - type: Construction
+    graph: GlassesPrescriptionCommand
+    node: glassesCommandPrescription
+
+- type: entity
+  parent: ClothingEyesGlassesSecurity
+  id: ClothingEyesPrescriptionGlassesSec
+  name: prescription security glasses
+  description: Your insurance doesn't cover these. Don't lose them.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Glasses/prescriptionglasses.rsi
+    state: secglasses
+  - type: VisionCorrection
+  - type: Construction
+    graph: GlassesPrescriptionSec
+    node: glassesSecurityPrescription
+
+- type: entity
+  parent: ClothingEyesGlassesSunglasses
+  id: ClothingEyesPrescriptionSunGlasses
+  name: prescription sun glasses
+  description: Your insurance doesn't cover these. Don't lose them.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Glasses/prescriptionglasses.rsi
+    state: sunglasses
+  - type: VisionCorrection
+  - type: Construction
+    graph: SunGlassesPrescription
+    node: SunGlassesPrescription
+
+- type: entity
+  parent: ClothingEyesGlassesMed
+  id: ClothingEyesPrescriptionGlassesMedical
+  name: prescription medical glasses
+  description: Your insurance doesn't cover these. Don't lose them.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Glasses/prescriptionglasses.rsi
+    state: medglasses
+  - type: VisionCorrection
+  - type: Construction
+    graph: GlassesPrescriptionMedical
+    node: glassesMedicalPrescription
+
+- type: entity
+  parent: ClothingEyesGlassesDiag
+  id: ClothingEyesPrescriptionGlassesDiag
+  name: prescription diagnostic glasses
+  description: Your insurance doesn't cover these. Don't lose them.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Glasses/prescriptionglasses.rsi
+    state: diagglasses
+  - type: VisionCorrection
+  - type: Construction
+    graph: GlassesPrescriptionDiag
+    node: glassesDiagPrescription
+
+- type: entity
+  parent: ClothingEyesHudBeer
+  id: ClothingEyesPrescriptionHudBeer
+  name: prescription beer goggles
+  description: Your insurance doesn't cover these. Don't lose them.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Hud/prescriptionhud.rsi
+    state: beergoggles
+  - type: VisionCorrection
+  - type: Construction
+    graph: GlassesPrescriptionBeer
+    node: glassesBeerPrescription

@@ -189,6 +189,7 @@
     tags:
     - PetWearable
     - WhitelistChameleon
+    - HudCommand # jamboree - prescription glasses
 
 - type: entity
   parent: ClothingEyesBase
@@ -209,6 +210,7 @@
     tags:
     - PetWearable
     - WhitelistChameleon
+    - GlassesBeer # Jamboree - prescription glasses
 
 - type: entity
   parent: ClothingEyesBase

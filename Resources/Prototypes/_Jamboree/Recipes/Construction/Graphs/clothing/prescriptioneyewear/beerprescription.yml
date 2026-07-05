@@ -1,0 +1,51 @@
+﻿- type: constructionGraph
+  id: GlassesPrescriptionBeer
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: glassesBeerPrescription
+      steps:
+      - tag: GlassesBeer
+        name: construction-graph-tag-beer-glasses
+        icon:
+          sprite: Clothing/Eyes/Hud/beergoggles.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: glassesBeerPrescription
+    entity: ClothingEyesPrescriptionHudBeer
+
+- type: constructionGraph
+  id: EyepatchPrescriptionBeer
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: eyepatchBeerPrescription
+      steps:
+      - tag: GlassesBeer
+        name: construction-graph-tag-beer-eyepatch
+        icon:
+          sprite: Clothing/Eyes/Hud/beerpatch.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: eyepatchBeerPrescription
+    entity: ClothingEyesPrescriptionEyepatchHudBeer

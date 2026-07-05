@@ -1,0 +1,25 @@
+﻿- type: constructionGraph
+  id: SunGlassesPrescription
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: SunGlassesPrescription
+      steps:
+      - tag: Sunglasses
+        name: construction-graph-tag-sun-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/sunglasses.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: SunGlassesPrescription
+    entity: ClothingEyesPrescriptionSunGlasses

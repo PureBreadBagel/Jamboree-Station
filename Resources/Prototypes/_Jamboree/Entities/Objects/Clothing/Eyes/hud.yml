@@ -1,0 +1,168 @@
+﻿- type: entity
+  parent: ClothingEyesHudCommand
+  id: ClothingEyesPrescriptionHudCommand
+  name: prescription administration hud
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Hud/command.rsi
+  - type: VisionCorrection
+  - type: Construction
+    graph: HudPrescriptionCommand
+    node: hudCommandPrescription
+
+- type: entity
+  parent: ClothingEyesHudDiagnostic
+  id: ClothingEyesPrescriptionHudDiag
+  name: prescription diagnostic hud
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Hud/prescriptionhud.rsi
+    state: diag
+  - type: VisionCorrection
+  - type: Construction
+    graph: HudPrescriptionDiag
+    node: hudDiagPrescription
+
+- type: entity
+  parent: ClothingEyesHudMedical
+  id: ClothingEyesPrescriptionHudMedical
+  name: prescription medical hud
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Hud/prescriptionhud.rsi
+    state: med
+  - type: VisionCorrection
+  - type: Construction
+    graph: HudPrescriptionMedical
+    node: hudMedicalPrescription
+
+- type: entity
+  parent: ClothingEyesHudViro
+  id: ClothingEyesPrescriptionHudViro
+  name: prescription viro hud
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Hud/prescriptionhud.rsi
+    state: viro
+  - type: VisionCorrection
+  - type: Construction
+    graph: HudPrescriptionViro
+    node: hudViroPrescription
+
+- type: entity
+  parent: ClothingEyesHudSecurity
+  id: ClothingEyesPrescriptionHudSecurity
+  name: prescription security hud
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Hud/prescriptionhud.rsi
+    state: sec
+  - type: VisionCorrection
+  - type: Construction
+    graph: HudPrescriptionSec
+    node: hudSecurityPrescription
+
+- type: entity
+  parent: ClothingEyesEyepatchHudBeer
+  id: ClothingEyesPrescriptionEyepatchHudBeer
+  name: prescription beer hud eyepatch
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Hud/prescriptionhud.rsi
+    layers:
+    - map: [ "unfoldedLayer" ]
+      state: beerpatch
+    - map: [ "foldedLayer" ]
+      state: beerpatch
+      visible: false
+      scale: -1,1
+  - type: VisionCorrection
+  - type: Construction
+    graph: EyepatchPrescriptionBeer
+    node: eyepatchBeerPrescription
+
+- type: entity
+  parent: ClothingEyesEyepatchHudDiag
+  id: ClothingEyesPrescriptionEyepatchHudDiag
+  name: prescription diagnostic hud eyepatch
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Hud/prescriptionhud.rsi
+    layers:
+    - map: [ "unfoldedLayer" ]
+      state: diagpatch
+    - map: [ "foldedLayer" ]
+      state: diagpatch
+      visible: false
+      scale: -1,1
+  - type: VisionCorrection
+  - type: Construction
+    graph: EyepatchPrescriptionDiag
+    node: eyepatchDiagPrescription
+
+- type: entity
+  parent: ClothingEyesEyepatchHudMedical
+  id: ClothingEyesPrescriptionEyepatchHudMedical
+  name: prescription medical hud eyepatch
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Hud/prescriptionhud.rsi
+    layers:
+    - map: [ "unfoldedLayer" ]
+      state: medpatch
+    - map: [ "foldedLayer" ]
+      state: medpatch
+      visible: false
+      scale: -1,1
+  - type: VisionCorrection
+  - type: Construction
+    graph: EyepatchPrescriptionMedical
+    node: eyepatchMedicalPrescription
+
+- type: entity
+  parent: ClothingEyesEyepatchHudSecurity
+  id: ClothingEyesPrescriptionEyepatchHudSecurity
+  name: prescription security hud eyepatch
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Hud/prescriptionhud.rsi
+    layers:
+    - map: [ "unfoldedLayer" ]
+      state: secpatch
+    - map: [ "foldedLayer" ]
+      state: secpatch
+      visible: false
+      scale: -1,1
+  - type: VisionCorrection
+  - type: Construction
+    graph: EyepatchPrescriptionSec
+    node: eyepatchSecurityPrescription
+
+- type: entity
+  parent: ClothingEyesGlassesCaptaineyepatch
+  id: ClothingEyesPrescriptionEyepatchHudCommand
+  name: prescription captain's eyepatch
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/Eyes/Hud/prescriptionhud.rsi
+    layers:
+    - map: [ "unfoldedLayer" ]
+      state: captainpatch
+    - map: [ "foldedLayer" ]
+      state: captainpatch
+      visible: false
+      scale: -1,1
+  - type: VisionCorrection
+  - type: Construction
+    graph: EyepatchPrescriptionCommand
+    node: eyepatchCommandPrescription
