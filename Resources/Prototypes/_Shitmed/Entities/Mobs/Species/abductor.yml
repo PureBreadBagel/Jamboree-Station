@@ -25,6 +25,13 @@
   components:
   - type: Absorbable # BLOOD FOR THE BLOOD GOD
   # - type: GlorpAccent # GoobStation - Glorpshit # Removed for EE - Languages
+  - type: Vocal
+    sounds:
+      Male: UnisexGray
+      Female: UnisexGray
+      Unsexed: UnisexGray
+  - type: TypingIndicator
+    proto: gray
   - type: HumanoidAppearance
     species: Abductor
   - type: Icon
@@ -48,6 +55,8 @@
     defaultChannel: Abductormind
     channels:
     - Abductormind
+  - type: Speech
+    speechSounds: Xeepish
   - type: LanguageKnowledge # Einstein Engines - Language
     speaks:
     - Xeeplian

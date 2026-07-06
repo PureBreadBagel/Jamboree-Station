@@ -205,3 +205,45 @@
     ports:
       - FillbotAnyItem
   # Einstein Engines end
+
+# Jamboree, Contraband Disposal System
+- type: entity
+  id: ContrabandUnit
+  parent: DisposalUnitBase
+  name: contraband disposal unit
+  description: A pneumatic delivery unit specifically for the disposal of contraband.
+  components:
+  - type: Sprite
+    sprite: Structures/Piping/disposal.rsi
+    snapCardinals: true
+    layers:
+      - state: concontraband
+        map: [ "enum.DisposalUnitVisualLayers.Unanchored" ]
+      - state: contraband
+        map: [ "enum.DisposalUnitVisualLayers.Base" ]
+      - state: contraband-charging
+        map: [ "enum.DisposalUnitVisualLayers.BaseCharging" ]
+      - state: contraband-flush
+        map: [ "enum.DisposalUnitVisualLayers.OverlayFlush" ]
+      - state: dispover-charge
+        map: [ "enum.DisposalUnitVisualLayers.OverlayCharging" ]
+      - state: dispover-ready
+        map: [ "enum.DisposalUnitVisualLayers.OverlayReady" ]
+      - state: dispover-full
+        map: [ "enum.DisposalUnitVisualLayers.OverlayFull" ]
+      - state: contraover-handle
+        map: [ "enum.DisposalUnitVisualLayers.OverlayEngaged" ]
+  - type: DisposalUnit
+    whitelist:
+      components:
+      - Item
+    blacklist:
+      components:
+      - EntityStorage
+  - type: ThrowInsertContainer
+    containerId: disposals
+    probability: 0.67
+  - type: UserInterface
+    interfaces:
+      enum.DisposalUnitUiKey.Key:
+        type: DisposalUnitBoundUserInterface

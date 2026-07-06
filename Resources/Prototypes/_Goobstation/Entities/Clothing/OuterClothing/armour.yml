@@ -220,6 +220,7 @@
 - type: entity
   parent: [ClothingOuterBaseMedium, AllowSuitStorageClothing, BaseCentcommContraband]
   id: ClothingOuterArmourInvisible # I'll be real, this is just invisible armor so it doesn't ruin how fucking AWESOME navy officers look. Bite me.
+  suffix: DO NOT MAP # Just don't...
   name: bluespace assisted armor
   description: An armored vest that utilizes bluespace technology, bending light and becoming invisible to the naked eye when worn.
   components:

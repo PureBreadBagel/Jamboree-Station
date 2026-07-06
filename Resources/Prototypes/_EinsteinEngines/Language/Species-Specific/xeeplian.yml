@@ -1,4 +1,8 @@
-﻿# Spoken by Abductors
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Spoken by Abductors
 - type: language
   id: Xeeplian
   speech:
@@ -60,3 +64,14 @@
     - "Skill Issue"
     - Preebobo
     - "Inferior lifeforms"
+    - Glup
+    - Pisk
+    - Piskun
+    - Weblele
+    - Skop
+    - Plop
+    - Wawawa
+    - Mumumu
+    - Jorp
+    - Cluuump
+    - Wawiwi

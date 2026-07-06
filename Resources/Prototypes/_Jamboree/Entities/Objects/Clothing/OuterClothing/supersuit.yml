@@ -118,3 +118,30 @@
     sprite: _Jamboree/Clothing/SuperSuit/OuterClothing/griffin_wings.rsi
   - type: Clothing
     sprite: _Jamboree/Clothing/SuperSuit/OuterClothing/griffin_wings.rsi
+
+# Freedom Operative (MURICA!!! FUCK YEAH!!!)
+- type: entity
+  parent: ClothingOuterWingsGriffinReal
+  id: ClothingOuterHardsuitFreedom
+  name: freedom operative suit
+  suffix: Admeme
+  description: A hardsuit based off of the Griffin and the Owl's super suits. Is designed with maximum liberty in mind.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/SuperSuit/OuterClothing/freedom_operative.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/SuperSuit/OuterClothing/freedom_operative.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: ClothingGrantComponent
+    component:
+    - type: Flight
+      staminaDrainMultiplier: 0.1
+      isAnimated: false
+      isLayerAnimated: false
+      toggleAction: ActionToggleFlight
+      staminaDrainRate: 1
+      flapInterval: 10
+      flapSound:
+        path: /Audio/_Jamboree/Effects/booster.ogg

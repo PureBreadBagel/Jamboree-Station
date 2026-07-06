@@ -8,7 +8,7 @@
   name: pleebnar
   parent: SimpleMobBase
   id: MobPleebnar
-  description: UNIDENTIFIED PISKUN THING!
+  description: A pest native to the Xeeplian homeworld. They were sent all throughout the universe as a part of "Project Piskun." Their success is to be determined.
   components:
   - type: VentCrawler
     enterDelay: 1

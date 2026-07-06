@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Resprites by Gorse for Jamboree",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "beergoggles"
+    },
+    {
+      "name": "beerpatch"
+    },
+    {
+      "name": "diag"
+    },
+    {
+      "name": "diagpatch"
+    },
+    {
+      "name": "med"
+    },
+    {
+      "name": "medpatch"
+    },
+    {
+      "name": "sec"
+    },
+    {
+      "name": "secpatch"
+    },
+    {
+      "name": "viro"
+    },
+    {
+      "name": "captainpatch"
+    }
+  ]
+}

@@ -319,6 +319,7 @@
     - HamsterWearable
     - PetWearable
     - WhitelistChameleon
+    - GlassesSecurity # Jamboree - prescription glasses
   - type: GuideHelp
     guides:
     - Security
@@ -359,6 +360,7 @@
     - HamsterWearable
     - PetWearable
     - WhitelistChameleon
+    - GlassesCommand # jamboree - prescription glasses
   - type: IdentityBlocker
     coverage: EYES
   - type: ShowJobIcons

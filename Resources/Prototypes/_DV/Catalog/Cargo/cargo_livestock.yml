@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: cargoProduct
+  id: LivestockPitbull
+  icon:
+    sprite: _DV/Mobs/Animals/pitbull.rsi
+    state: pibble
+  product: CratePitbull
+  cost: 6000 # Anti LRP pibble spam prevention measure
+  category: Livestock
+  group: market

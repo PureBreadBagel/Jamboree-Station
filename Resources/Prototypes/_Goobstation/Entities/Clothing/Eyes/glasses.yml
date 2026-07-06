@@ -50,6 +50,7 @@
     - type: Tag
       tags:
       - WhitelistChameleon
+      - GlassesPrescription # Jamboree - prescription glasses
     - type: PhysicalComposition
       materialComposition:
         Glass: 125
@@ -111,6 +112,9 @@
     - Inorganic
     - Silicon
     - SiliconRadiation
+  - type: Tag # Jamboree - prescription glasses
+    tags:
+    - GlassesDiagnostic
 
 - type: entity
   parent: [ClothingEyesBase, ShowMedicalIcons, ClothingEyesGlassesSunglasses]
@@ -125,6 +129,9 @@
   - type: Construction
     graph: GlassesMedHUD
     node: glassesMed
+  - type: Tag # Jamboree - prescription glasses
+    tags:
+    - GlassesMedical
 
 - type: entity
   parent: [ClothingEyesHudOmni, BaseCentcommContraband]

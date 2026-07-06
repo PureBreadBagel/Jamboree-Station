@@ -1,4 +1,8 @@
-﻿- type: emoteSounds
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: emoteSounds
   id: MaleThaven
   params:
     variation: 0.05
@@ -36,6 +40,8 @@
       collection: Weh
     Gulp: # gds - more thaven emotes
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+    Surprised: # Goob
+      path: /Audio/_Goobstation/Voice/surprised.ogg
     Hiss: #
       path: /Audio/Animals/snake_hiss.ogg
     Meow:
@@ -87,6 +93,8 @@
       collection: Weh
     Gulp: # gds - more thaven emotes
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
+    Surprised: # Goob
+      path: /Audio/_Goobstation/Voice/surprised.ogg
     Hiss: #
       path: /Audio/Animals/snake_hiss.ogg
     Meow:
