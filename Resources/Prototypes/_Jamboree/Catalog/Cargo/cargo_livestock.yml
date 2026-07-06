@@ -1,5 +1,5 @@
 ﻿- type: cargoProduct
-  id: LivestockCow
+  id: LivestockPlagueMouse
   icon:
     sprite: Mobs/Animals/mouse.rsi
     state: icon-0
