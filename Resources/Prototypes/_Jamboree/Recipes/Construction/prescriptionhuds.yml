@@ -1,0 +1,83 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: construction
+  id: ClothingEyesPrescriptionHudSec
+  graph: HudPrescriptionSec
+  startNode: start
+  targetNode: hudSecurityPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionEyepatchSec
+  graph: EyepatchPrescriptionSec
+  startNode: start
+  targetNode: eyepatchSecurityPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionHudCommand
+  graph: HudPrescriptionCommand
+  startNode: start
+  targetNode: hudCommandPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionEyepatchCommand
+  graph: EyepatchPrescriptionCommand
+  startNode: start
+  targetNode: eyepatchCommandPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionHudMedical
+  graph: HudPrescriptionMedical
+  startNode: start
+  targetNode: hudMedicalPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionEyepatchMedical
+  graph: EyepatchPrescriptionMedical
+  startNode: start
+  targetNode: eyepatchMedicalPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionHudViro
+  graph: HudPrescriptionViro
+  startNode: start
+  targetNode: hudViroPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionEyepatchBeer
+  graph: EyepatchPrescriptionBeer
+  startNode: start
+  targetNode: eyepatchBeerPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionHudDiag
+  graph: HudPrescriptionDiag
+  startNode: start
+  targetNode: hudDiagPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionEyepatchDiag
+  graph: EyepatchPrescriptionDiag
+  startNode: start
+  targetNode: eyepatchDiagPrescription
+  category: construction-category-clothing
+  objectType: Item

@@ -1699,3 +1699,70 @@ Entries:
         on other people!
   id: 148
   time: '2026-06-19T19:24:15.0000000+00:00'
+- author: Gorse1
+  changes:
+    - type: Remove
+      message: Removed Herobrine
+  id: 149
+  time: '2026-06-23T00:20:37.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: Added 16 songs to the jukebox from the Delta-V sector!
+    - type: Add
+      message: Added 28 songs by the artist Foxwithguns to the jukebox!
+  id: 150
+  time: '2026-07-03T21:32:27.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        Added the amber alert level from Goobstation: An alert level to indicate
+        to all members of the crew it is time to unite and take on a threat
+        together!
+    - type: Add
+      message: >-
+        Added the cyan alert level from Funkystation: An alert level to indicate
+        to the crew that there is a silicon related threat aboard!
+    - type: Tweak
+      message: >-
+        The LM and CoC has been updated to include the procedures for these new
+        alert levels! Get to hittin the books!
+  id: 151
+  time: '2026-07-04T06:53:31.0000000+00:00'
+- author: Bibble-B-Boop
+  changes:
+    - type: Add
+      message: >-
+        The Trader's Guild have happened across Pitbulls on an alien world! Now
+        available to order at cargo!
+    - type: Add
+      message: >-
+        NanoTrasen has bred and released Ventbulls, a subspecies of Pitbull,
+        into the vents of their NanoTrasen stations! Be on the lookout!
+    - type: Add
+      message: >-
+        Fortune Tellers rejoice! Tarot cards have come to the Jamboree Sector!
+        Available in the trinket menu when having some Chaplain hours and in the
+        Piety Vend!
+    - type: Add
+      message: >-
+        Lanyards have been added to the trinket menu and the PTech machine! They
+        are able to have a paper placed into them that can be read by people who
+        examine it!
+    - type: Tweak
+      message: >-
+        Gohei have also been added to the Pietyvend machine! Shrine Maidens
+        rejoice!
+    - type: Add
+      message: Freedom has come to the Jamboree Sector.
+  id: 152
+  time: '2026-07-04T08:37:14.0000000+00:00'
+- author: Gorse1
+  changes:
+    - type: Add
+      message: >-
+        Added a prescription version of most helpful eyewear like security
+        glasses and huds
+  id: 153
+  time: '2026-07-06T03:46:16.0000000+00:00'

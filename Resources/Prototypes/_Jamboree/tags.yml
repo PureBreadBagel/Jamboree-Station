@@ -1,4 +1,8 @@
-﻿- type: Tag
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: Tag
   id: MagazineQuarterCannon
 
 - type: Tag
@@ -15,3 +19,30 @@
 
 - type: Tag
   id: SolGloves
+
+- type: Tag
+  id: GlassesPrescription
+
+- type: Tag
+  id: GlassesSecurity
+
+- type: Tag
+  id: GlassesCommand
+
+- type: Tag
+  id: HudCommand
+
+- type: Tag
+  id: HudViro
+
+- type: Tag
+  id: GlassesDiagnostic
+
+- type: Tag
+  id: GlassesBeer
+
+- type: Tag
+  id: EyepatchCommand
+
+- type: Tag
+  id: GlassesMedical

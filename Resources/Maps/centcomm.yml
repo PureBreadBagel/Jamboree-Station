@@ -8,8 +8,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/18/2026 20:47:36
-  entityCount: 7032
+  time: 06/23/2026 00:38:33
+  entityCount: 7034
 maps: []
 grids:
 - 1668
@@ -1107,6 +1107,7 @@ entities:
             1777: 11,31
             1778: 11,30
             1779: 11,29
+            2059: 20,1
         - node:
             color: '#52B4E996'
             id: DeliveryGreyscale
@@ -20321,6 +20322,13 @@ entities:
         853:
         - - SignalContrabandDetected
           - Close
+- proto: ContrabandUnit
+  entities:
+  - uid: 3776
+    components:
+    - type: Transform
+      pos: 20.5,1.5
+      parent: 1668
 - proto: ConveyorBelt
   entities:
   - uid: 1576
@@ -20994,6 +21002,11 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 7.5,0.5
       parent: 1668
+  - uid: 2713
+    components:
+    - type: Transform
+      pos: 5.5,32.5
+      parent: 1668
   - uid: 3639
     components:
     - type: Transform
@@ -21151,11 +21164,6 @@ entities:
     - type: Transform
       pos: 9.5,21.5
       parent: 1668
-  - uid: 7037
-    components:
-    - type: Transform
-      pos: 5.5,34.5
-      parent: 1668
   - uid: 7043
     components:
     - type: Transform
@@ -21219,6 +21227,12 @@ entities:
       parent: 1668
 - proto: DisposalPipe
   entities:
+  - uid: 116
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 4.5,32.5
+      parent: 1668
   - uid: 137
     components:
     - type: Transform
@@ -22657,16 +22671,6 @@ entities:
     - type: Transform
       pos: 5.5,31.5
       parent: 1668
-  - uid: 7035
-    components:
-    - type: Transform
-      pos: 5.5,32.5
-      parent: 1668
-  - uid: 7036
-    components:
-    - type: Transform
-      pos: 5.5,33.5
-      parent: 1668
   - uid: 7041
     components:
     - type: Transform
@@ -22710,6 +22714,12 @@ entities:
     components:
     - type: Transform
       pos: 32.5,-5.5
+      parent: 1668
+  - uid: 1165
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 3.5,32.5
       parent: 1668
   - uid: 1589
     components:
@@ -22763,12 +22773,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 20.5,1.5
-      parent: 1668
-  - uid: 7038
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 4.5,34.5
       parent: 1668
   - uid: 7039
     components:
@@ -28301,16 +28305,6 @@ entities:
     - type: Transform
       pos: 6.605319,27.585142
       parent: 1668
-- proto: MailingUnit
-  entities:
-  - uid: 2713
-    components:
-    - type: MetaData
-      desc: A pneumatic mail delivery unit designed to ship contraband from your hands to where it should go!
-      name: contraband disposal system
-    - type: Transform
-      pos: 20.5,1.5
-      parent: 1668
 - proto: Mannequin
   entities:
   - uid: 68
@@ -28558,6 +28552,12 @@ entities:
       parent: 1668
 - proto: Multitool
   entities:
+  - uid: 716
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 15.507038,-7.270326
+      parent: 1668
   - uid: 1652
     components:
     - type: Transform
@@ -28572,6 +28572,12 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+  - uid: 5861
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 15.522663,-7.473451
+      parent: 1668
 - proto: NecrosolChemistryBottle
   entities:
   - uid: 627
@@ -28677,23 +28683,6 @@ entities:
     components:
     - type: Transform
       pos: 24.630873,-13.468605
-      parent: 1668
-- proto: OperatingTable
-  entities:
-  - uid: 116
-    components:
-    - type: Transform
-      pos: 21.5,-10.5
-      parent: 1668
-  - uid: 716
-    components:
-    - type: Transform
-      pos: 21.5,-9.5
-      parent: 1668
-  - uid: 1165
-    components:
-    - type: Transform
-      pos: 21.5,-8.5
       parent: 1668
 - proto: OreProcessorIndustrial
   entities:
@@ -34744,6 +34733,23 @@ entities:
     - type: Transform
       pos: 28.5,-10.5
       parent: 1668
+- proto: StasisOperatingTable
+  entities:
+  - uid: 3791
+    components:
+    - type: Transform
+      pos: 21.5,-10.5
+      parent: 1668
+  - uid: 3828
+    components:
+    - type: Transform
+      pos: 21.5,-9.5
+      parent: 1668
+  - uid: 3894
+    components:
+    - type: Transform
+      pos: 21.5,-8.5
+      parent: 1668
 - proto: StationAiUploadComputer
   entities:
   - uid: 3036
@@ -36837,6 +36843,11 @@ entities:
     components:
     - type: Transform
       pos: 6.5,24.5
+      parent: 1668
+  - uid: 5860
+    components:
+    - type: Transform
+      pos: 15.5,-7.5
       parent: 1668
 - proto: TableWood
   entities:

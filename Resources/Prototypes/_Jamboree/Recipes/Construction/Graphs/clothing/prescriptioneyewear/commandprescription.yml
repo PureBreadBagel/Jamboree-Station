@@ -1,0 +1,81 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: constructionGraph
+  id: GlassesPrescriptionCommand
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: glassesCommandPrescription
+      steps:
+      - tag: GlassesCommand
+        name: construction-graph-tag-command-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/commandglasses.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: glassesCommandPrescription
+    entity: ClothingEyesPrescriptionGlassesCommand
+
+- type: constructionGraph
+  id: HudPrescriptionCommand
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: hudCommandPrescription
+      steps:
+      - tag: HudCommand
+        name: construction-graph-tag-command-hud
+        icon:
+          sprite: Clothing/Eyes/Hud/command.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: hudCommandPrescription
+    entity: ClothingEyesPrescriptionHudCommand
+
+- type: constructionGraph
+  id: EyepatchPrescriptionCommand
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: eyepatchCommandPrescription
+      steps:
+      - tag: EyepatchCommand
+        name: construction-graph-tag-command-eyepatch
+        icon:
+          sprite: _Impstation/Clothing/Eyes/Hud/capeyepatch.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: eyepatchCommandPrescription
+    entity: ClothingEyesPrescriptionEyepatchHudCommand

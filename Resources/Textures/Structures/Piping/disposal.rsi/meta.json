@@ -5,7 +5,7 @@
         "y": 32
     },
     "license": "CC-BY-SA-3.0",
-    "copyright": "https://github.com/discordia-space/CEV-Eris/blob/bbe32606902c90f5290b57d905a3f31b84dc6d7d/icons/obj/pipes/disposal.dmi and modified by DrSmugleaf. Signal router sprites based on normal router modified by deltanedas (github). disposal bins by EmoGarbage404 (github). pipe-x pipe-xf, conpipe-x by K-Dynamic (github). Signaler sprites based on tagger modified by Wolfkey, conspace & space recolors by rosieposieeee (github)",
+    "copyright": "https://github.com/discordia-space/CEV-Eris/blob/bbe32606902c90f5290b57d905a3f31b84dc6d7d/icons/obj/pipes/disposal.dmi and modified by DrSmugleaf. Signal router sprites based on normal router modified by deltanedas (github). disposal bins by EmoGarbage404 (github). pipe-x pipe-xf, conpipe-x by K-Dynamic (github). Signaler sprites based on tagger modified by Wolfkey, conspace & space recolors by rosieposieeee (github), contraband disposal unit textures by Bibble for Jamboree",
     "states": [
         {
             "name": "condisposal",
@@ -13,6 +13,10 @@
         },
         {
             "name": "conmailing",
+            "directions": 1
+        },
+        {
+            "name": "concontraband",
             "directions": 1
         },
         {
@@ -68,11 +72,19 @@
             "directions": 1
         },
         {
+            "name": "contraband",
+            "directions": 1
+        },
+        {
             "name": "disposal-charging",
             "directions": 1
         },
         {
             "name": "mailing-charging",
+            "directions": 1
+        },
+        {
+            "name": "contraband-charging",
             "directions": 1
         },
         {
@@ -97,6 +109,26 @@
         },
         {
             "name": "mailing-flush",
+            "directions": 1,
+            "delays": [
+                [
+                    0.066,
+                    0.066,
+                    0.066,
+                    0.066,
+                    0.066,
+                    0.066,
+                    0.5,
+                    0.066,
+                    0.066,
+                    0.066,
+                    0.066,
+                    0.066
+                ]
+            ]
+        },
+        {
+            "name": "contraband-flush",
             "directions": 1,
             "delays": [
                 [
@@ -141,6 +173,10 @@
         },
         {
             "name": "mailover-handle",
+            "directions": 1
+        },
+        {
+            "name": "contraover-handle",
             "directions": 1
         },
         {

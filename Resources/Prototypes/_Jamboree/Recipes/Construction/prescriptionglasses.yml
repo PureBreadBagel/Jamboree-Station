@@ -1,0 +1,51 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: construction
+  id: ClothingEyesPrescriptionGlassesSec
+  graph: GlassesPrescriptionSec
+  startNode: start
+  targetNode: glassesSecurityPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionGlassesCommand
+  graph: GlassesPrescriptionCommand
+  startNode: start
+  targetNode: glassesCommandPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionSunGlasses
+  graph: SunGlassesPrescription
+  startNode: start
+  targetNode: SunGlassesPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionGlassesMedical
+  graph: GlassesPrescriptionMedical
+  startNode: start
+  targetNode: glassesMedicalPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionGlassesDiag
+  graph: GlassesPrescriptionDiag
+  startNode: start
+  targetNode: glassesDiagPrescription
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ClothingEyesPrescriptionGlassesBeer
+  graph: GlassesPrescriptionBeer
+  startNode: start
+  targetNode: glassesBeerPrescription
+  category: construction-category-clothing
+  objectType: Item

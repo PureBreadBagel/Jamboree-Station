@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "From paradise station in following pr: https://github.com/ParadiseSS13/Paradise/pull/10252 (Possibly earlier, please reach out if an instance of this is found), resprited by Bibble for Jamboree",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "equipped-HELMET",
+            "directions": 4
+        },
+        {
+            "name": "equipped-HELMET-vox",
+            "directions": 4
+        }
+    ]
+}

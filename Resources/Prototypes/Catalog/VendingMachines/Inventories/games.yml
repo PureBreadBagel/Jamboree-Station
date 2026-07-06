@@ -36,5 +36,7 @@
     Basketball: 1
     FoodSnackBoritos: 3
     DrinkSpaceMountainWindCan: 3
-  emaggedInventory: #Goob
-    CardBoxSyndicate: 1
+    CardBoxNanotrasen: 1 # imp
+    CardBoxTarot: 1 # imp
+  emaggedInventory:
+    CardBoxSyndicate: 1 # imp
