@@ -1,0 +1,81 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: constructionGraph
+  id: GlassesPrescriptionMedical
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: glassesMedicalPrescription
+      steps:
+      - tag: GlassesMedical
+        name: construction-graph-tag-medical-glasses
+        icon:
+          sprite: _Goobstation/Clothing/Eyes/Glasses/medglasses.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: glassesMedicalPrescription
+    entity: ClothingEyesPrescriptionGlassesMedical
+
+- type: constructionGraph
+  id: HudPrescriptionMedical
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: hudMedicalPrescription
+      steps:
+      - tag: HudMedical
+        name: construction-graph-tag-medical-hud
+        icon:
+          sprite: Clothing/Eyes/Hud/med.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: hudMedicalPrescription
+    entity: ClothingEyesPrescriptionHudMedical
+
+- type: constructionGraph
+  id: EyepatchPrescriptionMedical
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: eyepatchMedicalPrescription
+      steps:
+      - tag: HudMedical
+        name: construction-graph-tag-medical-eyepatch
+        icon:
+          sprite: Clothing/Eyes/Hud/medpatch.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: eyepatchMedicalPrescription
+    entity: ClothingEyesPrescriptionEyepatchHudMedical

@@ -1,0 +1,29 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: constructionGraph
+  id: HudPrescriptionViro
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: hudViroPrescription
+      steps:
+      - tag: HudViro
+        name: construction-graph-tag-viro-hud
+        icon:
+          sprite: _Goobstation/Clothing/Eyes/Hud/viro.rsi
+          state: icon
+        doAfter: 5
+      - tag: GlassesPrescription
+        name: construction-graph-tag-prescription-glasses
+        icon:
+          sprite: Clothing/Eyes/Glasses/glasses.rsi
+          state: icon
+        doAfter: 5
+      - material: Cable
+        amount: 5
+        doAfter: 5
+  - node: hudViroPrescription
+    entity: ClothingEyesPrescriptionHudViro
