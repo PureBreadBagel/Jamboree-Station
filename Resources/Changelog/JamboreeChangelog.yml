@@ -1758,3 +1758,11 @@ Entries:
       message: Freedom has come to the Jamboree Sector.
   id: 152
   time: '2026-07-04T08:37:14.0000000+00:00'
+- author: Gorse1
+  changes:
+    - type: Add
+      message: >-
+        Added a prescription version of most helpful eyewear like security
+        glasses and huds
+  id: 153
+  time: '2026-07-06T03:46:16.0000000+00:00'
