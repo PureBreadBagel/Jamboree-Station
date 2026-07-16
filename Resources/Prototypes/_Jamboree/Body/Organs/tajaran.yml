@@ -13,5 +13,4 @@
     - state: eyes
   - type: Organ
     onAdd:
-    - type: FlashVulnerable
     - type: TajaranNightVision

@@ -12,6 +12,7 @@ namespace Content.Client._Jamboree.Overlays;
 public sealed partial class TajaranNightVisionSystem : EntitySystem
 {
     [Dependency] private readonly IPlayerManager _player = default!;
+    [Dependency] private readonly IEntityManager _entity = default!;
 
     private TajaranNightVisionOverlay _overlay = default!;
 
@@ -33,7 +34,7 @@ public sealed partial class TajaranNightVisionSystem : EntitySystem
 
     private void OnToggle(Entity<TajaranNightVisionComponent> ent, ref NightVisionToggledEvent args)
     {
-        RefreshNightVision(args.Activated, args.LightRadius);
+        RefreshNightVision(args.Activated);
     }
 
     private void OnStartup(Entity<TajaranNightVisionComponent> ent, ref ComponentStartup args)
@@ -61,13 +62,13 @@ public sealed partial class TajaranNightVisionSystem : EntitySystem
         _overlay.RemoveLight();
     }
 
-    private void RefreshNightVision(bool isActive, float lightRadius = 0)
+    private void RefreshNightVision(bool isActive)
     {
         if (_player.LocalSession?.AttachedEntity is not { } entity)
             return;
 
         if (isActive)
-            _overlay.TurnOnLight(lightRadius);
+            _overlay.TurnOnLight();
         else
             _overlay.TurnOffLight();
     }

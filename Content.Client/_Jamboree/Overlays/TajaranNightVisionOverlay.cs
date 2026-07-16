@@ -26,7 +26,7 @@ public sealed class TajaranNightVisionOverlay
         _light = _entity.System<SharedPointLightSystem>();
     }
 
-    public void InitLight()
+    private void InitLight()
     {
         if (_lightEntity != null)
             return;
@@ -36,12 +36,10 @@ public sealed class TajaranNightVisionOverlay
         if (!_entity.TryGetComponent(player, out TransformComponent? playerXform))
             return;
 
-        _lightEntity ??= _entity.SpawnAttachedTo(null, playerXform.Coordinates);
+        _lightEntity ??= _entity.SpawnAttachedTo("TajaranNightVisionLight", playerXform.Coordinates);
         _transform.SetParent(_lightEntity.Value, player.Value);
-        var light = _entity.EnsureComponent<PointLightComponent>(_lightEntity.Value);
+        _entity.TryGetComponent<PointLightComponent>(_lightEntity.Value, out var light);
         _light.SetEnabled(_lightEntity.Value, false, light);
-        //_light.SetEnergy(_lightEntity.Value, 1f, light);
-        //_light.SetColor(_lightEntity.Value, Comp.Color, light);
     }
 
     public void RemoveLight()
@@ -52,7 +50,7 @@ public sealed class TajaranNightVisionOverlay
         _lightEntity = null;
     }
 
-    public void TurnOnLight(float lightRadius)
+    public void TurnOnLight()
     {
         if(_lightEntity == null)
             InitLight();
@@ -64,10 +62,7 @@ public sealed class TajaranNightVisionOverlay
         if (light == null)
             return;
 
-        _light.SetRadius(_lightEntity.Value, lightRadius, light);
         _light.SetEnabled(_lightEntity.Value, true, light);
-        //_light.SetEnergy(_lightEntity.Value, 1f, light);
-        //_light.SetColor(_lightEntity.Value, Comp.Color, light);
     }
 
     public void TurnOffLight()

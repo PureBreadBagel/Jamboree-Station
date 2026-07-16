@@ -1,0 +1,11 @@
+- type: entity
+  id: TajaranNightVisionLight
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PointLight
+    enabled: false
+    radius: 13
+    energy: 1.5
+    falloff: 0
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true

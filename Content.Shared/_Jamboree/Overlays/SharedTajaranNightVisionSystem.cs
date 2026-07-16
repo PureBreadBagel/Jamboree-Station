@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.Actions;
+using Content.Shared.Flash;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
-using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
 namespace Content.Shared._Jamboree.Overlays;
@@ -22,6 +22,8 @@ public sealed class SharedTajaranNightVisionSystem : EntitySystem
         SubscribeLocalEvent<TajaranNightVisionComponent, ToggleTajaranNightVisionEvent>(OnToggle);
         SubscribeLocalEvent<TajaranNightVisionComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<TajaranNightVisionComponent, ComponentShutdown>(OnShutdown);
+
+        SubscribeLocalEvent<TajaranNightVisionComponent, FlashDurationMultiplierEvent>(OnGetFlashMultiplier);
     }
 
     private void OnMapInit(EntityUid uid, TajaranNightVisionComponent component, MapInitEvent args)
@@ -35,6 +37,19 @@ public sealed class SharedTajaranNightVisionSystem : EntitySystem
         _actions.RemoveAction(uid, component.ToggleActionEntity);
     }
 
+    private void OnGetFlashMultiplier(Entity<TajaranNightVisionComponent> ent, ref FlashDurationMultiplierEvent args)
+    {
+        args.Multiplier *= GetFlashMultiplier(ent);
+    }
+
+    private float GetFlashMultiplier(TajaranNightVisionComponent comp)
+    {
+        if (!comp.IsActive)
+            return 1f;
+
+        return comp.FlashDurationMultiplier;
+    }
+
     private void OnToggle(EntityUid uid, TajaranNightVisionComponent component, ToggleTajaranNightVisionEvent args)
     {
         if (args.Handled)
@@ -42,17 +57,17 @@ public sealed class SharedTajaranNightVisionSystem : EntitySystem
 
         component.IsActive = !component.IsActive;
         _actions.SetToggled(component.ToggleActionEntity, component.IsActive);
-        RaiseNightVisionToggledEvent(uid, args.Performer, component.IsActive, component.LightRadius);
+        RaiseNightVisionToggledEvent(uid, args.Performer, component.IsActive);
 
         args.Handled = true;
         Dirty(uid, component);
     }
 
-    private void RaiseNightVisionToggledEvent(EntityUid uid, EntityUid user, bool activated, float lightRadius)
+    private void RaiseNightVisionToggledEvent(EntityUid uid, EntityUid user, bool activated)
     {
-        var ev = new NightVisionToggledEvent(user, activated, lightRadius);
+        var ev = new NightVisionToggledEvent(user, activated);
         RaiseLocalEvent(uid, ref ev);
     }
 }
 [ByRefEvent]
-public record struct NightVisionToggledEvent(EntityUid User, bool Activated, float LightRadius);
+public record struct NightVisionToggledEvent(EntityUid User, bool Activated);

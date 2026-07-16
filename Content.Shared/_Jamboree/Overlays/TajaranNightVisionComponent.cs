@@ -3,7 +3,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.Actions;
-using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
@@ -16,7 +15,7 @@ public sealed partial class TajaranNightVisionComponent : Component
     public bool IsActive;
 
     [DataField]
-    public float LightRadius = 8;
+    public float FlashDurationMultiplier = 1.5f;
 
     [DataField]
     public EntProtoId? ToggleAction { get; set; } = "ToggleTajaranNightVision";
@@ -26,3 +25,4 @@ public sealed partial class TajaranNightVisionComponent : Component
 }
 
 public sealed partial class ToggleTajaranNightVisionEvent : InstantActionEvent;
+
