@@ -1766,3 +1766,25 @@ Entries:
         glasses and huds
   id: 153
   time: '2026-07-06T03:46:16.0000000+00:00'
+- author: Bibble-B
+  changes:
+    - type: Remove
+      message: >-
+        Removed the consultant set from the NTR's loadout selection. It will
+        re-appear in another form sometime very soon!
+    - type: Tweak
+      message: >-
+        The magic crayon now requires 10 hours as a mime instead of as a clown.
+        Only the best artists know when to SHUT UP!!!
+    - type: Tweak
+      message: >-
+        The airhorn now only requires 50 hours as a clown instead of 500. Be
+        sure to not be too annoying with it!
+    - type: Fix
+      message: >-
+        Ventbulls have now feasted on 20% of all mice in existence, and no
+        longer can run under doors! They can instead crawl into the vents!
+    - type: Fix
+      message: Pitbulls can now wideswing attack!
+  id: 154
+  time: '2026-07-16T07:01:13.0000000+00:00'
