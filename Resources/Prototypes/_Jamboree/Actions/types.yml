@@ -12,7 +12,6 @@
   - type: Action
     itemIconStyle: BigAction
     priority: -20
-    useDelay: 1
     clientExclusive: true
     icon:
       sprite: _White/Clothing/Eyes/Goggles/nightvision.rsi

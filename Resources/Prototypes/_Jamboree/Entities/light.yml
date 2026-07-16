@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: TajaranNightVisionLight
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PointLight
+    enabled: false
+    radius: 13
+    energy: 1.5
+    falloff: 0
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
