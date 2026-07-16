@@ -1788,3 +1788,14 @@ Entries:
       message: Pitbulls can now wideswing attack!
   id: 154
   time: '2026-07-16T07:01:13.0000000+00:00'
+- author: EchoOfNothing
+  changes:
+    - type: Fix
+      message: >-
+        Tajaran are no longer unable to protect themselves from flashes. But
+        will now be stunned by flashes for a longer duration when they have no
+        flash protection.
+    - type: Tweak
+      message: Tajaran night vision is now stronger, but directional.
+  id: 155
+  time: '2026-07-16T20:51:30.0000000+00:00'
