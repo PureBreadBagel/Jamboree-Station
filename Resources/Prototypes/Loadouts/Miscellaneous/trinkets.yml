@@ -489,7 +489,7 @@
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
-      role: JobClown
+      role: JobMime
       time: 36000 # 10hr
   storage:
     back:
@@ -504,7 +504,7 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobClown
-      time: 1800000 # 500hr
+      time: 180000 # 50hr
   storage:
     back:
     - LethalCompanyAirHorn
