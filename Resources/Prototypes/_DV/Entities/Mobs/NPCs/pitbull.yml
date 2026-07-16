@@ -10,6 +10,7 @@
   - type: Physics
   - type: MobState
   - type: MeleeWeapon
+    altDisarm: false
     hidden: true
     soundHit:
         path: /Audio/Effects/bite.ogg
@@ -25,12 +26,12 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 0.28
-        density: 35
+          radius: 0.35
+        density: 65
         mask:
-        - SmallMobMask
+        - MobMask
         layer:
-        - SmallMobLayer
+        - MobLayer
   - type: Appearance
   - type: Inventory
     speciesId: dog
@@ -106,6 +107,7 @@
       - PetsNT
   - type: RandomMetadata
     nameSegments: [NamesPitbulls]
+  - type: VentCrawler # goobstation - Ventcrawl
 
 - type: entity
   parent: MobBasePitbull
@@ -114,6 +116,7 @@
   description: Nanny dog. Or a lab mix depending on who is asking.
   components:
   - type: MeleeWeapon
+    altDisarm: false
     hidden: true
     soundHit:
         path: /Audio/Effects/bite.ogg
@@ -159,6 +162,7 @@
   description: Its Pibble! He's a great companion for any crewmate aboard the station! Just be sure to not make him the subject of any violence! #It means dont fucking punch him or he will kick your ass.
   components:
   - type: MeleeWeapon
+    altDisarm: false
     hidden: true
     soundHit:
         path: /Audio/Effects/bite.ogg

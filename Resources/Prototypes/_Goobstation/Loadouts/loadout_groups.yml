@@ -905,7 +905,7 @@
   - SRBeret #frontier
   - HostBellhop #imp
   - HostBeret #imp
-  - ConsultantCap #ADT
+#  - ConsultantCap #ADT
 
 - type: loadoutGroup
   id: NanotrasenRepresentativeNeck
@@ -935,7 +935,7 @@
   - NTRWinterCoat #jamboree
   - SRCoat #frontier
   - HostVest #imp
-  - ConsultantJacket #ADT
+#  - ConsultantJacket #ADT
 
 - type: loadoutGroup
   id: NanotrasenRepresentativeJumpsuit
@@ -949,8 +949,8 @@
   - HostJumpsuit #imp
   - HostJumpskirt #imp
   - HostProperty #imp
-  - ConsultantSuit #ADT
-  - ConsultantSkirt #ADT
+#  - ConsultantSuit #ADT
+#  - ConsultantSkirt #ADT
 
 - type: loadoutGroup
   id: NanotrasenRepresentativeBelt
