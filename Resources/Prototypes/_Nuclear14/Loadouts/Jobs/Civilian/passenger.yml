@@ -1,0 +1,11 @@
+#HEAD
+- type: loadout
+  id: BaseballCap
+  equipment:
+    head: N14ClothingHeadHatBaseball
+
+#JUMPSUIT
+- type: loadout
+  id: VaultJumpsuit
+  equipment:
+    jumpsuit: N14ClothingUniformJumpsuitVault
