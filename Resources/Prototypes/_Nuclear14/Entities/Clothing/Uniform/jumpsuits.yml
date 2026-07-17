@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: ClothingUniformBase
+  id: N14ClothingUniformJumpsuitVault
+  name: vault 14 jumpsuit
+  description: A jumpsuit worn by dwellers of a vault on a distant world scourged by a terrible apocalypse. There is a bright yellow 14 on the back!
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Uniforms/Jumpsuits/vaultsuit14.rsi
+  - type: Clothing
+    sprite: _Nuclear14/Clothing/Uniforms/Jumpsuits/vaultsuit14.rsi

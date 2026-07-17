@@ -493,7 +493,6 @@
   minLimit: 0
   loadouts:
   - GreyHat # Jamboree
-
   - BlackHat # Jamboree
   - RedHat # Jamboree
   - BlueHat # Jamboree
@@ -513,6 +512,7 @@
   - BartenderBowler # Jamboree
   - PirateHat #Jamboree
   - SailorCap #Impstation
+  - BaseballCap #Nuclear14
   - DrinkingHelmet #ADT
 
 - type: loadoutGroup
@@ -605,8 +605,8 @@
   - LostTourist
   - LilGuyOveralls
   - Kilt
-  # Nyanotrasen
-  - RatKingShirt
+  - RatKingShirt  # Nyanotrasen
+  - VaultJumpsuit #Nuclear 14
  # Impstation changes begin
   - SailorSuit
   - CavemanHides
@@ -904,6 +904,8 @@
   - CardinalHat #frontier
   - WitchHunterHat #frontier
   - Kippah #frontier
+  - CowSkull #Nuclear14
+  - DeerSkull #Nuclear14
   - TemplarHelmet #Jamboree&Goob
   - AncientHelmet #Jamboree
   - ClockHelmet #Jamboree
@@ -989,6 +991,7 @@
   - ResonantCloak #Jamboree
   - Crucifix #frontier
   - KnightCloak #ADT
+  - TribalCloak #Nuclear14
 
 - type: loadoutGroup
   id: ChaplainShoes #jamboree

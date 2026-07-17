@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: loadout
+  id: CowSkull
+  equipment:
+    head: N14ClothingTribalMuffaloskull
+  groupBy: "skulls"
+
+- type: loadout
+  id: DeerSkull
+  equipment:
+    head: N14ClothingTribalRadstagSkull
+  groupBy: "skulls"
+
+- type: loadout
+  id: TribalCloak
+  equipment:
+    neck: N14ClothingNeckTribalCloakBr

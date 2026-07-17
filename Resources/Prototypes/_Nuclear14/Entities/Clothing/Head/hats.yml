@@ -1,0 +1,39 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Insert hat base here
+
+# General
+- type: entity
+  parent: ClothingHeadBase
+  id: N14ClothingHeadHatBaseball
+  name: baseball cap
+  description: A cap worn in the ancient sport of "baseball", a game which helped inspire the sportsball.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Head/Hats/baseballcap.rsi
+  - type: Clothing
+    sprite: _Nuclear14/Clothing/Head/Hats/baseballcap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: N14ClothingTribalMuffaloskull
+  name: bovine skull
+  description: The skull of a cow. Or a buffalo? Maybe a horse? You're not quite sure.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Head/Hats/muffalo-skull.rsi
+  - type: Clothing
+    sprite: _Nuclear14/Clothing/Head/Hats/muffalo-skull.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: N14ClothingTribalRadstagSkull
+  name: cervid skull
+  description: The skull of a deer. Or an antelope? Maybe a horse? You're not quite sure.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Head/Hats/radstag-skull.rsi
+  - type: Clothing
+    sprite: _Nuclear14/Clothing/Head/Hats/radstag-skull.rsi

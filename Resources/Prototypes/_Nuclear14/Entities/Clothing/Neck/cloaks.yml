@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: ClothingNeckBase
+  id: N14ClothingNeckTribalCloakBr
+  name: tribal cloak
+  description: A brown handmade cloak from a neolithic tribe. It will keep you warm on a cold winter.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Neck/tribal-cloak-brown.rsi
+  - type: Clothing
+    sprite: _Nuclear14/Clothing/Neck/tribal-cloak-brown.rsi
