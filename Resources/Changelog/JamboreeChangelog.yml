@@ -1799,3 +1799,12 @@ Entries:
       message: Tajaran night vision is now stronger, but directional.
   id: 155
   time: '2026-07-16T20:51:30.0000000+00:00'
+- author: Bibble-B
+  changes:
+    - type: Add
+      message: >-
+        Apparel for use by the passenger and chaplain has been scavenged from a
+        world ridden with apocalypses! Check out their job loadouts for new
+        cosmetic options!
+  id: 156
+  time: '2026-07-17T01:57:42.0000000+00:00'
