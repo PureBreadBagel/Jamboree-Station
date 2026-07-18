@@ -1808,3 +1808,16 @@ Entries:
         cosmetic options!
   id: 156
   time: '2026-07-17T01:57:42.0000000+00:00'
+- author: Bibble-B
+  changes:
+    - type: Remove
+      message: >-
+        The Research Director has been evicted from their apartment, meaning
+        they cannot select the Dimension Shifter Kit in their loadout selector
+        anymore. They will likely be able to re-extend the lease in the future!
+    - type: Tweak
+      message: >-
+        The DS Sunglasses have had a slight texture fix. Remember, DS isn't real
+        so this change isn't real!
+  id: 157
+  time: '2026-07-18T05:16:55.0000000+00:00'
