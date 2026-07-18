@@ -230,23 +230,23 @@
   - ClothingBeltGeminiHoloProjector
   - RDHoloprojectorField
 
-- type: selectableSet
-  id: RDRenterKit
-  name: Dimension Shifter Kit
-  description: |
-     - Renter's Briefcase
-        When opened, will open a portal to a pocket
-        dimension. Bring a jacket, it may be cold outside.
-
-     - Extradimensional Orange
-        Travelling between dimensions can be very taxing
-        on the body! Make sure you stay fed.
-  sprite:
-    sprite: Objects/Storage/Briefcases/briefcase_brown.rsi
-    state: icon
-  content:
-  - BriefcaseRenter
-  - FoodExtradimensionalOrange
+# - type: selectableSet
+#  id: RDRenterKit
+#  name: Dimension Shifter Kit
+#  description: |
+#     - Renter's Briefcase
+#        When opened, will open a portal to a pocket
+#        dimension. Bring a jacket, it may be cold outside.
+#
+#     - Extradimensional Orange
+#        Travelling between dimensions can be very taxing
+#        on the body! Make sure you stay fed.
+#  sprite:
+#    sprite: Objects/Storage/Briefcases/briefcase_brown.rsi
+#    state: icon
+#  content:
+#  - BriefcaseRenter
+#  - FoodExtradimensionalOrange  # Committed out until a fix is done - Bibble
 
 - type: selectableSet
   id: RDAnomKit
