@@ -125,6 +125,7 @@
     - RDHologramKit
     - RDAnomKit
 #    - RDRenterKit - Committed out until fixed
+    - RDMechanicKit
     maxSelectedSets: 1
   - type: StealTarget # Command selector fixes 3 or something
     stealGroup: RD
