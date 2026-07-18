@@ -1821,3 +1821,11 @@ Entries:
         so this change isn't real!
   id: 157
   time: '2026-07-18T05:16:55.0000000+00:00'
+- author: Bibble-B
+  changes:
+    - type: Add
+      message: >-
+        Added the Mechanic Kit to the RD's undetermined kit selector! Hop on
+        your hotrod's RDs!!!
+  id: 158
+  time: '2026-07-18T06:58:36.0000000+00:00'
