@@ -1,7 +1,7 @@
 - type: entity
   parent: VehicleKeyATV
   id: VehicleKeySkeletonMotorcycle
-  name: skeleton motorcycle keys
+  name: motorcycle keys
   description: A beautiful set of keys adorned with a skull.
   components:
     - type: Tag

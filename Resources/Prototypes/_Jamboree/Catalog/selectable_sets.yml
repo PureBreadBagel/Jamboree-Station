@@ -230,6 +230,36 @@
   - ClothingBeltGeminiHoloProjector
   - RDHoloprojectorField
 
+- type: selectableSet
+  id: RDMechanicKit
+  name: Mechanic Kit
+  description: |
+     - Motorcycle
+        A two wheeled vehicle with a built in jukebox.
+        The perfect hotrod for proving science is actually cool.
+
+     - Motorcycle Keys
+        These must be inserted into the motorcycle for it to be
+        driven.
+
+     - Diagnostic Glasses
+        A combination of sunglasses and a diagnostics hud.
+
+     - Welding Gas Mask
+        A combination of a gas mask and a welding mask.
+
+     - Binary Decoder Implant
+       Allows the implantee use of the binary hivemind channel.
+  sprite:
+      sprite: Objects/Vehicles/motorbike.rsi
+      state: vehicle
+  content:
+  - VehicleSkeletonMotorcycle
+  - VehicleKeySkeletonMotorcycle
+  - ClothingEyesGlassesDiag
+  - ClothingMaskWeldingGas
+  - RDBinaryImplanter
+
 # - type: selectableSet
 #  id: RDRenterKit
 #  name: Dimension Shifter Kit
