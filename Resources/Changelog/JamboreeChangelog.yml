@@ -1829,3 +1829,11 @@ Entries:
         your hotrod's RDs!!!
   id: 158
   time: '2026-07-18T06:58:36.0000000+00:00'
+- author: EchoOfNothing
+  changes:
+    - type: Fix
+      message: >-
+        You can now toggle the night vision off and back on to fix tajran night
+        vision rotation de-sync.
+  id: 159
+  time: '2026-07-19T19:43:47.0000000+00:00'
