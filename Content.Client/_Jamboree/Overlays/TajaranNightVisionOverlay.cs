@@ -37,7 +37,10 @@ public sealed class TajaranNightVisionOverlay
             return;
 
         _lightEntity ??= _entity.SpawnAttachedTo("TajaranNightVisionLight", playerXform.Coordinates);
+
         _transform.SetParent(_lightEntity.Value, player.Value);
+        _transform.SetWorldRotation(_lightEntity.Value, _transform.GetWorldRotation((EntityUid)player));
+
         _entity.TryGetComponent<PointLightComponent>(_lightEntity.Value, out var light);
         _light.SetEnabled(_lightEntity.Value, false, light);
     }
@@ -61,6 +64,12 @@ public sealed class TajaranNightVisionOverlay
         _entity.TryGetComponent<PointLightComponent>(_lightEntity.Value, out var light);
         if (light == null)
             return;
+
+        var player = _player.LocalEntity;
+
+        if (!_entity.TryGetComponent(player, out TransformComponent? playerXform))
+            return;
+        _transform.SetWorldRotation(_lightEntity.Value, _transform.GetWorldRotation((EntityUid)player));
 
         _light.SetEnabled(_lightEntity.Value, true, light);
     }
