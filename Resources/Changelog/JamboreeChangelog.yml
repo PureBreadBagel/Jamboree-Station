@@ -1837,3 +1837,11 @@ Entries:
         vision rotation de-sync.
   id: 159
   time: '2026-07-19T19:43:47.0000000+00:00'
+- author: Gorse1
+  changes:
+    - type: Add
+      message: >-
+        Added a purchasable plague mouse crate. Virologists now have something
+        to do!
+  id: 160
+  time: '2026-08-02T03:20:51.0000000+00:00'
