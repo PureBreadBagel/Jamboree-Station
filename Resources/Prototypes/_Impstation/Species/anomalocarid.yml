@@ -20,7 +20,6 @@
   minHeight: 0.85
   maxHeight: 1.1
   minWidth: 0.75
-  defaultWidth: 1
   maxWidth: 1.2
 
 - type: speciesBaseSprites
