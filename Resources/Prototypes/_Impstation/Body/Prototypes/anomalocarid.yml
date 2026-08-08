@@ -26,9 +26,9 @@
       - right leg
       - left leg
       organs:
-        stomach: OrganStomach
-        liver: OrganLiver
-        kidneys: OrganKidneys
+        stomach: OrganHumanStomach
+        liver: OrganHumanLiver
+        kidneys: OrganHumanKidneys
     right arm:
       part: RightArmAnomalocarid
       connections:

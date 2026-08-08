@@ -912,14 +912,6 @@
     default:
       type:
         !type:EyeColoring
-  layering:
-    wings1_primary_behind: TailBehind
-    wings1_primary_front: TailOversuit
-    wings1_secondary_behind: TailBehind
-    wings1_secondary_front: TailOversuit
-  colorLinks:
-    wings1_primary_behind: wings1_primary_front
-    wings1_secondary_behind: wings1_secondary_front
   sprites:
   - sprite: _Impstation/Mobs/Customization/anomalocarid/taillayers.rsi
     state: wings1_primary_front
@@ -941,14 +933,6 @@
     default:
       type:
         !type:EyeColoring
-  layering:
-    wings2_primary_behind: TailBehind
-    wings2_primary_front: TailOversuit
-    wings2_secondary_behind: TailBehind
-    wings2_secondary_front: TailOversuit
-  colorLinks:
-    wings2_primary_behind: wings2_primary_front
-    wings2_secondary_behind: wings2_secondary_front
   sprites:
   - sprite: _Impstation/Mobs/Customization/anomalocarid/taillayers.rsi
     state: wings2_primary_front
@@ -993,14 +977,6 @@
     default:
       type:
         !type:EyeColoring
-  layering:
-    wings4_primary_behind: TailBehind
-    wings4_primary_front: TailOversuit
-    wings4_secondary_behind: TailBehind
-    wings4_secondary_front: TailOversuit
-  colorLinks:
-    wings4_primary_behind: wings4_primary_front
-    wings4_secondary_behind: wings4_secondary_front
   sprites:
   - sprite: _Impstation/Mobs/Customization/anomalocarid/taillayers.rsi
     state: wings4_primary_front
