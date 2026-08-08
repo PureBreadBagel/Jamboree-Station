@@ -32,7 +32,8 @@
     Tail: MobHumanoidAnyMarking
     Underwear: MobHumanoidAnyMarking
     Undershirt: MobHumanoidAnyMarking
-    Chest: MobAnomalocaridTorso
+    Chest: MobAnomalocaridChest
+    Groin: MobAnomalocaridGroin
     LArm: MobAnomalocaridLArm
     RArm: MobAnomalocaridRArm
     LHand: MobAnomalocaridLHand
@@ -124,6 +125,18 @@
 
 - type: humanoidBaseSprite
   id: MobAnomalocaridGroin
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Anomalocarid/parts.rsi
+    state: groin
+
+- type: humanoidBaseSprite
+  id: MobAnomalocaridGroinMale
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Anomalocarid/parts.rsi
+    state: groin
+
+- type: humanoidBaseSprite
+  id: MobAnomalocaridGroinFemale
   baseSprite:
     sprite: _Impstation/Mobs/Species/Anomalocarid/parts.rsi
     state: groin
