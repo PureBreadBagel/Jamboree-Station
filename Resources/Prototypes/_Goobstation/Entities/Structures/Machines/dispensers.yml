@@ -188,15 +188,15 @@
         components:
         - FitsInDispenser
     reagents:
-      Stasizium: 8
-      DexalinPlus: 6
-      Necrosol: 8
       Amnestizine: 8
-      Neurotoxin: 8
-      Fentanyl: 8
-      Epinephrine: 5
-      Cryoxadone: 6
       Cryostylane: 6
+      Cryoxadone: 6
+      DexalinPlus: 6
+      Epinephrine: 5
+      Fentanyl: 8
+      Necrosol: 8
+      Neurotoxin: 8
+      Stasizium: 8
 
 
 - type: entity
