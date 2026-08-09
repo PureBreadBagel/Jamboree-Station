@@ -109,14 +109,14 @@
 - type: entity
   id: EnergyCMODispenser
   parent: [BaseItem, PowerCellSlotMediumItem]
-  name: CMO portable eChemer
-  description: A compact bluespace dispenser for the Chief Medical Officer, synthesizing basic medical reagents from an inserted power cell. The big stationary dispensers still do it better.
+  name: Portable Emergichemical Dispenser
+  description: A compact bluespace dispenser for those who specialise in medicine. Who says you need a big machine when you can carry it in your pocket?
   components:
   - type: Sprite
     sprite: Objects/Devices/hand_teleporter.rsi
     state: icon
   - type: Item
-    size: Medium
+    size: Normal
     sprite: Objects/Devices/hand_teleporter.rsi
   - type: ItemSlots
     slots:
@@ -159,13 +159,13 @@
   id: EnergyOfficialDispenser
   parent: [BaseItem, PowerCellSlotMediumItem]
   name: Central Command portable eChemer
-  description: An official bluespace dispenser for Central Command, synthesizing exotic chemicals and cryogenic compounds from an inserted power cell.
+  description: An exceptional bluespace chemical dispenser on the go! You can feel the CMO seething in their office as you walk around with this in your pocket. "Though be sure not to let crew have this, no seriously dont."
   components:
   - type: Sprite
     sprite: Objects/Devices/gps.rsi
     state: icon
   - type: Item
-    size: Medium
+    size: Normal
     sprite: Objects/Devices/gps.rsi
   - type: GuideHelp
     guides:
