@@ -220,18 +220,18 @@
     reagents:
       Aluminium: 8
       Blood: 6
-      Cryoxadone: 30
       Carbon: 10
-      Copper: 8
       Chlorine: 10
+      Copper: 8
+      Cryoxadone: 30
       Ethanol: 8
       Fluorine: 10
       Hydrogen: 10
-      Iron: 6
       Iodine: 10
+      Iron: 6
       Lithium: 5
-      Oxygen: 10
       Nitrogen: 10
+      Oxygen: 10
       Phosphorus: 8
       Potassium: 8
       Radium: 10
@@ -314,8 +314,8 @@
       Ice: 5
       JuiceLime: 5
       JuiceOrange: 5
-      JuiceWatermelon: 5
       JuiceTomato: 5
+      JuiceWatermelon: 5
       LemonLime: 5
       RootBeer: 5
       SodaWater: 5
@@ -345,38 +345,38 @@
     board: ServiceEnergyChemMachineCircuitboard
   - type: EnergyReagentDispenser
     reagents:
-      Flour: 4
       Cornmeal: 4
-      Rice: 4
       Egg: 12
+      Flour: 4
       Milk: 12
+      Rice: 4
       Sugar: 5
       Water: 1
       # Uncommon ingredients
       Enzyme: 30
       Fat: 20
-      UncookedAnimalProteins: 20
-      MilkSoy: 16
-      Oats: 14
-      Vinegar: 8
-      OilOlive: 5
       JuiceLime: 5
       JuicePineapple: 11
+      MilkSoy: 16
+      Oats: 14
+      OilOlive: 5
+      UncookedAnimalProteins: 20
+      Vinegar: 8
       # Condiments
-      TableSalt: 20
-      Blackpepper: 10
+      Astrotame: 8
       BbqSauce: 5
+      Blackpepper: 10
       Coldsauce: 5
-      Soysauce: 4
-      Mustard: 5
+      Cornoil: 4
+      Hotsauce: 6
+      HorseradishSauce: 4
       Ketchup: 5
       Mayo: 5
-      Hotsauce: 6
+      Mustard: 5
+      Soysauce: 4
       Syrup: 20
+      TableSalt: 20
       Vinaigrette: 9
-      Astrotame: 8
-      HorseradishSauce: 4
-      Cornoil: 4
   - type: Battery
     maxCharge: 3000
     startingCharge: 100
