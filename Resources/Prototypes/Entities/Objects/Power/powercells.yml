@@ -351,6 +351,11 @@
     - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       state: o2
       shader: unshaded
+  - type: Tag
+    tags:
+    - PowerCell
+    - DroneUsable
+    - PowerCellMicroreactor
   - type: Battery
     maxCharge: 720
     startingCharge: 720

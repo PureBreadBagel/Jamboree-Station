@@ -58,7 +58,9 @@ using Content.Server.Power.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
 using Content.Server.Power.EntitySystems;
+using Content.Server.PowerCell;
 using Content.Shared.Power.Components;
+using Content.Shared.PowerCell.Components;
 
 namespace Content.Goobstation.Server.Chemistry.EntitySystems
 {
@@ -75,6 +77,7 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
         [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly BatterySystem _battery = default!;
+        [Dependency] private readonly PowerCellSystem _powerCell = default!;
 
 
 
@@ -92,6 +95,7 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
             SubscribeLocalEvent<EnergyReagentDispenserComponent, EnergyReagentDispenserDispenseReagentMessage>(OnDispenseReagentMessage);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, EnergyReagentDispenserClearContainerSolutionMessage>(OnClearContainerSolutionMessage);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, PowerChangedEvent>(OnPowerChanged);
+            SubscribeLocalEvent<EnergyReagentDispenserComponent, PowerCellChangedEvent>(OnPowerCellChanged);
 
             SubscribeLocalEvent<EnergyReagentDispenserComponent, MapInitEvent>(OnMapInit, before: [typeof(ItemSlotsSystem)]);
         }
@@ -110,7 +114,15 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
             var idleUse = 0f;
             var hasPower = false;
 
-            if (TryComp<BatteryComponent>(reagentDispenser, out var battery))
+            // Portable dispensers are powered by the cell in their cell slot, stationary ones by their internal battery.
+            var usingCell = _powerCell.TryGetBatteryFromSlot(reagentDispenser, out var cellBattery);
+            if (usingCell)
+            {
+                batteryCharge = cellBattery.CurrentCharge;
+                batteryMaxCharge = cellBattery.MaxCharge;
+                hasPower = cellBattery.CurrentCharge > 0f;
+            }
+            else if (TryComp<BatteryComponent>(reagentDispenser, out var battery))
             {
                 batteryCharge = battery.CurrentCharge;
                 batteryMaxCharge = battery.MaxCharge;
@@ -123,7 +135,8 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
                 idleUse = apcPower.IdleLoad;
             }
 
-            if (TryComp<ApcPowerReceiverComponent>(reagentDispenser, out var apc))
+            // Cell-powered portables aren't tied to the APC net, so don't let an inherited receiver override their power state.
+            if (!usingCell && TryComp<ApcPowerReceiverComponent>(reagentDispenser, out var apc))
                 hasPower = apc.Powered;
 
             var state = new EnergyReagentDispenserBoundUserInterfaceState(
@@ -188,6 +201,9 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
         private void OnPowerChanged(Entity<EnergyReagentDispenserComponent> reagentDispenser, ref PowerChangedEvent args) =>
             UpdateUiState(reagentDispenser);
 
+        private void OnPowerCellChanged(EntityUid uid, EnergyReagentDispenserComponent component, PowerCellChangedEvent args) =>
+            UpdateUiState(new Entity<EnergyReagentDispenserComponent>(uid, component));
+
         private void OnDispenseReagentMessage(Entity<EnergyReagentDispenserComponent> reagentDispenser, ref EnergyReagentDispenserDispenseReagentMessage message)
         {
             var outputContainer = _itemSlotsSystem.GetItemOrNull(reagentDispenser, SharedEnergyReagentDispenser.OutputSlotName);
@@ -195,13 +211,16 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
                 || !_solutionContainerSystem.TryGetFitsInDispenser(outputContainer.Value, out var solution, out _))
                 return;
 
-            if (!TryComp<BatteryComponent>(reagentDispenser, out var battery))
-                return;
-
             var amount = (int) reagentDispenser.Comp.DispenseAmount;
             var powerRequired = GetPowerCostForReagent(message.ReagentId, amount, reagentDispenser.Comp);
 
-            if (battery.CurrentCharge < powerRequired)
+            // Portable dispensers draw from the cell in their cell slot, stationary ones from their internal battery.
+            var usingCell = _powerCell.TryGetBatteryFromSlot(reagentDispenser, out var cellBatteryEnt, out var cellBattery);
+            BatteryComponent? battery = usingCell ? cellBattery : null;
+            if (!usingCell)
+                TryComp(reagentDispenser, out battery);
+
+            if (battery is null || battery.CurrentCharge < powerRequired)
             {
                 _audioSystem.PlayPvs(reagentDispenser.Comp.PowerSound, reagentDispenser, AudioParams.Default.WithVolume(-2f));
                 return;
@@ -212,7 +231,10 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
             if (!_solutionContainerSystem.TryAddSolution(solution.Value, sol))
                 return;
 
-            _battery.SetCharge(reagentDispenser.Owner, battery.CurrentCharge - powerRequired);
+            if (usingCell)
+                _battery.TryUseCharge(cellBatteryEnt.Value, powerRequired, battery);
+            else
+                _battery.SetCharge(reagentDispenser.Owner, battery.CurrentCharge - powerRequired);
             reagentDispenser.Comp.StoredEnergySpent += powerRequired;
             ClickSound(reagentDispenser);
             UpdateUiState(reagentDispenser); // Replaced this to track the energy spent // JAMBOREE
@@ -227,7 +249,12 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
 
             if (reagentDispenser.Comp.StoredEnergySpent > 0f)
             {
-                _battery.AddCharge(reagentDispenser, reagentDispenser.Comp.StoredEnergySpent);
+                // Refund the energy to the cell in the slot for portable dispensers, or the internal battery for stationary ones.
+                if (_powerCell.TryGetBatteryFromSlot(reagentDispenser, out var cellBatteryEnt, out var cellBattery))
+                    _battery.AddCharge(cellBatteryEnt.Value, reagentDispenser.Comp.StoredEnergySpent, cellBattery);
+                else if (TryComp<BatteryComponent>(reagentDispenser, out var battery))
+                    _battery.AddCharge(reagentDispenser, reagentDispenser.Comp.StoredEnergySpent, battery);
+
                 reagentDispenser.Comp.StoredEnergySpent = 0f; // Add restored energy back to the battery instead of a ridiculous amount. JAMBOREE
             }
 

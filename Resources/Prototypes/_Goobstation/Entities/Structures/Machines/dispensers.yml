@@ -107,6 +107,96 @@
 
 
 - type: entity
+  id: EnergyCMODispenser
+  parent: [BaseItem, PowerCellSlotMediumItem]
+  name: CMO portable eChemer
+  description: A compact bluespace dispenser for the Chief Medical Officer, synthesizing basic medical reagents from an inserted power cell. The big stationary dispensers still do it better.
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/hand_teleporter.rsi
+    state: icon
+  - type: Item
+    size: Medium
+    sprite: Objects/Devices/hand_teleporter.rsi
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+        blacklist:
+          tags:
+          - PowerCellMicroreactor
+  - type: GuideHelp
+    guides:
+    - Chemist
+    - Medical
+  - type: ActivatableUI
+    key: enum.EnergyReagentDispenserUiKey.Key
+    inHandsOnly: true
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.EnergyReagentDispenserUiKey.Key:
+        type: EnergyReagentDispenserBoundUserInterface
+  - type: EnergyReagentDispenser
+    energyBeakerSlot:
+      whitelistFailPopup: reagent-dispenser-component-cannot-put-entity-message
+      whitelist:
+        components:
+        - FitsInDispenser
+    reagents:
+      Saline: 20
+      Dexalin: 25
+      Inaprovaline: 20
+      Tricordrazine: 30
+      Carbon: 20
+      Oxygen: 20
+      Radium: 35
+      Hydrogen: 20
+
+
+- type: entity
+  id: EnergyOfficialDispenser
+  parent: [BaseItem, PowerCellSlotMediumItem]
+  name: Central Command portable eChemer
+  description: An official bluespace dispenser for Central Command, synthesizing exotic chemicals and cryogenic compounds from an inserted power cell.
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/gps.rsi
+    state: icon
+  - type: Item
+    size: Medium
+    sprite: Objects/Devices/gps.rsi
+  - type: GuideHelp
+    guides:
+    - Chemicals
+  - type: ActivatableUI
+    key: enum.EnergyReagentDispenserUiKey.Key
+    inHandsOnly: true
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.EnergyReagentDispenserUiKey.Key:
+        type: EnergyReagentDispenserBoundUserInterface
+  - type: EnergyReagentDispenser
+    energyBeakerSlot:
+      whitelistFailPopup: reagent-dispenser-component-cannot-put-entity-message
+      whitelist:
+        components:
+        - FitsInDispenser
+    reagents:
+      Stasizium: 8
+      DexalinPlus: 6
+      Necrosol: 8
+      Amnestizine: 8
+      Neurotoxin: 8
+      Fentanyl: 8
+      Epinephrine: 5
+      Cryoxadone: 6
+      Cryostylane: 6
+
+
+- type: entity
   id: EnergyChemDispenser
   parent: EnergyReagentDispenserBase
   name: Energy chemical dispenser

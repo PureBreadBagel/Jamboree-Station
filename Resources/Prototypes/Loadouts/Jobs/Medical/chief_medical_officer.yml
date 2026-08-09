@@ -160,3 +160,10 @@
   id: ChiefMedicalOfficerWintercoat
   equipment:
     outerClothing: ClothingOuterWinterCMO
+
+# Utility
+- type: loadout
+  id: CMOEchemer
+  storage:
+    back:
+    - EnergyCMODispenser
