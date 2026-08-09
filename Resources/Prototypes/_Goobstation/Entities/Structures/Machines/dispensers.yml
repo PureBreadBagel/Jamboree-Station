@@ -148,12 +148,14 @@
       Carbon: 20
       Charcoal: 30
       Dexalin: 25
+      Devirate: 20
+      Ethanol: 20
       Hydrogen: 20
       Inaprovaline: 20
       Kelotane: 25
       Oxygen: 20
       Saline: 20
-      Silicon: 20
+      Spaceacilin: 20
       Sugar: 20
       Tricordrazine: 30
 
@@ -161,8 +163,8 @@
 - type: entity
   id: EnergyOfficialDispenser
   parent: [BaseItem, PowerCellSlotMediumItem]
-  name: Central Command portable eChemer
-  description: An exceptional bluespace chemical dispenser on the go! You can feel the CMO seething in their office as you walk around with this in your pocket. "Though be sure not to let crew have this, no seriously dont."
+  name: Beureaucratic Emergichemical Dispenser+
+  description: An exceptional bluespace chemical dispenser...You can feel the CMO seething in their office as you walk around with this in your pocket. "Though be sure not to let crew have this, no seriously dont."
   components:
   - type: Sprite
     sprite: Objects/Devices/gps.rsi
@@ -190,12 +192,17 @@
     reagents:
       Amnestizine: 8
       Cryostylane: 6
-      Cryoxadone: 6
+      Devirate: 8
       DexalinPlus: 6
       Epinephrine: 5
       Fentanyl: 8
+      Ichor: 8
       Necrosol: 8
       Neurotoxin: 8
+      Omnizine: 8
+      PentenicAcid: 8
+      Rororium: 8
+      Spaceacilin: 8
       Stasizium: 8
 
 
