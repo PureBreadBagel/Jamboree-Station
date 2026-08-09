@@ -2045,13 +2045,6 @@
   - MedicalWinterBoots
 
 - type: loadoutGroup
-  id: ChiefMedicalOfficerUtility
-  name: loadout-group-chief-medical-officer-utility
-  minLimit: 0
-  loadouts:
-  - CMOEchemer
-
-- type: loadoutGroup
   id: MedicalDoctorHead
   name: loadout-group-medical-doctor-head
   minLimit: 0

@@ -224,7 +224,6 @@ loadout-group-chief-medical-officer-jumpsuit = Chief Medical Officer jumpsuit
 loadout-group-chief-medical-officer-outerclothing = Chief Medical Officer outer clothing
 loadout-group-chief-medical-officer-shoes = Chief Medical Officer shoes
 loadout-group-chief-medical-officer-neck = Chief Medical Officer neck
-loadout-group-chief-medical-officer-utility = Chief Medical Officer utility
 
 loadout-group-medical-doctor-head = Medical Doctor head
 loadout-group-medical-doctor-jumpsuit = Medical Doctor jumpsuit

@@ -677,6 +677,26 @@
   content:
   - CMOMedigunBackpack
 
+- type: selectableSet
+  id: CMOEchemerKit
+  name: Portable Echemer Kit
+  description: |
+     - CMO Portable eChemer
+        A compact bluespace dispenser for the Chief
+        Medical Officer, synthesizing basic medical
+        reagents from an inserted power cell. The big
+        stationary dispensers still do it better.
+
+     - Vial Box
+        A box of vials to fill with whatever the
+        eChemer synthesizes.
+  sprite:
+    sprite: Objects/Devices/hand_teleporter.rsi
+    state: icon
+  content:
+  - EnergyCMODispenser
+  - BoxVial
+
 # Quartermaster
 
 - type: selectableSet
