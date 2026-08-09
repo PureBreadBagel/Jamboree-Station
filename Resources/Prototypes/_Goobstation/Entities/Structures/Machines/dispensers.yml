@@ -109,7 +109,7 @@
 - type: entity
   id: EnergyCMODispenser
   parent: [BaseItem, PowerCellSlotMediumItem]
-  name: Portable Emergichemical Dispenser
+  name: portable emergichemical dispenser
   description: A compact bluespace dispenser for those who specialise in medicine. Who says you need a big machine when you can carry it in your pocket?
   components:
   - type: Sprite
@@ -158,12 +158,14 @@
       Spaceacilin: 20
       Sugar: 20
       Tricordrazine: 30
+  - type: StealTarget # Jamboree - cmd/steal gear tweaks
+    stealGroup: CMO
 
 
 - type: entity
   id: EnergyOfficialDispenser
   parent: [BaseItem, PowerCellSlotMediumItem]
-  name: Beureaucratic Emergichemical Dispenser+
+  name: bureaucratic emergichemical dispenser+
   description: An exceptional bluespace chemical dispenser...You can feel the CMO seething in their office as you walk around with this in your pocket. "Though be sure not to let crew have this, no seriously dont."
   components:
   - type: Sprite
@@ -172,9 +174,21 @@
   - type: Item
     size: Normal
     sprite: Objects/Devices/gps.rsi
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+        blacklist:
+          tags:
+          - PowerCellMicroreactor
   - type: GuideHelp
     guides:
     - Chemicals
+  - type: AccessReader
+    access:
+    - CentralCommand
+  - type: ActivatableUIRequiresAccess
   - type: ActivatableUI
     key: enum.EnergyReagentDispenserUiKey.Key
     inHandsOnly: true
@@ -191,7 +205,6 @@
         - FitsInDispenser
     reagents:
       Amnestizine: 8
-      Cryostylane: 6
       Devirate: 8
       DexalinPlus: 6
       Epinephrine: 5

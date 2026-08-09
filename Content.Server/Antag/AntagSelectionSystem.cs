@@ -121,6 +121,7 @@ using Content.Shared.Ghost;
 using Content.Shared.Humanoid;
 using Content.Shared.Inventory;
 using Content.Shared.Mind;
+using Content.Shared.Mindshield.Components;
 using Content.Shared.Players;
 using Content.Shared.Roles;
 using Content.Shared.Whitelist;
@@ -718,6 +719,9 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             return true;
 
         if (HasComp<PendingClockInComponent>(entity))
+            return false;
+
+        if (HasComp<MindShieldComponent>(entity)) // Jamboree - mindshielded players can't be selected as antagonists
             return false;
 
         if (!def.AllowNonHumans && !HasComp<HumanoidAppearanceComponent>(entity))

@@ -683,9 +683,10 @@
   description: |
      - CMO Portable eChemer
         A compact bluespace dispenser for the Chief
-        Medical Officer, synthesizing basic medical
-        reagents from an inserted power cell. The big
-        stationary dispensers still do it better.
+        Medical Officer, it can use powercells to
+        synthesize chemicals on the fly in an emergency!
+        This will NOT SELF RECHARGE, meaning you can not use a microreactor power cell.
+
 
      - Vial Box
         A box of vials to fill with whatever the
