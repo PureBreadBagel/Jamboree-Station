@@ -96,14 +96,11 @@
 #  - sprite: _Impstation/Mobs/Customization/anomalocarid/anomalocarid_markings.rsi
 #    state: seaweedhair
 
-# Snout
-
-# Eyes
-
+# Snout (Will be for the eyes)
 - type: marking
   id: AnomalocaridEyeshine
   bodyPart: Eyes
-  markingCategory: HeadTop
+  markingCategory: Snout
   speciesRestriction: [ Anomalocarid ]
   forcedColoring: true
   coloring:
