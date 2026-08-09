@@ -145,14 +145,17 @@
         components:
         - FitsInDispenser
     reagents:
-      Saline: 20
-      Dexalin: 25
-      Inaprovaline: 20
-      Tricordrazine: 30
       Carbon: 20
-      Oxygen: 20
-      Radium: 35
+      Charcoal: 30
+      Dexalin: 25
       Hydrogen: 20
+      Inaprovaline: 20
+      Kelotane: 25
+      Oxygen: 20
+      Saline: 20
+      Silicon: 20
+      Sugar: 20
+      Tricordrazine: 30
 
 
 - type: entity
