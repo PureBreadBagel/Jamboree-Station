@@ -115,9 +115,10 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
             var hasPower = false;
 
             // Portable dispensers are powered by the cell in their cell slot, stationary ones by their internal battery.
-            var usingCell = _powerCell.TryGetBatteryFromSlot(reagentDispenser, out var cellBattery);
-            if (usingCell)
+            var usingCell = false;
+            if (_powerCell.TryGetBatteryFromSlot(reagentDispenser, out var cellBattery))
             {
+                usingCell = true;
                 batteryCharge = cellBattery.CurrentCharge;
                 batteryMaxCharge = cellBattery.MaxCharge;
                 hasPower = cellBattery.CurrentCharge > 0f;
@@ -231,8 +232,8 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
             if (!_solutionContainerSystem.TryAddSolution(solution.Value, sol))
                 return;
 
-            if (usingCell)
-                _battery.TryUseCharge(cellBatteryEnt.Value, powerRequired, battery);
+            if (usingCell && cellBatteryEnt is { } batteryEnt)
+                _battery.TryUseCharge(batteryEnt, powerRequired, battery);
             else
                 _battery.SetCharge(reagentDispenser.Owner, battery.CurrentCharge - powerRequired);
             reagentDispenser.Comp.StoredEnergySpent += powerRequired;
