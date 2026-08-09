@@ -1211,26 +1211,46 @@
   id: MobCrabAtmos
   description: The noble and stalwart defender of Atmosia. Viva!
   components:
-#  - type: GhostRole
-#    prob: 1
-#    makeSentient: true
-#    allowSpeech: true
-#    allowMovement: true
-#    name: ghost-role-information-tropico-name
-#    description: ghost-role-information-tropico-description
-#    rules: ghost-role-information-nonantagonist-rules
-#  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    prob: 1
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: ghost-role-information-tropico-name
+    description: ghost-role-information-tropico-description
+    rules: ghost-role-information-nonantagonist-rules
+  - type: GhostTakeoverAvailable
+  - type: MeleeWeapon
+    angle: 0
+    animation: WeaponArcBite
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    damage:
+      types:
+        Piercing: 6
+  - type: VentCrawler # goobstation - Ventcrawl
   - type: Tag
     tags:
     - VimPilot
     - CannotSuicide
+    - DoorBumpOpener
   - type: Grammar
     attributes:
       proper: true
       gender: male
 #  - type: AlwaysRevolutionaryConvertible
+  - type: Access
+    tags:
+    - Engineering
+    - Atmospherics
   - type: StealTarget
     stealGroup: AnimalTropico
+  - type: Prying # Open door from xeno.yml.
+    pryPowered: true
+    force: true
+    speedModifier: 0.5 #cause Tropico would be slower
+    useSound:
+      path: /Audio/Items/crowbar.ogg
   - type: LanguageKnowledge # Einstein Engines - Language
     speaks:
     - Crab
