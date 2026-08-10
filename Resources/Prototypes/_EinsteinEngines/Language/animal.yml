@@ -141,18 +141,21 @@
 
 - type: language
   id: Crab
+  isVisibleLanguage: true
+  speech:
+    color: "#f54927"
   obfuscation:
     !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 3
+    minSyllables: 2
+    maxSyllables: 4
     replacement:
-    - click
-    - clack
-    - ti
-    - pi
-    - tap
-    - cli
-    - ick
+    - kl
+    - cl
+    - gr
+    - br
+    - lk
+    - bl
+    - gl
 
 - type: language
   id: Kobold

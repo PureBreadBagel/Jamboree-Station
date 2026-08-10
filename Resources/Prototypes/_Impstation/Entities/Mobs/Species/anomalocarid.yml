@@ -89,10 +89,10 @@
   - type: LanguageKnowledge
     speaks:
     - TauCetiBasic
-    - BieselEckeckyik
+    - Crab
     understands:
     - TauCetiBasic
-    - BieselEckeckyik
+    - Crab
   - type: Respirator
     damage:
       types:
