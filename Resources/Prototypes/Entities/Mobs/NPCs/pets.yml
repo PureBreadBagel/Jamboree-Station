@@ -1209,7 +1209,7 @@
   name: Tropico
   parent: MobCrab
   id: MobCrabAtmos
-  description: The noble and stalwart defender of Atmosia. Viva!
+  description: The noble and stalwart defender of Atmosia. If the vacuum of space can't kill Tropico, what chance do you have? Viva!
   components:
   - type: GhostRole
     prob: 1
@@ -1221,6 +1221,7 @@
     rules: ghost-role-information-nonantagonist-rules
   - type: GhostTakeoverAvailable
   - type: MeleeWeapon
+    altDisarm: false
     angle: 0
     animation: WeaponArcBite
     soundHit:
@@ -1229,6 +1230,11 @@
       types:
         Piercing: 6
   - type: VentCrawler # goobstation - Ventcrawl
+  - type: BreathingImmunity #jamboree
+  - type: PressureImmunity #jamboree
+  - type: TemperatureImmunity #jamboree
+  - type: Puller
+    needsHands: false
   - type: Tag
     tags:
     - VimPilot
