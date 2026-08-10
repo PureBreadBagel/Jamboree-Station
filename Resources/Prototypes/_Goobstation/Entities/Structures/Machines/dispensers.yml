@@ -186,8 +186,7 @@
     guides:
     - Chemicals
   - type: AccessReader
-    access:
-    - CentralCommand
+    access: [["CentralCommand"]]
   - type: ActivatableUIRequiresAccess
   - type: ActivatableUI
     key: enum.EnergyReagentDispenserUiKey.Key
