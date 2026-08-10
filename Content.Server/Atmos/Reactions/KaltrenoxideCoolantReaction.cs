@@ -5,6 +5,7 @@
 
 using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Atmos;
+using Content.Shared.Atmos.Piping.Unary.Components;
 using Content.Shared.Atmos.Reactions;
 using JetBrains.Annotations;
 
@@ -54,30 +55,34 @@ public sealed partial class KaltrenoxideCoolantReaction : IGasReactionEffect
         }
 
 
-        var passiveDecay = MathF.Min(
-            kaltStart,
-            PassiveDecayPerSecond * reactionDelta);
-
-        if (passiveDecay > 0f)
+        // Gases are stable inside sealed canisters, so no decay happens there.
+        if (holder is not GasCanisterComponent)
         {
-            mixture.AdjustMoles(Gas.Kaltrenoxide, -passiveDecay); // Oh to be passively decaying.
-            reacted = true;
-        }
+            var passiveDecay = MathF.Min(
+                kaltStart,
+                PassiveDecayPerSecond * reactionDelta);
 
-        var nitrogen = mixture.GetMoles(Gas.Nitrogen);
-
-        if (nitrogen > 0f)
-        {
-            var nitrogenFactor = MathF.Min(1f, nitrogen / 5f);
-
-            var nitrogenDecay = MathF.Min(
-                mixture.GetMoles(Gas.Kaltrenoxide),
-                NitrogenDecayPerSecond * reactionDelta * nitrogenFactor);
-
-            if (nitrogenDecay > 0f)
+            if (passiveDecay > 0f)
             {
-                mixture.AdjustMoles(Gas.Kaltrenoxide, -nitrogenDecay); // Remove Kaltrenoxide from the mixture because it interacts with Nitrogen obviously.
+                mixture.AdjustMoles(Gas.Kaltrenoxide, -passiveDecay); // Oh to be passively decaying.
                 reacted = true;
+            }
+
+            var nitrogen = mixture.GetMoles(Gas.Nitrogen);
+
+            if (nitrogen > 0f)
+            {
+                var nitrogenFactor = MathF.Min(1f, nitrogen / 5f);
+
+                var nitrogenDecay = MathF.Min(
+                    mixture.GetMoles(Gas.Kaltrenoxide),
+                    NitrogenDecayPerSecond * reactionDelta * nitrogenFactor);
+
+                if (nitrogenDecay > 0f)
+                {
+                    mixture.AdjustMoles(Gas.Kaltrenoxide, -nitrogenDecay); // Remove Kaltrenoxide from the mixture because it interacts with Nitrogen obviously.
+                    reacted = true;
+                }
             }
         }
 

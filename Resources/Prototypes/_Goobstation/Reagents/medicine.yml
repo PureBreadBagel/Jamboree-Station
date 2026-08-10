@@ -59,6 +59,39 @@
             min: 263.15
           amount: -50000
 
+- type: reagent
+  id: Tetrasolcincide
+  name: reagent-name-tetrasolcincide
+  group: Medicine
+  desc: reagent-desc-tetrasolcincide
+  physicalDesc: reagent-physical-desc-murky
+  flavor: bitter
+  color: "#5A4A84"
+  worksOnTheDead: true
+  metabolisms:
+    Medicine:
+      effects:
+        - !type:ReduceRotting
+          seconds: 5
+          conditions:
+          - !type:MobStateCondition
+            mobstate: Dead
+        - !type:HealthChange
+          damage:
+            groups:
+              Brute: -0.1
+              Burn: -0.1
+              Airloss: -0.1
+              Toxin: -0.1
+              Genetic: -0.1
+        - !type:HealthChange
+          conditions:
+          - !type:ReagentThreshold
+            min: 30
+          damage:
+            types:
+              Blunt: 2
+
 # Normal, but little gimmicky meds
 
 - type: reagent

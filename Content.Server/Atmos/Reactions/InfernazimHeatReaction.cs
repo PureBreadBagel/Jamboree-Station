@@ -5,6 +5,7 @@
 using System;
 using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Atmos;
+using Content.Shared.Atmos.Piping.Unary.Components;
 using Content.Shared.Atmos.Reactions;
 using JetBrains.Annotations;
 
@@ -62,14 +63,18 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
             }
         }
 
-        var decay = MathF.Min( // The mole decay rate of Infernazim when nothing is touching it.
-            mixture.GetMoles(Gas.Infernazim),
-            PassiveDecayPerSecond * reactionDelta);
-
-        if (decay > 0f)
+        // Infernazim is stable inside sealed canisters, so no passive decay happens there.
+        if (holder is not GasCanisterComponent)
         {
-            mixture.AdjustMoles(Gas.Infernazim, -decay);
-            reacted = true;
+            var decay = MathF.Min( // The mole decay rate of Infernazim when nothing is touching it.
+                mixture.GetMoles(Gas.Infernazim),
+                PassiveDecayPerSecond * reactionDelta);
+
+            if (decay > 0f)
+            {
+                mixture.AdjustMoles(Gas.Infernazim, -decay);
+                reacted = true;
+            }
         }
 
         var infernazimRemaining = mixture.GetMoles(Gas.Infernazim);

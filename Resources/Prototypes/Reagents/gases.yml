@@ -759,8 +759,9 @@
       - !type:AdjustTemperature
         conditions:
         - !type:Temperature
-          max: 6000
+          max: 400
         amount: 8000
+      - !type:Ignite
 
   reactiveEffects:
     Flammable:
@@ -784,5 +785,5 @@
       - !type:AdjustTemperature
         conditions:
         - !type:Temperature
-          max: -200
+          min: 73.15
         amount: -8000
