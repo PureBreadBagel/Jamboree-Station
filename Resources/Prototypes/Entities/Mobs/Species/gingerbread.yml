@@ -43,10 +43,10 @@
   - type: LanguageKnowledge # Einstein Engines - Languages
     speaks:
     - TauCetiBasic
-    - NovuNederic
+    - Freespeak
     understands:
     - TauCetiBasic
-    - NovuNederic
+    - Freespeak
 #  - type: DamageVisuals
 #    damageOverlayGroups:
 #      Brute:

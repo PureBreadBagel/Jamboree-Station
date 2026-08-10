@@ -33,6 +33,7 @@ trait-language-freespeak-name = Freespeak
 trait-language-freespeak-desc =
     A language of renegades and frontiersmen descending from various languages from Earth like Hindi combined into a multi-rooted jumble that sounds incoherent to non-native speakers.
     This language is the only common cultural identity for humans in the frontier. Speaking this language in itself boldly declares the speaker a free spirit.
+    This language is typically spoken by Gingerbread.
 
 trait-language-elyran-name = Elyran
 trait-language-elyran-desc =
