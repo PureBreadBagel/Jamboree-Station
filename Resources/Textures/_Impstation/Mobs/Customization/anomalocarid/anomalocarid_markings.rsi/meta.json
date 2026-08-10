@@ -35,15 +35,10 @@
             "name": "grabbers6_secondary",
             "directions": 4
         },
-
-
-
         {
             "name": "seaweedhair",
             "directions": 4
         },
-
-
 
         {
             "name": "antennae1",
@@ -113,9 +108,42 @@
             "name": "antennae11",
             "directions": 4
         },
-
-
-
+        {
+            "name": "antennae12",
+            "directions": 4
+        },
+        {
+            "name": "antennae13",
+            "directions": 4
+        },
+        {
+            "name": "antennae14",
+            "directions": 4
+        },
+        {
+            "name": "antennae15_primary",
+            "directions": 4
+        },
+        {
+            "name": "antennae15_secondary",
+            "directions": 4
+        },
+        {
+            "name": "antennae16_arc",
+            "directions": 4
+        },
+        {
+            "name": "antennae16",
+            "directions": 4
+        },
+        {
+            "name": "antennae17_primary",
+            "directions": 4
+        },
+        {
+            "name": "antennae17_secondary",
+            "directions": 4
+        },
         {
             "name": "tat_anchor",
             "directions": 4
@@ -136,9 +164,6 @@
             "name": "fishnettop",
             "directions": 4
         },
-
-
-
         {
             "name": "armstripes_thick_left_primary",
             "directions": 4
@@ -187,9 +212,6 @@
             "name": "armscars_right",
             "directions": 4
         },
-
-
-
         {
             "name": "legstripes_primary",
             "directions": 4
@@ -202,9 +224,6 @@
             "name": "fishnets",
             "directions": 4
         },
-
-
-
         {
             "name": "necklace1_primary",
             "directions": 4
@@ -213,9 +232,6 @@
             "name": "necklace1_secondary",
             "directions": 4
         },
-
-
-
         {
             "name": "glasseye_l",
             "directions": 4
@@ -252,9 +268,6 @@
             "name": "eyelashes",
             "directions": 4
         },
-
-
-
         {
             "name": "wings3_primary",
             "directions": 4
@@ -476,6 +489,10 @@
             "directions": 4
         },
         {
+            "name": "wings1_primary_front",
+            "directions": 4
+        },
+        {
             "name": "wings1_primary_behind",
             "directions": 4
         },
@@ -542,69 +559,6 @@
         {
             "name": "tentacles_tertiary_behind",
             "directions": 4
-        },
-        {
-            "name": "antennae12",
-            "directions": 4
-        },
-        {
-            "name": "antennae13",
-            "directions": 4
-        },
-        {
-            "name": "antennae14",
-            "directions": 4
-        },
-        {
-            "name": "antennae15_primary",
-            "directions": 4
-        },
-        {
-            "name": "antennae15_secondary",
-            "directions": 4
-        },
-        {
-            "name": "antennae16",
-            "directions": 4
-        },
-        {
-            "name": "antennae16_arc",
-            "directions": 4,
-            "delays": [
-            [
-            0.1,
-            0.1,
-            0.1,
-            0.1
-            ],
-            [
-            0.1,
-            0.1,
-            0.1,
-            0.1
-            ],
-            [
-            0.1,
-            0.1,
-            0.1,
-            0.1
-            ],
-            [
-            0.1,
-            0.1,
-            0.1,
-            0.1
-            ]
-        ]
-        },
-        {
-            "name": "antennae17_primary",
-            "directions": 4
-        },
-        {
-            "name": "antennae17_secondary",
-            "directions": 4
         }
-
     ]
 }
