@@ -223,9 +223,9 @@
         components:
         - FitsInDispenser
     reagents:
-      Amnestizine: 15
+      Amnestizine: 30
       ChloralHydrate: 30
-      Devirate: 15
+      Devirate: 20
       DexalinPlus: 8
       Fentanyl: 15
       Ichor: 100
@@ -236,7 +236,8 @@
       Omnizine: 16
       Pax: 20
       Rororium: 30
-      Spaceacilin: 5
+      Saline: 20
+      Spaceacilin: 20
       Tetrasolcincide: 20
 
 
