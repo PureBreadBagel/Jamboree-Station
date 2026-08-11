@@ -1851,3 +1851,9 @@ Entries:
       message: Removed purchasable plague mouse crate. Virologists have nothing to do!
   id: 161
   time: '2026-08-03T19:16:52.0000000+00:00'
+- author: EchoOfNothing
+  changes:
+    - type: Add
+      message: Automatic crew transfer votes will now appear.
+  id: 162
+  time: '2026-08-11T08:31:41.0000000+00:00'
