@@ -37,11 +37,9 @@
   - type: LanguageKnowledge # Einstein Engines - Language
     speaks:
     - TauCetiBasic
-    - SolCommon # They originate from Australia - Durk
     - YowKriol
     understands:
     - TauCetiBasic
-    - SolCommon # They originate from Australia - Durk
     - YowKriol
   - type: Body
     prototype: Yowie

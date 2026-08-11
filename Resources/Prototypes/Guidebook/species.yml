@@ -27,6 +27,7 @@
   name: guide-entry-species
   text: "/ServerInfo/Guidebook/Mobs/Species.xml"
   children:
+    - Anomalocarid # imp
     - Arachnid
     - Diona
     - Dwarf

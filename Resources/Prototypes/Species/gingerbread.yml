@@ -15,6 +15,10 @@
   markingLimits: MobHumanMarkingLimits
   dollPrototype: MobGingerbreadDummy
   skinColoration: HumanToned
+  defaultSkinTone: "#9a7c5a"
+  maleFirstNames: NamesGingerbreadFirst
+  femaleFirstNames: NamesGingerbreadFirst
+  naming: First
   # begin Goobstation: port EE height/width sliders
   minHeight: 0.90
   defaultHeight: 1

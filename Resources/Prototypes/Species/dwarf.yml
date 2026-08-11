@@ -16,6 +16,19 @@
   markingLimits: MobHumanMarkingLimits
   dollPrototype: MobDwarfDummy
   skinColoration: HumanToned
+  maleFirstNames: NamesDwarfFirst
+  femaleFirstNames: NamesDwarfFirst
+  middleNames: NamesDwarfMiddle
+  lastNames: NamesDwarfLast
+  naming: FirstMiddleLast
+  sexes:
+  - Male
+  - Female
+  - Unsexed
+  minAge: 18
+  youngAge: 60 # imp
+  oldAge: 100 # imp
+  maxAge: 200 # imp
   # begin Goobstation: port EE height/width sliders
   sizeRatio: 1.3
   minHeight: 0.75

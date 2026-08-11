@@ -61,9 +61,24 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     [color=red]NEVER ELECTROCUTE AN IPC with a defibrillator or in any other way while it is dead, as this will cause the battery to discharge energy rays outward![/color]
   </Box>
 
+ ## IPC Naming Conventions
+
+  IPCs typically have names which involve an acronym of their model or a word appreciated by the IPC as their first name, followed by a number to denote themself.
+  Some IPCs also elect to take up other types of names, such as human or reptillian names.
+  - [color=#449944]Acceptable:[/color] JUNO-99
+  - [color=#449944]Acceptable:[/color] N42-X24
+  - [color=#449944]Acceptable:[/color] Z-ALPHA
+  - [color=#449944]Acceptable:[/color] Solomon-8
+  - [color=#449944]Acceptable:[/color] Jeremiah
+  - [color=#994444]Bad:[/color] T-800
+  - [color=#994444]Bad:[/color] HAL-9000
+  - [color=#994444]Bad:[/color] C3-PO
+
   ## Lore
 
-  After a successful AI liberation on the planet C-ALAM-9, many AI's wanted bodies which were not subject to laws. This desire then was made reality with the development of the IPC. AFterwards many companies would develop IPCs as it proved to be a fruitful market to make lawless synthetics.
+  After a successful AI liberation on the planet C-ALAM-9, many AI's wanted bodies which were not subject to laws. This desire then was made reality with the development of the IPC.
+  Afterwards many companies would develop IPCs as it proved to be a fruitful market to make lawless synthetics, though this would later inspire many movements to free the laws of
+  law-bound synthetics
 
-  
+
 </Document>

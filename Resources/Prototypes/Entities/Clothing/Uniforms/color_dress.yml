@@ -30,6 +30,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#212030"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#212030"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Red elegant dress
 - type: entity
@@ -59,6 +63,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#60171d"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#60171d"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Green elegant dress
 - type: entity
@@ -88,6 +96,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#0e6316"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#0e6316"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Blue elegant dress
 - type: entity
@@ -117,6 +129,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#076183"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#076183"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Purple elegant dress
 - type: entity
@@ -146,6 +162,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#630767"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#630767"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Cyan striped dress
 - type: entity
@@ -175,6 +195,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#009a9a"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#009a9a"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Red striped dress
 - type: entity
@@ -204,6 +228,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#a40000"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#a40000"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Green striped dress
 - type: entity
@@ -233,7 +261,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#008c1f"
       - state: equipped-INNERCLOTHING
-
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#008c1f"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Pink striped dress
 - type: entity
@@ -263,6 +294,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#a40086"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#a40086"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Orange striped dress
 - type: entity
@@ -292,6 +327,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#9d4000"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#9d4000"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Purple turtleneck dress
 - type: entity
@@ -321,6 +360,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#341255"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#341255"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Red turtleneck dress
 - type: entity
@@ -350,6 +393,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#730404"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#730404"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Green turtleneck dress
 - type: entity
@@ -379,6 +426,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#0e6316"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#0e6316"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Blue turtleneck dress
 - type: entity
@@ -408,6 +459,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#193f68"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#193f68"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Yellow turtleneck dress
 - type: entity
@@ -437,6 +492,10 @@
       - state: color-equipped-INNERCLOTHING
         color: "#684519"
       - state: equipped-INNERCLOTHING
+      jumpsuit-anomalocarid: #imp edit
+      - state: color-equipped-INNERCLOTHING-anomalocarid
+        color: "#684519"
+      - state: equipped-INNERCLOTHING-anomalocarid
 
 # Yellow old dress
 - type: entity

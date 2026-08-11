@@ -40,6 +40,13 @@
     coldDamage:
       types:
         Cold: 0.0 #per second, scales with temperature & other constants
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - TauCetiBasic
+    - Freespeak
+    understands:
+    - TauCetiBasic
+    - Freespeak
 #  - type: DamageVisuals
 #    damageOverlayGroups:
 #      Brute:
