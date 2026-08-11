@@ -1857,3 +1857,44 @@ Entries:
       message: Automatic crew transfer votes will now appear.
   id: 162
   time: '2026-08-11T08:31:41.0000000+00:00'
+- author: Bibble-B
+  changes:
+    - type: Add
+      message: >-
+        Anomalocarids have arrived to the Jamboree sector! They are shrimply
+        amazing!
+    - type: Add
+      message: >-
+        New naming conventions exist for Dwarves, Avali, and Gingerbread! Go
+        ahead and make one RIGHT NOW!!!
+    - type: Add
+      message: >-
+        Naming conventions have been added to the guidebook, to give players
+        ideas when making their characters and to clarify what would be some
+        names that could violate our rules!
+    - type: Add
+      message: Tropico is now a ghost role! It's power has grown...
+    - type: Tweak
+      message: >-
+        The Language traits section has one more point to it now! Finally, you
+        can be multilingual as a mute person!
+    - type: Fix
+      message: >-
+        The meta-physics of psionic traits have been patched finally! It's been
+        so long...
+    - type: Remove
+      message: >-
+        Thaven know longer innately know Bieselized Eckeckyik. I think that's
+        how it's spelt...
+    - type: Remove
+      message: >-
+        Yowie no longer innately know Sol Common. Just cause you're from Terra
+        don't mean ya speak the language!
+    - type: Tweak
+      message: Dwarves now know Novu-Nederic instead of Sol Common. It just fits!
+    - type: Tweak
+      message: >-
+        Gingerbread now know Freespeak. Perhaps a unique language is in their
+        future???
+  id: 163
+  time: '2026-08-11T08:41:21.0000000+00:00'
