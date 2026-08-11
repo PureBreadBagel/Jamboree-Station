@@ -224,15 +224,17 @@
         - FitsInDispenser
     reagents:
       Amnestizine: 15
+      ChloralHydrate: 30
       Devirate: 15
       DexalinPlus: 8
-      Epinephrine: 10
       Fentanyl: 15
       Ichor: 100
+      MindbreakerToxin: 20
+      MuteToxin: 20
       Necrosol: 25
       Neurotoxin: 15
       Omnizine: 16
-      PentenicAcid: 15
+      Pax: 20
       Rororium: 30
       Spaceacilin: 5
       Tetrasolcincide: 20
