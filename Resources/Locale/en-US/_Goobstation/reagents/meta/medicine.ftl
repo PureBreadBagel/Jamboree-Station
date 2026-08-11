@@ -10,7 +10,7 @@
 reagent-name-stasizium = Stasizium
 reagent-desc-stasizium = An unstable fluid of future capable of restoring the patient's body to its original state. However, an overdose can tear the body apart.
 
-reagent-name-tetrasolcincide = Tetrasolcincide
+reagent-name-tetrasolcincide = tetrasolcincide
 reagent-desc-tetrasolcincide = A bitter-tasting liquid ground from a certain species of fish in freshwater. It appears to have nice anti-rotting properties for bodies, but is highly rare and expensive to produce.
 
 

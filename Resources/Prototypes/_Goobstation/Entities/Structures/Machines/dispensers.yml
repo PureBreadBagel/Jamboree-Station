@@ -110,14 +110,24 @@
   id: EnergyCMODispenser
   parent: [BaseItem, PowerCellSlotMediumItem]
   name: portable emergichemical dispenser
-  description: A compact bluespace dispenser for those who specialise in medicine. Who says you need a big machine when you can carry it in your pocket?
+  description: A compact bluespace dispenser for those who specialise in medicine. Who says you need a big machine when you can carry it in your pocket? A note from CentComm reads "DO NOT PUT MICROREACTORS IN THIS. THEY WILL BREAK IT. SERIOUSLY. DONT."
   components:
   - type: Sprite
-    sprite: Objects/Devices/hand_teleporter.rsi
-    state: icon
+    sprite: Objects/Devices/energymodispenser.rsi
+    layers:
+    - state: icon
+      scale: 0.85, 0.85
+    - state: beaker
+      map: ["enum.EnergyReagentDispenserVisualLayers.Beaker"]
+      visible: false
+      scale: 0.85, 0.85
   - type: Item
     size: Normal
-    sprite: Objects/Devices/hand_teleporter.rsi
+    sprite: Objects/Devices/energymodispenser.rsi
+  - type: Appearance
+  - type: EnergyReagentDispenserVisuals
+    baseState: icon
+    noPowerState: no-power
   - type: ItemSlots
     slots:
       cell_slot:
@@ -154,9 +164,9 @@
       Inaprovaline: 20
       Kelotane: 25
       Oxygen: 20
-      Saline: 20
+      Saline: 21
       Spaceacilin: 20
-      Sugar: 20
+      Sugar: 11
       Tricordrazine: 30
   - type: StealTarget # Jamboree - cmd/steal gear tweaks
     stealGroup: CMO
@@ -169,11 +179,21 @@
   description: An exceptional bluespace chemical dispenser...You can feel the CMO seething in their office as you walk around with this in your pocket. "Though be sure not to let crew have this, no seriously dont."
   components:
   - type: Sprite
-    sprite: Objects/Devices/gps.rsi
-    state: icon
+    sprite: Objects/Devices/energyofficialdispenser.rsi
+    layers:
+    - state: icon
+      scale: 0.85, 0.85
+    - state: beaker
+      map: ["enum.EnergyReagentDispenserVisualLayers.Beaker"]
+      visible: false
+      scale: 0.85, 0.85
   - type: Item
     size: Normal
-    sprite: Objects/Devices/gps.rsi
+    sprite: Objects/Devices/energyofficialdispenser.rsi
+  - type: Appearance
+  - type: EnergyReagentDispenserVisuals
+    baseState: icon
+    noPowerState: no-power
   - type: ItemSlots
     slots:
       cell_slot:
@@ -203,19 +223,19 @@
         components:
         - FitsInDispenser
     reagents:
-      Amnestizine: 8
-      Devirate: 8
-      DexalinPlus: 6
-      Epinephrine: 5
-      Fentanyl: 8
-      Ichor: 8
-      Necrosol: 8
-      Neurotoxin: 8
-      Omnizine: 8
-      PentenicAcid: 8
-      Rororium: 8
-      Spaceacilin: 8
-      Tetrasolcincide: 8
+      Amnestizine: 15
+      Devirate: 15
+      DexalinPlus: 8
+      Epinephrine: 10
+      Fentanyl: 15
+      Ichor: 100
+      Necrosol: 25
+      Neurotoxin: 15
+      Omnizine: 16
+      PentenicAcid: 15
+      Rororium: 30
+      Spaceacilin: 5
+      Tetrasolcincide: 20
 
 
 - type: entity

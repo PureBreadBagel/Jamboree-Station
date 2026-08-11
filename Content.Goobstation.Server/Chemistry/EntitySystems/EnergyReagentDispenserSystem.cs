@@ -78,6 +78,7 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly BatterySystem _battery = default!;
         [Dependency] private readonly PowerCellSystem _powerCell = default!;
+        [Dependency] private readonly SharedAppearanceSystem _appearanceSystem = default!;
 
 
 
@@ -88,7 +89,7 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
             SubscribeLocalEvent<EnergyReagentDispenserComponent, EntRemovedFromContainerMessage>(OnBeakerRemoved);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, ComponentStartup>(SubscribeUpdateUiState);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, SolutionContainerChangedEvent>(SubscribeUpdateUiState);
-            SubscribeLocalEvent<EnergyReagentDispenserComponent, EntInsertedIntoContainerMessage>(SubscribeUpdateUiState);
+            SubscribeLocalEvent<EnergyReagentDispenserComponent, EntInsertedIntoContainerMessage>(OnBeakerInserted);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, BoundUIOpenedEvent>(SubscribeUpdateUiState);
 
             SubscribeLocalEvent<EnergyReagentDispenserComponent, EnergyReagentDispenserSetDispenseAmountMessage>(OnSetDispenseAmountMessage);
@@ -199,11 +200,29 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
             ClickSound(reagentDispenser);
         }
 
-        private void OnPowerChanged(Entity<EnergyReagentDispenserComponent> reagentDispenser, ref PowerChangedEvent args) =>
+        private void OnPowerChanged(Entity<EnergyReagentDispenserComponent> reagentDispenser, ref PowerChangedEvent args)
+        {
+            UpdatePowerAppearance(reagentDispenser);
             UpdateUiState(reagentDispenser);
+        }
 
-        private void OnPowerCellChanged(EntityUid uid, EnergyReagentDispenserComponent component, PowerCellChangedEvent args) =>
-            UpdateUiState(new Entity<EnergyReagentDispenserComponent>(uid, component));
+        private void OnPowerCellChanged(EntityUid uid, EnergyReagentDispenserComponent component, PowerCellChangedEvent args)
+        {
+            var ent = new Entity<EnergyReagentDispenserComponent>(uid, component);
+            UpdatePowerAppearance(ent);
+            UpdateUiState(ent);
+        }
+
+        private void UpdatePowerAppearance(Entity<EnergyReagentDispenserComponent> ent)
+        {
+            var hasPower = false;
+            if (_powerCell.TryGetBatteryFromSlot(ent, out var cellBattery))
+                hasPower = cellBattery.CurrentCharge > 0f;
+            else if (TryComp<ApcPowerReceiverComponent>(ent, out var apc))
+                hasPower = apc.Powered;
+
+            _appearanceSystem.SetData(ent.Owner, EnergyReagentDispenserVisuals.Powered, hasPower);
+        }
 
         private void OnDispenseReagentMessage(Entity<EnergyReagentDispenserComponent> reagentDispenser, ref EnergyReagentDispenserDispenseReagentMessage message)
         {
@@ -264,12 +283,25 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
             ClickSound(reagentDispenser);
         }
 
+        private void OnBeakerInserted(Entity<EnergyReagentDispenserComponent> ent, ref EntInsertedIntoContainerMessage args)
+        {
+            UpdateBeakerAppearance(ent);
+            UpdateUiState(ent);
+        }
+
         private void OnBeakerRemoved(Entity<EnergyReagentDispenserComponent> ent, ref EntRemovedFromContainerMessage args)
         {
             ent.Comp.StoredEnergySpent = 0f;
+            UpdateBeakerAppearance(ent);
             UpdateUiState(ent); // Update the UI to reflect the reset energy when the beaker is removed. JAMBOREE
 
         } // Remove the stored energy spent when the containers removed to prevent the exploit of swapping containers to restore energy. JAMBOREE
+
+        private void UpdateBeakerAppearance(Entity<EnergyReagentDispenserComponent> ent)
+        {
+            var beaker = _itemSlotsSystem.GetItemOrNull(ent, SharedEnergyReagentDispenser.OutputSlotName);
+            _appearanceSystem.SetData(ent.Owner, EnergyReagentDispenserVisuals.Beaker, beaker != null);
+        }
 
         private void ClickSound(Entity<EnergyReagentDispenserComponent> reagentDispenser) =>
             _audioSystem.PlayPvs(reagentDispenser.Comp.ClickSound, reagentDispenser, AudioParams.Default.WithVolume(-2f));
@@ -280,7 +312,10 @@ namespace Content.Goobstation.Server.Chemistry.EntitySystems
                 ? cost * amount
                 : float.MaxValue;
         }
-        private void OnMapInit(Entity<EnergyReagentDispenserComponent> entity, ref MapInitEvent args) =>
+        private void OnMapInit(Entity<EnergyReagentDispenserComponent> entity, ref MapInitEvent args)
+        {
             _itemSlotsSystem.AddItemSlot(entity.Owner, SharedEnergyReagentDispenser.OutputSlotName, entity.Comp.EnergyBeakerSlot);
+            UpdatePowerAppearance(entity);
+        }
     }
 }

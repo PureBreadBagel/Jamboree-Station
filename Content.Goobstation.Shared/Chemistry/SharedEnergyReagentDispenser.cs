@@ -136,4 +136,23 @@ namespace Content.Goobstation.Shared.Chemistry
     {
         Key
     }
+
+    /// <summary>
+    /// Appearance data used to swap the dispenser sprite when a beaker is inserted.
+    /// </summary>
+    [Serializable, NetSerializable]
+    public enum EnergyReagentDispenserVisuals : byte
+    {
+        Beaker,
+        Powered,
+    }
+
+    /// <summary>
+    /// Sprite layer keys used by the dispenser.
+    /// </summary>
+    [Serializable, NetSerializable]
+    public enum EnergyReagentDispenserVisualLayers : byte
+    {
+        Beaker,
+    }
 }
