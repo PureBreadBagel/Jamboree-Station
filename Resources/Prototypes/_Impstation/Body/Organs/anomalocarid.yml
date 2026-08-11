@@ -3,9 +3,27 @@
   parent: BaseItem
   abstract: true
   components:
+  # Goobstation edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: OrganInteraction
+  - type: EmitSoundOnDrop
+    sound:
+      collection: OrganInteraction
+  - type: EmitSoundOnLand
+    sound:
+      collection: OrganInteraction
+  # Goobstation edit end
   - type: Sprite
     sprite: _Impstation/Mobs/Species/Anomalocarid/organs.rsi
   - type: Organ
+    intCap: 15
+    integrity: 15
+    integrityThresholds:
+      Normal: 15
+      Damaged: 6
+      Destroyed: 0
+  - type: Food
   - type: Extractable
     grindableSolutionName: organ
   - type: SolutionContainerManager
@@ -46,6 +64,7 @@
     size: Small
     heldPrefix: brain
   - type: Organ
+    slotId: brain # Shitmed Change
   - type: Input
     context: "ghost"
   - type: Brain
@@ -64,15 +83,22 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 10
+        - ReagentId: Cognizine # goob edit
+          Quantity: 5 # goob edit
       food:
-        maxVol: 5
+        maxVol: 10 # goob edit
         reagents:
         - ReagentId: GreyMatter
           Quantity: 5
+        - ReagentId: Cognizine # goob edit
+          Quantity: 5 # goob edit
   - type: FlavorProfile
     flavors:
       - crabby
       - sweet
+  - type: NerveSystem
+  - type: ConsciousnessRequired
+    identifier: "nerveSystem"
 
 - type: entity
   id: OrganAnomalocaridEyes
@@ -80,6 +106,15 @@
   name: big wet eyes
   description: "Oh my god there's someone trapped inside!! No wait, that's your reflection."
   components:
+  - type: Organ # Shitmed Change
+    intCap: 12
+    integrity: 12
+    integrityThresholds:
+      Normal: 12
+      Damaged: 4
+      Destroyed: 0
+    slotId: eyes # Shitmed Change
+  - type: Eyes # Shitmed Change
   - type: Sprite
     layers:
       - state: eyeball-l
@@ -100,6 +135,14 @@
   name: book gills
   description: "The librarian is gonna want to see this."
   components:
+  - type: Organ # Shitmed Change
+    intCap: 17
+    integrity: 17
+    integrityThresholds:
+      Normal: 17
+      Damaged: 9
+      Destroyed: 0
+    slotId: lungs # Shitmed Change
   - type: Sprite
     layers:
       - state: lung-l
@@ -147,6 +190,15 @@
   name: heart
   description: "Surely a single bite couldn't hurt..."
   components:
+  - type: Heart # Shitmed Change
+  - type: Organ # Shitmed Change
+    intCap: 17
+    integrity: 17
+    integrityThresholds:
+      Normal: 17
+      Damaged: 9
+      Destroyed: 0
+    slotId: heart # Shitmed Change
   - type: Sprite
     state: heart-on
   - type: Item
@@ -178,6 +230,15 @@
   name: liver
   description: "You need this to live."
   components:
+  - type: Liver # Shitmed Change
+  - type: Organ # Shitmed Change
+    intCap: 21
+    integrity: 21
+    integrityThresholds:
+      Normal: 21
+      Damaged: 12
+      Destroyed: 0
+    slotId: liver # Shitmed Change
   - type: Sprite
     state: liver
   - type: Item
@@ -214,6 +275,11 @@
       - salty
       - crabby
       - paper
+  - type: Tag # goob edit
+    tags:
+    - Meat
+    - Organ
+    - Tongue
 
 - type: entity
   id: OrganAnomalocaridStomach
@@ -221,6 +287,14 @@
   name: stomach
   description: "Yuck!"
   components:
+  - type: Organ # Shitmed Change
+    intCap: 44 # consists of a lot of pieces, thus is incredibly hard to easily destroy
+    integrity: 44
+    integrityThresholds:
+      Normal: 44
+      Damaged: 17
+      Destroyed: 0
+    slotId: stomach # Shitmed Change
   - type: Sprite
     state: stomach
   - type: Item
@@ -261,6 +335,14 @@
   name: kidneys
   description: "Eww! They're sticky and stretchy!"
   components:
+  - type: Organ # Shitmed
+    intCap: 21
+    integrity: 21
+    integrityThresholds:
+      Normal: 21
+      Damaged: 12
+      Destroyed: 0
+    slotId: kidneys
   - type: Sprite
     layers:
       - state: kidney-l
