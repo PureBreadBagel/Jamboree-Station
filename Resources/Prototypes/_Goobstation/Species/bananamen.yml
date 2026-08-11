@@ -13,6 +13,9 @@
   markingLimits: MobHumanMarkingLimits
   dollPrototype: MobBananaMenDummy
   skinColoration: NoColor
+  naming: First
+  maleFirstNames: NamesBananamen
+  femaleFirstNames: NamesBananamen
 
 - type: speciesBaseSprites
   id: MobBananaMenSprites
