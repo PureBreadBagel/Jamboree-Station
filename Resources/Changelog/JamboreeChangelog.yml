@@ -1898,3 +1898,15 @@ Entries:
         future???
   id: 163
   time: '2026-08-11T08:41:21.0000000+00:00'
+- author: Bibble-B
+  changes:
+    - type: Add
+      message: >-
+        Added an "Exotic Species" section to the guidebook for non-round start
+        species! Check them and their lore out today!
+    - type: Fix
+      message: >-
+        Every Anomalocarid's mother came to the station cause they forgot their
+        lunch! (They have survival boxes now)
+  id: 164
+  time: '2026-08-12T03:58:00.0000000+00:00'
