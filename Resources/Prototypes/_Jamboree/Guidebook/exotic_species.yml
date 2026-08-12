@@ -26,7 +26,7 @@
 - type: guideEntry
   id: BananaMen
   name: guide-entry-bananamen
-  text: "/ServerInfo/_Jamboree/Guidebook/ExoticMobs/BananaMen.xml"
+  text: "/ServerInfo/_Jamboree/Guidebook/ExoticMobs/Bananamen.xml"
 
 - type: guideEntry
   id: Xeeplian
