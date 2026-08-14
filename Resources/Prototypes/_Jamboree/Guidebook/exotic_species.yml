@@ -26,7 +26,7 @@
 
 - type: guideEntry
   id: Ant
-  name: guide-entry-ant
+  name: species-name-ant
   text: "/ServerInfo/_Jamboree/Guidebook/ExoticMobs/Ant.xml"
 
 - type: guideEntry

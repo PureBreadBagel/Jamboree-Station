@@ -1,7 +1,7 @@
 - type: species
   id: Ant
   name: species-name-ant
-  roundStart: false
+  roundStart: true
   prototype: MobAnt
   sprites: MobAntSprites
   defaultSkinTone: "#FFFFFF"
@@ -13,6 +13,10 @@
   lastNames: NamesAntLast
   sexes:
   - Unsexed
+  minAge: 2
+  youngAge: 6
+  oldAge: 12
+  maxAge: 20
 
 - type: speciesBaseSprites
   id: MobAntSprites
