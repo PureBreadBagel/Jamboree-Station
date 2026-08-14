@@ -56,7 +56,7 @@
         !type:DamageTrigger
         damage: 20
       behaviors:
-#      - !type:GibBehavior { }
+      - !type:GibBehavior { }
 #  - type: DamageVisuals
 #    damageOverlayGroups:
 #      Brute:

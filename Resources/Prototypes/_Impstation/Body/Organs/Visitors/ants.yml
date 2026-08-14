@@ -34,6 +34,9 @@
     layers:
       - state: lung-l
       - state: lung-r
+  - type: Organ
+    onAdd:
+    - type: BreathingImmunity
 
 - type: entity
   id: OrganAntHeart

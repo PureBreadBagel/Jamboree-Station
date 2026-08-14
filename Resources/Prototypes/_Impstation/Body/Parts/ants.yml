@@ -6,6 +6,17 @@
   components:
   - type: Sprite
     sprite: _Impstation/Mobs/Species/Visitors/Ants/parts.rsi
+  - type: BodyPart # Shitmed Change
+    species: Anomalocarid
+  - type: Damageable # Shitmed
+    damageModifierSet: Anomalocarid
+  - type: WoundableVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: _Shitmed/Mobs/Effects/brute_damage.rsi
+        color: "#3d909c"
+      Burn:
+        sprite: _Shitmed/Mobs/Effects/burn_damage.rsi
   - type: Extractable
     juiceSolution:
       reagents:
