@@ -8,6 +8,7 @@
 #  - type: StrongAsFuckAnt
   - type: Hunger
   - type: Thirst
+  - type: Carriable
   - type: Icon
     sprite: _Impstation/Mobs/Species/Visitors/Ants/parts.rsi
     state: full
@@ -55,33 +56,27 @@
         !type:DamageTrigger
         damage: 20
       behaviors:
-      - !type:GibBehavior { }
-  - type: StepTrigger
-    requiredTriggeredSpeed: 1
-  - type: TriggerOnStepTrigger
-  - type: RandomChanceTriggerCondition
-    successChance: 0.001 #only the most inattentive ant could fall for such a trick
-  - type: GibOnTrigger
+#      - !type:GibBehavior { }
 #  - type: DamageVisuals
 #    damageOverlayGroups:
 #      Brute:
 #        sprite: _Impstation/Mobs/Effects/apid_brute_damage.rsi
 #        color: "#808A51"
   - type: Bloodstream
-    bloodMaxVolume: 30
+    bloodMaxVolume: 40
     bloodReagent: InsectBlood
   - type: Speech
     speechBubbleOffset: -0.35
     speechVerb: Arachnid
     speechSounds: Arachnid
     allowedEmotes: ['GoblinThroatSinging','Chitter'] # imp
-  - type: TooShortForUI
-    blacklist:
-      components:
-      - TooShortForUIBlacklist
-    whitelist:
-      components:
-      - TooShortForUIWhitelist
+#  - type: TooShortForUI
+#    blacklist:
+#      components:
+#      - TooShortForUIBlacklist
+#    whitelist:
+#      components:
+#      - TooShortForUIWhitelist
   - type: MeleeWeapon
     attackRate: 1
     soundHit:
@@ -90,7 +85,7 @@
     animation: WeaponArcPunch
     damage:
       types:
-        Blunt: 0.1 # they can carry heavy objects but can't throw a punch
+        Blunt: 0.1
   - type: Item
     size: Tiny
     sprite: _Impstation/Mobs/Species/Visitors/Ants/ants_held.rsi
@@ -102,7 +97,7 @@
   - type: FlavorProfile
     flavors:
       - ants
-  - type: Edible
+  - type: Food
   - type: SolutionContainerManager
     solutions:
       food:

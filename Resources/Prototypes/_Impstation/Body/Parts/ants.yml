@@ -25,9 +25,9 @@
     juiceSolution:
       reagents:
       - ReagentId: Fat
-        Quantity: 5
-      - ReagentId: InsectBlood
         Quantity: 10
+      - ReagentId: InsectBlood
+        Quantity: 20
 
 - type: entity
   id: GroinAnt
@@ -40,9 +40,9 @@
     juiceSolution:
       reagents:
       - ReagentId: Fat
-        Quantity: 5
-      - ReagentId: InsectBlood
         Quantity: 10
+      - ReagentId: InsectBlood
+        Quantity: 20
 
 - type: entity
   id: HeadAnt
