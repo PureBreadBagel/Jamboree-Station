@@ -2,9 +2,9 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Goobstation.Client.Chemistry.Visualizers;
+using Content.Goobstation.Client._Jamboree.Chemistry.Visualizers;
 
-namespace Content.Goobstation.Client.Chemistry.Visualizers;
+namespace Content.Goobstation.Client._Jamboree.Chemistry.Visualizers;
 
 /// <summary>
 /// Defines the sprite states used by an energy reagent dispenser when a beaker is inserted.

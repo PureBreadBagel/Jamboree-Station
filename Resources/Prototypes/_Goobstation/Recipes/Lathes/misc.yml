@@ -30,7 +30,3 @@
     Steel: 200
     Glass: 200
 
-- type: latheRecipe
-  id: ServiceEnergyChemMachineCircuitboard
-  parent: BaseGoldCircuitboardRecipe
-  result: ServiceEnergyChemMachineCircuitboard

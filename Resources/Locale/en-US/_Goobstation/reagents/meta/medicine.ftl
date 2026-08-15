@@ -10,10 +10,6 @@
 reagent-name-stasizium = Stasizium
 reagent-desc-stasizium = An unstable fluid of future capable of restoring the patient's body to its original state. However, an overdose can tear the body apart.
 
-reagent-name-tetrasolcincide = tetrasolcincide
-reagent-desc-tetrasolcincide = A bitter-tasting liquid ground from a certain species of fish in freshwater. It appears to have nice anti-rotting properties for bodies, but is highly rare and expensive to produce.
-
-
 reagent-name-probital = probital
 reagent-desc-probital = Forces patient's body to spend its energy creating more healing compounds. Overdose exhausts body, forcing what effectively amounts to power naps.
 

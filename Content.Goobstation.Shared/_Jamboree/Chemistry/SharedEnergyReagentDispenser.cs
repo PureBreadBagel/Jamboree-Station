@@ -23,7 +23,7 @@ using Content.Goobstation.Maths.FixedPoint;
 using Robust.Shared.Serialization;
 using Content.Shared.Chemistry;
 
-namespace Content.Goobstation.Shared.Chemistry
+namespace Content.Goobstation.Shared._Jamboree.Chemistry
 {
     /// <summary>
     /// This class holds constants that are shared between client and server.

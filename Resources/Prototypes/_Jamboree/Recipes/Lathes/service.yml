@@ -21,6 +21,12 @@
     Glass: 200
     Gold: 250
 
+- type: latheRecipe
+  id: ServiceEnergyChemMachineCircuitboard
+  parent: BaseGoldCircuitboardRecipe
+  result: ServiceEnergyChemMachineCircuitboard
+
+
 - type: latheRecipePack
   id: EnergyChemicalDispensersService
   recipes:

@@ -2,10 +2,10 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Goobstation.Shared.Chemistry;
+using Content.Goobstation.Shared._Jamboree.Chemistry;
 using Robust.Client.GameObjects;
 
-namespace Content.Goobstation.Client.Chemistry.Visualizers;
+namespace Content.Goobstation.Client._Jamboree.Chemistry.Visualizers;
 
 /// <summary>
 /// Toggles a beaker overlay layer and the powered state of the dispenser sprite.

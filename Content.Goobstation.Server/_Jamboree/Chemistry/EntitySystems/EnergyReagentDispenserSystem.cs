@@ -38,8 +38,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
-using Content.Goobstation.Server.Chemistry.Components;
-using Content.Goobstation.Shared.Chemistry;
+using Content.Goobstation.Server._Jamboree.Chemistry.Components;
+using Content.Goobstation.Shared._Jamboree.Chemistry;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
@@ -63,7 +63,7 @@ using Content.Server.PowerCell;
 using Content.Shared.Power.Components;
 using Content.Shared.PowerCell.Components;
 
-namespace Content.Goobstation.Server.Chemistry.EntitySystems
+namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
 {
     /// <summary>
     /// Contains all the server-side logic for reagent dispensers.
