@@ -679,9 +679,9 @@
 
 - type: selectableSet
   id: CMOEchemerKit
-  name: Portable Echemer Kit
+  name: Emergency Chemical Kit
   description: |
-     - CMO Portable eChemer
+     - CMO Portable Emergichemical Dispenser
         A compact bluespace dispenser for the Chief
         Medical Officer, it can use powercells to
         synthesize chemicals on the fly in an emergency!
@@ -690,9 +690,9 @@
 
      - Vial Box
         A box of vials to fill with whatever the
-        eChemer synthesizes.
+        dispenser synthesizes.
   sprite:
-    sprite: Objects/Devices/hand_teleporter.rsi
+    sprite: _Jamboree/Objects/Devices/energycmodispenser.rsi
     state: icon
   content:
   - EnergyCMODispenser
