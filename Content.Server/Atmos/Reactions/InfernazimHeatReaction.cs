@@ -4,6 +4,7 @@
 
 using System;
 using Content.Server.Atmos.EntitySystems;
+using Content.Server.NodeContainer.NodeGroups;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Piping.Unary.Components;
 using Content.Shared.Atmos.Reactions;
@@ -36,6 +37,10 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
         if (infernazimStart <= 0f)
             return ReactionResult.NoReaction;
 
+        // Infernazim is stable inside sealed canisters and pipe nets, so nothing changes there.
+        if (holder is GasCanisterComponent or IPipeNet)
+            return ReactionResult.NoReaction;
+
         var oxygen = mixture.GetMoles(Gas.Oxygen);
         var kaltrenoxide = mixture.GetMoles(Gas.Kaltrenoxide);
 
@@ -63,18 +68,14 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
             }
         }
 
-        // Infernazim is stable inside sealed canisters, so no passive decay happens there.
-        if (holder is not GasCanisterComponent)
-        {
-            var decay = MathF.Min( // The mole decay rate of Infernazim when nothing is touching it.
-                mixture.GetMoles(Gas.Infernazim),
-                PassiveDecayPerSecond * reactionDelta);
+        var decay = MathF.Min( // The mole decay rate of Infernazim when nothing is touching it.
+            mixture.GetMoles(Gas.Infernazim),
+            PassiveDecayPerSecond * reactionDelta);
 
-            if (decay > 0f)
-            {
-                mixture.AdjustMoles(Gas.Infernazim, -decay);
-                reacted = true;
-            }
+        if (decay > 0f)
+        {
+            mixture.AdjustMoles(Gas.Infernazim, -decay);
+            reacted = true;
         }
 
         var infernazimRemaining = mixture.GetMoles(Gas.Infernazim);
