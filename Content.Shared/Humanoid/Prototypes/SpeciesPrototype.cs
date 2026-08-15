@@ -120,6 +120,9 @@ public sealed partial class SpeciesPrototype : IPrototype
     public ProtoId<LocalizedDatasetPrototype> MaleFirstNames { get; private set; } = "NamesFirstMale";
 
     [DataField]
+    public ProtoId<LocalizedDatasetPrototype> MiddleNames { get; private set; } = "NamesMiddle"; // Imp addition
+
+    [DataField]
     public ProtoId<LocalizedDatasetPrototype> FemaleFirstNames { get; private set; } = "NamesFirstFemale";
 
     [DataField]
@@ -221,6 +224,7 @@ public enum SpeciesNaming : byte
     FirstLast,
     FirstDashFirst,
     TheFirstofLast,
+    FirstMiddleLast, // imp add
     LastFirst, // DeltaV
     LastNoFirst, // DeltaV
     FirstDashLast, // Goobstation

@@ -178,7 +178,16 @@
     state: icon
   customBehaviors:
   - !type:RitualReagentPuddleBehavior
-    reagent: Blood
+    reagents:
+    - Blood
+    - InsectBlood
+    - Slime
+    - Sap
+    - CopperBlood
+    - AmmoniaBlood
+    - ZombieBlood
+    - ShimmeringBlood #imp
+    - AnomalocaridCopperBlood # imp. do we even need to leave comments on heretic stuff anymore
   requiredTags:
     Knife: 1
   output:

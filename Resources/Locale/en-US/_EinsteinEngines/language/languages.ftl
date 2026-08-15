@@ -25,8 +25,8 @@ language-Azaziba-description =
 
 language-SolCommon-name = Sol common
 language-SolCommon-description =
-    With its roots in Mandarin Chinese - Common evolved as the official language of the Sol Alliance - with officials working to tie it together with a common tongue.
-    It's spoken by state officials - taught in schools - and spoken by those who either feel a sense of national pride in the Sol Alliance or otherwise fell sway to the culture.
+    With its roots in Mandarin Chinese - Common evolved as the official language of Terra - with officials working to tie it together with a common tongue.
+    It's spoken by state officials - taught in schools - and spoken by those who either feel a sense of national pride in Terra or otherwise fell sway to the culture.
 # changed for clarity
 language-NovuNederic-name = Novu-Nederic
 language-NovuNederic-description =
@@ -42,7 +42,7 @@ language-TauCetiBasic-description =
 # changed to fit jamboree lore
 language-Tradeband-name = Tradeband
 language-Tradeband-description =
-    Descended from latin and romance languages of old Earth - Tradeband remains the main tongue of the upper class of humanity.
+    Descended from latin and romance languages of Terra - Tradeband remains the main tongue of the upper class of humanity.
     The language sounds elegant and well structured to most ears. It remains in popular use with traders - diplomats - and those seeking to hold onto a piece of a romantic past.
 
 language-Freespeak-name = Freespeak
@@ -50,7 +50,6 @@ language-Freespeak-description =
     A language of renegades and frontiersmen descending from various languages from Earth-- like Hindi,
     combined into a multi-rooted jumble that sounds incoherent or even barbarian to non-native speakers.
     This language is the only common cultural identity for humans in the frontier. Speaking this language in itself boldly declares the speaker a free spirit.
-    It is often called 'Gutter' by Sol Alliance citizens.
 # changed for clarity
 language-Elyran-name = Elyran Standard
 language-Elyran-description =
@@ -87,7 +86,7 @@ language-Marish-description =
 # changed to fit jamboree lore
 language-ValyrianStandard-name = Valyrian Standard
 language-ValyrianStandard-description =
-    A language descended from a combination of eastern European languages of old Earth combined with the language of the extinct species that created them
+    A language descended from a combination of eastern European languages of Terra combined with the language of the extinct species that created them
     - Valyrian Standard is the commonly spoken tongue of Harpies brought up on their origin world of Valyrian-B.
     It is rarely spoken outside of the worlds of its native speakers, and has in modern times been supplanted by the 'Conlangs of the Sol Alliance.
     Many of its speakers speak this language as a way to honor both ancient humanity and the ancient species which gave Harpies existence.
@@ -144,8 +143,10 @@ language-Kangaroo-description = Chuu!
 language-Pig-name = Pig
 language-Pig-description = Oink!
 
-language-Crab-name = Crab
-language-Crab-description = Click!
+language-Crab-name = Crabbish
+language-Crab-description =
+    The language of the Anomalocarid species, derived from the sounds produced by several other crustaceans surrounding the thermal vents
+    that served as the inception point of their species.
 
 language-Kobold-name = Kobold
 language-Kobold-description = Hiss!

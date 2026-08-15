@@ -44,6 +44,11 @@
     - Shadowkin
     - Chitinid
     - Feroxi
+# jamboree additions
+    - Thaven
+    - Anomalocarid
+    - Avali
+    - Goblin
   - type: ActivatableUI
     key: enum.WizardMirrorUiKey.Key
     singleUser: true

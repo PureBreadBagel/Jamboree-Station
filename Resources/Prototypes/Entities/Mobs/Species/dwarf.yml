@@ -100,10 +100,10 @@
   - type: LanguageKnowledge # Einstein Engines - Languages
     speaks:
     - TauCetiBasic
-    - SolCommon
+    - NovuNederic
     understands:
     - TauCetiBasic
-    - SolCommon
+    - NovuNederic
   - type: HumanoidAppearance
     species: Dwarf
     hideLayersOnEquip:

@@ -458,6 +458,8 @@
     - Elyran
     - Freespeak
     - Tradeband
+    - NovuNederic
+    - Sign
     - Schechi
     - NewKinPidgin
     - FloorGoblin #jamboree
@@ -465,6 +467,9 @@
     - Calcic #jamboree
     - Gruntish #jamboree
     - SpaceItalian #jamboree
+    - Eckeckyik
+    - BieselEckeckyik
+    - Crab
     understands:
     - TauCetiBasic
     - Canilunzt
@@ -482,6 +487,7 @@
     - Elyran
     - Freespeak
     - Tradeband
+    - NovuNederic
     - Sign
     - Schechi
     - NewKinPidgin
@@ -490,6 +496,9 @@
     - Calcic #jamboree
     - Gruntish #jamboree
     - SpaceItalian #jamboree
+    - Eckeckyik
+    - BieselEckeckyik
+    - Crab
   - type: ProtectedFromStepTriggers
   - type: DamageOnInteractProtection
     damageProtection:
