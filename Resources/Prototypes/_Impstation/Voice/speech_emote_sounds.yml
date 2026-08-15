@@ -70,7 +70,7 @@
     Crying:
       collection: MaleCry
     Chitter:
-      collection: /Audio/Voice/Arachnid/arachnid_chitter.ogg
+      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
     Weh:
       collection: Weh
     Hew:
