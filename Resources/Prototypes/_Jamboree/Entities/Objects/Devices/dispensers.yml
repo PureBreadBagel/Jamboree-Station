@@ -32,6 +32,7 @@
         blacklist:
           tags:
           - PowerCellMicroreactor
+          - PowerCellAntique
   - type: GuideHelp
     guides:
     - Chemist
