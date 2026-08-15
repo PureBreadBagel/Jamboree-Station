@@ -94,6 +94,11 @@ public sealed class TickerCommand : ToolshedCommand
     public void CancelPostRound(IInvocationContext ctx)
     {
         _ticker ??= GetSys<GameTicker>();
+        if (_ticker.RunLevel != GameRunLevel.PostRound)
+        {
+            ctx.WriteMarkup("[color=yellow]The round is not in post-round.[/color]");
+            return;
+        }
         _ticker.CancelPostRound(ctx.Session);
         ctx.WriteLine("Post-round has been cancelled.");
     }
