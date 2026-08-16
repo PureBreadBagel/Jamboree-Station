@@ -7,13 +7,16 @@ using Content.Shared.Implants.Components;
 using Content.Shared._EinsteinEngines.Language;
 using Content.Shared._EinsteinEngines.Language.Components;
 using Content.Shared._EinsteinEngines.Language.Events;
+using Content.Shared._EinsteinEngines.Language.Systems;
 using Robust.Shared.Containers;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._EinsteinEngines.Language;
 
 public sealed class TranslatorImplantSystem : EntitySystem
 {
     [Dependency] private readonly LanguageSystem _language = default!;
+    [Dependency] private readonly IPrototypeManager _proto = default!;
 
     public override void Initialize()
     {
@@ -81,6 +84,20 @@ public sealed class TranslatorImplantSystem : EntitySystem
             if (translator.UnderstoodRequirementSatisfied)
                 foreach (var language in translator.UnderstoodLanguages)
                     args.UnderstoodLanguages.Add(language);
+
+            // Centcomm implanter code. Basically gives you all the languages to speak as well as understanding it -- JAMBOREE!
+            if (!translator.AddUniversalLanguageSpeaker)
+                continue;
+
+            if (translator.SpokenRequirementSatisfied)
+                foreach (var language in _proto.EnumeratePrototypes<LanguagePrototype>())
+                    if (language.ID != SharedLanguageSystem.UniversalPrototype && language.ID != SharedLanguageSystem.PsychomanticPrototype)
+                        args.SpokenLanguages.Add(language.ID);
+
+            if (translator.UnderstoodRequirementSatisfied)
+                foreach (var language in _proto.EnumeratePrototypes<LanguagePrototype>())
+                    if (language.ID != SharedLanguageSystem.UniversalPrototype && language.ID != SharedLanguageSystem.PsychomanticPrototype)
+                        args.UnderstoodLanguages.Add(language.ID);
         }
     }
 }
