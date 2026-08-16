@@ -1,10 +1,12 @@
 // SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
-// SPDX-FileCopyrightText: 2026 PureBreadBagel <PureBreadBagel@no=reply.github.com>
+// SPDX-FileCopyrightText: 2026 PureBreadBagel <purebreadbagel@users.noreply.github.com>
 // SPDX-License-Identifier: AGPL-3.0-or-later
 //
 
 using Content.Server.Atmos.EntitySystems;
+using Content.Server.NodeContainer.NodeGroups;
 using Content.Shared.Atmos;
+using Content.Shared.Atmos.Piping.Unary.Components;
 using Content.Shared.Atmos.Reactions;
 using JetBrains.Annotations;
 
@@ -38,6 +40,9 @@ public sealed partial class KaltrenoxideCoolantReaction : IGasReactionEffect
         if (kaltStart <= 0f)
             return ReactionResult.NoReaction;
 
+        // Kaltrenoxide is stable inside sealed canisters and pipe nets, so nothing changes there.
+        if (holder is GasCanisterComponent or IPipeNet)
+            return ReactionResult.NoReaction;
 
         if (mixture.Temperature > TargetTemperature)
         {
@@ -52,7 +57,6 @@ public sealed partial class KaltrenoxideCoolantReaction : IGasReactionEffect
                 reacted = true;
             }
         }
-
 
         var passiveDecay = MathF.Min(
             kaltStart,

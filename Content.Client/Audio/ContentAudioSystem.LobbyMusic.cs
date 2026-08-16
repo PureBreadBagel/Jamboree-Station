@@ -86,6 +86,7 @@ public sealed partial class ContentAudioSystem
 
         SubscribeNetworkEvent<LobbyMusicStopEvent>(OnLobbySongStopped);
         SubscribeNetworkEvent<LobbyPlaylistChangedEvent>(OnLobbySongChanged);
+        SubscribeNetworkEvent<RoundEndCancelMessageEvent>(OnRoundEndCancelMessage); // Starlight
     }
 
     private void OnLobbySongStopped(LobbyMusicStopEvent ev)
@@ -110,6 +111,12 @@ public sealed partial class ContentAudioSystem
     {
         EndLobbyMusic();
     }
+
+    #region Starlight
+
+    private void OnRoundEndCancelMessage(RoundEndCancelMessageEvent ev) => EndLobbyMusic();
+
+    #endregion
 
     private void LobbyMusicVolumeCVarChanged(float volume)
     {

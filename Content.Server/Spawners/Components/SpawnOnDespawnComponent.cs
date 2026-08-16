@@ -40,4 +40,13 @@ public sealed partial class SpawnOnDespawnComponent : Component
     [DataField]
     public List<EntProtoId> Prototypes = [];
     // Lavaland Change end
+
+    #region Starlight
+
+    /// <summary>
+    /// Component overrides for the spawned entity.
+    /// </summary>
+    [DataField] public ComponentRegistry? Overrides;
+
+    #endregion
 }

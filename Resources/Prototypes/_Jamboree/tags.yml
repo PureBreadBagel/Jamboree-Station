@@ -46,3 +46,9 @@
 
 - type: Tag
   id: GlassesMedical
+
+- type: Tag
+  id: PowerCellMicroreactor
+
+- type: Tag
+  id: PowerCellAntique

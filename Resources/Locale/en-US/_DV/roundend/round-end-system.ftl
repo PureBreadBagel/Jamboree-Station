@@ -1,3 +1,5 @@
+eta-units-hours = hours
+eta-units-days = days
 round-end-system-vote-title = Should the shift end?
 round-end-system-vote-end = Initiate Crew Transfer
 round-end-system-vote-continue = Continue Round

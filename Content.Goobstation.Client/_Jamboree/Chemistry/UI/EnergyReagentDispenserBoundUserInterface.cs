@@ -33,12 +33,12 @@
 
 using Content.Client.Guidebook.Components;
 using Content.Client.UserInterface.Controls;
-using Content.Goobstation.Shared.Chemistry;
+using Content.Goobstation.Shared._Jamboree.Chemistry;
 using Content.Shared.Containers.ItemSlots;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
 
-namespace Content.Goobstation.Client.Chemistry.UI
+namespace Content.Goobstation.Client._Jamboree.Chemistry.UI
 {
     /// <summary>
     /// Initializes a <see cref="EnergyReagentDispenserWindow"/> and updates it when new server messages are received.

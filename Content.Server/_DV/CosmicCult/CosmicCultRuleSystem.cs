@@ -354,6 +354,7 @@ public sealed class CosmicCultRuleSystem : GameRuleSystem<CosmicCultRuleComponen
 
     private void OnGodSpawn(Entity<CosmicGodComponent> uid, ref ComponentInit args)
     {
+        if (!uid.Comp.TriggerRoundEnd) return;
         var query = QueryActiveRules();
 
         while (query.MoveNext(out var ruleUid, out _, out var cultRule, out _))

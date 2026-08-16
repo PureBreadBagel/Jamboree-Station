@@ -60,12 +60,12 @@
 
 using Content.Shared.Whitelist;
 using Content.Shared.Containers.ItemSlots;
-using Content.Goobstation.Server.Chemistry.EntitySystems;
-using Content.Goobstation.Shared.Chemistry;
+using Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems;
+using Content.Goobstation.Shared._Jamboree.Chemistry;
 using Robust.Shared.Audio;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
-namespace Content.Goobstation.Server.Chemistry.Components
+namespace Content.Goobstation.Server._Jamboree.Chemistry.Components
 {
     /// <summary>
     /// A machine that dispenses reagents into a solution container from containers in its storage slots.

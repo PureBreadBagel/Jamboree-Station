@@ -15,6 +15,7 @@
 // SPDX-FileCopyrightText: 2025 SolsticeOfTheWinter <solsticeofthewinter@gmail.com>
 // SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
 // SPDX-FileCopyrightText: 2025 pathetic meowmeow <uhhadd@gmail.com>
+// SPDX-FileCopyrightText: 2026 PureBreadBagel <purebreadbagel@users.noreply.github.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -22,7 +23,7 @@ using Content.Goobstation.Maths.FixedPoint;
 using Robust.Shared.Serialization;
 using Content.Shared.Chemistry;
 
-namespace Content.Goobstation.Shared.Chemistry
+namespace Content.Goobstation.Shared._Jamboree.Chemistry
 {
     /// <summary>
     /// This class holds constants that are shared between client and server.
@@ -135,5 +136,24 @@ namespace Content.Goobstation.Shared.Chemistry
     public enum EnergyReagentDispenserUiKey
     {
         Key
+    }
+
+    /// <summary>
+    /// Appearance data used to swap the dispenser sprite when a beaker is inserted.
+    /// </summary>
+    [Serializable, NetSerializable]
+    public enum EnergyReagentDispenserVisuals : byte
+    {
+        Beaker,
+        Powered,
+    }
+
+    /// <summary>
+    /// Sprite layer keys used by the dispenser.
+    /// </summary>
+    [Serializable, NetSerializable]
+    public enum EnergyReagentDispenserVisualLayers : byte
+    {
+        Beaker,
     }
 }

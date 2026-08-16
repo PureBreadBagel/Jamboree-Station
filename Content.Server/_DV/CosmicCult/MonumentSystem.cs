@@ -15,9 +15,12 @@ using Content.Server.Atmos.Components;
 using Content.Server.Audio;
 using Content.Server.Chat.Systems;
 using Content.Server.Objectives.Components;
+using Content.Server.Spawners.Components;
+using Content.Server.Spawners.EntitySystems;
 using Content.Shared._DV.CCVars;
 using Content.Shared._DV.CosmicCult;
 using Content.Shared._DV.CosmicCult.Components;
+using Content.Shared._DV.CosmicCult.Components.Examine;
 using Content.Shared._DV.CosmicCult.Prototypes;
 using Content.Shared.Audio;
 using Content.Shared.Damage;
@@ -31,6 +34,7 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Robust.Shared.Serialization.Markdown.Mapping;
 
 using Content.Shared._Shitmed.Targeting; // Shitmed Change
 
@@ -54,6 +58,7 @@ public sealed class MonumentSystem : SharedMonumentSystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
+    [Dependency] private readonly SpawnOnDespawnSystem _sod = default!;
     private static readonly EntProtoId CosmicGod = "MobCosmicGodSpawn";
     private static readonly EntProtoId MonumentCollider = "MonumentCollider";
     private EntityUid? _monumentStorageMap;
@@ -120,8 +125,19 @@ public sealed class MonumentSystem : SharedMonumentSystem
                     victoryComp.Victory = true;
 
                 _sound.StopStationEventMusic(uid, StationEventMusicType.CosmicCult);
-                Spawn(CosmicGod, Transform(uid).Coordinates);
+                var spawnUid = Spawn(CosmicGod, Transform(uid).Coordinates);
                 comp.CurrentState = FinaleState.Victory;
+
+                // add override to make sure cosmic god ends round
+                if (TryComp<SpawnOnDespawnComponent>(spawnUid, out var spawnComp))
+                    _sod.SetOverrides((spawnUid, spawnComp), new ComponentRegistry(
+                        new Dictionary<string, EntityPrototype.ComponentRegistryEntry>
+                        {
+                            {
+                                "CosmicGod", new EntityPrototype.ComponentRegistryEntry(
+                                    new CosmicGodComponent { TriggerRoundEnd = true }, new MappingDataNode())
+                            }
+                        }));
             }
         }
 
