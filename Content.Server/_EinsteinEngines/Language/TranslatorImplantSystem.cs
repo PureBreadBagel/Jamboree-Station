@@ -40,16 +40,30 @@ public sealed class TranslatorImplantSystem : EntitySystem
         component.UnderstoodRequirementSatisfied = TranslatorSystem.CheckLanguagesMatch(
             component.RequiredLanguages, knowledge.UnderstoodLanguages, component.RequiresAllLanguages);
 
+        if (component.AddUniversalLanguageSpeaker
+            && component.SpokenRequirementSatisfied
+            && component.UnderstoodRequirementSatisfied
+            && !component.AddedUniversalLanguageSpeaker)
+        {
+            EnsureComp<UniversalLanguageSpeakerComponent>(implantee);
+            component.AddedUniversalLanguageSpeaker = true;
+        }
+
         _language.UpdateEntityLanguages(implantee);
     }
 
     private void OnDeImplant(EntityUid uid, TranslatorImplantComponent component, EntGotRemovedFromContainerMessage args)
     {
         // Even though the description of this event says it gets raised BEFORE reparenting, that's actually false...
-        component.Enabled = component.SpokenRequirementSatisfied = component.UnderstoodRequirementSatisfied = false;
+        if (TryComp<SubdermalImplantComponent>(uid, out var subdermal) && subdermal.ImplantedEntity is { Valid: true } implantee)
+        {
+            if (component.AddedUniversalLanguageSpeaker)
+                RemComp<UniversalLanguageSpeakerComponent>(implantee);
 
-        if (TryComp<SubdermalImplantComponent>(uid, out var subdermal) && subdermal.ImplantedEntity is { Valid: true} implantee)
             _language.UpdateEntityLanguages(implantee);
+        }
+
+        component.Enabled = component.SpokenRequirementSatisfied = component.UnderstoodRequirementSatisfied = component.AddedUniversalLanguageSpeaker = false;
     }
 
     private void OnDetermineLanguages(EntityUid uid, ImplantedComponent component, ref DetermineEntityLanguagesEvent args)

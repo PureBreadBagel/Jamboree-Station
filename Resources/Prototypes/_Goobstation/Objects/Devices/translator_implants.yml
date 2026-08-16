@@ -39,25 +39,6 @@
       - Draconic # = Sinta'Unathi, Reptillian Language
       - Schechi # Avali Language
       - ValyrianStandard # Harpy Language
-      - YowKriol # Yowie Language
-#      - Azaziba # Depricated Languages -
-#      - Delvahii
-      - Eldritch # Eventually Cthulhoid Language
-#      - NalRasan
-#      - SiikTajr
-      - BieselEckeckyik
-      - Eckeckyik # Thaven Language
-      - Xeeplian # Abductor/Xeeplian Language
-#      - YaSsa
-      - Cheval # Animal Languages -
-      - Carptongue
-      - Deer
-      - Duck
-      - Kangaroo
-      - Pig
-      - Mouse
-      - Monkey
-      - Kobold
 
 
     understood:
@@ -86,25 +67,48 @@
       - Draconic # = Sinta'Unathi, Reptillian Language
       - Schechi # Avali Language
       - ValyrianStandard # Harpy Language
-      - YowKriol # Yowie Language
-#      - Azaziba # Depricated Languages -
-#      - Delvahii
-      - Eldritch # Eventually Cthulhoid Language
-#      - NalRasan
-#      - SiikTajr
-      - BieselEckeckyik
-      - Eckeckyik # Thaven Language
-      - Xeeplian # Abductor/Xeeplian Language
-#      - YaSsa
-      - Cheval # Animal Languages -
-      - Carptongue
+
+
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: ZookeeperTranslatorImplant
+  name: zookeeper translator implant
+  description: An implant giving the ability to understand every animal language.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TranslatorImplant
+    understood:
+      - Carptongue # Animals -
+      - Cat
+      - Cheval
+      - Chicken
+      - Cow
+      - Crab
       - Deer
+      - Dog
       - Duck
+      - FloorGoblin
+      - Fox
+      - Hissing
       - Kangaroo
-      - Pig
-      - Mouse
-      - Monkey
       - Kobold
+      - Monkey
+      - Mouse
+      - Penguin
+      - Pig
+      - Sheep
+      - Xeno
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: CentcommTranslatorImplant
+  name: central command translator implant
+  description: An implant granting the ability to understand and speak any language. Issued to high-ranking Central Command personnel.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TranslatorImplant
+    universalLanguageSpeaker: true
 
 
 

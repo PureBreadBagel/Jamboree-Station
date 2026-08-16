@@ -18,4 +18,16 @@ public sealed partial class TranslatorImplantComponent : BaseTranslatorComponent
     ///     Whether the implantee knows the languages necessary to understand translations of this implant.
     /// </summary>
     public bool UnderstoodRequirementSatisfied = false;
+
+    /// <summary>
+    ///     If true, grants the implantee the <see cref="UniversalLanguageSpeakerComponent"/> ability,
+    ///     letting them understand and speak any language.
+    /// </summary>
+    [DataField("universalLanguageSpeaker")]
+    public bool AddUniversalLanguageSpeaker = false;
+
+    /// <summary>
+    ///     Whether this implant added the universal language speaker component, so it can be removed safely on deimplantation.
+    /// </summary>
+    public bool AddedUniversalLanguageSpeaker = false;
 }
