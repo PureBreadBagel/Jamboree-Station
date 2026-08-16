@@ -19,6 +19,16 @@
   - type: Item
     size: Small
   - type: TapeRecorder
+    understoodLanguages:
+    - TauCetiBasic
+    - SolCommon
+    - Tradeband
+    - Freespeak
+    - Elyran
+    - NovuNederic
+    - Gruntish
+    - SpaceItalian
+    - YowKriol
   - type: ActiveListener
     range: 4
   - type: UseDelay

@@ -74,11 +74,11 @@ public sealed class TapeRecorderSystem : SharedTapeRecorderSystem
         if (!TryGetTapeCassette(ent, out var cassette))
             return;
 
-        // Einstein Engines - Language
-        // The recorder is a machine that only understands universal languages. For any other language it records
-        // the same gibberish a non-understanding listener would hear, so a tape can't be used as a universal translator.
+        // Only record languages the recorder understands verbatim. Any other language is recorded as
+        // the same gibberish a non-understanding listener would hear, so a tape can't be used as a
+        // universal translator for exotic or secret languages.
         var message = args.Message;
-        if (!_language.CanUnderstand(ent.Owner, args.Language.ID))
+        if (!ent.Comp.UnderstoodLanguages.Contains(args.Language.ID))
             message = _language.ObfuscateSpeech(message, args.Language);
 
         // TODO: Handle "Someone" when whispering from far away, needs chat refactor
