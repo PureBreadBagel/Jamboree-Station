@@ -74,10 +74,31 @@
   parent: BaseSubdermalImplant
   id: ZookeeperTranslatorImplant
   name: zookeeper translator implant
-  description: An implant giving the ability to understand every animal language.
+  description: An implant giving the ability to understand and speak every animal language.
   categories: [ HideSpawnMenu ]
   components:
   - type: TranslatorImplant
+    spoken:
+      - Carptongue # Animals -
+      - Cat
+      - Cheval
+      - Chicken
+      - Cow
+      - Crab
+      - Deer
+      - Dog
+      - Duck
+      - FloorGoblin
+      - Fox
+      - Hissing
+      - Kangaroo
+      - Kobold
+      - Monkey
+      - Mouse
+      - Penguin
+      - Pig
+      - Sheep
+      - Xeno
     understood:
       - Carptongue # Animals -
       - Cat
