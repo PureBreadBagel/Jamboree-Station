@@ -11,6 +11,7 @@ using Content.Server.Speech.Components;
 using Content.Shared.Chat;
 using Content.Shared.Paper;
 using Content.Shared.Speech;
+using Content.Shared._EinsteinEngines.Language.Systems;
 using Content.Goobstation.Shared.TapeRecorder;
 using Robust.Shared.Prototypes;
 using System.Text;
@@ -21,6 +22,7 @@ public sealed class TapeRecorderSystem : SharedTapeRecorderSystem
 {
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly HandsSystem _hands = default!;
+    [Dependency] private readonly SharedLanguageSystem _language = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly PaperSystem _paper = default!;
 
@@ -72,6 +74,13 @@ public sealed class TapeRecorderSystem : SharedTapeRecorderSystem
         if (!TryGetTapeCassette(ent, out var cassette))
             return;
 
+        // Einstein Engines - Language
+        // The recorder is a machine that only understands universal languages. For any other language it records
+        // the same gibberish a non-understanding listener would hear, so a tape can't be used as a universal translator.
+        var message = args.Message;
+        if (!_language.CanUnderstand(ent.Owner, args.Language.ID))
+            message = _language.ObfuscateSpeech(message, args.Language);
+
         // TODO: Handle "Someone" when whispering from far away, needs chat refactor
 
         //Handle someone using a voice changer
@@ -81,7 +90,7 @@ public sealed class TapeRecorderSystem : SharedTapeRecorderSystem
         //Add a new entry to the tape
         var verb = _chat.GetSpeechVerb(args.Source, args.Message);
         var name = nameEv.VoiceName;
-        cassette.Comp.Buffer.Add(new TapeCassetteRecordedMessage(cassette.Comp.CurrentPosition, name, verb, args.Message));
+        cassette.Comp.Buffer.Add(new TapeCassetteRecordedMessage(cassette.Comp.CurrentPosition, name, verb, message));
     }
 
     private void OnPrintMessage(Entity<TapeRecorderComponent> ent, ref PrintTapeRecorderMessage args)

@@ -63,6 +63,7 @@
     - PowerCell
     - DroneUsable
     - Organ
+    - PowerCellSelfRecharging
 
 - type: entity
   name: goop ball
