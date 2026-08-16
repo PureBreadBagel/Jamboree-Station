@@ -1910,3 +1910,32 @@ Entries:
         lunch! (They have survival boxes now)
   id: 164
   time: '2026-08-12T03:58:00.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Add
+      message: >-
+        The head researchers at NanoTrasen has made a new gadget for all CMO's!
+        The Emergichemical Dispenser! Now you can have eChem on the go! Powered
+        by power cells! (microreactors not supported).
+    - type: Add
+      message: The Emergichemical Dispenser is a steal objective for antags!
+    - type: Add
+      message: >-
+        Central Command Officials get their own version of the Emergichemical
+        Dispenser.
+    - type: Remove
+      message: delayroundend got removed because its borked. Did nothing.
+    - type: Add
+      message: 'Rounds can be un-ended by admins. Never let them know your next move. '
+    - type: Add
+      message: Rounds restart timers can be edited freely by admins.
+    - type: Tweak
+      message: When a round ends, its now 10 minutes to get to the lobby, instead of 5.
+    - type: Fix
+      message: >-
+        Kaltrenoxide and Infernazium no longer lose moles of gas or change
+        pressure in their canisters. 
+    - type: Add
+      message: Sprites for the Emergichemical Dispenser.
+  id: 165
+  time: '2026-08-16T03:02:23.0000000+00:00'
