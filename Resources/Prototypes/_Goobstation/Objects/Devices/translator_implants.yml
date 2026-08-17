@@ -44,6 +44,8 @@
       - Xeeplian # Abductor Language
       - Eckeckyik # Thaven Language
       - BieselEckeckyik # Bieselized Thaven Language
+      - Crab # Animal Languages -
+      - Mouse
 
     understood:
       - TauCetiBasic # Common Languages -
@@ -76,8 +78,8 @@
       - Xeeplian # Abductor Language
       - Eckeckyik # Thaven Language
       - BieselEckeckyik # Bieselized Thaven Language
-
-
+      - Crab # Animal Languages -
+      - Mouse
 
 - type: entity
   parent: BaseSubdermalImplant
