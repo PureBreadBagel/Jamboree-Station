@@ -8,6 +8,11 @@
     state: brain
     scale: 0.3, 0.3
     color: "#221e1c"
+  - type: Tag # goob edit
+    tags:
+    - Meat
+    - Organ
+    - Brain
 
 - type: entity
   id: OrganAntEyes
@@ -21,6 +26,11 @@
     layers:
       - state: eyeball-l
       - state: eyeball-r
+  - type: Tag # goob edit
+    tags:
+    - Meat
+    - Organ
+    - Eyes
 
 - type: entity
   id: OrganAntLungs
@@ -37,6 +47,11 @@
   - type: Organ
     onAdd:
     - type: BreathingImmunity
+  - type: Tag # goob edit
+    tags:
+    - Meat
+    - Organ
+    - Lungs
 
 - type: entity
   id: OrganAntHeart
@@ -48,6 +63,11 @@
     state: heart-on
     scale: 0.3, 0.3
     color: "#221e1c"
+  - type: Tag # goob edit
+    tags:
+    - Meat
+    - Organ
+    - Heart
 
 - type: entity
   id: OrganAntStomach
@@ -59,6 +79,11 @@
     state: stomach
     scale: 0.3, 0.3
     color: "#221e1c"
+  - type: Tag # goob edit
+    tags:
+      - Meat
+      - Organ
+      - Stomach
 
 - type: entity
   id: OrganAntLiver
@@ -70,6 +95,11 @@
     state: liver
     scale: 0.3, 0.3
     color: "#221e1c"
+  - type: Tag # goob edit
+    tags:
+    - Meat
+    - Organ
+    - Liver
 
 - type: entity
   id: OrganAntKidneys
@@ -83,3 +113,8 @@
     layers:
       - state: kidney-l
       - state: kidney-r
+  - type: Tag # goob edit
+    tags:
+    - Meat
+    - Organ
+    - Kidneys
