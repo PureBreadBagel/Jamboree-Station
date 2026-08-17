@@ -55,7 +55,7 @@
 
 - type: entity
   id: OrganAntHeart
-  parent: OrganHumanLungs
+  parent: OrganHumanHeart
   name: ant heart
   description: "Hill is where the ant heart is."
   components:
