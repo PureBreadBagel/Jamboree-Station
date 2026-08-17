@@ -51,8 +51,7 @@ public sealed partial class SpawnOnDespawnSystem : EntitySystem // Starlight edi
         while (_queuedSpawns.Count > 0)
         {
             var (prototype, coordinates, overrides) = _queuedSpawns.Dequeue();
-            var uid = Spawn(prototype, overrides);
-            _xform.SetCoordinates(uid, coordinates);
+            var uid = EntityManager.SpawnAtPosition(prototype, coordinates, overrides);
         }
     }
     // Starlight End
