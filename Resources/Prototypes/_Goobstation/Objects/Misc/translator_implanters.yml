@@ -15,6 +15,22 @@
     implant: LibrarianTranslatorImplant
 
 - type: entity
+  id: CentcommTranslatorImplanter
+  parent: BaseImplantOnlyImplanterCentcomm
+  suffix: Translator
+  components:
+  - type: Implanter
+    implant: CentcommTranslatorImplant
+
+- type: entity
+  id: ZookeeperTranslatorImplanter
+  parent: [ BaseTranslatorImplanter ]
+  suffix: Zookeeper
+  components:
+  - type: Implanter
+    implant: ZookeeperTranslatorImplant
+
+- type: entity
   id: ChevalTranslatorImplanter
   parent: [ BaseTranslatorImplanter ]
   suffix: Cheval

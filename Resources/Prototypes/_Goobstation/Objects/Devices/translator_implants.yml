@@ -40,25 +40,12 @@
       - Schechi # Avali Language
       - ValyrianStandard # Harpy Language
       - YowKriol # Yowie Language
-#      - Azaziba # Depricated Languages -
-#      - Delvahii
-      - Eldritch # Eventually Cthulhoid Language
-#      - NalRasan
-#      - SiikTajr
-      - BieselEckeckyik
+      - Eldritch # Cthulhoid Language
+      - Xeeplian # Abductor Language
       - Eckeckyik # Thaven Language
-      - Xeeplian # Abductor/Xeeplian Language
-#      - YaSsa
-      - Cheval # Animal Languages -
-      - Carptongue
-      - Deer
-      - Duck
-      - Kangaroo
-      - Pig
+      - BieselEckeckyik # Bieselized Thaven Language
+      - Crab # Animal Languages -
       - Mouse
-      - Monkey
-      - Kobold
-
 
     understood:
       - TauCetiBasic # Common Languages -
@@ -87,24 +74,73 @@
       - Schechi # Avali Language
       - ValyrianStandard # Harpy Language
       - YowKriol # Yowie Language
-#      - Azaziba # Depricated Languages -
-#      - Delvahii
-      - Eldritch # Eventually Cthulhoid Language
-#      - NalRasan
-#      - SiikTajr
-      - BieselEckeckyik
+      - Eldritch # Cthulhoid Language
+      - Xeeplian # Abductor Language
       - Eckeckyik # Thaven Language
-      - Xeeplian # Abductor/Xeeplian Language
-#      - YaSsa
-      - Cheval # Animal Languages -
-      - Carptongue
-      - Deer
-      - Duck
-      - Kangaroo
-      - Pig
+      - BieselEckeckyik # Bieselized Thaven Language
+      - Crab # Animal Languages -
       - Mouse
-      - Monkey
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: ZookeeperTranslatorImplant
+  name: zookeeper translator implant
+  description: An implant giving the ability to understand and speak every animal language.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TranslatorImplant
+    spoken:
+      - Carptongue # Animals -
+      - Cat
+      - Cheval
+      - Chicken
+      - Cow
+      - Crab
+      - Deer
+      - Dog
+      - Duck
+      - FloorGoblin
+      - Fox
+      - Hissing
+      - Kangaroo
       - Kobold
+      - Monkey
+      - Mouse
+      - Penguin
+      - Pig
+      - Sheep
+      - Xeno
+    understood:
+      - Carptongue # Animals -
+      - Cat
+      - Cheval
+      - Chicken
+      - Cow
+      - Crab
+      - Deer
+      - Dog
+      - Duck
+      - FloorGoblin
+      - Fox
+      - Hissing
+      - Kangaroo
+      - Kobold
+      - Monkey
+      - Mouse
+      - Penguin
+      - Pig
+      - Sheep
+      - Xeno
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: CentcommTranslatorImplant
+  name: central command translator implant
+  description: An implant granting the ability to understand and speak any language. Issued to high-ranking Central Command personnel.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TranslatorImplant
+    universalLanguageSpeaker: true
 
 
 

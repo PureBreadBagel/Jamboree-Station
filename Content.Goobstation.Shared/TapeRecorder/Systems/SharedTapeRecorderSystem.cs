@@ -314,17 +314,24 @@ public abstract class SharedTapeRecorderSystem : EntitySystem
 
         var corruption = Loc.GetString("tape-recorder-message-corruption");
 
-        var corruptedMessage = new StringBuilder();
-        foreach (var character in entry.Message)
+        string Corrupt(string text)
         {
-            if (_random.Prob(tape.CorruptionChance))
-                corruptedMessage.Append(corruption);
-            else
-                corruptedMessage.Append(character);
+            var corruptedMessage = new StringBuilder();
+            foreach (var character in text)
+            {
+                if (_random.Prob(tape.CorruptionChance))
+                    corruptedMessage.Append(corruption);
+                else
+                    corruptedMessage.Append(character);
+            }
+
+            return corruptedMessage.ToString();
         }
 
         entry.Name = Loc.GetString("tape-recorder-voice-unintelligible");
-        entry.Message = corruptedMessage.ToString();
+        entry.Message = Corrupt(entry.Message);
+        if (entry.ObfuscatedMessage != null)
+            entry.ObfuscatedMessage = Corrupt(entry.ObfuscatedMessage);
     }
 
     /// <summary>
