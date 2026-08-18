@@ -776,6 +776,25 @@
         defaultPrototype: PowerCellMedium
 
 - type: entity
+  id: SMESHyperAdvancedMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: hyper advanced SMES machine board
+  description: A machine printed circuit board for a Hyper Advanced SMES.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Structures/Power/smes.rsi
+    state: smes-blue
+  - type: MachineBoard
+    prototype: SMESHyperAdvancedEmpty
+    stackRequirements:
+      Manipulator: 3
+      CableHV: 20
+    componentRequirements:
+      PowerCell:
+        amount: 4
+        defaultPrototype: PowerCellHigh
+
+- type: entity
   id: CellRechargerCircuitboard
   parent: BaseMachineCircuitboard
   name: cell recharger machine board

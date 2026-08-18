@@ -168,6 +168,12 @@
   result: SMESAdvancedMachineCircuitboard
 
 - type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipeHigh, BaseEngineeringMachineRecipeCategory ]
+  id: SMESHyperAdvancedMachineCircuitboard
+  icon: { sprite:  _Jamboree/Structures/Power/smes.rsi, state: smes-blue-static }
+  result: SMESHyperAdvancedMachineCircuitboard
+
+- type: latheRecipe
   parent: [ BaseCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
   id: PortableGeneratorPacmanMachineCircuitboard
   icon: { sprite:  Structures/Power/Generation/portable_generator.rsi, state: portgen0 } # Goobstation
