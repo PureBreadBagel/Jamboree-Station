@@ -294,6 +294,7 @@ namespace Content.Shared.Atmos
             [Gas.WaterVapor] = Loc.GetString("gas-water-vapor-abbreviation"),
             [Gas.Infernazim] = Loc.GetString("gas-infernazim-abbreviation"),
             [Gas.Kaltrenoxide] = Loc.GetString("gas-kaltrenoxide-abbreviation"),
+            [Gas.WaterGas] = Loc.GetString("gas-water-gas-abbreviation"),
         };
 
         #region Excited Groups
@@ -323,7 +324,7 @@ namespace Content.Shared.Atmos
         /// <summary>
         ///     Total number of gases. Increase this if you want to add more!
         /// </summary>
-        public const int TotalNumberOfGases = 15; // Assmos - /tg/ gases
+        public const int TotalNumberOfGases = 16; // Jam! + Water Gas
 
         /// <summary>
         ///     This is the actual length of the gases arrays in mixtures.
@@ -520,5 +521,7 @@ namespace Content.Shared.Atmos
         Infernazim = 13, // Jam! 7800K gas!
 
         Kaltrenoxide = 14, // Jam! 73K gas!
+
+        WaterGas = 15, // Jam! Water gas from Trieste-Port-14
     }
 }

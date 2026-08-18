@@ -1,0 +1,49 @@
+- type: entity
+  parent: TelecomServer
+  id: JamboreeTelecomRelay
+  name: communications array
+  description: Boosts received radio signals across a wide range, allowing communication across vast distances.
+  components:
+  - type: Relay
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -4
+    range: 3
+    sound:
+      path: /Audio/Ambience/Objects/hdd_buzz.ogg
+  - type: Sprite
+    sprite: _Jamboree/Structures/Machines/array.rsi
+    layers:
+    - state: array_INTACT
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metal
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -4
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          JamboreeTelecomRelayDestroyed:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: TelecomServer
+  id: JamboreeTelecomRelayDestroyed
+  name: communications array
+  description: It once broadcasted signals into the far distance. It's broken now, though.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Structures/Machines/array.rsi
+    layers:
+    - state: array_DESTROYED

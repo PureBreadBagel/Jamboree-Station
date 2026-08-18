@@ -163,3 +163,16 @@
   color: 66ccff
   reagent: Kaltrenoxide
   pricePerMole: 0.1
+
+- type: gas
+  id: 15
+  name: gases-water-gas
+  specificHeat: 1000
+  heatCapacityRatio: 1.33
+  molarMass: 18
+  gasOverlaySprite: /Textures/_Jamboree/Effects/atmospherics.rsi
+  gasOverlayState: water
+  gasMolesVisible: 0.2
+  color: 135c4f
+  reagent: SeaWater
+  pricePerMole: 0.04

@@ -65,6 +65,7 @@ using Content.Shared.Chat.RadioIconsEvents; // Goobstation
 using Content.Shared.Whitelist; // Goobstation
 using Content.Shared.StatusIcon; // Goobstation
 using Content.Goobstation.Shared.Radio; // Goobstation
+using Content.Shared.Radio.Components; // Jamboree - relay tower
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -237,22 +238,35 @@ public sealed partial class RadioSystem : EntitySystem
         var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
+        // Jamboree - relay tower: relay on the same map boosts all channels to LongRange
+        var isRelayActive = IsAnyRelayActive(sourceMapId);
+        var isLongRange = channel.LongRange || isRelayActive;
+
+        if (!isRelayActive)
+        {
+            channel.LongRange = false;
+        }
+        else
+        {
+            channel.LongRange = true;
+        }
+
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
         {
             if (!radio.ReceiveAllChannels)
             {
                 if (!radio.Channels.Contains(channel.ID) || (TryComp<IntercomComponent>(receiver, out var intercom) &&
-                                                             !intercom.SupportedChannels.Contains(channel.ID)))
+                                                              !intercom.SupportedChannels.Contains(channel.ID)))
                     continue;
             }
 
-            if (!channel.LongRange && transform.MapID != sourceMapId && !radio.GlobalReceive
+            if (!isLongRange && transform.MapID != sourceMapId && !radio.GlobalReceive
                 && !(HasActiveTransmitter(transform.MapID) && HasActiveTransmitter(sourceMapId))) // goob - intermap transmitters
                 continue;
 
             // don't need telecom server for long range channels or handheld radios and intercoms
-            var needServer = !channel.LongRange && !sourceServerExempt;
+            var needServer = !isLongRange && !sourceServerExempt;
             if (needServer && !hasActiveServer)
                 continue;
 
@@ -365,4 +379,18 @@ public sealed partial class RadioSystem : EntitySystem
             .Any(server => server.Item3.MapID == mapId && server.Item2.Powered);
     }
     // goob end
+
+    // Jamboree - relay tower
+    private bool IsAnyRelayActive(MapId mapId)
+    {
+        var relays = EntityQuery<RelayComponent, TransformComponent>();
+        foreach (var (relay, transform) in relays)
+        {
+            if (transform.MapID == mapId && relay.IsActive)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

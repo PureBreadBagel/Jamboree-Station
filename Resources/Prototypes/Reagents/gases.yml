@@ -787,3 +787,37 @@
         - !type:Temperature
           min: 73.15
         amount: -8000
+
+- type: reagent
+  id: SeaWater
+  name: reagent-name-seawater
+  desc: reagent-desc-seawater
+  physicalDesc: reagent-physical-desc-odorless
+  flavor: salty
+  color: "#135c4f"
+  recognizable: true
+  boilingPoint: 100.0
+  meltingPoint: 0.0
+  metabolisms:
+    Gas:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cold: 0.33
+      - !type:AdjustTemperature
+        amount: -20
+      - !type:PopupMessage
+        conditions:
+        - !type:Reagent
+          reagent: SeaWater
+          min: 0.1
+        probability: 0.7
+        type: Local
+        messages: [ "You feel like you're drowning!" ]
+      - !type:AdjustAlert
+        conditions:
+        - !type:Reagent
+          reagent: SeaWater
+          min: 0.1
+        alertType: Drowning
