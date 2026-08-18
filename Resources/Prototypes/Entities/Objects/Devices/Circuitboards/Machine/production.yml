@@ -782,7 +782,7 @@
   description: A machine printed circuit board for a Hyper Advanced SMES.
   components:
   - type: Sprite
-    sprite: _Jamboree/Structures/Power/smes.rsi
+    sprite: _Starlight/Structures/Power/smes.rsi
     state: smes-blue
   - type: MachineBoard
     prototype: SMESHyperAdvancedEmpty

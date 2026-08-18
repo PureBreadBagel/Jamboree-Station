@@ -170,7 +170,7 @@
 - type: latheRecipe
   parent: [ BaseGoldCircuitboardRecipeHigh, BaseEngineeringMachineRecipeCategory ]
   id: SMESHyperAdvancedMachineCircuitboard
-  icon: { sprite:  _Jamboree/Structures/Power/smes.rsi, state: smes-blue-static }
+  icon: { sprite:  _Starlight/Structures/Power/smes.rsi, state: smes-blue-static }
   result: SMESHyperAdvancedMachineCircuitboard
 
 - type: latheRecipe

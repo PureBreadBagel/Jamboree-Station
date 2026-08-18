@@ -51,7 +51,7 @@
       sound:
         path: /Audio/Ambience/Objects/periodic_beep.ogg
     - type: Sprite
-      sprite: Structures/Power/smes.rsi
+      sprite: _Starlight/Structures/Power/smes.rsi #SL Edit
       snapCardinals: true
       layers:
         - state: smes
@@ -88,7 +88,7 @@
       sourceNode: input
       loadNode: output
       collectionName: smes
-      sprite: Structures/Power/smes.rsi
+      sprite: _Starlight/Structures/Power/smes.rsi #SL Edit
       state: static
     - type: BatteryDischarger
       voltage: High
@@ -178,7 +178,7 @@
   description: An even-higher-capacity superconducting magnetic energy storage (SMES) unit.
   components:
   - type: Sprite
-    sprite: Structures/Power/smes.rsi
+    sprite: _Starlight/Structures/Power/smes.rsi #SL Edit
     snapCardinals: true
     layers:
     - state: advancedsmes
@@ -206,7 +206,7 @@
     sourceNode: input
     loadNode: output
     collectionName: smes
-    sprite: Structures/Power/smes.rsi
+    sprite: _Starlight/Structures/Power/smes.rsi #SL Edit
     state: advancedsmes-static
 
 - type: entity
@@ -225,7 +225,7 @@
   description: An even-higher-capacity superconducting magnetic energy storage (SMES) unit.
   components:
   - type: Sprite
-    sprite: _Jamboree/Structures/Power/smes.rsi
+    sprite: _Starlight/Structures/Power/smes.rsi
     snapCardinals: true
     layers:
     - state: smes-blue
@@ -252,7 +252,7 @@
     sourceNode: input
     loadNode: output
     collectionName: smes
-    sprite: _Jamboree/Structures/Power/smes.rsi
+    sprite: _Starlight/Structures/Power/smes.rsi
     state: smes-blue-static
 
 - type: entity
