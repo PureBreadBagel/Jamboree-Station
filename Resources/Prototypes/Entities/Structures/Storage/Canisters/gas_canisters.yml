@@ -1043,13 +1043,7 @@
   - type: Sprite
     sprite: Structures/Storage/canister.rsi
     layers:
-    - state: water-1
-    - state: water-2
-      map: [ "enum.GasVisualLayers.Base" ]
-    - state: disconnected
-      map: [ "enum.GasVisualLayers.Connected" ]
-      visible: false
-  - type: Appearance
+    - state: water_vapor
   - type: GasPortable
   - type: Destructible
     thresholds:
@@ -1079,4 +1073,4 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    state: water-1
+    state: water_vapor-1
