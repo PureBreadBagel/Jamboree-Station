@@ -60,13 +60,13 @@
       Dylovene: 30
       Ethanol: 20
       Hydrogen: 20
-      Inaprovaline: 20
+      Inaprovaline: 17
       Kelotane: 25
       Oxygen: 20
       Saline: 21
       Spaceacilin: 20
       Sugar: 11
-      Tricordrazine: 30
+      Tricordrazine: 25
   - type: StealTarget # Jamboree - cmd/steal gear tweaks
     stealGroup: CMO
 
