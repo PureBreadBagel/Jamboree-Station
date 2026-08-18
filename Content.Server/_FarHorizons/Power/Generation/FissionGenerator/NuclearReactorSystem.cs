@@ -11,6 +11,7 @@ using Content.Server.Station.Systems;
 using Content.Shared._FarHorizons.Power.Generation.FissionGenerator;
 using Content.Shared.Atmos;
 using Content.Shared.Database;
+using Content.Shared.Damage;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Radiation.Components;
 using Content.Shared.Radio;
@@ -572,7 +573,7 @@ public sealed class NuclearReactorSystem : SharedNuclearReactorSystem
 
         var lightcomp = _lightSystem.EnsureLight(uid);
         _lightSystem.SetEnergy(uid, 0.1f, lightcomp);
-        _lightSystem.SetFalloff(uid, 2, lightcomp);
+        // _lightSystem.SetFalloff(uid, 2, lightcomp); // Not available in this fork
         _lightSystem.SetRadius(uid, (comp.ReactorGridWidth + comp.ReactorGridHeight) / 4, lightcomp);
         _lightSystem.SetColor(uid, Color.FromHex("#FFAAAAFF"), lightcomp);
 

@@ -64,7 +64,7 @@ public sealed class ReactorPartSystem : SharedReactorPartSystem
         base.Initialize();
         SubscribeLocalEvent<ReactorPartComponent, MapInitEvent>(OnInit);
         SubscribeLocalEvent<ReactorPartComponent, ExaminedEvent>(OnExamine);
-        SubscribeLocalEvent<ReactorPartComponent, IngestedEvent>(OnIngest);
+        // IngestedEvent does not exist in this fork - removed radiation-on-ingest feature
     }
 
     private void OnInit(EntityUid uid, ReactorPartComponent component, ref MapInitEvent args)
@@ -144,6 +144,7 @@ public sealed class ReactorPartSystem : SharedReactorPartSystem
         }
     }
 
+    /* IngestedEvent does not exist in this fork - removed radiation-on-ingest feature
     private void OnIngest(Entity<ReactorPartComponent> ent, ref IngestedEvent args)
     {
         var comp = ent.Comp;
@@ -167,6 +168,7 @@ public sealed class ReactorPartSystem : SharedReactorPartSystem
             dict.Add(dmgKey, prev + dmg);
         }
     }
+    */
 
     public override void Update(float frameTime)
     {

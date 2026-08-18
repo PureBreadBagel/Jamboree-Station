@@ -134,6 +134,15 @@
       emergencyLightColor: Cyan
       forceEnableEmergencyLights: true
       shuttleTime: 600
+    orange: # Starlight / Far Horizons
+      announcement: alert-level-orange-announcement
+      selectable: true
+      sound:
+        path: /Audio/_Starlight/misc/orange.ogg
+      color: "#ff8119"
+      emergencyLightColor: "#ff8119"
+      forceEnableEmergencyLights: true
+      shuttleTime: 480
     gamma:
       announcement: alert-level-gamma-announcement
       selectable: false
