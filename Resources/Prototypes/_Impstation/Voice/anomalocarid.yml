@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: speechSounds
   id: Anomalocarid
   saySound:
@@ -56,7 +60,7 @@
       path: /Audio/_Impstation/Voice/Anomalocarid/anomalocarid_bubbles.ogg
     Pop:
       collection: Pops
-    Gulp: # gds - more thaven emotes
+    Gulp: # goob
       path: /Audio/_Goobstation/Voice/gulpexotic.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg

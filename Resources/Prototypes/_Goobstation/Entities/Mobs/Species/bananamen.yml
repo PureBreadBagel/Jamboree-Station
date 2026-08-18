@@ -32,7 +32,14 @@
   - type: Bloodstream
     bloodReagent: Potassium
   - type: Inventory
-    templateId: human 
+    templateId: human
+  - type: LanguageKnowledge # Einstein Engines - Language
+    speaks:
+    - TauCetiBasic
+    - Monkey # Until they have a species-specific
+    understands:
+    - TauCetiBasic
+    - Monkey # Until they have a species-specific
 
 - type: entity
   parent: BaseSpeciesDummy
