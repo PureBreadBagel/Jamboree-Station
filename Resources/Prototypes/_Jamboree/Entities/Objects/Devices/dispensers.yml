@@ -52,6 +52,7 @@
         components:
         - FitsInDispenser
     reagents:
+      Amoxla: 25
       Carbon: 20
       Charcoal: 30
       Dexalin: 25
