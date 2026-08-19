@@ -432,6 +432,10 @@
   - type: Clothing
     sprite: Clothing/Belt/medical.rsi
   - type: Storage
+    maxItemSize: Large
+    defaultStorageOrientation: Vertical
+    grid:
+    - 0,0,7,1
     whitelist:
       tags:
         - Wrench
@@ -451,6 +455,7 @@
         - MedicalPatch # Goobstation
         - AutoinjectorCartridge # Goobstation
         - HandheldCrewMonitor # Goobstation
+        - EmergencyChemDispenser # Jamboree
       components:
         - Hypospray
         - Injector

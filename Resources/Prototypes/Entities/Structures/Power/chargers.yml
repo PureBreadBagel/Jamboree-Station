@@ -319,6 +319,8 @@
           - HitscanBatteryAmmoProvider
           - ProjectileBatteryAmmoProvider
           - Stunbaton
+          tags:
+          - FitsInCharger
         blacklist:  # Goobstation
           tags:
           - WizardWand
