@@ -150,3 +150,67 @@
       Saline: 20
       Spaceacilin: 20
       Tetrasolcincide: 20
+
+
+- type: entity
+  id: EnergyDeathsDispenser
+  parent: [BaseItem, PowerCellSlotMediumItem]
+  name: reaper's emergichemical dispenser
+  description: A chemical dispenser for those who rip and tear.
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Objects/Devices/energydeathsdispenser.rsi
+    layers:
+    - state: icon
+      scale: 1, 1
+    - state: beaker
+      map: ["enum.EnergyReagentDispenserVisualLayers.Beaker"]
+      visible: false
+      scale: 1, 1
+  - type: Item
+    size: Normal
+    sprite: _Jamboree/Objects/Devices/energydeathsdispenser.rsi
+  - type: Tag
+    tags:
+    - FitsInCharger
+  - type: Appearance
+  - type: EnergyReagentDispenserVisuals
+    baseState: icon
+    noPowerState: no-power
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+        blacklist:
+          tags:
+          - PowerCellSelfRecharging
+  - type: GuideHelp
+    guides:
+    - Chemicals
+  - type: AccessReader
+    access: [["CentralCommand"]]
+  - type: ActivatableUIRequiresAccess
+  - type: ActivatableUI
+    key: enum.EnergyReagentDispenserUiKey.Key
+    inHandsOnly: true
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.EnergyReagentDispenserUiKey.Key:
+        type: EnergyReagentDispenserBoundUserInterface
+  - type: EnergyReagentDispenser
+    energyBeakerSlot:
+      whitelistFailPopup: reagent-dispenser-component-cannot-put-entity-message
+      whitelist:
+        components:
+        - FitsInDispenser
+    reagents:
+      Amnestizine: 10
+      ChloralHydrate: 15
+      Dylovene: 30
+      Ichor: 40
+      Omnizine: 15
+      Pax: 20
+      TranexamicAcid: 20
+      Stimulants: 10

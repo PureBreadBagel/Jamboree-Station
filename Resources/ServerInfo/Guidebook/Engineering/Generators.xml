@@ -22,7 +22,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     [color=#999999][italic]Devices capable of infinite energy — and destructive potential[/italic][/color]
   </Box>
 
-  <Box> <!--Far Horizons Port Start-->
+  <Box>
 	  <GuideEntityEmbed Entity="NuclearReactorNormal" Caption=""/>
 	  <GuideEntityEmbed Entity="Turbine" Caption=""/>
   </Box>
