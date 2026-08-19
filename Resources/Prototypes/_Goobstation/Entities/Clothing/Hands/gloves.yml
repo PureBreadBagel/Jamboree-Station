@@ -234,6 +234,11 @@
             soundHit:
               path: /Audio/Weapons/bladeslice.ogg
             canWideSwing: false
+          - type: InjectOnHit
+            reagents:
+            - ReagentId: Neurotoxin
+              Quantity: 10
+            limit: 30
         soundStateActivate:
           collection: sparks
           params:
