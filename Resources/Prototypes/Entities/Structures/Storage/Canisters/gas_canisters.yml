@@ -1,6 +1,6 @@
-# SPDX-FileCopyrightText: 2020 20kdc <asdd2808@gmail.com>
+﻿# SPDX-FileCopyrightText: 2020 20kdc <asdd2808@gmail.com>
 # SPDX-FileCopyrightText: 2020 Clement-O <topy72.mine@gmail.com>
-# SPDX-FileCopyrightText: 2020 Clément <clement.orlandini@gmail.com>
+# SPDX-FileCopyrightText: 2020 Cl├®ment <clement.orlandini@gmail.com>
 # SPDX-FileCopyrightText: 2020 Pieter-Jan Briers <pieterjan.briers@gmail.com>
 # SPDX-FileCopyrightText: 2020 ike709 <ike709@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2020 py01 <60152240+collinlunn@users.noreply.github.com>
@@ -34,7 +34,7 @@
 # SPDX-FileCopyrightText: 2023 Vordenburg <114301317+Vordenburg@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2023 lzk <124214523+lzk228@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2023 potato1234_x <79580518+potato1234x@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2023 Łukasz Mędrek <lukaszm210@gmail.com>
+# SPDX-FileCopyrightText: 2023 ┼üukasz M─Ödrek <lukaszm210@gmail.com>
 # SPDX-FileCopyrightText: 2024 Flareguy <78941145+Flareguy@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 Jeff <velcroboy333@hotmail.com>
 # SPDX-FileCopyrightText: 2024 Kara <lunarautomaton6@gmail.com>
@@ -1001,7 +1001,6 @@
   - type: Sprite
     state: kaltrenoxide-1
 
-# Water (Seawater) canister
 - type: entity
   parent: GasCanister
   id: WaterCanister
@@ -1010,35 +1009,25 @@
   components:
   - type: GasCanister
     gasMixture:
+      volume: 1000
       temperature: 293.15
       moles:
-        - 0 # oxygen
-        - 0 # nitrogen
-        - 0 # CO2
-        - 0 # plasma
-        - 0 # Tritium
-        - 0 # Water vapor
-        - 0 # Ammonia
-        - 0 # Nitrous oxide
-        - 0 # Frezon
-        - 0 # Nitrogen dioxide
-        - 0 # Insiterazium
-        - 0 # Kaltrenoxide
-        - 21.540624592984233 # Water (SEA)
-      molesArchive:
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 21.540624592984233
+      - 0 # oxygen
+      - 0 # nitrogen
+      - 0 # CO2
+      - 0 # plasma
+      - 0 # tritium
+      - 0 # water vapor
+      - 0 # ammonia
+      - 0 # n2o
+      - 0 # frezon
+      - 0 # BZ
+      - 0 # healium
+      - 0 # nitrium
+      - 0 # pluoxium
+      - 0 # infernazim
+      - 0 # kaltrenoxide
+      - 1871.71051 # water gas
       gasDistributionLock: true
   - type: Sprite
     sprite: Structures/Storage/canister.rsi

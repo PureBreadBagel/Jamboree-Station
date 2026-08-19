@@ -1,11 +1,11 @@
-# SPDX-FileCopyrightText: 2020 Campbell Suter <znix@znix.xyz>
+﻿# SPDX-FileCopyrightText: 2020 Campbell Suter <znix@znix.xyz>
 # SPDX-FileCopyrightText: 2020 ComicIronic <comicironic@gmail.com>
 # SPDX-FileCopyrightText: 2020 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2020 Exp <theexp111@gmail.com>
 # SPDX-FileCopyrightText: 2020 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
 # SPDX-FileCopyrightText: 2020 Pieter-Jan Briers <pieterjan.briers@gmail.com>
-# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto <zddm@outlook.es>
+# SPDX-FileCopyrightText: 2020 V├¡ctor Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2020 V├¡ctor Aguilera Puerto <zddm@outlook.es>
 # SPDX-FileCopyrightText: 2020 a.rudenko <creadth@gmail.com>
 # SPDX-FileCopyrightText: 2020 creadth <creadth@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2020 silicons <2003111+silicons@users.noreply.github.com>
@@ -170,7 +170,7 @@
   specificHeat: 1000
   heatCapacityRatio: 1.33
   molarMass: 18
-  gasOverlaySprite: /Textures/_Jamboree/Effects/atmospherics.rsi
+  gasOverlaySprite: /Textures/_TP/Effects/atmospherics.rsi
   gasOverlayState: water
   gasMolesVisible: 0.2
   color: 135c4f

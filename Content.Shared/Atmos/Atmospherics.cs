@@ -1,11 +1,11 @@
-// SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+﻿// SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2020 Campbell Suter <znix@znix.xyz>
 // SPDX-FileCopyrightText: 2020 ComicIronic <comicironic@gmail.com>
 // SPDX-FileCopyrightText: 2020 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2020 GlassEclipse <tsymall5@gmail.com>
 // SPDX-FileCopyrightText: 2020 Pieter-Jan Briers <pieterjan.briers@gmail.com>
-// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto <zddm@outlook.es>
+// SPDX-FileCopyrightText: 2020 V├¡ctor Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2020 V├¡ctor Aguilera Puerto <zddm@outlook.es>
 // SPDX-FileCopyrightText: 2020 silicons <2003111+silicons@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2021 20kdc <asdd2808@gmail.com>
 // SPDX-FileCopyrightText: 2021 Metal Gear Sloth <metalgearsloth@gmail.com>
@@ -93,8 +93,8 @@
 // SPDX-FileCopyrightText: 2024 redfire1331 <Redfire1331@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 router <messagebus@vk.com>
 // SPDX-FileCopyrightText: 2024 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Арт <123451459+JustArt1m@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Джексон Миссиссиппи <tripwiregamer@gmail.com>
+// SPDX-FileCopyrightText: 2024 ðÉÐÇÐé <123451459+JustArt1m@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 ðöðÂðÁð║Ðüð¥ð¢ ð£ð©ÐüÐüð©ÐüÐüð©ð┐ð┐ð© <tripwiregamer@gmail.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 ArtisticRoomba <145879011+ArtisticRoomba@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
@@ -135,27 +135,27 @@ namespace Content.Shared.Atmos
         public const float GasMinerDefaultMaxExternalPressure = 6500f;
 
         /// <summary>
-        ///     -270.3ºC in K. CMB stands for Cosmic Microwave Background.
+        ///     -270.3┬║C in K. CMB stands for Cosmic Microwave Background.
         /// </summary>
         public const float TCMB = 2.7f;
 
         /// <summary>
-        ///     0ºC in K
+        ///     0┬║C in K
         /// </summary>
         public const float T0C = 273.15f;
 
         /// <summary>
-        ///     20ºC in K
+        ///     20┬║C in K
         /// </summary>
         public const float T20C = 293.15f;
 
         /// <summary>
-        ///     37ºC in K --GOOB EDIT--
+        ///     37┬║C in K --GOOB EDIT--
         /// </summary>
         public const float T37C = 310.1f;
 
         /// <summary>
-        ///     -38.15ºC in K.
+        ///     -38.15┬║C in K.
         ///     This is used to initialize roundstart freezer rooms.
         /// </summary>
         public const float FreezerTemp = 235f;
@@ -182,18 +182,18 @@ namespace Content.Shared.Atmos
         public const float BreathPercentage = BreathVolume / CellVolume;
 
         /// <summary>
-        ///     Moles in a 2.5 m^3 cell at 101.325 kPa and 20ºC
+        ///     Moles in a 2.5 m^3 cell at 101.325 kPa and 20┬║C
         /// </summary>
         public const float MolesCellStandard = (OneAtmosphere * CellVolume / (T20C * R));
 
         /// <summary>
-        ///     Moles in a 2.5 m^3 cell at 101.325 kPa and -38.15ºC.
+        ///     Moles in a 2.5 m^3 cell at 101.325 kPa and -38.15┬║C.
         ///     This is used in fix atmos freezer markers to ensure the air is at the correct atmospheric pressure while still being cold.
         /// </summary>
         public const float MolesCellFreezer = (OneAtmosphere * CellVolume / (FreezerTemp * R));
 
         /// <summary>
-        ///     Moles in a 2.5 m^3 cell at GasMinerDefaultMaxExternalPressure kPa and 20ºC
+        ///     Moles in a 2.5 m^3 cell at GasMinerDefaultMaxExternalPressure kPa and 20┬║C
         /// </summary>
         public const float MolesCellGasMiner = (GasMinerDefaultMaxExternalPressure * CellVolume / (T20C * R));
 

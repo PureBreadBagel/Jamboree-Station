@@ -219,3 +219,13 @@
     - type: GasMiner
       spawnGas: Kaltrenoxide
       maxExternalPressure: 300
+
+- type: entity
+  name: sea water gas miner
+  parent: GasMinerBase
+  id: GasMinerSeaWater
+  description: A gas miner that condenses water vapor from deep ocean currents.
+  components:
+    - type: GasMiner
+      spawnGas: WaterGas
+      maxExternalPressure: 300

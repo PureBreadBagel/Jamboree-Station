@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2022 20kdc <asdd2808@gmail.com>
+﻿# SPDX-FileCopyrightText: 2022 20kdc <asdd2808@gmail.com>
 # SPDX-FileCopyrightText: 2022 Alex Evgrashin <aevgrashin@yandex.ru>
 # SPDX-FileCopyrightText: 2022 EmoGarbage404 <98561806+EmoGarbage404@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2022 Flipp Syder <76629141+vulppine@users.noreply.github.com>
@@ -802,22 +802,39 @@
     Gas:
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Feroxi
+          shouldHave: false
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Asphyxiation: 3.5
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Feroxi
+          shouldHave: false
+        scaleByQuantity: true
+        ignoreResistances: true
         damage:
           types:
             Cold: 0.33
+      - !type:SatiateThirst
+        conditions:
+        - !type:OrganType
+          type: Feroxi
+        factor: 0.5
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:OrganType
+          type: Feroxi
+          shouldHave: false
+        key: Muted
+        component: Muted
+        type: Add
+        time: 20
+        refresh: true
       - !type:AdjustTemperature
         amount: -20
-      - !type:PopupMessage
-        conditions:
-        - !type:Reagent
-          reagent: SeaWater
-          min: 0.1
-        probability: 0.7
-        type: Local
-        messages: [ "You feel like you're drowning!" ]
-      - !type:AdjustAlert
-        conditions:
-        - !type:Reagent
-          reagent: SeaWater
-          min: 0.1
-        alertType: Drowning

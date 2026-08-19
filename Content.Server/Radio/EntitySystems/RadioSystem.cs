@@ -1,7 +1,7 @@
-// SPDX-FileCopyrightText: 2020 Bright <nsmoak10@yahoo.com>
+﻿// SPDX-FileCopyrightText: 2020 Bright <nsmoak10@yahoo.com>
 // SPDX-FileCopyrightText: 2020 Bright0 <55061890+Bright0@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2020 Swept <jamesurquhartwebb@gmail.com>
-// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2020 V├¡ctor Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2021 Acruid <shatter66@gmail.com>
 // SPDX-FileCopyrightText: 2021 Metal Gear Sloth <metalgearsloth@gmail.com>
 // SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
@@ -65,7 +65,6 @@ using Content.Shared.Chat.RadioIconsEvents; // Goobstation
 using Content.Shared.Whitelist; // Goobstation
 using Content.Shared.StatusIcon; // Goobstation
 using Content.Goobstation.Shared.Radio; // Goobstation
-using Content.Shared.Radio.Components; // Jamboree - relay tower
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -241,15 +240,6 @@ public sealed partial class RadioSystem : EntitySystem
         // Jamboree - relay tower: relay on the same map boosts all channels to LongRange
         var isRelayActive = IsAnyRelayActive(sourceMapId);
         var isLongRange = channel.LongRange || isRelayActive;
-
-        if (!isRelayActive)
-        {
-            channel.LongRange = false;
-        }
-        else
-        {
-            channel.LongRange = true;
-        }
 
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
