@@ -59,9 +59,9 @@ public sealed partial class RadiationSystem : EntitySystem
         _accumulator = 0f;
     }
 
-    public void IrradiateEntity(EntityUid uid, float radsPerSecond, float time, EntityUid? source = null)
+    public void IrradiateEntity(EntityUid uid, float radsPerSecond, float time, List<EntityUid>? sources = null)
     {
-        var msg = new OnIrradiatedEvent(time, radsPerSecond, uid, source);
+        var msg = new OnIrradiatedEvent(time, radsPerSecond, uid, sources);
         RaiseLocalEvent(uid, msg);
     }
 

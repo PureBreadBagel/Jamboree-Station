@@ -75,7 +75,7 @@ public partial class RadiationSystem
         }
 
         var debugRays = debug ? new List<DebugRadiationRay>() : null;
-        var receiversTotalRads = new ValueList<(Entity<RadiationReceiverComponent>, float, EntityUid?)>();
+        var receiversTotalRads = new ValueList<(Entity<RadiationReceiverComponent>, float, List<EntityUid>?)>();
 
         // TODO RADIATION Parallelize
         // Would need to give receiversTotalRads a fixed size.
@@ -87,7 +87,7 @@ public partial class RadiationSystem
             var destWorld = _transform.GetWorldPosition(destTrs);
 
             var rads = 0f;
-            EntityUid? firstSource = null;
+            List<EntityUid>? sourceUids = null;
             foreach (var source in _sources)
             {
                 // send ray towards destination entity
@@ -98,7 +98,8 @@ public partial class RadiationSystem
                 if (ray.ReachedDestination)
                 {
                     rads += ray.Rads;
-                    firstSource ??= source.Entity.Owner;
+                    sourceUids ??= [];
+                    sourceUids.Add(source.Entity.Owner);
                 }
 
                 if (!debug)
@@ -118,7 +119,7 @@ public partial class RadiationSystem
             // Apply modifier if the destination entity is hidden within a radiation blocking container
             rads = GetAdjustedRadiationIntensity(destUid, rads);
 
-            receiversTotalRads.Add(((destUid, dest), rads, firstSource));
+            receiversTotalRads.Add(((destUid, dest), rads, sourceUids));
         }
 
         // update information for debug overlay
@@ -128,7 +129,7 @@ public partial class RadiationSystem
         UpdateGridcastDebugOverlay(elapsedTime, totalSources, totalReceivers, debugRays);
 
         // send rads to each entity
-        foreach (var (receiver, rads, firstSource) in receiversTotalRads)
+        foreach (var (receiver, rads, sourceUids) in receiversTotalRads)
         {
             // update radiation value of receiver
             // if no radiation rays reached target, that will set it to 0
@@ -136,7 +137,7 @@ public partial class RadiationSystem
 
             // also send an event with combination of total rad
             if (rads > 0)
-                IrradiateEntity(receiver, rads, GridcastUpdateRate, firstSource);
+                IrradiateEntity(receiver, rads, GridcastUpdateRate, sourceUids);
         }
 
         // raise broadcast event that radiation system has updated
