@@ -769,7 +769,7 @@
         ignoreResistances: true
         damage:
           types:
-            Heat: 1
+            Heat: 5
       - !type:AdjustTemperature
         amount: 8000
       - !type:Ignite

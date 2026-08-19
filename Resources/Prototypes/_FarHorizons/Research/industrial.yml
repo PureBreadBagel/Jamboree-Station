@@ -7,7 +7,7 @@
   discipline: Industrial
   tier: 1
   cost: 7500
-  position: 0,-8
+  position: 4,-6
   recipeUnlocks:
   - NuclearFabricatorMachineCircuitboard
   - NuclearReactorMonitorComputerCircuitboard
@@ -27,6 +27,8 @@
   - PlasteelGasTurbineBlade
   - BrassGasTurbineBlade
   - SilverGasTurbineStator
+  technologyPrerequisites:
+  - OptimizedMicrogalvanism
 
 - type: technology
   id: NuclearPowerRecycling
@@ -37,7 +39,7 @@
   discipline: Industrial
   tier: 2
   cost: 12500
-  position: 0,-9
+  position: 5,-6
   recipeUnlocks:
   - NuclearCentrifugeMachineCircuitboard
   - PlutoniumReactorFuelRod
