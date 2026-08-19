@@ -54,4 +54,7 @@
   id: PowerCellAntique
 
 - type: Tag
+  id: PowerCellSelfRecharging
+
+- type: Tag
   id: EmergencyChemDispenser

@@ -6,6 +6,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Shared._EinsteinEngines.Language;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -17,6 +18,14 @@ namespace Content.Goobstation.Shared.TapeRecorder;
 [AutoGenerateComponentState, AutoGenerateComponentPause]
 public sealed partial class TapeRecorderComponent : Component
 {
+    /// <summary>
+    /// Languages the recorder understands and records verbatim. Any other language is recorded as
+    /// the same gibberish a non-understanding listener would hear, so a tape can't be used as a
+    /// universal translator for exotic or secret languages.
+    /// </summary>
+    [DataField]
+    public List<ProtoId<LanguagePrototype>> UnderstoodLanguages = [];
+
     /// <summary>
     /// The current tape recorder mode, controls what using the item will do
     /// </summary>

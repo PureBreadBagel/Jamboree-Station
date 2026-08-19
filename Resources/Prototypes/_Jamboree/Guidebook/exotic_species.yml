@@ -11,6 +11,7 @@
   name: guide-entry-exotic-species
   text: "/ServerInfo/_Jamboree/Guidebook/ExoticMobs.xml"
   children:
+  - Ant
   - BananaMen
   - Resomi
   - Skeleton
@@ -22,6 +23,11 @@
   id: Skeleton
   name: guide-entry-skeleton
   text: "/ServerInfo/_Jamboree/Guidebook/ExoticMobs/Skeleton.xml"
+
+- type: guideEntry
+  id: Ant
+  name: species-name-ant
+  text: "/ServerInfo/_Jamboree/Guidebook/ExoticMobs/Ant.xml"
 
 - type: guideEntry
   id: BananaMen

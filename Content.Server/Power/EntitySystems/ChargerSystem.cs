@@ -291,7 +291,18 @@ internal sealed class ChargerSystem : EntitySystem
         switch (component.Status)
         {
             case CellChargerStatus.Off:
-                receiver.Load = 0;
+                // If we're off because the power is out, keep requesting the charging load.
+                // Zeroing it here would make the receiver report itself as powered again
+                // (Powered is derived from Load), flip the charger back to Charging, and start
+                // a per-tick feedback loop that flickers the charger and sneaks charge into
+                // the cell while the grid is dead.
+                receiver.Load = !receiver.Powered
+                                && !HasComp<EmpDisabledComponent>(uid)
+                                && container.ContainedEntities.Count > 0
+                                && SearchForBattery(container.ContainedEntities[0], out var offBatteryUid, out var offBattery)
+                                && !_battery.IsFull(offBatteryUid.Value, offBattery)
+                    ? component.ChargeRate
+                    : 0;
                 _appearance.SetData(uid, CellVisual.Light, CellChargerStatus.Off, appearance);
                 break;
             case CellChargerStatus.Empty:

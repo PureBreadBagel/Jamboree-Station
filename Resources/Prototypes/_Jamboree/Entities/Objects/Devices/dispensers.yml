@@ -37,8 +37,7 @@
         startingItem: PowerCellMedium
         blacklist:
           tags:
-          - PowerCellMicroreactor
-          - PowerCellAntique
+          - PowerCellSelfRecharging
   - type: GuideHelp
     guides:
     - Chemist
@@ -110,7 +109,7 @@
         startingItem: PowerCellHyper
         blacklist:
           tags:
-          - PowerCellMicroreactor
+          - PowerCellSelfRecharging
   - type: GuideHelp
     guides:
     - Chemicals
@@ -134,6 +133,7 @@
     reagents:
       Amnestizine: 30
       ChloralHydrate: 30
+      Charcoal: 10
       Devirate: 20
       DexalinPlus: 8
       Doxarubixadone: 20
