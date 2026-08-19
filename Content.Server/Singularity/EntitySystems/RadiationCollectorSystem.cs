@@ -167,20 +167,10 @@ public sealed class RadiationCollectorSystem : EntitySystem
         if (!component.Enabled || component.RadiationReactiveGases == null)
             return;
 
-        if (args.Sources == null || args.Sources.Count == 0)
+        if (args.Source == null)
             return;
 
-        var hasValidSource = false;
-        foreach (var source in args.Sources)
-        {
-            if (HasComp<SupermatterComponent>(source) || HasComp<SingularityComponent>(source))
-            {
-                hasValidSource = true;
-                break;
-            }
-        }
-
-        if (!hasValidSource)
+        if (!HasComp<SupermatterComponent>(args.Source.Value) && !HasComp<SingularityComponent>(args.Source.Value))
             return;
 
         if (!TryGetLoadedGasTank(uid, out var gasTankComponent))
