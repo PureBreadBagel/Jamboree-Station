@@ -17,7 +17,7 @@ roundend-prepend-changeling-stolen = Someone had extracted a total of [color=ora
 
 changeling-gamemode-title = Changelings
 changeling-gamemode-description =
-    One or more changelings have boarded the station, ready to take anything they desires - be it your equipment, your faces, or your lives!
+    One or more changelings have boarded the station, ready to take anything they desire - be it your equipment, your faces, or your lives!
 
 changeling-role-greeting =
     You are a changeling who has absorbed and taken the form of {$name}!

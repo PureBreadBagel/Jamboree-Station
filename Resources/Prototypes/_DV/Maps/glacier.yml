@@ -25,6 +25,7 @@
         availableJobs:
           Captain: [ 1, 1 ]
           NanotrasenRepresentative: [ 1, 1 ] # added by jamboree
+          NanotrasenCareerTrainer: [ 1, 1 ]
           StationAi: [ 1, 1 ]
         #service
           HeadOfPersonnel: [ 1, 1 ]

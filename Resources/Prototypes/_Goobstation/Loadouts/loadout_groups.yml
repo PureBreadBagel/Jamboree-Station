@@ -1103,9 +1103,10 @@
   id: NanotrasenTrainerBackpack
   name: loadout-group-nct-backpack
   loadouts:
-  - NanotrasenTrainerSatchel
-  - NanotrasenTrainerBackpack
-  - NanotrasenTrainerDuffel
+  - NanotrasenRepresentativeBackpack #jambo change
+  - NanotrasenRepresentativeSatchel # jambo change
+  - NanotrasenRepresentativeDuffel # jambo change
+  - NanotrasenRepresentativeMessenger #jambo change
 
 - type: loadoutGroup
   id: NanotrasenTrainerJumpsuit

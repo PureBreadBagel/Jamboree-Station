@@ -67,8 +67,8 @@
 - type: entity
   parent: ClothingUniformJumpsuitNavyGold
   id: ClothingUniformJumpskirtTrainer
-  name: NCT Jumpskirt
-  description: A jumpskirt issued to Nanotrasen Career Trainers. Fills you with a feeling of pride.
+  name: NCT's jumpskirt
+  description: A jumpskirt issued to Nanotrasen Career Trainers. Class is in session!
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/Uniforms/Jumpskirt/trainer.rsi
