@@ -1965,3 +1965,49 @@ Entries:
         out!
   id: 167
   time: '2026-08-18T00:23:03.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Add
+      message: >-
+        Nuclear Power has been successfully researched and in the market!
+        Purchase it for 10,000 and 15,000 Spesos!
+    - type: Add
+      message: >-
+        Code Orange has been made due to crew incompetence! Tesloose?
+        Singuloose? Meltdown? Code Orange!
+    - type: Tweak
+      message: >-
+        The Radiation collector can only get power from the Super Matter or
+        Singularity.
+    - type: Add
+      message: Sea Water exists as a tile that can spread! Now you can drown in style!
+    - type: Add
+      message: >-
+        A third tier of the SMES has been researched by our head of research at
+        Centcomm! Now you can store even more power!
+    - type: Add
+      message: >-
+        A new type of telecommunication tower has been made! Currently
+        un-craftable.
+    - type: Add
+      message: >-
+        Emergichemical dispensers for the CCO sprites have been added! (Made by
+        Yoru.)
+    - type: Tweak
+      message: SMES sprites have been updated.
+    - type: Tweak
+      message: Tetrasolcincide has been buffed a bit.
+    - type: Tweak
+      message: >-
+        The emergichemical dispenser for CMO has had its dispense values
+        updated.
+    - type: Tweak
+      message: >-
+        the emergichemical dispenser can now be put into rechargers. Saves you
+        from having to keep extracting the power cell from within.
+    - type: Fix
+      message: The emergichemical dispenser no longer takes the xenobio cell.
+    - type: Fix
+      message: The emergichemical dispenser now counts as Command contraband.
+  id: 168
+  time: '2026-08-20T03:32:57.0000000+00:00'
