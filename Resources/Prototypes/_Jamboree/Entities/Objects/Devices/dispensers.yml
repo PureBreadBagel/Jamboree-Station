@@ -167,6 +167,9 @@
       map: ["enum.EnergyReagentDispenserVisualLayers.Beaker"]
       visible: false
       scale: 1, 1
+  - type: AccessReader
+    access: [["CentralCommand"]]
+  - type: ActivatableUIRequiresAccess
   - type: Item
     size: Normal
     sprite: _Jamboree/Objects/Devices/energydeathsdispenser.rsi
@@ -188,9 +191,6 @@
   - type: GuideHelp
     guides:
     - Chemicals
-  - type: AccessReader
-    access: [["CentralCommand"]]
-  - type: ActivatableUIRequiresAccess
   - type: ActivatableUI
     key: enum.EnergyReagentDispenserUiKey.Key
     inHandsOnly: true
@@ -208,9 +208,14 @@
     reagents:
       Amnestizine: 10
       ChloralHydrate: 15
-      Dylovene: 30
+      Dylovene: 10
+      Epinephrine: 10
       Ichor: 40
+      MuteToxin: 10
       Omnizine: 15
       Pax: 20
-      TranexamicAcid: 20
+      PentenicAcid: 15
+      Phalanximine: 15
+      Rororium: 30
+      Tetrasolcincide: 20
       Stimulants: 10
