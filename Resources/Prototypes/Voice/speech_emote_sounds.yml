@@ -198,6 +198,8 @@
       collection: MaleDeathGasp
     Gulp: # Goob
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg ## GOOB CONTENT END
+    Surprised: # Goob
+      path: /Audio/_Goobstation/Voice/surprised.ogg
     Mars: # jamboree - juice that makes you mar
       path: /Audio/_EinsteinEngines/Voice/Shadowkin/mar.ogg
 
