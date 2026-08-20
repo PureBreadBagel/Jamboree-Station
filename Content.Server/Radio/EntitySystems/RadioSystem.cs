@@ -1,7 +1,7 @@
-// SPDX-FileCopyrightText: 2020 Bright <nsmoak10@yahoo.com>
+﻿// SPDX-FileCopyrightText: 2020 Bright <nsmoak10@yahoo.com>
 // SPDX-FileCopyrightText: 2020 Bright0 <55061890+Bright0@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2020 Swept <jamesurquhartwebb@gmail.com>
-// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2020 V├¡ctor Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2021 Acruid <shatter66@gmail.com>
 // SPDX-FileCopyrightText: 2021 Metal Gear Sloth <metalgearsloth@gmail.com>
 // SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
@@ -237,22 +237,26 @@ public sealed partial class RadioSystem : EntitySystem
         var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
+        // Jamboree - relay tower: relay on the same map boosts all channels to LongRange
+        var isRelayActive = IsAnyRelayActive(sourceMapId);
+        var isLongRange = channel.LongRange || isRelayActive;
+
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
         {
             if (!radio.ReceiveAllChannels)
             {
                 if (!radio.Channels.Contains(channel.ID) || (TryComp<IntercomComponent>(receiver, out var intercom) &&
-                                                             !intercom.SupportedChannels.Contains(channel.ID)))
+                                                              !intercom.SupportedChannels.Contains(channel.ID)))
                     continue;
             }
 
-            if (!channel.LongRange && transform.MapID != sourceMapId && !radio.GlobalReceive
+            if (!isLongRange && transform.MapID != sourceMapId && !radio.GlobalReceive
                 && !(HasActiveTransmitter(transform.MapID) && HasActiveTransmitter(sourceMapId))) // goob - intermap transmitters
                 continue;
 
             // don't need telecom server for long range channels or handheld radios and intercoms
-            var needServer = !channel.LongRange && !sourceServerExempt;
+            var needServer = !isLongRange && !sourceServerExempt;
             if (needServer && !hasActiveServer)
                 continue;
 
@@ -365,4 +369,18 @@ public sealed partial class RadioSystem : EntitySystem
             .Any(server => server.Item3.MapID == mapId && server.Item2.Powered);
     }
     // goob end
+
+    // Jamboree - relay tower
+    private bool IsAnyRelayActive(MapId mapId)
+    {
+        var relays = EntityQuery<RelayComponent, TransformComponent>();
+        foreach (var (relay, transform) in relays)
+        {
+            if (transform.MapID == mapId && relay.IsActive)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

@@ -228,12 +228,20 @@
             damage:
               types:
                 Slash: 25
+                Piercing: 10
                 Structural: 50
                 Cellular: 15 # Rip and tear until it is done.
             mustBeEquippedToUse: true
             soundHit:
               path: /Audio/Weapons/bladeslice.ogg
             canWideSwing: false
+          - type: InjectOnHit
+            reagents:
+            - ReagentId: Neurotoxin
+              Quantity: 10
+            - ReagentId: Benzene
+              Quantity: 10
+            limit: 30
         soundStateActivate:
           collection: sparks
           params:

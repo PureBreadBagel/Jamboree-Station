@@ -51,7 +51,7 @@
       sound:
         path: /Audio/Ambience/Objects/periodic_beep.ogg
     - type: Sprite
-      sprite: Structures/Power/smes.rsi
+      sprite: _Starlight/Structures/Power/smes.rsi #SL Edit
       snapCardinals: true
       layers:
         - state: smes
@@ -88,7 +88,7 @@
       sourceNode: input
       loadNode: output
       collectionName: smes
-      sprite: Structures/Power/smes.rsi
+      sprite: _Starlight/Structures/Power/smes.rsi #SL Edit
       state: static
     - type: BatteryDischarger
       voltage: High
@@ -178,10 +178,11 @@
   description: An even-higher-capacity superconducting magnetic energy storage (SMES) unit.
   components:
   - type: Sprite
-    sprite: Structures/Power/smes.rsi
+    sprite: _Starlight/Structures/Power/smes.rsi #SL Edit
     snapCardinals: true
     layers:
     - state: advancedsmes
+    - state: smes-blue-fan
     - map: [ "enum.SmesVisualLayers.Charge" ]
       state: "smes-og1" # -og0 does not exist
       shader: unshaded
@@ -205,12 +206,58 @@
     sourceNode: input
     loadNode: output
     collectionName: smes
-    sprite: Structures/Power/smes.rsi
+    sprite: _Starlight/Structures/Power/smes.rsi #SL Edit
     state: advancedsmes-static
 
 - type: entity
   parent: SMESAdvanced
   id: SMESAdvancedEmpty
+  suffix: Empty
+  components:
+  - type: Battery
+    startingCharge: 0
+
+- type: entity
+  parent: BaseSMES
+  id: SMESHyperAdvanced
+  suffix: Hyper Advanced, 64MJ
+  name: hyper advanced SMES
+  description: An even-higher-capacity superconducting magnetic energy storage (SMES) unit.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Structures/Power/smes.rsi
+    snapCardinals: true
+    layers:
+    - state: smes-blue
+    - state: smes-blue-fan
+    - map: ["enum.SmesVisualLayers.Charge"]
+      state: "smes-og1"
+      shader: unshaded
+      visible: false
+    - map: ["enum.SmesVisualLayers.Input"]
+      state: "smes-oc0"
+      shader: unshaded
+    - map: ["enum.SmesVisualLayers.Output"]
+      state: "smes-op1"
+      shader: unshaded
+    - map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      state: smes-blue-open
+  - type: Machine
+    board: SMESHyperAdvancedMachineCircuitboard
+  - type: Battery
+    maxCharge: 64000000
+    startingCharge: 64000000
+  - type: PowerMonitoringDevice
+    group: SMES
+    sourceNode: input
+    loadNode: output
+    collectionName: smes
+    sprite: _Starlight/Structures/Power/smes.rsi
+    state: smes-blue-static
+
+- type: entity
+  parent: SMESHyperAdvanced
+  id: SMESHyperAdvancedEmpty
   suffix: Empty
   components:
   - type: Battery

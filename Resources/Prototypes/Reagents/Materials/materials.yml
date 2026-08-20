@@ -81,6 +81,16 @@
   icon: { sprite: Objects/Materials/Sheets/other.rsi, state: plasma }
   color: "#7e009e"
   price: 0.35 # $35 for 1 unit
+  properties: # FH edit
+    electrical: 3
+    thermal: 4
+    hard: 1.3
+    density: 1
+    chemical: 4
+    flammable: 10
+    radioactive: 3
+    n_radioactive: 1
+    plasma_offgas: 5
 
 - type: material
   id: Plastic
@@ -106,6 +116,14 @@
   icon: { sprite: Objects/Materials/Sheets/other.rsi, state: uranium }
   color: "#32a852"
   price: 0.85 # $85 for 1 unit
+  properties: # FH edit
+    electrical: 4
+    thermal: 3.5
+    hard: 2
+    density: 3.5
+    chemical: 5
+    radioactive: 3
+    n_radioactive: 1
 
 - type: material
   id: Bananium
@@ -115,6 +133,12 @@
   icon: { sprite: Objects/Materials/materials.rsi, state: bananium }
   color: "#32a852"
   price: 1.0 # $100 for 1 unit
+  properties: # FH edit
+    electrical: 3
+    thermal: 4
+    hard: 1.5
+    density: 3
+    chemical: 4
 
 - type: material
   id: Meaterial # you can't take this pun from me

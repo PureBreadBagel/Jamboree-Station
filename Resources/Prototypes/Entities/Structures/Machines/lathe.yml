@@ -602,6 +602,7 @@
     # Goobstation Packs
     - SharedBoards
     - ShuttleBoardsGoob
+    - ReactorCircuitboards # FH edit
     - EnergyChemicalDispensersService
     - EnergyChemicalDispensersMedical
 

@@ -187,6 +187,7 @@
     IDCardsStealCollectionObjective: 1
     LAMPStealCollectionObjective: 2 #only for moth
     BatteryStealCollectionObjective: 2 #Goobedit - only for ipc
+    ReactorFuelRodStealCollectionObjective: 1 #Far Horizons/Nuclear Reactor Port
 
 - type: weightedRandom
   id: ThiefObjectiveGroupItem

@@ -96,6 +96,7 @@ using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Radiation.Events;
 using Content.Shared.Singularity.Components;
+using Content.Goobstation.Shared.Supermatter.Components;
 using Content.Shared.Timing;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
@@ -164,6 +165,22 @@ public sealed class RadiationCollectorSystem : EntitySystem
     private void OnRadiation(EntityUid uid, RadiationCollectorComponent component, OnIrradiatedEvent args)
     {
         if (!component.Enabled || component.RadiationReactiveGases == null)
+            return;
+
+        if (args.Sources == null || args.Sources.Count == 0)
+            return;
+
+        var hasValidSource = false;
+        foreach (var source in args.Sources)
+        {
+            if (HasComp<SupermatterComponent>(source) || HasComp<SingularityComponent>(source))
+            {
+                hasValidSource = true;
+                break;
+            }
+        }
+
+        if (!hasValidSource)
             return;
 
         if (!TryGetLoadedGasTank(uid, out var gasTankComponent))

@@ -10,6 +10,7 @@ using Content.Shared._EinsteinEngines.Language.Events;
 using Content.Shared._EinsteinEngines.Language.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
+using System.Linq;
 
 namespace Content.Server._EinsteinEngines.Language;
 
@@ -85,19 +86,21 @@ public sealed class TranslatorImplantSystem : EntitySystem
                 foreach (var language in translator.UnderstoodLanguages)
                     args.UnderstoodLanguages.Add(language);
 
-            // Centcomm implanter code. Basically gives you all the languages to speak as well as understanding it -- JAMBOREE!
             if (!translator.AddUniversalLanguageSpeaker)
                 continue;
 
+            var allLanguages = _proto.EnumeratePrototypes<LanguagePrototype>()
+                .Where(l => l.ID != SharedLanguageSystem.UniversalPrototype && l.ID != SharedLanguageSystem.PsychomanticPrototype)
+                .OrderBy(l => l.ID)
+                .ToList();
+
             if (translator.SpokenRequirementSatisfied)
-                foreach (var language in _proto.EnumeratePrototypes<LanguagePrototype>())
-                    if (language.ID != SharedLanguageSystem.UniversalPrototype && language.ID != SharedLanguageSystem.PsychomanticPrototype)
-                        args.SpokenLanguages.Add(language.ID);
+                foreach (var language in allLanguages)
+                    args.SpokenLanguages.Add(language.ID);
 
             if (translator.UnderstoodRequirementSatisfied)
-                foreach (var language in _proto.EnumeratePrototypes<LanguagePrototype>())
-                    if (language.ID != SharedLanguageSystem.UniversalPrototype && language.ID != SharedLanguageSystem.PsychomanticPrototype)
-                        args.UnderstoodLanguages.Add(language.ID);
+                foreach (var language in allLanguages)
+                    args.UnderstoodLanguages.Add(language.ID);
         }
     }
 }

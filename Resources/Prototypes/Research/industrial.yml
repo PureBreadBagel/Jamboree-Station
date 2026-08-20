@@ -125,6 +125,7 @@
   - PowerCellHigh
   - TurboItemRechargerCircuitboard
   - SMESAdvancedMachineCircuitboard
+  - SMESHyperAdvancedMachineCircuitboard
   # Goobstation R&D Console rework start
   position: 1,-6
   technologyPrerequisites:
