@@ -241,8 +241,8 @@
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
         - !type:DumpCanisterBehavior
-
-# Filled canisters, contain 1871.71051 moles each
+    - type: Lock
+      locked: true
 
 - type: entity
   parent: GasCanister
@@ -1007,54 +1007,53 @@
   name: seawater canister
   description: A canister filled with water gas.
   components:
-  - type: GasCanister
-    gasMixture:
-      volume: 1000
-      temperature: 293.15
-      moles:
-      - 0 # oxygen
-      - 0 # nitrogen
-      - 0 # CO2
-      - 0 # plasma
-      - 0 # tritium
-      - 0 # water vapor
-      - 0 # ammonia
-      - 0 # n2o
-      - 0 # frezon
-      - 0 # BZ
-      - 0 # healium
-      - 0 # nitrium
-      - 0 # pluoxium
-      - 0 # infernazim
-      - 0 # kaltrenoxide
-      - 1871.71051 # water gas
-      gasDistributionLock: true
-  - type: Sprite
-    sprite: Structures/Storage/canister.rsi
-    layers:
-    - state: water_vapor
-  - type: GasPortable
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 300
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalBreak
-          params:
-            volume: -4
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          WaterCanisterBroken:
-            min: 1
-            max: 1
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-      - !type:DumpCanisterBehavior
-  - type: Lock
-    locked: true
+    - type: GasCanister
+      gasMixture:
+        volume: 1000
+        temperature: 293.15
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # plasma
+          - 0 # tritium
+          - 0 # water vapor
+          - 0 # ammonia
+          - 0 # n2o
+          - 0 # frezon
+          - 0 # BZ
+          - 0 # healium
+          - 0 # nitrium
+          - 0 # pluoxium
+          - 0 # infernazim
+          - 0 # kaltrenoxide
+          - 1871.71051 # water gas
+    - type: Sprite
+      sprite: Structures/Storage/canister.rsi
+      layers:
+      - state: water_vapor
+    - type: GasPortable
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+            params:
+              volume: -4
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            WaterCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+    - type: Lock
+      locked: true
 
 - type: entity
   parent: GasCanisterBrokenBase
