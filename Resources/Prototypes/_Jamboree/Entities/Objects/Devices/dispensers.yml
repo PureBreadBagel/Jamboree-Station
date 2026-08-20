@@ -4,7 +4,7 @@
 
 - type: entity
   id: EnergyCMODispenser
-  parent: [BaseItem, PowerCellSlotMediumItem]
+  parent: [BaseItem, PowerCellSlotMediumItem, BaseCommandContraband]
   name: portable emergichemical dispenser
   description: A compact bluespace dispenser for those who specialise in medicine. Who says you need a big machine when you can carry it in your pocket? A note from CentComm reads "DO NOT PUT MICROREACTORS IN THIS. THEY WILL BREAK IT. SERIOUSLY. DONT."
   components:
@@ -73,13 +73,11 @@
       Spaceacilin: 20
       Sugar: 11
       Tricordrazine: 25
-  - type: StealTarget # Jamboree - cmd/steal gear tweaks
-    stealGroup: CMO
 
 
 - type: entity
   id: EnergyOfficialDispenser
-  parent: [BaseItem, PowerCellSlotMediumItem]
+  parent: [BaseItem, PowerCellSlotMediumItem, BaseCentcommContraband]
   name: bureaucratic emergichemical dispenser+
   description: An exceptional bluespace chemical dispenser...You can feel the CMO seething in their office as you walk around with this in your pocket. "Though be sure not to let crew have this, no seriously dont."
   components:
@@ -154,7 +152,7 @@
 
 - type: entity
   id: EnergyDeathsDispenser
-  parent: [BaseItem, PowerCellSlotMediumItem]
+  parent: [BaseItem, PowerCellSlotMediumItem, BaseCentcommContraband]
   name: reaper's emergichemical dispenser
   description: A chemical dispenser for those who rip and tear.
   components:
