@@ -327,7 +327,7 @@
 
 - type: entity
   id: RandomHumanoidHECUSpawner
-  name: HECU Operative
+  name: Asset Protection Operative
   suffix: ERTRole
   components:
   - type: Sprite

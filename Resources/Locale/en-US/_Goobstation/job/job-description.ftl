@@ -24,7 +24,7 @@ job-description-highcommander = You are an elite, high-ranking official within t
 # Half Life
 
 job-description-governmentman = Well, well, isn't this just like old times.
-job-description-hecu = Fufill the orders of your supervisor, no matter the morales.
+job-description-hecu = Fufill the orders of your supervisor, no matter the "ethical dilemas".
 
 # Misc
 
