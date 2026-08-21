@@ -111,6 +111,7 @@
         # JAMBOREE GASES
         Infernazim: danger
         Kaltrenoxide: danger
+        WaterGas: danger
     - type: Tag
       tags:
         - AirSensor
