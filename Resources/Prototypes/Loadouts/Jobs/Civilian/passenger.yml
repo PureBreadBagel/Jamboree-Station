@@ -602,6 +602,16 @@
   equipment:
     shoes: ClothingShoesBootsWinter
 
+- type: loadout
+  id: LeatherShoes #jamboree
+  equipment:
+    shoes: ClothingShoesLeather
+
+- type: loadout
+  id: LaceupShoes #jamboree
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+
 # goob - colored military jumpsuits
 
 - type: loadout

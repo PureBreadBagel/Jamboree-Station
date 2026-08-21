@@ -2011,3 +2011,9 @@ Entries:
       message: The emergichemical dispenser now counts as Command contraband.
   id: 168
   time: '2026-08-20T03:32:57.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Fix
+      message: the air alarm should be fixed. forgot to make it detect new gas.
+  id: 169
+  time: '2026-08-21T03:02:03.0000000+00:00'

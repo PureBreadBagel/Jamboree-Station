@@ -81,6 +81,10 @@
   equipment:
     head: ClothingHeadHatCargosoft
 
+- type: loadout
+  id: CargoBucket #jamboree
+  equipment:
+    head: TP14ClothingHeadBucketLightBrown
 
 # Jumpsuit
 - type: loadout

@@ -123,12 +123,15 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitScientist
 
-
 - type: loadout
   id: ScientistJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtScientist
 
+- type: loadout
+  id: ScientistFormalJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitScientistFormal
 
 - type: loadout
   id: RoboticistJumpsuit
