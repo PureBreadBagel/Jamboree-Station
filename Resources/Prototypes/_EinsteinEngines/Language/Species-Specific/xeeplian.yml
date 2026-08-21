@@ -7,7 +7,7 @@
   id: Xeeplian
   speech:
     color: "#a4bb98"
-    # fontId: YoureGone #* FONTS NOT ALREADY HERE ARE NOT BEING ADDED
+    fontId: YoureGone
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
