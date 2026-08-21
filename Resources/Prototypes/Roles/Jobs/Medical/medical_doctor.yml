@@ -114,6 +114,7 @@
   equipment:
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
+    pocket1: Syringe #jamboree
   #storage:
     #back:
     #- Stuff

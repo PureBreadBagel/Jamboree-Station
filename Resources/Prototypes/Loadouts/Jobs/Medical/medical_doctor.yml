@@ -155,6 +155,10 @@
   equipment:
     head: ClothingHeadNurseHat
 
+- type: loadout
+  id: MedicalBucket
+  equipment:
+    head: TP14ClothingHeadMedicalBucket
 
 # Jumpsuit
 - type: loadout
@@ -271,6 +275,17 @@
   id: SterileMask
   equipment:
     mask: ClothingMaskSterile
+
+- type: loadout
+  id: MedicalBreathMask
+  equipment:
+    mask: ClothingMaskBreathMedical #jamboree
+
+#Neck
+- type: loadout
+  id: StethoscopeNeck
+  equipment:
+    neck: ClothingNeckStethoscope #jamboree
 
 #Eyewear
 - type: loadout

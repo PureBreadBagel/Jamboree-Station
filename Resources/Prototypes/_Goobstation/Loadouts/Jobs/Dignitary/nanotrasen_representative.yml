@@ -193,16 +193,6 @@
 
 # Shoes
 - type: loadout
-  id: NanotrasenRepresentativeBoots
-  equipment:
-    shoes: ClothingShoesBootsLaceup
-
-- type: loadout
-  id: NanotrasenRepresentativeShoes
-  equipment:
-    shoes: ClothingShoesLeather
-
-- type: loadout
   id: NanotrasenRepresentativeHeels
   equipment:
     shoes: ClothingShoesHighheelBoots

@@ -964,8 +964,8 @@
   id: NanotrasenRepresentativeShoes
   name: loadout-group-ntr-shoes
   loadouts:
-  - NanotrasenRepresentativeBoots
-  - NanotrasenRepresentativeShoes
+  - LaceupShoes #jamboree
+  - LeatherShoes #jamboree
   - NanotrasenRepresentativeHeels
 
 - type: loadoutGroup
@@ -1337,6 +1337,10 @@
   loadouts:
   - MedicalBeret
   - SeniorPhysicianBeret
+  - MedicalHeadMirror #jamboree
+  - MimeCap #jamboree
+  - MedicalBucket #jamboree
+  - FaceShield #funky
   #- ChemistUshanka # Jamboree: disabling cause we already have it in drip
 
 - type: loadoutGroup
@@ -1563,9 +1567,10 @@
   - BlueSurgeryCap
   - GreenSurgeryCap
   - PurpleSurgeryCap
+  - MimeCap #jamboree
+  - MedicalBucket #jamboree
   - NurseHat
   - FaceShield #funky
-  - PlagueDocHatViro #jamboree
 
 - type: loadoutGroup
   id: VirologistMask
@@ -1573,6 +1578,7 @@
   minLimit: 0
   loadouts:
   - SterileMask
+  - MedicalBreathMask #jamboree
   - PlagueDocMaskViro #jamboree
 
 - type: loadoutGroup
