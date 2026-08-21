@@ -29,6 +29,10 @@
       Nitrium: danger
       Pluoxium: ignore
       # </Goobstation>
+      # JAMBOREE GASES
+      Infernazim: danger
+      Kaltrenoxide: danger
+      WaterGas: danger
 
 - type: entity
   parent: [AirSensorVoxBase, AirSensor]
