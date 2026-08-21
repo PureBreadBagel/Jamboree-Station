@@ -200,6 +200,10 @@
   - Beachball #jambo
   - ThreeCandles
   - Lighter
+  - CheapLighter #jamboree
+  - FlippoLighter #jamboree
+  - Matchbox #jamboree
+  - Vape #jamboree
   - CigPackGreen
   - CigPackRed
   - CigPackBlue
@@ -426,7 +430,7 @@
   id: CaptainShoes
   name: loadout-group-captain-shoes
   loadouts:
-  - NanotrasenRepresentativeBoots #jamboree add, goob name
+  - LaceupShoes #jamboree
   - BlackShoes #jamboree add
   - BlackHeels #imp
 
@@ -482,7 +486,8 @@
   id: HoPShoes
   name: loadout-group-hop-shoes
   loadouts:
-  - NanotrasenRepresentativeBoots #jamboree add, goob name
+  - LaceupShoes #jamboree
+  - LeatherShoes #jamboree
   - BlackShoes #jamboree add
   - BlackHeels #imp
 
@@ -713,6 +718,8 @@
   - GreenShoes
   - OrangeShoes
   - PurpleShoes
+  - LaceupShoes #jamboree
+  - LeatherShoes #jamboree
   - WinterBoots
 
 - type: loadoutGroup
@@ -1307,6 +1314,8 @@
   name: loadout-group-musician-shoes
   loadouts:
   - BlackShoes
+  - LaceupShoes #jamboree
+  - LeatherShoes #jamboree
   - BlackHeels #imp
   - RedHeels #imp
 
@@ -1392,6 +1401,7 @@
   name: loadout-group-quartermaster-shoes
   loadouts:
   - BrownShoes
+  - BlackShoes #jamboree
   - CargoWinterBoots
 
 - type: loadoutGroup
@@ -1409,6 +1419,7 @@
   loadouts:
   - CargoTechnicianHead
   - CargoBeret #ADT
+  - CargoBucket #jamboree
   - CargoTechnicianHeadMail # Goob/DeltaV - Mail
 
 - type: loadoutGroup
@@ -1509,6 +1520,7 @@
   name: loadout-group-chief-engineer-shoes
   loadouts:
   - BrownShoes
+  - WorkBoots #jamboree
   - EngineeringWinterBoots
 
 - type: loadoutGroup
@@ -1528,6 +1540,8 @@
   - StationEngineerHardhatOrange
   - StationEngineerHardhatRed
   - SeniorEngineerBeret
+  - YellowHat #jamboree
+  - OrangeHat #jamboree
 
 - type: loadoutGroup
   id: StationEngineerJumpsuit
@@ -1624,6 +1638,7 @@
   name: loadout-group-atmospheric-technician-shoes
   loadouts:
   - WhiteShoes
+  - WorkBoots #jamboree
   - EngineeringWinterBoots
 
 - type: loadoutGroup
@@ -1682,6 +1697,8 @@
   name: loadout-group-research-director-shoes
   loadouts:
   - BrownShoes
+  - LaceupShoes #jamboree
+  - LeatherShoes #jamboree
   - ScienceWinterBoots
 
 - type: loadoutGroup
@@ -1690,6 +1707,8 @@
   minLimit: 0
   loadouts:
   - ScientificBeret
+  - BlackHat #jamboree
+  - MimeCap #jamboree
   - ScienceBucket #TP
 
 - type: loadoutGroup
@@ -1705,6 +1724,7 @@
   loadouts:
   - ScientistJumpsuit
   - ScientistJumpskirt
+  - ScientistFormalJumpsuit #jamboree
   - RoboticistJumpsuit #jamboree, reenabled because for SOME FUCKING REASON goob has roboticists using the scientist loadouts event though they FUCKING MADE LOADOUT GROUPS FOR THEM!!!!
   - RoboticistJumpskirt #jamboree, reenabled
   - SeniorResearcherJumpsuit
@@ -1736,6 +1756,7 @@
   loadouts:
   - WhiteShoes
   - BlackShoes
+  - LaceupShoes #jamboree
   - ScienceWinterBoots
 
 - type: loadoutGroup
@@ -2042,6 +2063,8 @@
   name: loadout-group-chief-medical-officer-shoes
   loadouts:
   - BrownShoes
+  - LaceupShoes #jamboree
+  - LeatherShoes #jamboree
   - MedicalWinterBoots
 
 - type: loadoutGroup
@@ -2055,6 +2078,8 @@
   - BlueSurgeryCap
   - GreenSurgeryCap
   - PurpleSurgeryCap
+  - MimeCap #jamboree
+  - MedicalBucket #jamboree
   - NurseHat
   - FaceShield #funky
 
@@ -2089,11 +2114,20 @@
   - MedicalDoctorDuffel
   - MedicalDoctorMessenger # Frontier
 
+- type: loadoutGroup #jamboree
+  id: MedicalNeck
+  name: loadout-group-medical-neck
+  minLimit: 0
+  loadouts:
+  - StethoscopeNeck
+
 - type: loadoutGroup
   id: MedicalShoes
   name: loadout-group-medical-doctor-shoes
   loadouts:
   - WhiteShoes
+  - LaceupShoes #jamboree
+  - LeatherShoes #jamboree
   - MedicalWinterBoots
 
 - type: loadoutGroup
@@ -2117,6 +2151,7 @@
   minLimit: 0
   loadouts:
   - SterileMask
+  - MedicalBreathMask #jamboree
 
 - type: loadoutGroup
   id: MedicalInternJumpsuit
@@ -2124,6 +2159,9 @@
   loadouts:
   - WhiteJumpsuit
   - WhiteJumpskirt
+  - MedicalBlueScrubs
+  - MedicalGreenScrubs
+  - MedicalPurpleScrubs
   - MedicMJ # goob
 
 - type: loadoutGroup
@@ -2242,6 +2280,7 @@
   loadouts:
   - PsychologistJumpsuit
   - PsychologistJumpskirt
+  - WhiteShirt #ADT
 
 - type: loadoutGroup
   id: BoxerJumpsuit

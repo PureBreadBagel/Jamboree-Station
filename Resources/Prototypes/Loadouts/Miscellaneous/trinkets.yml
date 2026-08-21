@@ -167,6 +167,34 @@
   groupBy: "smokeables"
 
 - type: loadout
+  id: CheapLighter
+  storage:
+    back:
+    - CheapLighter
+  groupBy: "smokeables"
+
+- type: loadout
+  id: FlippoLighter
+  storage:
+    back:
+    - FlippoLighter
+  groupBy: "smokeables"
+
+- type: loadout
+  id: Matchbox
+  storage:
+    back:
+    - Matchbox
+  groupBy: "smokeables"
+
+- type: loadout
+  id: Vape
+  storage:
+    back:
+    - Vape
+  groupBy: "smokeables"
+
+- type: loadout
   id: CigPackGreen
   storage:
     back:

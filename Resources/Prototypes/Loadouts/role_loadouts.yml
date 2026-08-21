@@ -773,6 +773,7 @@
   - MedicalDoctorJumpsuit
   - MedicalGloves
   - MedicalBackpack
+  - MedicalNeck #jamboree
   - MedicalDoctorOuterClothing
   - MedicalShoes
   - MedicalDoctorPDA
@@ -813,6 +814,7 @@
   - ChemistJumpsuit
   - MedicalGloves
   - ChemistBackpack
+  - MedicalNeck #jamboree
   - ChemistOuterClothing
   - MedicalShoes
   - SurvivalMedical
@@ -834,6 +836,7 @@
   - ParamedicJumpsuit
   - MedicalGloves
   - MedicalBackpack
+  - MedicalNeck #jamboree
   - ParamedicOuterClothing
   - ParamedicShoes
   - MedicalEyewear
@@ -891,6 +894,7 @@
   - GroupTankHarness
   - PsychologistJumpsuit
   - MedicalBackpack
+  - MedicalShoes
   - Glasses
   - Survival
   - Trinkets

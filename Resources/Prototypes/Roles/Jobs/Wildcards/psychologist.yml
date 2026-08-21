@@ -116,8 +116,8 @@
 - type: startingGear
   id: PsychologistGear
   equipment:
-    shoes: ClothingShoesLeather
     id: PsychologistPDA
+    neck: ClothingNeckTieRed #jamboree
     ears: ClothingHeadsetMedical
   storage:
     back:
