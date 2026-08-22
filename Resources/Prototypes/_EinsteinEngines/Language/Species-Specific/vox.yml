@@ -6,7 +6,7 @@
 # PORTED FROM FLOOFSTATION
 # Vox language
 - type: language
-  icon: LanguageIconUnknown
+  icon: LanguageIconVox
   id: NewKinPidgin
   isVisibleLanguage: true
   speech:

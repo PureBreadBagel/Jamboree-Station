@@ -5,7 +5,9 @@
 # Used by followers of Nar'Sie
 - type: language
   id: Eldritch
-  icon: LanguageIconUnknown
+  iconUnderstood: false
+  isVisibleLanguage: true
+  icon: LanguageIconDarktongue
   speech:
     color: "#dc143c"
   obfuscation:

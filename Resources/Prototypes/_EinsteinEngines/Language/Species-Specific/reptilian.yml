@@ -4,7 +4,7 @@
 
 # Spoken by Unathi, reptilians.
 - type: language
-  icon: LanguageIconUnknown
+  icon: LanguageIconLizard
   id: Draconic
   isVisibleLanguage: true
   speech:
@@ -104,6 +104,7 @@
 - type: language
   icon: LanguageIconUnknown
   id: Azaziba
+  isVisibleLanguage: true
   speech:
     color: "#2aca2add"
   obfuscation:

@@ -6,6 +6,8 @@
 - type: language
   icon: LanguageIconUnknown
   id: Xeeplian
+  iconUnderstood: false
+  isVisibleLanguage: true
   speech:
     color: "#a4bb98"
     fontId: YoureGone

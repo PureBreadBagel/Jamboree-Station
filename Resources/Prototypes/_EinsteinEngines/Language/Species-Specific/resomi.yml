@@ -6,7 +6,7 @@
 # PORTED FROM FLOOFSTATION
 # Resomi language
 - type: language
-  icon: LanguageIconUnknown
+  icon: LanguageIconAvali
   id: Schechi
   isVisibleLanguage: true
   speech:

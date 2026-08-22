@@ -1,6 +1,7 @@
 # This is the language spoke by Feroxi
 - type: language
   id: Nehina
+  icon: LanguageIconFish
   isVisibleLanguage: true
   speech:
     color: "#8DB9D6"

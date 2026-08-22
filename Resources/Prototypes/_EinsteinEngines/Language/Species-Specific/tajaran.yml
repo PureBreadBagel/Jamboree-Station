@@ -88,6 +88,7 @@
 - type: language
   icon: LanguageIconUnknown
   id: NalRasan
+  isVisibleLanguage: true
   speech:
     allowRadio: false
     requireSpeech: false

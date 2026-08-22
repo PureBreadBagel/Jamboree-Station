@@ -9,6 +9,7 @@
 # style of Chat, and is not normally accessible by players.
 - type: language
   id: Universal
+  isVisibleLanguage: false
   icon: LanguageIconUnknown
   obfuscation:
     !type:ReplacementObfuscation
@@ -305,6 +306,7 @@
 # Example of a sign language. Used by the Sign Language trait.
 - type: language
   id: Sign
+  isVisibleLanguage: true
   icon: LanguageIconSign
   speech:
     allowRadio: false
@@ -330,6 +332,7 @@
 - type: language
   id: Psychomantic
   icon: LanguageIconPsychomantic
+  isVisibleLanguage: false
   speech:
     color: "#C29EFF" # a nice psychic purple, a bit lighter than Ya'ssa
     fontId: Megrim # Experimental and alien, but still hopefully clean enough to read #* FONTS NOT ALREADY HERE ARE NOT BEING ADDED

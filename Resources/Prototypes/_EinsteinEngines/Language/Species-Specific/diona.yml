@@ -7,7 +7,7 @@
 # Spoken by dionas.
 # TODO: Replace this with a much better language.
 - type: language
-  icon: LanguageIconUnknown
+  icon: LanguageIconPlant
   id: RootSpeak
   isVisibleLanguage: true
   speech:

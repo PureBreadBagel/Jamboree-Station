@@ -1,6 +1,7 @@
 # language for yowies based on australian kriol, realistically they'd pick up on aboriginal languages in addition to english
 - type: language
   id: YowKriol
+  icon: LanguageIconUnknown
   isVisibleLanguage: true
   speech:
     color: "#a12e11"

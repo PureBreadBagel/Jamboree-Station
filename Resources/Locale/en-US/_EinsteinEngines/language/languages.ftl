@@ -34,7 +34,7 @@ language-NovuNederic-description =
     Spoken in the New-Netherlands, this direct and pragmatic trade language carries the sharp consonants and clipped vowels of its old-world roots.
     Built on centuries of seafaring, land reclamation, and commerce, it thrives among those who shape entire worlds — just as their ancestors shaped the land from the sea.
 
-language-TauCetiBasic-name = Tau-Ceti Basic
+language-TauCetiBasic-name = Tau Ceti Basic
 language-TauCetiBasic-description =
     A spiritual successor of Galactic Basic, established in 2XXX on Tau Ceti by Ceti intellectuals.
     Its unique, fully customized alphabet and structure allow it to be spoken even by most alien species.
@@ -206,3 +206,41 @@ language-NewKinPidgin-description = A language which has been developed by combi
     Many Vox who speak this language lement that they cannot speak the "true" Vox language, often the one that is native to their clan.
     It sounds like chaotic shrieking to everyone else.
 # changed for jamboree lore
+
+# Language icon names (Starlight port)
+language-icon-unknown = Unknown language
+language-icon-galactic-common = Tau Ceti Basic
+language-icon-sol-common = Sol Common
+language-icon-gutter = Gutter
+language-icon-tradeband = Tradeband
+language-icon-freespeak = Freespeak
+language-icon-sign = Sign language
+language-icon-robot-talk = Robot Talk
+language-icon-drone-talk = Drone Talk
+language-icon-psychomantic = Psychomantic
+language-icon-animal = Animal
+language-icon-slime = Slime
+language-icon-vox = Vox
+language-icon-vulp = Vulpkanin
+language-icon-shadekin = Shadekin
+language-icon-fish = Fish
+language-icon-xeno = Xenomorph
+language-icon-lizard = Lizard
+language-icon-moth = Moth
+language-icon-neko = Nekomimetic
+language-icon-plant = Plant
+language-icon-chittin = Chittin
+language-icon-avali = Avali
+language-icon-thaveyan = Thaveyan
+language-icon-felyaic = Felyaic
+language-icon-machine = Machine
+language-icon-codespeak = Codespeak
+language-icon-scurret = Scurret
+language-icon-terrum = Terrum
+language-icon-brain = Brain
+language-icon-aielic = Aielic
+language-icon-darktongue = Darktongue
+language-icon-classical = Classical
+language-icon-grumbakul = Grumbakul
+language-icon-lagomorph = Lagomorph
+language-icon-squeakish = Squeakish

@@ -6,7 +6,7 @@
 - type: language
   id: Chittin
   isVisibleLanguage: true
-  icon: LanguageIconUnknown
+  icon: LanguageIconChittin
   speech:
     color: "#7d7d7d"
     fontId: OnlyYou 

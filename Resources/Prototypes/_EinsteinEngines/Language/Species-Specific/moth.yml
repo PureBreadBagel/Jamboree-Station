@@ -5,7 +5,7 @@
 # Spoken by moths and mothroaches.
 # TODO: Replace this with a much better language.
 - type: language
-  icon: LanguageIconUnknown
+  icon: LanguageIconMoth
   id: Moffic
   isVisibleLanguage: true
   speech:

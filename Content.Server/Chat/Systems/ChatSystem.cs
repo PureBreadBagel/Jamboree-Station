@@ -1265,12 +1265,11 @@ public sealed partial class ChatSystem : SharedChatSystem
         colorOverride ??= language.SpeechOverride.Color;
         if (colorOverride != null)
             color = Color.InterpolateBetween(color, colorOverride.Value, colorOverride.Value.A);
-        var languageDisplay = language.IsVisibleLanguage
-            ? Loc.GetString("chat-manager-language-prefix", ("language", language.ChatName))
-            : "";
+        var languageDisplay = string.Empty; // Language name hidden - icon is shown instead (Starlight port)
         // Language icon feature - Starlight port
-        var showIcon = language.IsVisibleLanguage && _language.GetLanguageIcon(language, obfuscated);
-        var languageIcon = showIcon ? language.Icon.ToString() : "";
+        var languageIcon = language.IsVisibleLanguage && _language.GetLanguageIcon(language, obfuscated)
+            ? Loc.GetString("chat-manager-language-icon", ("icon", language.Icon.ToString()), ("language", language.ChatName))
+            : "";
         // goob start - font modifiers
         var fontModifierEv = new TransformSpeakerFontEvent(source);
         RaiseLocalEvent(source, fontModifierEv);
