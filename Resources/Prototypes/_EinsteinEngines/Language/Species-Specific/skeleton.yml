@@ -5,6 +5,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: language
+  icon: LanguageIconUnknown
   id: Calcic
   isVisibleLanguage: true
   speech:
@@ -64,3 +65,7 @@
       - tk
       - stk
       - clk
+
+
+
+

@@ -7,6 +7,7 @@
 # Spoken by dionas.
 # TODO: Replace this with a much better language.
 - type: language
+  icon: LanguageIconUnknown
   id: RootSpeak
   isVisibleLanguage: true
   speech:
@@ -22,3 +23,7 @@
     - kr
     - st
     - sh
+
+
+
+

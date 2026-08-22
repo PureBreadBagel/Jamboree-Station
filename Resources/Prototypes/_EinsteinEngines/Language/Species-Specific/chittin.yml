@@ -2,6 +2,7 @@
 - type: language
   id: Chittin
   isVisibleLanguage: true
+  icon: LanguageIconUnknown
   speech:
     color: "#7d7d7d"
     fontId: OnlyYou # TODO: If we use fonts, this needs to be changed because this underscore breaks parser and throws error.

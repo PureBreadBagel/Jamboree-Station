@@ -7,6 +7,7 @@
 # Spoken by slime race and slimes.
 # Derived from Basque Language - Goob
 - type: language
+  icon: LanguageIconUnknown
   id: Bubblish
   isVisibleLanguage: true
   speech:
@@ -77,3 +78,7 @@
     - zku
     - eko
     - oa
+
+
+
+

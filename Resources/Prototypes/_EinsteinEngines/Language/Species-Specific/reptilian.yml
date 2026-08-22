@@ -1,5 +1,6 @@
 # Spoken by Unathi, reptilians.
 - type: language
+  icon: LanguageIconUnknown
   id: Draconic
   isVisibleLanguage: true
   speech:
@@ -97,6 +98,7 @@
 # Reptilian-Specific "Rare" Language
 # !Do Not Make A Translator For This Language.
 - type: language
+  icon: LanguageIconUnknown
   id: Azaziba
   speech:
     color: "#2aca2add"
@@ -116,3 +118,7 @@
     - ki
     - kut
     - zo
+
+
+
+

@@ -1,0 +1,94 @@
+# SPDX-FileCopyrightText: 2025 CerberusWolfie <wb.johnb.willis@gmail.com>
+# SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Base abstract icon for languages
+- type: jobIcon
+  id: LanguageIcon
+  abstract: true
+  priority: 1
+  locationPreference: Right
+  isShaded: true
+
+# Fallback icon for languages without a specific icon
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconUnknown
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: Unknown
+  jobName: language-icon-unknown
+
+# Specific language icons
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconGalacticCommon
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: LanguageGalacticCommon
+  jobName: language-icon-galactic-common
+
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconSolCommon
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: LanguageSolCommon
+  jobName: language-icon-sol-common
+
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconGutter
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: LanguageGutter
+  jobName: language-icon-gutter
+
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconTradeband
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: LanguageTradeband
+  jobName: language-icon-tradeband
+
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconFreespeak
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: LanguageFreespeak
+  jobName: language-icon-freespeak
+
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconSign
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: LanguageSign
+  jobName: language-icon-sign
+
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconRobotTalk
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: LanguageRobotTalk
+  jobName: language-icon-robot-talk
+
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconDroneTalk
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: LanguageDroneTalk
+  jobName: language-icon-drone-talk
+
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconPsychomantic
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: LanguagePsychomantic
+  jobName: language-icon-psychomantic

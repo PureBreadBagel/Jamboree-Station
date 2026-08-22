@@ -1,6 +1,7 @@
 # Spoken by moths and mothroaches.
 # TODO: Replace this with a much better language.
 - type: language
+  icon: LanguageIconUnknown
   id: Moffic
   isVisibleLanguage: true
   speech:
@@ -68,3 +69,7 @@
     - kön
     - we
     - hön
+
+
+
+
