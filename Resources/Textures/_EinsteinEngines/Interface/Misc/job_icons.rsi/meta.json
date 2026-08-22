@@ -12,36 +12,6 @@
         },
         {
             "name": "Thrall"
-        },
-        {
-            "name": "LanguageIconUnknown"
-        },
-        {
-            "name": "LanguageIconGalacticCommon"
-        },
-        {
-            "name": "LanguageIconSolCommon"
-        },
-        {
-            "name": "LanguageIconGutter"
-        },
-        {
-            "name": "LanguageIconTradeband"
-        },
-        {
-            "name": "LanguageIconFreespeak"
-        },
-        {
-            "name": "LanguageIconSign"
-        },
-        {
-            "name": "LanguageIconRobotTalk"
-        },
-        {
-            "name": "LanguageIconDroneTalk"
-        },
-        {
-            "name": "LanguageIconPsychomantic"
         }
     ]
 }

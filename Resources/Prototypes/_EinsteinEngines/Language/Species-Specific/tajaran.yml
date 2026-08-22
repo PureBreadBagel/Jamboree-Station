@@ -9,7 +9,6 @@
 # Short name is Maas
 # To quote: "The traditionally employed tongue of Adhomai, comprised of expressive yowls and chirps. Native to the Tajara"
 - type: language
-  icon: LanguageIconUnknown
   id: SiikMaas
   isVisibleLanguage: true
   speech:
@@ -86,7 +85,6 @@
 # Tajaran sign language. Crucially, only tajara can "speak" it, due to need for tajara body language
 # (if they cut off your tail or ears you shouldn't be able to speak it, but well)
 - type: language
-  icon: LanguageIconUnknown
   id: NalRasan
   speech:
     allowRadio: false
@@ -123,7 +121,6 @@
 # Short name is Tajr
 # To quote: "Language native to the Tajara, it employs both verbal and non-verbal elements"
 - type: language
-  icon: LanguageIconUnknown
   id: SiikTajr
   isVisibleLanguage: true
   speech:
@@ -218,7 +215,6 @@
 # Short name is Yas
 # To quote: "The traditional language of the tajaran nobility"
 - type: language
-  icon: LanguageIconUnknown
   id: YaSsa
   isVisibleLanguage: true
   speech:
@@ -298,7 +294,6 @@
 # To quote: "A dialect developed by the Zhan-Khazan communities, commonly used in religious
 # ceremonies dedicated to the Snow God and amongst settlements comprised mostly of Zhan-Khazan"
 - type: language
-  icon: LanguageIconUnknown
   id: Delvahii
   isVisibleLanguage: true
   speech:
@@ -371,7 +366,3 @@
     - mra
     - mrro
     - mrra
-
-
-
-

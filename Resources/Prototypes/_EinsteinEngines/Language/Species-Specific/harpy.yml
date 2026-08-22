@@ -7,7 +7,6 @@
 # Language spoken by Harpies and Squackroaches.
 # Based on Polish, Greek, Serbian, Turkish.
 - type: language
-  icon: LanguageIconUnknown
   id: ValyrianStandard
   isVisibleLanguage: true
   speech:
@@ -126,7 +125,3 @@
     - cz
     - zk
     - jn
-
-
-
-

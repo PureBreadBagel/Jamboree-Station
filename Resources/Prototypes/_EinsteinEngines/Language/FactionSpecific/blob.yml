@@ -1,7 +1,6 @@
 # Used by Blob.
 - type: language
   id: Blob
-  icon: LanguageIconUnknown
   speech:
     fontId: Monospace # TODO - Make a better font selection instead of copying Silicon.
     boldFontId: MonospaceBold

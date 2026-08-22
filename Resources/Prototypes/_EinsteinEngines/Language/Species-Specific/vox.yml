@@ -6,7 +6,6 @@
 # PORTED FROM FLOOFSTATION
 # Vox language
 - type: language
-  icon: LanguageIconUnknown
   id: NewKinPidgin
   isVisibleLanguage: true
   speech:
@@ -45,7 +44,3 @@
     - ii
     - kri
     - ka
-
-
-
-

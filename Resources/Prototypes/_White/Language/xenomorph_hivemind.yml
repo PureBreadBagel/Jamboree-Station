@@ -1,6 +1,5 @@
 - type: language
   id: XenoHivemind
-  icon: LanguageIconUnknown
   speech:
     requireSpeech: false
     color: '#8c3986'
