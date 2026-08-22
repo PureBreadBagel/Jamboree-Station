@@ -1,6 +1,7 @@
 # Languages spoken by various animals and critters.
 - type: language
   id: Cat
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -13,6 +14,7 @@
 
 - type: language
   id: Dog
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -27,6 +29,7 @@
 
 - type: language
   id: Fox
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -41,6 +44,7 @@
 
 - type: language
   id: Xeno
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -51,6 +55,7 @@
 
 - type: language
   id: Monkey
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -61,6 +66,7 @@
 
 - type: language
   id: Mouse
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 2
@@ -77,6 +83,7 @@
 
 - type: language
   id: Chicken
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -88,6 +95,7 @@
 
 - type: language
   id: Duck
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -99,6 +107,7 @@
 
 - type: language
   id: Cow
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -109,6 +118,7 @@
 
 - type: language
   id: Sheep
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -120,6 +130,7 @@
 
 - type: language
   id: Kangaroo
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -132,6 +143,7 @@
 
 - type: language
   id: Pig
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -142,6 +154,7 @@
 - type: language
   id: Crab
   isVisibleLanguage: true
+  icon: LanguageIconUnknown
   speech:
     color: "#f54927"
   obfuscation:
@@ -159,6 +172,7 @@
 
 - type: language
   id: Kobold
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 2
@@ -178,6 +192,7 @@
 
 - type: language
   id: Hissing
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 2
@@ -190,6 +205,7 @@
 
 - type: language
   id: Penguin
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 2
@@ -203,6 +219,7 @@
 
 - type: language # Goobstation - For Deer
   id: Deer
+  icon: LanguageIconUnknown
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1

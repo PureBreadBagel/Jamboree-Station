@@ -4,6 +4,7 @@
 
 # Spoken by Abductors
 - type: language
+  icon: LanguageIconUnknown
   id: Xeeplian
   speech:
     color: "#a4bb98"
@@ -75,3 +76,7 @@
     - Jorp
     - Cluuump
     - Wawiwi
+
+
+
+

@@ -6,6 +6,7 @@
 # Jargon language of Japanese tidbits and memes.
 # TODO: Replace this with a much better language.
 - type: language
+  icon: LanguageIconUnknown
   id: Nekomimetic
   isVisibleLanguage: true
   speech:
@@ -64,3 +65,7 @@
     - ira
     - heto
     - etto
+
+
+
+

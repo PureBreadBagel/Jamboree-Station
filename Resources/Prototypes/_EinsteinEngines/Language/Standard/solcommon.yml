@@ -8,6 +8,7 @@
 - type: language
   id: SolCommon
   isVisibleLanguage: true
+  icon: LanguageIconSolCommon
   speech:
     color: "#8282fbaa"
     fontId: NotoSansSC # Goob Edit - Chinese Characters Font

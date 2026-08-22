@@ -42,4 +42,4 @@ chat-speech-verb-holier-than-thou-6 = recites
 chat-speech-verb-holier-than-thou-7 = declares
 chat-speech-verb-holier-than-thou-8 = pronounces
 
-chat-manager-entity-say-bolded-language-wrap-message = [BubbleHeader][bold][Name]{$entityName}[/Name][/bold][/BubbleHeader] {$verb}, [font={$fontType} size={$fontSize}]"[BubbleContent][font="{$boldFontType}" size={$fontSize}][color={$color}]{$message}[/color][/font][/BubbleContent]"[/font]
+chat-manager-entity-say-bolded-language-wrap-message = [BubbleHeader][bold][Name]{$entityName}[/Name][/bold][/BubbleHeader] {$verb}, [font={$fontType} size={$fontSize}]"[BubbleContent][font="{$boldFontType}" size={$fontSize}][color={$color}]{$message}[/color][/font][/BubbleContent]"[/font]{$language}{ $languageIcon -> [color=#888888][small]{$languageIcon}[/small][/color] }

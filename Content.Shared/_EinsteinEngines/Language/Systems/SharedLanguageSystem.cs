@@ -67,6 +67,20 @@ public abstract class SharedLanguageSystem : EntitySystem
     }
 
     /// <summary>
+    ///     Returns whether the language icon should be displayed for the given language and obfuscation state.
+    /// </summary>
+    public bool GetLanguageIcon(LanguagePrototype language, bool obfuscated)
+    {
+        if (!obfuscated && language.IconUnderstood)
+            return true;
+
+        if (obfuscated && language.IconNotUnderstood)
+            return true;
+
+        return false;
+    }
+
+    /// <summary>
     ///     Generates a stable pseudo-random number in the range (min, max) (inclusively) for the given seed.
     ///     One seed always corresponds to one number, however the resulting number also depends on the current round number.
     ///     This method is meant to be used in <see cref="ObfuscationMethod"/> to provide stable obfuscation.

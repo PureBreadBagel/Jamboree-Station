@@ -1,6 +1,7 @@
 # Spoken by Vulpknanin.
 # TODO: Replace this with a much better language.
 - type: language
+  icon: LanguageIconUnknown
   id: Canilunzt
   isVisibleLanguage: true
   speech:
@@ -67,3 +68,7 @@
     - cresthz
     - azunein
     - ghzth
+
+
+
+

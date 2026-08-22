@@ -8,6 +8,7 @@
 - type: language
   id: Elyran
   isVisibleLanguage: true
+  icon: LanguageIconUnknown
   speech:
     color: "#c480e8aa" # Goob Edit - Separation from Sol Common, make more unique.
   obfuscation:
