@@ -1174,6 +1174,12 @@
     tags:
     - DoorBumpOpener
     - Cow
+  - type: LanguageKnowledge
+    speaks:
+    - Cow
+    understands:
+    - Cow
+    - TauCetiBasic
   - type: Reproductive
     partnerWhitelist:
       tags:

@@ -21,7 +21,7 @@
     state: unknown
   jobName: language-icon-unknown
 
-# Standard/Galactic languages (Starlight port)
+
 - type: jobIcon
   parent: LanguageIcon
   id: LanguageIconTauCeti

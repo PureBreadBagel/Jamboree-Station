@@ -4,7 +4,7 @@
   id: TauCetiBasic
   iconUnderstood: false
   isVisibleLanguage: true
-  icon: LanguageIconGalacticCommon
+  icon: LanguageIconTauCeti
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1

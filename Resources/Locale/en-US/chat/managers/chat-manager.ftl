@@ -64,7 +64,7 @@ chat-manager-entity-whisper-unknown-wrap-message = [font size=11][italic][Bubble
 # Einstein Engines - Language end
 
 # Language icon feature - Starlight port
-chat-manager-language-icon = [color=#888888][icon src="{$icon}" size=22 tooltip="{$language}"][/color]{" "}
+chat-manager-language-icon = [color=#888888][icon src="{$icon}" size=20 tooltip="{$language}"][/color]{" "}
 
 # chat-manager-language-prefix = ({ $language }){" "} - Removed so it doesn't show up, not wanted, but part of the language system.
 
