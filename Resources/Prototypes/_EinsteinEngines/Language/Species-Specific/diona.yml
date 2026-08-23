@@ -7,8 +7,9 @@
 # Spoken by dionas.
 # TODO: Replace this with a much better language.
 - type: language
-  icon: LanguageIconPlant
+  icon: LanguageIconRootSpeak
   id: RootSpeak
+  iconUnderstood: false
   isVisibleLanguage: true
   speech:
     color: "#a64e14dd" # Goob Edit - More uniqueness from Novu-Nederic

@@ -7,8 +7,9 @@
 # Spoken by slime race and slimes.
 # Derived from Basque Language - Goob
 - type: language
-  icon: LanguageIconSlime
+  icon: LanguageIconBubblish
   id: Bubblish
+  iconUnderstood: false
   isVisibleLanguage: true
   speech:
     color: "#24d1b9" # Goob Edit - Original "#00a3e2dd"

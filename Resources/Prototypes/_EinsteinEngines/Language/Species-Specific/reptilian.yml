@@ -4,8 +4,9 @@
 
 # Spoken by Unathi, reptilians.
 - type: language
-  icon: LanguageIconLizard
+  icon: LanguageIconDraconic
   id: Draconic
+  iconUnderstood: false
   isVisibleLanguage: true
   speech:
     color: "#2aca2add"

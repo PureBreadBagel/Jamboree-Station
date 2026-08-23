@@ -5,8 +5,9 @@
 # Spoken by moths and mothroaches.
 # TODO: Replace this with a much better language.
 - type: language
-  icon: LanguageIconMoth
+  icon: LanguageIconMoffic
   id: Moffic
+  iconUnderstood: false
   isVisibleLanguage: true
   speech:
     color: "#c7df2edd"

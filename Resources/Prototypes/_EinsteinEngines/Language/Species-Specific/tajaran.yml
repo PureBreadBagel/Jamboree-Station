@@ -11,6 +11,7 @@
 - type: language
   icon: LanguageIconUnknown
   id: SiikMaas
+  iconUnderstood: false
   isVisibleLanguage: true
   speech:
     color: "#d6a36eee" # Goob Edit - Make more unique from Vulpkanin

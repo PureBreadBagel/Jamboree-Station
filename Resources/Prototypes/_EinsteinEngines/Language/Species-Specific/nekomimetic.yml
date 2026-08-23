@@ -6,8 +6,9 @@
 # Jargon language of Japanese tidbits and memes.
 # TODO: Replace this with a much better language.
 - type: language
-  icon: LanguageIconNeko
+  icon: LanguageIconNekomimetic
   id: Nekomimetic
+  iconUnderstood: false
   isVisibleLanguage: true
   speech:
     color: "#df57aaee"

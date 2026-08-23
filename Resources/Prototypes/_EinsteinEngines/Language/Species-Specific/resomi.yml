@@ -6,8 +6,9 @@
 # PORTED FROM FLOOFSTATION
 # Resomi language
 - type: language
-  icon: LanguageIconAvali
+  icon: LanguageIconSchechi
   id: Schechi
+  iconUnderstood: false
   isVisibleLanguage: true
   speech:
     color: "#4DBFD9"

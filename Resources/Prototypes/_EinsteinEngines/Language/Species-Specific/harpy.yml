@@ -9,6 +9,7 @@
 - type: language
   icon: LanguageIconUnknown
   id: ValyrianStandard
+  iconUnderstood: false
   isVisibleLanguage: true
   speech:
     fontId: Delius # Goob Edit - Different Font

@@ -27,7 +27,7 @@
   id: LanguageIconTauCeti
   icon:
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
-    state: tauceti
+    state: galcom
   jobName: language-icon-galactic-common
 
 - type: jobIcon
@@ -106,84 +106,74 @@
 
 - type: jobIcon
   parent: LanguageIcon
-  id: LanguageIconSlime
+  id: LanguageIconBubblish
   icon:
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
     state: slime
-  jobName: language-icon-slime
-
+  jobName: language-icon-bubblish
 - type: jobIcon
   parent: LanguageIcon
-  id: LanguageIconVox
+  id: LanguageIconNewKinPidgin
   icon:
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
     state: vox
-  jobName: language-icon-vox
-
+  jobName: language-icon-newkin-pidgin
 - type: jobIcon
   parent: LanguageIcon
-  id: LanguageIconVulp
+  id: LanguageIconCanilunzt
   icon:
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
     state: vulp
-  jobName: language-icon-vulp
-
+  jobName: language-icon-canilunzt
 - type: jobIcon
   parent: LanguageIcon
-  id: LanguageIconShadekin
+  id: LanguageIconMarish
   icon:
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
     state: shadekin
-  jobName: language-icon-shadekin
-
+  jobName: language-icon-marish
 - type: jobIcon
   parent: LanguageIcon
-  id: LanguageIconFish
+  id: LanguageIconCarptongue
   icon:
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
     state: fish
-  jobName: language-icon-fish
-
+  jobName: language-icon-carptongue
 - type: jobIcon
   parent: LanguageIcon
-  id: LanguageIconXeno
+  id: LanguageIconXenoHivemind
   icon:
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
     state: xeno
-  jobName: language-icon-xeno
-
+  jobName: language-icon-xeno-hivemind
 - type: jobIcon
   parent: LanguageIcon
-  id: LanguageIconLizard
+  id: LanguageIconDraconic
   icon:
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
     state: lizard
-  jobName: language-icon-lizard
-
+  jobName: language-icon-draconic
 - type: jobIcon
   parent: LanguageIcon
-  id: LanguageIconMoth
+  id: LanguageIconMoffic
   icon:
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
     state: moth
-  jobName: language-icon-moth
-
+  jobName: language-icon-moffic
 - type: jobIcon
   parent: LanguageIcon
-  id: LanguageIconNeko
+  id: LanguageIconNekomimetic
   icon:
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
     state: neko
-  jobName: language-icon-neko
-
+  jobName: language-icon-nekomimetic
 - type: jobIcon
   parent: LanguageIcon
-  id: LanguageIconPlant
+  id: LanguageIconRootSpeak
   icon:
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
     state: plant
-  jobName: language-icon-plant
-
+  jobName: language-icon-root-speak
 - type: jobIcon
   parent: LanguageIcon
   id: LanguageIconChittin
@@ -194,12 +184,11 @@
 
 - type: jobIcon
   parent: LanguageIcon
-  id: LanguageIconAvali
+  id: LanguageIconSchechi
   icon:
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
     state: avali
-  jobName: language-icon-avali
-
+  jobName: language-icon-schechi
 - type: jobIcon
   parent: LanguageIcon
   id: LanguageIconThaveyan

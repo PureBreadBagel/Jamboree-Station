@@ -4,8 +4,9 @@
 
 # Spoken by Shadowkins.
 - type: language
-  icon: LanguageIconShadekin
+  icon: LanguageIconMarish
   id: Marish
+  iconUnderstood: false
   isVisibleLanguage: true
   speech:
     color: "#be3cc5"

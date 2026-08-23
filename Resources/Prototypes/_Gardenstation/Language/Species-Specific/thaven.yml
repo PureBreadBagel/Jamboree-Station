@@ -1,6 +1,7 @@
 #spoken by thaven
 - type: language
   id: Eckeckyik
+  iconUnderstood: false
   icon: LanguageIconThaveyan
   isVisibleLanguage: true
   speech:
@@ -39,6 +40,7 @@
 
 - type: language
   id: BieselEckeckyik
+  iconUnderstood: false
   icon: LanguageIconThaveyan
   isVisibleLanguage: true
   speech:
