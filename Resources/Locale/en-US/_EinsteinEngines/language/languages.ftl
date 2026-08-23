@@ -185,8 +185,8 @@ language-NewKinPidgin-description = A language which has been developed by combi
     It sounds like chaotic shrieking to everyone else.
 # changed for jamboree lore
 
-# Language icon names (Starlight port)
-language-icon-unknown = Unknown language
+# Language icon names, when you hover over the icon in the chat!
+language-icon-unknown = Unknown language??
 language-icon-galactic-common = Tau Ceti Basic
 language-icon-sol-common = Sol Common
 language-icon-gutter = Gutter
@@ -222,3 +222,7 @@ language-icon-classical = Classical
 language-icon-grumbakul = Grumbakul
 language-icon-lagomorph = Lagomorph
 language-icon-squeakish = Squeakish
+language-icon-blob = Blob
+language-icon-calcic = Calcic
+language-icon-elyran = Elyran Standard
+

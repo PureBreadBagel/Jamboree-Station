@@ -293,3 +293,30 @@
     sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
     state: squeakish
   jobName: language-icon-squeakish
+
+# Jamboree Icons
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconBlob
+  icon:
+    sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
+    state: blob
+  jobName: language-icon-blob
+
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconCalcic
+  icon:
+    sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
+    state: calcic
+  jobName: language-icon-calcic
+
+
+- type: jobIcon
+  parent: LanguageIcon
+  id: LanguageIconElyran
+  icon:
+    sprite: /Textures/_EinsteinEngines/Interface/language_icon.rsi
+    state: elyran
+  jobName: language-icon-elyran
+
