@@ -100,31 +100,6 @@
     - s
     - s
 
-# Reptilian-Specific "Rare" Language
-# !Do Not Make A Translator For This Language.
-- type: language
-  icon: LanguageIconUnknown
-  id: Azaziba
-  isVisibleLanguage: true
-  speech:
-    color: "#2aca2add"
-  obfuscation:
-    !type:SyllableObfuscation
-    minSyllables: 2
-    maxSyllables: 4
-    replacement:
-    - azs
-    - zis
-    - zau
-    - azua
-    - skiu
-    - zuakz
-    - izo
-    - aei
-    - ki
-    - kut
-    - zo
-
 
 
 

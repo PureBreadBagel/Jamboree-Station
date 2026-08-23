@@ -17,12 +17,6 @@ language-Draconic-name = Sinta'Unathi
 language-Draconic-description =
     The common language of Moghes - composed of sibilant hisses and rattles. Spoken natively by Unathi.
 
-language-Azaziba-name = Sinta'Azaziba
-language-Azaziba-description =
-    A language of Moghes consisting of a combination of spoken word and gesticulation.
-    While waning since Moghes entered the galactic stage - it enjoys popular use by Unathi that never fell to the Galactic Hegemony's cultural dominance.
-# changed to fit Jamboree lore
-
 language-SolCommon-name = Sol common
 language-SolCommon-description =
     With its roots in Mandarin Chinese - Common evolved as the official language of Terra - with officials working to tie it together with a common tongue.

@@ -51,8 +51,3 @@ trait-language-novunederic-desc =
     Once the language of seafarers and merchants, now the voice of spacers, terraformers, and pioneers.
     Spoken in the New-Netherlands, this direct and pragmatic trade language carries the sharp consonants and clipped vowels of its old-world roots.
     This language is typically spoken by Dwarves.
-
-trait-language-azaziba-name = Sinta'Azaziba
-trait-language-azaziba-desc =
-    A language of Moghes consisting of a combination of spoken word and gesticulation.
-    While waning since Moghes entered the galactic stage - it enjoys popular use by Unathi that never fell to the Hegemony's cultural dominance.

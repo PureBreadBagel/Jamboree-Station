@@ -102,14 +102,6 @@
     implant: ValyrianStandardTranslatorImplant
 
 - type: entity
-  id: AzazibaTranslatorImplanter
-  parent: [ BaseTranslatorImplanter ]
-  suffix: Azaziba
-  components:
-  - type: Implanter
-    implant: AzazibaTranslatorImplant
-
-- type: entity
   id: ChittinTranslatorImplanter
   parent: [ BaseTranslatorImplanter ]
   suffix: Chittin
