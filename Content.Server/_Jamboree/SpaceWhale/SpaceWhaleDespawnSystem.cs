@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2026 Goob Station Contributors
+// SPDX-FileCopyrightText: 2026 Jamboree Contributors
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -10,9 +10,9 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
 
-namespace Content.Goobstation.Server.SpaceWhale;
+namespace Content.Jamboree.Server.SpaceWhale;
 
-public sealed class SpaceLeviathanDespawnSystem : EntitySystem
+public sealed class SpaceWhaleDespawnSystem : EntitySystem
 {
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
@@ -24,10 +24,10 @@ public sealed class SpaceLeviathanDespawnSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<SpaceLeviathanComponent, ComponentStartup>(OnStartup);
+        SubscribeLocalEvent<SpaceWhaleComponent, ComponentStartup>(OnStartup);
     }
 
-    private void OnStartup(Entity<SpaceLeviathanComponent> ent, ref ComponentStartup args)
+    private void OnStartup(Entity<SpaceWhaleComponent> ent, ref ComponentStartup args)
     {
         _nextCheck = _timing.CurTime + CheckInterval;
     }
@@ -40,10 +40,10 @@ public sealed class SpaceLeviathanDespawnSystem : EntitySystem
             return;
 
         _nextCheck = _timing.CurTime + CheckInterval;
-        CheckLeviathanProximity();
+        CheckWhaleProximity();
     }
 
-    private void CheckLeviathanProximity()
+    private void CheckWhaleProximity()
     {
         if (!_cfg.GetCVar(GoobCVars.SpaceWhaleSpawn))
             return;
@@ -60,17 +60,17 @@ public sealed class SpaceLeviathanDespawnSystem : EntitySystem
         if (stations.Count == 0)
             return;
 
-        var leviathanQuery = EntityQueryEnumerator<SpaceLeviathanComponent, TransformComponent>();
-        while (leviathanQuery.MoveNext(out var leviathan, out _, out var leviathanXform))
+        var whaleQuery = EntityQueryEnumerator<SpaceWhaleComponent, TransformComponent>();
+        while (whaleQuery.MoveNext(out var whale, out _, out var whaleXform))
         {
             foreach (var (_, grid, stationXform) in stations)
             {
-                if (stationXform.MapUid != leviathanXform.MapUid)
+                if (stationXform.MapUid != whaleXform.MapUid)
                     continue;
 
-                var leviathanPos = _transform.GetWorldPosition(leviathanXform);
+                var whalePos = _transform.GetWorldPosition(whaleXform);
                 var stationPos = _transform.GetWorldPosition(stationXform);
-                var distance = (leviathanPos - stationPos).Length();
+                var distance = (whalePos - stationPos).Length();
 
                 if (grid.LocalAABB.Size.Length() > 0)
                 {
@@ -82,7 +82,7 @@ public sealed class SpaceLeviathanDespawnSystem : EntitySystem
 
                 if (distance <= despawnDistance)
                 {
-                    QueueDel(leviathan);
+                    QueueDel(whale);
                     break;
                 }
             }
@@ -90,7 +90,7 @@ public sealed class SpaceLeviathanDespawnSystem : EntitySystem
     }
 }
 
-[RegisterComponent, Access(typeof(SpaceLeviathanDespawnSystem))]
-public sealed partial class SpaceLeviathanComponent : Component
+[RegisterComponent, Access(typeof(SpaceWhaleDespawnSystem))]
+public sealed partial class SpaceWhaleComponent : Component
 {
 }
