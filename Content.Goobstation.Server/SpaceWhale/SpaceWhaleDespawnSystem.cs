@@ -10,6 +10,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
+// These are all the APIs I need to make this
 
 namespace Content.Goobstation.Server.SpaceWhale;
 
@@ -19,7 +20,7 @@ public sealed class SpaceWhaleDespawnSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
 
-    private static readonly TimeSpan CheckInterval = TimeSpan.FromSeconds(10);
+    private static readonly TimeSpan CheckInterval = TimeSpan.FromSeconds(10); // This is a timer. Every 10 seconds; it kills leviathans near stations.
     private TimeSpan _nextCheck = TimeSpan.Zero;
 
     public override void Initialize()
@@ -30,7 +31,7 @@ public sealed class SpaceWhaleDespawnSystem : EntitySystem
 
     private void OnStartup(Entity<SpaceWhaleComponent> ent, ref ComponentStartup args)
     {
-        _nextCheck = _timing.CurTime + CheckInterval;
+        _nextCheck = _timing.CurTime + CheckInterval; // When the leviathan spawns, proximity wont happen until 10 seconds after the leviathan spawns.
     }
 
     public override void Update(float frameTime)
@@ -38,9 +39,9 @@ public sealed class SpaceWhaleDespawnSystem : EntitySystem
         base.Update(frameTime);
 
         if (_timing.CurTime < _nextCheck)
-            return;
+            return; // if the current time is under 10 seconds after existence, then do nothing.
 
-        _nextCheck = _timing.CurTime + CheckInterval;
+        _nextCheck = _timing.CurTime + CheckInterval; // if after 10 seconds, check the proximity to stations.
         CheckWhaleProximity();
     }
 
@@ -66,14 +67,14 @@ public sealed class SpaceWhaleDespawnSystem : EntitySystem
         {
             foreach (var (_, grid, stationXform) in stations)
             {
-                if (stationXform.MapUid != whaleXform.MapUid)
+                if (stationXform.MapUid != whaleXform.MapUid) // Well, id rather calculate it in the same map. Would be weird if it suddenly vanished elsewhere.
                     continue;
 
-                var whalePos = _transform.GetWorldPosition(whaleXform);
-                var stationPos = _transform.GetWorldPosition(stationXform);
-                var distance = (whalePos - stationPos).Length();
+                var whalePos = _transform.GetWorldPosition(whaleXform); // get the world position of the leviathan.
+                var stationPos = _transform.GetWorldPosition(stationXform); // ditto
+                var distance = (whalePos - stationPos).Length(); // simple math formula to calculate distance from leviathan to station..
 
-                if (grid.LocalAABB.Size.Length() > 0)
+                if (grid.LocalAABB.Size.Length() > 0) // AABB means axis-aligned bounding box. This should be the stations.
                 {
                     var gridRadius = grid.LocalAABB.Size.Length() / 2f;
                     distance = Math.Max(0, distance - gridRadius);
@@ -85,7 +86,7 @@ public sealed class SpaceWhaleDespawnSystem : EntitySystem
 
                 if (distance <= despawnDistance)
                 {
-                    QueueDel(whale);
+                    QueueDel(whale); // Whale goes die if its in the despawn radius. After 10 seconds of course.
                     break;
                 }
             }
