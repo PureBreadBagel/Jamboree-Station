@@ -6,9 +6,14 @@ using Content.Goobstation.Common.CCVar;
 using Content.Goobstation.Shared._Jamboree.SpaceWhale;
 using Content.Server.Station.Components;
 using Content.Shared.Maps;
+using Robust.Server.Audio;
 using Robust.Server.GameObjects;
+using Robust.Shared.Audio;
 using Robust.Shared.Configuration;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Maths;
+using Robust.Shared.Spawners;
 using Robust.Shared.Timing;
 // These are all the APIs I need to make this
 
@@ -19,6 +24,8 @@ public sealed class SpaceWhaleDespawnSystem : EntitySystem
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly AudioSystem _audio = default!;
+    [Dependency] private readonly SharedPointLightSystem _light = default!;
 
     private static readonly TimeSpan CheckInterval = TimeSpan.FromSeconds(10); // This is a timer. Every 10 seconds; it kills leviathans near stations.
     private TimeSpan _nextCheck = TimeSpan.Zero;
@@ -86,10 +93,26 @@ public sealed class SpaceWhaleDespawnSystem : EntitySystem
 
                 if (distance <= despawnDistance)
                 {
+                    var coords = whaleXform.Coordinates;
+                    _audio.PlayPvs(
+                        new SoundPathSpecifier("/Audio/_Goobstation/Effects/Smites/Thunderstrike/thunderstrike.ogg"),
+                        coords);
+                    CreateLighting(coords);
+                    Spawn("Ash", coords);
                     QueueDel(whale); // Whale goes die if its in the despawn radius. After 10 seconds of course.
                     break;
                 }
             }
         }
+    }
+
+    private void CreateLighting(Robust.Shared.Map.EntityCoordinates coordinates, int energy = 125, int radius = 15)
+    {
+        var ent = Spawn(null, coordinates);
+        var comp = _light.EnsureLight(ent);
+        _light.SetColor(ent, Color.White, comp);
+        _light.SetEnergy(ent, energy, comp);
+        _light.SetRadius(ent, radius, comp);
+        EnsureComp<TimedDespawnComponent>(ent).Lifetime = 0.125f;
     }
 }
