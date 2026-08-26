@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Common.CCVar;
+using Content.Goobstation.Shared._Jamboree.SpaceWhale;
 using Content.Server.Station.Components;
 using Content.Shared.Maps;
 using Robust.Server.GameObjects;
@@ -10,7 +11,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
 
-namespace Content.Jamboree.Server.SpaceWhale;
+namespace Content.Goobstation.Server.SpaceWhale;
 
 public sealed class SpaceWhaleDespawnSystem : EntitySystem
 {
@@ -61,7 +62,7 @@ public sealed class SpaceWhaleDespawnSystem : EntitySystem
             return;
 
         var whaleQuery = EntityQueryEnumerator<SpaceWhaleComponent, TransformComponent>();
-        while (whaleQuery.MoveNext(out var whale, out _, out var whaleXform))
+        while (whaleQuery.MoveNext(out var whale, out var comp, out var whaleXform))
         {
             foreach (var (_, grid, stationXform) in stations)
             {
@@ -78,7 +79,9 @@ public sealed class SpaceWhaleDespawnSystem : EntitySystem
                     distance = Math.Max(0, distance - gridRadius);
                 }
 
-                var despawnDistance = _cfg.GetCVar(GoobCVars.SpaceWhaleSpawnDistance) * 0.5f;
+                var despawnDistance = comp.DespawnDistance > 0
+                    ? comp.DespawnDistance
+                    : _cfg.GetCVar(GoobCVars.SpaceWhaleSpawnDistance) * 0.5f;
 
                 if (distance <= despawnDistance)
                 {
@@ -88,9 +91,4 @@ public sealed class SpaceWhaleDespawnSystem : EntitySystem
             }
         }
     }
-}
-
-[RegisterComponent, Access(typeof(SpaceWhaleDespawnSystem))]
-public sealed partial class SpaceWhaleComponent : Component
-{
 }
