@@ -166,8 +166,9 @@ public sealed class StationProximitySystem : EntitySystem
         var mobCaller = EnsureComp<MobCallerComponent>(dummy); // assign the goidacaller to the dummy
 
         mobCaller.SpawnProto = "SpaceLeviathanDespawn";
-        mobCaller.MaxAlive = 1; // nuh uh
-        mobCaller.MinDistance = 100f; // should be far away
+        mobCaller.MaxAlive = 1;
+        mobCaller.MinDistance = 400f;
+        mobCaller.MaxDistance = 500f;
         mobCaller.NeedAnchored = false;
         mobCaller.NeedPower = false;
         mobCaller.SpawnSpacing = TimeSpan.FromSeconds(65); // to give the guy some time to get back to the station + prevent him from like, QSI-ing to the station to summon the worm in the station lmao, also bru these 5 seconds are really important

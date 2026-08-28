@@ -8,6 +8,7 @@
 - type: language
   id: Freespeak
   isVisibleLanguage: true
+  icon: LanguageIconFreespeak
   speech:
     color: "#91c756" # Goob Edit - Unique from Tradeband
   obfuscation:

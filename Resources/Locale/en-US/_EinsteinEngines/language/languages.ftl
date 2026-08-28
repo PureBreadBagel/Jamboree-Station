@@ -17,12 +17,6 @@ language-Draconic-name = Sinta'Unathi
 language-Draconic-description =
     The common language of Moghes - composed of sibilant hisses and rattles. Spoken natively by Unathi.
 
-language-Azaziba-name = Sinta'Azaziba
-language-Azaziba-description =
-    A language of Moghes consisting of a combination of spoken word and gesticulation.
-    While waning since Moghes entered the galactic stage - it enjoys popular use by Unathi that never fell to the Galactic Hegemony's cultural dominance.
-# changed to fit Jamboree lore
-
 language-SolCommon-name = Sol common
 language-SolCommon-description =
     With its roots in Mandarin Chinese - Common evolved as the official language of Terra - with officials working to tie it together with a common tongue.
@@ -34,7 +28,7 @@ language-NovuNederic-description =
     Spoken in the New-Netherlands, this direct and pragmatic trade language carries the sharp consonants and clipped vowels of its old-world roots.
     Built on centuries of seafaring, land reclamation, and commerce, it thrives among those who shape entire worlds — just as their ancestors shaped the land from the sea.
 
-language-TauCetiBasic-name = Tau-Ceti Basic
+language-TauCetiBasic-name = Tau Ceti Basic
 language-TauCetiBasic-description =
     A spiritual successor of Galactic Basic, established in 2XXX on Tau Ceti by Ceti intellectuals.
     Its unique, fully customized alphabet and structure allow it to be spoken even by most alien species.
@@ -172,22 +166,6 @@ language-SiikMaas-name = Siik'maas
 language-SiikMaas-description =
     The ancient religious tongue of the Tajara, now the most widely spoken and taught language on Adhomai.
 
-language-NalRasan-name = Nal'rasan
-language-NalRasan-description =
-    A body-language-heavy dialect created by M'sai hunters for stealth, later adopted by rebels for covert communication during the Great War.
-
-language-SiikTajr-name = Siik'tajr
-language-SiikTajr-description =
-    A revolutionary language blending Siik'maas and Nal'rasan, designed for secrecy during the overthrow of the plutocracy and used heavily in the Great War.
-
-language-YaSsa-name = Ya'ssa
-language-YaSsa-description =
-    A refined Siik'maas dialect once spoken by Njarir nobility, revived by the New Kingdom of Adhomai after centuries of disuse.
-
-language-Delvahii-name = Delvahii
-language-Delvahii-description =
-    A Zhan-Khazan language tied to Ma'take worship, still used in religious rites and favored by farmers resisting government control.
-
 language-Shadowmind-name = Shadowmind
 language-Shadowmind-description =
     A language spoken by the shadowlings. Not much is known about it, except that Thralls can understand it.
@@ -206,3 +184,45 @@ language-NewKinPidgin-description = A language which has been developed by combi
     Many Vox who speak this language lement that they cannot speak the "true" Vox language, often the one that is native to their clan.
     It sounds like chaotic shrieking to everyone else.
 # changed for jamboree lore
+
+# Language icon names, when you hover over the icon in the chat!
+language-icon-unknown = Unknown language??
+language-icon-galactic-common = Tau Ceti Basic
+language-icon-sol-common = Sol Common
+language-icon-gutter = Gutter
+language-icon-tradeband = Tradeband
+language-icon-freespeak = Freespeak
+language-icon-sign = Sign language
+language-icon-robot-talk = Robot Talk
+language-icon-drone-talk = Drone Talk
+language-icon-psychomantic = Psychomantic
+language-icon-animal = Animal
+language-icon-bubblish = Bubblish
+language-icon-newkin-pidgin = Ka'rakk
+language-icon-canilunzt = Canilunzt
+language-icon-marish = Marish
+language-icon-carptongue = Carptongue
+language-icon-xeno-hivemind = Hivemind
+language-icon-draconic = Sinta'Unathi
+language-icon-moffic = Moffic
+language-icon-nekomimetic = Nekomimetic
+language-icon-root-speak = Rootspeak
+language-icon-chittin = Chittin
+language-icon-schechi = Schechi
+language-icon-thaveyan = Thaveyan
+language-icon-felyaic = Felyaic
+language-icon-machine = Machine
+language-icon-codespeak = Codespeak
+language-icon-scurret = Scurret
+language-icon-terrum = Terrum
+language-icon-brain = Brain
+language-icon-aielic = Aielic
+language-icon-darktongue = Darktongue
+language-icon-classical = Classical
+language-icon-grumbakul = Grumbakul
+language-icon-lagomorph = Lagomorph
+language-icon-squeakish = Squeakish
+language-icon-blob = Blob
+language-icon-calcic = Calcic
+language-icon-elyran = Elyran Standard
+

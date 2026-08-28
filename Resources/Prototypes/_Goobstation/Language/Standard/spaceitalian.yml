@@ -8,6 +8,8 @@
 # Spoken by people from the Kitchen. Mama mia.
 - type: language
   id: SpaceItalian
+  iconUnderstood: false
+  icon: LanguageIconUnknown
   isVisibleLanguage: true
   speech:
     color: "#b54a4a"
