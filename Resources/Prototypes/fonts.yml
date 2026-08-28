@@ -50,6 +50,7 @@
   id: Emoji
   path: /Fonts/NotoEmoji.ttf
 
+# Einstein Engine Language Fonts
 - type: font
   id: RubikBubbles
   path: /Fonts/RubikBubbles.ttf

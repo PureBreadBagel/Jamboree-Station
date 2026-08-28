@@ -722,6 +722,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         }
 
         // The chat message wrapped in a "x says y" string.
+        // STARLIGHT -  obfuscated: false basically means that this is the original/readable message, so the UI shows the understood language icon.
         var wrappedMessage = WrapPublicMessage(source, name, message, language: language, colorOverride, obfuscated: false);
         // The chat message obfuscated via language obfuscation.
         var obfuscated = SanitizeInGameICMessage(source, _language.ObfuscateSpeech(message, language), out var emoteStr, true, _configurationManager.GetCVar(CCVars.ChatPunctuation),
@@ -848,6 +849,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             {
                 // Scenario 1: the listener can clearly understand the message
                 result = perceivedMessage;
+                // STARLIGHT - obfuscated: false here is when the listener can clearly understand this so show the understood language icon.
                 wrappedMessage = WrapWhisperMessage(source, "chat-manager-entity-whisper-wrap-message", name, result, language, colorOverride, obfuscated: false);
             }
             else if (_examineSystem.InRangeUnOccluded(source, listener, WhisperMuffledRange)) // UNEDIT FROM Einstein Engines - Language // They are out of date, this has been reverted to current ChatSystem
@@ -869,6 +871,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             _chatManager.ChatMessageToOne(ChatChannel.Whisper, result, wrappedMessage, source, false, session.Channel);
         }
 
+        // STARLIGHT -  obfuscated: false here means the original/readable message, so the UI shows the understood language icon.
         var replayWrap = WrapWhisperMessage(source, "chat-manager-entity-whisper-wrap-message", name, message, language, colorOverride, obfuscated: false);
         _replay.RecordServerMessage(new ChatMessage(ChatChannel.Whisper, message, replayWrap, GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
         // Einstein Engines - Languages end
