@@ -7,11 +7,13 @@
 # Spoken by dionas.
 # TODO: Replace this with a much better language.
 - type: language
+  icon: LanguageIconRootSpeak
   id: RootSpeak
+  iconUnderstood: false
   isVisibleLanguage: true
   speech:
     color: "#a64e14dd" # Goob Edit - More uniqueness from Novu-Nederic
-    # fontId: Noganas #* FONTS NOT ALREADY HERE ARE NOT BEING ADDED
+    fontId: Noganas
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1
@@ -22,3 +24,7 @@
     - kr
     - st
     - sh
+
+
+
+

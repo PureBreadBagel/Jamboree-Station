@@ -6,7 +6,9 @@
 # PORTED FROM FLOOFSTATION
 # Resomi language
 - type: language
+  icon: LanguageIconSchechi
   id: Schechi
+  iconUnderstood: false
   isVisibleLanguage: true
   speech:
     color: "#4DBFD9"
@@ -93,3 +95,7 @@
     - twa
     - wa
     - a
+
+
+
+

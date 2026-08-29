@@ -671,11 +671,11 @@ public sealed partial class GoobCVars
     public static readonly CVarDef<bool> SpaceWhaleSpawn =
         CVarDef.Create("misc.space_whale_spawn", true, CVar.SERVER);
 
-    /// <summary>
+    /// <summary>s
     /// The distance to spawn a space whale from the station
     /// </summary>
     public static readonly CVarDef<int> SpaceWhaleSpawnDistance =
-        CVarDef.Create("misc.space_whale_spawn_distance", 1965, CVar.SERVER);
+        CVarDef.Create("misc.space_whale_spawn_distance", 3000, CVar.SERVER);
 
     #endregion
     /// <summary>

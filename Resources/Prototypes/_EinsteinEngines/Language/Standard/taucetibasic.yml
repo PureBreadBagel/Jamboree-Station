@@ -2,6 +2,9 @@
 # Previously known as GalacticCommon, assume any reference is to this.
 - type: language
   id: TauCetiBasic
+  iconUnderstood: false
+  isVisibleLanguage: true
+  icon: LanguageIconTauCeti
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 1

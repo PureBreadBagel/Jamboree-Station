@@ -5,6 +5,8 @@
 
 - type: language
   id: Bingle
+  isVisibleLanguage: true
+  icon: LanguageIconClassical
   speech:
     fontId: Eatday
     boldFontId: Eatday
