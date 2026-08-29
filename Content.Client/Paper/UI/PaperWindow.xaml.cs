@@ -96,7 +96,13 @@ using Robust.Shared.Utility;
 using Robust.Client.UserInterface.RichText;
 using Content.Client.UserInterface.RichText;
 using Robust.Shared.Input;
-
+using Robust.Shared.GameObjects;
+using Content.Shared._EinsteinEngines.Language.Systems;
+using Robust.Client.Player;
+using JetBrains.Annotations;
+using Content.Shared._EinsteinEngines.Language;
+using Content.Shared._EinsteinEngines.Language.Components;
+using Robust.Shared.Prototypes;
 namespace Content.Client.Paper.UI
 {
     [GenerateTypedNameReferences]
@@ -104,6 +110,11 @@ namespace Content.Client.Paper.UI
     {
         [Dependency] private readonly IInputManager _inputManager = default!;
         [Dependency] private readonly IResourceCache _resCache = default!;
+
+        [Dependency] private readonly IEntityManager _entityManager = default!; // JAMBOREE - So we can access the who wrote in the paper?
+        [Dependency] private readonly SharedLanguageSystem _sharedLanguageSystem = default!; // JAMBOREE - To access obfuscation from EEs language system.
+
+        [Dependency] private readonly IPlayerManager _playerManager = default!; // JAMBOREE - Player manager for the players EntityID.
 
         private static Color DefaultTextColor = new(25, 25, 25);
 
@@ -349,8 +360,24 @@ namespace Content.Client.Paper.UI
         ///     Initialize the paper contents, i.e. the text typed by the
         ///     user and any stamps that have peen put on the page.
         /// </summary>
-        public void Populate(PaperComponent.PaperBoundUserInterfaceState state)
+        public void Populate(PaperComponent.PaperBoundUserInterfaceState state, EntityUid owner)
         {
+
+
+            var reader = _playerManager.LocalEntity; // JAMBOREE -  Get the clients EntityID
+            var understood = new List<ProtoId<LanguagePrototype>>();
+
+            if (_entityManager.TryGetComponent<LanguageSpeakerComponent>(reader, out var playerLanguages))
+            {
+                understood = playerLanguages.UnderstoodLanguages; // JAMBOREE - Getting the players understood language.
+            }
+
+
+            if (_entityManager.TryGetComponent<PaperComponent>(owner, out var paperLang))
+            {
+
+            }
+
             bool isEditing = state.Mode == PaperComponent.PaperAction.Write;
             bool wasEditing = InputContainer.Visible;
             InputContainer.Visible = isEditing;

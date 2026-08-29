@@ -82,6 +82,7 @@ using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Popups;
+using Content.Shared._EinsteinEngines.Language.Components;
 using Content.Shared.Tag;
 using Robust.Shared.Player;
 using Robust.Shared.Audio.Systems;
@@ -260,6 +261,9 @@ public sealed class PaperSystem : EntitySystem
 
         if (args.Text.Length <= entity.Comp.ContentSize)
         {
+            if (TryComp<LanguageSpeakerComponent>(args.Actor, out var speaker))
+                entity.Comp.WrittenLanguage = speaker.CurrentLanguage;
+
             SetContent(entity, args.Text);
 
             var paperStatus = string.IsNullOrWhiteSpace(args.Text) ? PaperStatus.Blank : PaperStatus.Written;
