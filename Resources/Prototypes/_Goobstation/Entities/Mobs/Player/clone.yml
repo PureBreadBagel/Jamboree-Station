@@ -11,8 +11,15 @@
   # traits
   - BlackAndWhiteOverlay
   - LightweightDrunk
+  - Unrevivable # Goobstation - Unrevivable trait
+  - BibleUser # Goobstation - Chaplain bible user
   # job specific
   - MindShield
+  # special components for antags/roles
+  - Condemned # Goobstation - Chaplain soul protection
+  - CanEnchant # Goobstation
+  - InnatePsionicPowers # Goobstation - HealingWordPower, SummonRemiliaPower
+  - CurseImmune # Goobstation - Immune to curses
   # accents
   - Accentless
   - BackwardsAccent

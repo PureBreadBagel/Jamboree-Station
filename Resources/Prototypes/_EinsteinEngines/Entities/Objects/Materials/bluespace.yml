@@ -4,7 +4,7 @@
 
 - type: entity
   parent: MaterialBase
-  id: MaterialBSCrystal
+  id: MaterialBSCrystalGS
   suffix: Full
   name: bluespace crystal
   components:
@@ -37,7 +37,7 @@
     size: Small
 
 - type: entity
-  parent: MaterialBSCrystal
+  parent: MaterialBSCrystalGS
   id: MaterialBSCrystal1
   suffix: 1
   components:
