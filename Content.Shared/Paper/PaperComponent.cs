@@ -133,12 +133,14 @@ public sealed partial class PaperComponent : Component
         public readonly string Text;
         public readonly List<StampDisplayInfo> StampedBy;
         public readonly PaperAction Mode;
+        public readonly ProtoId<LanguagePrototype>? WrittenLanguage;
 
-        public PaperBoundUserInterfaceState(string text, List<StampDisplayInfo> stampedBy, PaperAction mode = PaperAction.Read)
+        public PaperBoundUserInterfaceState(string text, List<StampDisplayInfo> stampedBy, PaperAction mode = PaperAction.Read, ProtoId<LanguagePrototype>? writtenLanguage = null)
         {
             Text = text;
             StampedBy = stampedBy;
             Mode = mode;
+            WrittenLanguage = writtenLanguage;
         }
     }
 
@@ -146,10 +148,12 @@ public sealed partial class PaperComponent : Component
     public sealed class PaperInputTextMessage : BoundUserInterfaceMessage
     {
         public readonly string Text;
+        public readonly ProtoId<LanguagePrototype>? Language;
 
-        public PaperInputTextMessage(string text)
+        public PaperInputTextMessage(string text, ProtoId<LanguagePrototype>? language = null)
         {
             Text = text;
+            Language = language;
         }
     }
 

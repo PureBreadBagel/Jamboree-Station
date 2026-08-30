@@ -89,6 +89,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Utility;
 using Content.Shared.Paper;
+using Content.Shared._EinsteinEngines.Language;
 using static Content.Shared.Paper.PaperComponent;
 
 namespace Content.Client.Paper.UI;
@@ -131,7 +132,7 @@ public sealed partial class PaperBoundUserInterface : BoundUserInterface // Delt
 
     private void InputOnTextEntered(string text)
     {
-        SendMessage(new PaperInputTextMessage(text));
+        SendMessage(new PaperInputTextMessage(text, _window?.SelectedLanguage));
 
         if (_window != null)
         {
