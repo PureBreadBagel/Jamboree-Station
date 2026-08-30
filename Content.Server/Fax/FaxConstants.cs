@@ -49,6 +49,7 @@ public static class FaxConstants
     public const string FaxPaperStampedByData = "fax_data_stamped_by";
     public const string FaxSyndicateData = "fax_data_i_am_syndicate";
     public const string FaxPaperLockedData = "fax_data_locked";
+    public const string FaxPaperWrittenLanguageData = "fax_data_written_language"; // JAMBOREE - Relays the paper fax language.
 
     // Goobstation
     public const string FaxEntitySentData = "fax_data_entity_sent";

@@ -3,6 +3,7 @@ using Content.Shared.CartridgeLoader;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Paper;
+using Content.Shared._EinsteinEngines.Language.Components;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Timing;
@@ -68,7 +69,7 @@ public sealed class NanoTaskCartridgeSystem : SharedNanoTaskCartridgeSystem
         UpdateUiState(ent, args.Loader);
     }
 
-    private void SetupPrintedTask(EntityUid uid, NanoTaskItem item)
+    private void SetupPrintedTask(EntityUid uid, NanoTaskItem item, EntityUid actor) // JAMBOREE -  Get the PDA owners EntityID for language.
     {
         PaperComponent? paper = null;
         NanoTaskPrintedComponent? printed = null;
@@ -89,6 +90,9 @@ public sealed class NanoTaskCartridgeSystem : SharedNanoTaskCartridgeSystem
         });
 
         _paper.SetContent((uid, paper), msg.ToMarkup());
+
+        if (TryComp<LanguageSpeakerComponent>(actor, out var speaker))
+            paper.WrittenLanguage = speaker.CurrentLanguage; // JAMBOREE - Set the papers language to the PDA owners current selected language.
     }
 
     /// <summary>
@@ -134,7 +138,7 @@ public sealed class NanoTaskCartridgeSystem : SharedNanoTaskCartridgeSystem
                 var printed = Spawn("PaperNanoTaskItem", Transform(message.Actor).Coordinates);
                 _hands.PickupOrDrop(message.Actor, printed);
                 _audio.PlayPvs(new SoundPathSpecifier("/Audio/Machines/printer.ogg"), ent.Owner);
-                SetupPrintedTask(printed, task.Item);
+                SetupPrintedTask(printed, task.Item, message.Actor); // JAMBOREE - Make it so it knows who wrote in it.
                 break;
             }
         }

@@ -33,7 +33,7 @@
 - type: entity
   id: RadiationCollector
   parent: ConstructibleMachine # Goobstation
-  name: radiation collector
+  name:  cosmic radiation collector
   suffix: Empty tank
   description: A machine that collects cosmic radiation and turns it into power. Requires plasma gas to function.
   placement:
