@@ -35,6 +35,7 @@
     count: 5
   - type: Item
     size: Small
+  - type: RandomTeleportOnUse
 
 - type: entity
   parent: MaterialBSCrystalGS
