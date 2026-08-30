@@ -363,7 +363,7 @@ namespace Content.Client.Paper.UI
         public void Populate(PaperComponent.PaperBoundUserInterfaceState state, EntityUid owner)
         {
 
-
+            var displayText = state.Text; // i mean i do need the paper text
             var reader = _playerManager.LocalEntity; // JAMBOREE -  Get the clients EntityID
             var understood = new List<ProtoId<LanguagePrototype>>();
 
@@ -373,8 +373,24 @@ namespace Content.Client.Paper.UI
             }
 
 
+            ProtoId<LanguagePrototype>? paperLanguage = null;
             if (_entityManager.TryGetComponent<PaperComponent>(owner, out var paperLang))
             {
+                paperLanguage = paperLang.WrittenLanguage; // JAMBOREE -
+
+            }
+
+
+            if (paperLanguage != null // JAM-  check if the paper has a language
+            &&
+            paperLanguage.Value != SharedLanguageSystem.UniversalPrototype // JAM- and its not the Universal lang obvs
+            &&
+            !understood.Contains(paperLanguage.Value)) // JAM- and the client doesnt have it in their list of languages
+            {
+                //scramble text time to them!
+
+                var langProto = IoCManager.Resolve<IPrototypeManager>().Index(paperLanguage.Value);
+                displayText = _sharedLanguageSystem.ObfuscateSpeech(state.Text, langProto);          // scramble, store result
 
             }
 
@@ -409,7 +425,7 @@ namespace Content.Client.Paper.UI
             }
 
             var fm = new FormattedMessage();
-            fm.AddMarkupPermissive(state.Text);
+            fm.AddMarkupPermissive(displayText); // JAMBOREE - Obfuscates text on language.
             WrittenTextLabel.SetMessage(fm, _allowedTags, DefaultTextColor);
 
             PaperContent.Margin = new Thickness(_originalContentMargin.Left, _originalContentMargin.Top,
