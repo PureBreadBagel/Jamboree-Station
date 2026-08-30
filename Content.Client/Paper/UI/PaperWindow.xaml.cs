@@ -542,7 +542,10 @@ namespace Content.Client.Paper.UI
             LanguageDropDown.OnItemSelected += args =>
             {
                 if (args.Id >= 0 && args.Id < _languageOptions.Count)
+                {
+                    LanguageDropDown.Select(args.Id);
                     _selectedLanguage = _languageOptions[args.Id];
+                }
             };
         }
 
