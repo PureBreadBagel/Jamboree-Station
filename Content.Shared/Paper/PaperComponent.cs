@@ -84,8 +84,10 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Shared._EinsteinEngines.Language;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Paper;
@@ -96,6 +98,13 @@ public sealed partial class PaperComponent : Component
     public PaperAction Mode;
     [DataField("content"), AutoNetworkedField]
     public string Content { get; set; } = "";
+
+    /// <summary>
+    ///     The language the paper was written in, used to gate readability for entities
+    ///     that do not understand it. Null if the paper has never been written on.
+    /// </summary>
+    [DataField("writtenLanguage"), AutoNetworkedField]
+    public ProtoId<LanguagePrototype>? WrittenLanguage = null;
 
     [DataField("contentSize")]
     public int ContentSize { get; set; } = 10000;
@@ -124,12 +133,14 @@ public sealed partial class PaperComponent : Component
         public readonly string Text;
         public readonly List<StampDisplayInfo> StampedBy;
         public readonly PaperAction Mode;
+        public readonly ProtoId<LanguagePrototype>? WrittenLanguage;
 
-        public PaperBoundUserInterfaceState(string text, List<StampDisplayInfo> stampedBy, PaperAction mode = PaperAction.Read)
+        public PaperBoundUserInterfaceState(string text, List<StampDisplayInfo> stampedBy, PaperAction mode = PaperAction.Read, ProtoId<LanguagePrototype>? writtenLanguage = null)
         {
             Text = text;
             StampedBy = stampedBy;
             Mode = mode;
+            WrittenLanguage = writtenLanguage;
         }
     }
 
@@ -137,10 +148,12 @@ public sealed partial class PaperComponent : Component
     public sealed class PaperInputTextMessage : BoundUserInterfaceMessage
     {
         public readonly string Text;
+        public readonly ProtoId<LanguagePrototype>? Language;
 
-        public PaperInputTextMessage(string text)
+        public PaperInputTextMessage(string text, ProtoId<LanguagePrototype>? language = null)
         {
             Text = text;
+            Language = language;
         }
     }
 

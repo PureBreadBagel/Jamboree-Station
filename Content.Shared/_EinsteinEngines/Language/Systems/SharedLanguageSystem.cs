@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared._EinsteinEngines.Language.Components;
 using Content.Shared.GameTicking;
 using Robust.Shared.Prototypes;
@@ -60,6 +64,20 @@ public abstract class SharedLanguageSystem : EntitySystem
         language.Obfuscation.Obfuscate(builder, message, this);
 
         return builder.ToString();
+    }
+
+    /// <summary>
+    ///     Returns whether the language icon should be displayed for the given language and obfuscation state.
+    /// </summary>
+    public bool GetLanguageIcon(LanguagePrototype language, bool obfuscated)
+    {
+        if (!obfuscated && language.IconUnderstood)
+            return true;
+
+        if (obfuscated && language.IconNotUnderstood)
+            return true;
+
+        return false;
     }
 
     /// <summary>

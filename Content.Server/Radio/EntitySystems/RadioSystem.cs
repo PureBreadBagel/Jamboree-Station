@@ -303,9 +303,7 @@ public sealed partial class RadioSystem : EntitySystem
         if (language.SpeechOverride.Color is { } colorOverride)
             languageColor = Color.InterpolateBetween(Color.White, colorOverride, colorOverride.A); // Changed first param to Color.White so it shows color correctly.
 
-        var languageDisplay = language.IsVisibleLanguage
-            ? Loc.GetString("chat-manager-language-prefix", ("language", language.ChatName))
-            : "";
+        var languageDisplay = string.Empty; // Language name hidden - icon is shown instead (Starlight port)
 
         // goob start - loudspeakers
 

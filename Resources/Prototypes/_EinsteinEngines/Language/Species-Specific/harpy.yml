@@ -7,7 +7,9 @@
 # Language spoken by Harpies and Squackroaches.
 # Based on Polish, Greek, Serbian, Turkish.
 - type: language
+  icon: LanguageIconUnknown
   id: ValyrianStandard
+  iconUnderstood: false
   isVisibleLanguage: true
   speech:
     fontId: Delius # Goob Edit - Different Font
@@ -125,3 +127,7 @@
     - cz
     - zk
     - jn
+
+
+
+
