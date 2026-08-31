@@ -2017,3 +2017,32 @@ Entries:
       message: the air alarm should be fixed. forgot to make it detect new gas.
   id: 169
   time: '2026-08-21T03:02:03.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Add
+      message: >-
+        Papers have Languages now! NanoTasks and Papers written by folk can only
+        be understood by those who can understand the language. Any language you
+        can understand (but not speak) will be counted as a language you can
+        write the paper in. (You can not currently add more than one language to
+        a paper).
+    - type: Add
+      message: Faxes now rely the papers current Language.
+    - type: Tweak
+      message: >-
+        Changed the power transmission laser to produce 3x less than its
+        original.
+    - type: Tweak
+      message: Changed the bluespace crystal sprite back to GoobStations.
+    - type: Fix
+      message: >-
+        Bluespace crystals were meant to teleport you around randomly when you
+        use them. Now you can!
+    - type: Fix
+      message: >-
+        Tazers now no longer spam your console with errors about an upgrade. As
+        they were parented off of the salvagers PKA.
+    - type: Fix
+      message: 'Portable scrubbers now suck up water. '
+  id: 170
+  time: '2026-08-31T11:17:32.0000000+00:00'
