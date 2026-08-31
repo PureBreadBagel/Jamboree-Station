@@ -40,8 +40,11 @@ public sealed class WeaponAttachmentSystem : SharedWeaponAttachmentSystem
         if (!TryComp<SpriteComponent>(uid, out var sprite))
             return;
 
-        sprite.LayerSetVisible(WeaponVisualLayers.Bayonet, component.BayonetAttached);
-        sprite.LayerSetVisible(WeaponVisualLayers.FlightOff, component.LightAttached && !component.LightOn);
-        sprite.LayerSetVisible(WeaponVisualLayers.FlightOn, component.LightAttached && component.LightOn);
+        if (sprite.LayerMapTryGet(WeaponVisualLayers.Bayonet, out _))
+            sprite.LayerSetVisible(WeaponVisualLayers.Bayonet, component.BayonetAttached);
+        if (sprite.LayerMapTryGet(WeaponVisualLayers.FlightOff, out _))
+            sprite.LayerSetVisible(WeaponVisualLayers.FlightOff, component.LightAttached && !component.LightOn);
+        if (sprite.LayerMapTryGet(WeaponVisualLayers.FlightOn, out _))
+            sprite.LayerSetVisible(WeaponVisualLayers.FlightOn, component.LightAttached && component.LightOn);
     }
 }

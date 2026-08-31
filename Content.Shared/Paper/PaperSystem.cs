@@ -82,6 +82,8 @@ using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Popups;
+using Content.Shared._EinsteinEngines.Language;
+using Content.Shared._EinsteinEngines.Language.Components;
 using Content.Shared.Tag;
 using Robust.Shared.Player;
 using Robust.Shared.Audio.Systems;
@@ -260,6 +262,15 @@ public sealed class PaperSystem : EntitySystem
 
         if (args.Text.Length <= entity.Comp.ContentSize)
         {
+            if (TryComp<LanguageSpeakerComponent>(args.Actor, out var speaker))
+            {
+                // JAMBOREE - Use the language chosen in the paper UI, validated against the languages the
+                // writer actually understands. Fall back to their currently spoken language if none chosen.
+                var chosen = args.Language ?? (ProtoId<LanguagePrototype>) speaker.CurrentLanguage;
+                if (chosen != "Sign" && speaker.UnderstoodLanguages.Contains(chosen))
+                    entity.Comp.WrittenLanguage = chosen;
+            }
+
             SetContent(entity, args.Text);
 
             var paperStatus = string.IsNullOrWhiteSpace(args.Text) ? PaperStatus.Blank : PaperStatus.Written;
@@ -353,7 +364,7 @@ public sealed class PaperSystem : EntitySystem
 
     public void UpdateUserInterface(Entity<PaperComponent> entity)
     {
-        _uiSystem.SetUiState(entity.Owner, PaperUiKey.Key, new PaperBoundUserInterfaceState(entity.Comp.Content, entity.Comp.StampedBy, entity.Comp.Mode));
+        _uiSystem.SetUiState(entity.Owner, PaperUiKey.Key, new PaperBoundUserInterfaceState(entity.Comp.Content, entity.Comp.StampedBy, entity.Comp.Mode, entity.Comp.WrittenLanguage));
     }
 }
 

@@ -95,7 +95,7 @@
 - type: entity
   id: RadiationCollectorCircuitboard
   parent: BaseMachineCircuitboard
-  name: radiation collector board
+  name: cosmic radiation collector board
   components:
     - type: Sprite
       state: engineering

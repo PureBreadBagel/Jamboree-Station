@@ -96,7 +96,15 @@ using Robust.Shared.Utility;
 using Robust.Client.UserInterface.RichText;
 using Content.Client.UserInterface.RichText;
 using Robust.Shared.Input;
-
+using Robust.Shared.GameObjects;
+using Content.Shared._EinsteinEngines.Language.Systems;
+using Content.Client._EinsteinEngines.Language.Systems;
+using Robust.Shared.IoC;
+using Robust.Client.Player;
+using JetBrains.Annotations;
+using Content.Shared._EinsteinEngines.Language;
+using Content.Shared._EinsteinEngines.Language.Components;
+using Robust.Shared.Prototypes;
 namespace Content.Client.Paper.UI
 {
     [GenerateTypedNameReferences]
@@ -104,6 +112,16 @@ namespace Content.Client.Paper.UI
     {
         [Dependency] private readonly IInputManager _inputManager = default!;
         [Dependency] private readonly IResourceCache _resCache = default!;
+
+        [Dependency] private readonly IEntityManager _entityManager = default!; // JAMBOREE - So we can access the who wrote in the paper?
+        private readonly SharedLanguageSystem _sharedLanguageSystem; // JAMBOREE - To access obfuscation from EEs language system.
+
+        [Dependency] private readonly IPlayerManager _playerManager = default!; // JAMBOREE - Player manager for the players EntityID.
+
+        // JAMBOREE - The language the player has chosen to write the paper in (null until populated).
+        private ProtoId<LanguagePrototype>? _selectedLanguage;
+        public ProtoId<LanguagePrototype>? SelectedLanguage => _selectedLanguage;
+        private readonly List<ProtoId<LanguagePrototype>> _languageOptions = new();
 
         private static Color DefaultTextColor = new(25, 25, 25);
 
@@ -158,7 +176,10 @@ namespace Content.Client.Paper.UI
         public PaperWindow()
         {
             IoCManager.InjectDependencies(this);
+            _sharedLanguageSystem = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<LanguageSystem>();
             RobustXamlLoader.Load(this);
+
+            PopulateLanguageDropdown();
 
             // We can't configure the RichTextLabel contents from xaml, so do it here:
             BlankPaperIndicator.SetMessage(Loc.GetString("paper-ui-blank-page-message"), null, DefaultTextColor);
@@ -349,8 +370,38 @@ namespace Content.Client.Paper.UI
         ///     Initialize the paper contents, i.e. the text typed by the
         ///     user and any stamps that have peen put on the page.
         /// </summary>
-        public void Populate(PaperComponent.PaperBoundUserInterfaceState state)
+        public void Populate(PaperComponent.PaperBoundUserInterfaceState state, EntityUid owner)
         {
+
+            var displayText = state.Text; // i mean i do need the paper text
+            var reader = _playerManager.LocalEntity; // JAMBOREE -  Get the clients EntityID
+
+            string? selectedLanguage = null;
+            if (_entityManager.TryGetComponent<LanguageSpeakerComponent>(reader, out var playerLanguages))
+            {
+                selectedLanguage = playerLanguages.CurrentLanguage; // JAMBOREE - The language the reader currently has selected.
+            }
+
+            ProtoId<LanguagePrototype>? paperLanguage = null;
+            if (_entityManager.TryGetComponent<PaperComponent>(owner, out var paperLang))
+            {
+                paperLanguage = paperLang.WrittenLanguage; // JAMBOREE -
+
+            }
+
+            if (paperLanguage != null // JAM-  check if the paper has a language
+            &&
+            paperLanguage.Value != SharedLanguageSystem.UniversalPrototype // JAM- and its not the Universal lang obvs
+            &&
+            paperLanguage.Value.Id != selectedLanguage) // JAM- and its not the language the reader currently has selected
+            {
+                //scramble text time to them!
+
+                var langProto = IoCManager.Resolve<IPrototypeManager>().Index(paperLanguage.Value);
+                displayText = _sharedLanguageSystem.ObfuscateSpeech(state.Text, langProto);          // scramble, store result
+
+            }
+
             bool isEditing = state.Mode == PaperComponent.PaperAction.Write;
             bool wasEditing = InputContainer.Visible;
             InputContainer.Visible = isEditing;
@@ -382,7 +433,7 @@ namespace Content.Client.Paper.UI
             }
 
             var fm = new FormattedMessage();
-            fm.AddMarkupPermissive(state.Text);
+            fm.AddMarkupPermissive(displayText); // JAMBOREE - Obfuscates text on language.
             WrittenTextLabel.SetMessage(fm, _allowedTags, DefaultTextColor);
 
             PaperContent.Margin = new Thickness(_originalContentMargin.Left, _originalContentMargin.Top,
@@ -394,6 +445,19 @@ namespace Content.Client.Paper.UI
             foreach (var stamper in state.StampedBy)
             {
                 StampDisplay.AddStamp(new StampWidget { StampInfo = stamper });
+            }
+
+            // JAMBOREE - Display the language the paper was written in at the bottom.
+            if (state.WrittenLanguage != null)
+            {
+                var protoManager = IoCManager.Resolve<IPrototypeManager>();
+                var langProto = protoManager.Index(state.WrittenLanguage.Value);
+                LanguageLabel.Text = Loc.GetString("paper-ui-written-language", ("language", langProto.Name));
+                LanguageLabel.Visible = true;
+            }
+            else
+            {
+                LanguageLabel.Visible = false;
             }
         }
 
@@ -438,6 +502,51 @@ namespace Content.Client.Paper.UI
             // Prevent further saving while text processing still in
             SaveButton.Disabled = true;
             OnSaved?.Invoke(Rope.Collapse(Input.TextRope));
+        }
+
+        // JAMBOREE - Populate the "write in" language dropdown with every language the local player understands,
+        // defaulting the selection to the language they are currently speaking.
+        private void PopulateLanguageDropdown()
+        {
+            if (!_entityManager.TryGetComponent<LanguageSpeakerComponent>(_playerManager.LocalEntity, out var speaker))
+                return; // if i dont have a language at all. why should i display at all?
+
+            var protoManager = IoCManager.Resolve<IPrototypeManager>();
+            LanguageDropDown.Clear();
+            _languageOptions.Clear();
+
+            var selectedIndex = -1;
+            for (var i = 0; i < speaker.UnderstoodLanguages.Count; i++)
+            {
+                var lang = speaker.UnderstoodLanguages[i]; // get their language in order
+
+                // JAMBOREE - Sign Language is not a written language; never offer it as a paper language.
+                if (lang.Id == "Sign")
+                    continue;
+
+                var proto = protoManager.Index(lang);
+                var listIndex = _languageOptions.Count; // compact index this entry will occupy
+                _languageOptions.Add(lang);
+                LanguageDropDown.AddItem(proto.Name, listIndex); // item id == compact index
+                if (lang.Id == speaker.CurrentLanguage)
+                    selectedIndex = listIndex;
+            }
+
+            if (_languageOptions.Count > 0)
+            {
+                selectedIndex = selectedIndex >= 0 ? selectedIndex : 0;
+                LanguageDropDown.Select(selectedIndex);
+                _selectedLanguage = _languageOptions[selectedIndex];
+            }
+
+            LanguageDropDown.OnItemSelected += args =>
+            {
+                if (args.Id >= 0 && args.Id < _languageOptions.Count)
+                {
+                    LanguageDropDown.Select(args.Id);
+                    _selectedLanguage = _languageOptions[args.Id];
+                }
+            };
         }
 
         private void UpdateFillState()

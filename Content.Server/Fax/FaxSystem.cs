@@ -138,6 +138,8 @@ using Content.Shared.Paper;
 using Content.Shared.Power;
 using Content.Shared.Tools;
 using Content.Shared.UserInterface;
+using Content.Shared._EinsteinEngines.Language;
+using Content.Shared._EinsteinEngines.Language.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
@@ -422,8 +424,9 @@ public sealed class FaxSystem : EntitySystem
                     args.Data.TryGetValue(FaxConstants.FaxPaperStampedByData, out List<StampDisplayInfo>? stampedBy);
                     args.Data.TryGetValue(FaxConstants.FaxPaperPrototypeData, out string? prototypeId);
                     args.Data.TryGetValue(FaxConstants.FaxPaperLockedData, out bool? locked);
+                    args.Data.TryGetValue(FaxConstants.FaxPaperWrittenLanguageData, out ProtoId<LanguagePrototype>? writtenLanguage); // JAMBOREE - Try to get the papers writtenLanguage component.
 
-                    var printout = new FaxPrintout(content, name, label, prototypeId, stampState, stampedBy, locked ?? false);
+                    var printout = new FaxPrintout(content, name, label, prototypeId, stampState, stampedBy, locked ?? false, writtenLanguage);
                     Receive(uid, printout, args.SenderAddress);
 
                     break;
@@ -580,7 +583,11 @@ public sealed class FaxSystem : EntitySystem
 
         var name = Loc.GetString("fax-machine-printed-paper-name");
 
-        var printout = new FaxPrintout(args.Content, name, args.Label, prototype);
+        ProtoId<LanguagePrototype>? writtenLanguage = null;
+        if (TryComp<LanguageSpeakerComponent>(args.Actor, out var speaker))
+            writtenLanguage = speaker.CurrentLanguage; // JAMBOREE - Make it so the fax papers language is set to the Clients selected Language.
+
+        var printout = new FaxPrintout(args.Content, name, args.Label, prototype, writtenLanguage: writtenLanguage);
         component.PrintingQueue.Enqueue(printout);
         component.SendTimeoutRemaining += component.SendTimeout;
 
@@ -625,7 +632,8 @@ public sealed class FaxSystem : EntitySystem
                                        metadata.EntityPrototype?.ID ?? component.PrintPaperId,
                                        paper.StampState,
                                        paper.StampedBy,
-                                       paper.EditingDisabled);
+                                       paper.EditingDisabled,
+                                       paper.WrittenLanguage); // JAMBOREE - Adding its written language to the fax once you send it.
 
         component.PrintingQueue.Enqueue(printout);
         component.SendTimeoutRemaining += component.SendTimeout;
@@ -684,6 +692,11 @@ public sealed class FaxSystem : EntitySystem
             { FaxConstants.FaxPaperContentData, paper.Content },
             { FaxConstants.FaxPaperLockedData, paper.EditingDisabled },
         };
+
+        if (paper.WrittenLanguage != null)
+        {
+            payload[FaxConstants.FaxPaperWrittenLanguageData] = paper.WrittenLanguage; // JAMBOREE - If the papers language is null; then just set it to its actual text.
+        }
 
         if (metadata.EntityPrototype != null)
         {
@@ -767,6 +780,7 @@ public sealed class FaxSystem : EntitySystem
             }
 
             paper.EditingDisabled = printout.Locked;
+            paper.WrittenLanguage = printout.WrittenLanguage; // JAMBOREE - Set it to its written language.
         }
 
         _metaData.SetEntityName(printed, printout.Name);

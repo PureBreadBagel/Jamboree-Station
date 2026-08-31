@@ -82,6 +82,7 @@
 
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Paper;
+using Content.Shared._EinsteinEngines.Language;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -243,11 +244,14 @@ public sealed partial class FaxPrintout
     [DataField]
     public bool Locked { get; private set; }
 
+    [DataField]
+    public ProtoId<LanguagePrototype>? WrittenLanguage { get; private set; } // JAMBOREE - Add its written language as a datafield so it can be passed to other faxes.
+
     private FaxPrintout()
     {
     }
 
-    public FaxPrintout(string content, string name, string? label = null, string? prototypeId = null, string? stampState = null, List<StampDisplayInfo>? stampedBy = null, bool locked = false)
+    public FaxPrintout(string content, string name, string? label = null, string? prototypeId = null, string? stampState = null, List<StampDisplayInfo>? stampedBy = null, bool locked = false, ProtoId<LanguagePrototype>? writtenLanguage = null)
     {
         Content = content;
         Name = name;
@@ -256,5 +260,6 @@ public sealed partial class FaxPrintout
         StampState = stampState;
         StampedBy = stampedBy ?? new List<StampDisplayInfo>();
         Locked = locked;
+        WrittenLanguage = writtenLanguage; // JAMBOREE - Make its written language the papers language.
     }
 }

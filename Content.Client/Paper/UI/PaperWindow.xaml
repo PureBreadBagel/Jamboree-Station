@@ -31,6 +31,10 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                         <RichTextLabel Name="BlankPaperIndicator" StyleClasses="LabelSecondaryColor" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                         <RichTextLabel StyleClasses="PaperWrittenText" Name="WrittenTextLabel" VerticalAlignment="Top"/>
                         <BoxContainer Name="InputContainer" Orientation="Vertical" VerticalExpand="True" VerticalAlignment="Stretch">
+                            <BoxContainer Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 4">
+                                <Label Text="Write in:" StyleClasses="LabelSecondaryColor" VerticalAlignment="Center" Margin="0 0 4 0"/>
+                                <OptionButton Name="LanguageDropDown" MinWidth="100" />
+                            </BoxContainer>
                             <PanelContainer StyleClasses="TransparentBorderedWindowPanel" MinHeight="100"
                                 VerticalAlignment="Stretch" VerticalExpand="True" HorizontalExpand="True">
                                 <TextEdit Name="Input" StyleClasses="PaperLineEdit" Access="Public" />
@@ -38,6 +42,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                             <Label Name="FillStatus" StyleClasses="LabelSecondaryColor"/>
                         </BoxContainer>
                         <TextureButton Name="FooterImage" HorizontalAlignment="Center" VerticalAlignment="Top" MouseFilter="Ignore"/>
+                        <Label Name="LanguageLabel" StyleClasses="LabelSecondaryColor" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 4 0 0"/>
                     </BoxContainer>
                     <paper:StampCollection Name="StampDisplay" VerticalAlignment="Bottom" Margin="6"/>
 
