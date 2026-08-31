@@ -12,5 +12,3 @@
   oreEntity: MaterialBSCrystal1Unprocessed # Lavaland Change
   minOreYield: 1
   maxOreYield: 2
-- type: MiningPoints
-  miningPoints: 300
