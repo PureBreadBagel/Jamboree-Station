@@ -33,7 +33,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                         <BoxContainer Name="InputContainer" Orientation="Vertical" VerticalExpand="True" VerticalAlignment="Stretch">
                             <BoxContainer Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 4">
                                 <Label Text="Write in:" StyleClasses="LabelSecondaryColor" VerticalAlignment="Center" Margin="0 0 4 0"/>
-                                <OptionButton Name="LanguageDropDown" MinWidth="160" />
+                                <OptionButton Name="LanguageDropDown" MinWidth="100" />
                             </BoxContainer>
                             <PanelContainer StyleClasses="TransparentBorderedWindowPanel" MinHeight="100"
                                 VerticalAlignment="Stretch" VerticalExpand="True" HorizontalExpand="True">
