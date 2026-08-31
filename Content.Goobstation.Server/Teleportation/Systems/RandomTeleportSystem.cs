@@ -38,6 +38,8 @@ public sealed class RandomTeleportSystem : EntitySystem
         if (!_sharedRtp.RandomTeleport(args.User, component, out var wp))
             return;
 
+        args.Handled = true; // JAMBOREE - So the interaction system stops processing when the entity deletes lel (FATL CRASHD!)
+
         if (component.ConsumeOnUse)
         {
             if (TryComp<StackComponent>(uid, out var stack))

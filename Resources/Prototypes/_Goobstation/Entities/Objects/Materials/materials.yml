@@ -64,7 +64,7 @@
 - type: entity # Jamboree
   parent: MaterialBSCrystalGS
   id: MaterialBSCrystal3GS
-  suffix: Plural
+  suffix: 3
   components:
   - type: Stack
     count: 3
@@ -72,7 +72,7 @@
 - type: entity # Jamboree
   parent: MaterialBSCrystalGS
   id: MaterialBSCrystal5GS
-  suffix: Plural
+  suffix: 5
   components:
   - type: Stack
     count: 5

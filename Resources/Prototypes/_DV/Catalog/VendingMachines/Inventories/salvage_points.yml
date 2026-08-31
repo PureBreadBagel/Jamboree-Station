@@ -87,10 +87,10 @@
     cost: 750
   - id: WeaponProtoKineticAccelerator
     cost: 750
-  - id: SpaceCash5000
-    cost: 750
+  - id: SpaceCash1000
+    cost: 1000
   - id: SurvivalMedipen
-    cost: 800
+    cost: 1000
   - id: PKAUpgradeRange
     cost: 1000
   - id: PKAUpgradeFireRate
