@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - files:
   - ungu_ask.ogg, ungu_talk.ogg, ungu_yell.ogg # lion
   license: "CC-BY-SA-3.0"
