@@ -121,7 +121,7 @@
             #command
             Captain: [ 1, 1 ]
             NanotrasenRepresentative: [ 1, 1 ]
-            NanotrasenCareerTrainer: [ 1, 1 ]
+#            NanotrasenCareerTrainer: [ 1, 1 ]
             #service
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 1, 1 ]

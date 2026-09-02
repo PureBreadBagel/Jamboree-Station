@@ -11,7 +11,7 @@
   supervisors: job-supervisors-ntr-centcom
   canBeAntag: false
   whitelisted: true # 1984
-  setPreference: true # 1984 x2
+  setPreference: false # 1984 x2
   accessGroups:
   - AllAccess
   access:
