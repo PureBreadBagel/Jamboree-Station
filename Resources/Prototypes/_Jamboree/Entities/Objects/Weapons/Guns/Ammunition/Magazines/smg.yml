@@ -19,7 +19,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _DV/Objects/Weapons/Guns/SMGs/typewriter.rsi
+    sprite: _DV/Objects/Weapons/Guns/SMGs/typewritermagazine.rsi
     layers:
     - state: mag-0
       map: ["enum.GunVisualLayers.Base"]

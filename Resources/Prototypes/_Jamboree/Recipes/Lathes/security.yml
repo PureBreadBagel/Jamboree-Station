@@ -1,0 +1,6 @@
+﻿- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MagazineBoxMagnum22
+  result: MagazineBoxMagnum22
+  materials:
+    Steel: 200

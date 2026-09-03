@@ -444,6 +444,7 @@
     emagStaticPacks:
     - SecurityWeaponsStatic
     - SecurityAmmoStatic
+    - SecurityAmmoStaticJamboree # Jamboree - derringer ammo
     # Goobstation
     - SecurityWeaponsStaticGoob
     - SecurityAmmoStaticGoob
@@ -761,6 +762,7 @@
     - SecurityPracticeStatic
     - SecurityAmmoStatic
     - SecurityWeaponsStatic
+    - SecurityAmmoStaticJamboree # Jamboree - derringer ammo
     # Goobstation
     - SecurityAmmoStaticGoob
     - SecurityEquipmentStaticGoob
@@ -829,6 +831,7 @@
       runningState: icon
       staticPacks:
       - SecurityAmmoStatic
+      - SecurityAmmoStaticJamboree # Jamboree - derringer ammo
       # Goobstation Packs
       - SecurityAmmoStaticGoob
     - type: EmagLatheRecipes # Goobstation Packs

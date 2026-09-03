@@ -9,9 +9,9 @@
     proto: LaserRailgun
     fireCost: 700
   - type: Sprite
-    sprite: _DV/Objects/Weapons/Guns/SMGs/typewriter.rsi
+    sprite: _Jamboree/Objects/Weapons/Guns/SMGs/railguncapacitor.rsi
     layers:
-    - state: mag-0
+    - state: capacitor
       map: ["enum.GunVisualLayers.Base"]
   - type: Appearance
   - type: Tag

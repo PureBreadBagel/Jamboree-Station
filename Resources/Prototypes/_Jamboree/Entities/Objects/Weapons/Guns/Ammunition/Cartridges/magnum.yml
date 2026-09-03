@@ -1,7 +1,7 @@
 ﻿- type: entity
   id: CartridgeMagnum22
   name: cartridge (.22 magnum)
-  description: A small coin modeled after one used by an insignificant nation from the Sol system.
+  description: A small cartridge used exclusively by the derringer.
   parent: [ BaseCartridgeMagnum, BaseCommandContraband ]
   components:
   - type: Tag
