@@ -2046,3 +2046,23 @@ Entries:
       message: 'Portable scrubbers now suck up water. '
   id: 170
   time: '2026-08-31T11:17:32.0000000+00:00'
+- author: Bibble-B
+  changes:
+    - type: Tweak
+      message: >-
+        HECU operatives are now referred to as the APO (Asset Protection
+        Operative)
+    - type: Tweak
+      message: >-
+        Nonalphabetic characters are now allowed in character names roundstart!
+        Just keep in mind our RP rules!
+    - type: Add
+      message: Yowie now have a unique selection of sounds! GRAAAAGH!!!
+    - type: Add
+      message: Monkeys now have a wider variety of screams! OOK OOK OOK!!!
+    - type: Fix
+      message: >-
+        Multiple minor spelling mistakes have been corrected. Please report any
+        others you find in the discord!
+  id: 171
+  time: '2026-09-03T19:25:14.0000000+00:00'
