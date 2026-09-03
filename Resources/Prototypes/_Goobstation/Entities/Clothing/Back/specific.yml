@@ -72,7 +72,7 @@
 - type: entity
   parent: ClothingBackpackMerc
   id: ClothingBackpackMercFilledHECU
-  suffix: Filled, HECU
+  suffix: Filled, APO
   components:
   - type: StorageFill
     contents:

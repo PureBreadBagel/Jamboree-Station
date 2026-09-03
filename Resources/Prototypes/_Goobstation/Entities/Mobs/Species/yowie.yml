@@ -62,6 +62,13 @@
   - type: Metabolizer
     updateInterval: 3
   - type: BoganAccent
+  - type: Speech
+    speechSounds: Sasquatch
+  - type: Vocal
+    sounds:
+      Male: MaleYowie
+      Female: FemaleYowie
+      Unsexed: MaleYowie
   - type: Carriable
     freeHandsRequired: 4 # easiest way to make them uncarriable without removing carriable from base mob
   - type: NoWieldNeeded

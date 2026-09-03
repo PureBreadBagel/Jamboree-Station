@@ -42,8 +42,16 @@
 - type: soundCollection
   id: MonkeyScreeches
   files:
-  - /Audio/Effects/Diseases/monkey1.ogg
+#  - /Audio/Effects/Diseases/monkey1.ogg #Jamboree, is kinda funny at first but does get pretty annoying with time
   - /Audio/Effects/Diseases/monkey2.ogg
+  - /Audio/_Jamboree/Animals/Monkey/monkey_screech_1.ogg
+  - /Audio/_Jamboree/Animals/Monkey/monkey_screech_2.ogg
+  - /Audio/_Jamboree/Animals/Monkey/monkey_screech_3.ogg
+  - /Audio/_Jamboree/Animals/Monkey/monkey_screech_4.ogg
+  - /Audio/_Jamboree/Animals/Monkey/monkey_screech_5.ogg
+  - /Audio/_Jamboree/Animals/Monkey/monkey_screech_6.ogg
+  - /Audio/_Jamboree/Animals/Monkey/monkey_screech_7.ogg
+
 
 - type: soundCollection
   id: RobotBeeps
