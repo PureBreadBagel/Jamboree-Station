@@ -89,6 +89,19 @@ jobs:
             echo "No license specified in PR, using default: AGPL"
           fi
 
+      - name: Checkout PR Branch
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          HEAD_REF: ${{ github.head_ref }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -e
+
+          git remote add pr "https://x-access-token:${BOT_TOKEN}@github.com/${HEAD_REPO}.git"
+          git fetch pr "${HEAD_REF}"
+          git checkout -B pr-head "${HEAD_SHA}"
+
       - name: Fetch PR Files
         env:
           GH_TOKEN: ${{ secrets.BOT_TOKEN }}
@@ -122,28 +135,17 @@ jobs:
 
       - name: Commit changes to PR branch
         env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
-          HEAD_REF: ${{ github.head_ref }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           CHANGELOG_USER: ${{ vars.CHANGELOG_USER }}
           CHANGELOG_EMAIL: ${{ vars.CHANGELOG_EMAIL }}
+          HEAD_REF: ${{ github.head_ref }}
         run: |
           set -e
 
-          git diff > /tmp/headers.patch
-          git reset --hard
-
-          if [ ! -s /tmp/headers.patch ]; then
+          if git diff --quiet; then
             echo "No header changes to commit."
             exit 0
           fi
 
-          git remote add pr "https://x-access-token:${BOT_TOKEN}@github.com/${HEAD_REPO}.git"
-          git fetch pr "${HEAD_REF}"
-          git checkout -B pr-head "${HEAD_SHA}"
-
-          git apply --3way /tmp/headers.patch
           git add -A
           git -c user.name="${CHANGELOG_USER}" -c user.email="${CHANGELOG_EMAIL}" \
             commit -m "chore: Automatically update REUSE headers"
