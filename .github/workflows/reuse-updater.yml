@@ -146,6 +146,11 @@ jobs:
             exit 0
           fi
 
+          git remote add pr "https://x-access-token:${BOT_TOKEN}@github.com/${HEAD_REPO}.git"
+          git fetch pr "${HEAD_REF}"
+          git checkout -B pr-head "${HEAD_SHA}"
+
+          git apply -3 /tmp/headers.patch
           git add -A
           git -c user.name="${CHANGELOG_USER}" -c user.email="${CHANGELOG_EMAIL}" \
             commit -m "chore: Automatically update REUSE headers"

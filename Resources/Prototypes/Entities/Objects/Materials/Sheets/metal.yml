@@ -142,6 +142,10 @@
   - type: Stack
     stackType: Steel
     count: 1
+  - type: Butcherable # Jamboree - quarter cannon
+    spawned:
+    - id: CartridgeQuarter
+      amount: 5
 
 - type: entity
   parent: SheetSteel

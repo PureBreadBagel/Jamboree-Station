@@ -2046,3 +2046,47 @@ Entries:
       message: 'Portable scrubbers now suck up water. '
   id: 170
   time: '2026-08-31T11:17:32.0000000+00:00'
+- author: Bibble-B
+  changes:
+    - type: Tweak
+      message: >-
+        HECU operatives are now referred to as the APO (Asset Protection
+        Operative)
+    - type: Tweak
+      message: >-
+        Nonalphabetic characters are now allowed in character names roundstart!
+        Just keep in mind our RP rules!
+    - type: Add
+      message: Yowie now have a unique selection of sounds! GRAAAAGH!!!
+    - type: Add
+      message: Monkeys now have a wider variety of screams! OOK OOK OOK!!!
+    - type: Fix
+      message: >-
+        Multiple minor spelling mistakes have been corrected. Please report any
+        others you find in the discord!
+  id: 171
+  time: '2026-09-03T19:25:14.0000000+00:00'
+- author: Gorse1
+  changes:
+    - type: Fix
+      message: >-
+        Derringer ammo now has the correct description and can be made in the
+        secfab from roundstart
+    - type: Fix
+      message: >-
+        HOS railgun and quarter cannon magazines no longer have the quarter
+        cannon inhand sprites
+    - type: Add
+      message: >-
+        You can now butcher 1 steel sheet for 5 quarters (you cannot do a stack
+        of steel at once)
+  id: 172
+  time: '2026-09-04T00:08:29.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Add
+      message: >-
+        ring ring its phone time. Phones are now a thing you can call any
+        department and ANNOY THEM.
+  id: 173
+  time: '2026-09-04T20:09:40.0000000+00:00'
