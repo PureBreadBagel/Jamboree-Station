@@ -57613,8 +57613,7 @@ entities:
       pos: -48.5,-4.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 77
       - 14372
@@ -57637,8 +57636,7 @@ entities:
       pos: -58.5,4.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 14372
     - type: AtmosPipeLayers

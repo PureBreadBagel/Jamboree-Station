@@ -10959,8 +10959,7 @@ entities:
       pos: -5.5,-318.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 58
       - 57
@@ -11109,8 +11108,7 @@ entities:
       pos: -4.5,-315.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 57
   - uid: 13520
@@ -70997,8 +70995,7 @@ entities:
       pos: -3.5,-318.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 57
     - type: AtmosPipeColor
@@ -72556,8 +72553,7 @@ entities:
       pos: -4.5,-318.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 57
     - type: AtmosPipeColor
@@ -72621,8 +72617,7 @@ entities:
       pos: -25.5,-282.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 18313
   - uid: 18301
@@ -72632,8 +72627,7 @@ entities:
       pos: -24.5,-282.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 18313
 - proto: GasVolumePump

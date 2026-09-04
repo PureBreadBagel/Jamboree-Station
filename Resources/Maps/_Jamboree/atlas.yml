@@ -40967,8 +40967,7 @@ entities:
       pos: -47.5,26.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 9916
 - proto: GasVolumePump

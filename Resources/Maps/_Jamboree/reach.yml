@@ -11940,8 +11940,7 @@ entities:
       pos: -16.5,2.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 1438
     - type: AtmosPipeColor
@@ -11953,8 +11952,7 @@ entities:
       pos: -16.5,-1.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 1438
     - type: AtmosPipeColor
@@ -12263,8 +12261,7 @@ entities:
       pos: -17.5,2.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 1438
     - type: AtmosPipeColor
@@ -12276,8 +12273,7 @@ entities:
       pos: -17.5,-1.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
       deviceLists:
       - 1438
     - type: AtmosPipeColor
