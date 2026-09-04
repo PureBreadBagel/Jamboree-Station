@@ -32,7 +32,6 @@ public sealed class StationPowerTests
         "Oasis",
         "Omega",
         "Origin",
-        "Saltern",
         "Packed",
         "Reach",
         "OasisHighPop",

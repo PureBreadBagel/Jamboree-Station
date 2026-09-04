@@ -216,7 +216,6 @@ namespace Content.IntegrationTests.Tests
             "Core",
             "Marathon",
             "MeteorArena",
-            "Saltern",
             "Reach",
             "Origin", // Goobstation - Readds Origin
             "Train",

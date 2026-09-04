@@ -8218,7 +8218,6 @@ entities:
       pos: -6.185485,15.4985695
       parent: 2
     - type: Projectile
-      shooter: invalid
       weapon: 9627
       targetCoordinates: -8.269457,13.292082
     - type: Physics
@@ -28512,7 +28511,6 @@ entities:
       playLandSound: True
       landTime: 3686.432911
       thrownTime: 3686.2963137
-      thrower: invalid
 - proto: FoodPieFrosty
   entities:
   - uid: 9653
