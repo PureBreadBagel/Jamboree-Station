@@ -2066,3 +2066,19 @@ Entries:
         others you find in the discord!
   id: 171
   time: '2026-09-03T19:25:14.0000000+00:00'
+- author: Gorse1
+  changes:
+    - type: Fix
+      message: >-
+        Derringer ammo now has the correct description and can be made in the
+        secfab from roundstart
+    - type: Fix
+      message: >-
+        HOS railgun and quarter cannon magazines no longer have the quarter
+        cannon inhand sprites
+    - type: Add
+      message: >-
+        You can now butcher 1 steel sheet for 5 quarters (you cannot do a stack
+        of steel at once)
+  id: 172
+  time: '2026-09-04T00:08:29.0000000+00:00'
