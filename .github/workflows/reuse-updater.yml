@@ -143,7 +143,7 @@ jobs:
           git fetch pr "${HEAD_REF}"
           git checkout -B pr-head "${HEAD_SHA}"
 
-          git apply /tmp/headers.patch
+          git apply -3 /tmp/headers.patch
           git add -A
           git -c user.name="${CHANGELOG_USER}" -c user.email="${CHANGELOG_EMAIL}" \
             commit -m "chore: Automatically update REUSE headers"
