@@ -1,5 +1,5 @@
 
-       
+
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aidenkrz <28298836+Aidenkrz@users.noreply.github.com>
 #
@@ -46,7 +46,7 @@ jobs:
             echo "Error fetching PR files from GitHub API."
             exit 1
           fi
-          
+
           if ! echo "$PR_FILES_JSON" | jq -e . > /dev/null; then
              echo "Warning: Received empty or invalid JSON from GitHub API for PR files."
              PR_FILES="" # Set PR_FILES to empty to avoid errors below
@@ -143,7 +143,7 @@ jobs:
           git fetch pr "${HEAD_REF}"
           git checkout -B pr-head "${HEAD_SHA}"
 
-          git apply /tmp/headers.patch
+          git apply --3way /tmp/headers.patch
           git add -A
           git -c user.name="${CHANGELOG_USER}" -c user.email="${CHANGELOG_EMAIL}" \
             commit -m "chore: Automatically update REUSE headers"
