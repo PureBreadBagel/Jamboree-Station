@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/04/2026 20:40:23
-  entityCount: 12503
+  time: 09/04/2026 22:28:12
+  entityCount: 12499
 maps:
 - 1
 grids:
@@ -838,7 +838,7 @@ entities:
             2: 57344
           8,5:
             0: 4368
-            4: 17472
+            3: 17472
           1,9:
             2: 15
           2,9:
@@ -877,10 +877,10 @@ entities:
             0: 53759
           11,2:
             0: 4319
-            3: 49152
+            4: 49152
           11,3:
             0: 61457
-            3: 204
+            4: 204
           11,-1:
             0: 30583
           11,4:
@@ -892,9 +892,9 @@ entities:
             0: 28791
           12,2:
             0: 119
-            3: 28672
+            4: 28672
           12,3:
-            3: 119
+            4: 119
             0: 61440
           12,-1:
             0: 29311
@@ -1305,18 +1305,18 @@ entities:
             2: 4080
           9,5:
             5: 4368
-            3: 17472
+            4: 17472
           8,6:
             2: 34816
           9,6:
             2: 7952
           10,5:
-            3: 4368
+            4: 4368
             6: 17472
           10,6:
             2: 3840
           11,5:
-            3: 21840
+            4: 21840
           11,6:
             2: 3856
           12,5:
@@ -1512,7 +1512,7 @@ entities:
           temperature: 293.15
           moles:
           - 0
-          - 0
+          - 6666.982
           - 0
           - 0
           - 0
@@ -1531,7 +1531,7 @@ entities:
           temperature: 293.15
           moles:
           - 0
-          - 6666.982
+          - 0
           - 0
           - 0
           - 0
@@ -4417,7 +4417,7 @@ entities:
       pos: 30.5,3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -16698.076
+      secondsUntilStateChange: -16845.61
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -5048,7 +5048,7 @@ entities:
       pos: -36.5,11.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -8245.16
+      secondsUntilStateChange: -8392.693
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -28770,22 +28770,6 @@ entities:
     - type: Transform
       pos: -1.6376766,-24.290537
       parent: 2
-- proto: ClothingHeadHatWeldingMaskFlameBlue
-  entities:
-  - uid: 12312
-    components:
-    - type: Transform
-      pos: 40.28864,-29.461372
-      parent: 2
-- proto: ClothingHeadHatYellowsoft
-  entities:
-  - uid: 8780
-    components:
-    - type: Transform
-      parent: 8746
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingHeadsetGrey
   entities:
   - uid: 4547
@@ -28794,15 +28778,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 49.173836,-5.2182446
       parent: 2
-- proto: ClothingHeadsetService
-  entities:
-  - uid: 8761
-    components:
-    - type: Transform
-      parent: 8746
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingMaskBreath
   entities:
   - uid: 4548
@@ -30151,26 +30126,6 @@ entities:
     - type: Transform
       pos: -19.5,-36.5
       parent: 2
-- proto: CrateFunScurret
-  entities:
-  - uid: 8746
-    components:
-    - type: Transform
-      pos: 44.5,-28.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - invalid
-          - 8761
-          - 8780
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
 - proto: CrateFunToyBox
   entities:
   - uid: 12098
@@ -53329,6 +53284,13 @@ entities:
     - type: Transform
       pos: -10.5,-3.5
       parent: 2
+- proto: KoboldCubeBox
+  entities:
+  - uid: 8780
+    components:
+    - type: Transform
+      pos: 40.60372,-29.439611
+      parent: 2
 - proto: Lamp
   entities:
   - uid: 7999
@@ -54484,6 +54446,11 @@ entities:
     components:
     - type: Transform
       pos: -2.2246563,-33.381836
+      parent: 2
+  - uid: 8746
+    components:
+    - type: Transform
+      pos: 40.35372,-29.345861
       parent: 2
 - proto: MonkeyCubeWrapped
   entities:
@@ -67502,12 +67469,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 12454
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 42.570694,-29.504496
-      parent: 2
 - proto: VehicleKeyJanicart
   entities:
   - uid: 10075
@@ -76741,6 +76702,11 @@ entities:
       parent: 2
 - proto: WaterTankFull
   entities:
+  - uid: 8761
+    components:
+    - type: Transform
+      pos: 42.5,-27.5
+      parent: 2
   - uid: 11814
     components:
     - type: Transform
@@ -77025,11 +76991,6 @@ entities:
     - type: Transform
       pos: 51.379066,17.2747
       parent: 2
-  - uid: 12352
-    components:
-    - type: Transform
-      pos: 40.88239,-29.492622
-      parent: 2
 - proto: WelderMini
   entities:
   - uid: 11851
@@ -77085,11 +77046,6 @@ entities:
     components:
     - type: Transform
       pos: 2.5,-40.5
-      parent: 2
-  - uid: 12340
-    components:
-    - type: Transform
-      pos: 42.5,-27.5
       parent: 2
 - proto: WheatSeeds
   entities:
