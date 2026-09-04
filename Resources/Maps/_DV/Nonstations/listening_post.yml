@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/04/2026 00:51:18
-  entityCount: 1312
+  time: 09/04/2026 21:05:27
+  entityCount: 1300
 maps: []
 grids:
 - 1
@@ -800,7 +800,7 @@ entities:
       pos: -6.5,-6.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20940.297
+      secondsUntilStateChange: -21226.926
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -869,7 +869,7 @@ entities:
       pos: -2.5,-6.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20932.531
+      secondsUntilStateChange: -21219.16
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2910,16 +2910,6 @@ entities:
     - type: Emagged
 - proto: Bed
   entities:
-  - uid: 343
-    components:
-    - type: Transform
-      pos: 6.5,1.5
-      parent: 1
-  - uid: 344
-    components:
-    - type: Transform
-      pos: 6.5,3.5
-      parent: 1
   - uid: 474
     components:
     - type: Transform
@@ -2932,16 +2922,6 @@ entities:
       parent: 1
 - proto: BedsheetSyndie
   entities:
-  - uid: 347
-    components:
-    - type: Transform
-      pos: 6.5,1.5
-      parent: 1
-  - uid: 348
-    components:
-    - type: Transform
-      pos: 6.5,3.5
-      parent: 1
   - uid: 719
     components:
     - type: Transform
@@ -4198,56 +4178,6 @@ entities:
     - type: Transform
       pos: 4.607483,1.8064512
       parent: 1
-- proto: ClosetWallMixed
-  entities:
-  - uid: 388
-    components:
-    - type: MetaData
-      name: pyjama closet
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.5,2.5
-      parent: 1
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14673
-        moles:
-        - 1.8856695
-        - 7.0937095
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 389
-          - 394
-          - 395
-          - 396
-          - 397
-          - 398
-          - 390
-          - 391
-          - 392
-          - 393
-          - 399
-          - 400
 - proto: ClothingBackpackChameleon
   entities:
   - uid: 647
@@ -4291,54 +4221,6 @@ entities:
       parent: 620
     - type: Physics
       canCollide: False
-- proto: ClothingHeadPyjamaSyndicateBlack
-  entities:
-  - uid: 393
-    components:
-    - type: Transform
-      parent: 388
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 395
-    components:
-    - type: Transform
-      parent: 388
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingHeadPyjamaSyndicatePink
-  entities:
-  - uid: 396
-    components:
-    - type: Transform
-      parent: 388
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 399
-    components:
-    - type: Transform
-      parent: 388
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingHeadPyjamaSyndicateRed
-  entities:
-  - uid: 389
-    components:
-    - type: Transform
-      parent: 388
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 391
-    components:
-    - type: Transform
-      parent: 388
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingMaskGasVoiceChameleon
   entities:
   - uid: 22
@@ -4404,54 +4286,6 @@ entities:
       parent: 620
     - type: Physics
       canCollide: False
-- proto: ClothingUniformJumpsuitPyjamaSyndicateBlack
-  entities:
-  - uid: 392
-    components:
-    - type: Transform
-      parent: 388
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 397
-    components:
-    - type: Transform
-      parent: 388
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingUniformJumpsuitPyjamaSyndicatePink
-  entities:
-  - uid: 390
-    components:
-    - type: Transform
-      parent: 388
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 400
-    components:
-    - type: Transform
-      parent: 388
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingUniformJumpsuitPyjamaSyndicateRed
-  entities:
-  - uid: 394
-    components:
-    - type: Transform
-      parent: 388
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 398
-    components:
-    - type: Transform
-      parent: 388
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: CombatKnife
   entities:
   - uid: 376
@@ -4758,18 +4592,39 @@ entities:
   - uid: 590
     components:
     - type: Transform
-      pos: -2.2759314,0.8355684
-      parent: 1
-  - uid: 1157
-    components:
-    - type: Transform
-      pos: 12.806574,2.460118
+      pos: -2.626365,0.91254544
       parent: 1
   - uid: 1158
     components:
     - type: Transform
       pos: 8.119968,2.404859
       parent: 1
+- proto: EffectSpark
+  entities:
+  - uid: 343
+    components:
+    - type: Transform
+      pos: 12.5,2.5
+      parent: 1
+    - type: Physics
+      angularDamping: 0.2
+      linearDamping: 0.2
+  - uid: 347
+    components:
+    - type: Transform
+      pos: 12.5,2.5
+      parent: 1
+    - type: Physics
+      angularDamping: 0.2
+      linearDamping: 0.2
+  - uid: 389
+    components:
+    - type: Transform
+      pos: 12.5,2.5
+      parent: 1
+    - type: Physics
+      angularDamping: 0.2
+      linearDamping: 0.2
 - proto: EncryptionKeyCommand
   entities:
   - uid: 613
@@ -6194,18 +6049,6 @@ entities:
     - type: StationAiWhitelist
       enabled: False
     - type: Emagged
-- proto: HospitalCurtainsOpen
-  entities:
-  - uid: 747
-    components:
-    - type: Transform
-      pos: 6.5,3.5
-      parent: 1
-  - uid: 748
-    components:
-    - type: Transform
-      pos: 6.5,1.5
-      parent: 1
 - proto: hydroponicsTray
   entities:
   - uid: 751
@@ -6855,22 +6698,10 @@ entities:
       parent: 1
 - proto: PlushieNuke
   entities:
-  - uid: 762
-    components:
-    - type: Transform
-      pos: 6.565984,3.4567177
-      parent: 1
   - uid: 763
     components:
     - type: Transform
       pos: 16.527655,-0.5029521
-      parent: 1
-- proto: PlushieRouny
-  entities:
-  - uid: 764
-    components:
-    - type: Transform
-      pos: 6.487859,1.4254675
       parent: 1
 - proto: PosterContrabandDonk
   entities:
@@ -7093,8 +6924,27 @@ entities:
     - type: Transform
       pos: -10.5,0.5
       parent: 1
+- proto: PrinterDoc
+  entities:
+  - uid: 391
+    components:
+    - type: Transform
+      pos: 12.5,2.5
+      parent: 1
+    - type: Emagged
+      emagType: Interaction
 - proto: Rack
   entities:
+  - uid: 3
+    components:
+    - type: Transform
+      pos: 6.5,3.5
+      parent: 1
+  - uid: 390
+    components:
+    - type: Transform
+      pos: 6.5,1.5
+      parent: 1
   - uid: 777
     components:
     - type: Transform
@@ -7111,6 +6961,19 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -3.5,-5.5
+      parent: 1
+- proto: RadioHandheld
+  entities:
+  - uid: 344
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -2.36074,0.4906704
+      parent: 1
+  - uid: 388
+    components:
+    - type: Transform
+      pos: -2.220115,0.89692044
       parent: 1
 - proto: Railing
   entities:
@@ -7577,6 +7440,23 @@ entities:
     - type: Transform
       pos: 6.5,-12.5
       parent: 1
+- proto: SpawnNukeGunBot
+  entities:
+  - uid: 348
+    components:
+    - type: Transform
+      pos: 2.5,1.5
+      parent: 1
+  - uid: 383
+    components:
+    - type: Transform
+      pos: -4.5,-2.5
+      parent: 1
+  - uid: 392
+    components:
+    - type: Transform
+      pos: 10.5,2.5
+      parent: 1
 - proto: SpawnPointNukies
   entities:
   - uid: 1174
@@ -7823,27 +7703,27 @@ entities:
   - uid: 1254
     components:
     - type: Transform
-      pos: 12.159487,2.336687
+      pos: 8.322031,2.046824
       parent: 1
   - uid: 1255
     components:
     - type: Transform
-      pos: 12.159487,2.336687
+      pos: 8.306406,2.062449
       parent: 1
   - uid: 1256
     components:
     - type: Transform
-      pos: 12.159487,2.336687
+      pos: 8.337656,2.031199
       parent: 1
   - uid: 1257
     components:
     - type: Transform
-      pos: 12.159487,2.336687
+      pos: 8.353281,1.9999489
       parent: 1
   - uid: 1258
     components:
     - type: Transform
-      pos: 12.159487,2.336687
+      pos: 8.368906,2.046824
       parent: 1
   - uid: 1305
     components:
@@ -7894,13 +7774,14 @@ entities:
   - uid: 1308
     components:
     - type: Transform
-      pos: -2.6372018,0.719686
+      rot: -1.5707963267948966 rad
+      pos: 6.4976454,1.4906704
       parent: 1
   - uid: 1309
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -2.3559518,0.36031097
+      pos: 6.48001,1.2780545
       parent: 1
 - proto: TableCarpet
   entities:
@@ -8000,12 +7881,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 8.5,0.5
-      parent: 1
-  - uid: 383
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 12.5,2.5
       parent: 1
   - uid: 385
     components:
@@ -8109,21 +7984,21 @@ entities:
   - uid: 835
     components:
     - type: Transform
-      pos: 12.208444,2.8347092
+      pos: 6.478281,3.593699
       parent: 1
 - proto: ToyFigurineNukieCommander
   entities:
   - uid: 836
     components:
     - type: Transform
-      pos: 12.791773,2.838885
+      pos: 6.697031,3.734324
       parent: 1
 - proto: ToyFigurineNukieElite
   entities:
   - uid: 837
     components:
     - type: Transform
-      pos: 12.489692,2.4701266
+      pos: 6.290781,3.703074
       parent: 1
 - proto: ToyNuke
   entities:

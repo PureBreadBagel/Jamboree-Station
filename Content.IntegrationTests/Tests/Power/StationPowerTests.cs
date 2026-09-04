@@ -37,6 +37,7 @@ public sealed class StationPowerTests
         "OasisHighPop",
         "Barratry",
         "Kettle",
+        "Saltern",
         "Submarine",
         "Leonid",
         "Delta",
