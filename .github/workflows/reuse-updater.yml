@@ -1,5 +1,5 @@
 
-       
+
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aidenkrz <28298836+Aidenkrz@users.noreply.github.com>
 #
@@ -46,7 +46,7 @@ jobs:
             echo "Error fetching PR files from GitHub API."
             exit 1
           fi
-          
+
           if ! echo "$PR_FILES_JSON" | jq -e . > /dev/null; then
              echo "Warning: Received empty or invalid JSON from GitHub API for PR files."
              PR_FILES="" # Set PR_FILES to empty to avoid errors below
@@ -89,6 +89,19 @@ jobs:
             echo "No license specified in PR, using default: AGPL"
           fi
 
+      - name: Checkout PR Branch
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          HEAD_REF: ${{ github.head_ref }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -e
+
+          git remote add pr "https://x-access-token:${BOT_TOKEN}@github.com/${HEAD_REPO}.git"
+          git fetch pr "${HEAD_REF}"
+          git checkout -B pr-head "${HEAD_SHA}"
+
       - name: Fetch PR Files
         env:
           GH_TOKEN: ${{ secrets.BOT_TOKEN }}
@@ -122,19 +135,13 @@ jobs:
 
       - name: Commit changes to PR branch
         env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
-          HEAD_REF: ${{ github.head_ref }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           CHANGELOG_USER: ${{ vars.CHANGELOG_USER }}
           CHANGELOG_EMAIL: ${{ vars.CHANGELOG_EMAIL }}
+          HEAD_REF: ${{ github.head_ref }}
         run: |
           set -e
 
-          git diff > /tmp/headers.patch
-          git reset --hard
-
-          if [ ! -s /tmp/headers.patch ]; then
+          if git diff --quiet; then
             echo "No header changes to commit."
             exit 0
           fi

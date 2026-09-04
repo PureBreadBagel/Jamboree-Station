@@ -184,7 +184,7 @@
     fireCost: 50
   - type: Gun
     projectileSpeed: 10 # Goob - allows you to actually dodge the projectiles
-    fireRate: 0.5 # Goob - accounts for damage and also to be less annoying
+    fireRate: 1 # Goob - accounts for damage and also to be less annoying
     useKey: false
     selectedMode: SemiAuto
     availableModes:
@@ -210,3 +210,6 @@
               DiamondOre1Unprocessed:
                 min: 2
                 max: 3
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
