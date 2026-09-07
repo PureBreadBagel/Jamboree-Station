@@ -69,7 +69,8 @@ public sealed class GhostRespawnCommand : IConsoleCommand
 
         if (respawnResetTime is null)
         {
-            shell.WriteLine("You have no respawn timer registered. This is not supposed to happen, ask an admin to respawn you.");
+            var gameTicker = _entityManager.EntitySysManager.GetEntitySystem<GameTicker>();
+            gameTicker.Respawn(shell.Player);
             return;
         }
 
