@@ -65,16 +65,10 @@ public sealed class GhostRespawnCommand : IConsoleCommand
             return;
         }
 
-        var respawnResetTime = _entity.GetEntitySystem<RespawnSystem>().GetRespawnResetTime(shell.Player);
+         var gameTicker = _entityManager.EntitySysManager.GetEntitySystem<GameTicker>();
+        var respawnResetTime = _entity.GetEntitySystem<RespawnSystem>().GetRespawnResetTime(shell.Player) ?? _gameTiming.CurTime;
 
-        if (respawnResetTime is null)
-        {
-            var gameTicker = _entityManager.EntitySysManager.GetEntitySystem<GameTicker>();
-            gameTicker.Respawn(shell.Player);
-            return;
-        }
-
-        var time = _gameTiming.CurTime - respawnResetTime.Value;
+        var time = _gameTiming.CurTime - respawnResetTime;
         var respawnTime = _configurationManager.GetCVar(NF14CVars.RespawnTime);
 
         if (respawnTime > time.TotalSeconds)
@@ -83,7 +77,7 @@ public sealed class GhostRespawnCommand : IConsoleCommand
             return;
         }
 
-        var gameTicker = _entityManager.EntitySysManager.GetEntitySystem<GameTicker>();
+
         gameTicker.Respawn(shell.Player);
     }
 }
