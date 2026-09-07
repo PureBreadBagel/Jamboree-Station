@@ -177,7 +177,7 @@
       cable:
         whitelist:
           tags:
-          - CableCoil
+          - SheetMetalBase
 
 
 - type: entity

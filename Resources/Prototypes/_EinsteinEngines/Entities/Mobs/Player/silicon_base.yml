@@ -300,8 +300,8 @@
     - type: Puller
     - type: RMCHandEmotes #RMC
     - type: BodyEmotes
-    - type: FootprintOwner # Corvax-Next-Footprints
       soundsId: GeneralBodyEmotes
+    - type: FootprintOwner # Corvax-Next-Footprints
 #    - type: DamageVisuals
 #      thresholds: [ 10, 20, 30, 50, 70, 100 ]
 #      targetLayers:
