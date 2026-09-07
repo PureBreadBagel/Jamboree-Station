@@ -747,7 +747,7 @@
         ejectOnInteract: false
         whitelist:
           tags:
-          - SheetSteel
+          - SheetMetalBase
   - type: ContainerFill
     containers:
       battery:

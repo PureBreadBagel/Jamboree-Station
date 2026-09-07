@@ -191,7 +191,6 @@
     - SiliconMob
     - SiliconEmotes
     - CanPilot
-    - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
     - IPCDrinkBlacklist # Goobstation - Energycrit: Don't let self antagging IPCs steal power from other ipcs.
