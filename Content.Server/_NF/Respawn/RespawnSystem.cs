@@ -94,9 +94,6 @@ public sealed class RespawnSystem : EntitySystem
         {
             var respawnTime = GetRespawnResetTime(e.Session); // If player reconnects, get their OG respawn timer.
             SendRespawnResetTime(e.Session, respawnTime); // JAM Start that RESPAWN!
-
-            if (respawnTime is null)
-                ResetRespawnTime(e.Session); // JAM If player reconnects and has no respawn timer, reset their respawn timer.
         }
     }
 
