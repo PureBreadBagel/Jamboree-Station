@@ -747,7 +747,7 @@
         ejectOnInteract: false
         whitelist:
           tags:
-          - CableCoil
+          - SheetSteel
   - type: ContainerFill
     containers:
       battery:
@@ -757,6 +757,6 @@
       welder:
       - WelderMini
       cable:
-      - CableApcStack10
+      - SheetSteel10
   - type: Sprite
     state: box_silicon
