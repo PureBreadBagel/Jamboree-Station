@@ -15,15 +15,14 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 
   They are slow breathers, taking a long time before requiring internals when in a vacuum.
   They have innate, toggleable night vision.
-  They take 85% less cellular damage.
 
 
   Their unarmed claw attacks deal Slash damage instead of Blunt.
 
   Stun times from flashes are doubled.
-  They take 20% more heat damage.
-  They take 25% more shock and bloodloss damage.
-  They take 30% more radiation damage
+  They take 25% more brute damage.
+  They take 40% more heat damage.
+  They take 50% less asphyxiation damage
 
   ## Light Exposure
 

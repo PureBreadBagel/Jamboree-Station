@@ -82,8 +82,8 @@
         1: 0.45
         0: 0.00
     - type: Temperature
-      heatDamageThreshold: 450 # Another goob edit: Wanted to do 363.15 for le realism, but reptiles have 400K limit which is ????
-      coldDamageThreshold: 260
+      heatDamageThreshold: 400 # Another goob edit: Wanted to do 363.15 for le realism, but reptiles have 400K limit which is ????
+      coldDamageThreshold: 200
       currentTemperature: 310.15 # Goob note: 310K is the standard operating temperature of a home circuit breaker
       specificHeat: 42
       coldDamage:
@@ -91,9 +91,14 @@
           Cold: 0.1 #per second, scales with temperature & other constants
       heatDamage:
         types:
-          Heat: 2 #per second, scales with temperature & other constants
-      atmosTemperatureTransferEfficiency: 0.05
+          Heat: 1 #per second, scales with temperature & other constants
+      atmosTemperatureTransferEfficiency: 0.5
     - type: KillOnOverheat # Goob edit
+    - type: TemperatureSpeed
+      thresholds:
+        293: 0.8
+        280: 0.6
+        260: 0.4
     - type: Deathgasp
       prototype: SiliconDeathgasp
       needsCritical: false
@@ -198,10 +203,11 @@
       damage:
         types:
           Heat: 0 # GoobStation: Replaced fire damage with overheating shutdown
-    # - type: Barotrauma # Not particularly modifiable. In the future, some response to pressure changes would be nice.
-    #   damage:
-    #     types:
-    #       Blunt: 0.28 #per second, scales with pressure and other constants.
+    - type: Barotrauma # Not particularly modifiable. In the future, some response to pressure changes would be nice.
+      damage:
+        types:
+          Blunt: 0.50
+          Heat: 0.1 #per second, scales with pressure and other constants.
     - type: Identity
     #  soundHit:
     #    path: /Audio/Effects/metalbreak.ogg
@@ -259,6 +265,8 @@
     - type: MindContainer
       showExamineInfo: true
     - type: SSDIndicator
+    - type: Dna #Jamboree, added cause IPC be broken
+    - type: Fingerprint
     - type: CanEscapeInventory
     - type: HumanoidAppearance
       species: IPC
@@ -290,8 +298,10 @@
       deathPenalty: 0.01 # However they really ought to be living and intact, otherwise they're worth 100x less.
     - type: Pullable
     - type: Puller
+    - type: RMCHandEmotes #RMC
     - type: BodyEmotes
       soundsId: GeneralBodyEmotes
+    - type: FootprintOwner # Corvax-Next-Footprints
 #    - type: DamageVisuals
 #      thresholds: [ 10, 20, 30, 50, 70, 100 ]
 #      targetLayers:

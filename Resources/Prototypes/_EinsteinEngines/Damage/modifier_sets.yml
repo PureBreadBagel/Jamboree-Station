@@ -20,8 +20,8 @@
     Heat: 1.7
     Shock: 2
   # Goobstation
-    Radiation: 0.4
-    Ion: 0.8
+    Radiation: 0.6
+    Ion: 2
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet

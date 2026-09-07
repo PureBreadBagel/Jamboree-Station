@@ -75,6 +75,19 @@
   - type: GuideHelp
     guides:
     - ExpandingRepairingStation
+  # EE Change Start
+  #MORE than ointment Estacao Pirata IPCs
+  - type: Healing
+    delay: 1
+    damageContainers:
+    - SiliconRadiation # Goobstation - Make IPCs take radiation
+    damage:
+      types: # these are all split across multiple types
+        Heat: -4
+        Shock: -4
+        Ion: -4 # Goobstation
+        Radiation: -2.5 # Goobstation - Make IPCs take radiation
+  # EE Change End
 
 - type: entity
   parent: SheetMetalBase
