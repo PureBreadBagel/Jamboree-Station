@@ -2127,3 +2127,37 @@ Entries:
         used to instantly respawn.
   id: 175
   time: '2026-09-06T00:15:48.0000000+00:00'
+- author: Bibble-B
+  changes:
+    - type: Tweak
+      message: >-
+        IPC chassises, as agreed on by several companies, now have had
+        technology put in place that provides them both fingerprints and DNA!
+    - type: Tweak
+      message: >-
+        IPC chassises now take barotrauma damage, at a slightly better rate than
+        humans!
+    - type: Tweak
+      message: IPCs are now more affected by the cold present in the vacuum of space!
+    - type: Tweak
+      message: >-
+        IPCs now, rather than secretly taking less damage to Ion damage, take
+        more substantial amounts of Ion damage.
+    - type: Tweak
+      message: >-
+        IPCs have been refactored to use METAL SHEETS instead of CABLES to heal
+        burn damage. Emergency Boxes have been updated as well.
+    - type: Tweak
+      message: >-
+        Salvagers now are mindshielded upon round start. Visitor ones, however,
+        are not, so keep an eye out!
+    - type: Fix
+      message: >-
+        Shadowkin's Guidebook entry has been changed to be accurate to how
+        Shadowkin function in Jamboree!
+    - type: Fix
+      message: >-
+        CC Items that were meant to have armor values have had armor values
+        added!
+  id: 176
+  time: '2026-09-07T05:54:31.0000000+00:00'
