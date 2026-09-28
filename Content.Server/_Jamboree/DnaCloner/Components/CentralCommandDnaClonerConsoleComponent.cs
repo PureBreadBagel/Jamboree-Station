@@ -2,7 +2,9 @@
 // SPDX-FileCopyrightText: 2022 fishfish458 <fishfish458>
 // SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-// SPDX-FileCopyRightText: 2026 PureBreadBagel
+// SPDX-FileCopyrightText: 2026 PureBreadBagel
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 
 
