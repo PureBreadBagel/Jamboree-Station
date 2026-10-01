@@ -2250,3 +2250,9 @@ Entries:
         were unable to move.
   id: 183
   time: '2026-09-28T21:17:07.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Fix
+      message: 'You can no longer edit a paper in a language that you do not know. '
+  id: 184
+  time: '2026-10-01T20:21:36.0000000+00:00'
