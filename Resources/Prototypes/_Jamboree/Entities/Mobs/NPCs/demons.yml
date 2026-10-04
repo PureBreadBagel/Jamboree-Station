@@ -486,6 +486,7 @@
   - type: WeakToHoly
     alwaysTakeHoly: true
   - type: ZombieImmune
+  - type: Perishable
   - type: LanguageKnowledge
     speaks:
     - TauCetiBasic
