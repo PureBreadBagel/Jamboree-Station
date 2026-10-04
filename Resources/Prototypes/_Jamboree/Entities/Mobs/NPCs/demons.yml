@@ -378,7 +378,7 @@
   - BaseSimpleMob
   - MobCombat
   - MobBloodstream
-  id: MoBubblegum
+  id: MobBubblegum
   description: Sovereign of the Slaughter Demons, Hand to the Geese, and your destruction!
   components:
   - type: AnnounceOnSpawn
