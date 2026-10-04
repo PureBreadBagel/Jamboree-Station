@@ -50,6 +50,17 @@
 
 - type: entity
   parent: ClothingOuterBase
+  id: JamboreeClothingOuterSuitPharoh #Intended to be a part of the initial Jamboween updated but I missed it...
+  name: pharoh suit
+  description: Blessing of Set!
+  components:
+  - type: Sprite
+    sprite: _Jamboree/Clothing/OuterClothing/Costume/pharoh_suit.rsi
+  - type: Clothing
+    sprite: _Jamboree/Clothing/OuterClothing/Costume/pharoh_suit.rsi
+
+- type: entity
+  parent: ClothingOuterBase
   id: JamboreeClothingOuterSuitBunny
   name: bunny suit
   description: Hippity hoppity!
