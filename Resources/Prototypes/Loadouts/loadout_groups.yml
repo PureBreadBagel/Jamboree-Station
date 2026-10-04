@@ -1468,6 +1468,7 @@
 - type: loadoutGroup
   id: SalvageSpecialistHead #Jamboree
   name: loadout-group-salvage-specialist-head
+  minLimit: 0 #Jamboree, forgot to add this.
   loadouts:
   - BlackBearPelt
   - BrownBearPelt
