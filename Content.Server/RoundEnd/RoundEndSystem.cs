@@ -101,6 +101,7 @@ namespace Content.Server.RoundEnd
         public TimeSpan DefaultCountdownDuration { get; set; } = TimeSpan.FromMinutes(10);
 
         private CancellationTokenSource? _countdownTokenSource = null;
+        private CancellationTokenSource? _restartTokenSource = null;
         private CancellationTokenSource? _cooldownTokenSource = null;
         public TimeSpan? LastCountdownStart { get; set; } = null;
         public TimeSpan? ExpectedCountdownEnd { get; set; } = null;
@@ -134,6 +135,12 @@ namespace Content.Server.RoundEnd
             {
                 _cooldownTokenSource.Cancel();
                 _cooldownTokenSource = null;
+            }
+
+            if (_restartTokenSource != null)
+            {
+                _restartTokenSource.Cancel();
+                _restartTokenSource = null;
             }
 
             LastCountdownStart = null;
@@ -415,11 +422,11 @@ namespace Content.Server.RoundEnd
             if (_gameTicker.RunLevel != GameRunLevel.PostRound)
                 return;
 
-            if (_countdownTokenSource is null)
+            if (_restartTokenSource is null)
                 return;
 
-            _countdownTokenSource.Cancel();
-            _countdownTokenSource = null;
+            _restartTokenSource.Cancel();
+            _restartTokenSource = null;
             _adminLogger.Add(LogType.AdminCommands, LogImpact.High,
                 $"Round restart timer was delayed{(canceller is not null ? $" by {canceller.Name}." : ".")}");
             _chatManager.SendAdminAnnouncement(
@@ -432,8 +439,8 @@ namespace Content.Server.RoundEnd
         /// </summary>
         public void StartRestartTimer(TimeSpan? countdownTime = null)
         {
-            _countdownTokenSource?.Cancel();
-            _countdownTokenSource = new CancellationTokenSource();
+            _restartTokenSource?.Cancel();
+            _restartTokenSource = new CancellationTokenSource();
 
             countdownTime ??= TimeSpan.FromSeconds(_cfg.GetCVar(CCVars.RoundRestartTime));
             int time;
@@ -464,11 +471,38 @@ namespace Content.Server.RoundEnd
                     "round-end-system-round-restart-eta-announcement",
                     ("time", time),
                     ("units", Loc.GetString(unitsLocString))));
-            Timer.Spawn(countdownTime.Value, AfterEndRoundRestart, _countdownTokenSource.Token);
+
+            QueueRestartTimerScreens(countdownTime.Value);
+
+            Timer.Spawn(countdownTime.Value, AfterEndRoundRestart, _restartTokenSource.Token);
+        }
+
+        /// <summary>
+        /// Pushes the round restart countdown out to every shuttle timer screen, so players can
+        /// actually see how long they have left. Normally this only happens as a side effect of the
+        /// escape shuttle completing FTL, which admin-forced round ends never trigger.
+        /// </summary>
+        private void QueueRestartTimerScreens(TimeSpan countdownTime)
+        {
+            var shuttle = _shuttle.GetShuttle();
+            if (shuttle == null || !TryComp<DeviceNetworkComponent>(shuttle, out var net))
+                return;
+
+            var payload = new NetworkPayload
+            {
+                [ShuttleTimerMasks.ShuttleMap] = shuttle.Value,
+                [ShuttleTimerMasks.SourceMap] = GetStation(),
+                [ShuttleTimerMasks.DestMap] = GetCentcomm(),
+                [ShuttleTimerMasks.ShuttleTime] = countdownTime,
+                [ShuttleTimerMasks.SourceTime] = countdownTime,
+                [ShuttleTimerMasks.DestTime] = countdownTime,
+                [ScreenMasks.Text] = ShuttleTimerMasks.Bye,
+            };
+            _deviceNetworkSystem.QueuePacket(shuttle.Value, null, payload, net.TransmitFrequency);
         }
 
         public bool IsRestartTimerActive() =>
-            _gameTicker.RunLevel == GameRunLevel.PostRound && _countdownTokenSource is not null;
+            _gameTicker.RunLevel == GameRunLevel.PostRound && _restartTokenSource is not null;
 
         #endregion
     }
