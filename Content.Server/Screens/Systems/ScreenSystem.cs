@@ -111,7 +111,14 @@ public sealed class ScreenSystem : EntitySystem
             return;
 
         if (args.Data.TryGetValue(ScreenMasks.Text, out string? label) && label != null)
+        {
             text = label;
+
+            // An explicit label (BYE!/KILL) is a round-end state rather than a transient ETA/ETD,
+            // so also stash it as the fallback text. Otherwise it is wiped the moment the
+            // countdown hits zero and the screen reverts to the last comms broadcast.
+            _appearanceSystem.SetData(uid, TextScreenVisuals.DefaultText, label);
+        }
 
         _appearanceSystem.SetData(uid, TextScreenVisuals.ScreenText, text);
         _appearanceSystem.SetData(uid, TextScreenVisuals.TargetTime, _gameTiming.CurTime + duration);
