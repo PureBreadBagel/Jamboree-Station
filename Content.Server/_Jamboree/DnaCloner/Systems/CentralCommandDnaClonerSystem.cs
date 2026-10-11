@@ -25,11 +25,13 @@ using Content.Shared.DeviceLinking.Events;
 using Content.Shared.Examine;
 using Content.Shared.Forensics.Components;
 using Content.Shared.Ghost;
+using Content.Server.Ghost;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Power;
+using Content.Shared.Roles;
 using Content.Shared.UserInterface;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
@@ -62,6 +64,7 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
         [Dependency] private readonly ChatSystem _chat = default!;
         [Dependency] private readonly MaterialStorageSystem _material = default!;
         [Dependency] private readonly TraitSystem _traits = default!;
+        [Dependency] private readonly SharedRoleSystem _roles = default!;
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly ILogManager _log = default!; //JAMBOREE  I HATE API SLOP!!!!
@@ -298,6 +301,19 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             if (mind.CharacterName == null
                 || mind.UserId == null
                 || !_players.ValidSessionId(mind.UserId.Value))
+            {
+                return false;
+            }
+
+            // A player can have more than one mind i found out...
+            if (!_mind.TryGetMind(mind.UserId.Value, out var activeMindId, out var activeMind)
+                || activeMind != mind)
+            {
+                return false;
+            }
+
+            // A player who pressed Observe instead of ever taking a job never had a body to lose.
+            if (_roles.MindHasRole<ObserverRoleComponent>(activeMindId.Value))
             {
                 return false;
             }
