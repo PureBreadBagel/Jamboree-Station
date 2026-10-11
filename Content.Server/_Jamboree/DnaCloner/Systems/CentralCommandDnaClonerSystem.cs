@@ -352,7 +352,7 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
                 // Still in a live body. Lol.
                 MindSituation.LiveBody => false,
 
-                // J Owns a ghost directly and the game has already sealed it off. Nothing to come back to.
+               // you get. NO BODY RETURNING PRIVLIGES
                 MindSituation.GhostOwned => !CanReturnToBody(mind.OwnedEntity),
 
                 //  Round removed lmao
