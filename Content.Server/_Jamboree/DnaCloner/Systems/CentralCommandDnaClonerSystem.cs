@@ -72,16 +72,8 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
         [Dependency] private readonly IGameTiming _timing = default!;
         private ISawmill _sawmill = default!;
 
-        //  Short lived cache for the mind canditates ig
-        private List<CentralCommandDnaClonerMindRow>? _cachedCandidates;
-        private TimeSpan _candidatesBuiltAt;
-
         // How long the body stays in the vat once they are getting synthd.
-
         public static readonly TimeSpan SynthesisTime = TimeSpan.FromSeconds(10);
-
-        //  How long a scanned candidate list is reused before it is rebuilt.
-        private static readonly TimeSpan CandidateCacheDuration = TimeSpan.FromSeconds(1);
 
         public override void Initialize()
         {
@@ -284,23 +276,15 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
 
         private List<CentralCommandDnaClonerMindRow> GetRespawnableMinds(int rottenBodyStage)
         {
-            var now = _timing.CurTime;
-
-            // JAMBOREE Reuse the last scan if it is still fresh enough. A Scan is basically just the elligable minds in a list that can be DNA'd
-            if (_cachedCandidates is not null && now - _candidatesBuiltAt < CandidateCacheDuration)
-                return _cachedCandidates;
-
             var nameQuery = EntityQueryEnumerator<MindComponent>();
             var names = new List<CentralCommandDnaClonerMindRow>();
 
             while (nameQuery.MoveNext(out var mindEntity, out var mindComp))
             {
-
                 var situation = ClassifyMind(mindComp, rottenBodyStage);
 
                 if (!IsRespawnable(mindComp, situation))
                     continue;
-
                 // JAMBOREE the EntityUid is translated into a NetEntity so the client can send it back on click.
                 names.Add(new CentralCommandDnaClonerMindRow(
                     GetNetEntity(mindEntity),
@@ -309,8 +293,6 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             }
 
             names.Sort((a, b) => string.CompareOrdinal(a.Name, b.Name));
-            _cachedCandidates = names;
-            _candidatesBuiltAt = now;
             _sawmill.Debug($"Found {names.Count} candidate minds.");
             return names;
         }
@@ -441,63 +423,82 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
 
         // JAMBOREE - THIS IS WHERE WE BRING BACK THE BODIES FROM ROUND REMOVAL!!!
         private void OnRespawnRequested(EntityUid uid, CentralCommandDnaClonerConsoleComponent component, CentralCommandDnaClonerRespawnMessage args)
+{
+    var mind = GetEntity(args.Mind);
+    if (!TryComp<MindComponent>(mind, out var mindComp) || !IsRespawnable(mindComp, component.RottenBodyStage))
+    {
+        Speak(uid, "centralcommand-dnacloner-invalid-target");
+        UpdateUserInterface(uid, component);
+        return;
+    }
+    var status = GetStatus(component);
+    if (component.DnaClonerVat is not { } vat)
+    {
+        Speak(uid, "centralcommand-dnacloner-unavailable", CentralCommandDnaClonerStatus.NoVat);
+        UpdateUserInterface(uid, component);
+        return;
+    }
+
+    if (!TryComp<CentralCommandDnaClonerVatComponent>(vat, out var vatComp))
+        return;
+
+    lock (vatComp.RespawnLock)
+    {
+
+        // ITS LOCKING TIME!
+        if (!_power.IsPowered(uid))
         {
-            var mind = GetEntity(args.Mind);
-            if (!TryComp<MindComponent>(mind, out var mindComp) || !IsRespawnable(mindComp, component.RottenBodyStage))
-            {
-                Speak(uid, "centralcommand-dnacloner-invalid-target"); // if somehow they get revived the moment you click the button. Highly unlikely but possible.
-                UpdateUserInterface(uid, component);
-                return;
-            }
-
-            if (!_power.IsPowered(uid))
-            {
-                Speak(uid, "centralcommand-dnacloner-unpowered"); //JAMBOREE basically say I AM DEAD if no power. rip.
-                UpdateUserInterface(uid, component);
-                return;
-            }
-
-            var status = GetStatus(component);
-            if (status != CentralCommandDnaClonerStatus.Ready)
-            {
-                Speak(uid, "centralcommand-dnacloner-unavailable", status); // if its not ready then say why
-                UpdateUserInterface(uid, component);
-                return;
-            }
-
-            var vat = component.DnaClonerVat!.Value;
-            if (!TryComp<CentralCommandDnaClonerVatComponent>(vat, out var vatComp)
-                || !TryGetVatContainer(vat, out var container))
-            {
-                Speak(uid, "centralcommand-dnacloner-failed");
-                UpdateUserInterface(uid, component);
-                return;
-            }
-
-            // JAMBOREE - Read what became of the old body BEFORE the synthesis. So i can get its comps back n that.
-            var name = mindComp.CharacterName!;
-            var success = GetBodyState(ClassifyMind(mindComp, component.RottenBodyStage)) switch
-            {
-                CentralCommandDnaClonerBodyState.Lost => "centralcommand-dnacloner-success-recovered",
-                CentralCommandDnaClonerBodyState.Rotted => "centralcommand-dnacloner-success-rotted",
-                _ => "centralcommand-dnacloner-success",
-            };
-
-            if (!TrySnatchBack(mind, mindComp, vat, vatComp, container, out var body))
-            {
-                Speak(uid, "centralcommand-dnacloner-failed");
-                UpdateUserInterface(uid, component);
-                return;
-            }
-
-            _adminLogger.Add(LogType.Mind,
-                LogImpact.High,
-                $"{ToPrettyString(uid):entity} synthesized {mindComp.CharacterName:characterName} " +
-                $"{ToPrettyString(mind):mind} into {ToPrettyString(body.Value):body}.");
-
-            Speak(uid, success, name: name);
+            Speak(uid, "centralcommand-dnacloner-unpowered");
             UpdateUserInterface(uid, component);
+            return;
         }
+
+
+        if (status != CentralCommandDnaClonerStatus.Ready)
+        {
+            Speak(uid, "centralcommand-dnacloner-unavailable", status);
+            UpdateUserInterface(uid, component);
+            return;
+        }
+
+        if (!TryGetVatContainer(vat, out var container))
+        {
+            Speak(uid, "centralcommand-dnacloner-failed");
+            UpdateUserInterface(uid, component);
+            return;
+        }
+
+
+        if(GetBiomass(vat, vatComp) < vatComp.MaterialCost)
+                {
+                    Speak(uid, "centralcommand-dnacloner-unavailable", CentralCommandDnaClonerStatus.InsufficientBiomass);
+                    UpdateUserInterface(uid, component);
+                    return;
+
+                }
+
+        var success = GetBodyState(ClassifyMind(mindComp, component.RottenBodyStage)) switch
+        {
+            CentralCommandDnaClonerBodyState.Lost => "centralcommand-dnacloner-success-recovered",
+            CentralCommandDnaClonerBodyState.Rotted => "centralcommand-dnacloner-success-rotted",
+            _ => "centralcommand-dnacloner-success",
+        };
+
+        if (!TrySnatchBack(mind, mindComp, vat, vatComp, container, out var body))
+        {
+            Speak(uid, "centralcommand-dnacloner-failed");
+            UpdateUserInterface(uid, component);
+            return;
+        }
+
+        _adminLogger.Add(LogType.Mind, LogImpact.High,
+            $"{ToPrettyString(uid):entity} synthesized {mindComp.CharacterName:characterName} " +
+            $"{ToPrettyString(mind):mind} into {ToPrettyString(body.Value):body}.");
+
+        Speak(uid, success, name: mindComp.CharacterName!);
+        UpdateUserInterface(uid, component);
+    }
+}
 
         // JAMBOREE - Has the console announce things inits own language n stuff.
 

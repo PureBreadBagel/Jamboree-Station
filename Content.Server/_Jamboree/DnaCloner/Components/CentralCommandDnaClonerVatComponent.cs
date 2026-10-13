@@ -28,5 +28,7 @@ namespace Content.Server._Jamboree.DnaCloner.Components
 
         [ViewVariables]
         public EntityUid? ConnectedConsole;
+
+        public readonly object RespawnLock = new(); // Respawn lock for the 3 checks in CCDnaClonerSystem.cs
     }
 }
