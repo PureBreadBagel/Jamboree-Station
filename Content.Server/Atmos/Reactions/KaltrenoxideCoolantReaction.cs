@@ -36,10 +36,6 @@ public sealed partial class KaltrenoxideCoolantReaction : IGasReactionEffect
 
         var reacted = false;
 
-        var kaltStart = mixture.GetMoles(Gas.Kaltrenoxide);
-        if (kaltStart <= 0f)
-            return ReactionResult.NoReaction;
-
         // Kaltrenoxide is stable inside sealed canisters and pipe nets, so nothing changes there.
         if (holder is GasCanisterComponent or IPipeNet)
             return ReactionResult.NoReaction;
@@ -58,8 +54,7 @@ public sealed partial class KaltrenoxideCoolantReaction : IGasReactionEffect
             }
         }
 
-        var passiveDecay = MathF.Min(
-            kaltStart,
+        var passiveDecay = MathF.Min(mixture.GetMoles(Gas.Kaltrenoxide),
             PassiveDecayPerSecond * reactionDelta);
 
         if (passiveDecay > 0f)

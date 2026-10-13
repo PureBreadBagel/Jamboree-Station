@@ -33,10 +33,6 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
 
         var reacted = false;
 
-        var infernazimStart = mixture.GetMoles(Gas.Infernazim);
-        if (infernazimStart <= 0f)
-            return ReactionResult.NoReaction;
-
         // Infernazim is stable inside sealed canisters and pipe nets, so nothing changes there.
         if (holder is GasCanisterComponent or IPipeNet)
             return ReactionResult.NoReaction;
@@ -51,13 +47,12 @@ public sealed partial class InfernazimHeatReaction : IGasReactionEffect
             var catalystFactor = MathF.Min(1f, catalyst / 5f);
 
             // Wow, this is a lot of math. This is calculating how much Infernazim will be converted to Water Vapor and Kaltrenoxide based on how much Oxygen and Kaltrenoxide is present. The more Oxygen and Kaltrenoxide, the more Infernazim will be converted.
-            var converted = MathF.Min(
-                infernazimStart,
+            var converted = MathF.Min(mixture.GetMoles(Gas.Infernazim),
                 catalyst * ConversionPerSecond * reactionDelta * catalystFactor);
 
             if (converted > 0f)
             {
-                mixture.AdjustMoles(Gas.Infernazim, -converted); // Remove Infernazim from the mixture because it hates OXYGEN, but hates Kaltrenoxide more.
+                mixture.AdjustMoles(Gas.Infernazim, - converted); // Remove Infernazim from the mixture because it hates OXYGEN, but hates Kaltrenoxide more.
                 mixture.AdjustMoles(Gas.WaterVapor, converted);
 
                 // Remove Kaltrenoxide from the mixture because Infernazim hates it more than Oxygen.
