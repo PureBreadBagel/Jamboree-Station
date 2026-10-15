@@ -67,9 +67,6 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     HorizontalAlignment="Center" />
             <Control Name="AdminPanel" Visible="False">
                 <BoxContainer Orientation="Vertical">
-                    <Label Text="Admin"
-                           HorizontalAlignment="Center"
-                           StyleClasses="LabelSubText" />
                     <LineEdit Name="ReagentIdEdit"
                               Access="Public"
                               PlaceHolder="Reagent ID (e.g. Blood)" />

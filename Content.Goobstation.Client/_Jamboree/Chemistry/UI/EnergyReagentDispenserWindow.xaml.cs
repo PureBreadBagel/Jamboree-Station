@@ -75,7 +75,11 @@ namespace Content.Goobstation.Client._Jamboree.Chemistry.UI
             RobustXamlLoader.Load(this);
             IoCManager.InjectDependencies(this);
 
-            AdminToggle.OnToggled += _ => AdminPanel.Visible = AdminToggle.Pressed;
+            AdminToggle.OnToggled += _ =>
+            {
+                AdminPanel.Visible = AdminToggle.Pressed;
+                ApplyEditVisibility();
+            };
             ApplyEditButton.OnPressed += _ => ApplyEdit(Remove: false);
             RemoveEditButton.OnPressed += _ => ApplyEdit(Remove: true);
         }
