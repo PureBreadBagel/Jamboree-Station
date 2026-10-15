@@ -78,6 +78,17 @@ namespace Content.Goobstation.Shared._Jamboree.Chemistry
 
     }
 
+
+    // The Admin Edit Solutions...
+    [Serializable, NetSerializable]
+    public sealed class EnergyReagentDispenserEditReagentMessage(string reagentId, float newCost) : BoundUserInterfaceMessage
+    {
+
+
+        public readonly string ReagentId = reagentId;
+
+        public readonly float NewCost = newCost;
+    }
     public enum EnergyReagentDispenserDispenseAmount
     {
         U1 = 1,

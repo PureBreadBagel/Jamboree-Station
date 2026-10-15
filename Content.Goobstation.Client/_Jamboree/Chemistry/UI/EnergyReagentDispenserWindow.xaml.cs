@@ -68,10 +68,50 @@ namespace Content.Goobstation.Client._Jamboree.Chemistry.UI
         private float _lastBatteryCharge = -1;
         private bool _cardsNeedUpdate = true;
         public event Action<string>? OnDispenseReagentButtonPressed;
+        /// <summary>Raised when the admin applies an edit. Args are (reagentId, newCost).</summary>
+        public event Action<string, float>? OnEditReagentButtonPressed;
         public EnergyReagentDispenserWindow()
         {
             RobustXamlLoader.Load(this);
             IoCManager.InjectDependencies(this);
+
+            AdminToggle.OnToggled += _ => AdminPanel.Visible = AdminToggle.Pressed;
+            ApplyEditButton.OnPressed += _ => ApplyEdit(Remove: false);
+            RemoveEditButton.OnPressed += _ => ApplyEdit(Remove: true);
+        }
+
+
+        private void ApplyEdit(bool Remove)
+        {
+            var reagentId = ReagentIdEdit.Text?.Trim();
+            if (string.IsNullOrEmpty(reagentId))
+            {
+                Reply("client: empty reagent id, nothing sent");
+                return;
+            }
+
+            var cost = -1f;
+            if (!Remove)
+            {
+                // float.TryParse keeps junk text from silently becoming 0J/u.
+                if (!float.TryParse(CostEdit.Text, out cost) || cost < 0f)
+                {
+                    Reply($"client: '{CostEdit.Text}' is not a number, nothing sent");
+                    return;
+                }
+            }
+
+            OnEditReagentButtonPressed?.Invoke(reagentId, cost);
+        }
+
+        /// <summary>
+        ///     Deliberately the same wording style as the server's Reply helper, but tagged
+        ///     "(client)" so a missing server reply can be told apart from a missing send.
+        /// </summary>
+        private void Reply(string text)
+        {
+            var lbl = new Label { Text = text, StyleClasses = { "LabelSubText" } };
+            ContainerInfo.Children.Add(lbl);
         }
         public void UpdateReagentsList(List<EnergyReagentInventoryItem> inventory)
         {
@@ -85,10 +125,31 @@ namespace Content.Goobstation.Client._Jamboree.Chemistry.UI
                          .Select(item => new EnergyReagentCardControl(item)))
             {
                 card.OnPressed += OnDispenseReagentButtonPressed;
+                card.OnEditPressed += LoadReagentIntoEditor;
                 ReagentList.Children.Add(card);
             }
             _cardsNeedUpdate = true;
             UpdateCardStates();
+            ApplyEditVisibility();
+        }
+
+        private void LoadReagentIntoEditor(string reagentId)
+        {
+            AdminToggle.Pressed = true;
+            AdminPanel.Visible = true;
+            ReagentIdEdit.Text = reagentId;
+            CostEdit.Text = string.Empty;
+        }
+
+
+        private void ApplyEditVisibility()
+        {
+            var admin = AdminToggle.Pressed;
+            foreach (var child in ReagentList.Children)
+            {
+                if (child is EnergyReagentCardControl card)
+                    card.SetEditVisible(admin);
+            }
         }
 
         public void UpdateState(BoundUserInterfaceState message)
