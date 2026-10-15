@@ -15,5 +15,7 @@ public sealed record SharedRMCPatronTier(
     bool GhostParticles, // Goob - ghost cosmetics
     bool LobbyMessage,
     bool RoundEndShoutout,
-    string Tier
+    bool OocIcons, // Goob - ooc icon selection
+    string Tier,
+    ProtoId<OocIconPrototype>? Icon
 );

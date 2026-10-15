@@ -758,19 +758,6 @@
   - RedGloves
 
 - type: loadoutGroup
-  id: MimeShoes
-  name: loadout-group-mime-shoes
-  minLimit: 1
-  maxLimit: 1
-  loadouts:
-  - WhiteShoes
-  - BlackShoes
-  - RedShoes
-  - LaceupShoes
-
-# Assistant
-
-- type: loadoutGroup
   id: AssistantEnvirohelm
   name: loadout-group-assistant-envirohelm
   minLimit: 1
@@ -1763,3 +1750,27 @@
   - JeansBrown #DV
   - LostTourist #DV
   - RatKingShirt #Nyanotrasen
+
+- type: loadoutGroup
+  id: SalvageSpecialistJumpsuit
+  name: loadout-group-salvage-specialist-jumpsuit
+  loadouts:
+  - SalvageSpecialistJumpsuit
+  - SalvageSpecialistJumpskirt
+  - SalvageSpecialistOveralls
+  - SalvageSpecialistMJ
+
+- type: loadoutGroup
+  id: ShaftMinerJobTrinkets
+  name: loadout-group-jobtrinkets
+  loadouts:
+  - LizardPlushieShaftMiner
+
+- type: loadoutGroup
+  id: ShaftMinerJumpsuit
+  name: loadout-group-shaft-miner-jumpsuit
+  loadouts:
+  - ShaftMinerJumpsuit
+  - ShaftMinerJumpskirt
+  - ShaftMinerOveralls
+  - ShaftMinerMJ

@@ -47,6 +47,24 @@ public sealed partial class AnomalySystem : SharedAnomalySystem
 
     private static readonly ProtoId<WeightedRandomPrototype> WeightListProto = "AnomalyBehaviorList";
 
+    public AnomalyStabilityVisuals GetStabilityVisualOrStable(Entity<AnomalyComponent> anomaly)
+    {
+        if (anomaly.Comp.Stability <= anomaly.Comp.DecayThreshold)
+            return AnomalyStabilityVisuals.Decaying;
+
+        if (anomaly.Comp.Stability >= anomaly.Comp.GrowthThreshold)
+            return AnomalyStabilityVisuals.Growing;
+
+        return AnomalyStabilityVisuals.Stable;
+    }
+
+    public AnomalyStabilityVisuals GetStabilityVisualOrStable(EntityUid uid)
+    {
+        return TryComp<AnomalyComponent>(uid, out var anomaly)
+            ? GetStabilityVisualOrStable((uid, anomaly))
+            : AnomalyStabilityVisuals.Stable;
+    }
+
     /// <inheritdoc/>
     public override void Initialize()
     {

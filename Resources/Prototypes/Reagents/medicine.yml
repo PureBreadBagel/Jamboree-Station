@@ -373,12 +373,12 @@
         amount: 0.04
       - !type:HealthChange
         conditions:
-          - !type:OrganType # Starlight
-            type: Resomi
-            shouldHave: false
-          - !type:OrganType
-            type: Avali
-            shouldHave: false
+          - !type:MetabolizerTypeCondition # Starlight
+            type: [Resomi]
+            inverted: true
+          - !type:MetabolizerTypeCondition
+            type: [Avali]
+            inverted: true
         damage:
           types:
             Asphyxiation: -1
@@ -403,9 +403,9 @@
         time: 12
       - !type:HealthChange #Starlight start
         conditions:
-          - !type:OrganType
-            type: Resomi
-            shouldHave: true
+          - !type:MetabolizerTypeCondition
+            type: [Resomi]
+            inverted: false
         damage:
           types:
             Poison: 1.5 #Avali and Resomi blood is ammonia based, so chems made to treat normal bloodloss poison them instead (Lethal Dose: 20u)
@@ -413,9 +413,9 @@
             Bloodloss: 1
       - !type:HealthChange
         conditions:
-          - !type:OrganType
-            type: Avali
-            shouldHave: true
+          - !type:MetabolizerTypeCondition
+            type: [Avali]
+            inverted: false
         damage:
           types:
             Poison: 1.5 #Avali and Resomi blood is ammonia based, so chems made to treat normal bloodloss poison them instead (Lethal Dose: 20u)
@@ -444,12 +444,12 @@
         amount: 0.1
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Resomi
-          shouldHave: false
-        - !type:OrganType
-          type: Avali
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [Resomi]
+          inverted: true
+        - !type:MetabolizerTypeCondition
+          type: [Avali]
+          inverted: true
         damage:
           types:
             Asphyxiation: -3.5
@@ -487,9 +487,9 @@
         time: 12
       - !type:HealthChange #Starlight start
         conditions:
-        - !type:OrganType
-          type: Resomi
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [Resomi]
+          inverted: false
         damage:
           types:
             Poison: 2.5 #Avali and Resomi blood is ammonia based, so chems made to treat normal bloodloss poison them instead. Dex+ is worse. (Lethal Dose: 15u)
@@ -497,9 +497,9 @@
             Bloodloss: 1
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Avali
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [Avali]
+          inverted: false
         damage:
           types:
             Poison: 2.5 #Avali and Resomi blood is ammonia based, so chems made to treat normal bloodloss poison them instead. Dex+ is worse. (Lethal Dose: 15u)
@@ -1001,53 +1001,53 @@
       effects:
         - !type:HealthChange # Starlight start
           conditions:
-          - !type:OrganType
-            type: Resomi
-            shouldHave: true
+          - !type:MetabolizerTypeCondition
+            type: [Resomi]
+            inverted: false
           damage:
             types:
               Caustic: 2 # 30 damage per unit was ridiculous, but I'm leaving some damage to punish mistakes without risking round removal. Adding salt to water shouldn't suddenly make it the strongest toxin in the game by far.
               Heat: 2
         - !type:HealthChange
           conditions:
-          - !type:OrganType
-            type: Avali
-            shouldHave: true
+          - !type:MetabolizerTypeCondition
+            type: [Avali]
+            inverted: false
           damage:
             types:
               Caustic: 2 # 30 damage per unit was ridiculous, but I'm leaving some damage to punish mistakes without risking round removal. Adding salt to water shouldn't suddenly make it the strongest toxin in the game by far.
               Heat: 2 # Starlight end
         - !type:ModifyBloodLevel
           conditions:
-          - !type:OrganType # Startlight start
-            type: Resomi
-            shouldHave: false
-          - !type:OrganType
-            type: Avali
-            shouldHave: false # Starlight end
+          - !type:MetabolizerTypeCondition # Startlight start
+            type: [Resomi]
+            inverted: true
+          - !type:MetabolizerTypeCondition
+            type: [Avali]
+            inverted: true # Starlight end
           amount: 12 # Goobstation - buffed by two times due to shitmed changes
         - !type:SatiateThirst
           conditions: # DeltaV nerf of saline for Feroxi
-          - !type:OrganType
-            type: Resomi
-            shouldHave: false
-          - !type:OrganType
-            type: Avali
-            shouldHave: false
-          - !type:OrganType
-            type: Feroxi
-            shouldHave: false
+          - !type:MetabolizerTypeCondition
+            type: [Resomi]
+            inverted: true
+          - !type:MetabolizerTypeCondition
+            type: [Avali]
+            inverted: true
+          - !type:MetabolizerTypeCondition
+            type: [Feroxi]
+            inverted: true
           factor: 6
         - !type:SatiateThirst # DeltaV nerf of saline for Feroxi
           conditions:
-          - !type:OrganType
-            type: Resomi
-            shouldHave: false
-          - !type:OrganType
-            type: Avali
-            shouldHave: false
-          - !type:OrganType
-            type: Feroxi
+          - !type:MetabolizerTypeCondition
+            type: [Resomi]
+            inverted: true
+          - !type:MetabolizerTypeCondition
+            type: [Avali]
+            inverted: true
+          - !type:MetabolizerTypeCondition
+            type: [Feroxi]
           factor: 2
 
 

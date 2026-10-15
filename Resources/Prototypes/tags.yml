@@ -1632,3 +1632,12 @@
 ## Y ##
 ## Z ##
 # ALPHABETICAL
+
+- type: Tag
+  id: DrinkGlass
+
+- type: Tag
+  id: TaserImmune
+
+- type: Tag
+  id: GreenGloves

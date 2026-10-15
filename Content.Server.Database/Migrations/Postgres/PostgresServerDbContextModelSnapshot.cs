@@ -1634,6 +1634,18 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("boolean")
                         .HasColumnName("ghost_color");
 
+                    b.Property<bool>("GhostCosmetics")
+                        .HasColumnType("boolean")
+                        .HasColumnName("ghost_cosmetics");
+
+                    b.Property<bool>("GhostParticles")
+                        .HasColumnType("boolean")
+                        .HasColumnName("ghost_particles");
+
+                    b.Property<string>("Icon")
+                        .HasColumnType("text")
+                        .HasColumnName("icon");
+
                     b.Property<bool>("LobbyMessage")
                         .HasColumnType("boolean")
                         .HasColumnName("lobby_message");

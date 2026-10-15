@@ -21,3 +21,31 @@
               doAfter: 1
     - node: toygrenade
       entity: GrenadeToy
+
+- type: constructionGraph
+  id: ToyMansusGrasp
+  graph:
+  - node: start
+    edges:
+    - to: toymansusgrasp
+      steps:
+      - tag: Igniter
+        icon:
+          sprite: Objects/Devices/igniter.rsi
+          state: icon
+        name: construction-graph-tag-igniter
+        doAfter: 1
+      - tag: CrayonGreen
+        icon:
+          sprite: Objects/Fun/crayons.rsi
+          state: green
+        name: construction-graph-tag-green-crayon
+        doAfter: 1
+      - tag: GreenGloves
+        icon:
+          sprite: Clothing/Hands/Gloves/Color/color.rsi
+          state: icon
+        name: construction-graph-tag-green-gloves
+        doAfter: 1
+  - node: toymansusgrasp
+    entity: ToyMansusGrasp

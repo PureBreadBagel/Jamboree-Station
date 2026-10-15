@@ -101,7 +101,7 @@
   - type: FlavorProfile
     flavors:
       - ants
-  - type: Food
+  - type: Edible
   - type: SolutionContainerManager
     solutions:
       food:

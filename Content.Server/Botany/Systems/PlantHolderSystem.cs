@@ -31,7 +31,6 @@ using Content.Shared.Database;
 using Content.Shared.EntityEffects;
 using Content.Shared.Kitchen.Components;
 using Content.Shared.Labels.Components;
-using Content.Shared.Labels.Components;
 
 namespace Content.Server.Botany.Systems;
 

@@ -1459,3 +1459,15 @@
   components:
   - type: Sprite
     state: plainwhite-vinyl-sleeve
+
+- type: entity
+  name: "vinyl disk: fart elise"
+  id: VinylDiskLightRed
+  description: it's not pink, it's a lightish red.
+  parent: BaseVinylDisk
+  components:
+  - type: Sprite
+    state: lightishred-vinyl-disk
+  - type: Vinyl
+    song:
+      path: /Audio/_Goobstation/RadioStation/music/goonstation/fart_elise.ogg

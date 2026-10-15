@@ -40,6 +40,7 @@ public sealed partial class CrayonComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool DeleteEmpty = true;
+
 }
 
 /// <summary>

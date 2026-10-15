@@ -1,4 +1,4 @@
-﻿# Job-specific trinkets
+# Job-specific trinkets
 
 - type: loadout
   id: LizardPlushieCaptain
@@ -356,18 +356,6 @@
   storage:
     back:
     - PlushieLizardJobSecurityofficer
-
-- type: loadout
-  id: SecStar
-  effects:
-    - !type:JobRequirementLoadoutEffect
-      requirement:
-        !type:DepartmentTimeRequirement
-        department: Security
-        time: 100h
-  storage:
-    back:
-    - Dinkystar
 
 - type: loadout
   id: LizardPlushieSecurityCadet

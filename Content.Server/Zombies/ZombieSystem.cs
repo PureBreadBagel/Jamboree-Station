@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.NPC.Prototypes;
+using Content.Shared.Damage.Components;
 using Content.Server.Actions;
 using Content.Server.Body.Systems;
 using Content.Server.Chat;

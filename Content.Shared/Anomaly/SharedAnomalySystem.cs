@@ -472,7 +472,7 @@ public abstract class SharedAnomalySystem : EntitySystem
         var amount = (int) MathF.Round(MathHelper.Lerp(settings.MinAmount + minAmountOffset, settings.MaxAmount + maxAmountOffset, severity * stability * powerModifier) + 0.5f);
 
         var localpos = xform.Coordinates.Position;
-        var tilerefs = grid.GetLocalTilesIntersecting(
+        var tilerefs = _map.GetLocalTilesIntersecting(xform.GridUid.Value, grid,
             new Box2(localpos + new Vector2(-settings.MaxRange, -settings.MaxRange), localpos + new Vector2(settings.MaxRange, settings.MaxRange))).ToList();
 
         if (tilerefs.Count == 0)
@@ -498,7 +498,7 @@ public abstract class SharedAnomalySystem : EntitySystem
             if (!settings.CanSpawnOnEntities)
             {
                 var valid = true;
-                foreach (var ent in grid.GetAnchoredEntities(tileref.GridIndices))
+                foreach (var ent in _map.GetAnchoredEntities(xform.GridUid.Value, grid, tileref.GridIndices))
                 {
                     if (!physQuery.TryGetComponent(ent, out var body))
                         continue;

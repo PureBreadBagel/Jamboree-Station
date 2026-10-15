@@ -15,9 +15,7 @@ using Content.Shared.Radio.Components;
 using Content.Shared.Radio.EntitySystems;
 using Content.Shared.Speech;
 using Content.Shared.Speech.Components;
-using Content.Shared.Chat;
 using Content.Shared.Power.EntitySystems;
-using Content.Shared.Radio.Components;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Radio.EntitySystems;

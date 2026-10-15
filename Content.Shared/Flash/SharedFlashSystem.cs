@@ -25,12 +25,8 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
-using System.Linq;
 using Content.Goobstation.Common.Flash;
 using Content.Shared.Mobs.Components; // Goobstation
-using Content.Shared.Movement.Systems;
-using Content.Shared.Random.Helpers;
-using Content.Shared.Clothing.Components;
 
 namespace Content.Shared.Flash;
 

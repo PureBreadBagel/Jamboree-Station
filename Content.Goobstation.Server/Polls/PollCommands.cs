@@ -11,7 +11,7 @@ using Robust.Shared.Console;
 namespace Content.Goobstation.Server.Polls;
 
 [AdminCommand(AdminFlags.Polls)]
-public sealed class CreatePollCommand : LocalizedEntityCommands
+public sealed partial class CreatePollCommand : LocalizedEntityCommands
 {
     [Dependency] private PollManager _pollManager = default!;
 
@@ -81,7 +81,7 @@ public sealed class CreatePollCommand : LocalizedEntityCommands
 }
 
 [AdminCommand(AdminFlags.Polls)]
-public sealed class ClosePollCommand : LocalizedEntityCommands
+public sealed partial class ClosePollCommand : LocalizedEntityCommands
 {
     [Dependency] private PollManager _pollManager = default!;
 

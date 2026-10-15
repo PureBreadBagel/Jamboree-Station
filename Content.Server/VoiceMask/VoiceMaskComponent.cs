@@ -53,6 +53,9 @@ public sealed partial class VoiceMaskComponent : Component
     [DataField]
     public bool Active = true;
 
+    [DataField]
+    public bool OverrideIdentity = true;
+
     /// <summary>
     ///     If user's accent is getting hidden when they speak.
     /// </summary>

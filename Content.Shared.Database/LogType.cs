@@ -613,7 +613,7 @@ public enum LogType
     /// <summary>
     /// Events related to players connecting/disconnecting.
     /// </summary>
-    Connection = 104,
+    Connection = 106, // Jamboree: preserve existing persisted log type IDs (103-105).
 
     // Goob start
 

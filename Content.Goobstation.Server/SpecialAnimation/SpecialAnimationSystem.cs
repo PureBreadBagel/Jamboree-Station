@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Shared.SpecialAnimation;
+using Content.Shared.Interaction.Events;
+using Robust.Server.GameStates;
 using JetBrains.Annotations;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -10,8 +12,7 @@ namespace Content.Goobstation.Server.SpecialAnimation;
 
 public sealed partial class SpecialAnimationSystem : SharedSpecialAnimationSystem
 {
-    [Dependency] private readonly IPrototypeManager _protoMan = default!;
-    [Dependency] private readonly PvsOverrideSystem _pvsOverride = default!;
+    [Dependency] private IPrototypeManager _protoMan = default!;
 
     public override void Initialize()
     {
@@ -33,7 +34,11 @@ public sealed partial class SpecialAnimationSystem : SharedSpecialAnimationSyste
             animation = animation.WithText(ent.Comp.OverrideText);
 // Jamboree - AnimateItem: changed args.User to "sprite" so the sprite used
 // is the item itself and not the player triggering it
-        var sprite = ent.Comp.AnimateItem ? ent.Owner : args.User;
+        var spriteEntity = ent.Comp.AnimateItem ? ent.Owner : args.User;
+        if (MetaData(spriteEntity).EntityPrototype is not { } prototype)
+            return;
+
+        var sprite = new SpriteSpecifier.EntityPrototype(prototype.ID);
 
         switch (ent.Comp.BroadcastType)
         {

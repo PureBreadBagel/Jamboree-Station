@@ -899,3 +899,27 @@
   storage:
     back:
     - CandyBucket
+
+- type: loadout
+  id: TowelColorGold
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 1000h
+  storage:
+    back:
+    - TowelColorGold
+  groupBy: "towels"
+
+- type: loadout
+  id: TowelColorSilver
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 500h
+  storage:
+    back:
+    - TowelColorSilver
+  groupBy: "towels"

@@ -263,14 +263,6 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconAtmosphericTechnician
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: AtmosphericTechnician
-  jobName: job-name-atmostech
-
-- type: jobIcon
-  parent: JobIcon
   id: JobIconNanotrasen
   icon:
     sprite: /Textures/_Impstation/Interface/Misc/job_icons.rsi #Changed to Impstation sprite cause that sprite is cool
@@ -295,51 +287,11 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconChemist
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: Chemist
-  jobName: job-name-chemist
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconStationEngineer
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: StationEngineer
-  jobName: job-name-engineer
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconSecurityOfficer
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: SecurityOfficer
-  jobName: job-name-security
-
-- type: jobIcon
-  parent: JobIcon
   id: JobIconNoId
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: NoId
   jobName: job-name-no-id
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconChiefMedicalOfficer
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: ChiefMedicalOfficer
-  jobName: job-name-cmo
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconRoboticist
-  icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: Roboticist
-  jobName: job-name-roboticist
 
 - type: jobIcon
   parent: JobIcon
@@ -356,14 +308,6 @@
     sprite: *icon-rsi
     state: Chef
   jobName: job-name-chef
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconJanitor
-  icon:
-    sprite: *icon-rsi
-    state: Janitor
-  jobName: job-name-janitor
 
 - type: jobIcon
   parent: JobIcon
@@ -479,14 +423,6 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconPrisoner
-  icon:
-    sprite: *icon-rsi
-    state: Prisoner
-  jobName: job-name-prisoner
-
-- type: jobIcon
-  parent: JobIcon
   id: JobIconSyndicate # Just in case you want to make it official which side you are on
   icon:
     sprite: *icon-rsi
@@ -502,14 +438,6 @@
   jobName: job-name-zombie
 
 # Admin
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconNanotrasen
-  icon:
-    sprite: *icon-rsi
-    state: Nanotrasen
-  jobName: job-name-centcomoff
 
 - type: jobIcon
   parent: JobIcon
@@ -552,14 +480,6 @@
   allowSelection: false
 
 # Other
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconNoId
-  icon:
-    sprite: *icon-rsi
-    state: NoId
-  jobName: job-name-no-id
 
 - type: jobIcon
   parent: JobIcon

@@ -51,13 +51,13 @@ public partial class XenobiologySystem
 
         var rand = SharedRandomExtensions.PredictedRandom(_timing, GetNetEntity(ent));
 
-        var s = slime.Comp;
+        var s = slime.Value.Comp;
         // every xenobio slime copy is personalized. feel free to tweak it as you like
         // the rest of the shit such as inheritance is handled by SpawnSlime
-        s.MutationChance *= _random.NextFloat(.5f, 1.5f);
-        s.MaxOffspring += _random.Next(-1, 2);
-        s.ExtractsProduced += _random.Next(0, 2);
-        s.MitosisHunger *= _random.NextFloat(.75f, 1.2f);
+        s.MutationChance *= rand.NextFloat(.5f, 1.5f);
+        s.MaxOffspring += rand.Next(-1, 2);
+        s.ExtractsProduced += rand.Next(0, 2);
+        s.MitosisHunger *= rand.NextFloat(.75f, 1.2f);
 
         QueueDel(ent);
         Transform(slimeUID).Coordinates = coords;

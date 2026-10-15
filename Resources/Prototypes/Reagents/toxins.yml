@@ -46,23 +46,23 @@
       effects:
       - !type:HealthChange
         conditions: # Imp - Thaven are immune to carpotoxin because their organs are full of it (what would it damage?)
-        - !type:OrganType
-          type: Thaven
-          shouldHave: false
-        - !type:OrganType # Goobstation - Yowie
-          type: Yowie
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [Thaven]
+          inverted: true
+        - !type:MetabolizerTypeCondition # Goobstation - Yowie
+          type: [Yowie]
+          inverted: true
         damage:
           types:
             Poison: 4
       - !type:PopupMessage
         conditions:
-        - !type:OrganType
-          type: Thaven
-          shouldHave: false
-        - !type:OrganType # Goobstation - Yowie
-          type: Yowie
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [Thaven]
+          inverted: true
+        - !type:MetabolizerTypeCondition # Goobstation - Yowie
+          type: [Yowie]
+          inverted: true
         type: Local
         visualType: MediumCaution
         messages: [ "generic-reagent-effect-burning-insides" ]
@@ -472,9 +472,10 @@
       - !type:Vomit
         probability: 0.04 #Scaled for time, not metabolismrate.
         conditions:
-          - !type:OrganType
-            type: Animal
-          - !type:ReagentThreshold
+          - !type:MetabolizerTypeCondition
+            type: [Animal]
+          - !type:ReagentCondition
+            reagent: Theobromine
             min: 0.12
 
 - type: reagent
@@ -635,8 +636,8 @@
       # Frontier: goblin metabolism
       - !type:AdjustReagent
         conditions:
-        - !type:OrganType
-          type: Goblin
+        - !type:MetabolizerTypeCondition
+          type: [Goblin]
         reagent: Protein
         amount: 0.5
       # End Frontier: goblin metabolism

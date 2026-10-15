@@ -130,8 +130,9 @@ public sealed partial class AnomalySystem
         if (_pointLight.TryGetLight(uid, out var pointLightComponent))
             _pointLight.SetEnabled(uid, on, pointLightComponent);
 
-        if (component.Anomaly == null || !TryGetStabilityVisual(component.Anomaly.Value, out var visual))
-            visual = AnomalyStabilityVisuals.Stable;
+        var visual = component.Anomaly is { } anomaly
+            ? GetStabilityVisualOrStable(anomaly)
+            : AnomalyStabilityVisuals.Stable;
 
         Appearance.SetData(uid, AnomalyVesselVisuals.AnomalySeverity, visual, appearanceComponent);
 

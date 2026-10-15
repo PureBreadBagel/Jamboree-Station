@@ -7,7 +7,6 @@
   suffix: Full
   components:
   - type: GoblinPreciousTrash # Frontier
-  - type: Drink
   - type: Openable
   - type: Shakeable
   - type: SolutionContainerManager

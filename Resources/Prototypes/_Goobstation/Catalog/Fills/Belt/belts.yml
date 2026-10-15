@@ -289,3 +289,12 @@
     - id: HolofanProjector
     - id: GasAnalyzer
     - id: NetworkConfigurator
+- type: entity
+  id: ClothingBeltAssaultFilled
+  parent: ClothingBeltAssault
+  suffix: Filled, BSO
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: BeltAssaultBSOEntityTable

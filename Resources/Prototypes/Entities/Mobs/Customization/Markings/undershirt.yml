@@ -2,8 +2,8 @@
 
 - type: marking
   id: UndershirtDefault
-  bodyPart: Undershirt
-  markingCategory: Undershirt
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Goblin, Gingerbread] # goob edit - yowies; Frontier - Goblin; Jamboree- Gingerbread
   coloring:
     default:
@@ -16,8 +16,8 @@
 
 - type: marking
   id: UndershirtRolled
-  bodyPart: Undershirt
-  markingCategory: Undershirt
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Goblin, Gingerbread] # goob edit - yowies; Frontier - Goblin; Jamboree - Gingerbread
   coloring:
     default:
@@ -30,8 +30,8 @@
 
 - type: marking
   id: UndershirtSleeveless
-  bodyPart: Undershirt
-  markingCategory: Undershirt
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Goblin, Gingerbread] # goob edit - yowies; Frontier - Goblin; Jamboree - Gingerbread
   coloring:
     default:
@@ -44,8 +44,8 @@
 
 - type: marking
   id: UndershirtRolledSleeveless
-  bodyPart: Undershirt
-  markingCategory: Undershirt
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Goblin, Gingerbread] # goob edit - yowies; Frontier - Goblin; Jamboree - Gingerbread
   coloring:
     default:
@@ -58,8 +58,8 @@
 
 - type: marking
   id: UndershirtGrossSleeveless
-  bodyPart: Undershirt
-  markingCategory: Undershirt
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Goblin, Gingerbread] # goob edit - yowies; Frontier - Goblin; Jamboree - Gingerbread
   coloring:
     default:
@@ -72,8 +72,8 @@
 
 - type: marking
   id: UndershirtNanotrasen
-  bodyPart: Undershirt
-  markingCategory: Undershirt
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Goblin, Gingerbread] # goob edit - yowies; Frontier - Goblin; Jamboree - Gingerbread
   coloring:
     default:
@@ -86,8 +86,8 @@
 
 - type: marking
   id: UndershirtBinder
-  bodyPart: Undershirt
-  markingCategory: Undershirt
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Goblin] # goob edit - yowies; Frontier - Goblin; Jamboree - Gingerbread
   coloring:
     default:
@@ -100,8 +100,8 @@
 
 - type: marking
   id: UndershirtBraClassic
-  bodyPart: Undershirt
-  markingCategory: Undershirt
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Goblin, Gingerbread] # goob edit - yowies; Frontier - Goblin; Jamboree - Gingerbread
   coloring:
     default:
@@ -114,8 +114,8 @@
 
 - type: marking
   id: UndershirtBraSports
-  bodyPart: Undershirt
-  markingCategory: Undershirt
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Goblin, Gingerbread] # goob edit - yowies; Frontier - Goblin; Jamboree - Gingerbread
   coloring:
     default:
@@ -128,8 +128,8 @@
 
 - type: marking
   id: UndershirtBraStrapless
-  bodyPart: Undershirt
-  markingCategory: Undershirt
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Harpy, Yowie, Goblin, Gingerbread] # goob edit - yowies; Frontier - Goblin; Jamboree - Gingerbread
   coloring:
     default:

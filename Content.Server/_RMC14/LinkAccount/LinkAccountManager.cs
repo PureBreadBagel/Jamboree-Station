@@ -28,6 +28,8 @@ public sealed class LinkAccountManager : IPostInjectInit
     private readonly Dictionary<NetUserId, TimeSpan> _lastRequest = new();
     private readonly TimeSpan _minimumWait = TimeSpan.FromSeconds(0.5);
     private readonly Dictionary<NetUserId, SharedRMCPatronFull> _connected = new();
+    private readonly Dictionary<NetUserId, ProtoId<PatronTierPrototype>> _fauxPatronAssignments = new(); // Goob
+    private bool _tiersSynced; // Goob
     private readonly List<SharedRMCPatron> _allPatrons = [];
     private readonly List<(string Message, string User)> _lobbyMessages = [];
     private readonly List<string> _shoutouts = [];
@@ -41,16 +43,7 @@ public sealed class LinkAccountManager : IPostInjectInit
         var linked = await _db.HasLinkedAccount(player.UserId, cancel);
         cancel.ThrowIfCancellationRequested();
 
-        var tier = patron?.Tier;
-        var sharedTier = tier == null
-            ? null
-            : new SharedRMCPatronTier(
-                tier.ShowOnCredits,
-                tier.GhostColor,
-                tier.LobbyMessage,
-                tier.RoundEndShoutout,
-                tier.Name
-            );
+        var sharedTier = patron == null ? null : GetSharedTier(patron.TierId); // Goob - patron tier prototypes
 
         SharedRMCLobbyMessage? lobbyMessage = null;
         if (patron?.LobbyMessage is { Message.Length: > 0 } patronMsg)
@@ -283,9 +276,9 @@ public sealed class LinkAccountManager : IPostInjectInit
             {
                 Id = proto.DatabaseId,
                 Name = Loc.GetString(proto.Name),
+                Icon = proto.Icon,
                 DiscordRole = proto.DiscordRole,
                 Priority = proto.Priority,
-                Icon = proto.Icon,
                 ShowOnCredits = proto.ShowOnCredits,
                 GhostColor = proto.GhostColor,
                 GhostCosmetics = proto.GhostCosmetics,
@@ -395,8 +388,40 @@ public sealed class LinkAccountManager : IPostInjectInit
 
     public SharedRMCPatronFull? GetPatron(NetUserId userId)
     {
+        if (_fauxPatronAssignments.TryGetValue(userId, out var tierId) &&
+            _prototypes.TryIndex(tierId, out var tier))
+        {
+            // Goob start
+            var connected = _connected.GetValueOrDefault(userId);
+            return new SharedRMCPatronFull(
+                Tier: GetSharedTier(tier),
+                Linked: true,
+                GhostColor: connected?.GhostColor,
+                GhostCosmetics: connected?.GhostCosmetics,
+                OocIcon: connected?.OocIcon,
+                LobbyMessage: connected?.LobbyMessage,
+                RoundEndShoutout: connected?.RoundEndShoutout
+            );
+            // Goob end
+        }
+
         return _connected.GetValueOrDefault(userId);
     }
+
+    // Goob start
+    public void AssignFauxPatron(NetUserId userId, ProtoId<PatronTierPrototype>? tierId)
+    {
+        if (tierId == null)
+            _fauxPatronAssignments.Remove(userId);
+        else if (_prototypes.HasIndex(tierId.Value))
+            _fauxPatronAssignments[userId] = tierId.Value;
+    }
+
+    public IReadOnlyDictionary<NetUserId, ProtoId<PatronTierPrototype>> GetAllFauxPatronAssignments()
+    {
+        return _fauxPatronAssignments;
+    }
+    // Goob end
 
     void IPostInjectInit.PostInject()
     {

@@ -24,7 +24,8 @@ import time
 from pathlib import Path
 from typing import List
 
-SOLUTION_PATH = Path("..") / "SpaceStation14.slnx"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+SOLUTION_PATH = REPO_ROOT / "SpaceStation14.slnx"
 # If this doesn't match the saved version we overwrite them all.
 CURRENT_HOOKS_VERSION = "4"
 QUIET = len(sys.argv) == 2 and sys.argv[1] == "--quiet"
@@ -41,9 +42,9 @@ def run_command(command: List[str], capture: bool = False) -> subprocess.Complet
     sys.stdout.flush()
 
     if capture:
-        completed = subprocess.run(command, stdout=subprocess.PIPE, text=True)
+        completed = subprocess.run(command, stdout=subprocess.PIPE, text=True, cwd=REPO_ROOT)
     else:
-        completed = subprocess.run(command)
+        completed = subprocess.run(command, cwd=REPO_ROOT)
 
     if completed.returncode != 0:
         print("Error: command exited with code {}!".format(completed.returncode))
@@ -92,6 +93,8 @@ def install_hooks():
     print("Hooks need updating.")
 
     hooks_target_dir = Path(run_command(["git", "rev-parse", "--git-path", "hooks"], True).stdout.strip())
+    if not hooks_target_dir.is_absolute():
+        hooks_target_dir = REPO_ROOT / hooks_target_dir
     hooks_source_dir = Path("hooks")
 
     # Clear entire tree since we need to kill deleted files too.

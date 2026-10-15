@@ -191,7 +191,7 @@
       "name": "black_box_open"
     },
     {
-        "name": "nanotrasen_box_open"
+      "name": "nanotrasen_box_open"
     },
     {
       "name": "sc_Ace_of_Cups_tarot"
@@ -438,6 +438,24 @@
     },
     {
       "name": "deck_tarot_full"
+    },
+    {
+      "name": "black_box_full"
+    },
+    {
+      "name": "deck_black_full"
+    },
+    {
+      "name": "deck_nanotrasen_full"
+    },
+    {
+      "name": "deck_syndicate_full"
+    },
+    {
+      "name": "nanotrasen_box"
+    },
+    {
+      "name": "nanotrasen_box_full"
     }
   ]
 }

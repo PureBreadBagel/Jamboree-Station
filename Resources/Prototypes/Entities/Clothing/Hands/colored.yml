@@ -205,6 +205,12 @@
         color: "#5ABF2F"
   - type: Fiber
     fiberColor: fibers-green
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+    - GreenGloves
 
 # Light Brown Gloves
 - type: entity

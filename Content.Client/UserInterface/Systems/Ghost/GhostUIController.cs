@@ -29,7 +29,6 @@ using Content.Client.Gameplay;
 using Content.Client.Ghost;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Client.UserInterface.Systems.Ghost.Widgets;
-using Content.Goobstation.Shared.MisandryBox.Thunderdome;
 using Content.Shared.Ghost;
 using Content.Shared._NF.CCVar;
 using Robust.Client.UserInterface;
@@ -61,8 +60,6 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         gameplayStateLoad.OnScreenUnload += OnScreenUnload;
 
         // Goobstation - Thunderdome
-        _entManager.EventBus.SubscribeEvent<ThunderdomePlayerCountEvent>
-            (EventSource.Network, this, OnThunderdomePlayerCount);
     }
 
     private void OnScreenLoad()

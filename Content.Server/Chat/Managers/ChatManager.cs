@@ -233,8 +233,6 @@ internal sealed partial class ChatManager : IChatManager
     [Dependency] private readonly DiscordChatLink _discordLink = default!;
     [Dependency] private readonly ILogManager _logManager = default!;
     [Dependency] private readonly LinkAccountManager _linkAccount = default!; // RMC - Patreon
-    [Dependency] private readonly DiscordChatLink _discordLink = default!;
-
     private ISawmill _sawmill = default!;
 
     /// <summary>

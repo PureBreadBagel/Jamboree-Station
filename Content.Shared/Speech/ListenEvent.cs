@@ -2,7 +2,7 @@
 
 using Content.Shared._EinsteinEngines.Language;
 
-namespace Content.Server.Speech;
+namespace Content.Shared.Speech;
 
 public sealed class ListenEvent : EntityEventArgs
 {

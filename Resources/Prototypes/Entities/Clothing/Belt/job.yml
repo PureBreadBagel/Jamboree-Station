@@ -30,6 +30,9 @@
       - WeldingMask
       - RemoteSignaller
       - UtilityKnife
+      - Hammer
+      - Nailgun
+      - MagazineNailgun
       components:
       - StationMap
       - SprayPainter
@@ -43,6 +46,8 @@
       - TrayScanner
       - GasAnalyzer
       - HandLabeler
+      - Flash
+      - Handcuff
   - type: ItemMapper
     sprite: &BeltOverlay Clothing/Belt/belt_overlay.rsi
     mapLayers:
@@ -169,6 +174,10 @@
   - type: Clothing
     sprite: Clothing/Belt/medical.rsi
   - type: Storage
+    maxItemSize: Large
+    defaultStorageOrientation: Vertical
+    grid:
+    - 0,0,7,1
     whitelist:
       tags:
       - Wrench
@@ -189,6 +198,7 @@
       - MedicalPatch # Goobstation
       - AutoinjectorCartridge # Goobstation
       - HandheldCrewMonitor # Goobstation
+      - EmergencyChemDispenser
       components:
       - Injector
       - Pill
@@ -233,17 +243,6 @@
   - type: Appearance
 
 - type: entity
-  parent: ClothingBeltMedical
-  id: ClothingBeltMedicalEMT
-  name: EMT belt
-  description: Perfect for holding various equipment for medical emergencies.
-  components:
-  - type: Sprite
-    sprite: Clothing/Belt/emt.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/emt.rsi
-
-- type: entity
   parent: ClothingBeltStorageBase
   id: ClothingBeltPlant
   name: botanical belt
@@ -260,6 +259,7 @@
       - BotanyShovel
       - BotanyHoe
       - BotanyHatchet
+      - PlantSampleTaker
       - PlantBGone
       - Bottle
       - Syringe
@@ -382,7 +382,7 @@
   - type: Clothing
     sprite: Clothing/Belt/security.rsi
   - type: ExplosionResistance
-    damageCoefficient: 0.9
+    damageCoefficient: 0.5
   - type: Storage
     whitelist:
       tags:

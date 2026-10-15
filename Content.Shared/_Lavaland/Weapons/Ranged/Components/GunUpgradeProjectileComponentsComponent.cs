@@ -1,4 +1,4 @@
-﻿// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
 // SPDX-FileCopyrightText: 2025 Aineias1 <dmitri.s.kiselev@gmail.com>
 // SPDX-FileCopyrightText: 2025 FaDeOkno <143940725+FaDeOkno@users.noreply.github.com>
@@ -30,25 +30,6 @@ namespace Content.Shared._Lavaland.Weapons.Ranged.Components;
 [RegisterComponent, NetworkedComponent]
 public sealed partial class GunUpgradeProjectileComponentsComponent : Component
 {
-    public override void Initialize()
-    {
-        base.Initialize();
-        SubscribeLocalEvent<WeaponAttachmentComponent, AfterAutoHandleStateEvent>(OnAfterAutoHandleStateEvent);
-    }
-
-    protected override void AddSharp(EntityUid uid) { }
-    protected override void RemSharp(EntityUid uid) { }
-
-    private void OnAfterAutoHandleStateEvent(EntityUid uid, WeaponAttachmentComponent component, ref AfterAutoHandleStateEvent args)
-    {
-        if (!TryComp<SpriteComponent>(uid, out var sprite))
-            return;
-
-        if (sprite.LayerMapTryGet(WeaponVisualLayers.Bayonet, out _))
-            sprite.LayerSetVisible(WeaponVisualLayers.Bayonet, component.BayonetAttached);
-        if (sprite.LayerMapTryGet(WeaponVisualLayers.FlightOff, out _))
-            sprite.LayerSetVisible(WeaponVisualLayers.FlightOff, component.LightAttached && !component.LightOn);
-        if (sprite.LayerMapTryGet(WeaponVisualLayers.FlightOn, out _))
-            sprite.LayerSetVisible(WeaponVisualLayers.FlightOn, component.LightAttached && component.LightOn);
-    }
+    [DataField]
+    public ComponentRegistry Components = new();
 }

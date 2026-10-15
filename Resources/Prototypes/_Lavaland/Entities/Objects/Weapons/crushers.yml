@@ -194,6 +194,7 @@
     sprite: _Lavaland/Objects/Weapons/Crushers/crusher_glaive.rsi
     state: icon
   - type: Item
+    size: Ginormous
     sprite: _Lavaland/Objects/Weapons/Crushers/crusher_glaive-inhands.rsi
   - type: Clothing
     sprite: _Lavaland/Objects/Weapons/Crushers/crusher_glaive.rsi
@@ -215,13 +216,7 @@
         Structural: 25
     soundHit:
       collection: MetalThud
-    angle: 0
-    animation: WeaponArcThrust
-    range: 2.2
   - type: GunRequiresWield
-  - type: Item
-    size: Ginormous
-    sprite: _Lavaland/Objects/Weapons/Crushers/crusher_spear-inhands.rsi
   - type: DisarmMalus
   - type: Wieldable
   - type: Sharp
@@ -310,50 +305,6 @@
         Slash: 75
         Blunt: 45
 
-- type: entity
-  parent: LavalandWeaponKineticBase
-  id: LavalandWeaponKineticMachete
-  name: kinetic machete
-  description: A smaller, one-handed variant of the crusher which allows you to block attacks.
-  components:
-  - type: Sprite
-    sprite: _Lavaland/Objects/Weapons/Crushers/crusher_machete.rsi
-    state: icon
-  - type: UseDelay
-    delay: 1
-  - type: MeleeWeapon
-    attackRate: 1.0 # slightly slower than a combat/utility knife, but in return is slightly stronger than one
-    damage:
-      types:
-        Slash: 12.5
-        Structural: 35
-    soundHit:
-      collection: MetalThud
-    angle: 0
-    animation: WeaponArcThrust
-    range: 1.6
-  - type: Item
-    size: Large # you can put a normal machete in your backpack, why not this one
-    sprite: _Lavaland/Objects/Weapons/Crushers/crusher_machete-inhands.rsi
-  # too lazy to port parrying and risk a [redacted] lmao
-  - type: Sharp
-  - type: DamageBoostOnMarker
-    boost:
-      types: # Totals to 50 damage when hitting marked targets
-        Slash: 27.5
-        Blunt: 10
-    backstabBoost: # And 20 extra for a backstab
-      types:
-        Slash: 6
-        Blunt: 5
-  - type: IncreaseDamageOnWield
-    damage:
-      types:
-        Piercing: 3
-        Slash: 3
-        Structural: 15 # Breaks weak rocks effectively
-
-# Random upgrades
 - type: entity
   id: CrusherRandomUpgradesFill
   suffix: Random Upgrades

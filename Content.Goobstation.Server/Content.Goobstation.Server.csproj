@@ -1,9 +1,7 @@
 <!--
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
-
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>..\bin\Content.Server\</OutputPath>
@@ -16,29 +14,15 @@ SPDX-License-Identifier: AGPL-3.0-or-later
   <Import Project="../MSBuild/Content.props" />
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" PrivateAssets="All" />
-    <PackageReference Include="NWaves" />
   </ItemGroup>
-
   <Import Project="..\RobustToolbox\Imports\Shared.props" />
-
-  <ItemGroup>
-    <EmbeddedResource Include="VoiceChat\Web\**" LogicalName="VoiceChat.Web.%(Filename)%(Extension)" />
-  </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Content.Goobstation.Maths\Content.Goobstation.Maths.csproj" />
     <ProjectReference Include="..\Content.Goobstation.Shared\Content.Goobstation.Shared.csproj" />
     <ProjectReference Include="..\Content.Server\Content.Server.csproj" />
   </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\Content.Goobstation.Maths\Content.Goobstation.Maths.csproj" />
-      <ProjectReference Include="..\Content.Goobstation.Shared\Content.Goobstation.Shared.csproj" />
-      <ProjectReference Include="..\Content.Server\Content.Server.csproj" />
-      <ProjectReference Include="..\RobustToolbox\Robust.Shared\Robust.Shared.csproj" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Ghostbar\Components\" />
-    </ItemGroup>
-
+  <ItemGroup>
+    <Folder Include="Ghostbar\Components\" />
+  </ItemGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
 </Project>

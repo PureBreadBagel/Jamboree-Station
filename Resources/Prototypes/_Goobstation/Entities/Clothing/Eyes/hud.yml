@@ -68,3 +68,14 @@
   - type: Tag # Jamboree - prescription glasses
     tags:
     - HudViro
+
+- type: entity
+  parent: ClothingEyesHudSyndicate
+  id: ClothingEyesHudContractor
+  name: contractor visor
+  description: The guild's professional head-up display, designed for better detection of humanoids and their subsequent capture.
+  components:
+  - type: ThermalVision
+    isEquipment: true
+    color: "#05570a"
+    lightRadius: 15

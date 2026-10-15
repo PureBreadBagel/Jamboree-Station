@@ -10,7 +10,6 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using static Robust.Client.UserInterface.Controls.BaseButton;
 using Robust.Shared.Utility; // Goob - start
-using Robust.Shared.Configuration;
 using static Robust.Client.UserInterface.Controls.TextEdit;
 
 namespace Content.Client.UserInterface.Systems.Chat.Controls;

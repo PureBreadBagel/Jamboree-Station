@@ -1,4 +1,5 @@
 using Content.Shared.Damage.Prototypes;
+using Content.Shared.Damage.Components;
 using Content.Goobstation.Maths.FixedPoint;
 using Content.Shared.Mobs;
 using Content.Shared.StatusIcon;

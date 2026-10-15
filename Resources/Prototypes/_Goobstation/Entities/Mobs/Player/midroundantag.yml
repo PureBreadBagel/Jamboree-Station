@@ -109,3 +109,11 @@
     - MindRoleGhostRoleNeutral
     raffle:
       settings: default
+
+- type: entity
+  parent: BaseMobHuman
+  id: MobHumanGreyTide
+  name: The Greytide
+  components:
+  - type: Loadout
+    prototypes: [ GreyTideAntagGear ]

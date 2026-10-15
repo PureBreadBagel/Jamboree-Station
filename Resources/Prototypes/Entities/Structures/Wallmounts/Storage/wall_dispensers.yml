@@ -70,6 +70,13 @@
         reagents:
         - ReagentId: SpaceCleaner
           Quantity: 5000
+  - type: SolutionRegeneration
+    solution: tank
+    duration: 5
+    generated:
+      reagents:
+      - ReagentId: SpaceCleaner
+        Quantity: 10
 
 - type: entity
   parent: BaseDispenser
@@ -93,6 +100,13 @@
         reagents:
         - ReagentId: WeldingFuel
           Quantity: 1000
+  - type: SolutionRegeneration
+    solution: tank
+    duration: 5
+    generated:
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 10
   - type: ReagentTank
     tankType: Fuel
   - type: DamageOnToolInteract

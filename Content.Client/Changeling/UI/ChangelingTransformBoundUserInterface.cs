@@ -3,8 +3,6 @@ using Content.Client.Stylesheets.Palette;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Changeling.Components;
 using Content.Client.Stylesheets;
-using Content.Client.UserInterface.Controls;
-using Content.Shared.Changeling.Components;
 using Content.Shared.Changeling.Systems;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;

@@ -45,57 +45,6 @@
         maxVol: 50
 
 - type: entity
-  name: base empty carton
-  id: DrinkCartonBaseEmpty
-  parent: BaseItem
-  abstract: true
-  description: An empty carton.
-  suffix: Empty
-  components:
-  - type: GoblinPreciousTrash # Frontier
-  - type: Sprite
-    state: icon
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 50
-  - type: MixableSolution
-    solution: drink
-  - type: SolutionTransfer
-    canChangeTransferAmount: true
-    maxTransferAmount: 5
-  - type: Drink
-  - type: Spillable
-    solution: drink
-  - type: FitsInDispenser
-    solution: drink
-  - type: DrawableSolution
-    solution: drink
-  - type: RefillableSolution
-    solution: drink
-  - type: DrainableSolution
-    solution: drink
-  - type: UserInterface
-    interfaces:
-      enum.TransferAmountUiKey.Key:
-        type: TransferAmountBoundUserInterface
-  - type: Damageable
-    damageContainer: Inorganic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 20
-      behaviors:
-      - !type:SpillBehavior { }
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: Tag
-    tags:
-    - DrinkBottle
-    - Trash
-
-- type: entity
   abstract: true
   parent: [ DrinkBaseOpenableOpen, DrinkBaseEmptyTrash ]
   id: DrinkCartonBaseEmpty

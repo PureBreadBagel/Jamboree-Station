@@ -255,3 +255,9 @@ loadout-group-reporter-jumpsuit = Reporter jumpsuit
 loadout-group-reporter-head = Reporter hat
 
 loadout-group-psychologist-jumpsuit = Psychologist jumpsuit
+
+loadout-group-boxer-gloves = Boxer gloves
+
+loadout-group-chaplain-bible = Holy Book
+
+loadout-group-boxer-jumpsuit = Boxer jumpsuit

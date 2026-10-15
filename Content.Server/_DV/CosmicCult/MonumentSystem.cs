@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
+using Content.Shared.Damage.Systems;
 using Content.Server._DV.CosmicCult.Components;
 using Content.Server._DV.CosmicCult.EntitySystems;
 using Content.Goobstation.Shared.Religion;
@@ -124,7 +125,7 @@ public sealed class MonumentSystem : SharedMonumentSystem
                         {
                             {
                                 "CosmicGod", new EntityPrototype.ComponentRegistryEntry(
-                                    new CosmicGodComponent { TriggerRoundEnd = true }, new MappingDataNode())
+                                    new CosmicGodComponent { TriggerRoundEnd = true })
                             }
                         }));
             }
@@ -438,10 +439,7 @@ public sealed class MonumentSystem : SharedMonumentSystem
         var leaderQuery = EntityQueryEnumerator<CosmicCultLeadComponent>();
         while (leaderQuery.MoveNext(out var leader, out var leaderComp))
         {
-            if (TryComp<PolymorphedEntityComponent>(leader, out var polyComp) && TryComp<CosmicCultLeadComponent>(polyComp.Parent, out var polyLeaderComp))
-                _actions.AddAction(polyComp.Parent.Value, ref polyLeaderComp.CosmicMonumentMoveActionEntity, polyLeaderComp.CosmicMonumentMoveAction, polyComp.Parent.Value);
-            else
-                _actions.AddAction(leader, ref leaderComp.CosmicMonumentMoveActionEntity, leaderComp.CosmicMonumentMoveAction, leader);
+            _actions.AddAction(leader, ref leaderComp.CosmicMonumentMoveActionEntity, leaderComp.CosmicMonumentMoveAction, leader);
         }
 
         Dirty(uid);
@@ -494,8 +492,6 @@ public sealed class MonumentSystem : SharedMonumentSystem
         while (leaderQuery.MoveNext(out var leader, out var leaderComp))
         {
             _actions.RemoveAction(leader, leaderComp.CosmicMonumentMoveActionEntity);
-            if (TryComp<PolymorphedEntityComponent>(leader, out var polyComp) && TryComp<CosmicCultLeadComponent>(polyComp.Parent, out var polyLeaderComp))
-                _actions.RemoveAction(polyComp.Parent.Value, polyLeaderComp.CosmicMonumentMoveActionEntity);
         }
 
         Dirty(uid);

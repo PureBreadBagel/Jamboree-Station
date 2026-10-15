@@ -116,7 +116,7 @@ public sealed partial class PuddleSystem
                 return;
             }
             // DeltaV - end of Beergoggles enable safe throw
-            _adminLogger.Add(LogType.Landed,
+            AdminLogger.Add(LogType.Landed,
                 $"{ToPrettyString(entity.Owner):entity} spilled a solution {SharedSolutionContainerSystem.ToPrettyString(solution):solution} on landing");
         }
     }

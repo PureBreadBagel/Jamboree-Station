@@ -74,3 +74,14 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ProfessionalHoP
+
+- type: loadoutEffectGroup
+  id: GrandMasterHoP
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobHeadOfPersonnel
+      time: 360000 # 100 hrs
+
+# Professional HoP Time

@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Server.Administration.Logs;
+using Content.Shared.Damage.Systems;
 using Content.Server.Damage.Components;
 using Content.Shared.Damage;
 using Content.Shared.Database;

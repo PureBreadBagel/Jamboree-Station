@@ -72,9 +72,6 @@ public sealed partial class SlotMachineComponent : Component
     [DataField(required: true)]
     public List<ProtoId<PrizePrototype>> Prizes;
 
-    [DataField]
-    public SoundSpecifier SpinSound = new SoundPathSpecifier("/Audio/_Goobstation/Machines/SlotMachine/slotmachine_spin.ogg");
-
     [DataField, AutoNetworkedField]
     public float DoAfterTime = 3.8f;
 
@@ -83,6 +80,8 @@ public sealed partial class SlotMachineComponent : Component
 
     [ViewVariables]
     public EntityUid? Spinner;
+
+    #endregion
 }
 
 [Serializable, NetSerializable]

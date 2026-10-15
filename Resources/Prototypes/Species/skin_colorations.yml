@@ -29,3 +29,9 @@
     hue: [ 0.056, 0.125 ]
     saturation: [ 0, 1.0 ]
     value: [ 0, 1 ]
+
+- type: skinColoration
+  id: NoColor
+  strategy: !type:ClampedHsvColoration
+    saturation: [0, 0]
+    value: [1, 1]

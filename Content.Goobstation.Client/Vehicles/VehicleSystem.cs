@@ -10,10 +10,10 @@ namespace Content.Goobstation.Client.Vehicles;
 
 public sealed partial class VehicleSystem : SharedVehicleSystem
 {
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly IEyeManager _eye = default!;
-    [Dependency] private readonly SpriteSystem _sprites = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!; // Frontier
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private IEyeManager _eye = default!;
+    [Dependency] private SpriteSystem _sprites = default!;
+    [Dependency] private SharedTransformSystem _transform = default!; // Frontier
 
     public override void Initialize()
     {
