@@ -67,21 +67,13 @@ public sealed partial class SlotMachineComponent : Component
     [DataField, AutoNetworkedField]
     public int SpinCost = 250;
 
-    [DataField, AutoNetworkedField]
-    public int SmallPrizeAmount = 250;
+    public EntProtoId? EmagSpawnEntity;
 
-    [DataField, AutoNetworkedField]
-    public int MediumPrizeAmount = 500;
+    [DataField(required: true)]
+    public List<ProtoId<PrizePrototype>> Prizes;
 
-    [DataField, AutoNetworkedField]
-    public int BigPrizeAmount = 5000;
-
-    [DataField, AutoNetworkedField]
-    public int JackPotPrizeAmount = 20000;
-
-    #endregion
-
-    #region DoAfter
+    [DataField]
+    public SoundSpecifier SpinSound = new SoundPathSpecifier("/Audio/_Goobstation/Machines/SlotMachine/slotmachine_spin.ogg");
 
     [DataField, AutoNetworkedField]
     public float DoAfterTime = 3.8f;
@@ -89,11 +81,12 @@ public sealed partial class SlotMachineComponent : Component
     [DataField, AutoNetworkedField]
     public bool IsSpinning;
 
-    #endregion
+    [ViewVariables]
+    public EntityUid? Spinner;
 }
 
 [Serializable, NetSerializable]
 public enum SlotMachineVisuals : byte
 {
-    Spinning
+    Spinning,
 }

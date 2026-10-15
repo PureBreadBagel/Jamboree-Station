@@ -1,7 +1,3 @@
-// SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 BombasterDS <deniskaporoshok@gmail.com>
-// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
-//
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Server.Chat.Systems;
@@ -18,7 +14,7 @@ using System.Text;
 
 namespace Content.Goobstation.Server.TapeRecorder;
 
-public sealed class TapeRecorderSystem : SharedTapeRecorderSystem
+public sealed partial class TapeRecorderSystem : SharedTapeRecorderSystem
 {
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly HandsSystem _hands = default!;

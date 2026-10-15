@@ -1,23 +1,21 @@
-// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
-// SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
-// SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
-//
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
-using Content.Server.Atmos.Components;
+using Content.Shared.Atmos.Components;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Lightning;
 using Content.Shared._Goobstation.Wizard.Spellblade;
 using Content.Shared._Shitmed.Targeting;
+using Content.Shared.Atmos.Components;
 using Content.Shared.Damage;
 using Content.Shared.Electrocution;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Physics;
 using Content.Shared.Timing;
 using Content.Shared.Weapons.Melee.Events;
+using Content.Server.Atmos.Components;
+using Content.Shared.Damage.Systems;
+using Content.Shared.Damage.Components;
 
 namespace Content.Server._Goobstation.Wizard.Systems;
 
@@ -60,7 +58,7 @@ public sealed class SpellbladeSystem : SharedSpellbladeSystem
             temporal.HitsLeft--;
             temporal.Accumulator = 0f;
 
-            _damageable.TryChangeDamage(uid, temporal.Damage, damageable: damageable, targetPart: TargetBodyPart.Chest);
+            _damageable.ChangeDamage((uid, damageable), temporal.Damage, targetPart: TargetBodyPart.Chest);
             Audio.PlayPvs(temporal.HitSound, xform.Coordinates);
             Spawn(temporal.Effect, xform.Coordinates);
 

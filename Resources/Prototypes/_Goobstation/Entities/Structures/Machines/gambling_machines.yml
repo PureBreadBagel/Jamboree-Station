@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  id: BaseSlotMachine
   parent: BaseMachinePowered
+  id: BaseSlotMachine
   name: slot machine
   abstract: true
   description: Gambling for the antisocial.
@@ -41,7 +41,7 @@
     castShadows: false
     radius: 2
     energy: 1.5
-    mask: /Textures/Effects/LightMasks/cone.png
+    lightMask: ConeSingle
     autoRot: true
   - type: LitOnPowered
   - type: ApcPowerReceiver
@@ -59,10 +59,7 @@
     weight: 0.125
   - type: StaticPrice
     price: 100
-  - type: CollectiveMind
-    defaultChannel: Binary
-    channels:
-    - Binary
+  - type: IntellicardableMind
   - type: Vocalizer
     minVocalizeInterval: 8m
     maxVocalizeInterval: 10m
@@ -83,8 +80,8 @@
         whitelist:
           components:
           - Cash
-  - type: LanguageSpeaker # Einstein Engines - Languages
-  - type: LanguageKnowledge # Einstein Engines - Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
     speaks:
     - TauCetiBasic
     - RobotTalk
@@ -95,8 +92,8 @@
   - type: DoAfter
 
 - type: entity
-  id: SlotMachine
   parent: BaseSlotMachine
+  id: SlotMachine
   name: slot machine
   description: Gambling for the antisocial.
   components:
@@ -114,7 +111,7 @@
   - type: Wires
     layoutId: SlotMachine
     boardName: wires-board-name-slot-machine
-  - type: GenericVisualizer # I have NO idea how this works
+  - type: GenericVisualizer
     visuals:
       enum.SlotMachineVisuals.Spinning:
         slotmachine_spin:
@@ -125,10 +122,19 @@
     interfaces:
       enum.WiresUiKey.Key:
         type: WiresBoundUserInterface
+  - type: SlotMachine
+    prizes:
+    - Lose
+    - MinorWin
+    - SmallWin
+    - MediumWin
+    - LargeWin
+    - Jackpot
+    - GodPot
 
 - type: entity
-  id: SlotMachineHighRoller
   parent: BaseSlotMachine
+  id: SlotMachineHighRoller
   name: the QM's personal slot machine
   description: A high roller version of the slot machine, takes a whopping 100k per spin, but you can win 1 MILLION from it!
   components:
@@ -146,7 +152,7 @@
   - type: Wires
     layoutId: SlotMachine
     boardName: wires-board-name-slot-machine
-  - type: GenericVisualizer # I have NO idea how this works
+  - type: GenericVisualizer
     visuals:
       enum.SlotMachineVisuals.Spinning:
         slotmachine_spin:
@@ -221,7 +227,7 @@
     castShadows: false
     radius: 2
     energy: 1.5
-    mask: /Textures/Effects/LightMasks/cone.png
+    lightMask: ConeSingle
     autoRot: true
   - type: LitOnPowered
   - type: ApcPowerReceiver
@@ -239,10 +245,6 @@
     weight: 0.125
   - type: StaticPrice
     price: 100
-  - type: CollectiveMind
-    defaultChannel: Binary
-    channels:
-    - Binary
   - type: Vocalizer
     minVocalizeInterval: 8m
     maxVocalizeInterval: 10m
@@ -263,8 +265,8 @@
         whitelist:
           components:
           - Cash
-  - type: LanguageSpeaker # Einstein Engines - Languages
-  - type: LanguageKnowledge # Einstein Engines - Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
     speaks:
     - TauCetiBasic
     - RobotTalk
@@ -295,7 +297,7 @@
       map: [ "clawmachine_playing" ]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: GenericVisualizer # I have NO idea how this works
+  - type: GenericVisualizer
     visuals:
       enum.ClawMachineVisuals.Spinning:
         clawmachine_playing:
@@ -342,7 +344,7 @@
     castShadows: false
     radius: 2
     energy: 1.5
-    mask: /Textures/Effects/LightMasks/cone.png
+    lightMask: ConeSingle
     autoRot: true
   - type: LitOnPowered
   - type: ApcPowerReceiver
@@ -360,10 +362,6 @@
     weight: 0.125
   - type: StaticPrice
     price: 100
-  - type: CollectiveMind
-    defaultChannel: Binary
-    channels:
-    - Binary
   - type: Vocalizer
     minVocalizeInterval: 8m
     maxVocalizeInterval: 10m
@@ -371,8 +369,8 @@
   - type: VocalizerRequiresPower
   - type: DatasetVocalizer
     dataset: SlotMachineAds
-  - type: LanguageSpeaker # Einstein Engines - Languages
-  - type: LanguageKnowledge # Einstein Engines - Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
     speaks:
     - TauCetiBasic
     - RobotTalk

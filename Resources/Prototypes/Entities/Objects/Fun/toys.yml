@@ -68,242 +68,60 @@
   description: Not carried here by ocean currents.
   components:
   - type: Sprite
-    sprite: Objects/Fun/ducky.rsi
+    sprite: Objects/Fun/snap_pops.rsi
     state: icon
-  - type: Clothing
-    quickEquip: false
-    sprite: Objects/Fun/ducky.rsi
-    slots:
-    - HEAD
   - type: Item
     size: Tiny
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Items/Toys/quack.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/Items/Toys/quack.ogg
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Items/Toys/quack.ogg
-  - type: EmitSoundOnTrigger
-    sound:
-      path: /Audio/Items/Toys/quack.ogg
-  - type: EmitSoundOnCollide
-    sound:
-      path: /Audio/Items/Toys/quack.ogg
-  - type: Tag
-    tags:
-    - ToyRubberDuck
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/snap.ogg
+      - !type:ExplodeBehavior
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 3
+  - type: Explosive
+    explosionType: Default
+    # Cosmetic explosion :tf:
+    maxIntensity: 0.01
+    intensitySlope: 1
+    totalIntensity: 0.01
+  - type: Construction
+    graph: SnapPopExplosiveGraph
+    node: snapPop
 
 - type: entity
-  parent: BaseRubberToy
-  id: RubberChicken
-  name: rubber chicken
-  description: A stress inducing parody of nature's most delectable avian.
+  parent: BaseStorageItem
+  id: SnapPopBox
+  name: snap pop box
+  description: Contains snap pops for a few minutes of popping fun!
   components:
-  - type: Sprite
-    sprite: Objects/Fun/rubber_chicken.rsi
-    state: icon
-  - type: EmitSoundOnUse
-    sound:
-      collection: RubberChicken
-      params:
-        variation: 0.125
-  - type: EmitSoundOnLand
-    sound:
-      collection: RubberChicken
-      params:
-        variation: 0.125
-  - type: EmitSoundOnActivate
-    sound:
-      collection: RubberChicken
-      params:
-        variation: 0.125
-  - type: EmitSoundOnCollide
-    sound:
-      collection: RubberChicken
-      params:
-        variation: 0.125
-  - type: EmitSoundOnTrigger
-    sound:
-      collection: RubberChicken
-      params:
-        variation: 0.125
-  - type: MeleeWeapon
-    wideAnimationRotation: 110
-    soundHit:
-      collection: RubberChicken
-      params:
-        variation: 0.125
-
-## Cheapo Figurines
-
-- type: entity
-  parent: BaseItem
-  id: BaseFigurineCheapo
-  name: figurine
-  description: A small miniature.
-  abstract: true
-  components:
-  - type: PhysicalComposition
-    materialComposition:
-      Plastic: 100
-  - type: StaticPrice
-    price: 25
-  - type: Tag
-    tags:
-    - Figurine
-
-- type: entity
-  parent: BaseFigurineCheapo
-  id: ToyAi
-  name: AI toy
-  description: A scaled-down toy AI core.
-  components:
-  - type: Sprite
-    sprite: Objects/Fun/AI.rsi
-    state: icon
-  - type: Clothing
-    quickEquip: false
-    sprite: Objects/Fun/AI.rsi
-    slots:
-    - HEAD
-    clothingVisuals:
-      head:
-      - state: equipped-HELMET
-        offset: "0, 0.06"
-
-- type: entity
-  parent: BaseFigurineCheapo
-  id: ToyNuke
-  name: nuke toy
-  description: A plastic model of a Nuclear Fission Explosive. No uranium included... probably.
-  components:
-  - type: Sprite
-    sprite: Objects/Fun/toy_nuke.rsi
-    state: icon
-  - type: Clothing
-    quickEquip: false
-    sprite: Objects/Fun/toy_nuke.rsi
-    slots:
-    - HEAD
-    clothingVisuals:
-      head:
-      - state: equipped-HELMET
-        offset: "0, 0.12"
-  - type: Tag
-    tags:
-    - Payload
-  - type: UseDelay
-    delay: 180.0
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Machines/Nuke/nuke_alarm.ogg
-      params:
-        volume: -5
-        maxDistance: 10
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Machines/Nuke/nuke_alarm.ogg
-      params:
-        volume: -5
-        maxDistance: 10
-  - type: EmitSoundOnTrigger
-    sound:
-      path: /Audio/Machines/Nuke/nuke_alarm.ogg
-      params:
-        volume: -5
-        maxDistance: 10
-
-- type: entity
-  parent: BasePlushie
-  id: ToyIan
-  name: ian toy
-  description: Unable to eat, but just as fluffy as the real guy!
-  components:
-  - type: Sprite
-    sprite: Objects/Fun/toy_ian.rsi
-    state: icon
-  - type: Clothing
-    quickEquip: false
-    sprite: Objects/Fun/toy_ian.rsi
-    slots:
-      - HEAD
-    clothingVisuals:
-      head:
-      - state: equipped-HELMET
-        offset: "0, 0.06"
-  - type: Item
-    size: Tiny
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Items/Toys/ian.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/Items/Toys/ian.ogg
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Items/Toys/ian.ogg
-  - type: EmitSoundOnTrigger
-    sound:
-      path: /Audio/Items/Toys/ian.ogg
-  - type: EmitSoundOnCollide
-    sound:
-      path: /Audio/Items/Toys/ian.ogg
-  - type: MeleeWeapon
-    soundHit:
-      path: /Audio/Items/Toys/ian.ogg
-  - type: Food
-    requiresSpecialDigestion: true
-    useSound:
-      path: /Audio/Items/Toys/ian.ogg
-#  - type: FoodSequenceElement
-#    entries:
-#      CottonBurger: IanPlushie
-
-## Toyweapons
-
-- type: entity
-  abstract: true
-  parent: BaseItem
-  id: FoamWeaponBase
-  components:
-  - type: Sprite
   - type: Item
     size: Normal
-  - type: PacifismAllowedGun
-
-- type: entity
-  parent: FoamWeaponBase
-  id: FoamCrossbow
-  name: foam crossbow
-  description: Aiming this at Security may get you filled with lead.
-  components:
   - type: Sprite
-    sprite: Objects/Fun/Foam/foam_crossbow.rsi
-    state: icon
-  - type: Item
-    size: Normal
-    sprite: Objects/Fun/Foam/foam_crossbow.rsi
-  - type: Gun
-    fireRate: 0.5
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
-    soundGunshot:
-      path: /Audio/Weapons/click.ogg
-  - type: BallisticAmmoProvider
-    whitelist:
-      tags:
-      - BulletFoam
-    capacity: 1
-    soundInsert:
-      path: /Audio/Items/bow_pull.ogg
-  - type: ContainerContainer
+    sprite: Objects/Fun/snap_pops.rsi
+    state: box
+  - type: Storage
+    grid:
+    - 0,0,4,3
+    areaInsert: true
+    maxItemSize: Tiny
+  - type: EntityTableContainerFill
     containers:
-      ballistic-ammo: !type:Container
-        ents: []
+      storagebase:
+        id: SnapPop
+        amount: 5
+  - type: Dumpable
 
 - type: entity
   parent: BaseItem
@@ -952,15 +770,16 @@
   name: banana
   parent: FoodProduceBase
   id: PlasticBanana
-  description: A plastic banana.
+  name: banana
   suffix: Plastic
+  description: A plastic banana.
   components:
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/banana.rsi
   - type: FlavorProfile
     flavors:
     - plastic
-  - type: Food
+  - type: Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1006,35 +825,158 @@
       collection: packetOpenSounds
   - type: TrashOnSolutionEmpty
     solution: drink
-  - type: Tag
-    tags:
-    - DrinkSpaceGlue
+
+- type: entity
+  parent: DrinkBase
+  id: CrazyLube
+  name: crazy lube
+  description: A bottle of super slipery crazy lube manufactured by Honk! Co.
+  components:
+  - type: Openable
+    sound:
+      collection: packetOpenSounds
+  - type: Sprite
+    sprite: Objects/Fun/lube.rsi
+    layers:
+    - state: icon
+      map: ["enum.OpenableVisuals.Layer"]
+  - type: Appearance
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 100
+        reagents:
+        - ReagentId: SpaceLube
+          Quantity: 100
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "icon_open"}
+          False: {state: "icon"}
+  - type: Lube
+  - type: TrashOnSolutionEmpty
+    solution: drink
+
+- type: entity
+  parent: [ BaseItem, MobCombat ]
+  id: MrChips
+  name: mr chips
+  suffix: Dummy
+  description: It's a dummy, dummy!
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/mrchips.rsi
+    layers:
+    - state: icon
+  - type: Input
+    context: "human"
+  - type: DoAfter
+  - type: VentriloquistPuppet
+  - type: Item
+    size: Normal
+  - type: Muted
+  - type: TypingIndicator
+    proto: robot
+  - type: Actions
+  - type: MobState
+    allowedStates:
+    - Alive
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/boxingpunch1.ogg
+    angle: 30
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Blunt: 2
+
+- type: entity
+  parent: MrChips
+  id: MrDips
+  name: mr dips
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/mrdips.rsi
 
 - type: entity
   parent: BaseItem
-  id: NewtonCradle
-  name: newton cradle
-  description: A device bored paper pushers use to remind themselves that time did not stop yet. Contains gravity.
+  id: Error
+  name: error
+  description: Hmmmm. Something went wrong.
   components:
   - type: Sprite
-    sprite: Objects/Fun/newton_cradle.rsi
-    state: icon-off
-  - type: Item
-    sprite: Objects/Fun/newton_cradle.rsi
-    storedRotation: -90
+    sprite: error.rsi
+    state: error
+  - type: Edible
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 26
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+  - type: Slippery
+    slipData:
+      knockdownTime: 3
+      launchForwardsMultiplier: 3
+  - type: StepTrigger
+    intersectRatio: 0.2
+  - type: CollisionWake
+    enabled: false
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.3,0.4,0.3"
+        hard: false
+        layer:
+        - SlipLayer
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.3,0.4,0.3"
+        density: 30
+        mask:
+        - ItemMask
+
+- type: entity
+  parent: BaseItem
+  id: SpectralLocatorUnpowered
+  name: spectral locator
+  suffix: Always Powered
+  description: Appears to be a modified anomaly locator. Seems very old.
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/spectrallocator.rsi
+    layers:
+    - state: icon
+    - state: screen
+      shader: unshaded
+      visible: false
+      map: ["enum.ToggleableVisuals.Layer"]
   - type: Appearance
   - type: GenericVisualizer
     visuals:
       enum.ToggleableVisuals.Enabled:
         enum.ToggleableVisuals.Layer:
-          True: { state: icon }
-          False: { state: icon-off }
+          True: { visible: true }
+          False: { visible: false }
   - type: ItemToggle
-  - type: UseDelay
-    delay: 1
-  - type: ItemToggleActiveSound
-    activeSound:
-      path: /Audio/Items/newton_cradle.ogg
+  - type: ProximityBeeper
+  - type: ProximityDetector
+    range: 12
+    components:
+    - type: Spectral # ghosts, jaunts, reventants
+  - type: Beeper
+    isMuted: true
+    minBeepInterval: 0.25
+    maxBeepInterval: 0.5
+    beepSound:
+      path: "/Audio/Items/locator_beep.ogg"
       params:
         volume: -9
         maxDistance: 3

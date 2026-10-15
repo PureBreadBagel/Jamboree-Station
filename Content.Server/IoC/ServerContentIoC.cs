@@ -196,13 +196,16 @@ using Content.Server.Worldgen.Tools;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Administration.Managers;
 using Content.Shared.Chat;
+using Content.Shared.IoC;
 using Content.Shared.Kitchen;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Players.RateLimiting;
 
-namespace Content.Server.IoC
+namespace Content.Server.IoC;
+
+internal static class ServerContentIoC
 {
-    internal static class ServerContentIoC
+    public static void Register(IDependencyCollection deps)
     {
         public static void Register()
         {

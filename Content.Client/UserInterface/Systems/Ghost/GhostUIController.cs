@@ -29,6 +29,7 @@ using Content.Client.Gameplay;
 using Content.Client.Ghost;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Client.UserInterface.Systems.Ghost.Widgets;
+using Content.Goobstation.Shared.MisandryBox.Thunderdome;
 using Content.Shared.Ghost;
 using Content.Shared._NF.CCVar;
 using Robust.Client.UserInterface;
@@ -41,6 +42,7 @@ namespace Content.Client.UserInterface.Systems.Ghost;
 // TODO hud refactor BEFORE MERGE fix ghost gui being too far up
 public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSystem>, IOnSystemChanged<RespawnSystem>
 {
+    [Dependency] private readonly IEntityManager _entManager = default!;
     [Dependency] private readonly IEntityNetworkManager _net = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IConsoleHost _consoleHost = default!;
@@ -57,6 +59,10 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         var gameplayStateLoad = UIManager.GetUIController<GameplayStateLoadController>();
         gameplayStateLoad.OnScreenLoad += OnScreenLoad;
         gameplayStateLoad.OnScreenUnload += OnScreenUnload;
+
+        // Goobstation - Thunderdome
+        _entManager.EventBus.SubscribeEvent<ThunderdomePlayerCountEvent>
+            (EventSource.Network, this, OnThunderdomePlayerCount);
     }
 
     private void OnScreenLoad()
