@@ -217,3 +217,12 @@
     state: coillv-10
   - type: Stack
     count: 1
+
+- type: entity
+  parent: CableApcStack10
+  id: CableApcStackLingering10
+  suffix: Lingering, 10
+  components:
+  - type: Stack
+    lingering: true
+    count: 10

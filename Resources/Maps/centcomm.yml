@@ -26,7 +26,6 @@ tilemap:
   10: FloorGlass
   2: FloorGold
   47: FloorGrass
-  16: FloorGrassDark
   54: FloorGreenCircuit
   8: FloorHullReinforced
   60: FloorKitchen

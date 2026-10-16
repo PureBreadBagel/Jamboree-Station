@@ -294,6 +294,7 @@
     whitelist:
       tags:
         - Sheet
+        - SheetPlasma
         - RawMaterial
         - Ingot
 

@@ -1208,3 +1208,32 @@ FoodDonutJellySlugcat: FoodDonutJellyScurret
 
 # Old maps placed this syringe before it became an abstract template.
 PrefilledSyringe: Syringe
+
+# Upstream migrations required by retained Jamboree maps.
+BaseChemistryEmptyVial: ChemistryEmptyVial
+ClothingUniformJumpsuitChiefEngineerNT: ClothingUniformJumpsuitChiefEngineer
+DVSmartFridgeMedical: SmartFridgeMedical
+DrinkKiraSpecial: DrinkOrangeLimeSodaGlass
+FigureSpawner: MechFigurineSpawner50
+GlowstickBase: GlowstickGreen
+# Keep mapped unfinished Gygax frames buildable with the current assembly system.
+GygaxChassis: GygaxHarness
+HandheldHealthAnalyzerEmpty: HandheldHealthAnalyzer
+HandheldHealthAnalyzerUnpowered: HandheldHealthAnalyzer
+MailTeleporter: CargoMailTeleporter
+MaterialSilo: MachineMaterialSilo
+SpacemenFigureSpawner: SpacemenFigurineSpawner90
+ToyGriffin: ToyFigurineGriffin
+ToyOwlman: ToyFigurineOwlman
+ToySkeleton: ToyFigurineSkeleton
+ToySpawner: PlushieSpawner50
+WarpPointBombing: null
+
+# Removed upstream mail hardware has no implementation in the new mail system.
+BoxMailCapsulePrimed: null
+MailCapsulePrimed: null
+MailMetricsCartridge: null
+WeaponMailLake: null
+VendingMachineMailDrobe: null
+# Keep mapped salvage shuttles pilotable using the current console.
+ComputerShuttleSalvage: ComputerShuttle

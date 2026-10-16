@@ -78,6 +78,14 @@
      {
       "name": "equipped-head-unshaded-anomalocarid",
           "directions": 4
-     }
+     },
+    {"name": "equipped-head-feroxi", "directions": 4},
+    {"name": "equipped-head-hydrakin", "directions": 4},
+    {"name": "equipped-head-light-feroxi", "directions": 4},
+    {"name": "equipped-head-light-hydrakin", "directions": 4},
+    {"name": "equipped-head-light-synth", "directions": 4},
+    {"name": "equipped-head-synth", "directions": 4},
+    {"name": "equipped-head-unshaded-feroxi", "directions": 4},
+    {"name": "equipped-head-unshaded-synth", "directions": 4}
   ]
 }

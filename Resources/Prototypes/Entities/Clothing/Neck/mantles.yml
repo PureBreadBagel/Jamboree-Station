@@ -122,3 +122,14 @@
     sprite: Clothing/Neck/mantles/mantle.rsi
   - type: Clothing
     sprite: Clothing/Neck/mantles/mantle.rsi
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCommandContraband]
+  id: ClothingNeckMantleCE
+  name: chief engineer's mantle
+  description: High visibility, check. RIG system, check. High capacity cell, check. Everything a chief engineer could need in a stylish mantle.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/mantles/cemantle.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/mantles/cemantle.rsi

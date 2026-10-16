@@ -123,6 +123,7 @@
 - type: latheRecipePack
   id: Chemistry
   recipes:
+  - AdvancedJetInjector
   - CryostasisBeaker
   - SyringeCryostasis
   - BluespaceBeaker

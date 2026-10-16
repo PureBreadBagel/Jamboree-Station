@@ -9,7 +9,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 03/29/2026 22:58:59
-  entityCount: 552
+  entityCount: 553
 maps: []
 grids:
 - 1
@@ -4112,7 +4112,7 @@ entities:
       parent: 1
 - proto: WeaponPistolCobra
   entities:
-  - uid: 536
+  - uid: 553
     components:
     - type: Transform
       pos: -7.446324,10.43428

@@ -23,7 +23,13 @@ public sealed class WizdenContentFreeze
 
         var protoMan = server.ProtoMan;
 
-        var recipesCount = protoMan.Count<FoodRecipePrototype>();
+        // These two retained Gardenstation recipes predate the Goob merge. Keep the
+        // upstream freeze at 230 while checking that this explicit legacy set still exists.
+        string[] legacyRecipes = ["RecipeThavenKelpFry", "RecipeKelpStew"];
+        foreach (var recipe in legacyRecipes)
+            Assert.That(protoMan.HasIndex<FoodRecipePrototype>(recipe), Is.True, recipe);
+
+        var recipesCount = protoMan.Count<FoodRecipePrototype>() - legacyRecipes.Length;
         var recipesLimit = 230; // Goobstation lmao?
 
         if (recipesCount > recipesLimit)

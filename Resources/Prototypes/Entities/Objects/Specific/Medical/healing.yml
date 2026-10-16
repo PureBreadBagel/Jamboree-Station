@@ -1073,3 +1073,12 @@
         reagents:
         - ReagentId: Stimulants
           Quantity: 5 # Goobstation edit
+
+- type: entity
+  id: Gauze10Lingering
+  parent: Gauze
+  suffix: 10, Lingering
+  components:
+  - type: Stack
+    lingering: true
+    count: 10 # Goobstation

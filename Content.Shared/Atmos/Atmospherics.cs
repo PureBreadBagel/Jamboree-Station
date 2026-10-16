@@ -1,4 +1,4 @@
-﻿// SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2020 Campbell Suter <znix@znix.xyz>
 // SPDX-FileCopyrightText: 2020 ComicIronic <comicironic@gmail.com>
 // SPDX-FileCopyrightText: 2020 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
@@ -283,6 +283,10 @@ namespace Content.Shared.Atmos
         /// </summary>
         public static Dictionary<Gas, string> GasAbbreviations = new Dictionary<Gas, string>()
         {
+            [Gas.BZ] = Loc.GetString("gas-bz-abbreviation"),
+            [Gas.Healium] = Loc.GetString("gas-healium-abbreviation"),
+            [Gas.Nitrium] = Loc.GetString("gas-nitrium-abbreviation"),
+            [Gas.Pluoxium] = Loc.GetString("gas-pluoxium-abbreviation"),
             [Gas.Ammonia] = Loc.GetString("gas-ammonia-abbreviation"),
             [Gas.CarbonDioxide] = Loc.GetString("gas-carbon-dioxide-abbreviation"),
             [Gas.Frezon] = Loc.GetString("gas-frezon-abbreviation"),

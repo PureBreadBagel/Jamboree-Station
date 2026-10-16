@@ -184,6 +184,19 @@ namespace Content.IntegrationTests.Tests
             {"/Maps/Shuttles/ShuttleEvent/syndie_evacpod.yml", ["RubberStampSyndicate"]},
             {"/Maps/Shuttles/ShuttleEvent/cruiser.yml", ["ShuttleGunPerforator"]},
             {"/Maps/Shuttles/ShuttleEvent/instigator.yml", ["ShuttleGunFriendship"]},
+            {"/Maps/_Goobstation/gate.yml", ["StationAiBrain", "ShuttleGunPerforator"]},
+            // Retained map contents: list exact exceptions so new DoNotMap entities still fail.
+            {"/Maps/_Goobstation/chloris.yml", ["ClosetJanitorBomb"]},
+            {"/Maps/_Goobstation/meta.yml", ["ClosetJanitorBombFilled"]},
+            {"/Maps/_Goobstation/origin.yml", ["ClothingHeadHatCatEars"]},
+            {"/Maps/_Jamboree/bagel.yml", ["RubberStampMime"]},
+            {"/Maps/_Jamboree/barratry.yml", ["RubberStampClown", "RubberStampMime"]},
+            {"/Maps/_Jamboree/chloris.yml", ["ClosetJanitorBomb"]},
+            {"/Maps/_Jamboree/cluster.yml", ["RubberStampMime"]},
+            {"/Maps/_Jamboree/kettle.yml", ["RubberStampClown", "RubberStampHop", "RubberStampSyndicate"]},
+            {"/Maps/_Jamboree/leonid.yml", ["ClothingOuterHardsuitLuxury"]},
+            {"/Maps/_Jamboree/loop.yml", ["ClothingOuterHardsuitLuxury"]},
+            {"/Maps/_Jamboree/reach.yml", ["ClothingHeadHelmetJanitorBombSuit", "ClothingOuterSuitJanitorBomb", "RubberStampCE", "RubberStampCMO", "RubberStampClown", "RubberStampHop", "RubberStampQm", "RubberStampRd"]},
         };
 
         /// <summary>
@@ -232,6 +245,8 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] GameMaps =
         {
             "Dev",
+            "Exo",
+            "Snowball",
             "TestTeg",
             "Fland",
             "Meta",
@@ -424,7 +439,9 @@ namespace Content.IntegrationTests.Tests
                     protoManager.TryIndex(protoId, out var proto);
                     if (proto is null || proto.EditorSuffix is null)
                         continue;
-                    if (proto.Categories.Contains(dnmCategory) && !DoNotMapWhitelist.Contains(map.ToString()))
+                    if (proto.Categories.Contains(dnmCategory)
+                        && !DoNotMapWhitelist.Contains(map.ToString())
+                        && !IsWhitelistedForMap(protoId, map))
                     {
                         Assert.Fail($"\nMap {map} has the DO NOT MAP category in prototype {proto.Name}");
                     }

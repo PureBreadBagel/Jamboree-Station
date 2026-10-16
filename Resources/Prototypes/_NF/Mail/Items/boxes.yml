@@ -1,0 +1,39 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  name: Build-a-Buddy kit
+  suffix: Slime
+  parent: BoxCardboard
+  id: BoxBuildABuddySlime
+  description: "\"Steven the Slime\" Build-a-Buddy kit. Some assembly required."
+  components:
+  - type: Storage
+    grid:
+    - 0,0,5,3
+    whitelist:
+      components: [BodyPart]
+  - type: StorageFill
+    contents:
+      - id: HeadSlime
+        amount: 1
+      - id: ChestSlime
+        amount: 1
+      - id: GroinSlime # Shitmed Change - more parts!!!!11!!!
+        amount: 1
+      - id: LeftArmSlime
+        amount: 1
+      - id: RightArmSlime
+        amount: 1
+      - id: LeftHandSlime
+        amount: 1
+      - id: RightHandSlime
+        amount: 1
+      - id: LeftLegSlime
+        amount: 1
+      - id: RightLegSlime
+        amount: 1
+      - id: LeftFootSlime
+        amount: 1
+      - id: RightFootSlime
+        amount: 1
+

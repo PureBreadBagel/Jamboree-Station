@@ -173494,8 +173494,7 @@ entities:
       pos: 4.5,37.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
+      configurators: []
 - proto: WeaponEnergyTurretSecurityControlPanel
   entities:
   - uid: 27274
