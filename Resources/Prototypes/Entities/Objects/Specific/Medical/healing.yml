@@ -1080,5 +1080,4 @@
   suffix: 10, Lingering
   components:
   - type: Stack
-    lingering: true
     count: 10 # Goobstation

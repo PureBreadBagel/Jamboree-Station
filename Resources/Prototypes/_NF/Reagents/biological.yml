@@ -32,9 +32,8 @@
         key: Stutter
         component: GoblinAccent
         probability: 0.025
-        type: Add
+        type: Update
         time: 30
-        refresh: true
         conditions:
         - !type:MetabolizerTypeCondition
           type: [Goblin]

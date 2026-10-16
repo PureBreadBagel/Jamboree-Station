@@ -224,5 +224,4 @@
   suffix: Lingering, 10
   components:
   - type: Stack
-    lingering: true
     count: 10

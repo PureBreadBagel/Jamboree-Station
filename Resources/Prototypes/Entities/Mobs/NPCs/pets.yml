@@ -1093,8 +1093,6 @@
         Bloodloss:
           -0.8
   - type: Temperature
-    heatDamageThreshold: 1000 # Omu, make smile a bit more tanky.
-    coldDamageThreshold: -200 # Omu, make smile spaceproof.
   - type: Damageable # Omu start
     damageContainer: Biological
     damageModifierSet: Smile
@@ -1156,6 +1154,9 @@
   - type: Access
     tags:
     - Research # Omu end
+  - type: TemperatureDamage
+    heatDamageThreshold: 1000 # Omu, make smile a bit more tanky.
+    coldDamageThreshold: -200 # Omu, make smile spaceproof.
 
 - type: entity
   name: Pun Pun

@@ -74,7 +74,7 @@
     time: 5h #5 hours
   - !type:RoleTimeRequirement
     role: JobBorg
-    time: 1h # 1h
+    time: 10h # Jamboree syndicate borg requirement
 
 - type: antag
   id: ClownGhostAntagonistGoob

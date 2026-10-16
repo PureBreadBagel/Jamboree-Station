@@ -20,7 +20,6 @@
         effectProto: StatusEffectSeeingRainbow
         type: Add
         time: 5
-        refresh: false
       - !type:PopupMessage # gds added this
         type: Local
         messages:

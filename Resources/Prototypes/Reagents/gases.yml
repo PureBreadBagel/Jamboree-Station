@@ -783,7 +783,6 @@
     Poison:
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
         ignoreResistances: true
         damage:
           types:
@@ -819,7 +818,6 @@
     Poison:
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
         ignoreResistances: true
         damage:
           types:
@@ -841,7 +839,6 @@
     Poison:
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
         ignoreResistances: true
         damage:
           types:
@@ -854,7 +851,6 @@
         - !type:MetabolizerTypeCondition
           type: [Feroxi]
           inverted: true
-        scaleByQuantity: true
         ignoreResistances: true
         damage:
           types:
@@ -864,7 +860,6 @@
         - !type:MetabolizerTypeCondition
           type: [Feroxi]
           inverted: true
-        scaleByQuantity: true
         ignoreResistances: true
         damage:
           types:
@@ -908,8 +903,7 @@
           inverted: true
         key: Muted
         component: Muted
-        type: Add
+        type: Update
         time: 20
-        refresh: true
       - !type:AdjustTemperature
         amount: -20

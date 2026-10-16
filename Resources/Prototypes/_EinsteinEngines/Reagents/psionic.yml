@@ -79,7 +79,6 @@
         component: SeeingRainbows
         type: Add
         time: 5
-        refresh: false
       - !type:ChemRerollPsionic
         bonusMultiplier: 4
         conditions:

@@ -36,7 +36,6 @@
         effectProto: StatusEffectSeeingRainbow
         type: Add
         time: 10
-        refresh: false
     Narcotic:
       effects:
       - !type:PopupMessage
@@ -105,4 +104,3 @@
         effectProto: StatusEffectSeeingRainbow
         type: Add
         time: 25
-        refresh: false

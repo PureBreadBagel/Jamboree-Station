@@ -221,7 +221,6 @@
   - type: Wieldable
   - type: Sharp
   - type: MeleeRequiresWield
-    fumbleOnAttempt: true
   - type: DamageBoostOnMarker
     boost:
       types: # Totals to 60 damage when hitting marked targets
