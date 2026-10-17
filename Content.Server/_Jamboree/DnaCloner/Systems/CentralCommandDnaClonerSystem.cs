@@ -427,7 +427,6 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
                 return;
             }
 
-            var status = GetStatus(component);
             if (component.DnaClonerVat is not { } vat)
             {
                 Speak(uid, "centralcommand-dnacloner-unavailable", CentralCommandDnaClonerStatus.NoVat);
@@ -436,62 +435,62 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             }
 
             if (!TryComp<CentralCommandDnaClonerVatComponent>(vat, out var vatComp))
+            {
+                Speak(uid, "centralcommand-dnacloner-unavailable", GetStatus(component));
+                UpdateUserInterface(uid, component);
                 return;
+            }
 
-            lock (vatComp.RespawnLock) // Locking.
-            { // A player can get out two requests if theres two folk at the same console.
-              // so yknow, we just kinda make sure only one thread can actually run this.
+            if (!_power.IsPowered(uid))
+            {
+                Speak(uid, "centralcommand-dnacloner-unpowered");
+                UpdateUserInterface(uid, component);
+                return;
+            }
 
-                if (!_power.IsPowered(uid))
-                {
-                    Speak(uid, "centralcommand-dnacloner-unpowered");
-                    UpdateUserInterface(uid, component);
-                    return;
-                }
+            var status = GetStatus(component);
+            if (status != CentralCommandDnaClonerStatus.Ready)
+            {
+                Speak(uid, "centralcommand-dnacloner-unavailable", status);
+                UpdateUserInterface(uid, component);
+                return;
+            }
 
-                if (status != CentralCommandDnaClonerStatus.Ready)
-                {
-                    Speak(uid, "centralcommand-dnacloner-unavailable", status);
-                    UpdateUserInterface(uid, component);
-                    return;
-                }
+            if (!TryGetVatContainer(vat, out var container))
+            {
+                Speak(uid, "centralcommand-dnacloner-failed");
+                UpdateUserInterface(uid, component);
+                return;
+            }
 
-                if (!TryGetVatContainer(vat, out var container))
-                {
-                    Speak(uid, "centralcommand-dnacloner-failed");
-                    UpdateUserInterface(uid, component);
-                    return;
-                }
+            if (GetBiomass(vat, vatComp) < vatComp.MaterialCost)
+            {
+                Speak(uid, "centralcommand-dnacloner-unavailable", CentralCommandDnaClonerStatus.InsufficientBiomass);
+                UpdateUserInterface(uid, component);
+                return;
+            }
 
-                if (GetBiomass(vat, vatComp) < vatComp.MaterialCost)
-                {
-                    Speak(uid, "centralcommand-dnacloner-unavailable", CentralCommandDnaClonerStatus.InsufficientBiomass);
-                    UpdateUserInterface(uid, component);
-                    return;
-                }
+            var success = GetBodyState(CheckHowMindGotRemoved(mindComp, component.RottenBodyStage)) switch
+            {
+                CentralCommandDnaClonerBodyState.Lost => "centralcommand-dnacloner-success-recovered",
+                CentralCommandDnaClonerBodyState.Rotted => "centralcommand-dnacloner-success-rotted",
+                _ => "centralcommand-dnacloner-success",
+            };
 
-        var success = GetBodyState(CheckHowMindGotRemoved(mindComp, component.RottenBodyStage)) switch
-        {
-            CentralCommandDnaClonerBodyState.Lost => "centralcommand-dnacloner-success-recovered",
-            CentralCommandDnaClonerBodyState.Rotted => "centralcommand-dnacloner-success-rotted",
-            _ => "centralcommand-dnacloner-success",
-        };
-
-        if (!TryToGetThierBodyBack(mind, mindComp, vat, vatComp, container, out var body))
-        {
-            Speak(uid, "centralcommand-dnacloner-failed");
-            UpdateUserInterface(uid, component);
-            return;
-        }
+            if (!TryToGetThierBodyBack(mind, mindComp, vat, vatComp, container, out var body))
+            {
+                Speak(uid, "centralcommand-dnacloner-failed");
+                UpdateUserInterface(uid, component);
+                return;
+            }
 
             _adminLogger.Add(LogType.Mind, LogImpact.High,
-            $"{ToPrettyString(uid):entity} synthesized {mindComp.CharacterName:characterName} " +
-            $"{ToPrettyString(mind):mind} into {ToPrettyString(body.Value):body}.");
+                $"{ToPrettyString(uid):entity} synthesized {mindComp.CharacterName:characterName} " +
+                $"{ToPrettyString(mind):mind} into {ToPrettyString(body.Value):body}.");
 
-        Speak(uid, success, name: mindComp.CharacterName!);
-        UpdateUserInterface(uid, component);
-    }
-}
+            Speak(uid, success, name: mindComp.CharacterName!);
+            UpdateUserInterface(uid, component);
+        }
 
         // JAMBOREE - Has the console announce things inits own language n stuff.
         private void Speak(EntityUid uid, string key, CentralCommandDnaClonerStatus? status = null, string? name = null)
@@ -530,14 +529,15 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             // Everything below is what the vanilla pod would have carried across, minus the corpse it read it off.
             ApplyRetainedComponents(mob);
 
-            // This deletes the ghost the mind was wearing and hands the body over.
-            _mind.TransferTo(mindUid, mob, true, mind: mindComp);
-
             if (!_container.Insert(mob, container))
             {
                 _sawmill.Error($"Failed to insert {ToPrettyString(mob)} into the vat {ToPrettyString(vat)}.");
+                QueueDel(mob);
                 return false;
             }
+
+            // This deletes the ghost the mind was wearing and hands the body over.
+            _mind.TransferTo(mindUid, mob, true, mind: mindComp);
 
             // JAMBOREE Only consume biomass if it actually made a body...cant be losing biobaaaaas.
             _material.TryChangeMaterialAmount(vat, vatComp.RequiredMaterial, -vatComp.MaterialCost);
