@@ -33,6 +33,7 @@ using Content.Shared.UserInterface;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
 using Robust.Shared.Containers;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility; //JAMBOREE API SLOP PART 1
@@ -46,6 +47,7 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
     {
         [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
         [Dependency] private readonly IPlayerManager _players = default!;
+        [Dependency] private readonly MetaDataSystem _metaSystem = default!;
         [Dependency] private readonly DeviceLinkSystem _signalSystem = default!;
         [Dependency] private readonly PowerReceiverSystem _power = default!;
         [Dependency] private readonly SharedContainerSystem _container = default!;
@@ -530,6 +532,8 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             var profile = _gameTicker.GetPlayerProfile(session);
             var station = _station.GetOwningStation(vat) ?? _station.GetStations().FirstOrNull();
             var mob = _spawning.SpawnPlayerMob(Transform(vat).Coordinates, null, profile, station);
+
+            _metaSystem.SetEntityName(mob, mindComp.CharacterName!);
 
             if (profile != null)
                 _traits.ApplyTraits(mob, profile);
