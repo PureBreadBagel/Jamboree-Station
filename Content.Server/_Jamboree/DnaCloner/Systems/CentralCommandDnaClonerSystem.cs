@@ -290,7 +290,7 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
                 MindSituation.LiveBody => false,
 
                // you get. NO BODY RETURNING PRIVLIGES
-                MindSituation.GhostOwned => !CanReturnToBody(mind.OwnedEntity),
+                MindSituation.GhostOwned => IsStuckGhost(mind.OwnedEntity),
 
                 //  Round removed lmao
                 MindSituation.BodyDeleted or MindSituation.BodyRotten or MindSituation.NoBody =>
@@ -374,9 +374,15 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             return ghost.CanReturnToBody && !ghost.CanGhostInteract; // Can ghost interact is specifically for aGhosts. Admins no like DNA molecularsynthesised.
         }
 
-        private bool CanReturnToBody(EntityUid? uid)
+        private bool IsStuckGhost(EntityUid? uid)
         {
-            return uid is { } ghostUid && TryComp<GhostComponent>(ghostUid, out var ghost) && ghost.CanReturnToBody;
+            if (uid is not { } ghostUid)
+                return false;
+
+            if (!TryComp<GhostComponent>(ghostUid, out var ghost))
+                return false;
+
+            return !ghost.CanReturnToBody && !ghost.CanGhostInteract;
         }
 
         // JAMBOREE - Checks if the body is ROTTING.
