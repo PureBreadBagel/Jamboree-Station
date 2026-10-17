@@ -37,7 +37,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using System.Linq;
+
 using Content.Goobstation.Server._Jamboree.Chemistry.Components;
 using Content.Goobstation.Shared._Jamboree.Chemistry;
 using Content.Shared.Chemistry;
@@ -45,8 +45,6 @@ using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Containers.ItemSlots;
-using Content.Goobstation.Maths.FixedPoint;
-using Content.Shared.Nutrition.EntitySystems;
 using Content.Shared.Power;
 using JetBrains.Annotations;
 using Robust.Server.Audio;
@@ -54,14 +52,16 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
-using Content.Shared.Labels.Components;
 using Content.Server.Power.Components;
-using Robust.Shared.Player;
-using Robust.Shared.Utility;
 using Content.Server.Power.EntitySystems;
 using Content.Server.PowerCell;
 using Content.Shared.Power.Components;
 using Content.Shared.PowerCell.Components;
+using Content.Server.Administration.Managers;
+using Content.Shared.Administration;
+using Content.Shared.Popups;
+using Robust.Server.Player;
+
 
 namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
 {
@@ -81,6 +81,10 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
         [Dependency] private readonly PowerCellSystem _powerCell = default!;
         [Dependency] private readonly SharedAppearanceSystem _appearanceSystem = default!;
 
+        [Dependency] private readonly IAdminManager _adminManager = default!;
+        [Dependency] private readonly SharedPopupSystem _popup = default!;
+        [Dependency] private readonly IPlayerManager _playerManager = default!;
+
         // Ergh...Alot of dependencies. But this is a complex system, so it needs literally all these classes.
 
         public override void Initialize()
@@ -98,7 +102,7 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
             SubscribeLocalEvent<EnergyReagentDispenserComponent, EnergyReagentDispenserClearContainerSolutionMessage>(OnClearContainerSolutionMessage);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, PowerChangedEvent>(OnPowerChanged);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, PowerCellChangedEvent>(OnPowerCellChanged);
-
+            SubscribeLocalEvent<EnergyReagentDispenserComponent, EnergyReagentDispenserEditReagentMessage>(OnEditReagentMessage);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, MapInitEvent>(OnMapInit, before: [typeof(ItemSlotsSystem)]);
         }
         // Initialize() means "uh what do i listen for??". So this whole bit is subscribing to other classes methods so we can use them.
@@ -281,6 +285,47 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
             reagentDispenser.Comp.StoredEnergySpent += powerRequired;
             ClickSound(reagentDispenser);
             UpdateUiState(reagentDispenser); // Replaced this to track the energy spent // JAMBOREE
+        }
+
+        private void OnEditReagentMessage(Entity<EnergyReagentDispenserComponent> reagentDispenser, ref EnergyReagentDispenserEditReagentMessage message)
+        {
+            if (!_playerManager.TryGetSessionByEntity(message.Actor, out var session))
+            {
+                Reply(message.Actor, "edit: sender has no session (server)");
+                return;
+            }
+
+            if (_adminManager.GetAdminData(session)?.HasFlag(AdminFlags.Admin) != true)
+            {
+                Reply(message.Actor, "edit: rejected, not an admin (server)");
+                return;
+            }
+
+            // -1 is the deletion sentinel, filtered here so it never becomes data.
+            if (message.NewCost < 0f)
+            {
+                reagentDispenser.Comp.Reagents.Remove(message.ReagentId);
+                UpdateUiState(reagentDispenser);
+                Reply(message.Actor, $"edit: removed {message.ReagentId} (server)");
+                return;
+            }
+
+            // Reject ids that aren't real reagents lmao
+            if (!_prototypeManager.TryIndex<ReagentPrototype>(message.ReagentId, out _))
+            {
+                Reply(message.Actor, $"edit: '{message.ReagentId}' is not a reagent id (server)");
+                return;
+            }
+
+            reagentDispenser.Comp.Reagents[message.ReagentId] = message.NewCost;
+            UpdateUiState(reagentDispenser);
+            Reply(message.Actor, $"edit: set {message.ReagentId} to {message.NewCost} (server)");
+        }
+
+
+        private void Reply(EntityUid target, string text)
+        {
+            _popup.PopupEntity(text, target, target);
         }
 
         private void OnClearContainerSolutionMessage(Entity<EnergyReagentDispenserComponent> reagentDispenser, ref EnergyReagentDispenserClearContainerSolutionMessage message)
