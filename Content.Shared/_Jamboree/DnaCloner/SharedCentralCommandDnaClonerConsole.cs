@@ -8,7 +8,7 @@ using Robust.Shared.Serialization;
 namespace Content.Shared._Jamboree.DnaCloner
 {
     [Serializable, NetSerializable]
-    public sealed record CentralCommandDnaClonerMindRow(NetEntity Id, string Name, CentralCommandDnaClonerBodyState BodyState);
+    public sealed record CentralCommandDnaClonerMindRow(NetEntity Id, string Name, CentralCommandDnaClonerBodyState BodyState, bool IsObserver);
 
     [Serializable, NetSerializable]
     public enum CentralCommandDnaClonerBodyState : byte

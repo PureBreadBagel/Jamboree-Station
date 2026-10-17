@@ -280,10 +280,6 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
                 return false;
             }
 
-            // A player who pressed Observe instead of ever taking a job never had a body to lose.
-            if (_roles.MindHasRole<ObserverRoleComponent>(activeMindId.Value))
-                return false;
-
             // JAMBOREE Took a ghost role (MothRoach, etc). Their old body
             if (_roles.MindHasRole<GhostRoleMarkerRoleComponent>(activeMindId.Value))
                 return false;
@@ -305,6 +301,11 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             };
         }
 
+        private bool IsObserver(EntityUid mindEntity)
+        {
+            return HasComp<ObserverRoleComponent>(mindEntity);
+        }
+
 
 
         private List<CentralCommandDnaClonerMindRow> GetRespawnableMinds(int rottenBodyStage)
@@ -322,7 +323,8 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
                 names.Add(new CentralCommandDnaClonerMindRow(
                     GetNetEntity(mindEntity),
                     mindComp.CharacterName!,
-                    GetBodyState(situation)));
+                    GetBodyState(situation),
+                    IsObserver(mindEntity)));
             }
 
             names.Sort((a, b) => string.CompareOrdinal(a.Name, b.Name));
