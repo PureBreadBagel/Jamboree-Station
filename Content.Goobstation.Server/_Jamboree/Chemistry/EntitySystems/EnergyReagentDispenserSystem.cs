@@ -37,7 +37,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using System.Linq;
+
 using Content.Goobstation.Server._Jamboree.Chemistry.Components;
 using Content.Goobstation.Shared._Jamboree.Chemistry;
 using Content.Shared.Chemistry;
@@ -45,8 +45,6 @@ using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Containers.ItemSlots;
-using Content.Goobstation.Maths.FixedPoint;
-using Content.Shared.Nutrition.EntitySystems;
 using Content.Shared.Power;
 using JetBrains.Annotations;
 using Robust.Server.Audio;
@@ -54,14 +52,16 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
-using Content.Shared.Labels.Components;
 using Content.Server.Power.Components;
-using Robust.Shared.Player;
-using Robust.Shared.Utility;
 using Content.Server.Power.EntitySystems;
 using Content.Server.PowerCell;
 using Content.Shared.Power.Components;
 using Content.Shared.PowerCell.Components;
+using Content.Server.Administration.Managers;
+using Content.Shared.Administration;
+using Content.Shared.Popups;
+using Robust.Server.Player;
+
 
 namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
 {
@@ -81,7 +81,11 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
         [Dependency] private readonly PowerCellSystem _powerCell = default!;
         [Dependency] private readonly SharedAppearanceSystem _appearanceSystem = default!;
 
-        // Ergh...Alot of dependencies. But this is a complex system, so it needs literally all these classes.
+        [Dependency] private readonly IAdminManager _adminManager = default!;
+        [Dependency] private readonly SharedPopupSystem _popup = default!;
+        [Dependency] private readonly IPlayerManager _playerManager = default!;
+
+        // A lot of dependencies, but this system touches power, cells, APC, containers and chat, so it earns them.
 
         public override void Initialize()
         {
@@ -98,16 +102,15 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
             SubscribeLocalEvent<EnergyReagentDispenserComponent, EnergyReagentDispenserClearContainerSolutionMessage>(OnClearContainerSolutionMessage);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, PowerChangedEvent>(OnPowerChanged);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, PowerCellChangedEvent>(OnPowerCellChanged);
-
+            SubscribeLocalEvent<EnergyReagentDispenserComponent, EnergyReagentDispenserEditReagentMessage>(OnEditReagentMessage);
             SubscribeLocalEvent<EnergyReagentDispenserComponent, MapInitEvent>(OnMapInit, before: [typeof(ItemSlotsSystem)]);
         }
-        // Initialize() means "uh what do i listen for??". So this whole bit is subscribing to other classes methods so we can use them.
+        // Every one of those subscriptions funnels back here, so the state can't drift out of sync with the machine.
         private void SubscribeUpdateUiState<T>(Entity<EnergyReagentDispenserComponent> ent, ref T ev) => UpdateUiState(ent);
 
         private void UpdateUiState(Entity<EnergyReagentDispenserComponent> reagentDispenser)
         {
-            // This is called almost every single time you use it...SOB.
-
+            // Runs on almost every interaction with the dispenser, so keep it cheap.
 
             var outputContainer = _itemSlotsSystem.GetItemOrNull(reagentDispenser, SharedEnergyReagentDispenser.OutputSlotName);
             var outputContainerInfo = BuildOutputContainerInfo(outputContainer);
@@ -118,9 +121,8 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
             var usingBattery = false;
             var idleUse = 0f;
             var hasPower = false;
-            // all of these are self explanitory on what they are meant for.
 
-            // Portable dispensers are powered by the cell in their cell slot, stationary ones by their internal battery.
+            // JAMBOREE Portable dispensers are powered by the cell in their cell slot, stationary ones by their internal battery.
             var usingCell = false;
             if (_powerCell.TryGetBatteryFromSlot(reagentDispenser, out var cellBattery))
             {
@@ -128,13 +130,11 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
                 batteryCharge = cellBattery.CurrentCharge;
                 batteryMaxCharge = cellBattery.MaxCharge;
                 hasPower = cellBattery.CurrentCharge > 0f;
-                // If this is a portable dispenser, we get the battery from the cell slot and use that for the UI state!
             }
             else if (TryComp<BatteryComponent>(reagentDispenser, out var battery))
             {
                 batteryCharge = battery.CurrentCharge;
                 batteryMaxCharge = battery.MaxCharge;
-                // Elsewise, this means its stationary dispenser. So we use its internal battery instead of a cell.
             }
 
             if (TryComp<ApcPowerReceiverBatteryComponent>(reagentDispenser, out var apcPower))
@@ -145,11 +145,10 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
             }
 
             // Cell-powered portables aren't tied to the APC net, so don't let an inherited receiver override their power state.
-            // Plus if its a stationary dispenser and get power from APC, let the APC decide if powered lol.
+            // JAMBOREE A stationary dispenser on APC lets the APC decide whether it's powered.
             if (!usingCell && TryComp<ApcPowerReceiverComponent>(reagentDispenser, out var apc))
                 hasPower = apc.Powered;
 
-            // Then we put allat information into an object so the client can actually read the damn thing.
             var state = new EnergyReagentDispenserBoundUserInterfaceState(
                 outputContainerInfo,
                 GetNetEntity(outputContainer),
@@ -162,7 +161,7 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
                 usingBattery,
                 hasPower
             );
-            // Basically send all this information to the client. Such as how much charge that current dispenser has.
+            // Broadcasts to every client with this dispenser open, so anyone watching sees the same numbers.
             _userInterfaceSystem.SetUiState(reagentDispenser.Owner, EnergyReagentDispenserUiKey.Key, state);
 
         }
@@ -199,8 +198,8 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
                     cost,
                     reagentProto.SubstanceColor
                 ));
-                // This basically displays all the reagents in the dispenser that it can dispenseand their cost.
-                // So if you add a new reagent to the dispenser, itll show up here.
+                // Any reagent added to the component shows up here automatically, with its localised name and colour.
+                // The client sorts by label, so dispense order is stable rather than dictionary order.
             }
 
             inventory.Sort((a, b) => string.Compare(a.ReagentLabel, b.ReagentLabel, StringComparison.Ordinal));  // sort it by name.
@@ -208,7 +207,8 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
         }
 
 
-        // This method below updates the UI when the client does literally anything to it. So the information it outputs to the client is always accurate.
+        // Anything the client can do to this dispenser funnels back through a handler, and each one
+        // re-sends state so the UI can't drift out of step with the machine.
         private void OnSetDispenseAmountMessage(Entity<EnergyReagentDispenserComponent> reagentDispenser, ref EnergyReagentDispenserSetDispenseAmountMessage message)
         {
             reagentDispenser.Comp.DispenseAmount = message.EnergyReagentDispenserDispenseAmount;
@@ -235,15 +235,14 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
         {
             var hasPower = false;
 
-            // Portable dispenser? If a power cell is in the slot, power comes from it.
+            // JAMBOREE Portable dispenser? If a power cell is in the slot, power comes from it.
             if (_powerCell.TryGetBatteryFromSlot(ent, out var cellBattery))
                 hasPower = cellBattery.CurrentCharge > 0f;
 
-            // Stationary is if it doesnt have a powercell slot.
+            //JAMBOREE A portable with a cell in the slot draws from that, anything else is stationary and follows the APC.
             else if (TryComp<ApcPowerReceiverComponent>(ent, out var apc))
                 hasPower = apc.Powered;
 
-            // Send this information to the clients visualiser.
             _appearanceSystem.SetData(ent.Owner, EnergyReagentDispenserVisuals.Powered, hasPower);
         }
 
@@ -257,7 +256,7 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
             var amount = (int) reagentDispenser.Comp.DispenseAmount;
             var powerRequired = GetPowerCostForReagent(message.ReagentId, amount, reagentDispenser.Comp);
 
-            // Portable dispensers draw from the cell in their cell slot, stationary ones from their internal battery.
+            // JAMBOREE Portable dispensers draw from the cell in their cell slot, stationary ones from their internal battery.
             var usingCell = _powerCell.TryGetBatteryFromSlot(reagentDispenser, out var cellBatteryEnt, out var cellBattery);
             BatteryComponent? battery = usingCell ? cellBattery : null;
             if (!usingCell)
@@ -280,7 +279,50 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
                 _battery.SetCharge(reagentDispenser.Owner, battery.CurrentCharge - powerRequired);
             reagentDispenser.Comp.StoredEnergySpent += powerRequired;
             ClickSound(reagentDispenser);
-            UpdateUiState(reagentDispenser); // Replaced this to track the energy spent // JAMBOREE
+            UpdateUiState(reagentDispenser); // JAMBOREE Replaced this to track the energy spent.
+        }
+
+        // JAMBOREE - These explain why the reagent edit attempt was denied. Like typos of a reagent or they arent an admin.
+        // + this is also a Jamboree exclusive new system, its not in the original Goobstation e-Chem.
+        private void OnEditReagentMessage(Entity<EnergyReagentDispenserComponent> reagentDispenser, ref EnergyReagentDispenserEditReagentMessage message)
+        {
+            if (!_playerManager.TryGetSessionByEntity(message.Actor, out var session))
+            {
+                Reply(message.Actor, "edit: sender has no session (server)");
+                return;
+            }
+
+            if (_adminManager.GetAdminData(session)?.HasFlag(AdminFlags.Admin) != true)
+            {
+                Reply(message.Actor, "edit: rejected, not an admin (server)");
+                return;
+            }
+
+            // -1 is the deletion sentinel, filtered here so it never becomes data.
+            if (message.NewCost < 0f)
+            {
+                reagentDispenser.Comp.Reagents.Remove(message.ReagentId);
+                UpdateUiState(reagentDispenser);
+                Reply(message.Actor, $"edit: removed {message.ReagentId} (server)");
+                return;
+            }
+
+            // JAMBOREE Reject ids that don't resolve to a real reagent, so an admin typo can't poison the inventory.
+            if (!_prototypeManager.TryIndex<ReagentPrototype>(message.ReagentId, out _))
+            {
+                Reply(message.Actor, $"edit: '{message.ReagentId}' is not a reagent id (server)");
+                return;
+            }
+
+            reagentDispenser.Comp.Reagents[message.ReagentId] = message.NewCost;
+            UpdateUiState(reagentDispenser);
+            Reply(message.Actor, $"edit: set {message.ReagentId} to {message.NewCost} (server)");
+        }
+
+
+        private void Reply(EntityUid target, string text)
+        {
+            _popup.PopupEntity(text, target, target);
         }
 
         private void OnClearContainerSolutionMessage(Entity<EnergyReagentDispenserComponent> reagentDispenser, ref EnergyReagentDispenserClearContainerSolutionMessage message)
@@ -298,10 +340,10 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
                 else if (TryComp<BatteryComponent>(reagentDispenser, out var battery))
                     _battery.AddCharge(reagentDispenser, reagentDispenser.Comp.StoredEnergySpent, battery);
 
-                reagentDispenser.Comp.StoredEnergySpent = 0f; // Add restored energy back to the battery instead of a ridiculous amount. JAMBOREE
+                reagentDispenser.Comp.StoredEnergySpent = 0f; // JAMBOREE - refund exactly what was tracked, never a fixed amount
             }
 
-            _solutionContainerSystem.RemoveAllSolution(solution.Value); // yeah the machine eats it. idk what else to tell you
+            _solutionContainerSystem.RemoveAllSolution(solution.Value); // the machine eats the contents
             UpdateUiState(reagentDispenser);
             ClickSound(reagentDispenser);
         }
@@ -310,32 +352,31 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
         {
             UpdateBeakerAppearance(ent);
             UpdateUiState(ent);
-            // this is for portable energy dispensers. Makes the beaker show on the sprite...Wow.
         }
 
         private void OnBeakerRemoved(Entity<EnergyReagentDispenserComponent> ent, ref EntRemovedFromContainerMessage args)
         {
+            // JAMBOREE - Zero the tracked spend on removal. This is so the player can't swap beakers with a cheap reagent
+            // like water to abuse the recharge-back feature. Which is unfixed in Goobstations.
             ent.Comp.StoredEnergySpent = 0f;
             UpdateBeakerAppearance(ent);
-            UpdateUiState(ent); // Update the UI to reflect the reset energy when the beaker is removed. JAMBOREE
-
-        } // Remove the stored energy spent when the containers removed to prevent the exploit of swapping containers to restore energy. JAMBOREE
+            UpdateUiState(ent);
+        }
 
         private void UpdateBeakerAppearance(Entity<EnergyReagentDispenserComponent> ent)
         {
             var beaker = _itemSlotsSystem.GetItemOrNull(ent, SharedEnergyReagentDispenser.OutputSlotName);
             _appearanceSystem.SetData(ent.Owner, EnergyReagentDispenserVisuals.Beaker, beaker != null);
-            // Ditto. You have to cover EVERY ACTION for the sprite and UI.
         }
 
         private void ClickSound(Entity<EnergyReagentDispenserComponent> reagentDispenser) =>
-            _audioSystem.PlayPvs(reagentDispenser.Comp.ClickSound, reagentDispenser, AudioParams.Default.WithVolume(-2f)); // its a play sound! Clicky click!
+            _audioSystem.PlayPvs(reagentDispenser.Comp.ClickSound, reagentDispenser, AudioParams.Default.WithVolume(-2f));
 
         private static float GetPowerCostForReagent(string reagentId, int amount, EnergyReagentDispenserComponent comp)
         {
             return comp.Reagents.TryGetValue(reagentId, out var cost)
                 ? cost * amount
-                : float.MaxValue; // We get to see the cost of the reagent. You get to set each individual one in YAML!
+                : float.MaxValue; // unknown reagents cost a number too big for a normal battery, so a bad lookup can never be free
         }
         private void OnMapInit(Entity<EnergyReagentDispenserComponent> entity, ref MapInitEvent args)
         {

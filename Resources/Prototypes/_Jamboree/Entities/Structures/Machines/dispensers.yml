@@ -154,6 +154,9 @@
     state: soda
     drawdepth: SmallObjects
     snapCardinals: false
+  - type: Rotatable
+  - type: Transform
+    noRot: false
   - type: Machine
     board: EnergySodaDispenserMachineCircuitboard
   - type: GuideHelp
