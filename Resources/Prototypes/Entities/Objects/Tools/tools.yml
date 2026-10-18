@@ -319,6 +319,8 @@
     storedSprite:
       sprite: Objects/Tools/wrench.rsi
       state: storage
+    shape:
+    - 0,0,1,1
   - type: MeleeWeapon
     animationRotation: 225 # WWDP
     wideAnimationRotation: 135
