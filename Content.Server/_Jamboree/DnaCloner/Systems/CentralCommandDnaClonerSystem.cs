@@ -21,7 +21,6 @@ using Content.Shared.DetailExaminable;
 using Content.Shared.DeviceLinking;
 using Content.Shared.DeviceLinking.Events;
 using Content.Shared.Examine;
-using Content.Shared.Forensics.Components;
 using Content.Shared.Ghost;
 using Content.Server.Ghost;
 using Content.Server.Ghost.Roles;
@@ -41,7 +40,8 @@ using Robust.Shared.Utility; //JAMBOREE API SLOP PART 1
 namespace Content.Server._Jamboree.DnaCloner.Systems
 {
 
-    //JAMBOREE Central Command's DNA Molecularsynthesis Console. Lists every player who has been ROUND REMOVED so they can get back.
+    // JAMBOREE - Central Command's DNA Molecularsynthesis console. Lists every player who has been round
+    // removed so they can get a body back.
 
     public sealed class CentralCommandDnaClonerSystem : EntitySystem
     {
@@ -104,7 +104,7 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
         {
             _signalSystem.EnsureSinkPorts(uid, component.VatPort);
 
-            //JAMBOREE Give the visualizer a definite starting value.
+            // JAMBOREE - Give the visualizer a definite starting value.
             UpdateVatVisual(uid, component);
         }
 
@@ -142,6 +142,12 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
         {
             if (args.Port != CentralCommandDnaClonerConsoleComponent.PodPort)
                 return;
+
+            if (component.DnaClonerVat is { } oldVat
+                && TryComp<CentralCommandDnaClonerVatComponent>(oldVat, out var oldVatComp))
+            {
+                oldVatComp.ConnectedConsole = null;
+            }
 
             component.DnaClonerVat = null;
             UpdateUserInterface(uid, component);
@@ -209,7 +215,7 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
                 UpdateUserInterface(console);
         }
 
-        // This changes the cloner vats sprite state. When its vatstatus is occupied.
+        // Swaps the vat sprite so a busy machine reads as busy on the map, not just in the UI.
         private void UpdateVatVisual(EntityUid uid, CentralCommandDnaClonerVatComponent component)
         {
             var occupied = TryGetVatContainer(uid, out var container) && container.ContainedEntity != null;
@@ -246,7 +252,7 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
 
         private CentralCommandDnaClonerStatus GetStatus(CentralCommandDnaClonerConsoleComponent component)
         {
-            if (component.DnaClonerVat is not { } vat)
+            if (component.DnaClonerVat is not { } vat || Deleted(vat))
                 return CentralCommandDnaClonerStatus.NoVat;
 
             if (!component.DnaClonerVatInRange || !Transform(vat).Anchored)
@@ -264,7 +270,12 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             return CentralCommandDnaClonerStatus.Ready;
         }
 
-        // JAMBOREE  Basically conditions for who can get DNA'd.
+        #endregion
+
+        #region Eligibility
+
+        // JAMBOREE - Who the console is allowed to synthesise a body for. Anything that still has a
+        // usable body, is already walking around, or was a deliberate role pick is off the menu.
         private bool IsRespawnable(MindComponent mind, MindSituation situation)
         {
 
@@ -275,26 +286,27 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
                 return false;
             }
 
-            // A player can have more than one mind i found out...
+            // A player can have more than one mind i found out... so only ever list the one they're actually using.
             if (!_mind.TryGetMind(mind.UserId.Value, out var activeMindId, out var activeMind)
                 || activeMind != mind)
             {
                 return false;
             }
 
-            // JAMBOREE Took a ghost role (MothRoach, etc). Their old body
+            // JAMBOREE Took a ghost role (MothRoach, etc). The profile won't rebuild that body for us,
+            // so synthesising them would hand back their normal character instead. Leave em be.
             if (_roles.MindHasRole<GhostRoleMarkerRoleComponent>(activeMindId.Value))
                 return false;
 
             return situation switch
             {
-                // Still in a live body. Lol.
+                // Still walking around in a body. There's nothing to fix.
                 MindSituation.LiveBody => false,
 
-               // you get. NO BODY RETURNING PRIVLIGES
+                // Ghosts that can still pop back into a body don't need us, only the properly stuck ones do.
                 MindSituation.GhostOwned => IsStuckGhost(mind.OwnedEntity),
 
-                //  Round removed lmao
+                // Round removed, rotted out, or never had one. Their ghost is what we'd be reviving.
                 MindSituation.BodyDeleted or MindSituation.BodyRotten or MindSituation.NoBody =>
                     IsReturnableGhost(mind.VisitingEntity),
 
@@ -373,9 +385,11 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             if (!TryComp<GhostComponent>(ghostUid, out var ghost))
                 return false;
 
-            return ghost.CanReturnToBody && !ghost.CanGhostInteract; // Can ghost interact is specifically for aGhosts. Admins no like DNA molecularsynthesised.
+            return ghost.CanReturnToBody && !ghost.CanGhostInteract;
         }
 
+        // JAMBOREE - The other half of the ghost check: owns its own ghost but can't get back into a body.
+        // CanGhostInteract is specifically for aGhosts, and admins no like being DNA molecularsynthesised.
         private bool IsStuckGhost(EntityUid? uid)
         {
             if (uid is not { } ghostUid)
@@ -387,7 +401,7 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             return !ghost.CanReturnToBody && !ghost.CanGhostInteract;
         }
 
-        // JAMBOREE - Checks if the body is ROTTING.
+        // JAMBOREE - Whether the corpse is rotted far enough to count. A stage below zero turns the check off.
         private bool IsTheirBodyRotting(EntityUid body, int stage)
         {
             if (stage < 0 || !_rotting.IsRotten(body))
@@ -396,8 +410,8 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             return _rotting.RotStage(body) >= stage;
         }
 
-        // JAMBOREE - Depending on if they got round removed or rotted, then it should return variables for the name of the minds.
-        // for example if they are rotted it should show "(name) (rotted)"
+        // JAMBOREE - Picks the bracket the client shows on the list. Rotted and lost read differently, everything
+        // else falls through as intact.
         private CentralCommandDnaClonerBodyState GetBodyState(MindSituation situation)
         {
             return situation switch
@@ -405,12 +419,11 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
                 MindSituation.BodyRotten => CentralCommandDnaClonerBodyState.Rotted,
                 MindSituation.BodyDeleted => CentralCommandDnaClonerBodyState.Lost,
 
-                //  A ghost role mind still counts as intact. It is filtered out because CC doesnt DNA molec EVERYONE.
                 _ => CentralCommandDnaClonerBodyState.Intact,
             };
         }
 
-        // Mindsituation is just my way of cleaning up my terrible code. Just seperates the scenarios.
+        // Just my way of untangling the eligibility switch above. Separates the scenarios so each one reads on its own.
         private enum MindSituation
         {
             Unknown = 0,
@@ -426,7 +439,8 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
         #region Respawning
 
 
-        // JAMBOREE - THIS IS WHERE WE BRING BACK THE BODIES FROM ROUND REMOVAL!!!
+        // JAMBOREE - This is where the body actually gets made. Every guard re-checks eligibility and machine
+        // state up front, because the list the player clicked can be stale by the time they hit the button.
         private void OnRespawnRequested(EntityUid uid, CentralCommandDnaClonerConsoleComponent component, CentralCommandDnaClonerRespawnMessage args)
         {
             var mind = GetEntity(args.Mind);
@@ -502,7 +516,8 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             UpdateUserInterface(uid, component);
         }
 
-        // JAMBOREE - Has the console announce things inits own language n stuff.
+        // JAMBOREE - The console talks in its own voice. Kept off the public chat log so a busy CC doesn't
+        // spam everyone with every failed synthesis.
         private void Speak(EntityUid uid, string key, CentralCommandDnaClonerStatus? status = null, string? name = null)
         {
             var message = Loc.GetString(key,
@@ -513,7 +528,8 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
         }
 
 
-        //  go go gadget new body lol
+        // JAMBOREE - Builds the body off the player's profile, then hands the mind over. Nothing here reads the
+        // old corpse, because by this point it's already gone, so DNA and fingerprints are freshly rolled.
 
         private bool TryToGetThierBodyBack(
             EntityUid mindUid,
@@ -528,7 +544,7 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             if (mindComp.UserId is not { } userId || !_players.TryGetSessionById(userId, out var session))
                 return false;
 
-            // get the players profile so we can fetch their current selected char.
+            // The body comes from the profile, but the name comes from the mind, which is what the list showed them.
             var profile = _gameTicker.GetPlayerProfile(session);
             var station = _station.GetOwningStation(vat) ?? _station.GetStations().FirstOrNull();
             var mob = _spawning.SpawnPlayerMob(Transform(vat).Coordinates, null, profile, station);
@@ -538,8 +554,9 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             if (profile != null)
                 _traits.ApplyTraits(mob, profile);
 
-            // Everything below is what the vanilla pod would have carried across, minus the corpse it read it off.
-            ApplyRetainedComponents(mob);
+            // Lets them examine the finished result. DNA and fingerprints are already on the mob from its species
+            // prototype, so there's nothing to carry over from a corpse that no longer exists.
+            EnsureComp<DetailExaminableComponent>(mob);
 
             if (!_container.Insert(mob, container))
             {
@@ -551,21 +568,12 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             // This deletes the ghost the mind was wearing and hands the body over.
             _mind.TransferTo(mindUid, mob, true, mind: mindComp);
 
-            // JAMBOREE Only consume biomass if it actually made a body...cant be losing biobaaaaas.
+            // JAMBOREE - Only burn biomass once we've actually got a body, so a failed vat insert costs them nothing.
             _material.TryChangeMaterialAmount(vat, vatComp.RequiredMaterial, -vatComp.MaterialCost);
 
             body = mob;
             QueuePopOut(vat, container, mob);
             return true;
-        }
-
-        private void ApplyRetainedComponents(EntityUid mob)
-        {
-            // This is how we copy the components over to the body. Like their language knowledge n that.
-            EnsureComp<DnaComponent>(mob);
-            EnsureComp<FingerprintComponent>(mob);
-
-            EnsureComp<DetailExaminableComponent>(mob);
         }
 
         private void QueuePopOut(EntityUid vat, ContainerSlot container, EntityUid body)
@@ -598,7 +606,7 @@ namespace Content.Server._Jamboree.DnaCloner.Systems
             if (!Resolve(console, ref component))
                 return;
 
-            if (component.DnaClonerVat is { } vat)
+            if (component.DnaClonerVat is { } vat && !Deleted(vat))
             {
                 Transform(vat).Coordinates.TryDistance(EntityManager, Transform(console).Coordinates, out var distance);
                 component.DnaClonerVatInRange = distance <= component.MaxDistance;

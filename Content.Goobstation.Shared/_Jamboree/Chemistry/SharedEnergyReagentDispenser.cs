@@ -79,7 +79,7 @@ namespace Content.Goobstation.Shared._Jamboree.Chemistry
     }
 
 
-    // The Admin Edit Solutions...
+    // JAMBOREE - Admin reagent edit. NewCost of -1 is the deletion sentinel, handled server side.
     [Serializable, NetSerializable]
     public sealed class EnergyReagentDispenserEditReagentMessage(string reagentId, float newCost) : BoundUserInterfaceMessage
     {

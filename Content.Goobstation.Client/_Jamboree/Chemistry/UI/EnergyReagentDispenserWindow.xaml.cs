@@ -96,10 +96,10 @@ namespace Content.Goobstation.Client._Jamboree.Chemistry.UI
             _adminManager.AdminStatusUpdated -= UpdateAdminVisibility;
         }
 
-        // JAMBOREE checking admin flags so the checkbox doesnt show to non-admins.
+        // JAMBOREE - Checking admin flags here is cosmetic only; the server re-checks them on every edit message.
         private bool HasAdmin => _adminManager.HasFlag(AdminFlags.Admin);
 
-        // JAMBOREE and this is where the magic happens...
+        // JAMBOREE - Single source of truth for admin control visibility, so de-adminning hides them live.
         private void UpdateAdminVisibility()
         {
             var admin = HasAdmin;
@@ -132,7 +132,7 @@ namespace Content.Goobstation.Client._Jamboree.Chemistry.UI
             var cost = -1f;
             if (!Remove)
             {
-                // float.TryParse keeps junk text from silently becoming 0J/u.
+                // JAMBOREE - float.TryParse keeps junk text from silently becoming 0J/u.
                 if (!float.TryParse(CostEdit.Text, out cost) || cost < 0f)
                 {
                     Reply($"client: '{CostEdit.Text}' is not a number, nothing sent");
