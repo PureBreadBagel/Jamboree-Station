@@ -1,7 +1,3 @@
-// SPDX-FileCopyrightText: 2024 Mnemotechnican <69920617+Mnemotechnician@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
-// SPDX-FileCopyrightText: 2025 RadsammyT <radsammyt@gmail.com>
-//
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.DoAfter;
@@ -18,7 +14,7 @@ namespace Content.Shared.InteractionVerbs;
 /// <summary>
 ///     Represents an action that can be performed on an entity.
 /// </summary>
-[Prototype("Interaction"), Serializable]
+[Prototype("Interaction")]
 public sealed partial class InteractionVerbPrototype : IPrototype, IInheritingPrototype
 {
     /// <inheritdoc />

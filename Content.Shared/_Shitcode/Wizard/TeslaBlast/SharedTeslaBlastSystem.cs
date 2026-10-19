@@ -1,8 +1,3 @@
-// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
-// SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
-//
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Numerics;
@@ -143,15 +138,31 @@ public abstract class SharedTeslaBlastSystem : EntitySystem
 [Serializable, NetSerializable]
 public sealed partial class TeslaBlastDoAfterEvent : DoAfterEvent
 {
+    public TimeSpan Delay;
+
+    public float Range;
+
+    public int BoltCount;
+
+    public int ArcDepth;
+
+    public Vector2 MinMaxDamage;
+
+    public Vector2 MinMaxStunTime;
+
+    public string LightningPrototype;
+
+    public NetEntity Action;
+
     public TeslaBlastDoAfterEvent(
-    TimeSpan delay,
-    float range,
-    int boltCount,
-    int arcDepth,
-    Vector2 damage,
-    Vector2 stunTime,
-    string lightningPrototype,
-    NetEntity action)
+        TimeSpan delay,
+        float range,
+        int boltCount,
+        int arcDepth,
+        Vector2 damage,
+        Vector2 stunTime,
+        string lightningPrototype,
+        NetEntity action)
     {
         Delay = delay;
         Range = range;
@@ -163,21 +174,6 @@ public sealed partial class TeslaBlastDoAfterEvent : DoAfterEvent
         Action = action;
     }
 
-    public TimeSpan Delay = default!;
-
-    public float Range = default!;
-
-    public int BoltCount = default!;
-
-    public int ArcDepth = default!;
-
-    public Vector2 MinMaxDamage = default!;
-
-    public Vector2 MinMaxStunTime = default!;
-
-    public string LightningPrototype = default!;
-
-    public NetEntity Action = default!;
 
     public TeslaBlastDoAfterEvent() : this(TimeSpan.FromSeconds(10),
         7f,

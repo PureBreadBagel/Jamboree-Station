@@ -1,6 +1,3 @@
-# SPDX-FileCopyrightText: 2022 Paul Ritter <ritter.paul1@googlemail.com>
-# SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-#
 # SPDX-License-Identifier: MIT
 
 name: Engine submodule version checker
@@ -18,6 +15,8 @@ jobs:
   verify_engine_version:
     name: Verify engine release pin
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4.2.2
       - name: Verify RobustToolbox is pinned to v293.0.0

@@ -54,7 +54,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
-using Content.Server.PowerCell;
+using Content.Shared.PowerCell;
 using Content.Shared.Power.Components;
 using Content.Shared.PowerCell.Components;
 using Content.Server.Administration.Managers;
@@ -70,16 +70,16 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
     /// <seealso cref="EnergyReagentDispenserComponent"/>
     /// </summary>
     [UsedImplicitly]
-    public sealed class EnergyReagentDispenserSystem : EntitySystem
+    public sealed partial class EnergyReagentDispenserSystem : EntitySystem
     {
-        [Dependency] private readonly AudioSystem _audioSystem = default!;
-        [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
-        [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
-        [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly BatterySystem _battery = default!;
-        [Dependency] private readonly PowerCellSystem _powerCell = default!;
-        [Dependency] private readonly SharedAppearanceSystem _appearanceSystem = default!;
+        [Dependency] private AudioSystem _audioSystem = default!;
+        [Dependency] private SharedSolutionContainerSystem _solutionContainerSystem = default!;
+        [Dependency] private ItemSlotsSystem _itemSlotsSystem = default!;
+        [Dependency] private UserInterfaceSystem _userInterfaceSystem = default!;
+        [Dependency] private IPrototypeManager _prototypeManager = default!;
+        [Dependency] private BatterySystem _battery = default!;
+        [Dependency] private PowerCellSystem _powerCell = default!;
+        [Dependency] private SharedAppearanceSystem _appearanceSystem = default!;
 
         [Dependency] private readonly IAdminManager _adminManager = default!;
         [Dependency] private readonly SharedPopupSystem _popup = default!;
@@ -124,16 +124,17 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
 
             // JAMBOREE Portable dispensers are powered by the cell in their cell slot, stationary ones by their internal battery.
             var usingCell = false;
-            if (_powerCell.TryGetBatteryFromSlot(reagentDispenser, out var cellBattery))
+            if (_powerCell.TryGetBatteryFromSlot(reagentDispenser.Owner, out var cellBattery))
             {
                 usingCell = true;
-                batteryCharge = cellBattery.CurrentCharge;
-                batteryMaxCharge = cellBattery.MaxCharge;
-                hasPower = cellBattery.CurrentCharge > 0f;
+                batteryCharge = _battery.GetCharge(cellBattery.Value.AsNullable());
+                batteryMaxCharge = cellBattery.Value.Comp.MaxCharge;
+                hasPower = _battery.GetCharge(cellBattery.Value.AsNullable()) > 0f;
+                // If this is a portable dispenser, we get the battery from the cell slot and use that for the UI state!
             }
             else if (TryComp<BatteryComponent>(reagentDispenser, out var battery))
             {
-                batteryCharge = battery.CurrentCharge;
+                batteryCharge = _battery.GetCharge((reagentDispenser.Owner, battery));
                 batteryMaxCharge = battery.MaxCharge;
             }
 
@@ -273,10 +274,7 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
             if (!_solutionContainerSystem.TryAddSolution(solution.Value, sol))
                 return;
 
-            if (usingCell && cellBatteryEnt is { } batteryEnt)
-                _battery.TryUseCharge(batteryEnt, powerRequired, battery);
-            else
-                _battery.SetCharge(reagentDispenser.Owner, battery.CurrentCharge - powerRequired);
+            _battery.TryUseCharge(battery.Value.AsNullable(), powerRequired);
             reagentDispenser.Comp.StoredEnergySpent += powerRequired;
             ClickSound(reagentDispenser);
             UpdateUiState(reagentDispenser); // JAMBOREE Replaced this to track the energy spent.
@@ -335,10 +333,8 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
             if (reagentDispenser.Comp.StoredEnergySpent > 0f)
             {
                 // Refund the energy to the cell in the slot for portable dispensers, or the internal battery for stationary ones.
-                if (_powerCell.TryGetBatteryFromSlot(reagentDispenser, out var cellBatteryEnt, out var cellBattery))
-                    _battery.AddCharge(cellBatteryEnt.Value, reagentDispenser.Comp.StoredEnergySpent, cellBattery);
-                else if (TryComp<BatteryComponent>(reagentDispenser, out var battery))
-                    _battery.AddCharge(reagentDispenser, reagentDispenser.Comp.StoredEnergySpent, battery);
+                if (_powerCell.TryGetBatteryFromSlotOrEntity(reagentDispenser.Owner, out var battery))
+                    _battery.ChangeCharge(battery.Value.AsNullable(), reagentDispenser.Comp.StoredEnergySpent);
 
                 reagentDispenser.Comp.StoredEnergySpent = 0f; // JAMBOREE - refund exactly what was tracked, never a fixed amount
             }
