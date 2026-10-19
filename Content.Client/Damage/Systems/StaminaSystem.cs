@@ -5,9 +5,7 @@
 //
 // SPDX-License-Identifier: MIT
 
-using System.Numerics;
 using Content.Client.Stunnable;
-using Content.Goobstation.Shared.Emoting;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Mobs;
@@ -90,9 +88,7 @@ public sealed partial class StaminaSystem : SharedStaminaSystem
             return;
 
         _animation.Stop(entity.Owner, StaminaAnimationKey);
-        entity.Comp1.StartOffset = Vector2.Zero; // Goob edit
-        // entity.Comp2.Offset;
-        _sprite.SetOffset(entity.Owner, Vector2.Zero); // Goob edit
+        entity.Comp1.StartOffset = entity.Comp2.Offset;
     }
 
     private void OnAnimationCompleted(Entity<StaminaComponent> entity, ref AnimationCompletedEvent args)

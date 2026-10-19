@@ -13,7 +13,6 @@ public abstract partial class SharedBorgSystem
         "MindRoleRevolutionary",
         "MindRoleCosmicCult",
         "MindRoleThrall",
-        "MindRoleGangMember",
     };
 
     private void GoobDeconvertMind(EntityUid chassis, Entity<MindComponent> mind)

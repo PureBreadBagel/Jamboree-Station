@@ -60,8 +60,6 @@
       "directions": 4
     },
     {"name": "equipped-head-feroxi", "directions": 4},
-    {"name": "equipped-head-hydrakin", "directions": 4},
-    {"name": "equipped-head-unshaded-feroxi", "directions": 4},
-    {"name": "equipped-head-unshaded-hydrakin", "directions": 4}
+    {"name": "equipped-head-unshaded-feroxi", "directions": 4}
   ]
 }

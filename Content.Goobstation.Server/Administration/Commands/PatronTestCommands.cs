@@ -112,7 +112,6 @@ internal sealed partial class PatronTestListCommand : LocalizedCommands
             shell.WriteLine($"[{tier.ID}] {Loc.GetString(tier.Name)} (db id {tier.DatabaseId}, priority {tier.Priority})");
             shell.WriteLine($"  Icon: {tier.Icon?.Id ?? "None"} | OOC icon tiers: {string.Join(", ", tier.OocIconTiers)}");
             shell.WriteLine($"  Credits: {tier.ShowOnCredits} | Ghost Color: {tier.GhostColor}");
-            shell.WriteLine($"  Ghost Cosmetics: {tier.GhostCosmetics} | Ghost Particles: {tier.GhostParticles}");
             shell.WriteLine($"  Lobby Message: {tier.LobbyMessage} | Shoutout: {tier.RoundEndShoutout}");
 
             var assigned = assignments.Where(kvp => kvp.Value == tier.ID).ToList();

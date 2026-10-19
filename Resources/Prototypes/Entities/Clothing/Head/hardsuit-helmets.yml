@@ -153,10 +153,6 @@
       head-dog:
       - state: equipped-head-dog
       - state: equipped-head-unshaded-dog
-      head-hydrakin:
-      - state: equipped-head-hydrakin
-      - state: equipped-head-unshaded-hydrakin
-        shader: unshaded
       head-anomalocarid: #imp edit
       - state: equipped-head-anomalocarid
       - state: equipped-head-unshaded-anomalocarid
@@ -894,9 +890,6 @@
       head-vox:
       - state: equipped-HELMET-light-vox
         shader: unshaded
-      head-hydrakin:
-      - state: equipped-HELMET-hydrakin
-        shader: unshaded
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
     clothingVisuals:
@@ -907,10 +900,6 @@
       head-vox:
       - state: equipped-HELMET-vox
       - state: equipped-HELMET-unshaded-vox
-        shader: unshaded
-      head-hydrakin:
-      - state: equipped-HELMET-hydrakin
-      - state: equipped-HELMET-unshaded-hydrakin
         shader: unshaded
   - type: PointLight # Color matches visor colors, radius/energy same as mining hardsuit for the big captain.
     color: "#f3ea9c"

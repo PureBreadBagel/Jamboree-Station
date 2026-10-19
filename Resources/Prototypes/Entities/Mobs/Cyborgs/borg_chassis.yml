@@ -32,8 +32,9 @@
   - type: BorgSwitchableType
     inherentRadioChannels:
     - Common
-    - Binary
+    # - Binary # Goobstation - replaced with collective mind
   - type: BorgSwitchableSubtype # Goobstation
+    # - Binary # Goobstation - replaced with collective mind
 
 
 - type: entity

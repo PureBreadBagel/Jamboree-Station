@@ -138,7 +138,6 @@
     #- Vox
     - Yowie # Goobstation
     - Plasmaman # EE
-    - Synth # Goob
   - type: AntagObjectives # Goobstation
     objectives:
     - NukeopsDetonateObjective

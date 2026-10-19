@@ -189,6 +189,18 @@ public sealed class MovementModStatusSystem : EntitySystem
 
         if (ignoreEv.Cancelled)
             return false;
+
+        if (!TryComp<StaminaComponent>(uid, out var staminaComp))
+            return true;
+
+        var ccFactor = Math.Clamp(1 - Math.Min(walkSpeedModifier, sprintSpeedModifier), 0, 1);
+        var ccTime = TimeSpan.FromSeconds(10f);
+        if (visual && !TerminatingOrDeleted(uid)
+            && 0 <= staminaComp.ActiveDrains.Aggregate(0f, (current, modifier) => current + modifier.Value.DrainRate))
+        {
+            _jitter.DoJitter(uid, ccFactor * ccTime, true);
+            _stutter.DoStutter(uid, ccFactor * ccTime, true);
+        }
         // Goob edit end
 
         return true;

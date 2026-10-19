@@ -62,11 +62,6 @@
   id: NitriumStatusEffect
   name: nitrium speedup
 
-- type: entity # todo move this
-  parent: StatusEffectSpeed
-  id: NitrousStatusEffect
-  name: nitrous speedup
-
 - type: entity
   parent: StatusEffectSpeed
   id: SlasherStatusEffectKillSpeed

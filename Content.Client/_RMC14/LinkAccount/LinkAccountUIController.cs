@@ -30,24 +30,21 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using System.Linq; // Goob - ghost cosmetics
+using System.Linq; // Goob - ooc icon selection
 using Content.Client.Lobby.UI;
 using Content.Client.Message;
 using Content.Goobstation.Common.CCVar;
 using Content.Goobstation.Common.Patrons; // Goob - ooc icon selection
 using Content.Goobstation.Shared.Patrons; // Goob - ooc icon selection
-using Content.Goobstation.Shared.GhostCosmetics; // Goob - ghost cosmetics
-using Content.Shared._RMC14.GhostColor; // Goob - ghost cosmetics
 using Content.Shared._RMC14.LinkAccount;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
 using Robust.Shared.Configuration;
-using Robust.Shared.Map; // Goob - ghost cosmetics
 using Robust.Shared.Network;
-using Robust.Shared.Prototypes; // Goob - ghost cosmetics
+using Robust.Shared.Prototypes; // Goob - ooc icon selection
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using Robust.Client.UserInterface.Controls; // Goob - ghost cosmetics
+using Robust.Client.UserInterface.Controls; // Goob - ooc icon selection
 using static Robust.Client.UserInterface.Controls.BaseButton;
 using static Robust.Client.UserInterface.Controls.LineEdit;
 using static Robust.Client.UserInterface.Controls.TabContainer;
@@ -58,17 +55,15 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
 {
     [Dependency] private readonly IClipboardManager _clipboard = default!;
     [Dependency] private readonly IConfigurationManager _config = default!;
-    [Dependency] private readonly IEntityManager _entityManager = default!; // Goob - ghost cosmetics
-    [Dependency] private readonly IEntityNetworkManager _entityNet = default!; // Goob - ghost cosmetics
+    [Dependency] private readonly IEntityNetworkManager _entityNet = default!; // Goob - ooc icon selection
     [Dependency] private readonly LinkAccountManager _linkAccount = default!;
     [Dependency] private readonly INetManager _net = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!; // Goob - ghost cosmetics
+    [Dependency] private readonly IPrototypeManager _prototype = default!; // Goob - ooc icon selection
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IUriOpener _uriOpener = default!;
 
     private LinkAccountWindow? _window;
     private PatronPerksWindow? _patronPerksWindow;
-    private EntityUid? _cosmeticsPreviewGhost; // Goob - ghost cosmetics
     private string? _selectedOocIcon; // Goob - ooc icon selection
     private TimeSpan _disableUntil;
 
@@ -157,11 +152,7 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
         if (_patronPerksWindow == null)
         {
             _patronPerksWindow = new PatronPerksWindow();
-            _patronPerksWindow.OnClose += () =>
-            {
-                _patronPerksWindow = null;
-                DeleteGhostCosmeticsPreview(); // Goob - ghost cosmetics
-            };
+            _patronPerksWindow.OnClose += () => _patronPerksWindow = null;
 
             var tier = _linkAccount.Tier;
             SetTabTitle(_patronPerksWindow.LobbyMessageTab, Loc.GetString("rmc-ui-lobby-message"));
@@ -184,30 +175,6 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
             _patronPerksWindow.GhostColorSliders.OnColorChanged += OnGhostColorChanged;
             _patronPerksWindow.GhostColorClearButton.OnPressed += OnGhostColorClear;
             _patronPerksWindow.GhostColorSaveButton.OnPressed += OnGhostColorSave;
-
-            // Goob start - ghost cosmetics
-            SetTabTitle(_patronPerksWindow.GhostCosmeticsTab, Loc.GetString("goob-ui-ghost-cosmetics"));
-            SetTabVisible(_patronPerksWindow.GhostCosmeticsTab, tier is { GhostCosmetics: true } or { GhostParticles: true });
-
-            var cosmetics = _linkAccount.GhostCosmetics;
-            _patronPerksWindow.GhostParticlesRow.Visible = tier is { GhostParticles: true };
-            _patronPerksWindow.GhostHatRow.Visible = tier is { GhostCosmetics: true };
-            _patronPerksWindow.GhostMaskRow.Visible = tier is { GhostCosmetics: true };
-            PopulateGhostCosmetics(_patronPerksWindow.GhostParticlesButton, GhostCosmeticCategory.Particles, cosmetics?.Particles);
-            PopulateGhostCosmetics(_patronPerksWindow.GhostHatButton, GhostCosmeticCategory.Hat, cosmetics?.Hat);
-            PopulateGhostCosmetics(_patronPerksWindow.GhostMaskButton, GhostCosmeticCategory.Mask, cosmetics?.Mask);
-            _patronPerksWindow.GhostCosmeticsSaveButton.OnPressed += OnGhostCosmeticsSave;
-
-            if (tier is { GhostCosmetics: true } or { GhostParticles: true })
-            {
-                _cosmeticsPreviewGhost = _entityManager.SpawnEntity("GhostCosmeticsPreviewDummy", MapCoordinates.Nullspace);
-                if (_entityManager.TryGetComponent(_cosmeticsPreviewGhost.Value, out GhostColorComponent? previewColor))
-                    previewColor.Color = _linkAccount.GhostColor;
-
-                _patronPerksWindow.GhostCosmeticsPreview.SetEntity(_cosmeticsPreviewGhost);
-                UpdateGhostCosmeticsPreview();
-            }
-            // Goob end
 
             // Goob start - ooc icon selection
             SetTabTitle(_patronPerksWindow.OocIconTab, Loc.GetString("goob-ui-ooc-icon"));
@@ -292,66 +259,7 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
         _net.ClientSendMessage(new RMCChangeGhostColorMsg { Color = _patronPerksWindow.GhostColorSliders.Color });
     }
 
-    // Goob start - ghost cosmetics
-    private void PopulateGhostCosmetics(OptionButton button, GhostCosmeticCategory category, string? current)
-    {
-        button.Clear();
-        button.AddItem(Loc.GetString("goob-ui-ghost-cosmetics-none"), 0);
-
-        var cosmetics = _prototype.EnumeratePrototypes<GhostCosmeticPrototype>()
-            .Where(cosmetic => cosmetic.Category == category)
-            .OrderBy(cosmetic => Loc.GetString(cosmetic.Name))
-            .ToList();
-
-        for (var i = 0; i < cosmetics.Count; i++)
-        {
-            var cosmetic = cosmetics[i];
-            button.AddItem(Loc.GetString(cosmetic.Name), i + 1);
-            button.SetItemMetadata(button.ItemCount - 1, cosmetic.ID);
-
-            if (cosmetic.ID == current)
-                button.Select(button.ItemCount - 1);
-        }
-
-        button.OnItemSelected += args =>
-        {
-            button.SelectId(args.Id);
-            UpdateGhostCosmeticsPreview();
-        };
-    }
-
-    private void UpdateGhostCosmeticsPreview()
-    {
-        if (_patronPerksWindow == null || _cosmeticsPreviewGhost is not { } ghost)
-            return;
-
-        _entityManager.RemoveComponent<GhostCosmeticsComponent>(ghost);
-        _entityManager.AddComponent(ghost, new GhostCosmeticsComponent
-        {
-            Hat = ToCosmeticProto(_patronPerksWindow.GhostHatButton.SelectedMetadata as string),
-            Mask = ToCosmeticProto(_patronPerksWindow.GhostMaskButton.SelectedMetadata as string),
-        });
-    }
-
-    private void DeleteGhostCosmeticsPreview()
-    {
-        _entityManager.DeleteEntity(_cosmeticsPreviewGhost);
-        _cosmeticsPreviewGhost = null;
-    }
-
-    private void OnGhostCosmeticsSave(ButtonEventArgs args)
-    {
-        if (_patronPerksWindow is not { IsOpen: true })
-            return;
-
-        _entityNet.SendSystemNetworkMessage(new ChangeGhostCosmeticsEvent
-        {
-            Particles = ToCosmeticProto(_patronPerksWindow.GhostParticlesButton.SelectedMetadata as string),
-            Hat = ToCosmeticProto(_patronPerksWindow.GhostHatButton.SelectedMetadata as string),
-            Mask = ToCosmeticProto(_patronPerksWindow.GhostMaskButton.SelectedMetadata as string),
-        });
-    }
-
+    // Goob start - ooc icon selection
     private void PopulateOocIcons(SharedRMCPatronTier tier)
     {
         if (_patronPerksWindow == null || !_prototype.TryIndex(tier.Id, out var tierProto))
@@ -460,14 +368,6 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
 
         if (changed)
             _patronPerksWindow.OocIconSaveButton.Disabled = false;
-    }
-
-    private static ProtoId<GhostCosmeticPrototype>? ToCosmeticProto(string? id)
-    {
-        if (string.IsNullOrEmpty(id))
-            return null;
-
-        return new ProtoId<GhostCosmeticPrototype>(id);
     }
     // Goob end
 

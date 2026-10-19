@@ -40,9 +40,6 @@
     {
       "name": "equipped-HELMET-anomalocarid",
       "directions": 4
-    },
-    {"name": "equipped-HELMET-hydrakin", "directions": 4},
-    {"name": "equipped-HELMET-light-hydrakin", "directions": 4},
-    {"name": "equipped-HELMET-unshaded-hydrakin", "directions": 4}
+    }
   ]
 }

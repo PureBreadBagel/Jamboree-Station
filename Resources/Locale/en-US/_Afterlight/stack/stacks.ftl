@@ -1,1 +1,0 @@
-stack-synthbloodpack = synth bloodpack

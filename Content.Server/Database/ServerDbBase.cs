@@ -1760,19 +1760,6 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         }
 
         // Goob start
-        public async Task SetGhostCosmetics(Guid player, string? particles, string? hat, string? mask)
-        {
-            await using var db = await GetDb();
-            var patron = await db.DbContext.RMCPatrons.FirstOrDefaultAsync(p => p.PlayerId == player);
-            if (patron == null)
-                return;
-
-            patron.GhostParticles = particles;
-            patron.GhostHat = hat;
-            patron.GhostMask = mask;
-            await db.DbContext.SaveChangesAsync();
-        }
-
         public async Task SetOocIcon(Guid player, string? icon)
         {
             await using var db = await GetDb();
@@ -1802,8 +1789,6 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 row.Priority = tier.Priority;
                 row.ShowOnCredits = tier.ShowOnCredits;
                 row.GhostColor = tier.GhostColor;
-                row.GhostCosmetics = tier.GhostCosmetics;
-                row.GhostParticles = tier.GhostParticles;
                 row.LobbyMessage = tier.LobbyMessage;
                 row.RoundEndShoutout = tier.RoundEndShoutout;
             }

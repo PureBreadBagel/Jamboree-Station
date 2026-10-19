@@ -59,6 +59,10 @@
     weight: 0.125
   - type: StaticPrice
     price: 100
+  - type: CollectiveMind
+    defaultChannel: Binary
+    channels:
+    - Binary
   - type: IntellicardableMind
   - type: Vocalizer
     minVocalizeInterval: 8m
@@ -236,6 +240,10 @@
     weight: 0.125
   - type: StaticPrice
     price: 100
+  - type: CollectiveMind
+    defaultChannel: Binary
+    channels:
+    - Binary
   - type: Vocalizer
     minVocalizeInterval: 8m
     maxVocalizeInterval: 10m
@@ -353,6 +361,10 @@
     weight: 0.125
   - type: StaticPrice
     price: 100
+  - type: CollectiveMind
+    defaultChannel: Binary
+    channels:
+    - Binary
   - type: Vocalizer
     minVocalizeInterval: 8m
     maxVocalizeInterval: 10m

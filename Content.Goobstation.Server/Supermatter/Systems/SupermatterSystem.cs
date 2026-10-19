@@ -31,7 +31,6 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Timing;
 using Robust.Shared.Player;
-using Content.Goobstation.Shared.MisandryBox.Smites;
 using Robust.Shared.Prototypes;
 using Content.Shared.Random;
 using Content.Shared.Random.Helpers;
@@ -62,14 +61,12 @@ public sealed partial class SupermatterSystem : SharedSupermatterSystem
     [Dependency] private DoAfterSystem _doAfter = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private ISharedAdminLogManager _adminLog = default!;
-    [Dependency] private ThunderstrikeSystem _thunderstrikeSystem = default!;
     [Dependency] private IPrototypeManager _proto = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private RadioSystem _radioSystem = default!;
     [Dependency] private IChatManager _chatmanager = default!;
     [Dependency] private TagSystem _tag = default!;
 
-    private const string LTGSM = "/Textures/_Goobstation/MisandryBox/LTGSM.png";
     private DelamType _delamType = DelamType.Explosion;
 
     public override void Initialize()
@@ -710,13 +707,10 @@ public sealed partial class SupermatterSystem : SharedSupermatterSystem
             {
                 var consumedEv = new SupermatterConsumedEvent(uid);
                 RaiseLocalEvent(target, ref consumedEv);
-                _thunderstrikeSystem.Smite(target, true, null, LTGSM); // funny :3
             }
-            else
-            {
-                SpawnNextToOrDrop("Ash", target);
-                _audio.PlayPvs(sm.DustSound, uid);
-            }
+
+            SpawnNextToOrDrop("Ash", target);
+            _audio.PlayPvs(sm.DustSound, uid);
 
             if (HasComp<HumanoidAppearanceComponent>(target) || HasComp<ActorComponent>(target))
                 _chatmanager.SendAdminAlert($"Supermatter {ToPrettyString(uid)} has consumed {ToPrettyString(target)}");

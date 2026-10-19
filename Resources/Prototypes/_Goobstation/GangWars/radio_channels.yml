@@ -1,7 +1,0 @@
-- type: radioChannel
-  id: Gang
-  name: chat-radio-gang
-  keycode: 'g'
-  frequency: 1413
-  color: "#e8a020"
-  longRange: true

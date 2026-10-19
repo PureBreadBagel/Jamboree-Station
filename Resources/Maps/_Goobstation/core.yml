@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 09/04/2026 07:18:14
-  entityCount: 23104
+  entityCount: 23101
 maps:
 - 17546
 grids:
@@ -110307,13 +110307,6 @@ entities:
     - type: Transform
       pos: 3.467857,52.5848
       parent: 2
-- proto: PlushieBrizby
-  entities:
-  - uid: 1145
-    components:
-    - type: Transform
-      pos: 16.799877,-68.79133
-      parent: 2
 - proto: PlushieCarp
   entities:
   - uid: 6473
@@ -110351,13 +110344,6 @@ entities:
     components:
     - type: Transform
       pos: -18.530083,-23.239492
-      parent: 2
-- proto: PlushieLeguia
-  entities:
-  - uid: 2032
-    components:
-    - type: Transform
-      pos: 33.915813,-11.223837
       parent: 2
 - proto: PlushieLizard
   entities:
@@ -110859,13 +110845,6 @@ entities:
     components:
     - type: Transform
       pos: 55.5,-25.5
-      parent: 2
-- proto: PlushieXeve
-  entities:
-  - uid: 2044
-    components:
-    - type: Transform
-      pos: 35.21269,-12.051962
       parent: 2
 - proto: PollBooth
   entities:

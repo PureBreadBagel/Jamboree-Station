@@ -33,7 +33,6 @@
         {
             "name": "inhand-right",
             "directions": 4
-        },
-    {"name": "equipped-HELMET-hydrakin", "directions": 4}
+        }
   ]
 }

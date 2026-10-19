@@ -30,12 +30,6 @@ public sealed partial class PatronTierPrototype : IPrototype
     public bool GhostColor;
 
     [DataField]
-    public bool GhostCosmetics;
-
-    [DataField]
-    public bool GhostParticles;
-
-    [DataField]
     public bool LobbyMessage;
 
     [DataField]

@@ -105,14 +105,20 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
+    # - Binary # Goobstation - replaced with collective mind
     - Common
     - Science
   - type: ActiveRadio
     channels:
-    - Binary
+    # - Binary # Goobstation - replaced with collective mind
     - Common
     - Science
+  # Goobstation
+  - type: CollectiveMind
+    defaultChannel: Binary
+    channels:
+    - Binary
+    canUseInCrit: true # Goobstation
   - type: ZombieImmune
   - type: Repairable
     damageValue: -10 # 10 seconds to repair from crit
@@ -461,11 +467,11 @@
     subverted: true
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary
+    # - Binary  # Goobstation - replaced with collective mind
     - Syndicate
   - type: ActiveRadio
     channels:
-    - Binary
+    # - Binary # Goobstation collectivemind binary
     - Syndicate
   - type: ShowSyndicateIcons
   - type: MovementAlwaysTouching
@@ -537,11 +543,11 @@
   - type: IntrinsicRadioTransmitter # Copy components from base SyndiBorg but without the stuff we don't want
     channels:
     - Common # Goobstation i need this to not be null and if theyre derelict its whatever
-    - Binary #1984
+    #- Binary #1984 # Goobstation collectivemind binary
   - type: ActiveRadio
     channels:
     - Common # Goobstation i need this to not be null and if theyre derelict its whatever
-    - Binary
+    #- Binary # Goobstation collectivemind binary
   - type: MovementAlwaysTouching
   - type: Speech
     speechSounds: SyndieBorg
@@ -554,6 +560,10 @@
     color: "#dd200b"
   - type: BypassLock
     bypassDelay: 15 # We don't want people to easily be able to remove syndieborg brains.
+  - type: CollectiveMind # Goobstation collectivemind binary
+    defaultChannel: Binary
+    channels:
+    - Binary
 
 - type: entity
   parent: BaseBorgChassisNotIonStormable
@@ -583,15 +593,18 @@
   - type: Damageable
     damageContainer: Silicon
     damageModifierSet: Xenoborg # Goob - xenoborg buff
+  - type: IntrinsicRadioReceiver # Goob - moved binary to CM
+  - type: CollectiveMind
+    defaultChannel: Binary
+    channels:
+    - Binary
   - type: IntrinsicRadioTransmitter # can only use binary and xenoborg channel
     channels:
     - Xenoborg
-    - Binary
   - type: ActiveRadio # but can hear the mothership channel
     channels:
     - Mothership
     - Xenoborg
-    - Binary
   - type: Repairable
     doAfterDelay: 10 # goob - reduced to fit new values
   - type: BorgChassis

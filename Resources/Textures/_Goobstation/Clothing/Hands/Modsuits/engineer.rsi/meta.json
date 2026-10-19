@@ -36,14 +36,6 @@
 		{
 		  "name": "equipped-HAND-vox",
 		  "directions": 4
-		},
-        {
-		  "name": "equipped-HAND-sealed-hydrakin",
-		  "directions": 4
-		},
-		{
-		  "name": "equipped-HAND-hydrakin",
-		  "directions": 4
 		}
   ]
 }

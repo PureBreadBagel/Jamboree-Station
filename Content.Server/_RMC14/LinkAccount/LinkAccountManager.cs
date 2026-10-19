@@ -62,13 +62,7 @@ public sealed class LinkAccountManager : IPostInjectInit
             ghostColor = new Robust.Shared.Maths.Color(sysColor.R, sysColor.G, sysColor.B, sysColor.A);
         }
 
-        // Goob start - ghost cosmetics
-        SharedRMCGhostCosmetics? ghostCosmetics = null;
-        if (patron is { } p && (p.GhostParticles != null || p.GhostHat != null || p.GhostMask != null))
-            ghostCosmetics = new SharedRMCGhostCosmetics(p.GhostParticles, p.GhostHat, p.GhostMask);
-        // Goob end
-
-        _connected[player.UserId] = new SharedRMCPatronFull(sharedTier, linked, ghostColor, ghostCosmetics, patron?.OocIcon, lobbyMessage, shoutouts); // Goob - ghost cosmetics, ooc icon
+        _connected[player.UserId] = new SharedRMCPatronFull(sharedTier, linked, ghostColor, patron?.OocIcon, lobbyMessage, shoutouts); // Goob - ooc icon
     }
 
     private void FinishLoad(ICommonSession player)
@@ -168,37 +162,6 @@ public sealed class LinkAccountManager : IPostInjectInit
 
     // Goob start
 
-    public void SetGhostCosmetics(NetUserId user, string? particles, string? hat, string? mask)
-    {
-        if (GetPatron(user)?.Tier is not { } tier ||
-            !tier.GhostCosmetics && !tier.GhostParticles)
-        {
-            return;
-        }
-
-        if (!tier.GhostParticles)
-            particles = null;
-
-        if (!tier.GhostCosmetics)
-        {
-            hat = null;
-            mask = null;
-        }
-
-        var cosmetics = particles == null && hat == null && mask == null
-            ? null
-            : new SharedRMCGhostCosmetics(particles, hat, mask);
-
-        _db.SetGhostCosmetics(user, particles, hat, mask);
-
-        if (_connected.TryGetValue(user, out var connected))
-        {
-            connected = connected with { GhostCosmetics = cosmetics };
-            _connected[user] = connected;
-            PatronUpdated?.Invoke((user, connected));
-        }
-    }
-
     public void SetOocIcon(NetUserId user, string? icon)
     {
         if (GetPatronTier(user) is not { } tier)
@@ -257,8 +220,6 @@ public sealed class LinkAccountManager : IPostInjectInit
             proto.ID,
             proto.ShowOnCredits,
             proto.GhostColor,
-            proto.GhostCosmetics,
-            proto.GhostParticles,
             proto.LobbyMessage,
             proto.RoundEndShoutout,
             proto.OocIconTiers.Count > 0,
@@ -281,8 +242,6 @@ public sealed class LinkAccountManager : IPostInjectInit
                 Priority = proto.Priority,
                 ShowOnCredits = proto.ShowOnCredits,
                 GhostColor = proto.GhostColor,
-                GhostCosmetics = proto.GhostCosmetics,
-                GhostParticles = proto.GhostParticles,
                 LobbyMessage = proto.LobbyMessage,
                 RoundEndShoutout = proto.RoundEndShoutout,
             });
@@ -397,7 +356,6 @@ public sealed class LinkAccountManager : IPostInjectInit
                 Tier: GetSharedTier(tier),
                 Linked: true,
                 GhostColor: connected?.GhostColor,
-                GhostCosmetics: connected?.GhostCosmetics,
                 OocIcon: connected?.OocIcon,
                 LobbyMessage: connected?.LobbyMessage,
                 RoundEndShoutout: connected?.RoundEndShoutout

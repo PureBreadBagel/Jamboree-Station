@@ -153,15 +153,5 @@
   - type: Clothing
     sprite: _Goobstation/Clothing/OuterClothing/Coats/centcom_ike.rsi
 
-- type: entity
-  parent: [ ClothingOuterArmorCaptainCarapace, ClothingOuterStorageBase, BaseCentcommContraband ]
-  id: ClothingOuterArmoredJacketOuterCommand
-  name: outer command jacket
-  description: A purple jacket with very fancy elements. There is a Terra-Gov insignia on the back.
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Clothing/OuterClothing/Coats/outcommjacket.rsi
-  - type: Clothing
-    sprite: _Goobstation/Clothing/OuterClothing/Coats/outcommjacket.rsi
 
 #central command jacket

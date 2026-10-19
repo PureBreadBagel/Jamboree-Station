@@ -5,14 +5,12 @@
   storage:
     back:
     - GoldRing
-  groupBy: "ring" # GoobStation
 
 - type: loadout
   id: SilverRing
   storage:
     back:
     - SilverRing
-  groupBy: "ring"  # GoobStation
 
 - type: loadout
   id: WhiteCane

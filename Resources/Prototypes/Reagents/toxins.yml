@@ -566,8 +566,6 @@
           - Vox
           - Yowie # Goobstation - Yowie
           - XenobioSlime # Goobstation - XenobioSlime
-          - Hydrakin # Fuck you
-          - Synth # Goob - Afterlight synths
           inverted: true
         type: Local
         visualType: MediumCaution
@@ -583,8 +581,6 @@
           - Plant
           - Yowie # Goobstation - Yowie
           - XenobioSlime # Goobstation - XenobioSlime
-          - Hydrakin # Fuck you
-          - Synth # Goob - Afterlight synths
           inverted: true
       - !type:HealthChange
         conditions:
@@ -595,8 +591,6 @@
           - Plant
           - Yowie # Goobstation - Yowie
           - XenobioSlime # Goobstation - XenobioSlime
-          - Hydrakin # Fuck you
-          - Synth # Goob - Afterlight synths
           inverted: true
         damage:
           types:
@@ -618,13 +612,6 @@
         conditions:
         - !type:MetabolizerTypeCondition # Goobstation - XenobioSlime
           type: [ XenobioSlime ]
-        reagent: Protein
-        amount: 0.5
-      - !type:AdjustReagent # Mono - Hydrakin
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type:
-          - Hydrakin # Go fuck yourself
         reagent: Protein
         amount: 0.5
       - !type:AdjustReagent

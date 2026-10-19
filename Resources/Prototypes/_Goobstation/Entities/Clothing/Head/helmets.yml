@@ -322,18 +322,3 @@
     damageCoefficient: 0.75
   - type: FlashSoundSuppression
   - type: FaceHuggerBlocker
-
-- type: entity
-  parent: ClothingHeadHatHelmetTemplar
-  id: ClothingHeadHatHelmetBrass
-  name: brass helmet
-  description: Brass helmet, like in the good old days.
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Clothing/Head/Helmets/brass_helmet.rsi
-    state: icon
-  - type: Clothing
-    sprite: _Goobstation/Clothing/Head/Helmets/brass_helmet.rsi
-  - type: Construction
-    graph: BrassHelm
-    node: brassHelmet

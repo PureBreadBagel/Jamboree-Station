@@ -6,8 +6,6 @@
   priority: 1
   icon: OocIconFuture
   ghostColor: true
-  ghostCosmetics: true
-  ghostParticles: true
   lobbyMessage: true
   oocIconTiers:
   - PatronTierGameStaff
@@ -26,8 +24,6 @@
   icon: OocIconNanotrasen
   showOnCredits: true
   ghostColor: true
-  ghostCosmetics: true
-  ghostParticles: true
   lobbyMessage: true
   roundEndShoutout: true
   oocIconTiers:
@@ -46,7 +42,6 @@
   icon: OocIconCaptain
   showOnCredits: true
   ghostColor: true
-  ghostCosmetics: true
   lobbyMessage: true
   roundEndShoutout: true
   oocIconTiers:

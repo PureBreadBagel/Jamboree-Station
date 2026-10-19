@@ -317,6 +317,14 @@ namespace Content.Server.Database
             GoobOnModelCreating(modelBuilder); // Goob
 
             // RMC14
+            // Reserve #6875's persisted columns without exposing the excluded cosmetics feature.
+            // Keep migration history valid for both fresh and already-migrated databases.
+            modelBuilder.Entity<RMCPatron>().Property<string>("GhostHat").IsRequired(false);
+            modelBuilder.Entity<RMCPatron>().Property<string>("GhostMask").IsRequired(false);
+            modelBuilder.Entity<RMCPatron>().Property<string>("GhostParticles").IsRequired(false);
+            modelBuilder.Entity<RMCPatronTier>().Property<bool>("GhostCosmetics");
+            modelBuilder.Entity<RMCPatronTier>().Property<bool>("GhostParticles");
+
             modelBuilder.Entity<RMCLinkedAccount>()
                 .HasOne(l => l.Player)
                 .WithOne(p => p.LinkedAccount)

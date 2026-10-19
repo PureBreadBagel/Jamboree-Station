@@ -50,6 +50,8 @@ public abstract partial class SharedStunSystem : EntitySystem
     [Dependency] protected readonly SharedDoAfterSystem DoAfter = default!;
     [Dependency] protected readonly SharedStaminaSystem Stamina = default!;
     [Dependency] private readonly StatusEffectNew.StatusEffectsSystem _status = default!;
+    [Dependency] private readonly SharedStutteringSystem _stutter = default!;
+    [Dependency] private readonly SharedJitteringSystem _jitter = default!;
 
     public override void Initialize()
     {
@@ -337,6 +339,8 @@ public abstract partial class SharedStunSystem : EntitySystem
 
         if (time != null)
         {
+            _jitter.DoJitter(uid, time.Value, true);
+            _stutter.DoStutter(uid, time.Value, true);
             UpdateKnockdownTime((uid, component), time.Value, refresh);
             _adminLogger.Add(LogType.Stamina, LogImpact.Medium, $"{ToPrettyString(uid):user} was knocked down for {time.Value.Seconds} seconds");
         }

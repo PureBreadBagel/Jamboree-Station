@@ -319,8 +319,6 @@ namespace Content.Server.Database
         Task SetGhostColor(Guid player, System.Drawing.Color? color);
 
         // Goob start
-        Task SetGhostCosmetics(Guid player, string? particles, string? hat, string? mask);
-
         Task SetOocIcon(Guid player, string? icon);
 
         Task SyncPatronTiers(List<RMCPatronTier> tiers);
@@ -1077,13 +1075,7 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.SetGhostColor(player, color));
         }
 
-        // Goob start - ghost cosmetics + patron database commands
-        public Task SetGhostCosmetics(Guid player, string? particles, string? hat, string? mask)
-        {
-            DbWriteOpsMetric.Inc();
-            return RunDbCommand(() => _db.SetGhostCosmetics(player, particles, hat, mask));
-        }
-
+        // Goob start - patron database commands
         public Task SetOocIcon(Guid player, string? icon)
         {
             DbWriteOpsMetric.Inc();

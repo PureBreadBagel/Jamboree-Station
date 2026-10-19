@@ -411,17 +411,6 @@
   - type: Clothing
     sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/Civilian/hawaigreen.rsi
 
-- type: entity
-  parent: [ ClothingUniformJumpsuitNavyGold, BaseCentcommContraband ]
-  id: ClothingUniformJumpsuitOuterCommand
-  name: outer command jumpsuit
-  description: A fancy purple suit with a Terra-Gov insignia.
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/Centcom/outcommsuit.rsi
-  - type: Clothing
-    sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/Centcom/outcommsuit.rsi
-
 # Cargo
 
 - type: entity

@@ -340,13 +340,9 @@
       fallbackRoles: [ Nukeops, NukeopsMedic ]
       spawnerPrototype: SpawnPointNukeopsCommander
       startingGear: SyndicateCommanderGearFullHonkops
-      chaosScore: 300
       roleLoadout:
       - RoleSurvivalNukieHonkops
       components:
-      - type: SleepEmitSound
-        snore: /Audio/Voice/Misc/silly_snore.ogg
-        interval: 10
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
@@ -362,13 +358,9 @@
       fallbackRoles: [ Nukeops, NukeopsCommander ]
       spawnerPrototype: SpawnPointNukeopsMedic
       startingGear: SyndicateOperativeMedicFullHonkops
-      chaosScore: 300
       roleLoadout:
       - RoleSurvivalNukieHonkops
       components:
-      - type: SleepEmitSound
-        snore: /Audio/Voice/Misc/silly_snore.ogg
-        interval: 10
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
@@ -388,13 +380,9 @@
       max: 10 # Goobstation / 古布空间站 - 没有限制的核特工
       playerRatio: 16 # Goobstation
       startingGear: SyndicateOperativeGearFullHonkops
-      chaosScore: 300
       roleLoadout:
       - RoleSurvivalNukieHonkops
       components:
-      - type: SleepEmitSound
-        snore: /Audio/Voice/Misc/silly_snore.ogg
-        interval: 10
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:

@@ -6,15 +6,14 @@
     children:
     - id: CandyBowlFilledLollypopsMystery #Jamboree, Remove when Halloween is over
     - id: BoxFolderCentCom
-    - id: BriefcaseBrownFilled
+    # - id: BriefcaseBrownFilled
     - id: WeaponDisablerAdvanced
     - id: BedsheetCentcom
     - id: CaneSheathFilledNanotrasen
     - id: HandheldFaxOfficial
     - id: RubberStampNanorep
-    #- id: ExecutiveBriefcaseEmpty # nanorep update # No gamer loot.
-    #- id: ComputerNTRTasksFlatpack # nanorep update
-    - id: ClothingEyesGlassesCentCommNoThermal # kinda gamer loot but med/sci and other inspections make it make sense
+    - id: ExecutiveBriefcaseEmpty # nanorep update
+    - id: ComputerNTRTasksFlatpack # nanorep update
     - id: Paper
       amount: !type:ConstantNumberSelector
         value: 5

@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 06/26/2026 23:48:41
-  entityCount: 27702
+  entityCount: 27701
 maps:
 - 1
 grids:
@@ -127172,13 +127172,6 @@ entities:
     components:
     - type: Transform
       pos: 44.578045,-62.22757
-      parent: 2
-- proto: PlushieLeguia
-  entities:
-  - uid: 19291
-    components:
-    - type: Transform
-      pos: 51.551285,-47.95761
       parent: 2
 - proto: PlushieRGBee
   entities:

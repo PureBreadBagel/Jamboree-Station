@@ -78,18 +78,6 @@
     {
       "name": "equipped-head-light-feroxi",
       "directions": 4
-    },
-	{
-      "name": "equipped-head-hydrakin",
-      "directions": 4
-    },
-    {
-      "name": "equipped-head-light-hydrakin",
-      "directions": 4
-    },
-    {
-      "name": "equipped-head-unshaded-hydrakin",
-      "directions": 4
     }
   ]
 }
