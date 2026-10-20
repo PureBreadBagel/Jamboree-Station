@@ -26,10 +26,30 @@ public sealed class PaperMarginSerializer : ITypeSerializer<Thickness, ValueData
             float.Parse(values[1], CultureInfo.InvariantCulture));
     }
 
-    public DataNode Write(ISerializationManager serializationManager, Thickness value,
-        IDependencyCollection dependencies, bool alwaysWrite = false, ISerializationContext? context = null)
-        => new ValueDataNode(string.Format(CultureInfo.InvariantCulture, "{0},{1},{2},{3}",
-            value.Left, value.Bottom, value.Right, value.Top));
+
+public DataNode Write(
+    ISerializationManager serializationManager,
+    Thickness value,
+    IDependencyCollection dependencies,
+    bool alwaysWrite = false,
+    ISerializationContext? context = null)
+{
+    object[] margins =
+    {
+        value.Left,
+        value.Bottom,
+        value.Right,
+        value.Top
+    };
+
+    return new ValueDataNode(
+        string.Format(
+            CultureInfo.InvariantCulture,
+            "{0},{1},{2},{3}",
+            margins));
+}
+
+
 
     public ValidationNode Validate(ISerializationManager serializationManager, ValueDataNode node,
         IDependencyCollection dependencies, ISerializationContext? context = null)
