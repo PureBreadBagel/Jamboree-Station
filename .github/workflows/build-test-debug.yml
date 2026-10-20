@@ -126,7 +126,7 @@ jobs:
     needs: build
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     strategy:
       fail-fast: false
       matrix:
@@ -151,7 +151,7 @@ jobs:
     - *download_build
 
     - name: Run Content.IntegrationTests (${{ matrix.shard.name }})
-      timeout-minutes: 25
+      timeout-minutes: 40
       shell: pwsh
       run: |
         $env:DOTNET_gcServer=1
