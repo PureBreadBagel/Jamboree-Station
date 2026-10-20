@@ -58,6 +58,8 @@
   special: # Goobstation
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant, DeathRattleImplantCentcomm, CentcommTranslatorImplant ]
+  - !type:AddOrgan # Jamboree - CC officials are rich. Of course they get custom organs!
+    organs: [ BasicCyberneticHeart, BasicCyberneticLungs, BasicCyberneticLiver, BasicCyberneticEyes ]
 
 - type: startingGear # Goobstation - Start - SolsticeOfTheWinter
   id: CentcomGear

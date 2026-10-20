@@ -23,6 +23,8 @@
   - !type:AddComponentSpecial
     components:
     - type: DeathSquadMember # Goobstation
+  - !type:AddOrgan # Jamboree - Rip and tear Deathsquad...Rip and tear.
+    organs: [ UpgradedCyberneticHeart, UpgradedCyberneticLungs, BasicCyberneticLiver, SecurityCyberneticEyes ]
 
   # Goobstation Start - I basically re-did all of deathsquads stuff so. - Sol
 - type: startingGear
