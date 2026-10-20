@@ -30,7 +30,6 @@ public sealed partial class EnchantVisualsSystem : EntitySystem
 
         SubscribeLocalEvent<EnchantedComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<EnchantedComponent, AfterAutoHandleStateEvent>(OnHandleState);
-        SubscribeLocalEvent<EnchantedComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<EnchantedComponent, HeldVisualsUpdatedEvent>(OnHeldVisualsUpdated);
         SubscribeLocalEvent<EnchantedComponent, EquipmentVisualsUpdatedEvent>(OnEquipmentVisualsUpdated);
     }

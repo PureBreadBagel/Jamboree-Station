@@ -6,6 +6,9 @@
   id: BaseClothingBeltEngineering
   components:
   - type: Storage
+    # Goobstation - expanded grid so the full engineering fill (tools + multitool + t-ray scanner + gas analyzer) fits
+    grid:
+    - 0,0,9,1
     # Don't add more than absolutely needed to this whitelist!
     # Utility belts shouldn't just be free extra storage.
     # This is only intended for basic engineering equipment.

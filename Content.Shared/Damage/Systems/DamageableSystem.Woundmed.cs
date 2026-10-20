@@ -207,9 +207,15 @@ public sealed partial class DamageableSystem
                 // dev map Weapons room. this is bad but the error message isn't that helpful and
                 // probably metagameable idk
                 // See below too!
-                Log.Error(
-                    $"Couldn't find any body parts for Body {ToPrettyString(body)} when applying damage!"
-                );
+                // Goobstation - this is ordinarily a client-side PVS race: predicted damage
+                // lands on a Human whose body parts haven't streamed in one tick later.
+                // Dropping the hit is correct there (retrying/queueing predicted damage
+                // would double-apply on top of server state). A server body missing parts
+                // is still a genuine anomaly, so only that side keeps a warning.
+                if (!_netMan.IsClient)
+                    Log.Warning(
+                        $"Couldn't find any body parts for Body {ToPrettyString(body)} when applying damage!"
+                    );
 #endif
                 return null;
             }
