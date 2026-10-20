@@ -2301,3 +2301,17 @@ Entries:
         Now its transcript shouldnt display gibberish.
   id: 186
   time: '2026-10-09T18:11:47.0000000+00:00'
+- author: PureBreadBagel
+  changes:
+    - type: Add
+      message: Added the ability for admins to edit eChem reagents.
+    - type: Fix
+      message: The DNA molecularsynthesiser no longer can fetch aGhost minds.
+    - type: Tweak
+      message: >-
+        The DNA molecularsynthesiser can no longer fetch minds in ghost roles!
+        Centcomm unfortunatley does not have ghost roles on DNA file.
+    - type: Fix
+      message: 'The Bye! round end timer now changes depending on admin interference. '
+  id: 187
+  time: '2026-10-18T20:10:34.0000000+00:00'
