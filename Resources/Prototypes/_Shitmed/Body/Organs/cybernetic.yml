@@ -25,11 +25,11 @@
     sprite: _Shitmed/Mobs/Species/Misc/Cybernetics/organs.rsi
     state: eyes
   - type: Organ
-    intCap: 105
-    integrity: 105
+    intCap: 135 # JAMBOREE, buffed the integrities of cybernetic organs.
+    integrity: 135
     integrityThresholds:
-      Normal: 105
-      Damaged: 55
+      Normal: 135
+      Damaged: 65
       Destroyed: 0
     slotId: eyes
     onAdd:
@@ -106,11 +106,11 @@
     state: heart-on
   - type: Heart
   - type: Organ
-    intCap: 125
-    integrity: 125
+    intCap: 155 # JAMBOREE, buffed the integrities of cybernetic organs.
+    integrity: 155
     integrityThresholds:
-      Normal: 125
-      Damaged: 45
+      Normal: 155
+      Damaged: 65
       Destroyed: 0
     slotId: heart
     onAdd:
@@ -143,11 +143,11 @@
   - type: Sprite
     state: heart-u-on
   - type: Organ
-    intCap: 160
-    integrity: 160
+    intCap: 200 # JAMBOREE, buffed the integrities of cybernetic organs.
+    integrity: 200
     integrityThresholds:
-      Normal: 160
-      Damaged: 45
+      Normal: 200
+      Damaged: 75
       Destroyed: 0
     slotId: heart
     onAdd:
@@ -174,11 +174,11 @@
   components:
   - type: Liver
   - type: Organ
-    intCap: 145
-    integrity: 145
+    intCap: 175 # JAMBOREE, buffed the integrities of cybernetic organs.
+    integrity: 175
     integrityThresholds:
-      Normal: 145
-      Damaged: 60
+      Normal: 175
+      Damaged: 85
       Destroyed: 0
     slotId: liver
   - type: Sprite
@@ -209,11 +209,11 @@
       - state: lung-l
       - state: lung-r
   - type: Organ
-    intCap: 125
-    integrity: 125
+    intCap: 200 # JAMBOREE, buffed the integrities of cybernetic organs.
+    integrity: 200
     integrityThresholds:
-      Normal: 125
-      Damaged: 45
+      Normal: 200
+      Damaged: 85
       Destroyed: 0
     slotId: lungs
   - type: Item
@@ -251,7 +251,7 @@
       - state: lung-u-l
       - state: lung-u-r
   - type: Organ
-    intCap: 160
+    intCap: 160 # JAMBOREE, buffed the integrities of cybernetic organs.
     integrity: 160
     integrityThresholds:
       Normal: 160
