@@ -87,7 +87,6 @@
       "directions": 4
     },
     {"name": "equipped-MASK-feroxi", "directions": 4},
-    {"name": "equipped-MASK-synth", "directions": 4},
     {"name": "up-equipped-MASK-feroxi", "directions": 4}
   ]
 }

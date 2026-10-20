@@ -1,5 +1,4 @@
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using Content.Goobstation.Common.Patrons;
 using Content.Server._RMC14.LinkAccount;

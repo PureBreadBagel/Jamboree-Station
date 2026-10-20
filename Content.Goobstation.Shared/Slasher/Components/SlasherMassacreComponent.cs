@@ -92,13 +92,13 @@ public sealed partial class SlasherMassacreVictimComponent : Component
 /// start severing limbs after a set number of hits
 /// guranteed decapitation after enough hits
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class SlasherMassacreMacheteComponent : Component
 {
     /// <summary>
     /// Flat damage penalty applied on first hit while massacre active.
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField]
     public int BaseDamagePenalty = 9;
 
     /// <summary>
@@ -110,19 +110,19 @@ public sealed partial class SlasherMassacreMacheteComponent : Component
     /// <summary>
     /// On reaching this many hits sever a random limb. Limb is severed every multiple of this value.
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField]
     public int LimbSeverHits = 4;
 
     /// <summary>
     /// How many hits to decapitate
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField]
     public int DecapitateHit = 13;
 
     /// <summary>
     /// Speed bonus multiplier per hit when killing a target.
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField]
     public float SpeedBonusPerHit = 0.01f;
 
     /// <summary>
@@ -134,7 +134,7 @@ public sealed partial class SlasherMassacreMacheteComponent : Component
     /// <summary>
     /// Amount of healing reagent to inject per hit when killing a target.
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField]
     public float HealAmountPerHit = 0.5f;
 
     /// <summary>
