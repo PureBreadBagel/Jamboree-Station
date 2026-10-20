@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2026 Jamboree <JamboreeBot@proton.me>
+//  SPDX-FileCopyrightText: 2026 PureBreadBagel
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.Body.Components;
@@ -18,7 +19,7 @@ namespace Content.Server.Jobs;
 /// body template, the organ is voided.
 /// Works with cybernetic organs, but accepts any organ prototype.
 /// </summary>
-public sealed partial class AddOrganSpecial : JobSpecial
+public sealed partial class AddOrgan : JobSpecial
 {
     /// <summary>
     /// Organ prototypes to install.
