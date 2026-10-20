@@ -26,6 +26,9 @@ public sealed partial class GraphicsTab : Control
         Control.AddOption(new OptionFullscreen(Control, _cfg, FullscreenCheckBox));
         Control.AddOption(new OptionLightingQuality(Control, _cfg, DropDownLightingQuality));
         Control.AddOption(new OptionParticleQuality(Control, _cfg, DropDownParticleQuality)); // Starfall: Particle quality.
+        // Starfall: per-client toggle for interaction particles ("item icons floating above heads").
+        // The cvar is client-only: it only changes what *your* client shows, other players unaffected.
+        Control.AddOptionCheckBox(Content.Goobstation.Common.CCVar.GoobCVars.InteractionParticlesVisible, InteractionParticlesCheckBox);
 
         Control.AddOptionDropDown(
             CVars.DisplayUIScale,

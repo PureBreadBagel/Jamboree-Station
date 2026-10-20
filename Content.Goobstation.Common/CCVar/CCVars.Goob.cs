@@ -699,6 +699,14 @@ public sealed partial class GoobCVars
     public static readonly CVarDef<bool> InteractionParticlesEnabled =
         CVarDef.Create("particles.interaction_enabled", true, CVar.SERVER | CVar.REPLICATED);
 
+    /// <summary>
+    /// Starfall: per-client visibility filter for interaction particles.
+    /// The server-replicated cvar above remains the master switch; this lets
+    /// an individual client hide them without changing what other players see.
+    /// </summary>
+    public static readonly CVarDef<bool> InteractionParticlesVisible =
+        CVarDef.Create("particles.interaction_visible", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+
     public static readonly CVarDef<float> InHandInteractionParticleScale =
         CVarDef.Create("particles.inhand_interaction_scale", 1f, CVar.CLIENTONLY | CVar.ARCHIVE);
 

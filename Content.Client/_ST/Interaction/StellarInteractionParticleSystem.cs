@@ -42,6 +42,7 @@ public sealed partial class StellarInteractionParticleSystem : EntitySystem
     private GameTick _shownTick;
 
     private float _inHandScale = 1f;
+    private bool _visible = true;
 
     private const string AnimateKey = "particle-animation";
 
@@ -58,6 +59,7 @@ public sealed partial class StellarInteractionParticleSystem : EntitySystem
 
         SubscribeAllEvent<StellarInteractionParticleEvent>(OnInteractionParticle);
         Subs.CVar(_cfg, GoobCVars.InHandInteractionParticleScale, v => _inHandScale = v, true);
+        Subs.CVar(_cfg, GoobCVars.InteractionParticlesVisible, v => _visible = v, true); // Starfall
     }
 
     public override void FrameUpdate(float frameTime)
@@ -81,6 +83,9 @@ public sealed partial class StellarInteractionParticleSystem : EntitySystem
 
     private void OnInteractionParticle(StellarInteractionParticleEvent ev)
     {
+        if (!_visible) // Starfall: per-client toggle
+            return;
+
         var performer = GetEntity(ev.Performer);
         var target = GetEntity(ev.Target);
 
