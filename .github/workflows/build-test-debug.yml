@@ -152,6 +152,7 @@ jobs:
 
     - name: Run Content.IntegrationTests (${{ matrix.shard.name }})
       timeout-minutes: 25
+      shell: pwsh
       run: |
         $env:DOTNET_gcServer=1
         # Each process has a 20-minute harness limit. Keep the expensive fixtures separate.
