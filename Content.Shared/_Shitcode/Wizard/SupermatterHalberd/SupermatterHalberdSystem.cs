@@ -1,8 +1,3 @@
-// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
-// SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
-//
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Numerics;
@@ -107,14 +102,15 @@ public sealed class SupermatterHalberdSystem : EntitySystem
 [Serializable, NetSerializable]
 public sealed partial class SmHalberdExecuteDoAfterEvent : DoAfterEvent
 {
+    public NetEntity? RayEffect;
+
+
     public SmHalberdExecuteDoAfterEvent(NetEntity? rayEffect)
     {
         RayEffect = rayEffect;
     }
 
-    public NetEntity? RayEffect = default!;
-
-    public SmHalberdExecuteDoAfterEvent() : this(null) { }
+    public SmHalberdExecuteDoAfterEvent() { }
 
     public override DoAfterEvent Clone() => this;
 }

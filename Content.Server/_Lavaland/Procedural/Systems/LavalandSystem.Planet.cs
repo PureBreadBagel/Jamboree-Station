@@ -1,12 +1,9 @@
-// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
-// SPDX-FileCopyrightText: 2025 Roudenn <romabond091@gmail.com>
-//
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Numerics;
 using Content.Server._Lavaland.Biome;
-using Content.Server._Lavaland.Procedural.Components;
 using Content.Server.Atmos.Components;
+using Content.Shared._Lavaland.Procedural.Components;
 using Content.Shared._Lavaland.Procedural.Prototypes;
 using Content.Shared.Gravity;
 using Content.Shared.Parallax.Biomes;
@@ -46,7 +43,7 @@ public sealed partial class LavalandSystem
         var pool = _proto.Index(proto.Ruins);
 
         // Basic setup.
-        var lavalandMap = _mapManager.CreateMap(out var lavalandMapId, runMapInit: false);
+        var lavalandMap = _map.CreateMap(out var lavalandMapId, runMapInit: false);
         var mapComp = EnsureComp<LavalandMapComponent>(lavalandMap);
         lavaland = (lavalandMap, mapComp);
 
@@ -58,7 +55,7 @@ public sealed partial class LavalandSystem
         PlanetBasicSetup(lavalandMap, prototype, seed.Value);
 
         // Ensure that it's paused
-        _mapManager.SetPaused(lavalandMapId, true);
+        _map.SetPaused(lavalandMapId, true);
 
         SetupLayout(lavalandMap, lavalandMapId, layout, out mapComp.SpawnedGrids);
 
@@ -73,7 +70,7 @@ public sealed partial class LavalandSystem
         SetupRuins(pool, lavaland.Value, preloader.Value);
 
         // Hide all grids from the mass scanner.
-        foreach (var grid in _mapManager.GetAllGrids(lavalandMapId))
+        foreach (var grid in _map.GetAllGrids(lavalandMapId))
         {
             var flag = IFFFlags.HideLabel;
 
@@ -84,7 +81,7 @@ public sealed partial class LavalandSystem
             _shuttle.AddIFFFlag(grid, flag);
         }
 
-        _mapManager.InitializeMap(lavalandMapId);
+        _map.InitializeMap(lavalandMapId);
 
         // Assign all other components to the map
         if (prototype.AddComponents != null)

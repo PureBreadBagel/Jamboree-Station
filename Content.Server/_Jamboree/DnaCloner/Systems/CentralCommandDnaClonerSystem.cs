@@ -23,6 +23,7 @@ using Content.Shared.DeviceLinking.Events;
 using Content.Shared.Examine;
 using Content.Shared.Ghost;
 using Content.Server.Ghost;
+using Content.Shared.Roles.Components;
 using Content.Server.Ghost.Roles;
 using Content.Shared.Mind;
 using Content.Shared.Popups;

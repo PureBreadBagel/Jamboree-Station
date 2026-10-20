@@ -131,7 +131,10 @@
 #          sprite: Mobs/Effects/brute_damage.rsi
 #          color: "#6C3BAA"
     - type: Bloodstream
-      bloodReagent: AvaliBlood
+      bloodReferenceSolution:
+        reagents:
+        - ReagentId: AvaliBlood
+          Quantity: 300
     - type: MeleeWeapon
       soundHit:
         path: /Audio/Weapons/pierce.ogg
@@ -141,8 +144,6 @@
         types:
           Slash: 6.25
     - type: Temperature
-      heatDamageThreshold: 310
-      coldDamageThreshold: 223
       currentTemperature: 261
       specificHeat: 48
     - type: ThermalRegulator
@@ -181,6 +182,9 @@
       - Nexus
 
 # Chirp!
+    - type: TemperatureDamage
+      heatDamageThreshold: 310
+      coldDamageThreshold: 223
 
 - type: entity
   parent: BaseSpeciesDummy

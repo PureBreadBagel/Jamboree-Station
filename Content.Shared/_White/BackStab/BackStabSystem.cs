@@ -1,10 +1,7 @@
-using System.Numerics;
-// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Spatison <137375981+Spatison@users.noreply.github.com>
-//
+
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using System.Numerics;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Mobs.Components;
@@ -15,6 +12,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
+using GoobVector = Content.Goobstation.Maths.Vectors;
 
 namespace Content.Shared._White.BackStab;
 
@@ -74,7 +72,8 @@ public sealed class BackStabSystem : EntitySystem
         var userXform = Transform(user);
         var v1 = -_transform.GetWorldRotation(xform).ToWorldVec();
         var v2 = _transform.GetWorldPosition(userXform) - _transform.GetWorldPosition(xform);
-        var angle = MathF.Acos(Math.Clamp(Vector2.Dot(v1, v2) / (v1.Length() * v2.Length()), -1f, 1f));
+        var angle = GoobVector.GoobVector3.CalculateAngle(new GoobVector.GoobVector3(v1), new GoobVector.GoobVector3(v2));
+
 
         if (angle > tolerance.Theta)
             return false;

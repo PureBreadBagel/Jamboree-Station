@@ -3,13 +3,15 @@
     <PropertyGroup>
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
         <RootNamespace>Content.Goobstation.Maths</RootNamespace>
+        <WarningsAsErrors>nullable;RA0049;RA0051</WarningsAsErrors>
     </PropertyGroup>
+    <Import Project="../MSBuild/Content.props" />
 
     <ItemGroup>
       <ProjectReference Include="..\Content.ModuleManager\Content.ModuleManager.csproj" />
     </ItemGroup>
 
-  <Import Project="..\RobustToolbox\Imports\Shared.props" />
+    <Import Project="../RobustToolbox/Imports/Shared.props" />
+    <Import Project="../RobustToolbox/MSBuild/Robust.Properties.targets" />
 </Project>
