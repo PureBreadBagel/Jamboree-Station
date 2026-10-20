@@ -81,9 +81,9 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
         [Dependency] private PowerCellSystem _powerCell = default!;
         [Dependency] private SharedAppearanceSystem _appearanceSystem = default!;
 
-        [Dependency] private readonly IAdminManager _adminManager = default!;
-        [Dependency] private readonly SharedPopupSystem _popup = default!;
-        [Dependency] private readonly IPlayerManager _playerManager = default!;
+        [Dependency] private IAdminManager _adminManager = default!;
+        [Dependency] private SharedPopupSystem _popup = default!;
+        [Dependency] private IPlayerManager _playerManager = default!;
 
         // A lot of dependencies, but this system touches power, cells, APC, containers and chat, so it earns them.
 
@@ -237,8 +237,8 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
             var hasPower = false;
 
             // JAMBOREE Portable dispenser? If a power cell is in the slot, power comes from it.
-            if (_powerCell.TryGetBatteryFromSlot(ent, out var cellBattery))
-                hasPower = cellBattery.CurrentCharge > 0f;
+            if (_powerCell.TryGetBatteryFromSlot(ent.Owner, out var cellBattery))
+                hasPower = cellBattery?.Comp.LastCharge > 0f;
 
             //JAMBOREE A portable with a cell in the slot draws from that, anything else is stationary and follows the APC.
             else if (TryComp<ApcPowerReceiverComponent>(ent, out var apc))
@@ -258,12 +258,12 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
             var powerRequired = GetPowerCostForReagent(message.ReagentId, amount, reagentDispenser.Comp);
 
             // JAMBOREE Portable dispensers draw from the cell in their cell slot, stationary ones from their internal battery.
-            var usingCell = _powerCell.TryGetBatteryFromSlot(reagentDispenser, out var cellBatteryEnt, out var cellBattery);
-            BatteryComponent? battery = usingCell ? cellBattery : null;
+            var usingCell = _powerCell.TryGetBatteryFromSlot(reagentDispenser.Owner, out var cellBatteryEnt);
+            BatteryComponent? battery = usingCell ? cellBatteryEnt?.Comp : null;
             if (!usingCell)
                 TryComp(reagentDispenser, out battery);
 
-            if (battery is null || battery.CurrentCharge < powerRequired)
+            if (battery is null || battery.LastCharge < powerRequired)
             {
                 _audioSystem.PlayPvs(reagentDispenser.Comp.PowerSound, reagentDispenser, AudioParams.Default.WithVolume(-2f));
                 return;
@@ -274,7 +274,7 @@ namespace Content.Goobstation.Server._Jamboree.Chemistry.EntitySystems
             if (!_solutionContainerSystem.TryAddSolution(solution.Value, sol))
                 return;
 
-            _battery.TryUseCharge(battery.Value.AsNullable(), powerRequired);
+            _battery.TryUseCharge(cellBatteryEnt?.Owner ?? reagentDispenser.Owner, powerRequired);
             reagentDispenser.Comp.StoredEnergySpent += powerRequired;
             ClickSound(reagentDispenser);
             UpdateUiState(reagentDispenser); // JAMBOREE Replaced this to track the energy spent.

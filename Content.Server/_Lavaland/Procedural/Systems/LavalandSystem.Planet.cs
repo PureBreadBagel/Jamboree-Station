@@ -43,7 +43,7 @@ public sealed partial class LavalandSystem
         var pool = _proto.Index(proto.Ruins);
 
         // Basic setup.
-        var lavalandMap = _mapManager.CreateMap(out var lavalandMapId, runMapInit: false);
+        var lavalandMap = _map.CreateMap(out var lavalandMapId, runMapInit: false);
         var mapComp = EnsureComp<LavalandMapComponent>(lavalandMap);
         lavaland = (lavalandMap, mapComp);
 
@@ -55,7 +55,7 @@ public sealed partial class LavalandSystem
         PlanetBasicSetup(lavalandMap, prototype, seed.Value);
 
         // Ensure that it's paused
-        _mapManager.SetPaused(lavalandMapId, true);
+        _map.SetPaused(lavalandMapId, true);
 
         SetupLayout(lavalandMap, lavalandMapId, layout, out mapComp.SpawnedGrids);
 
@@ -81,7 +81,7 @@ public sealed partial class LavalandSystem
             _shuttle.AddIFFFlag(grid, flag);
         }
 
-        _mapManager.InitializeMap(lavalandMapId);
+        _map.InitializeMap(lavalandMapId);
 
         // Assign all other components to the map
         if (prototype.AddComponents != null)

@@ -15,7 +15,7 @@ using Robust.Shared.Serialization;
 namespace Content.Shared._DV.SmartFridge;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
-public sealed partial class SmartFridgeComponent : Component
+public sealed partial class SmartFridgeDVComponent : Component
 {
     [DataField]
     public string Container = "smart_fridge_inventory";

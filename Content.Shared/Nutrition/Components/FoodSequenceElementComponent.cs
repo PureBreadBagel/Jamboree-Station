@@ -5,6 +5,8 @@ using Content.Shared.Nutrition.EntitySystems;
 using Content.Shared.Nutrition.Prototypes;
 using Content.Shared.Tag;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
+using Robust.Shared.Utility;
 
 namespace Content.Shared.Nutrition.Components;
 

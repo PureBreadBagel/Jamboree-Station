@@ -7,6 +7,7 @@
     <PackageVersion Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
     <PackageVersion Remove="Microsoft.EntityFrameworkCore.Design" />
     <PackageVersion Include="NWaves" Version="0.9.6" />
+    <PackageVersion Include="YamlDotNet" Version="18.1.0" />
     <PackageVersion Include="AsmResolver" Version="6.0.0-beta.3" />
     <PackageVersion Include="AsmResolver.DotNet" Version="6.0.0-beta.3" />
     <PackageVersion Include="CsvHelper" Version="33.1.0" />
@@ -21,6 +22,7 @@
     <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.0" />
 
     <PackageVersion Include="OpenTK" Version="4.9.4" />
+    <PackageVersion Include="OpenTK.Mathematics" Version="4.9.4" />
     <PackageVersion Include="Veldrid" Version="4.8.0" />
     <PackageVersion Include="Veldrid.SPIRV" Version="1.0.15" />
   </ItemGroup>

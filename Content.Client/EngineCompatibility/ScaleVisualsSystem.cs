@@ -3,7 +3,7 @@
 // Adapted from RobustToolbox 56eda3ea92913e60c27aa029ba7877c8559dfe9d.
 
 using System.Numerics;
-using Robust.Shared.GameObjects;
+using Content.Shared.Sprite;
 using Robust.Shared.Maths;
 
 namespace Robust.Client.GameObjects;

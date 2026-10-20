@@ -10,7 +10,6 @@ namespace Content.Shared.StationRecords;
 /// </summary>
 [DataDefinition]
 [Serializable, NetSerializable]
-[DataDefinition]
 
 public sealed partial record GeneralStationRecord
 {

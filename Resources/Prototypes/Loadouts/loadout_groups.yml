@@ -975,6 +975,7 @@
   - TemplarHelmet #Jamboree&Goob
   - AncientHelmet #Jamboree
   - ClockHelmet #Jamboree
+  - DragonHelmet #Jamboree
 
 - type: loadoutGroup
   id: ChaplainEyes
@@ -1036,6 +1037,7 @@
   - AdeptRobe #jamboree&Goob
   - StudentRobe #jamboree&Goob
   - MonkHabit #jamboree&Goob
+  - DragonSuit #Jamboree
   - FriarRobe #ADT
   - LeaderRobe #ADT
   - RatvarRobe #ADT

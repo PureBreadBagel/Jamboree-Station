@@ -15,6 +15,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
+using Robust.Server.GameObjects;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
@@ -28,7 +29,7 @@ public sealed partial class LavalandSystem : EntitySystem
     public bool LavalandEnabled = true;
 
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly TileSystem _tile = default!;
+    [Dependency] private readonly SharedMapSystem _tile = default!;
     [Dependency] private readonly ITileDefinitionManager _tiledef = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly INetConfigurationManager _config = default!;
@@ -40,6 +41,7 @@ public sealed partial class LavalandSystem : EntitySystem
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly MapLoaderSystem _mapLoader = default!;
+    [Dependency] private readonly MapSystem _map = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly ShuttleSystem _shuttle = default!;
 
@@ -90,10 +92,10 @@ public sealed partial class LavalandSystem : EntitySystem
             || !LavalandEnabled)
             return;
 
-        var mapUid = _mapManager.CreateMap(out var mapId, false);
+        var mapUid = _map.CreateMap(out var mapId, false);
         EnsureComp<LavalandPreloaderComponent>(mapUid);
         _metaData.SetEntityName(mapUid, "Lavaland Preloader Map");
-        _mapManager.SetPaused(mapId, true);
+        _map.SetPaused(mapId, true);
     }
 
     /// <summary>

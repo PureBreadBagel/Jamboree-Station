@@ -37,7 +37,6 @@ public sealed partial class EnchantVisualsSystem : EntitySystem
 
     private void OnStartup(Entity<EnchantedComponent> ent, ref ComponentStartup args)
     {
-        SetShader(ent);
     }
 
     private void OnHandleState(Entity<EnchantedComponent> ent, ref AfterAutoHandleStateEvent args)
@@ -45,7 +44,7 @@ public sealed partial class EnchantVisualsSystem : EntitySystem
         if (!TryComp<SpriteComponent>(ent, out var sprite))
             return;
 
-        _sprite.SetPostShader((uid, sprite), new SpriteComponent.PostShaderArgs(PostShaderId, _proto.Index(Shader).InstanceUnique())
+        _sprite.SetPostShader((ent.Owner, sprite), new SpriteComponent.PostShaderArgs(PostShaderId, _proto.Index(Shader).InstanceUnique())
         {
             Before = ContentPostShaderIds.BeforeOutlines,
         });
