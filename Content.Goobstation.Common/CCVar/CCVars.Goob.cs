@@ -511,8 +511,8 @@ public sealed partial class GoobCVars
     /// <summary>
     ///     If enabled patrons will be sent to the front of the queue.
     /// </summary>
-     //public static readonly CVarDef<bool> PatreonSkip =
-       // CVarDef.Create("queue.patreon_skip", true, CVar.SERVERONLY);
+     public static readonly CVarDef<bool> PatreonSkip =
+     CVarDef.Create("queue.patreon_skip", true, CVar.SERVERONLY);
 
     /// <summary>
     ///     How long in seconds to hold a queue position for a disconnected player.
