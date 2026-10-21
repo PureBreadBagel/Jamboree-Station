@@ -1657,18 +1657,13 @@ namespace Content.Client.Lobby.UI
 
             var species = _species.Find(x => x.ID == Profile?.Species) ?? _species.First();
 
-            // we increase the min/max values of the sliders before we set their value, just so that we don't accidentally clamp down on a value loaded from a profile when we shouldn't
-            HeightSlider.MinValue = 0;
-            HeightSlider.MaxValue = 2;
-            HeightSlider.SetValueWithoutEvent(Profile?.Height ?? species.DefaultHeight);
             HeightSlider.MinValue = species.MinHeight;
             HeightSlider.MaxValue = species.MaxHeight;
+            HeightSlider.SetValueWithoutEvent(Profile?.Height ?? species.DefaultHeight);
 
-            WidthSlider.MinValue = 0;
-            WidthSlider.MaxValue = 2;
-            WidthSlider.SetValueWithoutEvent(Profile?.Width ?? species.DefaultWidth);
             WidthSlider.MinValue = species.MinWidth;
             WidthSlider.MaxValue = species.MaxWidth;
+            WidthSlider.SetValueWithoutEvent(Profile?.Width ?? species.DefaultWidth);
 
             var height = MathF.Round(species.AverageHeight * HeightSlider.Value);
             HeightLabel.Text = Loc.GetString("humanoid-profile-editor-height-label", ("height", (int) height));
@@ -1698,27 +1693,30 @@ namespace Content.Client.Lobby.UI
             var sizeRatio = species.SizeRatio;
             var ratio = heightValue / widthValue;
 
+            float constrainedHeight = heightValue;
+            float constrainedWidth = widthValue;
+
             if (updateType == SliderUpdate.Height || updateType == SliderUpdate.Both)
                 if (ratio < 1 / sizeRatio || ratio > sizeRatio)
-                    widthValue = heightValue / (ratio < 1 / sizeRatio ? (1 / sizeRatio) : sizeRatio);
+                    constrainedWidth = heightValue / (ratio < 1 / sizeRatio ? (1 / sizeRatio) : sizeRatio);
 
             if (updateType == SliderUpdate.Width || updateType == SliderUpdate.Both)
                 if (ratio < 1 / sizeRatio || ratio > sizeRatio)
-                    heightValue = widthValue * (ratio < 1 / sizeRatio ? (1 / sizeRatio) : sizeRatio);
+                    constrainedHeight = widthValue * (ratio < 1 / sizeRatio ? (1 / sizeRatio) : sizeRatio);
 
-            heightValue = Math.Clamp(heightValue, species.MinHeight, species.MaxHeight);
-            widthValue = Math.Clamp(widthValue, species.MinWidth, species.MaxWidth);
+            constrainedHeight = Math.Clamp(constrainedHeight, species.MinHeight, species.MaxHeight);
+            constrainedWidth = Math.Clamp(constrainedWidth, species.MinWidth, species.MaxWidth);
 
-            HeightSlider.SetValueWithoutEvent(heightValue);
-            WidthSlider.SetValueWithoutEvent(widthValue);
+            HeightSlider.SetValueWithoutEvent(constrainedHeight);
+            WidthSlider.SetValueWithoutEvent(constrainedWidth);
 
-            SetProfileHeight(heightValue);
-            SetProfileWidth(widthValue);
+            SetProfileHeight(constrainedHeight);
+            SetProfileWidth(constrainedWidth);
 
-            var height = MathF.Round(species.AverageHeight * HeightSlider.Value);
+            var height = MathF.Round(species.AverageHeight * constrainedHeight);
             HeightLabel.Text = Loc.GetString("humanoid-profile-editor-height-label", ("height", (int) height));
 
-            var width = MathF.Round(species.AverageWidth * WidthSlider.Value);
+            var width = MathF.Round(species.AverageWidth * constrainedWidth);
             WidthLabel.Text = Loc.GetString("humanoid-profile-editor-width-label", ("width", (int) width));
 
             UpdateWeight();
