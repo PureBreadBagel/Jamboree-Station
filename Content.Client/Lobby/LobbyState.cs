@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Client._RMC14.LinkAccount;
 using Content.Client.Audio;
 using Content.Client.GameTicking.Managers;
 using Content.Client.LateJoin;
@@ -34,7 +33,6 @@ namespace Content.Client.Lobby
         [Dependency] private readonly IVoteManager _voteManager = default!;
         [Dependency] private readonly ICommonCurrencyManager _serverCur = default!; // Goobstation - server currency
         [Dependency] private readonly IPrototypeManager _protoMan = default!; // Goobstation - credits
-        [Dependency] private readonly LinkAccountManager _linkAccount = default!; // RMC - Patreon
         [Dependency] private readonly ClientsidePlaytimeTrackingManager _playtimeTracking = default!;
 
         private ISawmill _sawmill = default!; // Goobstation
@@ -77,7 +75,6 @@ namespace Content.Client.Lobby
             UpdateLobbyUi();
 
             Lobby.CharacterPreview.CharacterSetupButton.OnPressed += OnSetupPressed;
-            Lobby.CharacterPreview.PatronPerks.OnPressed += OnPatronPerksPressed;
             Lobby.ReadyButton.OnPressed += OnReadyPressed;
             Lobby.ReadyButton.OnToggled += OnReadyToggled;
 
@@ -101,7 +98,6 @@ namespace Content.Client.Lobby
             _voteManager.ClearPopupContainer();
 
             Lobby!.CharacterPreview.CharacterSetupButton.OnPressed -= OnSetupPressed;
-            Lobby.CharacterPreview.PatronPerks.OnPressed -= OnPatronPerksPressed;
             Lobby!.ReadyButton.OnPressed -= OnReadyPressed;
             Lobby!.ReadyButton.OnToggled -= OnReadyToggled;
 
@@ -118,11 +114,6 @@ namespace Content.Client.Lobby
         {
             SetReady(false);
             Lobby?.SwitchState(LobbyGui.LobbyGuiState.CharacterSetup);
-        }
-
-        private void OnPatronPerksPressed(BaseButton.ButtonEventArgs obj)
-        {
-            _userInterfaceManager.GetUIController<LinkAccountUIController>().TogglePatronPerksWindow();
         }
 
         private void OnReadyPressed(BaseButton.ButtonEventArgs args)
@@ -196,8 +187,6 @@ namespace Content.Client.Lobby
 
         private void UpdateLobbyUi()
         {
-            Lobby!.CharacterPreview.PatronPerks.Visible = _linkAccount.CanViewPatronPerks();
-
             if (_gameTicker.IsGameStarted)
             {
                 Lobby!.ReadyButton.Text = Loc.GetString("lobby-state-ready-button-join-state");

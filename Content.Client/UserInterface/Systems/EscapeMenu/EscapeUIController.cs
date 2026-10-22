@@ -14,8 +14,7 @@ using Robust.Shared.Input;
 using Robust.Shared.Input.Binding;
 using Robust.Shared.Utility;
 using static Robust.Client.UserInterface.Controls.BaseButton;
-using Content.Client.UserInterface.Systems.MenuBar.Widgets;  // RMC - Patreon
-using Content.Client._RMC14.LinkAccount; // RMC - Patreon
+using Content.Client.UserInterface.Systems.MenuBar.Widgets;
 // Goobstation - Character customization in escape menu
 using Content.Client.Lobby;
 using Robust.Client.Player;
@@ -39,7 +38,6 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
     [Dependency] private readonly InfoUIController _info = default!;
     [Dependency] private readonly OptionsUIController _options = default!;
     [Dependency] private readonly GuidebookUIController _guidebook = default!;
-    [Dependency] private readonly LinkAccountManager _linkAccount = default!; // RMC - Patreon
     // Goobstation - Character customization in escape menu
     [Dependency] private readonly IClientPreferencesManager _preferencesManager = default!;
     [Dependency] private readonly IFileDialogManager _dialogManager = default!;
@@ -57,16 +55,7 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
     private CharacterSetupGui? _characterSetup;
     private HumanoidProfileEditor? _profileEditor;
 
-    private MenuButton? EscapeButton => UIManager.GetActiveUIWidgetOrNull<GameTopMenuBar>()?.EscapeButton; // RMC - Patreon
-
-    public override void Initialize()  // RMC - Patreon
-    {
-        _linkAccount.Updated += () =>
-        {
-            if (_escapeWindow != null)
-                _escapeWindow.PatronPerksButton.Visible = _linkAccount.CanViewPatronPerks();
-        };
-    }
+    private MenuButton? EscapeButton => UIManager.GetActiveUIWidgetOrNull<GameTopMenuBar>()?.EscapeButton;
 
     public void UnloadButton()
     {
@@ -105,13 +94,6 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
         {
             CloseEscapeWindow();
             _changelog.ToggleWindow();
-        };
-
-        _escapeWindow.PatronPerksButton.Visible = _linkAccount.CanViewPatronPerks(); // RMC - Patreon
-        _escapeWindow.PatronPerksButton.OnPressed += _ => // RMC - Patreon
-        {
-            CloseEscapeWindow();
-            UIManager.GetUIController<LinkAccountUIController>().TogglePatronPerksWindow();
         };
 
         _escapeWindow.RulesButton.OnPressed += _ =>

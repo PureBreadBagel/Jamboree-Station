@@ -26,7 +26,6 @@ public sealed partial class QueueGui : Control
     {
         QueueTotal.Text = msg.Total.ToString();
         QueuePosition.Text = msg.Position.ToString();
-        PatronPanel.Visible = msg.IsPatron;
 
         if (msg.EstimatedWaitSeconds >= 0)
         {

@@ -243,7 +243,6 @@ public sealed partial class JoinQueueManager : IJoinQueueManager
             {
                 Total = totalInQueue,
                 Position = currentPosition,
-                IsPatron = false, // Keep the existing wire format until the client message is updated.
                 EstimatedWaitSeconds = GetEstimatedWaitForPosition(currentPosition),
                 MapName = mapName,
                 GameMode = gameMode,

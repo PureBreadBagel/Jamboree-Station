@@ -51,7 +51,6 @@ forum = "https://forums.goobstation.com"
 github = "https://github.com/Goob-Station/Goob-Station"
 website = "https://goobstation.com"
 wiki = "https://wiki.goobstation.com"
-patreon = "https://www.patreon.com/goobstation14"
 bug_report = "https://github.com/Goob-Station/Goob-Station/issues/new"
 appeal = "https://forums.goobstation.com"
 
@@ -77,9 +76,6 @@ flavor_text = true
 
 [ban]
 hardware_ids = true
-
-[rmc]
-patron_lobby_message_time_seconds = 10
 
 [lavaland]
 enabled = true
