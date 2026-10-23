@@ -22,6 +22,9 @@
     storedRotation: -90
   - type: SolutionContainerManager
     solutions:
+      stain:
+        maxVol: 1
+        canReact: false
       food:
         maxVol: 10
         reagents:
@@ -43,6 +46,15 @@
         Blunt: 0.95
         Slash: 0.95
         Piercing: 0.95
+  - type: Appearance
+  - type: Stainable
+    clothingVisuals:
+      gloves:
+      - sprite: _Funkystation/Effects/blood.rsi
+        state: gloveblood
+    iconVisuals:
+    - sprite: _Funkystation/Effects/blood.rsi
+      state: glovebloodicon
 
 - type: entity
   abstract: true

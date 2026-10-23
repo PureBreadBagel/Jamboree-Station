@@ -21,6 +21,9 @@
     requiresSpecialDigestion: true
   - type: SolutionContainerManager
     solutions:
+      stain:
+        maxVol: 1
+        canReact: false
       food:
         maxVol: 10
         reagents:
@@ -31,6 +34,15 @@
     - ClothMade
     - WhitelistChameleon
     - DroneUsable # Goobstation
+  - type: Appearance
+  - type: Stainable
+    clothingVisuals:
+      head:
+      - sprite: _Funkystation/Effects/blood.rsi
+        state: helmetblood
+    iconVisuals:
+    - sprite: _Funkystation/Effects/blood.rsi
+      state: helmetbloodicon
 
 - type: entity
   abstract: true
@@ -152,6 +164,8 @@
     - Snout
     - HeadTop
     - HeadSide
+  - type: StainBlocker
+    slots: [MASK]
 
 - type: entity
   abstract: true
@@ -215,6 +229,22 @@
     - HeadTop
     - HeadSide
   - type: FaceHuggerBlocker # Goobstation
+  - type: Appearance
+  - type: Stainable
+    clothingVisuals:
+      head:
+      - sprite: _Funkystation/Effects/blood.rsi
+        state: helmetblood
+    iconVisuals:
+    - sprite: _Funkystation/Effects/blood.rsi
+      state: helmetbloodicon
+  - type: SolutionContainerManager
+    solutions:
+      stain:
+        maxVol: 1
+        canReact: false
+  - type: StainBlocker
+    slots: [MASK]
 
 - type: entity
   abstract: true
@@ -302,3 +332,17 @@
     - HeadTop
     - HeadSide
     - Head #imp edit, for anomalocarids. doesn't effect other species.
+  - type: Appearance
+  - type: Stainable
+    clothingVisuals:
+      head:
+      - sprite: _Funkystation/Effects/blood.rsi
+        state: helmetblood
+    iconVisuals:
+    - sprite: _Funkystation/Effects/blood.rsi
+      state: helmetbloodicon
+  - type: SolutionContainerManager
+    solutions:
+      stain:
+        maxVol: 1
+        canReact: false
