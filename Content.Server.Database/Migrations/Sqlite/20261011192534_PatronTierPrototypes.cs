@@ -16,14 +16,7 @@ namespace Content.Server.Database.Migrations.Sqlite
                 type: "TEXT",
                 nullable: true);
 
-            migrationBuilder.AlterColumn<int>(
-                name: "rmc_patron_tiers_id",
-                table: "rmc_patron_tiers",
-                type: "INTEGER",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "INTEGER")
-                .OldAnnotation("Sqlite:Autoincrement", true);
+
         }
 
         /// <inheritdoc />
