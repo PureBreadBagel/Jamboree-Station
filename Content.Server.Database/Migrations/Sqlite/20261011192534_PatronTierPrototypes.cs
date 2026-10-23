@@ -26,14 +26,7 @@ namespace Content.Server.Database.Migrations.Sqlite
                 name: "ooc_icon",
                 table: "rmc_patrons");
 
-            migrationBuilder.AlterColumn<int>(
-                name: "rmc_patron_tiers_id",
-                table: "rmc_patron_tiers",
-                type: "INTEGER",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "INTEGER")
-                .Annotation("Sqlite:Autoincrement", true);
+
         }
     }
 }
