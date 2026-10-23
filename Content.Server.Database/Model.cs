@@ -55,8 +55,6 @@ namespace Content.Server.Database
         // RMC14
         public DbSet<RMCDiscordAccount> RMCDiscordAccounts { get; set; } = default!;
         public DbSet<RMCLinkedAccount> RMCLinkedAccounts { get; set; } = default!;
-        public DbSet<RMCPatronTier> RMCPatronTiers { get; set; } = default!;
-        public DbSet<RMCPatron> RMCPatrons { get; set; } = default!;
         public DbSet<RMCLinkingCodes> RMCLinkingCodes { get; set; } = default!;
         public DbSet<RMCLinkedAccountLogs> RMCLinkedAccountLogs { get; set; } = default!;
         public DbSet<RMCPatronLobbyMessage> RMCPatronLobbyMessages { get; set; } = default!;
