@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Goob Station Contributors
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Goobstation.Shared.Silicon.SecurityCyborg;
 using Content.Shared.Explosion.EntitySystems;
 using Content.Shared.Popups;
