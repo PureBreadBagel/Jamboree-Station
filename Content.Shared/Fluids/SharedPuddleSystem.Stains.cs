@@ -42,6 +42,14 @@ public abstract partial class SharedPuddleSystem : EntitySystem
 
         var spilledEvent = new SpilledOnEvent(ent.Owner, solution);
         RaiseLocalEvent(target, spilledEvent);
-        _solutionContainerSystem.UpdateChemicals(ent.Comp.Solution.Value);
+
+        // Spill handlers can synchronously remove or replace the source solution.
+        if (TerminatingOrDeleted(ent.Owner)
+            || !_solutionContainerSystem.TryGetSolution(ent.Owner, ent.Comp.SolutionName, out var current, out var currentSolution)
+            || TerminatingOrDeleted(current.Value.Owner)
+            || !ReferenceEquals(currentSolution, solution))
+            return;
+
+        _solutionContainerSystem.UpdateChemicals(current.Value);
     }
 }
