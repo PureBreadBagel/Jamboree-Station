@@ -73,6 +73,9 @@
     graph: Machine
     node: machine
     containers: [machine_parts, machine_board, entity_storage]
+  - type: EmptyOnMachineDeconstruct
+    containers:
+    - entity_storage
   - type: Damageable
     damageModifierSet: Metallic
     damageContainer: Inorganic
@@ -85,6 +88,10 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
+      # Empty the drum before construction transfers its containers to the frame.
+      - !type:EmptyContainersBehaviour
+        containers:
+        - entity_storage
       - !type:ChangeConstructionNodeBehavior
         node: machineFrame
       - !type:DoActsBehavior
