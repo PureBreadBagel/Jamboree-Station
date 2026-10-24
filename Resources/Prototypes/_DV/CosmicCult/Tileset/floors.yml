@@ -140,6 +140,7 @@
   - type: Tag
     tags:
       - HideContextMenu
+  - type: WaterClothingWash
   - type: TileEmission
     color: "#42a4ae"
 

@@ -2,17 +2,20 @@
 // Adapted from Starlight PR #5898, originally from Funky Station and Moff Station.
 
 using System.Linq;
-using Content.Shared._Funkystation.Stains.Components;
 using Content.Shared._Funkystation.Stains.Systems;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
-using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Destructible;
+using Content.Shared.Glue;
 using Content.Shared.Interaction;
+using Content.Shared.Inventory;
+using Content.Shared.Lube;
+using Content.Shared.Nutrition.Components;
+using Content.Shared.Nutrition.EntitySystems;
 using Content.Shared.Popups;
 using Content.Shared.Power;
 using Content.Shared.Power.EntitySystems;
@@ -41,8 +44,11 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
     [Dependency] private IPrototypeManager _proto = default!;
     [Dependency] private DamageableSystem _damageable = null!;
     [Dependency] private ReactiveSystem _reactive = null!;
-    [Dependency] private SharedSolutionContainerSystem _solution = default!;
     [Dependency] private SharedStainSystem _stains = default!;
+    [Dependency] private SharedCreamPieSystem _creamPie = default!;
+    [Dependency] private GlueSystem _glue = default!;
+    [Dependency] private SharedLubedSystem _lube = default!;
+    [Dependency] private InventorySystem _inventory = default!;
 
     public override void Initialize()
     {
@@ -241,16 +247,36 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
         {
             items = storage.Contents.ContainedEntities.ToHashSet();
 
-            // Preserve evidence before removing the actual stain solutions.
-            UpdateForensics((uid, comp), items);
+            // Harvest evidence from everything the stain helpers will clean, before clearing any solutions.
+            var evidenceItems = new HashSet<EntityUid>(items);
+            foreach (var item in items)
+            {
+                var slots = _inventory.GetSlotEnumerator(item, SlotFlags.WITHOUT_POCKET);
+                while (slots.NextItem(out var clothing))
+                    evidenceItems.Add(clothing);
+            }
+
+            foreach (var item in evidenceItems.ToArray())
+            {
+                if (TryComp<ToggleableClothingComponent>(item, out var toggleable))
+                    evidenceItems.UnionWith(toggleable.ClothingUids.Keys);
+            }
+
+            UpdateForensics((uid, comp), evidenceItems);
 
             foreach (var item in items)
             {
-                if (TryComp<StainableComponent>(item, out var stain) && _solution.TryGetSolution(item, stain.SolutionName, out var sol))
-                {
-                    _solution.RemoveAllSolution(sol.Value);
-                    _stains.UpdateVisuals((item, stain));
-                }
+                if (TerminatingOrDeleted(item))
+                    continue;
+
+                if (TryComp<CreamPiedComponent>(item, out var creamPied))
+                    _creamPie.SetCreamPied(item, creamPied, false);
+                _lube.RemoveLubed(item);
+                if (HasComp<GluedComponent>(item))
+                    _glue.RemoveGlued(item);
+
+                _stains.CleanStains(item);
+                _stains.CleanEquippedClothing(item);
             }
         }
 

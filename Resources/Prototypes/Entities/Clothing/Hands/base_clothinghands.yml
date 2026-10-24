@@ -5,6 +5,8 @@
   parent: Clothing
   id: ClothingHandsBase
   components:
+  - type: ExaminableSolution
+    solution: stain
   - type: Sprite
     state: icon
   - type: Clothing

@@ -6,6 +6,8 @@ using Content.Shared._Funkystation.Stains.Components;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
+using Content.Shared.Clothing.Components;
+using Content.Shared.Directions;
 using Content.Shared.DoAfter;
 using Content.Shared.Fluids;
 using Content.Shared.Inventory;
@@ -151,7 +153,7 @@ public abstract partial class SharedStainSystem : EntitySystem
         if (!args.CanInteract || !args.CanAccess || args.Using != ent.Owner)
             return;
 
-        if (!_solution.TryGetSolution(ent.Owner, ent.Comp.SolutionName, out _, out var sol) || sol.Volume <= 0)
+        if (!HasStains(ent.Owner))
             return;
 
         var user = args.User;
@@ -177,13 +179,21 @@ public abstract partial class SharedStainSystem : EntitySystem
             return;
         args.Handled = true;
 
-        if (!_solution.TryGetSolution(ent.Owner, ent.Comp.SolutionName, out var solComp, out var sol))
+        var split = new Solution();
+        WringSingleItem(ent.Owner, split);
+
+        if (TryComp<ToggleableClothingComponent>(ent.Owner, out var toggleable))
+        {
+            foreach (var attached in toggleable.ClothingUids.Keys)
+                WringSingleItem(attached, split);
+        }
+
+        if (split.Volume <= 0)
             return;
 
-        var split = _solution.SplitSolution(solComp.Value, sol.Volume);
-        UpdateVisuals(ent);
-
-        if (_puddle.TrySpillAt(args.User, split, out _))
+        var userTransform = Transform(args.User);
+        var spillCoordinates = userTransform.Coordinates.Offset(userTransform.LocalRotation.GetCardinalDir());
+        if (_puddle.TrySpillAt(spillCoordinates, split, out _))
             _popup.PopupEntity(Loc.GetString("stain-verb-wring-success"), args.User, args.User);
     }
 }

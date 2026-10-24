@@ -5,6 +5,8 @@
   parent: Clothing
   id: ClothingHeadBase
   components:
+  - type: ExaminableSolution
+    solution: stain
   - type: Clothing
     slots:
     - HEAD
@@ -174,6 +176,8 @@
   name: base hardsuit helmet
   categories: [ HideSpawnMenu ]
   components:
+  - type: ExaminableSolution
+    solution: stain
 # SlotBlocker blocked until UI change
 #  - type: SlotBlock
 #    slots: [ears, eyes, mask]
@@ -309,6 +313,8 @@
   description: A hood, made to keep your head warm.
   categories: [ HideSpawnMenu ]
   components:
+  - type: ExaminableSolution
+    solution: stain
   - type: Sprite
     state: icon
   - type: Clickable

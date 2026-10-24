@@ -5,6 +5,8 @@
   parent: Clothing
   id: ClothingShoesBase
   components:
+  - type: ExaminableSolution
+    solution: stain
   # Goobstation edit start
   - type: EmitSoundOnPickup
     sound:
